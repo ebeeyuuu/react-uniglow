@@ -19,7 +19,7 @@ const Hero = () => {
           <div className="text-base max-[900px]:text-xs font-light w-3/5 max-[900px]:w-full max-[900px]:text-center smooth-animation">
             Discover your dream and explore the world's opportunities!
           </div>
-          <div className="px-5 py-3 flex justify-center border-white border-2 w-[200px] text-lg font-semibold max-[900px]:mb-[200px] max-[900px]:w-[120px] max-[900px]:text-xs max-[900px]:place-self-center hover:bg-white hover:text-black smooth-animation">
+          <div className="px-5 py-3 flex justify-center border-[#0070e0] border-2 w-[200px] text-lg font-semibold max-[900px]:mb-[200px] max-[900px]:w-[120px] max-[900px]:text-xs max-[900px]:place-self-center hover:bg-[#0070e0] hover:text-black smooth-animation">
             <Link href="/pages/signup">Get started</Link>
           </div>
         </div>

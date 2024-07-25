@@ -18,3 +18,45 @@ body {
 body::-webkit-scrollbar {
   display: none;
 }
+
+.underline-container {
+  @apply relative;
+}
+
+.underline-container::after {
+  content: '';
+  @apply absolute bottom-[-20px] left-0 w-full h-[10px] bg-[#e07000] transition-all duration-500 ease-in-out;
+}
+
+.underline-container:hover::after {
+  height: 20px; /* or any other thickness you want */
+}
+
+.animate-pulse {
+  animation: pulse 0.5s;
+}
+
+.animate-fade {
+  animation: fade 0.5s;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

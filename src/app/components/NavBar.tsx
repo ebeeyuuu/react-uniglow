@@ -11,7 +11,7 @@ const NavBar = () => {
 
   return (
     <div className="flex justify-center items-center w-full">
-      <nav className="w-full h-[100px] flex justify-between items-center px-8 py-4 bg-[#020202] shadow-lg border-b-2 border-white">
+      <nav className="w-full h-[100px] flex justify-between items-center px-8 py-4 bg-[#003366] shadow-lg">
         <Link href="/" className="text-xl font-semibold">Uniglow</Link>
         <div className="hidden md:flex flex-row gap-x-6 items-center">
           {navItems.map(({ href, label, icon: Icon, size }) => (
@@ -22,7 +22,7 @@ const NavBar = () => {
               <Icon size={size} />
             </Link>
           ))}
-          <Link href="/explore" className="px-4 py-2 border-2 border-white hover:bg-white hover:text-black smooth-animation font-semibold">
+          <Link href="/explore" className="px-4 py-2 border-2 border-[#e07000] hover:bg-[#e07000] hover:text-black smooth-animation font-semibold">
             Explore
           </Link>
         </div>

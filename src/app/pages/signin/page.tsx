@@ -8,7 +8,7 @@ const SignIn = () => {
   return (
     <RegisterLayout>
       <div className="flex flex-col mx-auto justify-center items-center gap-y-7 w-full md:w-1/2 h-full p-4">
-        <div className="text-5xl font-bold">
+        <div className="text-4xl font-bold">
           Sign In
         </div>
         <form className="w-full flex justify-center">

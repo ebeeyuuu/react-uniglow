@@ -22,7 +22,7 @@ const NavBar = () => {
               <Icon size={size} />
             </Link>
           ))}
-          <Link href="/explore" className="px-4 py-2 border-2 border-white">
+          <Link href="/explore" className="px-4 py-2 border-2 border-white hover:bg-white hover:text-black smooth-animation font-semibold">
             Explore
           </Link>
         </div>

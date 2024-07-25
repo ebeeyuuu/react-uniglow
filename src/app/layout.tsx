@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "universities.com",
-  description: "Published by Ean Yu - universities.com: the website that helps you decide the university for you. ",
+  title: "uniglow.vercel.app",
+  description: "Published by Ean Yu - uniglow.vercel.app: the website that helps you decide the university for you. ",
 };
 
 export default function RootLayout({

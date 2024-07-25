@@ -26,6 +26,17 @@ const Features = () => {
 
   return (
     <div className="w-full mt-[500px] flex justify-center items-center flex-row gap-x-[70px] max-[900px]:flex-col max-[900px]:gap-y-[70px]">
+      {/* Text container */}
+      <div className="flex flex-col gap-y-[30px] w-1/3 max-[900px]:text-center max-[900px]:w-[80%] max-[900px]:mx-auto">
+        <div className="text-5xl" style={{ fontWeight: 600 }}>
+          What separates <span className="text-[#e17100] italic underline decoration-[3px] underline-offset-[3px]" style={{ fontWeight: 900 }}>us</span> from <span className="text-[#813e00]" style={{ fontWeight: 700 }}>the rest</span>
+        </div>
+        <div>
+          The features of Uniglow that allows us to easily help you find the university that you so desire.
+        </div>
+        <button className="bg-[#005ebd] text-white py-2 px-4 rounded-[20px] w-1/2 max-[900px]:mx-auto hover:py-3 transition-all duration-300 ease-in-out">Get started</button>
+      </div>
+      
       {/* Grid container for icons */}
       <div className="grid grid-rows-2 grid-cols-2 max-[500px]:grid-rows-4 max-[500px]:grid-cols-1 w-1/2 h-[50vh] gap-[20px] max-[900px]:w-[80%]">
         {/* Box 1: Artificial Intelligence */}
@@ -59,15 +70,6 @@ const Features = () => {
         >
           {iconText === "Interactive Curriculum Explorer: Visualizes degree paths and their career impacts."? iconText : <FaNewspaper size={50} />}
         </div>
-      </div>
-
-      {/* Text container */}
-      <div className="flex flex-col gap-y-[30px] w-1/3 max-[900px]:text-center max-[900px]:w-full max-[900px]:mx-auto">
-        <div className="text-5xl font-bold">What separates us from the rest</div>
-        <div>
-          The features of Uniglow that allows us to easily help you find the university that you so desire.
-        </div>
-        <button className="bg-[#005ebd] text-white py-2 px-4 rounded-[20px] w-1/2 max-[900px]:mx-auto hover:bg-[#c16000] transition-all duration-500 ease-in-out">Get started</button>
       </div>
     </div>
   );

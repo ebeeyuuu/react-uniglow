@@ -1,6 +1,7 @@
 "use client"
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { GiArtificialIntelligence } from "react-icons/gi";
 import { SiVirtualbox } from "react-icons/si";
 import { FaConnectdevelop, FaNewspaper } from "react-icons/fa";
@@ -34,7 +35,9 @@ const Features = () => {
         <div>
           The features of Uniglow that allows us to easily help you find the university that you so desire.
         </div>
-        <button className="bg-[#005ebd] text-white py-2 px-4 rounded-[20px] w-1/2 max-[900px]:mx-auto hover:py-3 transition-all duration-300 ease-in-out">Get started</button>
+        <button className="bg-[#005ebd] text-white py-2 px-4 rounded-[20px] w-1/2 max-[900px]:mx-auto hover:py-3 transition-all duration-300 ease-in-out">
+          <Link href="/pages/signup">Get started</Link>
+        </button>
       </div>
       
       {/* Grid container for icons */}

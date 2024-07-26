@@ -7,22 +7,27 @@ import { SiVirtualbox } from "react-icons/si";
 import { FaConnectdevelop, FaNewspaper } from "react-icons/fa";
 
 const Features = () => {
-  const [iconText, setIconText] = useState('');
-  const [iconComponent, setIconComponent] = useState<React.ReactElement | null>(null);
+  const [activeBox, setActiveBox] = useState('');
   const [animatedBox, setAnimatedBox] = useState('');
 
-  const handleIconClick = (text: string, component: React.ReactElement, boxId: string) => {
+  const handleBoxClick = (boxId: string) => {
     setAnimatedBox(boxId);
     setTimeout(() => {
-      setIconText(text);
-      setIconComponent(component);
+      setActiveBox(prevState => prevState === boxId ? '' : boxId);
       setAnimatedBox('');
     }, 500);
   };
 
-  const handleTextClick = () => {
-    setIconText('');
-    setIconComponent(null);
+  const getBoxContent = (boxId: string, icon: React.ReactElement, text: string) => {
+    return (
+      <div className="w-full h-full flex items-center justify-center cursor-pointer transition-opacity duration-500 ease-in-out">
+        {activeBox === boxId ? (
+          <div className="text-center">{text}</div>
+        ) : (
+          <div className="text-white">{icon}</div>
+        )}
+      </div>
+    );
   };
 
   return (
@@ -44,34 +49,34 @@ const Features = () => {
       <div className="grid grid-rows-2 grid-cols-2 max-[500px]:grid-rows-4 max-[500px]:grid-cols-1 w-1/2 h-[50vh] gap-[20px] max-[900px]:w-[80%]">
         {/* Box 1: Artificial Intelligence */}
         <div
-          className={`bg-[#001932] rounded-[20px] flex justify-center items-center p-5 text-center font-semibold ${animatedBox === 'box1'? 'animate-pulse' : ''}`}
-          onClick={() => handleIconClick("AI Personality Matching: Matches students to universities based on personality and campus culture.", <GiArtificialIntelligence size={50} />, 'box1')}
+          className={`bg-[#001932] rounded-[20px] flex justify-center items-center p-5 text-center font-semibold overflow-hidden ${animatedBox === 'box1' ? 'animate-pulse' : ''}`}
+          onClick={() => handleBoxClick('box1')}
         >
-          {iconText === "AI Personality Matching: Matches students to universities based on personality and campus culture."? iconText : <GiArtificialIntelligence size={50} />}
+          {getBoxContent('box1', <GiArtificialIntelligence size={70} />, "AI Personality Matching: Matches students to universities based on personality and campus culture.")}
         </div>
 
         {/* Box 2: Virtual Box */}
         <div
-          className={`bg-[#001932] rounded-[20px] flex justify-center items-center p-5 text-center font-semibold ${animatedBox === 'box2'? 'animate-pulse' : ''}`}
-          onClick={() => handleIconClick("VR Campus Tours: Offers 360° virtual tours of partner universities.", <SiVirtualbox size={50} />, 'box2')}
+          className={`bg-[#001932] rounded-[20px] flex justify-center items-center p-5 text-center font-semibold overflow-hidden ${animatedBox === 'box2' ? 'animate-pulse' : ''}`}
+          onClick={() => handleBoxClick('box2')}
         >
-          {iconText === "VR Campus Tours: Offers 360° virtual tours of partner universities."? iconText : <SiVirtualbox size={50} />}
+          {getBoxContent('box2', <SiVirtualbox size={70} />, "VR Campus Tours: Offers 360° virtual tours of partner universities.")}
         </div>
 
         {/* Box 3: Connect Develop */}
         <div
-          className={`bg-[#001932] rounded-[20px] flex justify-center items-center p-5 text-center font-semibold ${animatedBox === 'box3'? 'animate-pulse' : ''}`}
-          onClick={() => handleIconClick("Peer Mentor Connection: Links prospective students with current students for personalized advice.", <FaConnectdevelop size={50} />, 'box3')}
+          className={`bg-[#001932] rounded-[20px] flex justify-center items-center p-5 text-center font-semibold overflow-hidden ${animatedBox === 'box3' ? 'animate-pulse' : ''}`}
+          onClick={() => handleBoxClick('box3')}
         >
-          {iconText === "Peer Mentor Connection: Links prospective students with current students for personalized advice."? iconText : <FaConnectdevelop size={50} />}
+          {getBoxContent('box3', <FaConnectdevelop size={70} />, "Peer Mentor Connection: Links prospective students with current students for personalized advice.")}
         </div>
 
         {/* Box 4: Newspaper */}
         <div
-          className={`bg-[#001932] rounded-[20px] flex justify-center items-center p-5 text-center font-semibold ${animatedBox === 'box4'? 'animate-pulse' : ''}`}
-          onClick={() => handleIconClick("Interactive Curriculum Explorer: Visualizes degree paths and their career impacts.", <FaNewspaper size={50} />, 'box4')}
+          className={`bg-[#001932] rounded-[20px] flex justify-center items-center p-5 text-center font-semibold overflow-hidden ${animatedBox === 'box4' ? 'animate-pulse' : ''}`}
+          onClick={() => handleBoxClick('box4')}
         >
-          {iconText === "Interactive Curriculum Explorer: Visualizes degree paths and their career impacts."? iconText : <FaNewspaper size={50} />}
+          {getBoxContent('box4', <FaNewspaper size={70} />, "Interactive Curriculum Explorer: Visualizes degree paths and their career impacts.")}
         </div>
       </div>
     </div>

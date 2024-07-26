@@ -169,9 +169,9 @@ const TestimonialCard: React.FC<{ testimonial: Testimonial }> = ({ testimonial }
     </div>
     <div className="flex items-center">
       {[...Array(Math.floor(testimonial.rating))].map((_, i) => (
-        <FaStar key={i} className="text-yellow-400" />
+        <FaStar key={i} className="text-[#ff8d1b]" />
       ))}
-      {testimonial.rating % 1 !== 0 && <FaStarHalfAlt className="text-yellow-400" />}
+      {testimonial.rating % 1 !== 0 && <FaStarHalfAlt className="text-[#ff8d1b]" />}
     </div>
     <p className="text-xs text-white">&quot;{testimonial.review}&quot;</p>
   </div>
@@ -180,7 +180,7 @@ const TestimonialCard: React.FC<{ testimonial: Testimonial }> = ({ testimonial }
 const Testimonies: React.FC = () => {
   return (
     <div className="w-full mt-[300px] flex justify-center items-center flex-col mx-auto gap-y-[30px]">
-      <div className="font-bold text-5xl mb-8">
+      <div className="font-bold text-5xl mb-8 underline decoration-[#0070e0] decoration-8 underline-offset-[10px]">
         Testimonials
       </div>
       <div className="flex flex-col gap-y-[40px] mx-auto w-full">

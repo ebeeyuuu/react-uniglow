@@ -97,7 +97,7 @@ const Page = () => {
             {passwordError && <div className="text-[#ff850a] text-sm">{passwordError}</div>}
           </div>
         </form>
-        <div className="flex flex-row gap-x-4">
+        <div className="flex flex-row gap-x-4 mt-[-40px]">
           <Link href="/" className="text-lg font-medium flex flex-row gap-x-3 bg-[#003366] rounded-[10px] px-4 py-2 h-[45px]">
             <div>
               Return

@@ -8,7 +8,7 @@ interface RegisterLayoutProps {
 
 const RegisterLayout: React.FC<RegisterLayoutProps> = ({ children }) => {
   return (
-    <div className="w-full h-screen flex flex-col md:flex-row items-center font-semibold">
+    <div className="w-full h-screen flex flex-col-reverse md:flex-row items-center font-semibold">
       <div className="flex flex-col justify-center items-center gap-y-4 w-full md:w-1/2 h-full p-4 mx-auto">
         {children}
       </div>

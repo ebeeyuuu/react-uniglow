@@ -31,7 +31,50 @@ const Features = () => {
   };
 
   return (
-    <div className="w-full mt-[500px] flex justify-center items-center flex-row gap-x-[70px] max-[900px]:flex-col max-[900px]:gap-y-[70px]">
+    <div className="w-full mt-[500px] flex justify-center items-center flex-row gap-x-[70px] max-[900px]:flex-col-reverse max-[900px]:gap-y-[70px]">
+      {/* Grid container for icons */}
+      <div className="grid grid-rows-2 grid-cols-2 max-[500px]:grid-rows-4 max-[500px]:grid-cols-1 w-1/2 h-[50vh] gap-[20px] max-[900px]:w-[80%]">
+        {/* Box 1: Artificial Intelligence */}
+        <div
+          className={`bg-[#001932] rounded-[20px] flex justify-center items-center p-5 text-center font-semibold overflow-hidden relative gradient-hover ${
+            animatedBox === 'box1' ? 'animate-pulse' : ''
+          }`}
+          onClick={() => handleBoxClick('box1')}
+        >
+          {getBoxContent('box1', <GiArtificialIntelligence size={70} />, "AI Personality Matching: Matches students to universities based on personality and campus culture.")}
+        </div>
+
+        {/* Box 2: Virtual Box */}
+        <div
+          className={`bg-[#001932] rounded-[20px] flex justify-center items-center p-5 text-center font-semibold overflow-hidden relative gradient-hover ${
+            animatedBox === 'box2' ? 'animate-pulse' : ''
+          }`}
+          onClick={() => handleBoxClick('box2')}
+        >
+          {getBoxContent('box2', <SiVirtualbox size={70} />, "VR Campus Tours: Offers 360° virtual tours of partner universities.")}
+        </div>
+
+        {/* Box 3: Connect Develop */}
+        <div
+          className={`bg-[#001932] rounded-[20px] flex justify-center items-center p-5 text-center font-semibold overflow-hidden relative gradient-hover ${
+            animatedBox === 'box3' ? 'animate-pulse' : ''
+          }`}
+          onClick={() => handleBoxClick('box3')}
+        >
+          {getBoxContent('box3', <FaConnectdevelop size={70} />, "Peer Mentor Connection: Links prospective students with current students for personalized advice.")}
+        </div>
+
+        {/* Box 4: Newspaper */}
+        <div
+          className={`bg-[#001932] rounded-[20px] flex justify-center items-center p-5 text-center font-semibold overflow-hidden relative gradient-hover ${
+            animatedBox === 'box4' ? 'animate-pulse' : ''
+          }`}
+          onClick={() => handleBoxClick('box4')}
+        >
+          {getBoxContent('box4', <FaNewspaper size={70} />, "Interactive Curriculum Explorer: Visualizes degree paths and their career impacts.")}
+        </div>
+      </div>
+
       {/* Text container */}
       <div className="flex flex-col gap-y-[30px] w-1/3 max-[900px]:text-center max-[900px]:w-[80%] max-[900px]:mx-auto">
         <div className="text-5xl" style={{ fontWeight: 600 }}>
@@ -43,41 +86,6 @@ const Features = () => {
         <button className="bg-[#005ebd] text-white py-2 px-4 rounded-[20px] w-1/2 max-[900px]:mx-auto hover:py-3 transition-all duration-300 ease-in-out">
           <Link href="/pages/signup">Get started</Link>
         </button>
-      </div>
-      
-      {/* Grid container for icons */}
-      <div className="grid grid-rows-2 grid-cols-2 max-[500px]:grid-rows-4 max-[500px]:grid-cols-1 w-1/2 h-[50vh] gap-[20px] max-[900px]:w-[80%]">
-        {/* Box 1: Artificial Intelligence */}
-        <div
-          className={`bg-[#001932] rounded-[20px] flex justify-center items-center p-5 text-center font-semibold overflow-hidden ${animatedBox === 'box1' ? 'animate-pulse' : ''}`}
-          onClick={() => handleBoxClick('box1')}
-        >
-          {getBoxContent('box1', <GiArtificialIntelligence size={70} />, "AI Personality Matching: Matches students to universities based on personality and campus culture.")}
-        </div>
-
-        {/* Box 2: Virtual Box */}
-        <div
-          className={`bg-[#001932] rounded-[20px] flex justify-center items-center p-5 text-center font-semibold overflow-hidden ${animatedBox === 'box2' ? 'animate-pulse' : ''}`}
-          onClick={() => handleBoxClick('box2')}
-        >
-          {getBoxContent('box2', <SiVirtualbox size={70} />, "VR Campus Tours: Offers 360° virtual tours of partner universities.")}
-        </div>
-
-        {/* Box 3: Connect Develop */}
-        <div
-          className={`bg-[#001932] rounded-[20px] flex justify-center items-center p-5 text-center font-semibold overflow-hidden ${animatedBox === 'box3' ? 'animate-pulse' : ''}`}
-          onClick={() => handleBoxClick('box3')}
-        >
-          {getBoxContent('box3', <FaConnectdevelop size={70} />, "Peer Mentor Connection: Links prospective students with current students for personalized advice.")}
-        </div>
-
-        {/* Box 4: Newspaper */}
-        <div
-          className={`bg-[#001932] rounded-[20px] flex justify-center items-center p-5 text-center font-semibold overflow-hidden ${animatedBox === 'box4' ? 'animate-pulse' : ''}`}
-          onClick={() => handleBoxClick('box4')}
-        >
-          {getBoxContent('box4', <FaNewspaper size={70} />, "Interactive Curriculum Explorer: Visualizes degree paths and their career impacts.")}
-        </div>
       </div>
     </div>
   );

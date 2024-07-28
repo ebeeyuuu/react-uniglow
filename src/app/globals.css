@@ -18,13 +18,68 @@
     left: -100%;
     width: 200%;
     height: 100%;
-    background: linear-gradient(to right, rgba(0, 123, 255, 0) 0%, rgba(0, 123, 255, 0.5) 50%, rgba(0, 123, 255, 0) 100%);
+    background: linear-gradient(to right, rgba(0, 123, 255, 0) 0%, rgba(0, 128, 255, 0.5) 50%, rgba(0, 123, 255, 0) 100%);
     transition: all 0.5s ease;
     opacity: 0;
   }
   .gradient-hover:hover::before {
     left: 100%;
     opacity: 1;
+  }
+
+  .placeholder-white::placeholder {
+    color: white;
+    opacity: 0.9; /* Firefox */
+  }
+  
+  .placeholder-white::-ms-input-placeholder { /* Edge 12 -18 */
+    color: white;
+    opacity: 0.9;
+  }
+
+  .typing-cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    color: #ff890a;
+    margin-left: 10px;
+  }
+  
+  .typing-cursor.blinking {
+    animation: blink 0.7s step-end infinite;
+    animation-iteration-count: 5; /* Approximately 10 seconds (14 * 0.7s) */
+  }
+  
+  @keyframes blink {
+    from, to {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+
+  .underline-animation {
+    position: relative;
+    display: inline-block;
+  }
+
+  .underline-animation::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ff890a;
+    transform-origin: bottom right;
+    transition: transform 0.5s ease-out;
+  }
+
+  .underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
   }
 }
 

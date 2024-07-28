@@ -1,49 +1,28 @@
 "use client"
 
-import React, { useState, useEffect } from 'react';
+import React, { Suspense, lazy } from 'react';
 import NavBar from './components/NavBar';
-import Hero from './components/LandingPage/Hero';
-import WhyChooseUs from './components/LandingPage/WhyChooseUs';
-import Features from './components/LandingPage/Features';
-import Testimonies from './components/LandingPage/Testimonies';
-import FAQ from './components/LandingPage/FAQ';
-import Footer from './components/LandingPage/Footer';
 import Loading from './components/Loading';
 
+// Lazy load components
+const Hero = lazy(() => import('./components/LandingPage/Hero'));
+const WhyChooseUs = lazy(() => import('./components/LandingPage/WhyChooseUs'));
+const Features = lazy(() => import('./components/LandingPage/Features'));
+const Testimonies = lazy(() => import('./components/LandingPage/Testimonies'));
+const FAQ = lazy(() => import('./components/LandingPage/FAQ'));
+const Footer = lazy(() => import('./components/LandingPage/Footer'));
+
 const Home = () => {
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    console.log('Component mounted, starting timer');
-    const timer = setTimeout(() => {
-      console.log('Timer finished, setting isLoading to false');
-      setIsLoading(false);
-    }, 1500);
-
-    return () => {
-      console.log('Component unmounted, clearing timer');
-      clearTimeout(timer);
-    };
-  }, []);
-
-  console.log('Rendering, isLoading:', isLoading);
-
   return (
-    <>
-      {isLoading ? (
-        <Loading />
-      ) : (
-        <div>
-          <NavBar />
-          <Hero />
-          <WhyChooseUs />
-          <Features />
-          <Testimonies />
-          <FAQ />
-          <Footer />
-        </div>
-      )}
-    </>
+    <Suspense fallback={<Loading />}>
+      <NavBar />
+      <Hero />
+      <WhyChooseUs />
+      <Features />
+      <Testimonies />
+      <FAQ />
+      <Footer />
+    </Suspense>
   );
 };
 

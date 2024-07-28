@@ -12,8 +12,8 @@ import image5 from '@/images/8.jpg';
 import image6 from '@/images/9.jpg';
 import image7 from '@/images/10.jpg';
 import image8 from '@/images/11.jpg';
-import image9 from '@/images/12.jpg';
 import image10 from '@/images/13.jpg';
+import image11 from '@/images/16.jpg';
 
 import TrustedCompaniesMarquee from './TrustedCompaniesMarquee';
 
@@ -74,7 +74,7 @@ const universities: University[] = [
     description: "Founded by Benjamin Franklin, UPenn is known for its multidisciplinary approach and its top-ranked Wharton School of Business. It's one of the few Ivy League schools to offer undergraduate business degrees. Penn's acceptance rate is approximately 7.7%. The university is also famous for its work in medical research and its state-of-the-art hospitals. Penn's campus in Philadelphia offers a unique blend of colonial history and modern innovation."
   },
   {
-    src: image9,
+    src: image11,
     alt: "California Institute of Technology",
     info: "California Institute of Technology (Caltech)",
     description: "Caltech is a world-leading science and engineering institute known for its exceptionally bright students and faculty. Despite its small size, Caltech has produced a high number of Nobel laureates. The university is famous for managing NASA's Jet Propulsion Laboratory. With an acceptance rate of about 6.4%, Caltech is highly selective. The institution is known for its rigorous curriculum and its focus on theoretical and applied sciences."
@@ -196,7 +196,7 @@ const Hero: React.FC = () => {
             whileHover="hover"
             onClick={() => handleImageClick(6)}
           >
-            <Image src={image8} alt="University 7" className="h-[100%] w-[100%] object-cover rounded-[10px] transition-all duration-300 ease-in-out"/>
+            <Image src={image7} alt="University 7" className="h-[100%] w-[100%] object-cover rounded-[10px] transition-all duration-300 ease-in-out"/>
           </motion.div>
           <motion.div className="row-span-2 col-span-3 cursor-pointer"
             variants={imageVariants}
@@ -204,7 +204,7 @@ const Hero: React.FC = () => {
             whileHover="hover"
             onClick={() => handleImageClick(7)}
           >
-            <Image src={image9} alt="University 8" className="h-[100%] w-[100%] object-cover rounded-[10px] transition-all duration-300 ease-in-out"/>
+            <Image src={image8} alt="University 8" className="h-[100%] w-[100%] object-cover rounded-[10px] transition-all duration-300 ease-in-out"/>
           </motion.div>
           <motion.div className="row-span-2 col-span-2 cursor-pointer"
             variants={imageVariants}
@@ -212,7 +212,7 @@ const Hero: React.FC = () => {
             whileHover="hover"
             onClick={() => handleImageClick(8)}
           >
-            <Image src={image7} alt="University 9" className="h-[100%] w-[100%] object-cover rounded-[10px] transition-all duration-300 ease-in-out"/>
+            <Image src={image11} alt="University 9" className="h-[100%] w-[100%] object-cover rounded-[10px] transition-all duration-300 ease-in-out"/>
           </motion.div>
           <motion.div className="row-span-2 col-span-3 cursor-pointer"
             variants={imageVariants}

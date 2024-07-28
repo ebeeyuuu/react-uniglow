@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { FaUniversity, FaVrCardboard, FaComments, FaSearch, FaTimes, FaCheck } from 'react-icons/fa';
+import { FaSearch, FaVrCardboard, FaComments } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 import image1 from '@/images/17.jpg'
 
@@ -38,15 +38,15 @@ const features: FeatureDetails[] = [
 const WhyChooseUs: React.FC = () => {
   const [selectedFeature, setSelectedFeature] = useState<FeatureDetails | null>(null);
 
-  const handleLearnMore = (feature: FeatureDetails) => {
+  const handleLearnMore = useCallback((feature: FeatureDetails) => {
     setSelectedFeature(feature);
-  };
+  }, []);
 
-  const handleClose = () => {
+  const handleClose = useCallback(() => {
     setSelectedFeature(null);
-  };
+  }, []);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const handleEscapeKey = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
         handleClose();
@@ -54,63 +54,54 @@ const WhyChooseUs: React.FC = () => {
     };
 
     document.addEventListener('keydown', handleEscapeKey);
+    return () => document.removeEventListener('keydown', handleEscapeKey);
+  }, [handleClose]);
 
-    return () => {
-      document.removeEventListener('keydown', handleEscapeKey);
-    };
-  }, []);
+  const renderFeature = useCallback((feature: FeatureDetails, index: number) => (
+    <div key={index} className="flex-1 mr-4 max-[900px]:mx-auto max-[900px]:mt-4">
+      <Accordion sx={{ maxWidth: 300 }}>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls={`panel${index + 1}-content`}
+          id={`panel${index + 1}-header`}
+        >
+          <div className="flex items-center">
+            <div className="rounded-full px-6 py-2 border-black border-2 flex items-center justify-center mr-4 flex-row gap-[10px]">
+              <div className="text-xl">{index + 1}.</div>
+              {feature.icon}
+            </div>
+          </div>
+        </AccordionSummary>
+        <AccordionDetails>
+          <div className="font-semibold text-lg">{feature.title}</div>
+          <div className="text-xs mt-[30px]">{feature.description}</div>
+          <div className="mt-4 flex justify-end">
+            <button
+              onClick={() => handleLearnMore(feature)}
+              className="border border-black px-3 py-1 rounded-[10px] text-xs hover:bg-black hover:text-white transition-colors duration-300"
+            >
+              Overview
+            </button>
+          </div>
+        </AccordionDetails>
+      </Accordion>
+    </div>
+  ), [handleLearnMore]);
 
   return (
     <div className="w-full py-[170px] flex justify-center items-center mt-[300px] relative" 
-    style={{ 
-      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${image1.src})`,
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-    }}>
+      style={{ 
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${image1.src})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}>
       <div className="absolute inset-0 bg-pattern bg-opacity-20"></div>
       <div className="flex flex-col justify-center items-center gap-y-[50px] relative z-10">
-        <div className="text-6xl font-bold max-[700px]:text-4xl relative smooth-animation text-white">
-          <span className="underline-container">
-            Why Choose Us?
-          </span>
-        </div>
+        <h1 className="text-6xl font-bold max-[700px]:text-4xl relative smooth-animation text-white">
+          <span className="underline-container">Why Choose Us?</span>
+        </h1>
         <div className="flex flex-row w-2/3 font-semibold max-[900px]:flex-col justify-center">
-          {features.map((feature, index) => (
-            <div key={index} className="flex-1 mr-4 max-[900px]:mx-auto max-[900px]:mt-4">
-              <Accordion sx={{ maxWidth: 300 }}>
-                <AccordionSummary
-                  expandIcon={<ExpandMoreIcon />}
-                  aria-controls={`panel${index + 1}-content`}
-                  id={`panel${index + 1}-header`}
-                >
-                  <div className="flex items-center">
-                    <div className="rounded-full px-6 py-2 border-black border-2 flex items-center justify-center mr-4 flex-row gap-[10px]">
-                      <div className="text-xl">
-                        {index + 1}.
-                      </div>
-                      {feature.icon}
-                    </div>
-                  </div>
-                </AccordionSummary>
-                <AccordionDetails>
-                  <div className="font-semibold text-lg">
-                    {feature.title}
-                  </div>
-                  <div className="text-xs mt-[30px]">
-                    {feature.description}
-                  </div>
-                  <div className="mt-4 flex justify-end">
-                    <button
-                      onClick={() => handleLearnMore(feature)}
-                      className="border border-black px-3 py-1 rounded-[10px] text-xs hover:bg-black hover:text-white transition-colors duration-300"
-                    >
-                      Overview
-                    </button>
-                  </div>
-                </AccordionDetails>
-              </Accordion>
-            </div>
-          ))}
+          {features.map(renderFeature)}
         </div>
       </div>
       <AnimatePresence>

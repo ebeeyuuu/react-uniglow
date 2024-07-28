@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import Marquee from 'react-fast-marquee';
 import { FaHandshake } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -34,13 +34,13 @@ const companies: Company[] = [
 const TrustedCompaniesMarquee: React.FC = () => {
   const [selectedCompany, setSelectedCompany] = useState<Company | null>(null);
 
-  const handleCompanyClick = (company: Company) => {
+  const handleCompanyClick = useCallback((company: Company) => {
     setSelectedCompany(company);
-  };
+  }, []);
 
-  const handleClose = () => {
+  const handleClose = useCallback(() => {
     setSelectedCompany(null);
-  };
+  }, []);
 
   useEffect(() => {
     const handleEscapeKey = (event: KeyboardEvent) => {
@@ -56,7 +56,7 @@ const TrustedCompaniesMarquee: React.FC = () => {
     return () => {
       document.removeEventListener('keydown', handleEscapeKey);
     };
-  }, [selectedCompany]);
+  }, [selectedCompany, handleClose]);
 
   return (
     <div className="w-full flex justify-center items-center flex-col gap-y-[40px] max-[900px]:mt-[600px]">

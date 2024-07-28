@@ -7,7 +7,7 @@ import { usePathname } from 'next/navigation';
 import { navItems } from '@/data';
 import NavModal from './NavModal';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaRobot, FaVrCardboard, FaUserFriends, FaBook, FaGraduationCap, FaListUl, FaHeadset, FaUserGraduate, FaLaptop, FaChalkboardTeacher, FaGlobe, FaTimes } from 'react-icons/fa';
+import { FaRobot, FaVrCardboard, FaUserFriends, FaBook, FaGraduationCap, FaListUl, FaHeadset, FaUserGraduate, FaLaptop, FaChalkboardTeacher, FaGlobe, FaTimes, FaThList } from 'react-icons/fa';
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -127,7 +127,7 @@ const NavBar = () => {
                       animate="visible"
                       exit="hidden"
                       variants={menuVariants}
-                      className="absolute z-10 right-0 mt-2 w-72 origin-top-right rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+                      className="absolute z-10 right-0 mt-2 w-72 origin-top-right rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none py-7 px-3"
                     >
                       <div className="py-1">
                         {programItems.map(({ href, label, icon: Icon }) => (
@@ -138,6 +138,14 @@ const NavBar = () => {
                             {label}
                           </Link>
                         ))}
+                      </div>
+                      <div className="py-1 border-t border-gray-200">
+                        <Link href="/programs" className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                          <div className="mr-3 p-1 rounded-[10px]">
+                            <FaThList size={20} />
+                          </div>
+                          See all programs
+                        </Link>
                       </div>
                       <button 
                         onClick={() => setProgramsOpen(false)}
@@ -170,7 +178,7 @@ const NavBar = () => {
                   animate="visible"
                   exit="hidden"
                   variants={menuVariants}
-                  className="absolute z-10 right-0 mt-2 w-72 origin-top-right rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+                  className="absolute z-10 right-0 mt-2 w-72 origin-top-right rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none py-7 px-3"
                 >
                   <div className="py-1">
                     {exploreItems.map(({ href, label, icon: Icon }) => (

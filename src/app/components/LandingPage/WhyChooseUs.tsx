@@ -5,6 +5,7 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { FaUniversity, FaVrCardboard, FaComments, FaSearch, FaTimes, FaCheck } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
+import image1 from '@/images/17.jpg'
 
 interface FeatureDetails {
   title: string;
@@ -60,7 +61,12 @@ const WhyChooseUs: React.FC = () => {
   }, []);
 
   return (
-    <div className="w-full py-[170px] flex justify-center items-center mt-[300px] bg-[#00274f] relative">
+    <div className="w-full py-[170px] flex justify-center items-center mt-[300px] relative" 
+    style={{ 
+      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${image1.src})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+    }}>
       <div className="absolute inset-0 bg-pattern bg-opacity-20"></div>
       <div className="flex flex-col justify-center items-center gap-y-[50px] relative z-10">
         <div className="text-6xl font-bold max-[700px]:text-4xl relative smooth-animation text-white">

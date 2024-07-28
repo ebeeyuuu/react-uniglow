@@ -126,7 +126,7 @@ const Hero: React.FC = () => {
   return (
     <div className="w-full flex justify-center items-center flex-col">
       <div className="flex flex-row justify-center items-center max-[900px]:flex-col mx-auto">
-        <div className="w-[90%] h-[100vh] grid grid-rows-10 grid-cols-11 gap-[20px] mt-[100px] text-black">
+        <div className="w-[90%] h-[100vh] grid grid-rows-10 grid-cols-11 gap-[20px] mt-[100px] text-black max-[900px]:gap-[15px] max-[900px]:gap-[10px] smooth-animation">
           <motion.div className="row-span-3 col-span-3 cursor-pointer"
             variants={imageVariants}
             initial="initial"

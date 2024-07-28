@@ -185,14 +185,14 @@ const Testimonies: React.FC = () => {
       </div>
       <div className="flex flex-col gap-y-[40px] mx-auto w-full">
         <div>
-          <Marquee direction="left" className="py-4 max-w-[100%]">
+          <Marquee direction="left" className="py-4 max-w-[100%]" pauseOnHover={true}>
             {studentTestimonials.map((testimonial, index) => (
               <TestimonialCard key={index} testimonial={testimonial} />
             ))}
           </Marquee>
         </div>
         <div>
-          <Marquee direction="right" className="py-4 max-w-[100%]">
+          <Marquee direction="right" className="py-4 max-w-[100%]" pauseOnHover={true}>
             {teacherParentTestimonials.map((testimonial, index) => (
               <TestimonialCard key={index} testimonial={testimonial} />
             ))}

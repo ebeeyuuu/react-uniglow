@@ -10,35 +10,32 @@ interface University {
   score: number;
 }
 
-const Page: React.FC = () => {
+const UniversityRankings: React.FC = () => {
   const [universities, setUniversities] = useState<University[]>([]);
-  const [sortedUniversities, setSortedUniversities] = useState<University[]>([]);
-  const [sortKey, setSortKey] = useState<keyof University>('rank');
-  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    // Replace with your API endpoint
-    axios.get('https://api.example.com/university-rankings')
+    setIsLoading(true);
+    axios.get('http://localhost:3001/api/universities')
       .then(response => {
         setUniversities(response.data);
-        setSortedUniversities(response.data);
+        setIsLoading(false);
       })
       .catch(error => {
         console.error('Error fetching university rankings:', error);
+        setError('Failed to fetch university rankings. Please try again later.');
+        setIsLoading(false);
       });
   }, []);
 
-  const handleSort = (key: keyof University) => {
-    const order = sortKey === key && sortOrder === 'asc' ? 'desc' : 'asc';
-    const sorted = [...sortedUniversities].sort((a, b) => {
-      if (a[key] < b[key]) return order === 'asc' ? -1 : 1;
-      if (a[key] > b[key]) return order === 'asc' ? 1 : -1;
-      return 0;
-    });
-    setSortKey(key);
-    setSortOrder(order);
-    setSortedUniversities(sorted);
-  };
+  if (isLoading) {
+    return <div className="min-h-screen bg-gray-900 text-white p-8 flex justify-center items-center">Loading...</div>;
+  }
+
+  if (error) {
+    return <div className="min-h-screen bg-gray-900 text-white p-8 flex justify-center items-center">{error}</div>;
+  }
 
   return (
     <div className="min-h-screen bg-gray-900 text-white p-8">
@@ -47,22 +44,14 @@ const Page: React.FC = () => {
         <table className="min-w-full bg-gray-800 shadow-md rounded-lg">
           <thead>
             <tr>
-              <th className="py-2 px-4 border-b border-gray-700 cursor-pointer" onClick={() => handleSort('rank')}>
-                Rank {sortKey === 'rank' ? (sortOrder === 'asc' ? '▲' : '▼') : ''}
-              </th>
-              <th className="py-2 px-4 border-b border-gray-700 cursor-pointer" onClick={() => handleSort('name')}>
-                University {sortKey === 'name' ? (sortOrder === 'asc' ? '▲' : '▼') : ''}
-              </th>
-              <th className="py-2 px-4 border-b border-gray-700 cursor-pointer" onClick={() => handleSort('country')}>
-                Country {sortKey === 'country' ? (sortOrder === 'asc' ? '▲' : '▼') : ''}
-              </th>
-              <th className="py-2 px-4 border-b border-gray-700 cursor-pointer" onClick={() => handleSort('score')}>
-                Score {sortKey === 'score' ? (sortOrder === 'asc' ? '▲' : '▼') : ''}
-              </th>
+              <th className="py-2 px-4 border-b border-gray-700">Rank</th>
+              <th className="py-2 px-4 border-b border-gray-700">University</th>
+              <th className="py-2 px-4 border-b border-gray-700">Country</th>
+              <th className="py-2 px-4 border-b border-gray-700">Score</th>
             </tr>
           </thead>
           <tbody>
-            {sortedUniversities.map((university) => (
+            {universities.map((university) => (
               <tr key={university.rank} className="hover:bg-gray-700">
                 <td className="py-2 px-4 border-b border-gray-700">{university.rank}</td>
                 <td className="py-2 px-4 border-b border-gray-700">{university.name}</td>
@@ -77,4 +66,4 @@ const Page: React.FC = () => {
   );
 };
 
-export default Page;
+export default UniversityRankings;

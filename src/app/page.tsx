@@ -1,6 +1,7 @@
 "use client"
 
 import React, { Suspense, lazy } from 'react';
+import { GoogleOAuthProvider } from '@react-oauth/google';
 import NavBar from './components/NavBar';
 import Loading from './components/Loading';
 

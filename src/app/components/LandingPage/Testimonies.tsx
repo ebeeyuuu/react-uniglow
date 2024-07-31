@@ -164,7 +164,7 @@ const TestimonialCard: React.FC<{ testimonial: Testimonial }> = ({ testimonial }
       <Image src={testimonial.image} alt={testimonial.name} className="w-16 h-16 rounded-full" />
       <div className="flex flex-col">
         <p className="text-lg font-medium text-white">{testimonial.name}</p>
-        <p className="text-base text-[#7dbeff]">{testimonial.role}</p>
+        <p className="text-base text-white">{testimonial.role}</p>
       </div>
     </div>
     <div className="flex items-center">

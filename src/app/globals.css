@@ -18,7 +18,12 @@
     left: -100%;
     width: 200%;
     height: 100%;
-    background: linear-gradient(to right, rgba(0, 123, 255, 0) 0%, rgba(0, 128, 255, 0.5) 50%, rgba(0, 123, 255, 0) 100%);
+    background: linear-gradient(
+      to right,
+      rgba(0, 123, 255, 0) 0%,
+      rgba(0, 128, 255, 0.5) 50%,
+      rgba(0, 123, 255, 0) 100%
+    );
     transition: all 0.5s ease;
     opacity: 0;
   }
@@ -31,8 +36,9 @@
     color: white;
     opacity: 0.9; /* Firefox */
   }
-  
-  .placeholder-white::-ms-input-placeholder { /* Edge 12 -18 */
+
+  .placeholder-white::-ms-input-placeholder {
+    /* Edge 12 -18 */
     color: white;
     opacity: 0.9;
   }
@@ -44,14 +50,15 @@
     color: #ff890a;
     margin-left: 10px;
   }
-  
+
   .typing-cursor.blinking {
     animation: blink 0.7s step-end infinite;
     animation-iteration-count: 5; /* Approximately 10 seconds (14 * 0.7s) */
   }
-  
+
   @keyframes blink {
-    from, to {
+    from,
+    to {
       opacity: 1;
     }
     50% {
@@ -99,8 +106,8 @@ body::-webkit-scrollbar {
 }
 
 .underline-container::after {
-  content: '';
-  @apply absolute bottom-[-20px] left-0 w-full h-[10px] bg-[#e07000] transition-all duration-500 ease-in-out;
+  content: "";
+  @apply absolute bottom-[-20px] left-0 w-full h-[10px] bg-[#fd7e00] transition-all duration-500 ease-in-out;
 }
 
 .underline-container:hover::after {

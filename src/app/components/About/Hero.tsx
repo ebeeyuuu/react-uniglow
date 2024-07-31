@@ -7,12 +7,7 @@ import { FaCopyright } from 'react-icons/fa';
 const Hero = () => {
   return (
     <div className="w-full flex flex-col">
-      <Image
-        src={image1}
-        alt="background-image"
-        className="w-full object-cover filter contrast-150 brightness-[70%] rounded-[5px] h-[50vh]"
-      />
-      <div className="text-center text-white font-bold text-4xl px-5 py-5 rounded-[10px] bg-[#020202] max-[900px]:text-2xl border border-white mt-[100px] px-5 mx-auto">
+      <div className="text-center text-white font-bold text-4xl px-5 py-5 rounded-[10px] bg-[#020202] max-[900px]:text-2xl border border-white mt-[100px] mx-auto">
         About Us: Our Story
       </div>
       <hr className="w-[70%] border border-white/30 mx-auto mt-[60px]" />

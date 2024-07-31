@@ -5,6 +5,8 @@ import Loading from '@/app/components/Loading';
 import Link from 'next/link';
 import { RiArrowGoBackLine } from 'react-icons/ri';
 import { FaCheckCircle } from 'react-icons/fa';
+import { useGoogleLogin } from '@react-oauth/google';
+import { useRouter } from 'next/navigation';
 
 // Lazy load the RegisterLayout component
 const RegisterLayout = lazy(() => import('@/app/components/RegisterLayout'));
@@ -14,8 +16,10 @@ const passwordConditions = [
   { regex: /[A-Z]/, description: 'At least one uppercase letter' },
   { regex: /[a-z]/, description: 'At least one lowercase letter' },
   { regex: /\d/, description: 'At least one number' },
-  { regex: /[@$!%*?&]/, description: 'At least one special character (@$!%*?&)' }
+  { regex: /[@$%*?&]/, description: 'At least one special character (@$%*?&)' }
 ];
+
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 const Page = () => {
   const [password, setPassword] = useState('');
@@ -23,6 +27,21 @@ const Page = () => {
   const [showConditions, setShowConditions] = useState(false);
   const [satisfiedConditions, setSatisfiedConditions] = useState<boolean[]>(new Array(passwordConditions.length).fill(false));
   const [isPasswordTouched, setIsPasswordTouched] = useState(false);
+  const [email, setEmail] = useState('');
+  const [emailError, setEmailError] = useState<string | null>(null);
+
+  const router = useRouter();
+
+  const login = useGoogleLogin({
+    onSuccess: (codeResponse) => {
+      console.log(codeResponse);
+      // Handle the response here
+      router.push('/dashboard'); // Redirect to dashboard page after successful sign-in
+    },
+    onError: (error) => {
+      console.error(error);
+    },
+  });
 
   useEffect(() => {
     const newSatisfiedConditions = passwordConditions.map(condition => condition.regex.test(password));
@@ -52,8 +71,18 @@ const Page = () => {
               <input 
                 type="text"
                 placeholder="Email: name@example.com"
-                className="input-field px-4 py-2 border-white border-2 rounded-[10px] h-[45px] w-[25vw] font-medium bg-black"
+                value={email}
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                  if (emailRegex.test(e.target.value)) {
+                    setEmailError(null);
+                  } else {
+                    setEmailError('Invalid email format. Please use name@example.com');
+                  }
+                }}
+                className={`input-field px-4 py-2 border-white border-2 rounded-[10px] h-[45px] w-[25vw] font-medium bg-black ${emailError ? 'border-[#ff850a]' : ''}`}
               />
+              {emailError && <div className="text-[#ff850a] text-sm">{emailError}</div>}
               <div className="w-full">
                 <input 
                   type="password"
@@ -102,6 +131,9 @@ const Page = () => {
           <Link href="/pages/signup" className="italic text-base font-normal text-center">
             Don&apos;t have an account? Sign up here!
           </Link>
+          <button onClick={() => login()}>
+            Sign in with Google
+          </button>
         </div>
       </RegisterLayout>
     </Suspense>

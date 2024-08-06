@@ -8,7 +8,8 @@ import { FaCheckCircle } from 'react-icons/fa';
 import RegisterLayout from '../../components/RegisterLayout';
 import Loading from '../../components/Loading';
 import { addDoc, collection } from "firebase/firestore";
-import { db } from '@/firebaseConfig';  // Ensure db is correctly exported from firebaseConfig.ts
+import { db } from '@/firebaseConfig'; 
+import { useUser } from '@/context/userContext'; // Import the useUser hook
 
 interface PasswordCondition {
   description: string;
@@ -24,10 +25,12 @@ const Page = () => {
   const [showConditions, setShowConditions] = useState(false);
   const [emailError, setEmailError] = useState('');
   const [passwordError, setPasswordError] = useState('');
+  const [usernameError, setUsernameError] = useState('');
   const [isPasswordTouched, setIsPasswordTouched] = useState(false);
   const [passwordConditions, setPasswordConditions] = useState<PasswordCondition[]>([]);
   const [satisfiedConditions, setSatisfiedConditions] = useState<boolean[]>([]);
   const router = useRouter();
+  const { setUsername: setContextUsername, setAge: setContextAge, setGrade: setContextGrade, setEmail: setContextEmail } = useUser();
 
   useEffect(() => {
     // Example password conditions
@@ -56,8 +59,19 @@ const Page = () => {
     return conditions.every(condition => condition);
   };
 
+  const validateUsername = (username: string) => {
+    const emailRegex = /^[a-zA-Z0-9_.]+$/;
+    return emailRegex.test(username);
+  };
+
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+
+    if (!validateUsername(username)) {
+      setUsernameError("Usernames can only have uppercase and lowercase letters, numbers, and underscores.");
+    } else {
+      setUsernameError('');
+    }
 
     if (!validateEmail(email)) {
       setEmailError('Invalid email format');
@@ -83,6 +97,16 @@ const Page = () => {
       });
 
       console.log("Document written with ID: ", docRef.id);
+      setContextUsername(username);
+      setContextAge(parseInt(age));
+      setContextGrade(parseInt(grade));
+      setContextEmail(email);
+
+      console.log('Username: ', username)
+      console.log('Age: ', age)
+      console.log('Grade: ', grade)
+      console.log('Email: ', email)
+
       router.push('/pages/main');
     } catch (error) {
       console.error("Error adding document: ", error);
@@ -102,6 +126,7 @@ const Page = () => {
   const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setPassword(value);
+
     setIsPasswordTouched(true);
 
     // Check password conditions
@@ -127,14 +152,20 @@ const Page = () => {
       <RegisterLayout>
         <div className="flex flex-col mx-auto justify-center items-center gap-y-7 w-full md:w-1/2 h-full p-4">
           <div className="text-4xl">Sign Up</div>
-          <form onSubmit={handleSubmit} className="w-full max-w-md mb-10 flex flex-col gap-y-4">
-            <input 
-              type="text"
-              placeholder="Username"
-              value={username}
-              onChange={handleUsernameChange}
-              className="input-field px-4 py-2 border-white border-2 rounded-[10px] h-[45px] mt-[20px] w-full font-medium bg-black"
-            />
+          <form onSubmit={handleSubmit} className="w-[45vw] max-w-[400px] min-w-[300px] mb-10 flex flex-col gap-y-4">
+            <div className="relative">
+              <input 
+                type="text"
+                placeholder="Username"
+                value={username}
+                onChange={handleUsernameChange}
+                className={`input-field px-4 py-2 border-white border-2 rounded-[10px] h-[45px] mt-[20px] w-full font-medium bg-black ${usernameError ? 'mb-0' : 'mb-[-16px]'}`}
+                required
+              />
+              <div className="text-[#ff850a] text-base text-center mt-4">
+                {usernameError}
+              </div>
+            </div>
             <div className="flex flex-row gap-x-4 w-full">
               <input 
                 type="number"
@@ -142,6 +173,7 @@ const Page = () => {
                 value={age}
                 onChange={handleAgeChange}
                 className="input-field px-4 py-2 border-white border-2 rounded-[10px] w-1/2 h-[45px] font-medium bg-black"
+                required
               />
               <input 
                 type="number"
@@ -149,6 +181,7 @@ const Page = () => {
                 value={grade}
                 onChange={handleGradeChange}
                 className="input-field px-4 py-2 border-white border-2 rounded-[10px] w-1/2 h-[45px] font-medium bg-black"
+                required
               />
             </div>
             <div className="relative">
@@ -158,6 +191,7 @@ const Page = () => {
                 onChange={handleEmailChange}
                 placeholder="Email: name@example.com"
                 className={`input-field px-4 py-2 border-white border-2 rounded-[10px] h-[45px] w-full font-medium bg-black ${emailError ? 'border-[#ff850a]' : ''}`}
+                required
               />
               {emailError && (
                 <div className="text-[#ff850a] text-base text-center mt-4">
@@ -174,6 +208,7 @@ const Page = () => {
                 onBlur={() => setShowConditions(false)}
                 placeholder="Password"
                 className={`input-field px-4 py-2 border-white border-2 rounded-[10px] h-[45px] w-full font-medium bg-black ${isPasswordTouched && passwordError ? 'border-[#ff850a]' : ''}`}
+                required
               />
               {showConditions && (
                 <div className="absolute top-full left-0 mt-2 p-2 bg-gray-700 rounded-md shadow-lg z-10 w-full">
@@ -195,14 +230,17 @@ const Page = () => {
               )}
             </div>
             {isPasswordTouched && passwordError && <div className="text-[#ff850a] text-sm text-center">{passwordError}</div>}
+            <div className="flex justify-center items-center italic mt-[10px]">
+              <Link href="/pages/signin">Already have an account? Sign in here</Link>
+            </div>
             <div className="flex justify-center gap-x-4 mt-4">
-              <Link href="/" className="text-lg font-medium flex flex-row gap-x-3 bg-[#003366] rounded-[10px] px-4 py-2 items-center justify-center text-white hover:bg-[#002244]">
+              <Link href="/" className="text-lg font-medium flex flex-row gap-x-3 bg-[#003366] rounded-[10px] px-4 py-2 items-center justify-center text-white hover:bg-[#002244] w-[135px]">
                 <RiArrowGoBackLine />
                 Go back
               </Link>
               <button
                 type="submit"
-                className="text-lg font-medium flex flex-row gap-x-3 bg-[#4285F4] rounded-[10px] px-4 py-2 items-center justify-center text-white hover:bg-[#357ae8]"
+                className="text-lg font-medium flex flex-row gap-x-3 bg-[#4285F4] rounded-[10px] px-4 py-2 items-center justify-center text-white hover:bg-[#357ae8] w-[100px]"
               >
                 Submit
               </button>

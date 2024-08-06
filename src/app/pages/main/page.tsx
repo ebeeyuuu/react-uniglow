@@ -1,11 +1,18 @@
-import React from 'react'
+// Page.js
+import React from 'react';
+import MainLayout from '@/app/MainLayout';
+import AIMatching from '@/app/components/Main/AIMatching';
 
-const page = () => {
+const Page = () => {
   return (
-    <div className="w-full h-[100vh] flex justify-center items-center text-6xl font-bold">
-      Success!
-    </div>
-  )
-}
+    <MainLayout>
+      <div className="flex justify-center items-center w-full h-full">
+        <div className="text-4xl font-bold">
+          Welcome to Uniglow!
+        </div>
+      </div>
+    </MainLayout>
+  );
+};
 
-export default page
+export default Page;

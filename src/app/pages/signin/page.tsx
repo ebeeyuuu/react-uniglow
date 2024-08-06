@@ -1,62 +1,77 @@
-"use client"
+"use client";
 
-import React, { Suspense, lazy, useState, useEffect } from 'react';
+import React, { Suspense, lazy, useState } from 'react';
 import Loading from '@/app/components/Loading';
 import Link from 'next/link';
 import { RiArrowGoBackLine } from 'react-icons/ri';
-import { FaCheckCircle } from 'react-icons/fa';
-import { useGoogleLogin } from '@react-oauth/google';
 import { useRouter } from 'next/navigation';
+import { db } from '@/firebaseConfig';
+import { collection, getDocs, query, where, DocumentData } from 'firebase/firestore';
+import { useUser } from '@/context/userContext'; // Import the useUser hook
 
-// Lazy load the RegisterLayout component
 const RegisterLayout = lazy(() => import('@/app/components/RegisterLayout'));
 
-const passwordConditions = [
-  { regex: /.{8,}/, description: 'At least 8 characters' },
-  { regex: /[A-Z]/, description: 'At least one uppercase letter' },
-  { regex: /[a-z]/, description: 'At least one lowercase letter' },
-  { regex: /\d/, description: 'At least one number' },
-  { regex: /[@$%*?&]/, description: 'At least one special character (@$%*?&)' }
-];
-
-const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
 const Page = () => {
+  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [passwordError, setPasswordError] = useState<string | null>(null);
-  const [showConditions, setShowConditions] = useState(false);
-  const [satisfiedConditions, setSatisfiedConditions] = useState<boolean[]>(new Array(passwordConditions.length).fill(false));
-  const [isPasswordTouched, setIsPasswordTouched] = useState(false);
-  const [email, setEmail] = useState('');
-  const [emailError, setEmailError] = useState<string | null>(null);
-
+  const [error, setError] = useState<string | null>(null);
+  const { setUsername: setContextUsername, setAge: setContextAge, setGrade: setContextGrade, setEmail: setContextEmail } = useUser();
   const router = useRouter();
 
-  const login = useGoogleLogin({
-    onSuccess: (codeResponse) => {
-      console.log(codeResponse);
-      // Handle the response here
-      router.push('/dashboard'); // Redirect to dashboard page after successful sign-in
-    },
-    onError: (error) => {
-      console.error(error);
-    },
-  });
-
-  useEffect(() => {
-    const newSatisfiedConditions = passwordConditions.map(condition => condition.regex.test(password));
-    setSatisfiedConditions(newSatisfiedConditions);
-
-    if (newSatisfiedConditions.every(condition => condition)) {
-      setPasswordError(null);
-    } else if (isPasswordTouched) {
-      setPasswordError('Password does not meet all requirements.');
+  const handleSignIn = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setError(null); // Reset error state
+    
+    try {
+      // Query Firestore for the user with the provided username
+      const q = query(collection(db, 'users'), where('username', '==', username));
+      const querySnapshot = await getDocs(q);
+  
+      if (querySnapshot.empty) {
+        throw new Error('No user found with this username.');
+      }
+  
+      // Check if the provided password matches the password in the database
+      const userDoc = querySnapshot.docs[0];
+      const userData = userDoc.data() as DocumentData;
+  
+      if (userData.password !== password) {
+        throw new Error('Incorrect password. Please try again.');
+      }
+  
+      // Destructure the userData object
+      const { username: dbUsername, email, grade, age } = userData;
+      console.log('DB Username: ', dbUsername)
+      console.log('Email: ', email)
+      console.log('Grade: ', grade)
+      console.log('Age: ', age)
+  
+      // Set user data in context
+      
+      setContextUsername(dbUsername);
+      setContextAge(parseInt(age));
+      setContextGrade(parseInt(grade));
+      setContextEmail(email);
+  
+      // Redirect to the main page
+      router.push('/pages/main');
+    } catch (error: unknown) {
+      console.error('Error signing in:', error);
+  
+      if (error instanceof Error) {
+        let errorMessage = 'An unknown error occurred.';
+        if (error.message.includes('No user found with this username.')) {
+          errorMessage = 'No user found with this username.';
+        } else if (error.message.includes('Incorrect password. Please try again.')) {
+          errorMessage = 'Incorrect password. Please try again.';
+        } else if (error.message.includes('auth/')) {
+          errorMessage = 'Authentication error. Please check your credentials.';
+        }
+        setError(errorMessage);
+      } else {
+        setError('An unknown error occurred.');
+      }
     }
-  }, [password, isPasswordTouched]);
-
-  const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setPassword(e.target.value);
-    setIsPasswordTouched(true);
   };
 
   return (
@@ -66,74 +81,37 @@ const Page = () => {
           <div className="text-4xl">
             Sign In
           </div>
-          <form className="w-[65vw] mb-[40px] flex justify-center">
-            <div className="flex flex-col mx-auto gap-y-4 items-center">
-              <input 
-                type="text"
-                placeholder="Email: name@example.com"
-                value={email}
-                onChange={(e) => {
-                  setEmail(e.target.value);
-                  if (emailRegex.test(e.target.value)) {
-                    setEmailError(null);
-                  } else {
-                    setEmailError('Invalid email format. Please use name@example.com');
-                  }
-                }}
-                className={`input-field px-4 py-2 border-white border-2 rounded-[10px] h-[45px] w-[25vw] font-medium bg-black ${emailError ? 'border-[#ff850a]' : ''}`}
-              />
-              {emailError && <div className="text-[#ff850a] text-sm">{emailError}</div>}
-              <div className="w-full">
-                <input 
-                  type="password"
-                  value={password}
-                  onChange={handlePasswordChange}
-                  onFocus={() => setShowConditions(true)}
-                  onBlur={() => setShowConditions(false)}
-                  placeholder="Password"
-                  className={`input-field px-4 py-2 border-white border-2 rounded-[10px] h-[45px] w-full font-medium bg-black ${passwordError ? 'border-[#ff850a]' : ''}`}
-                />
-                {showConditions && (
-                  <div className="absolute top-full left-0 mt-2 p-2 bg-gray-700 rounded-md shadow-lg z-10 w-full">
-                    <ul className="list-none">
-                      {passwordConditions.map((condition, index) => (
-                        <li key={index} className="flex items-center space-x-2">
-                          {satisfiedConditions[index] ? (
-                            <FaCheckCircle className="text-green-500" />
-                          ) : (
-                            <div className="w-4 h-4 border border-white rounded-full" />
-                          )}
-                          <span className={satisfiedConditions[index] ? 'text-green-400' : 'text-white'}>
-                            {condition.description}
-                          </span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-              </div>
-              {passwordError && <div className="text-[#ff850a] text-sm">{passwordError}</div>}
+          <form onSubmit={handleSignIn} className="mb-10 flex flex-col gap-y-4 w-[40vw] max-w-[400px] min-w-[300px]">
+            <input 
+              type="text"
+              placeholder="Username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              className={`input-field px-4 py-2 border-white border-2 rounded-[10px] h-[45px] w-full font-medium bg-black`}
+              required
+            />
+            <input 
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className={`input-field px-4 py-2 border-white border-2 rounded-[10px] h-[45px] w-full font-medium bg-black`}
+              required
+            />
+            {error && <div className="text-[#ff850a] text-sm mt-2">{error}</div>}
+            <div className="flex flex-row gap-x-4 mt-4 justify-center">
+              <Link href="/" className="text-lg font-medium flex flex-row gap-x-3 bg-[#003366] rounded-[10px] px-4 py-2 h-[45px]">
+                <div>Return</div>
+                <RiArrowGoBackLine className="mt-[6px]"/>
+              </Link>
+              <button type="submit" className="text-lg font-medium flex flex-row bg-[#0070e0] text-white rounded-[10px] px-4 py-2 h-[45px]">
+                Submit
+              </button>
             </div>
           </form>
-          <div className="flex flex-row gap-x-4 mt-[-40px]">
-            <Link href="/" className="text-lg font-medium flex flex-row gap-x-3 bg-[#003366] rounded-[10px] px-4 py-2 h-[45px]">
-              <div>
-                Return
-              </div>
-              <RiArrowGoBackLine className="mt-[6px]"/>
-            </Link>
-            <Link href="/pages/signup" className="text-lg font-medium flex flex-row bg-[#0070e0] text-white rounded-[10px] px-4 py-2 h-[45px]">
-              <div className="mt-[1px]">
-                Submit
-              </div>
-            </Link>
-          </div>
-          <Link href="/pages/signup" className="italic text-base font-normal text-center">
+          <Link href="/pages/signup" className="italic text-base font-normal text-center mt-[-40px]">
             Don&apos;t have an account? Sign up here!
           </Link>
-          <button onClick={() => login()}>
-            Sign in with Google
-          </button>
         </div>
       </RegisterLayout>
     </Suspense>

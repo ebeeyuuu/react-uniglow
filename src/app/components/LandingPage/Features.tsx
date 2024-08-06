@@ -80,13 +80,13 @@ const Features: React.FC = () => {
       {/* Text container */}
       <div className="flex flex-col gap-y-[30px] w-1/3 max-[900px]:text-center max-[900px]:w-[80%] max-[900px]:mx-auto">
         <div className="text-5xl font-medium">
-          What separates{" "}
+          What separates
           <span
             className="text-[#fd7e00] italic underline decoration-[3px] underline-offset-[3px]"
             style={{ fontWeight: 900 }}
           >
             us
-          </span>{" "}
+          </span>
           from <span className="italic font-semibold">the rest</span>
         </div>
         <div>

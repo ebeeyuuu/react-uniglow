@@ -8,16 +8,16 @@ interface RegisterLayoutProps {
 
 const RegisterLayout: React.FC<RegisterLayoutProps> = ({ children }) => {
   return (
-    <div className="w-full h-screen flex flex-col-reverse md:flex-row items-center font-semibold">
-      <div className="flex flex-col justify-center items-center gap-y-4 w-full md:w-1/2 h-full p-4 mx-auto">
-        {children}
-      </div>
-      <div className="w-full md:w-1/3 h-1/3 md:h-full">
+    <div className="w-full h-screen flex justify-center md:flex-row items-center font-semibold">
+      <div className="w-full h-full filter brightness-50">
         <Image 
           src={image1} 
           alt="Image" 
-          className="w-full h-full object-cover" 
+          className="w-full h-full object-cover -z-100" 
         />
+      </div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#020202] py-[40px] px-[40px] rounded-[20px] z-100">
+        {children}
       </div>
     </div>
   )

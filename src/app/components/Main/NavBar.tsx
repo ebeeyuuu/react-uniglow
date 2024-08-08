@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { Sling as Hamburger } from "hamburger-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaTimes } from 'react-icons/fa';
@@ -59,7 +59,15 @@ const NavBar = () => {
         onMouseLeave={() => setIsHover(false)}
       >
         <div className="flex flex-col items-center mt-[30px] gap-[25px] max-[700px]:flex-row max-[700px]:mt-0 max-[700px]:gap-[15px] max-[700px]:h-full max-[700px]:justify-center max-[700px]:hidden p-3">
-          <Image src={placeholderpfp} alt="" className={`rounded-full max-[700px]:my-auto max-[700px]:ml-[30px] max-[700px]:w-[40px] max-[700px]:h-[40px] cursor-pointer smooth-animation ${isHover ? "w-[70px] h-[70px]" : "w-[50px] h-[50px]"}`} onClick={() => {router.push('/pages/settings')}} />
+          <Image
+            src={placeholderpfp}
+            alt=""
+            className={`rounded-full max-[700px]:my-auto max-[700px]:ml-[30px] max-[700px]:w-[40px] max-[700px]:h-[40px] cursor-pointer smooth-animation ${isHover ? "w-[70px] h-[70px]" : "w-[50px] h-[50px]"}`}
+            onClick={() => {router.push('/pages/settings')}}
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={`max-[700px]:text-sm mb-2 max-[700px]:mb-0 smooth-animation ${isHover ? "text-xl" : "text-base"}`}>{username === "" ? "Guest" : username}</p>
           {navItems.map(({ href, label, icon: Icon }) => (
             <Link key={href} href={href} className={`flex items-center h-[50px] text-ellipsis overflow-hidden whitespace-nowrap smooth-animation ${isHover ? "mb-[-10px]" : "mb-0"}`}>
@@ -83,7 +91,15 @@ const NavBar = () => {
           ))}
         </div>
         <div className="flex items-center mb-[30px] max-[700px]:my-auto max-[700px]:mr-[40px] max-[700px]:ml-[30px] flex-row gap-x-[15px]">
-          <Image src={placeholderpfp} alt="" className={`rounded-full w-[50px] h-[50px] max-[700px]:my-auto cursor-pointer hidden max-[700px]:flex smooth-animation`} onClick={() => {router.push('/pages/settings')}} />
+          <Image
+            src={placeholderpfp}
+            alt=""
+            className={`rounded-full w-[50px] h-[50px] max-[700px]:my-auto cursor-pointer hidden max-[700px]:flex smooth-animation`}
+            onClick={() => {router.push('/pages/settings')}}
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <Link href="/">
             <Exit className="max-[700px]:w-[25px] max-[700px]:h-[25px]" />
           </Link>

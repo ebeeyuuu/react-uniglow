@@ -1,7 +1,7 @@
 import React from 'react'
 import Marquee from 'react-fast-marquee'
 import { FaStar, FaStarHalfAlt } from 'react-icons/fa'
-import Image from "next/legacy/image"
+import Image from "next/image"
 import image7 from '@/images/7.png'
 
 interface Testimonial {
@@ -161,7 +161,14 @@ const teacherParentTestimonials: Testimonial[] = [
 const TestimonialCard: React.FC<{ testimonial: Testimonial }> = ({ testimonial }) => (
   <div className="flex flex-col space-y-4 mx-4 border border-white rounded-[10px] p-6 w-[300px]">
     <div className="flex items-start space-x-4">
-      <Image src={testimonial.image} alt={testimonial.name} className="w-16 h-16 rounded-full" />
+      <Image
+        src={testimonial.image}
+        alt={testimonial.name}
+        className="w-16 h-16 rounded-full"
+        style={{
+          maxWidth: "100%",
+          height: "auto"
+        }} />
       <div className="flex flex-col">
         <p className="text-lg font-medium text-white">{testimonial.name}</p>
         <p className="text-base text-white">{testimonial.role}</p>

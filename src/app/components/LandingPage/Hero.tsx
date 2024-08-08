@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Image, { StaticImageData } from "next/legacy/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -149,7 +149,10 @@ const Hero: React.FC = () => {
               src={harvard}
               alt="University 1"
               className="h-[100%] w-[100%] object-cover rounded-[10px] transition-all duration-300 ease-in-out"
-            />
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} />
           </motion.div>
           <motion.div
             className="row-span-2 col-span-3 max-[700px]:row-span-1 max-[700px]:col-span-1 max-[700px]:h-[150px] cursor-pointer"
@@ -162,7 +165,10 @@ const Hero: React.FC = () => {
               src={stanford}
               alt="University 2"
               className="h-[100%] w-[100%] object-cover rounded-[10px] transition-all duration-300 ease-in-out"
-            />
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} />
           </motion.div>
           <motion.div
             className="row-span-2 col-span-2 max-[700px]:row-span-1 max-[700px]:col-span-1 max-[700px]:h-[150px] cursor-pointer"
@@ -175,7 +181,10 @@ const Hero: React.FC = () => {
               src={mit}
               alt="University 3"
               className="h-[100%] w-[100%] object-cover rounded-[10px] transition-all duration-300 ease-in-out"
-            />
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} />
           </motion.div>
           <motion.div
             className="row-span-2 col-span-3 max-[700px]:row-span-1 max-[700px]:col-span-2 max-[700px]:h-[150px] cursor-pointer"
@@ -188,7 +197,10 @@ const Hero: React.FC = () => {
               src={yale}
               alt="University 4"
               className="h-[100%] w-[100%] object-cover rounded-[10px] transition-all duration-300 ease-in-out"
-            />
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} />
           </motion.div>
           <div className="row-span-3 col-span-5 max-[700px]:row-span-3 max-[700px]:col-span-3 text-white flex justify-center items-center">
             <div className="flex flex-row items-center text-center gap-y-[15px] w-[80%] mx-auto max-[1000px]:flex-col max-[900px]:text-center">
@@ -220,7 +232,10 @@ const Hero: React.FC = () => {
               src={princeton}
               alt="University 5"
               className="h-[100%] w-[100%] object-cover rounded-[10px] transition-all duration-300 ease-in-out"
-            />
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} />
           </motion.div>
           <motion.div
             className="row-span-2 col-span-3 max-[700px]:row-span-1 max-[700px]:col-span-1 max-[700px]:h-[150px] cursor-pointer"
@@ -233,7 +248,10 @@ const Hero: React.FC = () => {
               src={columbia}
               alt="University 6"
               className="h-[100%] w-[100%] object-cover rounded-[10px] transition-all duration-300 ease-in-out"
-            />
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} />
           </motion.div>
           <motion.div
             className="row-span-3 col-span-3 max-[700px]:row-span-1 max-[700px]:col-span-2 max-[700px]:h-[150px] cursor-pointer"
@@ -246,7 +264,10 @@ const Hero: React.FC = () => {
               src={chicago}
               alt="University 7"
               className="h-[100%] w-[100%] object-cover rounded-[10px] transition-all duration-300 ease-in-out"
-            />
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} />
           </motion.div>
           <motion.div
             className="row-span-2 col-span-3 max-[700px]:row-span-1 max-[700px]:col-span-2 max-[700px]:h-[150px] cursor-pointer"
@@ -259,7 +280,10 @@ const Hero: React.FC = () => {
               src={upenn}
               alt="University 8"
               className="h-[100%] w-[100%] object-cover rounded-[10px] transition-all duration-300 ease-in-out"
-            />
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} />
           </motion.div>
           <motion.div
             className="row-span-2 col-span-2 max-[700px]:row-span-1 max-[700px]:col-span-1 max-[700px]:h-[150px] cursor-pointer"
@@ -272,7 +296,10 @@ const Hero: React.FC = () => {
               src={caltech}
               alt="University 9"
               className="h-[100%] w-[100%] object-cover rounded-[10px] transition-all duration-300 ease-in-out"
-            />
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} />
           </motion.div>
           <motion.div
             className="row-span-2 col-span-3 max-[700px]:row-span-1 max-[700px]:col-span-3 max-[700px]:h-[150px] cursor-pointer"
@@ -285,7 +312,10 @@ const Hero: React.FC = () => {
               src={duke}
               alt="University 10"
               className="h-[100%] w-[100%] object-cover rounded-[10px] transition-all duration-300 ease-in-out"
-            />
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} />
           </motion.div>
         </div>
       </div>
@@ -308,9 +338,11 @@ const Hero: React.FC = () => {
               <Image
                 src={universities[expandedImage].src}
                 alt={universities[expandedImage].alt}
-                layout="fill"
-                objectFit="cover"
-              />
+                fill
+                sizes="100vw"
+                style={{
+                  objectFit: "cover"
+                }} />
               <div className="absolute inset-0 flex flex-col justify-between">
                 <div className="p-4 self-end">
                   <button

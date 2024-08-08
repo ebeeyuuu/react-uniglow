@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from "next/legacy/image";
+import Image from "next/image";
 import image1 from '@/images/14.jpg';
 import image2 from '@/images/15.jpg';
 import { FaCopyright } from 'react-icons/fa';
@@ -31,7 +31,10 @@ const Hero = () => {
           src={image2}
           alt=""
           className="w-[90%] lg:w-[35%] h-[500px] object-cover mb-[40px] lg:mb-0 filter brightness-[70%]"
-        />
+          style={{
+            maxWidth: "100%",
+            height: "auto"
+          }} />
       </div>
       <hr className="w-[70%] border border-white/30 mx-auto mt-[90px]" />
       <div className="flex justify-center items-center mt-[60px] flex-col mx-auto gap-y-[10px]">

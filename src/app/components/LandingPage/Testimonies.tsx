@@ -1,7 +1,7 @@
 import React from 'react'
 import Marquee from 'react-fast-marquee'
 import { FaStar, FaStarHalfAlt } from 'react-icons/fa'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import image7 from '@/images/7.png'
 
 interface Testimonial {

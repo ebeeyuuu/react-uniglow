@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 import image1 from '@/images/1.jpg'
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 interface RegisterLayoutProps {
   children: ReactNode;

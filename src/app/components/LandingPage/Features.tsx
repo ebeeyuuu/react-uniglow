@@ -80,20 +80,24 @@ const Features: React.FC = () => {
       {/* Text container */}
       <div className="flex flex-col gap-y-[30px] w-1/3 max-[900px]:text-center max-[900px]:w-[80%] max-[900px]:mx-auto">
         <div className="text-5xl font-medium">
-          What separates
-          <span
-            className="text-[#fd7e00] italic underline decoration-[3px] underline-offset-[3px]"
-            style={{ fontWeight: 900 }}
-          >
-            us
-          </span>
-          from <span className="italic font-semibold">the rest</span>
+          <div>
+            What separates
+            <span
+              className="text-[#fd7e00] italic underline decoration-[3px] underline-offset-[3px] mr-[20px] ml-[10px]"
+              style={{ fontWeight: 900 }}
+            >
+              us
+            </span>
+          </div>
+          <div>
+            from <span className="italic font-semibold">the rest</span>
+          </div>
         </div>
         <div>
           The features of Uniglow that allows us to easily help you find the
           university that you so desire.
         </div>
-        <button className="bg-[#005ebd] text-white py-2 px-4 rounded-[20px] w-1/2 max-[900px]:mx-auto hover:py-5 transition-all duration-300 ease-in-out">
+        <button className="bg-[#005ebd] text-white py-3 rounded-[20px] w-[150px] max-[900px]:mx-auto hover:py-5 transition-all duration-300 ease-in-out">
           <Link href="/pages/signup">Get started</Link>
         </button>
       </div>

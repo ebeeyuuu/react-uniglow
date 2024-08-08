@@ -7,7 +7,7 @@ import { RiArrowGoBackLine } from 'react-icons/ri';
 import { FaCheckCircle } from 'react-icons/fa';
 import RegisterLayout from '../../components/RegisterLayout';
 import Loading from '../../components/Loading';
-import { addDoc, collection } from "firebase/firestore";
+import { addDoc, collection, query, where, getDocs } from "firebase/firestore"; // Updated imports
 import { db } from '@/firebaseConfig'; 
 import { useUser } from '@/context/userContext'; // Import the useUser hook
 
@@ -60,40 +60,71 @@ const Page = () => {
   };
 
   const validateUsername = (username: string) => {
-    const emailRegex = /^[a-zA-Z0-9_.]+$/;
-    return emailRegex.test(username);
+    const usernameRegex = /^[a-zA-Z0-9_.]+$/;
+    return usernameRegex.test(username);
+  };
+
+  const checkExistingEmail = async (email: string) => {
+    const q = query(collection(db, "users"), where("email", "==", email));
+    const querySnapshot = await getDocs(q);
+    return !querySnapshot.empty;
+  };
+
+  const checkExistingUsername = async (username: string) => {
+    const q = query(collection(db, "users"), where("username", "==", username));
+    const querySnapshot = await getDocs(q);
+    return !querySnapshot.empty;
   };
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
+    let hasError = false; // Flag to check if there are any validation errors
+
     if (!validateUsername(username)) {
-      setUsernameError("Usernames can only have uppercase and lowercase letters, numbers, and underscores.");
+        setUsernameError("Usernames can only have uppercase and lowercase letters, numbers, and underscores.");
+        hasError = true;
     } else {
-      setUsernameError('');
+        const usernameExists = await checkExistingUsername(username);
+      if (usernameExists) {
+        setUsernameError("An account already exists with this username. Please choose a different one.");
+        hasError = true;
+      } else {
+        setUsernameError('');
+      }
     }
 
     if (!validateEmail(email)) {
       setEmailError('Invalid email format');
-      return;
+      hasError = true;
     } else {
-      setEmailError('');
+      const emailExists = await checkExistingEmail(email);
+      if (emailExists) {
+          setEmailError("An account already exists with this email. Please use a different one.");
+          hasError = true;
+      } else {
+          setEmailError('');
+      }
     }
 
     if (!validatePassword(password)) {
       setPasswordError('Password must meet the specified conditions');
-      return;
+      hasError = true;
     } else {
       setPasswordError('');
     }
 
+    if (hasError) {
+      return; // If there's any error, don't proceed further
+    }
+
     try {
       const docRef = await addDoc(collection(db, "users"), {
-        username,
-        age,
-        grade,
-        email,
-        password,
+          username,
+          age,
+          grade,
+          email,
+          password,
       });
 
       console.log("Document written with ID: ", docRef.id);
@@ -102,14 +133,9 @@ const Page = () => {
       setContextGrade(parseInt(grade));
       setContextEmail(email);
 
-      console.log('Username: ', username)
-      console.log('Age: ', age)
-      console.log('Grade: ', grade)
-      console.log('Email: ', email)
-
       router.push('/pages/main');
     } catch (error) {
-      console.error("Error adding document: ", error);
+        console.error("Error adding document: ", error);
     }
   };
 

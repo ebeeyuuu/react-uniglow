@@ -41,11 +41,6 @@ const Page = () => {
   
       // Destructure the userData object
       const { username: dbUsername, email, grade, age } = userData;
-      console.log('DB Username: ', dbUsername)
-      console.log('Email: ', email)
-      console.log('Grade: ', grade)
-      console.log('Age: ', age)
-  
       // Set user data in context
       
       setContextUsername(dbUsername);

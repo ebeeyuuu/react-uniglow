@@ -124,8 +124,8 @@ const Hero: React.FC = () => {
   }, []);
 
   const imageVariants = {
-    initial: { scale: 1, filter: 'brightness(85%)' },
-    hover: { scale: 1.08, filter: 'brightness(100%)' },
+    initial: { scale: 1, filter: 'grayscale(100%) brightness(70%)' },
+    hover: { scale: 1.08, filter: 'grayscale(0%) brightness(100%)' },
   };
 
   const expandedVariants = {

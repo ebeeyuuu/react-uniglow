@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { Sling as Hamburger } from "hamburger-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaTimes } from 'react-icons/fa';

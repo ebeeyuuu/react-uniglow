@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useEffect, useState } from 'react';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 
 import slide1 from "@/images/harvard.jpg";
 import slide2 from "@/images/3.jpg";

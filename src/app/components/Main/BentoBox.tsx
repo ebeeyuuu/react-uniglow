@@ -1,6 +1,7 @@
 "use client"
 
 import React from 'react'
+import UniversityExplorerCarousel from './UniversityExplorerCarousel'
 import { useRouter } from 'next/navigation'
 
 const BentoBox = () => {
@@ -25,7 +26,7 @@ const BentoBox = () => {
           Application Tracker
         </div>
         <div className="row-span-2 col-span-3 max-[2000px]:col-span-6 max-[2000px]:-order-7 bg-[#003366] rounded-[10px] flex justify-center items-center text-xl font-bold text-center cursor-pointer hover:scale-[103%] transition-all duration-300 ease-in-out" onClick={() => router.push('/pages/main/university-explorer')}>
-          University Explorer
+          <UniversityExplorerCarousel />
         </div>
         <div className="row-span-1 col-span-1 max-[2000px]:col-span-2 bg-[#003366] rounded-[10px] flex justify-center items-center text-xl font-bold text-center hover:scale-[103%] cursor-pointer transition-all duration-300 ease-in-out" onClick={() => router.push('/pages/main/university-rankings')}>
           University Rankings

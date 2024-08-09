@@ -148,11 +148,7 @@ const Hero: React.FC = () => {
             <Image
               src={harvard}
               alt="University 1"
-              className="h-[100%] w-[100%] object-cover rounded-[10px] transition-all duration-300 ease-in-out"
-              style={{
-                maxWidth: "100%",
-                height: "auto"
-              }} />
+              className="object-center h-full w-full object-cover rounded-[10px] transition-all duration-300 ease-in-out"/>
           </motion.div>
           <motion.div
             className="row-span-2 col-span-3 max-[700px]:row-span-1 max-[700px]:col-span-1 max-[700px]:h-[150px] cursor-pointer"
@@ -164,11 +160,7 @@ const Hero: React.FC = () => {
             <Image
               src={stanford}
               alt="University 2"
-              className="h-[100%] w-[100%] object-cover rounded-[10px] transition-all duration-300 ease-in-out"
-              style={{
-                maxWidth: "100%",
-                height: "auto"
-              }} />
+              className="object-center h-full w-full object-cover rounded-[10px] transition-all duration-300 ease-in-out"/>
           </motion.div>
           <motion.div
             className="row-span-2 col-span-2 max-[700px]:row-span-1 max-[700px]:col-span-1 max-[700px]:h-[150px] cursor-pointer"
@@ -180,11 +172,7 @@ const Hero: React.FC = () => {
             <Image
               src={mit}
               alt="University 3"
-              className="h-[100%] w-[100%] object-cover rounded-[10px] transition-all duration-300 ease-in-out"
-              style={{
-                maxWidth: "100%",
-                height: "auto"
-              }} />
+              className="object-center h-full w-full object-cover rounded-[10px] transition-all duration-300 ease-in-out"/>
           </motion.div>
           <motion.div
             className="row-span-2 col-span-3 max-[700px]:row-span-1 max-[700px]:col-span-2 max-[700px]:h-[150px] cursor-pointer"
@@ -196,11 +184,7 @@ const Hero: React.FC = () => {
             <Image
               src={yale}
               alt="University 4"
-              className="h-[100%] w-[100%] object-cover rounded-[10px] transition-all duration-300 ease-in-out"
-              style={{
-                maxWidth: "100%",
-                height: "auto"
-              }} />
+              className="object-center h-full w-full object-cover rounded-[10px] transition-all duration-300 ease-in-out"/>
           </motion.div>
           <div className="row-span-3 col-span-5 max-[700px]:row-span-3 max-[700px]:col-span-3 text-white flex justify-center items-center">
             <div className="flex flex-row items-center text-center gap-y-[15px] w-[80%] mx-auto max-[1000px]:flex-col max-[900px]:text-center">
@@ -231,11 +215,7 @@ const Hero: React.FC = () => {
             <Image
               src={princeton}
               alt="University 5"
-              className="h-[100%] w-[100%] object-cover rounded-[10px] transition-all duration-300 ease-in-out"
-              style={{
-                maxWidth: "100%",
-                height: "auto"
-              }} />
+              className="object-center h-full w-full object-cover rounded-[10px] transition-all duration-300 ease-in-out"/>
           </motion.div>
           <motion.div
             className="row-span-2 col-span-3 max-[700px]:row-span-1 max-[700px]:col-span-1 max-[700px]:h-[150px] cursor-pointer"
@@ -247,11 +227,7 @@ const Hero: React.FC = () => {
             <Image
               src={columbia}
               alt="University 6"
-              className="h-[100%] w-[100%] object-cover rounded-[10px] transition-all duration-300 ease-in-out"
-              style={{
-                maxWidth: "100%",
-                height: "auto"
-              }} />
+              className="object-center h-full w-full object-cover rounded-[10px] transition-all duration-300 ease-in-out"/>
           </motion.div>
           <motion.div
             className="row-span-3 col-span-3 max-[700px]:row-span-1 max-[700px]:col-span-2 max-[700px]:h-[150px] cursor-pointer"
@@ -263,11 +239,7 @@ const Hero: React.FC = () => {
             <Image
               src={chicago}
               alt="University 7"
-              className="h-[100%] w-[100%] object-cover rounded-[10px] transition-all duration-300 ease-in-out"
-              style={{
-                maxWidth: "100%",
-                height: "auto"
-              }} />
+              className="object-center h-full w-full object-cover rounded-[10px] transition-all duration-300 ease-in-out"/>
           </motion.div>
           <motion.div
             className="row-span-2 col-span-3 max-[700px]:row-span-1 max-[700px]:col-span-2 max-[700px]:h-[150px] cursor-pointer"
@@ -279,11 +251,7 @@ const Hero: React.FC = () => {
             <Image
               src={upenn}
               alt="University 8"
-              className="h-[100%] w-[100%] object-cover rounded-[10px] transition-all duration-300 ease-in-out"
-              style={{
-                maxWidth: "100%",
-                height: "auto"
-              }} />
+              className="object-center h-full w-full object-cover rounded-[10px] transition-all duration-300 ease-in-out"/>
           </motion.div>
           <motion.div
             className="row-span-2 col-span-2 max-[700px]:row-span-1 max-[700px]:col-span-1 max-[700px]:h-[150px] cursor-pointer"
@@ -295,11 +263,7 @@ const Hero: React.FC = () => {
             <Image
               src={caltech}
               alt="University 9"
-              className="h-[100%] w-[100%] object-cover rounded-[10px] transition-all duration-300 ease-in-out"
-              style={{
-                maxWidth: "100%",
-                height: "auto"
-              }} />
+              className="object-center h-full w-full object-cover rounded-[10px] transition-all duration-300 ease-in-out"/>
           </motion.div>
           <motion.div
             className="row-span-2 col-span-3 max-[700px]:row-span-1 max-[700px]:col-span-3 max-[700px]:h-[150px] cursor-pointer"
@@ -311,11 +275,7 @@ const Hero: React.FC = () => {
             <Image
               src={duke}
               alt="University 10"
-              className="h-[100%] w-[100%] object-cover rounded-[10px] transition-all duration-300 ease-in-out"
-              style={{
-                maxWidth: "100%",
-                height: "auto"
-              }} />
+              className="object-center h-full w-full object-cover rounded-[10px] transition-all duration-300 ease-in-out"/>
           </motion.div>
         </div>
       </div>

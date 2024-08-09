@@ -6,14 +6,14 @@ import { getFirestore } from 'firebase/firestore';
 
 // Fetch the environment variables
 const firebaseConfig = {
-  apiKey: process.env.NEXT_PUBLIC_API_KEY,
-  authDomain: process.env.NEXT_PUBLIC_AUTH_DOMAIN,
-  databaseURL: process.env.NEXT_PUBLIC_DATABASE_URL,
-  projectId: process.env.NEXT_PUBLIC_PROJECT_ID,
-  storageBucket: process.env.NEXT_PUBLIC_STORAGE_BUCKET,
-  messagingSenderId: process.env.NEXT_PUBLIC_MESSAGING_SENDER_ID,
-  appId: process.env.NEXT_PUBLIC_APP_ID,
-  measurementId: process.env.NEXT_PUBLIC_MEASUREMENT_ID,
+  apiKey: "AIzaSyAetqR2Fy_G9LpmfDXB27piUy6FMkEDbYg",
+  authDomain: "uniglow-19cda.firebaseapp.com",
+  databaseURL: "https://uniglow-19cda-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "uniglow-19cda",
+  storageBucket: "uniglow-19cda.appspot.com",
+  messagingSenderId: "1063138077415",
+  appId: "1:1063138077415:web:2eeb0c4749bd27e5c31042",
+  measurementId: "G-PQ5NBXN0CV"
 };
 
 const app = initializeApp(firebaseConfig);

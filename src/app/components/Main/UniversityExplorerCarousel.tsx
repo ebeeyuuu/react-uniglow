@@ -7,7 +7,7 @@ import slide1 from "@/images/harvard.jpg";
 import slide2 from "@/images/3.jpg";
 import slide3 from "@/images/4.jpg";
 import slide4 from "@/images/5.jpg";
-import slide5 from "@/images/8.jpg";
+import slide5 from "@/images/11.jpg";
 
 import Explore from "../Icons/Explore";
 
@@ -16,8 +16,8 @@ const images = [
   { src: slide2, alt: 'Slide 2', description: 'Stanford University' },
   { src: slide3, alt: 'Slide 3', description: 'MIT' },
   { src: slide4, alt: 'Slide 4', description: 'Yale University' },
-  { src: slide5, alt: 'Slide 5', description: 'Princeton University' },
-];
+  { src: slide5, alt: 'Slide 5', description: 'University of Pennsylvania' },
+]
 
 const UniversityExplorerCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -47,17 +47,17 @@ const UniversityExplorerCarousel = () => {
           {image.description}
         </div>
       ))}
-      <div className="relative w-full h-full overflow-hidden rounded-lg">
+      <div className="relative w-full h-full overflow-hidden">
         {images.map((image, index) => (
           <div
             key={index}
-            className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${index === currentIndex ? 'opacity-100' : 'opacity-0'}`}
+            className={`absolute inset-0 rounded-[10px] transition-opacity duration-700 ease-in-out ${index === currentIndex ? 'opacity-100' : 'opacity-0'}`}
             data-carousel-item={index}
           >
             <Image
               src={image.src}
               alt={image.alt}
-              className="filter brightness-[50%]"
+              className="filter brightness-[0%] hover:brightness-[50%] transition-all duartion-1000 ease-in-out"
               fill
               sizes="100vw"
               style={{

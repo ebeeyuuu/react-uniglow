@@ -107,7 +107,7 @@ body::-webkit-scrollbar {
 
 .underline-container::after {
   content: "";
-  @apply absolute bottom-[-20px] left-0 w-full h-[10px] bg-[#fd7e00] transition-all duration-500 ease-in-out;
+  @apply absolute bottom-[-20px] left-0 w-full h-[10px] bg-[#0070e0] transition-all duration-500 ease-in-out;
 }
 
 .underline-container:hover::after {

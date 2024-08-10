@@ -64,6 +64,7 @@ const FAQ: React.FC = () => {
               "&:before": {
                 display: "none",
               },
+              rounded: "10px",
             }}
           >
             <AccordionSummary
@@ -79,7 +80,7 @@ const FAQ: React.FC = () => {
           </Accordion>
         ))}
       </div>
-      <button className="bg-[#fd7e00] px-5 py-2 rounded-[10px] font-medium mt-[20px]">
+      <button className="bg-[#4f46e5] px-5 py-2 rounded-[10px] font-medium mt-[20px]">
         See all FAQs
       </button>
       <p className="font-medium text-sm mt-[10px]">

@@ -97,7 +97,7 @@ const Page = () => {
                 <div>Return</div>
                 <RiArrowGoBackLine className="mt-[6px]"/>
               </Link>
-              <button type="submit" className="text-lg font-medium flex flex-row bg-[#0070e0] text-white rounded-[10px] px-4 py-2 h-[45px]">
+              <button type="submit" className="text-lg font-medium flex flex-row bg-[#4f46e5] text-white rounded-[10px] px-4 py-2 h-[45px]">
                 Submit
               </button>
             </div>

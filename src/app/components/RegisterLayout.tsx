@@ -14,10 +14,8 @@ const RegisterLayout: React.FC<RegisterLayoutProps> = ({ children }) => {
           src={image1}
           alt="Image"
           className="w-full h-full object-cover -z-100"
-          style={{
-            maxWidth: "100%",
-            height: "auto"
-          }} />
+          fill
+        />
       </div>
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#020202] py-[40px] px-[40px] rounded-[20px] z-100">
         {children}

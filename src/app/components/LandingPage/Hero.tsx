@@ -137,7 +137,7 @@ const Hero: React.FC = () => {
   return (
     <div className="w-full flex justify-center items-center flex-col mt-[100px]">
       <div className="flex flex-row justify-center items-center max-[900px]:flex-col mx-auto">
-        <div className="w-[90%] h-[100vh] max-[700px]:h-[115vh] grid grid-rows-11 grid-cols-11 gap-[20px] mt-[100px] text-black max-[900px]:gap-[15px] max-[700px]:grid-rows-11 max-[700px]:grid-cols-3">
+        <div className="w-[90%] h-[80vh] max-[700px]:h-[115vh] grid grid-rows-11 grid-cols-11 gap-[20px] mt-[100px] text-black max-[900px]:gap-[15px] max-[700px]:grid-rows-11 max-[700px]:grid-cols-3">
           <motion.div
             className="row-span-3 col-span-3 max-[700px]:row-span-1 max-[700px]:col-span-2 max-[700px]:h-[150px] cursor-pointer"
             variants={imageVariants}
@@ -193,13 +193,13 @@ const Hero: React.FC = () => {
               </div>
               <div className="flex flex-col w-5/12 ml-auto max-[1000px]:w-full">
                 <div className="mb-2 text-right max-[1000px]:text-center max-[1200px]:text-base max-[2000px]:text-lg max-[4000px]:text-xl">
-                  Discover your <span className="font-bold italic">dream</span>
+                  Discover your <span className="font-bold italic mx-[5px]">dream</span>
                   and explore the
-                  <span className="font-bold italic">
+                  <span className="font-bold italic mx-[5px]">
                     world's opportunities!
                   </span>
                 </div>
-                <div className="px-3 py-3 border border-[#0070e0] hover:bg-[#0070e0] hover:text-black mt-[15px] text-sm flex justify-end font-medium ml-auto max-[1000px]:ml-0 max-[1000px]:justify-center smooth-animation max-[900px]:w-[150px] max-[900px]:mx-auto">
+                <div className="px-3 py-3 border-2 border-[#4f46e5] hover:bg-[#4f46e5] mt-[15px] text-sm flex justify-end font-medium ml-auto max-[1000px]:ml-0 max-[1000px]:justify-center smooth-animation max-[900px]:w-[150px] max-[900px]:mx-auto">
                   <Link href="/pages/signup">Get Started</Link>
                 </div>
               </div>

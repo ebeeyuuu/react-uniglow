@@ -19,8 +19,8 @@ import Exit from "../Icons/Exit";
 import Home from "../Icons/Home";
 
 const textVariants = {
-  hidden: { opacity: 0, x: 100 },
-  visible: { opacity: 1, x: 45, transition: { duration: 0.4 } },
+  hidden: { x: 120 },
+  visible: { x: 45, transition: { duration: 0.2 } },
 }
 
 const NavBar = () => {
@@ -54,7 +54,7 @@ const NavBar = () => {
   return (
     <div className="flex items-center justify-center h-screen">
       <nav
-        className={`bg-[#002347bc] text-white p-4 flex flex-col h-[95%] justify-between items-center rounded-[20px] max-[700px]:flex-row max-[700px]:w-[95%] max-[700px]:h-[100px] max-[700px]:ml-0 max-[700px]:mt-[30px] absolute left-[20px] max-[700px]:top-[20px] max-[700px]:left-[14px] opacity-100`}
+        className={`bg-[#002347] text-white p-4 flex flex-col h-[95%] justify-between items-center rounded-[20px] max-[700px]:flex-row max-[700px]:w-[95%] max-[700px]:h-[100px] max-[700px]:ml-0 max-[700px]:mt-[30px] absolute left-[20px] max-[700px]:top-[20px] max-[700px]:left-[14px] opacity-100 transition-colors duration-500 ease-in-out`}
         onMouseEnter={() => setIsHover(true)}
         onMouseLeave={() => setIsHover(false)}
       >
@@ -62,15 +62,15 @@ const NavBar = () => {
           <Image
             src={placeholderpfp}
             alt=""
-            className={`rounded-full max-[700px]:my-auto max-[700px]:ml-[30px] max-[700px]:w-[40px] max-[700px]:h-[40px] cursor-pointer smooth-animation ${isHover ? "w-[70px] h-[70px]" : "w-[50px] h-[50px]"}`}
+            className={`rounded-full max-[700px]:my-auto max-[700px]:ml-[30px] max-[700px]:w-[40px] max-[700px]:h-[40px] cursor-pointer smooth-animation w-[50px] h-[50px]`}
             onClick={() => {router.push('/pages/settings')}}
             style={{
               maxWidth: "100%",
               height: "auto"
             }} />
-          <p className={`max-[700px]:text-sm mb-2 max-[700px]:mb-0 smooth-animation ${isHover ? "text-xl" : "text-base"}`}>{username === "" ? "Guest" : username}</p>
+          <p className={`max-[700px]:text-sm mb-2 max-[700px]:mb-0`}>{username === "" ? "Guest" : username}</p>
           {navItems.map(({ href, label, icon: Icon }) => (
-            <Link key={href} href={href} className={`flex items-center h-[50px] text-ellipsis overflow-hidden whitespace-nowrap smooth-animation ${isHover ? "mb-[-10px]" : "mb-0"}`}>
+            <Link key={href} href={href} className={`flex items-center h-[50px] text-ellipsis overflow-hidden whitespace-nowrap smooth-animation`}>
               <motion.div className="flex items-center justify-center relative"
                 initial={{ x: 0 }}
                 animate={isHover ? { x: -50 } : { x: 0, transition: { duration: 0.8 } }}
@@ -81,8 +81,7 @@ const NavBar = () => {
                   initial="hidden"
                   animate={isHover ? "visible" : "hidden"}
                   variants={textVariants}
-                  className={`opacity-0 max-[700px]:hidden ml-2 font-medium text-base hover:bg-white hover:text-black px-3 py-2 rounded-[10px] transition-all duration-500 ease-in-out`}
-                  exit={{ opacity: 0, x: 10 }}
+                  className={`${isHover ? "opacity-100" : ""} max-[700px]:hidden ml-2 font-medium text-base hover:bg-white hover:text-black px-3 py-2 rounded-[10px] transition-all duration-500 ease-in-out`}
                 >
                   {label}
                 </motion.p>
@@ -114,10 +113,10 @@ const NavBar = () => {
                 initial={{ opacity: 0, x: 30 }}
                 animate={{ opacity: 1, x: 0, transition: { duration: 0.5 } }}
                 exit={{ opacity: 0, x: 30 }}
-                className="absolute top-0 right-0 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none bg-[#002347bc] flex flex-col text-black px-[60px] py-[30px] max-[700px]:mt-[100px]"
+                className="absolute top-0 right-0 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none bg-[#002347bc] flex flex-col text-black px-[60px] py-[30px] max-[700px]:mt-[100px] z-50"
               >
                 {navItems.map(({ href, label, icon: Icon }) => (
-                  <Link key={href} href={href} className="flex items-center gap-x-[20px] my-4 text-lg hover:text-orange-500 w-full">
+                  <Link key={href} href={href} className="flex items-center gap-x-[20px] my-4 text-lg hover:text-orange-500 smooth-animation w-full">
                     <Icon className=""/>
                     <div>{label}</div>
                   </Link>

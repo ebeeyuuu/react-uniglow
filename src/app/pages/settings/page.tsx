@@ -27,7 +27,6 @@ const Page = () => {
     e.preventDefault();
 
     if (!newUsername || !newAge || !newGrade || !newEmail) {
-      console.error("All fields are required");
       return;
     }
 
@@ -46,14 +45,12 @@ const Page = () => {
             grade: parseInt(newGrade),
             email: newEmail
           }, { merge: true });
-
-          console.log("User data updated successfully");
         });
       } else {
-        console.error("No document found with the specified username");
+        return;
       }
     } catch (error) {
-      console.error("Error updating user data:", error);
+      return;
     }
   };
 

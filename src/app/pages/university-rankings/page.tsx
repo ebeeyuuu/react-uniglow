@@ -23,7 +23,6 @@ const UniversityRankings: React.FC = () => {
         setIsLoading(false);
       })
       .catch(error => {
-        console.error('Error fetching university rankings:', error);
         setError('Failed to fetch university rankings. Please try again later.');
         setIsLoading(false);
       });

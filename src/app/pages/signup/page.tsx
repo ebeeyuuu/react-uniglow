@@ -127,7 +127,6 @@ const Page = () => {
           password,
       });
 
-      console.log("Document written with ID: ", docRef.id);
       setContextUsername(username);
       setContextAge(parseInt(age));
       setContextGrade(parseInt(grade));
@@ -135,7 +134,7 @@ const Page = () => {
 
       router.push('/pages/main');
     } catch (error) {
-        console.error("Error adding document: ", error);
+      return
     }
   };
 

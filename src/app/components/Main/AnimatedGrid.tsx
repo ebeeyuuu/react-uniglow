@@ -110,6 +110,7 @@ export function GridPattern({
           width={width}
           height={height}
           patternUnits="userSpaceOnUse"
+          strokeWidth={5}
           x={x}
           y={y}
         >

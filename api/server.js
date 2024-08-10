@@ -35,7 +35,6 @@ const scrapeUniversities = async () => {
     universities.sort((a, b) => a.rank - b.rank);
     return universities;
   } catch (error) {
-    console.error(`An error occurred while fetching the data: ${error}`);
     return [];
   }
 };
@@ -52,7 +51,6 @@ const saveToCSV = async (universities, filename = 'university_rankings.csv') => 
   });
 
   await csvWriter.writeRecords(universities);
-  console.log(`Data saved to ${filename}`);
 };
 
 app.get('/api/universities', async (req, res) => {
@@ -70,4 +68,3 @@ app.get('/api/universities', async (req, res) => {
 });
 
 const PORT = process.env.PORT || 3001;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

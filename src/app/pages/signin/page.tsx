@@ -51,8 +51,6 @@ const Page = () => {
       // Redirect to the main page
       router.push('/pages/main');
     } catch (error: unknown) {
-      console.error('Error signing in:', error);
-  
       if (error instanceof Error) {
         let errorMessage = 'An unknown error occurred.';
         if (error.message.includes('No user found with this username.')) {

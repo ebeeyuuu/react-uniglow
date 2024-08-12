@@ -2,7 +2,7 @@ import React from 'react';
 
 const Contacts = () => {
   return (
-    <div className="flex flex-row gap-x-[50px] max-[900px]:ml-[40px] max-[400px]:flex-col gap-y-[40px] mt-[20px]">
+    <div className="flex flex-col gap-y-[40px] mt-[20px] max-[900px]:flex-row gap-x-[50px] max-[400px]:flex-col">
       <div className="flex flex-col gap-y-[10px]">
         <h3 className="font-semibold text-lg max-[900px]:text-base">Customer Support:</h3>
         <ul className="list-none mt-[10px] max-[900px]:text-sm">

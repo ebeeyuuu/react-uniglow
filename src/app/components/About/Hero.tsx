@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from "next/image";
-import image1 from '@/images/14.jpg';
 import image2 from '@/images/15.jpg';
 import { FaCopyright } from 'react-icons/fa';
 

@@ -26,6 +26,8 @@ import Explore from "../Icons/Explore";
 import Mentoring from "../Icons/Mentoring";
 import Grid from "../Icons/Grid";
 import Rankings from "../Icons/Rankings";
+import Graduation from "../Icons/Graduation";
+import Calendar from "../Icons/Calendar"
 
 const images = [
   { src: slide1, alt: "Slide 1", description: "Harvard Univeristy" },
@@ -41,15 +43,15 @@ const images = [
 
 const BentoBox = () => {
   const router = useRouter();
-  const [isAIHovered, setIsAIHovered] = useState(false);
-  const [isVRHovered, setIsVRHovered] = useState(false);
-  const [isMentorHovered, setIsMentorHovered] = useState(false);
-  const [isProgramsHovered, setIsProgramsHovered] = useState(false);
-  const [isAppTrackerHovered, setIsAppTrackerHovered] = useState(false);
-  const [isUniExplorerHovered, setIsUniExplorerHovered] = useState(false);
-  const [isUniRankingsHovered, setIsUniRankingsHovered] = useState(false);
-  const [isCampusEventsHovered, setIsCampusEventsHovered] = useState(false);
-  const [isScholarshipsHovered, setIsScholarshipsHovered] = useState(false);
+  const [hoverStates, setHoverStates] = useState(Array(9).fill(false));
+
+  const handleHover = (index: number, value: any) => {
+    setHoverStates((prev) => {
+      const newState = [...prev];
+      newState[index] = value;
+      return newState;
+    });
+  };
 
   const containerRef = useRef(null);
   const nodeRefs = Array.from({ length: 6 }, () => useRef(null));
@@ -78,27 +80,27 @@ const BentoBox = () => {
   }, []);
 
   return (
-    <div className="w-full h-[96.6%] ml-[50px] flex justify-center items-center font-bold text-center mt-[2px] max-[700px]:ml-0 px-[15px] max-[700px]:px-[10px] max-[700px]:py-[15px]">
+    <div className="w-full h-[96.6%] ml-[50px] flex justify-center items-center font-bold text-center mt-[2px] max-[1000px]:ml-0 px-[15px] max-[700px]:px-[10px] max-[700px]:py-[15px]">
       <div className="grid grid-cols-6 grid-rows-3 gap-[20px] w-full h-full max-[2000px]:grid-rows-6 max-[2000px]:grid-cols-6 max-[700px]:gap-[10px]">
         <div
           className={`relative row-span-1 col-span-2 max-[2000px]:col-span-4 max-[2000px]:-order-9 max-[700px]:text-lg rounded-[10px] flex justify-center items-center text-xl font-bold text-center cursor-pointer transition-all duration-500 ease-in-out overflow-hidden border-[1.5px] border-[#003366] hover:border-[#ff8000]/50 bg-black`}
           onClick={() => router.push("/pages/main/ai-matching")}
-          onMouseEnter={() => setIsAIHovered(true)}
-          onMouseLeave={() => setIsAIHovered(false)}
+          onMouseEnter={() => handleHover(0, true)}
+          onMouseLeave={() => handleHover(0, false)}
         >
           <div className="relative flex items-center justify-center w-full h-full">
             <motion.div
-              className="absolute flex items-center justify-center flex-col gap-y-[20px]"
+              className="absolute flex items-center justify-center flex-col gap-y-[10px]"
               initial={{ x: 0 }}
-              animate={isAIHovered ? { x: -30, opacity: 0 } : { x: 0 }}
+              animate={hoverStates[0] ? { x: -30, opacity: 0 } : { x: 0 }}
               transition={{ duration: 0.5, ease: "easeInOut" }}
             >
               <BrainAI
-                className={`transition-all duration-700 ease-in-out max-[1000px]:w-[40px] max-[1000px]:h-[40px] max-[1400px]:w-[50px] max-[1400px]:h-[50px] max-[2000px]:w-[60px] max-[2000px]:h-[60px] max-[3000px]:w-[70px] max-[3000px]:h-[70px] max-[4000px]:w-[80px] max-[4000px]:h-[80px] ${
-                  isAIHovered ? "text-white" : "text-[#9c98f0]"
+                className={`transition-all duration-700 ease-in-out max-[1000px]:w-[30px] max-[1000px]:h-[30px] max-[1400px]:w-[40px] max-[1400px]:h-[40px] max-[2000px]:w-[50px] max-[2000px]:h-[50px] max-[3000px]:w-[60px] max-[3000px]:h-[60px] max-[4000px]:w-[70px] max-[4000px]:h-[70px] ${
+                  hoverStates[0] ? "text-white" : "text-[#9c98f0]"
                 }`}
               />
-              <p className="max-[1150px]:text-sm max-[2000px]:text-base max-[2800px]:text-lg max-[4000px]:text-xl w-2/3 mx-auto text-wrap font-light">
+              <p className="max-[1150px]:text-xs max-[2000px]:text-sm max-[2800px]:text-base max-[4000px]:text-lg max-[1000px]:w-[90%] max-[2000px]:w-[75%] max-[3000px]:w-[65%] max-[4000px]:w-[55%] mx-auto text-wrap font-light">
                 Need a way to find your perfect university that fits based on
                 your profile and preferences?
                 <span className="ml-[5px]" style={{ fontWeight: 700 }}>
@@ -108,10 +110,10 @@ const BentoBox = () => {
             </motion.div>
             <motion.div
               className={`absolute flex items-center justify-center max-[700px]:text-base max-[1000px]:text-lg max-[1300px]:text-2xl text-3xl transition-all duration-500 ease-in-out ${
-                isAIHovered ? "opacity-100" : "opacity-0"
+                hoverStates[0] ? "opacity-100" : "opacity-0"
               }`}
               initial={{ x: 30 }}
-              animate={isAIHovered ? { x: 0 } : { x: 30 }}
+              animate={hoverStates[0] ? { x: 0 } : { x: 30 }}
               transition={{ duration: 0.5, ease: "easeInOut" }}
             >
               AI Matcher
@@ -122,22 +124,22 @@ const BentoBox = () => {
         <div
           className="row-span-1 col-span-1 max-[2000px]:col-span-2 max-[2000px]:-order-8 border-[1.5px] border-[#003366] hover:border-[#ff8000]/50 max-[700px]:text-lg rounded-[10px] flex justify-center items-center text-xl font-bold text-center cursor-pointer transition-all duration-500 ease-in-out overflow-hidden bg-black"
           onClick={() => router.push("/pages/main/vr-tours")}
-          onMouseEnter={() => setIsVRHovered(true)}
-          onMouseLeave={() => setIsVRHovered(false)}
+          onMouseEnter={() => handleHover(1, true)}
+          onMouseLeave={() => handleHover(1, false)}
         >
           <div className="relative flex items-center justify-center w-full h-full">
             <motion.div
-              className="absolute flex items-center justify-center flex-col gap-y-[20px]"
+              className="absolute flex items-center justify-center flex-col gap-y-[10px]"
               initial={{ x: 0 }}
-              animate={isVRHovered ? { x: -30, opacity: 0 } : { x: 0 }}
+              animate={hoverStates[1] ? { x: -30, opacity: 0 } : { x: 0 }}
               transition={{ duration: 0.5, ease: "easeInOut" }}
             >
               <VROutline
-                className={`transition-all duration-700 ease-in-out max-[1000px]:w-[40px] max-[1000px]:h-[40px] max-[1400px]:w-[50px] max-[1400px]:h-[50px] max-[2000px]:w-[60px] max-[2000px]:h-[60px] max-[3000px]:w-[70px] max-[3000px]:h-[70px] max-[4000px]:w-[80px] max-[4000px]:h-[80px] ${
-                  isVRHovered ? "text-white" : "text-[#9c98f0]"
+                className={`transition-all duration-700 ease-in-out max-[1000px]:w-[30px] max-[1000px]:h-[30px] max-[1400px]:w-[40px] max-[1400px]:h-[40px] max-[2000px]:w-[50px] max-[2000px]:h-[50px] max-[3000px]:w-[60px] max-[3000px]:h-[60px] max-[4000px]:w-[70px] max-[4000px]:h-[70px] ${
+                  hoverStates[1] ? "text-white" : "text-[#9c98f0]"
                 }`}
               />
-              <p className="max-[1150px]:text-sm max-[2000px]:text-base max-[2800px]:text-lg max-[4000px]:text-xl w-2/3 mx-auto text-wrap font-light">
+              <p className="max-[1150px]:text-xs max-[2000px]:text-sm max-[2800px]:text-base max-[4000px]:text-lg max-[1000px]:w-[90%] max-[2000px]:w-[75%] max-[3000px]:w-[65%] max-[4000px]:w-[55%] mx-auto text-wrap font-light">
                 Don't know what campuses look like? Experience
                 <span className="ml-[5px]" style={{ fontWeight: 700 }}>
                   it with our:
@@ -146,24 +148,26 @@ const BentoBox = () => {
             </motion.div>
             <motion.div
               className={`absolute flex items-center justify-center z-10 max-[700px]:text-base max-[1000px]:text-lg max-[1300px]:text-2xl text-3xl transition-all duration-700 delay-200 ease-in-out ${
-                isVRHovered ? "opacity-100" : "opacity-0"
+                hoverStates[1] ? "opacity-100" : "opacity-0"
               }`}
               initial={{ x: 30 }}
-              animate={isVRHovered ? { x: 0 } : { x: 30 }}
+              animate={hoverStates[1] ? { x: 0 } : { x: 30 }}
               transition={{ duration: 0.5, ease: "easeInOut" }}
             >
               VR Tours
             </motion.div>
             <AnimatedGrid
               numSquares={60}
-              maxOpacity={isVRHovered ? 0.4 : 0}
+              maxOpacity={hoverStates[1] ? 0.4 : 0}
               duration={2.5}
               repeatDelay={0.3}
               className={cn(
                 "[mask-image:radial-gradient(500px_circle_at_center,white,transparent)]",
                 "absolute inset-x-0 inset-y-[-30%] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2",
                 `transition-all duration-700 ease-in-out z-10 ${
-                  isVRHovered ? "opacity-100 skew-y-12" : "opacity-100 skew-y-0"
+                  hoverStates[1]
+                    ? "opacity-100 skew-y-12"
+                    : "opacity-100 skew-y-0"
                 }`
               )}
             />
@@ -172,24 +176,24 @@ const BentoBox = () => {
         <div
           className="row-span-2 col-span-1 max-[2000px]:col-span-2 max-[1200px]:row-span-1 border-[1.5px] border-[#003366] hover:border-[#ff8000]/50 max-[700px]:text-lg rounded-[10px] flex justify-center items-center text-xl font-bold text-center cursor-pointer transition-all duration-300 ease-in-out relative overflow-hidden bg-black"
           onClick={() => router.push("/pages/main/mentors")}
-          onMouseEnter={() => setIsMentorHovered(true)}
-          onMouseLeave={() => setIsMentorHovered(false)}
+          onMouseEnter={() => handleHover(2, true)}
+          onMouseLeave={() => handleHover(2, false)}
           ref={containerRef} // Ref for container
         >
-          <div className="relative p-10 max-[700px]:text-base max-[1000px]:text-lg max-[1300px]:text-2xl text-3xl transition-all duration-200 ease-in-out">
+          <div className="relative p-5 max-[700px]:text-base max-[1000px]:text-lg max-[1300px]:text-2xl text-3xl transition-all duration-200 ease-in-out">
             <motion.div
-              className="flex justify-center items-center flex-col gap-y-[20px] z-10"
+              className="flex justify-center items-center flex-col gap-y-[10px] z-10 w-full"
               initial={{ y: 0 }}
-              animate={isMentorHovered ? { y: 100, opacity: 0 } : { y: 0 }}
+              animate={hoverStates[2] ? { y: 100, opacity: 0 } : { y: 0 }}
               transition={{ duration: 0.5, ease: "easeInOut" }}
             >
               <Mentoring
-                className={`transition-all duration-700 ease-in-out max-[1000px]:w-[40px] max-[1000px]:h-[40px] max-[1400px]:w-[50px] max-[1400px]:h-[50px] max-[2000px]:w-[60px] max-[2000px]:h-[60px] max-[3000px]:w-[70px] max-[3000px]:h-[70px] max-[4000px]:w-[80px] max-[4000px]:h-[80px] ${
-                  isMentorHovered ? "text-white" : "text-[#9c98f0]"
+                className={`transition-all duration-700 ease-in-out max-[1000px]:w-[30px] max-[1000px]:h-[30px] max-[1400px]:w-[40px] max-[1400px]:h-[40px] max-[2000px]:w-[50px] max-[2000px]:h-[50px] max-[3000px]:w-[60px] max-[3000px]:h-[60px] max-[4000px]:w-[70px] max-[4000px]:h-[70px] ${
+                  hoverStates[2] ? "text-white" : "text-[#9c98f0]"
                 }`}
               />
-              <p className="max-[1150px]:text-sm max-[2000px]:text-base max-[2800px]:text-lg max-[4000px]:text-xl w-2/3 mx-auto text-wrap font-light">
-                Need advice on a univeristy?
+              <p className="max-[1150px]:text-xs max-[2000px]:text-sm max-[2800px]:text-base max-[4000px]:text-lg max-[1000px]:w-[90%] max-[2000px]:w-[75%] max-[3000px]:w-[65%] max-[4000px]:w-[55%] mx-auto font-light w-full">
+                Need advice on univeristies?
                 <span className="ml-[5px]" style={{ fontWeight: 700 }}>
                   Check our:
                 </span>
@@ -197,10 +201,10 @@ const BentoBox = () => {
             </motion.div>
           </div>
           <motion.div
-            className="absolute max-[700px]:text-base max-[1000px]:text-lg max-[1300px]:text-2xl text-3xl z-50 mt-[10px] flex items-center justify-center"
+            className="absolute max-[700px]:text-base max-[1000px]:text-lg max-[1300px]:text-2xl text-3xl z-50 flex items-center justify-center"
             initial={{ y: 30, opacity: 0 }}
             animate={
-              isMentorHovered ? { y: 0, opacity: 1 } : { y: 30, opacity: 0 }
+              hoverStates[2] ? { y: 0, opacity: 1 } : { y: 30, opacity: 0 }
             }
             transition={{ duration: 0.5, ease: "easeInOut" }}
           >
@@ -225,7 +229,7 @@ const BentoBox = () => {
                             ? "translate-x-[calc(-210%+20px)] translate-y-[0]"
                             : "translate-x-[calc(-115%+20px)] translate-y-[-110px]"
                 } ${
-                  isMentorHovered ? "opacity-100" : "opacity-0"
+                  hoverStates[2] ? "opacity-100" : "opacity-0"
                 } transition-opacity duration-700 ease-in-out`}
               >
                 <GoPersonFill size={30} className="text-[#4f46e5]" />
@@ -249,10 +253,10 @@ const BentoBox = () => {
                     duration={5}
                     delay={Math.random()}
                     className={`${
-                      isMentorHovered
+                      hoverStates[2]
                         ? "opacity-100 scale-100"
-                        : "opacity-50 scale-150"
-                    } transition-all duration-700 ease-in-out`}
+                        : "opacity-100 scale-150"
+                    } transition-all duration-700 ease-in-out filter brightness-125`}
                   />
                 );
               }
@@ -262,15 +266,15 @@ const BentoBox = () => {
         <div
           className="row-span-2 col-span-1 max-[2000px]:col-span-2 max-[1200px]:row-span-1 max-[1200px]:col-span-4 border-[1.5px] border-[#003366] hover:border-[#ff8000]/50 max-[700px]:text-lg rounded-[10px] flex justify-center items-center text-xl font-bold text-center cursor-pointer transition-all duration-300 ease-in-out relative bg-black"
           onClick={() => router.push("/pages/main/programs")}
-          onMouseEnter={() => setIsProgramsHovered(true)}
-          onMouseLeave={() => setIsProgramsHovered(false)}
+          onMouseEnter={() => handleHover(3, true)}
+          onMouseLeave={() => handleHover(3, false)}
         >
-          <div className="p-10 max-[700px]:text-base max-[1000px]:text-lg max-[1300px]:text-2xl text-3xl transition-all duration-200 ease-in-out">
+          <div className="p-5 max-[700px]:text-base max-[1000px]:text-lg max-[1300px]:text-2xl text-3xl transition-all duration-200 ease-in-out">
             <motion.div
-              className="flex justify-center items-center flex-col gap-y-[20px] z-10"
+              className="flex justify-center items-center flex-col gap-y-[10px] z-10"
               initial={{ y: 0 }}
               animate={
-                isProgramsHovered
+                hoverStates[3]
                   ? { y: 100, opacity: 0 }
                   : {
                       y: 0,
@@ -284,11 +288,11 @@ const BentoBox = () => {
               transition={{ duration: 0.5, ease: "easeInOut" }}
             >
               <Grid
-                className={`transition-all duration-700 ease-in-out max-[1000px]:w-[40px] max-[1000px]:h-[40px] max-[1400px]:w-[50px] max-[1400px]:h-[50px] max-[2000px]:w-[60px] max-[2000px]:h-[60px] max-[3000px]:w-[70px] max-[3000px]:h-[70px] max-[4000px]:w-[80px] max-[4000px]:h-[80px] ${
-                  isProgramsHovered ? "text-white" : "text-[#9c98f0]"
+                className={`transition-all duration-700 ease-in-out max-[1000px]:w-[30px] max-[1000px]:h-[30px] max-[1400px]:w-[40px] max-[1400px]:h-[40px] max-[2000px]:w-[50px] max-[2000px]:h-[50px] max-[3000px]:w-[60px] max-[3000px]:h-[60px] max-[4000px]:w-[70px] max-[4000px]:h-[70px] ${
+                  hoverStates[3] ? "text-white" : "text-[#9c98f0]"
                 }`}
               />
-              <p className="max-[1150px]:text-sm max-[2000px]:text-base max-[2800px]:text-lg max-[4000px]:text-xl w-2/3 mx-auto text-wrap font-light">
+              <p className="max-[1150px]:text-xs max-[2000px]:text-sm max-[2800px]:text-base max-[4000px]:text-lg max-[1000px]:w-[90%] max-[2000px]:w-[75%] max-[3000px]:w-[65%] max-[4000px]:w-[55%] mx-auto text-wrap font-light">
                 Curious to learn about what activities univerities offer?
                 <span className="ml-[5px]" style={{ fontWeight: 700 }}>
                   Then check out our library of:
@@ -297,10 +301,10 @@ const BentoBox = () => {
             </motion.div>
           </div>
           <motion.div
-            className="absolute max-[700px]:text-base max-[1000px]:text-lg max-[1300px]:text-2xl text-3xl z-50 mt-[10px] flex items-center justify-center"
+            className="absolute max-[700px]:text-base max-[1000px]:text-lg max-[1300px]:text-2xl text-3xl z-50 flex items-center justify-center"
             initial={{ y: -30, opacity: 0 }}
             animate={
-              isProgramsHovered
+              hoverStates[3]
                 ? {
                     y: 0,
                     opacity: 1,
@@ -318,96 +322,72 @@ const BentoBox = () => {
           </motion.div>
           <motion.div
             className={`absolute top-0 w-full grid grid-rows-1 grid-cols-3 h-[15%] transition-all duration-500 ease-in-out ${
-              isProgramsHovered ? "mt-[30%] opacity-50" : "opacity-15"
+              hoverStates[3] ? "opacity-50" : "opacity-35"
             }`}
           >
             <div
-              className={`row-span-1 col-span-2 border-r-4 border-b-4 text-transparent border-white/50 ${
-                isProgramsHovered
-                  ? "border-t-4 border-t-[#005cb8] border-r-[#005cb8]"
-                  : ""
-              } transition-all duration-500 ease-in-out`}
+              className={`row-span-1 col-span-2 border-r-4 border-b-4 text-transparent border-white/50 transition-all duration-500 ease-in-out ${
+                hoverStates[3] ? "border-t-4" : ""
+              }`}
             >
               1
             </div>
             <div
-              className={`row-span-1 col-span-1 border-l-4 border-b-4 text-transparent border-white/50 ${
-                isProgramsHovered
-                  ? "border-t-4 border-b-[#005cb8] border-l-[#005cb8]"
-                  : ""
-              } transition-all duration-500 ease-in-out`}
+              className={`row-span-1 col-span-1 border-l-4 border-b-4 text-transparent border-white/50 transition-all duration-500 ease-in-out ${
+                hoverStates[3] ? "border-t-4" : ""
+              }`}
             >
               1
             </div>
           </motion.div>
           <motion.div
             className={`absolute top-0 w-full grid grid-rows-1 grid-cols-3 h-[15%] mt-[15%] transition-all duration-500 ease-in-out ${
-              isProgramsHovered ? "opacity-50" : "opacity-15"
+              hoverStates[3] ? "opacity-50" : "opacity-35"
             }`}
           >
             <div
-              className={`row-span-1 col-span-1 border-t-4 border-r-4 border-b-4 text-transparent border-white/50 ${
-                isProgramsHovered
-                  ? "border-b-4 border-r-[#005cb8] border-b-[#005cb8]"
-                  : ""
-              } transition-all duration-500 ease-in-out`}
+              className={`row-span-1 col-span-1 border-t-4 border-r-4 border-b-4 text-transparent border-white/50 transition-all duration-500 ease-in-out`}
             >
               1
             </div>
             <div
-              className={`row-span-1 col-span-2 border-t-4 border-l-4 border-b-4 text-transparent border-white/50 ${
-                isProgramsHovered
-                  ? "border-t-4 border-l-[#005cb8] border-t-[#005cb8]"
-                  : ""
-              } transition-all duration-500 ease-in-out`}
+              className={`row-span-1 col-span-2 border-t-4 border-l-4 border-b-4 text-transparent border-white/50 transition-all duration-500 ease-in-out`}
             >
               1
             </div>
           </motion.div>
           <motion.div
             className={`absolute bottom-0 w-full grid grid-rows-1 grid-cols-3 h-[15%] mb-[15%] transition-all duration-500 ease-in-out ${
-              isProgramsHovered ? "opacity-50" : "opacity-15"
+              hoverStates[3] ? "opacity-50" : "opacity-35"
             }`}
           >
             <div
-              className={`row-span-1 col-span-2 border-t-4 border-r-4 border-b-4 text-transparent border-white/50 ${
-                isProgramsHovered
-                  ? "border-b-4 border-r-[#005cb8] border-b-[#005cb8]"
-                  : ""
-              } transition-all duration-500 ease-in-out`}
+              className={`row-span-1 col-span-2 border-t-4 border-r-4 border-b-4 text-transparent border-white/50 transition-all duration-500 ease-in-out`}
             >
               1
             </div>
             <div
-              className={`row-span-1 col-span-1 border-t-4 border-l-4 border-b-4 text-transparent border-white/50 ${
-                isProgramsHovered
-                  ? "border-t-4 border-l-[#005cb8] border-t-[#005cb8]"
-                  : ""
-              } transition-all duration-500 ease-in-out`}
+              className={`row-span-1 col-span-1 border-t-4 border-l-4 border-b-4 text-transparent border-white/50 transition-all duration-500 ease-in-out`}
             >
               1
             </div>
           </motion.div>
           <motion.div
             className={`absolute bottom-0 w-full grid grid-rows-1 grid-cols-3 h-[15%] transition-all duration-500 ease-in-out ${
-              isProgramsHovered ? " mb-[30%] opacity-50" : "opacity-15"
+              hoverStates[3] ? "opacity-50" : "opacity-35"
             }`}
           >
             <div
-              className={`row-span-1 col-span-1 border-r-4 border-t-4 text-transparent border-white/50 ${
-                isProgramsHovered
-                  ? "border-b-4 border-t-[#005cb8] border-r-[#005cb8]"
-                  : ""
-              } transition-all duration-500 ease-in-out`}
+              className={`row-span-1 col-span-1 border-r-4 border-t-4 text-transparent border-white/50 transition-all duration-500 ease-in-out ${
+                hoverStates[3] ? "border-b-4" : ""
+              }`}
             >
               1
             </div>
             <div
-              className={`row-span-1 col-span-2 border-l-4 border-t-4 text-transparent border-white/50 ${
-                isProgramsHovered
-                  ? "border-b-4 border-b-[#005cb8] border-l-[#005cb8]"
-                  : ""
-              } transition-all duration-500 ease-in-out`}
+              className={`row-span-1 col-span-2 border-l-4 border-t-4 text-transparent border-white/50 transition-all duration-500 ease-in-out ${
+                hoverStates[3] ? "border-b-4" : ""
+              }`}
             >
               1
             </div>
@@ -416,17 +396,17 @@ const BentoBox = () => {
         <div
           className="row-span-1 col-span-1 max-[2000px]:col-span-2 max-[1200px]:col-span-4 border-[1.5px] border-[#003366] hover:border-[#ff8000]/50 max-[700px]:text-lg rounded-[10px] flex justify-center items-center text-xl font-bold text-center cursor-pointer transition-all duration-300 ease-in-out relative overflow-hidden bg-black"
           onClick={() => router.push("/pages/main/application-tracker")}
-          onMouseEnter={() => setIsAppTrackerHovered(true)}
-          onMouseLeave={() => setIsAppTrackerHovered(false)}
+          onMouseEnter={() => handleHover(4, true)}
+          onMouseLeave={() => handleHover(4, false)}
         >
-          <div className="p-10 max-[700px]:text-base max-[1000px]:text-lg max-[1300px]:text-2xl text-3xl transition-all duration-200 ease-in-out relative z-10">
+          <div className="p-5 max-[700px]:text-base max-[1000px]:text-lg max-[1300px]:text-2xl text-3xl transition-all duration-200 ease-in-out relative z-10">
             <div className="relative flex items-center justify-center w-full h-full">
-              <div className="flex flex-col max-[4000px]:gap-[25px] max-[3000px]:gap-[15px] max-[2000px]:gap-[10px] justify-center items-center">
+              <div className="flex flex-col max-[4000px]:gap-[10px] max-[2000px]:gap-[10px] max-[1000px]:gap-[5px] justify-center items-center">
                 <div
                   className={`flex justify-center items-center smooth-animation ${
-                    isAppTrackerHovered
-                      ? "mt-[60px] scale-[120%]"
-                      : "mt-[-30px] max-[1400px]:scale-[70%] max-[2000px]:scale-[80%] max-[2400px]:scale-[90%] max-[4000px]:scale-[100%]"
+                    hoverStates[4]
+                      ? "mt-[10px] scale-[90%]"
+                      : "mt-[-55px] max-[1400px]:scale-[30%] max-[2000px]:scale-[40%] max-[2400px]:scale-[50%] max-[2800px]:scale-[60%] max-[3200px]:scale-[70%] max-[4000px]:scale-[80%]"
                   }`}
                 >
                   <div className="flex items-center justify-center">
@@ -437,23 +417,23 @@ const BentoBox = () => {
                       gaugePrimaryColor="rgb(79 70 229)"
                       gaugeSecondaryColor="rgb(31, 41, 55)"
                       className=""
-                      hideValue={isAppTrackerHovered ? true : false}
+                      hideValue={hoverStates[4] ? true : false}
                     />
                   </div>
                 </div>
                 <motion.div
-                  className="max-[1150px]:text-base max-[2000px]:text-lg max-[2800px]:text-xl max-[4000px]:text-2xl w-[75%] mx-auto text-wrap font-light"
+                  className="max-[1150px]:text-xs max-[2000px]:text-sm max-[2800px]:text-base max-[4000px]:text-lg max-[1000px]:w-[90%] max-[2000px]:w-[75%] max-[3000px]:w-[65%] max-[4000px]:w-[55%] mx-auto text-wrap font-light max-[4000px]:mt-[-20px] max-[3000px]:mt-[-30px] max-[2000px]:mt-[-40px] max-[1000px]:mt-[-50px]"
                   initial={{ opacity: 1, x: 0 }}
                   animate={
-                    isAppTrackerHovered
-                      ? { opacity: 0, x: 100 }
+                    hoverStates[4]
+                      ? { opacity: 0, x: -100 }
                       : { opacity: 1, x: 0 }
                   }
                 >
                   <p className="max-[1150px]:text-sm max-[2000px]:text-base max-[2800px]:text-lg max-[4000px]:text-xl mx-auto text-wrap font-light">
-                    Need to keep track of your application process?
+                    Need to track of your application?
                     <span className="ml-[5px]" style={{ fontWeight: 700 }}>
-                      We got you covered wtih our:
+                      Why not use our:
                     </span>
                   </p>
                 </motion.div>
@@ -464,17 +444,17 @@ const BentoBox = () => {
         <div
           className="row-span-2 col-span-3 max-[2000px]:col-span-6 max-[2000px]:-order-7 bg-black max-[700px]:text-lg rounded-[10px] flex justify-center items-center text-xl border-[1.5px] border-[#003366] hover:border-[#ff8000]/50 font-bold text-center cursor-pointer transition-all duration-500 ease-in-out relative overflow-hidden"
           onClick={() => router.push("/pages/main/university-explorer")}
-          onMouseEnter={() => setIsUniExplorerHovered(true)}
-          onMouseLeave={() => setIsUniExplorerHovered(false)}
+          onMouseEnter={() => handleHover(5, true)}
+          onMouseLeave={() => handleHover(5, false)}
         >
           <div className="relative w-full h-full flex flex-col justify-center items-center">
             <Image
               src={rippleGIF}
               alt=""
               className={`w-full h-full object-cover transition-opacity ${
-                isUniExplorerHovered
+                hoverStates[5]
                   ? "filter brightness-[0%] -z-50 hidden"
-                  : "filter brightness-[40%]"
+                  : "filter brightness-[60%]"
               }`}
               style={{
                 boxShadow: "inset 0 0 70px 50px #020202",
@@ -483,25 +463,23 @@ const BentoBox = () => {
               unoptimized
             />
             <motion.div
-              className="absolute z-50 flex items-center justify-center flex-col gap-y-[20px]"
+              className="absolute z-50 flex items-center justify-center flex-col gap-y-[10px]"
               initial={{ opacity: 0, y: 0 }}
               animate={
-                isUniExplorerHovered
-                  ? { opacity: 1, y: -30 }
-                  : { opacity: 1, y: 0 }
+                hoverStates[5] ? { opacity: 1, y: -10 } : { opacity: 1, y: 0 }
               }
               transition={{ duration: 0.5, ease: "easeInOut" }}
             >
               <Explore
-                className={`max-[1000px]:w-[60px] max-[1000px]:h-[60px] max-[1400px]:w-[70px] max-[1400px]:h-[70px] max-[2000px]:w-[80px] max-[2000px]:h-[80px] max-[3000px]:w-[90px] max-[3000px]:h-[90px] max-[4000px]:w-[100px] max-[4000px]:h-[100px] smooth-animation ${
-                  isUniExplorerHovered ? "text-white" : "text-[#9c98f0]"
+                className={`max-[1000px]:w-[50px] max-[1000px]:h-[50px] max-[1400px]:w-[60px] max-[1400px]:h-[60px] max-[2000px]:w-[70px] max-[2000px]:h-[70px] max-[3000px]:w-[80px] max-[3000px]:h-[80px] max-[4000px]:w-[90px] max-[4000px]:h-[90px] smooth-animation ${
+                  hoverStates[5] ? "text-white" : "text-[#9c98f0]"
                 }`}
               />
               <motion.p
-                className="max-[1150px]:text-base max-[2000px]:text-lg max-[2800px]:text-xl max-[4000px]:text-2xl w-2/3 mx-auto text-wrap font-light"
+                className="max-[1150px]:text-base max-[2000px]:text-lg max-[2800px]:text-xl max-[4000px]:text-2xl w-5/12 mx-auto text-wrap font-light"
                 initial={{ opacity: 1, x: 0 }}
                 animate={
-                  isUniExplorerHovered
+                  hoverStates[5]
                     ? { opacity: 0, x: -100 }
                     : { opacity: 1, x: 0 }
                 }
@@ -514,12 +492,10 @@ const BentoBox = () => {
               </motion.p>
             </motion.div>
             <motion.div
-              className="absolute text-4xl z-50 max-[1300px]:text-3xl mt-[10px] flex items-center justify-center"
+              className="absolute text-4xl z-50 max-[1300px]:text-3xl flex items-center justify-center"
               initial={{ y: 30, opacity: 0 }}
               animate={
-                isUniExplorerHovered
-                  ? { y: 0, opacity: 1 }
-                  : { y: 30, opacity: 0 }
+                hoverStates[5] ? { y: 0, opacity: 1 } : { y: 30, opacity: 0 }
               }
               transition={{ duration: 0.5, ease: "easeInOut" }}
               style={{ fontWeight: 750 }}
@@ -529,12 +505,12 @@ const BentoBox = () => {
             {images.map((image, index) => (
               <motion.div
                 key={index}
-                className={`absolute text-lg text-center z-50 mt-[130px] ${
+                className={`absolute text-lg text-center z-50 mt-[90px] ${
                   index === currentIndex ? "opacity-100" : "opacity-0"
                 }`}
                 initial={{ y: 30, opacity: 0 }}
                 animate={
-                  isUniExplorerHovered && index === currentIndex
+                  hoverStates[5] && index === currentIndex
                     ? { y: 0, opacity: 1 }
                     : { y: 30, opacity: 0 }
                 }
@@ -554,7 +530,7 @@ const BentoBox = () => {
                   data-carousel-item={index}
                   initial={{ opacity: 0 }}
                   animate={
-                    isUniExplorerHovered && index === currentIndex
+                    hoverStates[5] && index === currentIndex
                       ? { opacity: 1 }
                       : { opacity: 0 }
                   }
@@ -564,7 +540,7 @@ const BentoBox = () => {
                     src={image.src}
                     alt={image.alt}
                     className={`filter brightness-[60%] ${
-                      isUniExplorerHovered ? "" : "opacity-0 hidden"
+                      hoverStates[5] ? "" : "opacity-0 hidden"
                     }`}
                     fill
                     sizes="100vw"
@@ -578,7 +554,7 @@ const BentoBox = () => {
             <motion.div
               className="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex space-x-3 z-50"
               initial={{ opacity: 0 }}
-              animate={isUniExplorerHovered ? { opacity: 1 } : { opacity: 0 }}
+              animate={hoverStates[5] ? { opacity: 1 } : { opacity: 0 }}
               transition={{ duration: 0.5, ease: "easeInOut" }}
             >
               {images.map((_, index) => (
@@ -596,80 +572,226 @@ const BentoBox = () => {
         <div
           className="row-span-1 col-span-1 max-[2000px]:col-span-2 border-[1.5px] border-[#003366] hover:border-[#ff8000]/50 max-[700px]:text-lg rounded-[10px] flex justify-center items-center text-xl font-bold text-center cursor-pointer transition-all duration-300 ease-in-out relative overflow-hidden bg-black"
           onClick={() => router.push("/pages/main/university-rankings")}
-          onMouseEnter={() => setIsUniRankingsHovered(true)}
-          onMouseLeave={() => setIsUniRankingsHovered(false)}
+          onMouseEnter={() => handleHover(6, true)}
+          onMouseLeave={() => handleHover(6, false)}
         >
           <div
-            className={`p-10 max-[700px]:text-base max-[1000px]:text-lg max-[1300px]:text-2xl text-3xl transition-all duration-200 ease-in-out relative z-10`}
+            className={`p-5 max-[700px]:text-base max-[1000px]:text-lg max-[1300px]:text-2xl text-3xl transition-all duration-200 ease-in-out relative z-10`}
           >
-            <div className="relative flex items-center justify-center w-full h-full">
-              <div className="flex flex-col max-[4000px]:gap-[25px] max-[3000px]:gap-[15px] max-[2000px]:gap-[10px] justify-center items-center">
+            <div className="relative w-full h-full">
+              <div className="flex flex-col max-[4000px]:gap-[10px] justify-center items-center w-full h-full">
                 <div
-                  className={`flex justify-center items-center smooth-animation ${
-                    isUniRankingsHovered
-                      ? "mt-[60px] scale-[120%]"
-                      : "mt-[-30px] max-[1400px]:scale-[70%] max-[2000px]:scale-[80%] max-[2400px]:scale-[90%] max-[4000px]:scale-[100%]"
-                  }`}
+                  className={`flex justify-center items-center smooth-animation mt-[-30px] max-[1400px]:scale-[70%] max-[2000px]:scale-[80%] max-[2400px]:scale-[90%] max-[4000px]:scale-[100%]
+                  `}
                 >
-                  <div className="flex items-center justify-center">
+                  <motion.div
+                    className="flex items-center justify-center"
+                    initial={{ opacity: 1, x: 0 }}
+                    animate={
+                      hoverStates[6]
+                        ? { opacity: 0, x: -100 }
+                        : { opacity: 1, x: 0 }
+                    }
+                  >
                     <Rankings
-                      className={`transition-all duration-700 ease-in-out max-[1000px]:w-[40px] max-[1000px]:h-[40px] max-[1400px]:w-[50px] max-[1400px]:h-[50px] max-[2000px]:w-[60px] max-[2000px]:h-[60px] max-[3000px]:w-[70px] max-[3000px]:h-[70px] max-[4000px]:w-[80px] max-[4000px]:h-[80px] ${
-                        isProgramsHovered ? "text-white" : "text-[#9c98f0]"
+                      className={`transition-all duration-700 ease-in-out max-[1000px]:w-[30px] max-[1000px]:h-[30px] max-[1400px]:w-[40px] max-[1400px]:h-[40px] max-[2000px]:w-[50px] max-[2000px]:h-[50px] max-[3000px]:w-[60px] max-[3000px]:h-[60px] max-[4000px]:w-[70px] max-[4000px]:h-[70px] mt-[20px] ${
+                        hoverStates[6] ? "text-white" : "text-[#9c98f0]"
                       }`}
                     />
-                  </div>
+                  </motion.div>
                 </div>
                 <motion.div
-                  className="max-[1150px]:text-base max-[2000px]:text-lg max-[2800px]:text-xl max-[4000px]:text-2xl w-[75%] mx-auto text-wrap font-light"
+                  className="max-[1150px]:text-base max-[2000px]:text-lg max-[2800px]:text-xl max-[4000px]:text-2xl max-[1000px]:w-[90%] max-[2000px]:w-[75%] max-[3000px]:w-[65%] max-[4000px]:w-[55%] mx-auto text-wrap font-light mt-[-10px]"
                   initial={{ opacity: 1, x: 0 }}
                   animate={
-                    isUniRankingsHovered
+                    hoverStates[6]
+                      ? { opacity: 0, x: -100 }
+                      : { opacity: 1, x: 0 }
+                  }
+                >
+                  <p className="max-[1150px]:text-xs max-[2000px]:text-sm max-[2800px]:text-base max-[4000px]:text-lg mx-auto text-wrap font-light">
+                    Want some rankings?
+                    <span className="ml-[5px]" style={{ fontWeight: 700 }}>
+                      Then use our:
+                    </span>
+                  </p>
+                </motion.div>
+                <motion.div
+                  className={`absolute max-[700px]:text-base max-[1000px]:text-lg max-[1300px]:text-2xl text-3xl z-50 flex items-center justify-center rounded-[10px]`}
+                  initial={{ x: 100, opacity: 0 }}
+                  animate={
+                    hoverStates[6]
+                      ? { x: 0, opacity: 1 }
+                      : { x: 100, opacity: 0 }
+                  }
+                  transition={{ duration: 0.5, ease: "easeInOut" }}
+                >
+                  University Rankings
+                </motion.div>
+              </div>
+            </div>
+          </div>
+          <div className="absolute inset-0 flex flex-col justify-between items-end">
+            {[1, 2, 3, 4, 5].map((rank, index) => {
+              const widthClasses = [
+                "w-1/6",
+                "w-1/3",
+                "w-1/2",
+                "w-2/3",
+                "w-5/6",
+              ][index];
+
+              // Determine the correct suffix
+              const suffix =
+                rank === 1
+                  ? "st"
+                  : rank === 2
+                    ? "nd"
+                    : rank === 3
+                      ? "rd"
+                      : "th";
+
+              return (
+                <div
+                  key={rank}
+                  className={`h-1/5 border-b border-t border-white/10 relative text-center text-sm transition-all duration-700 ease-in-out ${
+                    hoverStates[6]
+                      ? `${widthClasses} text-white/40 border-l`
+                      : "w-full text-transparent"
+                  }`}
+                >
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                    {rank}
+                    {suffix}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+        <div
+          className="row-span-1 col-span-1 max-[2000px]:col-span-2 border-[1.5px] border-[#003366] hover:border-[#ff8000]/50 max-[700px]:text-lg rounded-[10px] flex justify-center items-center text-xl font-bold text-center cursor-pointer transition-all duration-300 ease-in-out relative overflow-hidden bg-black"
+          onClick={() => router.push("/pages/main/campus-events")}
+          onMouseEnter={() => handleHover(7, true)}
+          onMouseLeave={() => handleHover(7, false)}
+        >
+          <div
+            className={`p-5 max-[700px]:text-base max-[1000px]:text-lg max-[1300px]:text-2xl text-3xl transition-all duration-200 ease-in-out relative z-10`}
+          >
+            <div className="relative w-full h-full flex justify-center items-center">
+              <div className="flex flex-col max-[4000px]:gap-[10px] justify-center items-center w-full h-full">
+                <div
+                  className={`flex justify-center items-center smooth-animation mt-[-30px] max-[1400px]:scale-[70%] max-[2000px]:scale-[80%] max-[2400px]:scale-[90%] max-[4000px]:scale-[100%]
+                  `}
+                >
+                  <motion.div
+                    className="flex items-center justify-center"
+                    initial={{ opacity: 1, x: 0 }}
+                    animate={
+                      hoverStates[7]
+                        ? { opacity: 0, x: 100 }
+                        : { opacity: 1, x: 0 }
+                    }
+                  >
+                    <Calendar
+                      className={`transition-all duration-700 ease-in-out max-[1000px]:w-[30px] max-[1000px]:h-[30px] max-[1400px]:w-[40px] max-[1400px]:h-[40px] max-[2000px]:w-[50px] max-[2000px]:h-[50px] max-[3000px]:w-[60px] max-[3000px]:h-[60px] max-[4000px]:w-[70px] max-[4000px]:h-[70px] mt-[30px] ${
+                        hoverStates[7] ? "text-white" : "text-[#9c98f0]"
+                      }`}
+                    />
+                  </motion.div>
+                </div>
+                <motion.div
+                  className="max-[1150px]:text-base max-[2000px]:text-lg max-[2800px]:text-xl max-[4000px]:text-2xl w-full mx-auto text-wrap font-light"
+                  initial={{ opacity: 1, x: 0 }}
+                  animate={
+                    hoverStates[7]
                       ? { opacity: 0, x: 100 }
                       : { opacity: 1, x: 0 }
                   }
                 >
-                  <p className="max-[1150px]:text-sm max-[2000px]:text-base max-[2800px]:text-lg max-[4000px]:text-xl mx-auto text-wrap font-light">
-                    Need some detailed univresity rankings?
+                  <p className="max-[1150px]:text-xs max-[2000px]:text-sm max-[2800px]:text-base max-[4000px]:text-lg mx-auto text-wrap font-light max-[1000px]:w-[90%] max-[2000px]:w-[75%] max-[3000px]:w-[65%] max-[4000px]:w-[55%]">
+                    What events are going on?
                     <span className="ml-[5px]" style={{ fontWeight: 700 }}>
-                      Check out our own custom:
+                      See our library of:
                     </span>
                   </p>
+                </motion.div>
+                <motion.div
+                  className={`absolute max-[700px]:text-base max-[1000px]:text-lg max-[1300px]:text-2xl text-3xl z-50 flex items-center justify-center rounded-[10px]`}
+                  initial={{ x: 100, opacity: 0 }}
+                  animate={
+                    hoverStates[7]
+                      ? { x: 0, opacity: 1 }
+                      : { x: -100, opacity: 0 }
+                  }
+                  transition={{ duration: 0.5, ease: "easeInOut" }}
+                >
+                  Campus Events
                 </motion.div>
               </div>
             </div>
           </div>
         </div>
         <div
-          className="row-span-1 col-span-1 max-[2000px]:col-span-2 border-[1.5px] border-[#003366] hover:border-[#ff8000]/50 max-[700px]:text-lg rounded-[10px] flex justify-center items-center text-xl font-bold text-center cursor-pointer transition-all duration-300 ease-in-out relative overflow-hidden bg-black"
-          onClick={() => router.push("/pages/main/campus-events")}
-          onMouseEnter={() => setIsCampusEventsHovered(true)}
-          onMouseLeave={() => setIsCampusEventsHovered(false)}
-        >
-          <div
-            className={`p-10 max-[700px]:text-base max-[1000px]:text-lg max-[1300px]:text-2xl text-3xl transition-all duration-200 ease-in-out relative z-10`}
-          >
-            Campus Events
-          </div>
-          {isCampusEventsHovered && (
-            <div className="absolute inset-0 flex justify-center items-center">
-              <div className="animate-confetti"></div>
-            </div>
-          )}
-        </div>
-        <div
           className="row-span-1 col-span-2 max-[2000px]:col-span-4 border-[1.5px] border-[#003366] hover:border-[#ff8000]/50 max-[700px]:text-lg rounded-[10px] flex justify-center items-center text-xl font-bold text-center cursor-pointer transition-all duration-300 ease-in-out relative overflow-hidden bg-black"
           onClick={() => router.push("/pages/main/scholarships")}
-          onMouseEnter={() => setIsScholarshipsHovered(true)}
-          onMouseLeave={() => setIsScholarshipsHovered(false)}
+          onMouseEnter={() => handleHover(8, true)}
+          onMouseLeave={() => handleHover(8, false)}
         >
-          <div className="p-10 max-[700px]:text-base max-[1000px]:text-lg max-[1300px]:text-2xl text-3xl transition-all duration-200 ease-in-out">
-            Scholarships
-          </div>
-          {isScholarshipsHovered && (
-            <div className="absolute inset-0 flex justify-center items-center overflow-hidden">
-              <div className="animate-rise">💰</div>
+          <div className="p-5 max-[700px]:text-base max-[1000px]:text-lg max-[1300px]:text-2xl text-3xl transition-all duration-200 ease-in-out">
+            <div className="relative w-full h-full flex justify-center items-center">
+              <div className="flex flex-col max-[4000px]:gap-[10px] justify-center items-center w-full h-full">
+                <div
+                  className={`flex justify-center items-center smooth-animation mt-[-30px] max-[1400px]:scale-[70%] max-[2000px]:scale-[80%] max-[2400px]:scale-[90%] max-[4000px]:scale-[100%]
+                  `}
+                >
+                  <motion.div
+                    className="flex items-center justify-center"
+                    initial={{ opacity: 1, x: 0 }}
+                    animate={
+                      hoverStates[8]
+                        ? { opacity: 0, x: -100 }
+                        : { opacity: 1, x: 0 }
+                    }
+                  >
+                    <Graduation
+                      className={`transition-all duration-700 ease-in-out max-[1000px]:w-[30px] max-[1000px]:h-[30px] max-[1400px]:w-[40px] max-[1400px]:h-[40px] max-[2000px]:w-[50px] max-[2000px]:h-[50px] max-[3000px]:w-[60px] max-[3000px]:h-[60px] max-[4000px]:w-[70px] max-[4000px]:h-[70px] mt-[20px] ${
+                        hoverStates[8] ? "text-white" : "text-[#9c98f0]"
+                      }`}
+                    />
+                  </motion.div>
+                </div>
+                <motion.div
+                  className="max-[1150px]:text-base max-[2000px]:text-lg max-[2800px]:text-xl max-[4000px]:text-2xl w-[75%] mx-auto text-wrap font-light"
+                  initial={{ opacity: 1, x: 0 }}
+                  animate={
+                    hoverStates[8]
+                      ? { opacity: 0, x: -100 }
+                      : { opacity: 1, x: 0 }
+                  }
+                >
+                  <p className="max-[1150px]:text-xs max-[2000px]:text-sm max-[2800px]:text-base max-[4000px]:text-lg mx-auto text-wrap font-light max-[1000px]:w-[90%] max-[2000px]:w-[75%] max-[3000px]:w-[65%] max-[4000px]:w-[55%]">
+                    Need a guide on getting scholarships
+                    <span className="ml-[5px]" style={{ fontWeight: 700 }}>
+                      Check out our way of getting you:
+                    </span>
+                  </p>
+                </motion.div>
+                <motion.div
+                  className={`absolute max-[700px]:text-base max-[1000px]:text-lg max-[1300px]:text-2xl text-3xl z-50 flex items-center justify-center rounded-[10px]`}
+                  initial={{ x: 100, opacity: 0 }}
+                  animate={
+                    hoverStates[8]
+                      ? { x: 0, opacity: 1 }
+                      : { x: 100, opacity: 0 }
+                  }
+                  transition={{ duration: 0.5, ease: "easeInOut" }}
+                >
+                  100% Scholarships
+                </motion.div>
+              </div>
             </div>
-          )}
+          </div>
         </div>
       </div>
     </div>

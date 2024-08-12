@@ -97,7 +97,7 @@ const Features: React.FC = () => {
           The features of Uniglow that allows us to easily help you find the
           university that you so desire.
         </div>
-        <button className="bg-[#005ebd] text-white py-3 rounded-[20px] w-[150px] max-[900px]:mx-auto hover:py-5 transition-all duration-300 ease-in-out">
+        <button className="bg-[#005ebd] text-white py-5 rounded-[20px] w-full max-[900px]:mx-auto hover:py-6 transition-all duration-300 ease-in-out">
           <Link href="/pages/signup">Get started</Link>
         </button>
       </div>

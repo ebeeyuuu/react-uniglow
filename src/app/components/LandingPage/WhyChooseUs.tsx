@@ -5,7 +5,7 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { FaSearch, FaVrCardboard, FaComments } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
-import image1 from '@/images/17.jpg'
+import image1 from '@/images/17.png'
 
 interface FeatureDetails {
   title: string;

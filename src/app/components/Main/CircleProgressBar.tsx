@@ -101,7 +101,7 @@ export default function AnimatedCircularProgressBar({
       </svg>
       <span
         data-current-value={currentPercent}
-        className={`duration-[var(--transition-length)] delay-[var(--delay)] absolute inset-0 m-auto size-fit ease-linear animate-in fade-in p-2 transition-all ${hideValue ? "text-[15.5px]" : "text-4xl"}`}
+        className={`duration-[var(--transition-length)] delay-[var(--delay)] absolute inset-0 m-auto size-fit ease-linear animate-in fade-in p-5 transition-all text-2xl`}
       >
         { hideValue ? "App Tracker" : currentPercent }
       </span>

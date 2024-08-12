@@ -5,7 +5,9 @@ import AIMatching from '@/app/components/Main/AIMatching'
 const page = () => {
   return (
     <MainLayout>
-      <AIMatching />
+      <div className="flex justify-center items-center w-full h-full">
+        <AIMatching />
+      </div>
     </MainLayout>
   )
 }

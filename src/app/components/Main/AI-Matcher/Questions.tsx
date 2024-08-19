@@ -1,10 +1,15 @@
 import React from 'react'
+import SlidePresentation from './SlidePresentation'
 
 const Questions = () => {
   return (
-    <div className="w-full h-[96.6%] ml-[50px] flex justify-center items-center font-bold text-center mt-[2px] max-[1000px]:ml-0 px-[15px] max-[700px]:px-[10px] max-[700px]:py-[15px] border">
-      Questions
-    </div>
+    <SlidePresentation numSlides={5}>
+      <div>Question 1</div>
+      <div>Question 2</div>
+      <div>Question 3</div>
+      <div>Question 4</div>
+      <div>Question 5</div>
+    </SlidePresentation>
   )
 }
 

@@ -51,8 +51,8 @@ const UniversityExplorerSection: React.FC<UniversityExplorerSectionProps> = ({ i
     <div
       className="row-span-2 col-span-3 max-[2000px]:col-span-6 max-[2000px]:-order-7 bg-black max-[700px]:text-lg rounded-[10px] flex justify-center items-center text-xl border-[1.5px] border-[#003366] hover:border-[#ff8000]/50 font-bold text-center cursor-pointer transition-all duration-500 ease-in-out relative overflow-hidden"
       onClick={() => router.push("/pages/main/university-explorer")}
-      onMouseEnter={() => setHoverState(5, true)}
-      onMouseLeave={() => setHoverState(5, false)}
+      onMouseEnter={() => setHoverState(index, true)}
+      onMouseLeave={() => setHoverState(index, false)}
     >
       <div className="relative w-full h-full flex flex-col justify-center items-center">
         <Image
@@ -71,7 +71,7 @@ const UniversityExplorerSection: React.FC<UniversityExplorerSectionProps> = ({ i
         />
         <motion.div
           className="absolute z-50 flex items-center justify-center flex-col gap-y-[10px]"
-          initial={{ opacity: 0, y: 0 }}
+          initial={{ opacity: 1, y: 0 }}
           animate={
             isHovered ? { opacity: 1, y: -10 } : { opacity: 1, y: 0 }
           }

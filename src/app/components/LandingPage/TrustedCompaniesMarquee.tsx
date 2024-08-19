@@ -64,7 +64,7 @@ const TrustedCompaniesMarquee: React.FC = () => {
   }, [selectedCompany, handleClose]);
 
   return (
-    <div className="w-full flex justify-center items-center flex-col gap-y-[40px] mt-[-300px] max-[900px]:mt-[-100px]">
+    <div className="w-full flex justify-center items-center flex-col gap-y-[40px] mt-[-100px] max-[900px]:mt-[-50px]">
       <div className="text-5xl max-[900px]:text-3xl font-semibold flex justify-center items-center flex-row gap-x-[20px]">
         <FaHandshake size={50} className="text-[#fd7e00]" />
         Trusted by:

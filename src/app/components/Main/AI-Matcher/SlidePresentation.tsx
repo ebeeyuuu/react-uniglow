@@ -40,7 +40,7 @@ const SlidePresentation: React.FC<SlidePresentationProps> = ({
       <button
         onClick={prevSlide}
         disabled={currentSlide === 0}
-        className="absolute left-[20px] top-1/2 transform -translate-y-1/2 text-white flex items-center disabled:opacity-50 disabled:cursor-not-allowed"
+        className="absolute left-[70px] top-1/2 transform -translate-y-1/2 text-white flex items-center disabled:opacity-50 disabled:cursor-not-allowed"
       >
         <FaChevronLeft className="mr-2" />
         <span>Prev</span>
@@ -66,7 +66,7 @@ const SlidePresentation: React.FC<SlidePresentationProps> = ({
       <button
         onClick={nextSlide}
         disabled={currentSlide === numSlides - 1}
-        className="absolute right-[20px] top-1/2 transform -translate-y-1/2 text-white flex items-center disabled:opacity-50 disabled:cursor-not-allowed"
+        className="absolute right-[70px] top-1/2 transform -translate-y-1/2 text-white flex items-center disabled:opacity-50 disabled:cursor-not-allowed"
       >
         <span>Next</span>
         <FaChevronRight className="ml-2" />

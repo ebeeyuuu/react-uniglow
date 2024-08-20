@@ -54,7 +54,7 @@ const NavBar = () => {
   return (
     <div className="flex items-center justify-center h-screen">
       <nav
-        className={`bg-[#002347] text-white p-4 flex flex-col h-[calc(100%-[10px])] justify-between items-center rounded-[20px] max-[1000px]:flex-row max-[1000px]:w-[calc(100%-10px)] max-[1000px]:h-[100px] max-[1000px]:ml-0 max-[1000px]:mt-[30px] absolute left-[24px] max-[1000px]:top-[20px] max-[1000px]:left-1/2 max-[1000px]:-translate-x-1/2 opacity-100 transition-colors duration-500 ease-in-out`}
+        className={`bg-[#002347]/80 text-white p-4 flex flex-col h-[calc(100vh-30px)] justify-between items-center rounded-[20px] max-[1000px]:flex-row max-[1000px]:w-[calc(100vw-55px)] max-[1000px]:h-[100px] max-[1000px]:ml-0 left-[30px] absolute max-[1000px]:top-[20px] max-[1000px]:left-1/2 max-[1000px]:-translate-x-1/2 opacity-100 transition-colors duration-500 ease-in-out`}
         onMouseEnter={() => setIsHover(true)}
         onMouseLeave={() => setIsHover(false)}
       >

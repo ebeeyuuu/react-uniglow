@@ -36,7 +36,7 @@ const SlidePresentation: React.FC<SlidePresentationProps> = ({
   };
 
   return (
-    <div className="w-full h-[96.6%] ml-[50px] flex flex-col justify-center items-center mt-[2px] max-[1000px]:ml-0 px-[15px] max-[700px]:px-[10px] max-[700px]:py-[15px] relative">
+    <div className="w-full h-full flex flex-col justify-center items-center max-[1000px]:ml-0 px-[15px] max-[700px]:px-[10px] max-[700px]:py-[15px] relative">
       <button
         onClick={prevSlide}
         disabled={currentSlide === 0}

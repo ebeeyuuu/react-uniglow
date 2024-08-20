@@ -4,7 +4,7 @@ import AIMatching from '@/app/components/Main/AIMatching'
 
 const page = () => {
   return (
-    <MainLayout>
+    <MainLayout includeNavBar={false}>
       <div className="flex justify-center items-center w-full h-full">
         <AIMatching />
       </div>

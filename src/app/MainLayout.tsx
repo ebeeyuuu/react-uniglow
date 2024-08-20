@@ -4,13 +4,14 @@ import NavBar from '@/app/components/Main/NavBar';
 
 interface MainLayoutProps {
   children: ReactNode;
+  includeNavBar?: boolean; // Optional prop with a default value of true
 }
 
-const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
+const MainLayout: React.FC<MainLayoutProps> = ({ children, includeNavBar = true }) => {
   return (
     <div className="flex h-screen overflow-hidden">
-      <NavBar />
-      <div className="flex-grow p-4 overflow-auto ml-[145px] max-[1000px]:ml-0 max-[1000px]:mt-[130px]">
+      {includeNavBar && <NavBar />}
+      <div className={`flex-grow flex items-center justify-center overflow-auto max-[1000px]:mt-[130px] ${includeNavBar ? "ml-[145px]" : "max-[1000px]:ml-0 ml-0"}`}>
         {children}
       </div>
     </div>

@@ -10,7 +10,7 @@ import FifthSlide from './FifthSlide'
 
 const Questions = () => {
   return (
-    <SlidePresentation numSlides={5}>
+    <SlidePresentation numSlides={20}>
       <FirstSlide />
       <SecondSlide />
       <ThirdSlide />

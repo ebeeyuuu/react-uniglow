@@ -11,7 +11,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children, includeNavBar = true 
   return (
     <div className="flex h-screen overflow-hidden">
       {includeNavBar && <NavBar />}
-      <div className={`flex-grow flex items-center justify-center overflow-auto max-[1000px]:mt-[130px] ${includeNavBar ? "ml-[145px]" : "max-[1000px]:ml-0 ml-0"}`}>
+      <div className={`flex-grow flex items-center justify-center overflow-auto ${includeNavBar ? "ml-[145px] max-[1000px]:mt-[130px]" : "max-[1000px]:ml-0 ml-0"}`}>
         {children}
       </div>
     </div>

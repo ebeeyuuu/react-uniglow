@@ -1,6 +1,7 @@
 import React from 'react'
 import Home from '@/app/components/Icons/Home'
 import { IoMdReturnLeft } from "react-icons/io"
+import Link from 'next/link'
 
 const FirstSlide = () => {
   return (
@@ -13,18 +14,18 @@ const FirstSlide = () => {
           This is the place where we help you decide on what university is best for you!
         </div>
         <div className="flex flex-row gap-x-[20px] justify-center items-center">
-          <div className="px-5 py-3 flex flex-row items-center gap-x-[10px] bg-[#003366] rounded-[10px]">
+          <Link href="/pages/main" className="px-5 py-3 flex flex-row items-center gap-x-[10px] bg-[#003366] rounded-[10px]">
             <Home className="w-[20px] h-[20px]"/>
             <p className="font-medium">
               Return to home page
             </p>
-          </div>
-          <div className="px-5 py-3 flex flex-row items-center gap-x-[10px] border-2 border-[#003366] rounded-[10px]">
+          </Link>
+          <Link href="/" className="px-5 py-3 flex flex-row items-center gap-x-[10px] border-2 border-[#003366] rounded-[10px]">
             <IoMdReturnLeft />
             <p className="font-medium">
               Sign out
             </p>
-          </div>
+          </Link>
         </div>
       </div>
     </div>

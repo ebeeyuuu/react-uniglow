@@ -16,7 +16,7 @@ import { HoverProvider } from "@/context/hoverContext";
 const BentoBox = () => {
   return (
     <HoverProvider>
-      <div className="w-full h-full ml-[50px] flex justify-center items-center font-bold text-center mt-[2px] max-[1000px]:ml-0 px-[15px] max-[700px]:px-[10px] max-[700px]:py-[15px]">
+      <div className="w-full h-[96%] ml-[50px] flex justify-center items-center font-bold text-center max-[1000px]:ml-0 px-[25px] max-[700px]:px-[20px] max-[700px]:py-[15px]">
         <div className="grid grid-cols-6 grid-rows-3 gap-[20px] w-full h-full max-[2000px]:grid-rows-6 max-[2000px]:grid-cols-6 max-[700px]:gap-[10px]">
           <AIMatcherSection index={0} />
           <VRToursSection index={1} />

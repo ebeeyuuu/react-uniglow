@@ -54,6 +54,7 @@ const SlidePresentation: React.FC<SlidePresentationProps> = ({
         animate={{ x: 0, opacity: 1 }}
         exit={{ x: currentSlide < prevSlideIndex ? 100 : -100, opacity: 0 }}
         transition={{ duration: 0.5 }}
+        className="flex justify-center items-center w-full h-full"
       >
         {slideContents[currentSlide] ? (
           cloneElement(slideContents[currentSlide], { key: currentSlide })

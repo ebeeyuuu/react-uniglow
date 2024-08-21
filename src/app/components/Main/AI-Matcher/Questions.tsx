@@ -7,6 +7,10 @@ import SecondSlide from './SecondSlide'
 import ThirdSlide from './ThirdSlide'
 import FourthSlide from './FourthSlide'
 import FifthSlide from './FifthSlide'
+import SixthSlide from'./SixthSlide'
+import SeventhSlide from './SeventhSlide'
+import EighthSlide from './EighthSlide'
+
 
 const Questions = () => {
   return (
@@ -16,6 +20,9 @@ const Questions = () => {
       <ThirdSlide />
       <FourthSlide />
       <FifthSlide />
+      <SixthSlide />
+      <SeventhSlide />
+      <EighthSlide />
     </SlidePresentation>
   )
 }

@@ -2,7 +2,7 @@ import React from 'react'
 
 const SecondSlide = () => {
   return (
-    <div className="w-full h-full flex justify-center items-center w-4/5 mx-auto">
+    <div className="h-full flex justify-center items-center w-4/5 mx-auto">
       <div className="flex flex-col gap-y-[20px] justify-center items-center">
         <div className="text-center text-lg font-medium">
           Let&apos;s talk about your passions - what subjects light you up? what do you aspire to be?

@@ -11,7 +11,7 @@ const FirstSlide = () => {
           Welcome to Uniglow&apos;s AI Matcher
         </div>
         <div className="text-lg font-medium text-center">
-          This is the place where we help you decide on what university is best for you!
+          Here we help you decide on what university is best for you!
         </div>
         <div className="flex flex-row gap-x-[20px] justify-center items-center whitespace-nowrap">
           <Link href="/pages/main" className="px-5 py-3 flex flex-row items-center gap-x-[10px] bg-[#003366] rounded-[10px]">

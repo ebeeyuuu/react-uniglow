@@ -124,8 +124,8 @@ const Hero: React.FC = () => {
   }, []);
 
   const imageVariants = {
-    initial: { scale: 1, filter: 'grayscale(100%) brightness(70%)' },
-    hover: { scale: 1.08, filter: 'grayscale(0%) brightness(100%)' },
+    initial: { scale: 1, filter: 'grayscale(100%) brightness(50%) opacity(50%)' },
+    hover: { scale: 1.05, filter: 'grayscale(0%) brightness(80%) opacity(100%)' },
   };
 
   const expandedVariants = {
@@ -137,7 +137,7 @@ const Hero: React.FC = () => {
   return (
     <div className="w-full flex justify-center items-center flex-col">
       <div className="flex flex-row justify-center items-center max-[900px]:flex-col mx-auto">
-        <div className="w-[90%] h-auto grid grid-rows-11 grid-cols-11 gap-[20px] mt-[100px] text-black max-[900px]:gap-[15px] max-[700px]:grid-rows-none max-[700px]:grid-cols-3 max-[700px]:gap-[10px]">
+        <div className="w-[90%] h-[70vh] grid grid-rows-11 grid-cols-11 gap-[20px] mt-[350px] max-[700px]:mt-[150px] text-black max-[900px]:gap-[15px] max-[700px]:grid-rows-none max-[700px]:grid-cols-3 max-[700px]:gap-[10px]">
           <motion.div
             className="row-span-3 col-span-3 max-[700px]:row-span-1 max-[700px]:col-span-2 max-[700px]:h-[150px]"
             variants={imageVariants}
@@ -199,7 +199,7 @@ const Hero: React.FC = () => {
                     world's opportunities!
                   </span>
                 </div>
-                <div className="border-2 border-[#4f46e5] hover:bg-[#4f46e5] mt-[15px] text-xs py-3 px-5 flex justify-end font-medium ml-auto max-[1000px]:ml-0 max-[1000px]:justify-center smooth-animation max-[900px]:w-[150px] max-[900px]:mx-auto">
+                <div className="border-2 border-[#fcec5f] hover:bg-[#fcec5f] hover:text-black mt-[15px] text-sm font-medium py-3 px-5 flex justify-end font-medium ml-auto max-[1000px]:ml-0 max-[1000px]:justify-center smooth-animation max-[900px]:w-[150px] max-[900px]:mx-auto">
                   <Link href="/pages/signup">Get Started</Link>
                 </div>
               </div>

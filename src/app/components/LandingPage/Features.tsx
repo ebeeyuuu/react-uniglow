@@ -83,7 +83,7 @@ const Features: React.FC = () => {
           <div>
             What separates
             <span
-              className="text-[#9c98f0] italic mr-[20px] ml-[10px]"
+              className="text-[#fcec5f] italic mr-[20px] ml-[10px]"
               style={{ fontWeight: 900 }}
             >
               us

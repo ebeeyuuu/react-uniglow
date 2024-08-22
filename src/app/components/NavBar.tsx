@@ -456,8 +456,8 @@ const NavBar = () => {
             <button
               onClick={() => handleMenuOpen("explore")}
               className={`
-                px-4 py-2 border-2 border-[#9c98f0] 
-                hover:bg-[#9c98f0] hover:text-black smooth-animation font-semibold 
+                px-4 py-2 border-2 border-white 
+                hover:bg-white rounded-full hover:text-black smooth-animation font-semibold 
                 ${
                   activeLink === "/explore"
                     ? "bg-white text-black rounded-[10px]"

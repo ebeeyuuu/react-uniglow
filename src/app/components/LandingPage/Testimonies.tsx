@@ -159,28 +159,28 @@ const teacherParentTestimonials: Testimonial[] = [
 ];
 
 const TestimonialCard: React.FC<{ testimonial: Testimonial }> = ({ testimonial }) => (
-  <div className="flex flex-col space-y-4 mx-4 border border-white rounded-[10px] p-6 w-[300px]">
+  <div className="flex flex-col space-y-4 mx-4 border border-white/50 rounded-[10px] p-6 w-[300px]">
     <div className="flex items-start space-x-4">
       <Image
         src={testimonial.image}
         alt={testimonial.name}
-        className="w-16 h-16 rounded-full"
+        className="w-20 h-20 rounded-full"
         style={{
           maxWidth: "100%",
           height: "auto"
         }} />
       <div className="flex flex-col">
-        <p className="text-lg font-medium text-white">{testimonial.name}</p>
-        <p className="text-base text-white">{testimonial.role}</p>
+        <p className="text-xl font-medium text-white">{testimonial.name}</p>
+        <p className="text-lg text-white">{testimonial.role}</p>
       </div>
     </div>
     <div className="flex items-center">
       {[...Array(Math.floor(testimonial.rating))].map((_, i) => (
-        <FaStar key={i} className="text-[#ff8d1b]" />
+        <FaStar key={i} className="text-[#fae315]" />
       ))}
-      {testimonial.rating % 1 !== 0 && <FaStarHalfAlt className="text-[#ff8d1b]" />}
+      {testimonial.rating % 1 !== 0 && <FaStarHalfAlt className="text-[#fae315]" />}
     </div>
-    <p className="text-xs text-white">&quot;{testimonial.review}&quot;</p>
+    <p className="text-base text-white/60">&quot;{testimonial.review}&quot;</p>
   </div>
 );
 

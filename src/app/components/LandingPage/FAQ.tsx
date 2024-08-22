@@ -80,7 +80,7 @@ const FAQ: React.FC = () => {
           </Accordion>
         ))}
       </div>
-      <button className="bg-[#4f46e5] px-5 py-2 rounded-[10px] font-medium mt-[20px]">
+      <button className="bg-[#0066CC] px-5 py-2 rounded-[10px] font-medium mt-[20px]">
         See all FAQs
       </button>
       <p className="font-medium text-sm mt-[10px]">

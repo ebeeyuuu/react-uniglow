@@ -1,1 +1,142 @@
-@tailwind base;@tailwind components;@tailwind utilities;@layer utilities{.smooth-animation{transition:.5s ease-in-out}.gradient-hover{position:relative;overflow:hidden}.gradient-hover::before{content:"";position:absolute;top:0;left:-100%;width:200%;height:100%;background:linear-gradient(to right,rgba(0,123,255,0) 0,rgba(0,128,255,.5) 50%,rgba(0,123,255,0) 100%);transition:.5s;opacity:0}.gradient-hover:hover::before{left:100%;opacity:1}.placeholder-white::placeholder{color:#fff;opacity:.9}.placeholder-white::-ms-input-placeholder{color:#fff;opacity:.9}.typing-cursor{display:inline-block;width:2px;height:1em;color:#ff890a;margin-left:10px}.typing-cursor.blinking{animation:.7s step-end 5 blink}@keyframes blink{from,to{opacity:1}50%{opacity:0}}.underline-animation{position:relative;display:inline-block}.underline-animation::after{content:"";position:absolute;width:100%;transform:scaleX(0);height:2px;bottom:0;left:0;background-color:#ff890a;transform-origin:bottom right;transition:transform .5s ease-out}.underline-animation:hover::after{transform:scaleX(1);transform-origin:bottom left}}body{background:#020202;color:#fff;-ms-overflow-style:none;scrollbar-width:0px}body::-webkit-scrollbar{display:none}.underline-container{@apply relative;}.underline-container::after{content:"";@apply absolute bottom-[-20px] left-0 w-full h-[10px] bg-[#0070e0] transition-all duration-500 ease-in-out;}.underline-container:hover::after{height:20px}.animate-pulse{animation:.5s pulse}.animate-fade{animation:.5s fade}@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}@keyframes fade{0%{opacity:0}100%{opacity:1}}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .smooth-animation {
+    transition: .5s ease-in-out
+  }
+
+  .gradient-hover {
+    position: relative;
+    overflow: hidden
+  }
+
+  .gradient-hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 123, 255, 0) 0, rgba(0, 128, 255, .5) 50%, rgba(0, 123, 255, 0) 100%);
+    transition: .5s;
+    opacity: 0
+  }
+
+  .gradient-hover:hover::before {
+    left: 100%;
+    opacity: 1
+  }
+
+  .placeholder-white::placeholder {
+    color: #fff;
+    opacity: .9
+  }
+
+  .placeholder-white::-ms-input-placeholder {
+    color: #fff;
+    opacity: .9
+  }
+
+  .typing-cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    color: #ff890a;
+    margin-left: 10px
+  }
+
+  .typing-cursor.blinking {
+    animation: .7s step-end 5 blink
+  }
+
+  @keyframes blink {
+
+    from,
+    to {
+      opacity: 1
+    }
+
+    50% {
+      opacity: 0
+    }
+  }
+
+  .underline-animation {
+    position: relative;
+    display: inline-block
+  }
+
+  .underline-animation::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ff890a;
+    transform-origin: bottom right;
+    transition: transform .5s ease-out
+  }
+
+  .underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left
+  }
+}
+
+body {
+  background: #020202;
+  color: #fff;
+  -ms-overflow-style: none;
+  scrollbar-width: 0px
+}
+
+body::-webkit-scrollbar {
+  display: none
+}
+
+.underline-container {
+  @apply relative;
+}
+
+.underline-container::after {
+  content: "";
+  @apply absolute bottom-[-20px] left-0 w-full h-[10px] bg-[#0070e0] transition-all duration-500 ease-in-out;
+}
+
+.underline-container:hover::after {
+  height: 20px
+}
+
+.animate-pulse {
+  animation: .5s pulse
+}
+
+.animate-fade {
+  animation: .5s fade
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    transform: scale(1)
+  }
+
+  50% {
+    transform: scale(1.1)
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0
+  }
+
+  100% {
+    opacity: 1
+  }
+}

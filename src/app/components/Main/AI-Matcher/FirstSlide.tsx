@@ -20,7 +20,7 @@ const FirstSlide = () => {
               Return to home page
             </p>
           </Link>
-          <Link href="/" className="px-5 py-3 flex flex-row items-center gap-x-[10px] border-2 border-[#003366] rounded-[10px]">
+          <Link href="/" className="px-5 py-3 flex flex-row items-center gap-x-[10px] border-4 border-[#003366] rounded-[10px]">
             <IoMdReturnLeft />
             <p className="font-medium whitespace-nowrap">
               Sign out

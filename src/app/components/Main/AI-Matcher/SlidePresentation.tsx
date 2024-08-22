@@ -40,7 +40,7 @@ const SlidePresentation: React.FC<SlidePresentationProps> = ({
       <button
         onClick={prevSlide}
         disabled={currentSlide === 0}
-        className="absolute left-[50px] top-1/2 transform -translate-y-1/2 text-white flex items-center disabled:opacity-50 disabled:cursor-not-allowed max-[1000px]:-translate-y-0 max-[1000px]:left-1/2 max-[1000px]:ml-[-80px] max-[1000px]:bottom-0 max-[1000px]:mt-[35vh]"
+        className="absolute left-[50px] top-1/2 transform -translate-y-1/2 text-white flex items-center disabled:opacity-70 disabled:cursor-not-allowed max-[1000px]:-translate-y-0 max-[1000px]:left-1/2 max-[1000px]:ml-[-80px] max-[1000px]:bottom-0 max-[1000px]:mt-[35vh]"
       >
         <FaChevronLeft className="mr-2" />
         <span>Prev</span>
@@ -66,7 +66,7 @@ const SlidePresentation: React.FC<SlidePresentationProps> = ({
       <button
         onClick={nextSlide}
         disabled={currentSlide === numSlides - 1}
-        className="absolute right-[50px] top-1/2 transform -translate-y-1/2 text-white flex items-center disabled:opacity-50 disabled:cursor-not-allowed max-[1000px]:-translate-y-0 max-[1000px]:right-1/2 max-[1000px]:mr-[-80px] max-[1000px]:bottom-0 max-[1000px]:mt-[calc(35vh+2px)]"
+        className="absolute right-[50px] top-1/2 transform -translate-y-1/2 text-white flex items-center disabled:opacity-70 disabled:cursor-not-allowed max-[1000px]:-translate-y-0 max-[1000px]:right-1/2 max-[1000px]:mr-[-80px] max-[1000px]:bottom-0 max-[1000px]:mt-[calc(35vh+2px)]"
       >
         <span>Next</span>
         <FaChevronRight className="ml-2" />

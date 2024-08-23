@@ -8,3 +8,7 @@ export const navItems = [
     { href: "/pages/programs", label: "Programs", icon: SiActivitypub, size: 23, text: "Programs" },
     { href: "/pages/donate", label: "Donate", icon: BiDonateHeart, size: 23, text: "Donate" },
 ]
+
+export const subjects = [
+
+]

@@ -49,7 +49,7 @@ const UniversityExplorerSection: React.FC<UniversityExplorerSectionProps> = ({ i
 
   return (
     <div
-      className="row-span-2 col-span-3 max-[2000px]:col-span-6 max-[2000px]:-order-7 bg-black max-[700px]:text-lg rounded-[10px] flex justify-center items-center text-xl border-[1.5px] border-[#003366] hover:border-[#ff8000]/50 font-bold text-center cursor-pointer transition-all duration-500 ease-in-out relative overflow-hidden"
+      className="row-span-2 col-span-3 max-[2000px]:col-span-6 max-[2000px]:-order-7 bg-black max-[700px]:text-lg rounded-[10px] flex justify-center items-center text-xl border-[3px] border-[#003366] hover:border-[#f4b034]/50 font-bold text-center cursor-pointer transition-all duration-500 ease-in-out relative overflow-hidden"
       onClick={() => router.push("/pages/main/university-explorer")}
       onMouseEnter={() => setHoverState(index, true)}
       onMouseLeave={() => setHoverState(index, false)}
@@ -79,7 +79,7 @@ const UniversityExplorerSection: React.FC<UniversityExplorerSectionProps> = ({ i
         >
           <Explore
             className={`max-[1000px]:w-[50px] max-[1000px]:h-[50px] max-[1400px]:w-[60px] max-[1400px]:h-[60px] max-[2000px]:w-[70px] max-[2000px]:h-[70px] max-[3000px]:w-[80px] max-[3000px]:h-[80px] max-[4000px]:w-[90px] max-[4000px]:h-[90px] smooth-animation ${
-              isHovered ? "text-white" : "text-[#9c98f0]"
+              isHovered ? "text-white" : "text-[#02ac81]"
             }`}
           />
           <motion.p

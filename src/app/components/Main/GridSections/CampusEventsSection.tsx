@@ -15,7 +15,7 @@ const CampusEventsSection: React.FC<CampusEventsSectionProps> = ({ index }) => {
 
   return (
     <div
-      className="row-span-1 col-span-1 max-[2000px]:col-span-2 border-[1.5px] border-[#003366] hover:border-[#ff8000]/50 max-[700px]:text-lg rounded-[10px] flex justify-center items-center text-xl font-bold text-center cursor-pointer transition-all duration-300 ease-in-out relative overflow-hidden bg-black"
+      className="row-span-1 col-span-1 max-[2000px]:col-span-2 border-[3px] border-[#003366] hover:border-[#f4b034] max-[700px]:text-lg rounded-[10px] flex justify-center items-center text-xl font-bold text-center cursor-pointer transition-all duration-300 ease-in-out relative overflow-hidden bg-black"
       onClick={() => router.push("/pages/main/campus-events")}
       onMouseEnter={() => setHoverState(index, true)}
       onMouseLeave={() => setHoverState(index, false)}
@@ -38,7 +38,7 @@ const CampusEventsSection: React.FC<CampusEventsSectionProps> = ({ index }) => {
               >
                 <Calendar
                   className={`transition-all duration-700 ease-in-out max-[1000px]:w-[30px] max-[1000px]:h-[30px] max-[1400px]:w-[40px] max-[1400px]:h-[40px] max-[2000px]:w-[50px] max-[2000px]:h-[50px] max-[3000px]:w-[60px] max-[3000px]:h-[60px] max-[4000px]:w-[70px] max-[4000px]:h-[70px] mt-[30px] ${
-                    isHovered ? "text-white" : "text-[#9c98f0]"
+                    isHovered ? "text-white" : "text-[#02ad83]"
                   }`}
                 />
               </motion.div>

@@ -67,7 +67,7 @@ const Features: React.FC = () => {
         {features.map(({ id, icon, text }) => (
           <div
             key={id}
-            className={`bg-[#001932] rounded-[20px] flex justify-center items-center p-5 text-center font-semibold overflow-hidden relative gradient-hover ${
+            className={`bg-[#001932]/50 rounded-[20px] flex justify-center items-center p-5 text-center font-semibold overflow-hidden relative gradient-hover ${
               animatedBox === id ? "animate-pulse" : ""
             }`}
             onClick={() => handleBoxClick(id)}
@@ -83,7 +83,7 @@ const Features: React.FC = () => {
           <div>
             What separates
             <span
-              className="text-[#fcec5f] italic mr-[20px] ml-[10px]"
+              className="text-[#f4b034] italic mr-[20px] ml-[10px]"
               style={{ fontWeight: 900 }}
             >
               us

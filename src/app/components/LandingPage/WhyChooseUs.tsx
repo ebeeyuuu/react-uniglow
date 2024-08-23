@@ -19,19 +19,16 @@ const features: FeatureDetails[] = [
     title: "Discover Your Perfect Match!",
     description: "Uniglow's cutting-edge algorithm analyzes your unique profile and aspirations to reveal your ideal university fit. Say goodbye to endless searching and hello to personalized recommendations that align with your dreams!",
     detailedDescription: "Our advanced matching algorithm takes into account your academic achievements, extracurricular activities, career goals, and personal preferences to provide tailored university recommendations. We analyze thousands of data points to ensure you find the perfect fit for your higher education journey.",
-    icon: <FaSearch size={18} className="text-[#02478e]" />
   },
   {
     title: "Experience Campus Life from Your Couch!",
     description: "Can't visit every campus? No problem! Uniglow brings the campus to you with stunning 360-degree virtual tours. Explore dorms, lecture halls, and student hangouts as if you were really there. Make informed decisions without leaving your home!",
     detailedDescription: "Our immersive virtual tours use cutting-edge technology to provide a realistic campus experience. Navigate through key locations, interact with hotspots for additional information, and get a true feel for the campus atmosphere. It's the next best thing to being there in person!",
-    icon: <FaVrCardboard size={24} className="text-[#02478e]" />
   },
   {
     title: "Hear It Straight from the Source!",
     description: "Uniglow gives you the inside scoop with real, unfiltered reviews from current students and recent grads. Get the authentic lowdown on academics, social life, and everything in between. Don't just choose a university. Choose your future community!",
     detailedDescription: "Our platform hosts thousands of verified student reviews, covering every aspect of university life. From academic rigor to campus culture, you'll get honest insights to help you make an informed decision. We also provide tools to connect with current students for personalized advice.",
-    icon: <FaComments size={20} className="text-[#02478e]" />
   }
 ];
 
@@ -59,16 +56,15 @@ const WhyChooseUs: React.FC = () => {
 
   const renderFeature = useCallback((feature: FeatureDetails, index: number) => (
     <div key={index} className="flex-1 mr-4 max-[900px]:mx-auto max-[900px]:mt-4">
-      <Accordion sx={{ maxWidth: 300, backgroundColor: 'rgba(255, 255, 255, 0.5)', color: 'black' }}>
+      <Accordion sx={{ maxWidth: 300, backgroundColor: 'rgb(255, 255, 255)', color: 'black' }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls={`panel${index + 1}-content`}
           id={`panel${index + 1}-header`}
         >
           <div className="flex items-center">
-            <div className="rounded-full px-6 py-2 border-[#fcec5f]/50 border-2 flex items-center justify-center mr-4 flex-row gap-[10px]">
+            <div className="flex items-center justify-center mr-4 flex-row gap-[10px]">
               <div className="text-xl">{index + 1}.</div>
-              {feature.icon}
             </div>
           </div>
         </AccordionSummary>

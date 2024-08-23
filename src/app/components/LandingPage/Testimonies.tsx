@@ -176,9 +176,9 @@ const TestimonialCard: React.FC<{ testimonial: Testimonial }> = ({ testimonial }
     </div>
     <div className="flex items-center">
       {[...Array(Math.floor(testimonial.rating))].map((_, i) => (
-        <FaStar key={i} className="text-[#fae315]" />
+        <FaStar key={i} className="text-[#f4b034]" />
       ))}
-      {testimonial.rating % 1 !== 0 && <FaStarHalfAlt className="text-[#fae315]" />}
+      {testimonial.rating % 1 !== 0 && <FaStarHalfAlt className="text-[#f4b034]" />}
     </div>
     <p className="text-base text-white/60">&quot;{testimonial.review}&quot;</p>
   </div>

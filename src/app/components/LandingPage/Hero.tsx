@@ -199,7 +199,7 @@ const Hero: React.FC = () => {
                     world's opportunities!
                   </span>
                 </div>
-                <div className="border-2 border-[#fcec5f] hover:bg-[#fcec5f] hover:text-black mt-[15px] text-sm font-medium py-3 px-5 flex justify-end font-medium ml-auto max-[1000px]:ml-0 max-[1000px]:justify-center smooth-animation max-[900px]:w-[150px] max-[900px]:mx-auto">
+                <div className="border-2 border-[#f4b034] hover:bg-[#f4b034] hover:text-black mt-[15px] text-sm font-medium py-3 px-5 flex justify-end font-medium ml-auto max-[1000px]:ml-0 max-[1000px]:justify-center smooth-animation max-[900px]:w-[150px] max-[900px]:mx-auto">
                   <Link href="/pages/signup">Get Started</Link>
                 </div>
               </div>

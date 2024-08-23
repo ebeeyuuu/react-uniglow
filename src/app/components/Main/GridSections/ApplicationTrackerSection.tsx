@@ -33,7 +33,7 @@ const ApplicationTrackerSection: React.FC<ApplicationTrackerSectionProps> = ({
 
   return (
     <div
-      className="row-span-1 col-span-1 max-[2000px]:col-span-2 max-[1200px]:col-span-4 border-[1.5px] border-[#003366] hover:border-[#ff8000]/50 max-[700px]:text-lg rounded-[10px] flex justify-center items-center text-xl font-bold text-center cursor-pointer transition-all duration-300 ease-in-out relative overflow-hidden bg-black"
+      className="row-span-1 col-span-1 max-[2000px]:col-span-2 max-[1200px]:col-span-4 border-[3px] border-[#003366] hover:border-[#f4b034] max-[700px]:text-lg rounded-[10px] flex justify-center items-center text-xl font-bold text-center cursor-pointer transition-all duration-300 ease-in-out relative overflow-hidden bg-black"
       onClick={() => router.push("/pages/main/application-tracker")}
       onMouseEnter={() => setHoverState(index, true)}
       onMouseLeave={() => setHoverState(index, false)}
@@ -45,7 +45,7 @@ const ApplicationTrackerSection: React.FC<ApplicationTrackerSectionProps> = ({
               className={`flex justify-center items-center smooth-animation ${
                 isHovered
                   ? "mt-[10px] scale-[90%]"
-                  : "mt-[-55px] max-[1400px]:scale-[30%] max-[2000px]:scale-[40%] max-[2400px]:scale-[50%] max-[2800px]:scale-[60%] max-[3200px]:scale-[70%] max-[4000px]:scale-[80%]"
+                  : "mt-[-55px] max-[1400px]:scale-[40%] max-[2000px]:scale-[50%] max-[2400px]:scale-[60%] max-[2800px]:scale-[70%] max-[3200px]:scale-[80%] max-[4000px]:scale-[90%]"
               }`}
             >
               <div className="flex items-center justify-center">
@@ -53,7 +53,7 @@ const ApplicationTrackerSection: React.FC<ApplicationTrackerSectionProps> = ({
                   min={0}
                   max={100}
                   value={value}
-                  gaugePrimaryColor="rgb(79 70 229)"
+                  gaugePrimaryColor="rgb(2 173 131)"
                   gaugeSecondaryColor="rgb(31, 41, 55)"
                   className=""
                   hideValue={isHovered ? true : false}

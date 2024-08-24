@@ -40,7 +40,7 @@ const SlidePresentation: React.FC<SlidePresentationProps> = ({
       <button
         onClick={prevSlide}
         disabled={currentSlide === 0}
-        className="absolute left-[50px] z-40 top-1/2 transform -translate-y-1/2 text-white flex items-center disabled:opacity-70 disabled:cursor-not-allowed max-[1200px]:-translate-y-0 max-[1200px]:left-1/2 max-[1200px]:ml-[-130px] max-[1200px]:bottom-0 max-[1200px]:mt-[40vh] px-5 py-3 h-[100px] rounded-full bg-black/80 hover:bg-[#f4b034] hover:text-black smooth-animation border border-white hover:border-[#f4b034]"
+        className="absolute left-[50px] z-40 top-1/2 transform -translate-y-1/2 text-white flex items-center disabled:opacity-70 disabled:cursor-not-allowed max-[1200px]:-translate-y-0 max-[1200px]:left-1/2 max-[1200px]:ml-[-130px] max-[1200px]:bottom-0 max-[1200px]:mt-[40vh] px-5 py-3 h-[100px] rounded-full bg-black/80 hover:bg-[#f4b034] hover:text-black smooth-animation"
       >
         <FaChevronLeft className="mr-2" />
         <span>Prev</span>
@@ -66,7 +66,7 @@ const SlidePresentation: React.FC<SlidePresentationProps> = ({
       <button
         onClick={nextSlide}
         disabled={currentSlide === numSlides - 1}
-        className="absolute right-[50px] z-40 top-1/2 transform -translate-y-1/2 text-white flex items-center disabled:opacity-70 disabled:cursor-not-allowed max-[1200px]:-translate-y-0 max-[1200px]:right-1/2 max-[1200px]:mr-[-130px] max-[1200px]:bottom-0 max-[1200px]:mt-[calc(40vh+2px)] px-5 py-3 h-[100px] rounded-full bg-black/80 hover:bg-[#f4b034] hover:text-black smooth-animation border border-white hover:border-[#f4b034]"
+        className="absolute right-[50px] z-40 top-1/2 transform -translate-y-1/2 text-white flex items-center disabled:opacity-70 disabled:cursor-not-allowed max-[1200px]:-translate-y-0 max-[1200px]:right-1/2 max-[1200px]:mr-[-130px] max-[1200px]:bottom-0 max-[1200px]:mt-[calc(40vh+2px)] px-5 py-3 h-[100px] rounded-full bg-black/80 hover:bg-[#f4b034] hover:text-black smooth-animation"
       >
         <span>Next</span>
         <FaChevronRight className="ml-2" />

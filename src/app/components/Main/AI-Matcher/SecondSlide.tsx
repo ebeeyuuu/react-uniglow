@@ -1,7 +1,35 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaCheck } from 'react-icons/fa';
+import { 
+  math_subjects, 
+  art_subjects, 
+  science_subjects, 
+  english_subjects, 
+  history_subjects, 
+  geography_subjects, 
+  physical_education_subjects, 
+  music_subjects, 
+  language_subjects, 
+  technology_subjects 
+} from '@/data'
 
+function flattenSubjects(arrays) {
+  return arrays.reduce((acc, array) => acc.concat(array), [])
+}
+
+const allSubjects = flattenSubjects([
+  math_subjects,
+  art_subjects,
+  science_subjects,
+  english_subjects,
+  history_subjects,
+  geography_subjects,
+  physical_education_subjects,
+  music_subjects,
+  language_subjects,
+  technology_subjects,
+])
 
 const ConfirmDialog = ({ onConfirm, onCancel, subjects }) => (
   <motion.div 
@@ -77,8 +105,10 @@ const SubjectButton = ({ subject, onClick, isSelected, className }) => (
 const SecondSlide = () => {
   const [selectedSubjects, setSelectedSubjects] = useState([]);
   const [isConfirmVisible, setIsConfirmVisible] = useState(false);
-  const [animateGenericSubjects, setAnimateGenericSubjects] = useState(true);
+  const [animateGenericSubjects, setAnimateGenericSubjects] = useState(false);
   const [animateSpecificSubjects, setAnimateSpecificSubjects] = useState(false);
+
+  const [scrollEnabled, setScrollEnabled] = useState(false)  
 
   const handleSubjectClick = (subject) => {
     setSelectedSubjects(prev => 
@@ -103,6 +133,16 @@ const SecondSlide = () => {
     setAnimateGenericSubjects(true);
   };
 
+  useEffect(() => {
+    setTimeout(() => {
+      setAnimateGenericSubjects(true)
+      setScrollEnabled(true)
+    }, 3000);
+
+    
+  })
+
+
   const subjects = [
     { name: "Science", className: "bg-[#003dcc]/75 row-span-1 col-span-2 max-[850px]:col-span-1 max-[850px]:9" },
     { name: "English", className: "bg-[#08155e] row-span-1 col-span-1 max-[850px]:row-span-2 max-[850px]:8" },
@@ -112,15 +152,25 @@ const SecondSlide = () => {
     { name: "Geography", className: "bg-[#02ad83]/70 row-span-1 col-span-2 max-[850px]:row-span-2 max-[850px]:col-span-1 max-[850px]:5" },
     { name: "Art", className: "bg-[#08155e] row-span-2 col-span-1" },
     { name: "Music", className: "bg-[#00309f]/80 row-span-1 col-span-1 max-[850px]:row-span-2" },
-    { name: "Physical Education", className: "bg-[#003dcc]/75 row-span-1 col-span-1 max-[850]x:row-span-2 max-[850]x:5" },
+    { name: "Physical Education", className: "bg-[#003dcc]/75 row-span-1 col-span-1 max-[850px]:row-span-2 max-[850]x:5" },
     { name: "Languages", className: "bg-[#003dcc] row-span-1 col-span-2 max-[850px]:col-span-1" }
   ];
 
   return (
-    <div className="w-full h-screen overflow-hidden">
+    <div className={`w-full h-screen ${scrollEnabled ? "overflow-y-scroll" : "overflow-hidden"} scrollbar-hide`}>
       <div className="relative w-full h-[100vh] scroll-smooth">
         <AnimatePresence>
-          {animateGenericSubjects && (
+          {!animateGenericSubjects && !animateSpecificSubjects && (
+            <motion.div
+              className="text-3xl font-bold fixed top-0 left-0 w-full h-full flex justify-center items-center"
+            >
+              Let&apos; talk about you - what subjects light you up?
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        <AnimatePresence>
+          {animateGenericSubjects && !animateSpecificSubjects && (
             <motion.div
               className="h-full w-full grid grid-cols-3 max-[850px]:grid-cols-2 grid-rows-6 max-[850px]:grid-rows-9 gap-[22px] py-10 px-4 absolute"
               initial={{ y: 1000, opacity: 0 }}
@@ -140,7 +190,7 @@ const SecondSlide = () => {
           )}
         </AnimatePresence>
 
-        {selectedSubjects.length > 0 && !isConfirmVisible && animateGenericSubjects && (
+        {selectedSubjects.length > 0 && !isConfirmVisible && animateGenericSubjects && !animateSpecificSubjects && (
           <SelectionCounter 
             count={selectedSubjects.length} 
             onConfirm={handleConfirmSelection}
@@ -154,22 +204,24 @@ const SecondSlide = () => {
             subjects={selectedSubjects}
           />
         )}
-       
         <AnimatePresence>
           {animateSpecificSubjects && (
             <motion.div
-              className="text-3xl font-bold fixed top-0 left-0 w-full h-full flex justify-center items-center"
+              className={`text-3xl font-bold fixed top-0 left-0 flex justify-center scrollbar-hide w-full h-full overflow-y-scroll`}
               initial={{ y: 1000, opacity: 0 }}
               animate={{ y: 0, opacity: 1, transition: { duration: 0.5, ease: "easeInOut" }}}
               exit={{ y: "-100%", opacity: 0, transition: { duration: 0.5, ease: "easeInOut" }}}
             >
-              <div className="flex flex-col gap-10 w-1/3">
-                Show the full detailed list of subjects for the following:
-                <ol>
-                  {(selectedSubjects.sort((a, b) => a.localeCompare(b))).map((subject, index) => (
-                    <li key={subject} className="text-xl font-medium">{index + 1}. {subject}</li>
+              <div className="flex flex-col gap-10 w-4/5 h-[200vh] scroll-smooth">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 3xl:grid-cols-7 4xl:grid-cols-8 gap-4">
+                  {math_subjects.map((subject) => (
+                    <div key={subject.id} className="p-4 border border-white/50 rounded-lg bg-gray-950">
+                      <h3 className="text-lg font-bold mb-2">{subject.subject}</h3>
+                      <p className="text-sm">Level: {subject.level}</p>
+                      <p className="text-sm">Difficulty: {subject.difficulty}</p>
+                    </div>
                   ))}
-                </ol>
+                </div>
               </div>
             </motion.div>
           )}

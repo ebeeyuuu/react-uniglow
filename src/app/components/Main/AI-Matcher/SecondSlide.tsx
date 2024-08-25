@@ -14,23 +14,6 @@ import {
   technology_subjects 
 } from "@/data"
 
-function flattenSubjects(arrays) {
-  return arrays.reduce((acc, array) => acc.concat(array), [])
-}
-
-const allSubjects = flattenSubjects([
-  math_subjects,
-  art_subjects,
-  science_subjects,
-  english_subjects,
-  history_subjects,
-  geography_subjects,
-  physical_education_subjects,
-  music_subjects,
-  language_subjects,
-  technology_subjects,
-])
-
 type Subject = {
   id: string;
   subject: string;
@@ -39,7 +22,6 @@ type Subject = {
 }
 
 function mergeSubjects(subjectFilter: string[]) {
-  // Initialize an empty object to hold categorized subjects
   const categorizedSubjects: { [key: string]: Subject[] } = {};
 
   subjectFilter.forEach((subject) => {
@@ -193,7 +175,6 @@ const SecondSlide = () => {
     
   })
 
-
   const subjects = [
     { name: "Science", className: "bg-[#003dcc]/75 row-span-1 col-span-2 max-[850px]:col-span-1" },
     { name: "English", className: "bg-[#08155e] row-span-1 col-span-1 max-[850px]:row-span-2" },
@@ -213,7 +194,7 @@ const SecondSlide = () => {
         <AnimatePresence>
           {!animateGenericSubjects && !animateSpecificSubjects && (
             <motion.div
-              className="text-3xl font-bold fixed top-0 left-0 w-full h-full flex justify-center items-center"
+              className="text-3xl font-bold fixed top-0 left-0 w-full h-full flex justify-center items-center p-12 text-center"
             >
               Let&apos;s talk about you - what subjects light you up?
             </motion.div>
@@ -259,30 +240,36 @@ const SecondSlide = () => {
         <AnimatePresence>
           {animateSpecificSubjects && (
             <motion.div
-              className={`text-3xl font-bold fixed top-0 left-0 flex justify-center scrollbar-hide w-full h-full overflow-y-scroll`}
+              className={`text-3xl font-bold fixed top-0 left-0 flex flex-col scrollbar-hide w-full h-full overflow-y-scroll`}
               initial={{ y: 1000, opacity: 0 }}
               animate={{ y: 0, opacity: 1, transition: { duration: 0.5, ease: "easeInOut" }}}
               exit={{ y: "-100%", opacity: 0, transition: { duration: 0.5, ease: "easeInOut" }}}
             >
-              <div className="flex flex-col gap-10 w-full h-[200vh] scroll-smooth">
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 3xl:grid-cols-7 4xl:grid-cols-8 gap-4 h-full p-10">
-                  {(mergeSubjects(selectedSubjects).map((subject, index) => (
-                    <div 
-                      key={index}
-                      className="bg-gray-800 rounded-xl row-span-1 col-span-1 w-full h-full flex justify-center items-center flex-col gap-4 min-h-[400px]"
-                    >
-                      <div className="text-2xl text-center w-full">
-                        {subject.subject}
-                      </div>
-                      <div className="text-lg font-medium text-left w-full text-center">
-                        Level: {subject.level}
-                      </div>
-                      <div className="text-lg font-meidum text-left w-full text-center">
-                        Difficulty: {subject.difficulty}
-                      </div>
+              <div className="flex flex-col gap-10 w-full h-full scroll-smooth p-10">
+                {Object.entries(mergeSubjects(selectedSubjects)).map(([section, subjects], index) => (
+                  <div key={index} className="mb-20 p-10">
+                    <h2 className="text-xl font-medium mb-4 text-white/50 uppercase">Section No.{index + 1}</h2>
+                    <h1 className="text-3xl font-bold mb-10 text-white">{section}</h1>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 3xl:grid-cols-7 4xl:grid-cols-8 gap-4">
+                      {subjects.map((subject, idx) => (
+                        <div 
+                          key={idx}
+                          className="bg-gray-800 rounded-xl row-span-1 col-span-1 w-full h-full flex justify-center items-center flex-col gap-4 min-h-[400px]"
+                        >
+                          <div className="text-2xl text-center w-full">
+                            {subject.subject}
+                          </div>
+                          <div className="text-lg font-medium text-left w-full text-center">
+                            Level: {subject.level}
+                          </div>
+                          <div className="text-lg font-medium text-left w-full text-center">
+                            Difficulty: {subject.difficulty}
+                          </div>
+                        </div>
+                      ))}
                     </div>
-                  ))}
-                </div>
+                  </div>
+                ))}
               </div>
             </motion.div>
           )}

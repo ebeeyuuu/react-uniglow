@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaCheck } from 'react-icons/fa';
-import { 
+import {
   math_subjects, 
   art_subjects, 
   science_subjects, 
   english_subjects, 
   history_subjects, 
   geography_subjects, 
-  physical_education_subjects, 
-  music_subjects, 
-  language_subjects, 
+  physical_education_subjects,
+  music_subjects,
+  language_subjects,
   technology_subjects 
-} from '@/data'
+} from "@/data"
 
 function flattenSubjects(arrays) {
   return arrays.reduce((acc, array) => acc.concat(array), [])
@@ -30,6 +30,57 @@ const allSubjects = flattenSubjects([
   language_subjects,
   technology_subjects,
 ])
+
+type Subject = {
+  id: string;
+  subject: string;
+  level: string;
+  difficulty: string;
+}
+
+function mergeSubjects(subjectFilter: string[]) {
+  // Initialize an empty object to hold categorized subjects
+  const categorizedSubjects: { [key: string]: Subject[] } = {};
+
+  subjectFilter.forEach((subject) => {
+    switch (subject) {
+      case "Mathematics":
+        categorizedSubjects["Mathematics"] = math_subjects;
+        break;
+      case "Art":
+        categorizedSubjects["Art"] = art_subjects;
+        break;
+      case "Science":
+        categorizedSubjects["Science"] = science_subjects;
+        break;
+      case "English":
+        categorizedSubjects["English"] = english_subjects;
+        break;
+      case "History":
+        categorizedSubjects["History"] = history_subjects;
+        break;
+      case "Geography":
+        categorizedSubjects["Geography"] = geography_subjects;
+        break;
+      case "Physical Education":
+        categorizedSubjects["Physical Education"] = physical_education_subjects;
+        break;
+      case "Music":
+        categorizedSubjects["Music"] = music_subjects;
+        break;
+      case "Languages":
+        categorizedSubjects["Languages"] = language_subjects;
+        break;
+      case "Technology":
+        categorizedSubjects["Technology"] = technology_subjects;
+        break;
+      default:
+        console.log(`Subject "${subject}" not recognized.`);
+    }
+  });
+
+  return categorizedSubjects;
+}
 
 const ConfirmDialog = ({ onConfirm, onCancel, subjects }) => (
   <motion.div 
@@ -108,7 +159,7 @@ const SecondSlide = () => {
   const [animateGenericSubjects, setAnimateGenericSubjects] = useState(false);
   const [animateSpecificSubjects, setAnimateSpecificSubjects] = useState(false);
 
-  const [scrollEnabled, setScrollEnabled] = useState(false)  
+  const [scrollEnabled, setScrollEnabled] = useState(false)
 
   const handleSubjectClick = (subject) => {
     setSelectedSubjects(prev => 
@@ -144,15 +195,15 @@ const SecondSlide = () => {
 
 
   const subjects = [
-    { name: "Science", className: "bg-[#003dcc]/75 row-span-1 col-span-2 max-[850px]:col-span-1 max-[850px]:9" },
-    { name: "English", className: "bg-[#08155e] row-span-1 col-span-1 max-[850px]:row-span-2 max-[850px]:8" },
-    { name: "Mathematics", className: "bg-[#003dcc] row-span-2 col-span-2 max-[850px]:row-span-2 max-[850px]:col-span-1 max-[850px]:6" },
-    { name: "Technology", className: "bg-[#00309f] row-span-2 col-span-1 max-[850px]:row-span-2 max-[850px]:7" },
-    { name: "History", className: "bg-[#02ad83] row-span-1 col-span-1 max-[850px]:row-span-2 max-[850px]:5" },
-    { name: "Geography", className: "bg-[#02ad83]/70 row-span-1 col-span-2 max-[850px]:row-span-2 max-[850px]:col-span-1 max-[850px]:5" },
+    { name: "Science", className: "bg-[#003dcc]/75 row-span-1 col-span-2 max-[850px]:col-span-1" },
+    { name: "English", className: "bg-[#08155e] row-span-1 col-span-1 max-[850px]:row-span-2" },
+    { name: "Mathematics", className: "bg-[#003dcc] row-span-2 col-span-2 max-[850px]:row-span-2 max-[850px]:col-span-1" },
+    { name: "Technology", className: "bg-[#00309f] row-span-2 col-span-1 max-[850px]:row-span-2" },
+    { name: "History", className: "bg-[#02ad83] row-span-1 col-span-1 max-[850px]:row-span-2" },
+    { name: "Geography", className: "bg-[#02ad83]/70 row-span-1 col-span-2 max-[850px]:row-span-2 max-[850px]:col-span-1" },
     { name: "Art", className: "bg-[#08155e] row-span-2 col-span-1" },
     { name: "Music", className: "bg-[#00309f]/80 row-span-1 col-span-1 max-[850px]:row-span-2" },
-    { name: "Physical Education", className: "bg-[#003dcc]/75 row-span-1 col-span-1 max-[850px]:row-span-2 max-[850]x:5" },
+    { name: "Physical Education", className: "bg-[#003dcc]/75 row-span-1 col-span-1 max-[850px]:row-span-2" },
     { name: "Languages", className: "bg-[#003dcc] row-span-1 col-span-2 max-[850px]:col-span-1" }
   ];
 
@@ -164,7 +215,7 @@ const SecondSlide = () => {
             <motion.div
               className="text-3xl font-bold fixed top-0 left-0 w-full h-full flex justify-center items-center"
             >
-              Let&apos; talk about you - what subjects light you up?
+              Let&apos;s talk about you - what subjects light you up?
             </motion.div>
           )}
         </AnimatePresence>
@@ -204,6 +255,7 @@ const SecondSlide = () => {
             subjects={selectedSubjects}
           />
         )}
+        
         <AnimatePresence>
           {animateSpecificSubjects && (
             <motion.div
@@ -212,13 +264,22 @@ const SecondSlide = () => {
               animate={{ y: 0, opacity: 1, transition: { duration: 0.5, ease: "easeInOut" }}}
               exit={{ y: "-100%", opacity: 0, transition: { duration: 0.5, ease: "easeInOut" }}}
             >
-              <div className="flex flex-col gap-10 w-4/5 h-[200vh] scroll-smooth">
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 3xl:grid-cols-7 4xl:grid-cols-8 gap-4">
-                  {math_subjects.map((subject) => (
-                    <div key={subject.id} className="p-4 border border-white/50 rounded-lg bg-gray-950">
-                      <h3 className="text-lg font-bold mb-2">{subject.subject}</h3>
-                      <p className="text-sm">Level: {subject.level}</p>
-                      <p className="text-sm">Difficulty: {subject.difficulty}</p>
+              <div className="flex flex-col gap-10 w-full h-[200vh] scroll-smooth">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 3xl:grid-cols-7 4xl:grid-cols-8 gap-4 h-full p-10">
+                  {(mergeSubjects(selectedSubjects).map((subject, index) => (
+                    <div 
+                      key={index}
+                      className="bg-gray-800 rounded-xl row-span-1 col-span-1 w-full h-full flex justify-center items-center flex-col gap-4 min-h-[400px]"
+                    >
+                      <div className="text-2xl text-center w-full">
+                        {subject.subject}
+                      </div>
+                      <div className="text-lg font-medium text-left w-full text-center">
+                        Level: {subject.level}
+                      </div>
+                      <div className="text-lg font-meidum text-left w-full text-center">
+                        Difficulty: {subject.difficulty}
+                      </div>
                     </div>
                   ))}
                 </div>

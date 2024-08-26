@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaCheck } from 'react-icons/fa';
+import { FaCheck, FaSearch, FaSort } from 'react-icons/fa';
 import {
   math_subjects, 
   art_subjects, 
@@ -141,6 +141,9 @@ const SecondSlide = () => {
   const [animateGenericSubjects, setAnimateGenericSubjects] = useState(false);
   const [animateSpecificSubjects, setAnimateSpecificSubjects] = useState(false);
 
+  const [searchTerm, setSearchTerm] = useState('');
+  const [sortMethod, setSortMethod] = useState('default')
+
   const [scrollEnabled, setScrollEnabled] = useState(false)
 
   const handleSubjectClick = (subject) => {
@@ -171,8 +174,6 @@ const SecondSlide = () => {
       setAnimateGenericSubjects(true)
       setScrollEnabled(true)
     }, 3000);
-
-    
   })
 
   const subjects = [
@@ -187,6 +188,25 @@ const SecondSlide = () => {
     { name: "Physical Education", className: "bg-[#003dcc]/75 row-span-1 col-span-1 max-[850px]:row-span-2" },
     { name: "Languages", className: "bg-[#003dcc] row-span-1 col-span-2 max-[850px]:col-span-1" }
   ];
+
+  const filteredSubjects = subjects.filter(subject =>
+    subject.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  const sortSubjects = (subjects) => {
+    switch (sortMethod) {
+      case 'levelAsc':
+        return [...subjects].sort((a, b) => a.level.localeCompare(b.level));
+      case 'levelDesc':
+        return [...subjects].sort((a, b) => b.level.localeCompare(a.level));
+      case 'difficultyAsc':
+        return [...subjects].sort((a, b) => a.difficulty.localeCompare(b.difficulty));
+      case 'difficultyDesc':
+        return [...subjects].sort((a, b) => b.difficulty.localeCompare(a.difficulty));
+      default:
+        return subjects;
+    }
+  }
 
   return (
     <div className={`w-full h-screen ${scrollEnabled ? "overflow-y-scroll" : "overflow-hidden"} scrollbar-hide`}>
@@ -240,39 +260,68 @@ const SecondSlide = () => {
         <AnimatePresence>
           {animateSpecificSubjects && (
             <motion.div
-              className={`text-3xl font-bold fixed top-0 left-0 flex flex-col scrollbar-hide w-full h-full overflow-y-scroll`}
+              className={`font-bold fixed top-0 left-0 flex flex-col scrollbar-hide w-full h-full overflow-y-scroll`}
               initial={{ y: 1000, opacity: 0 }}
               animate={{ y: 0, opacity: 1, transition: { duration: 0.5, ease: "easeInOut" }}}
               exit={{ y: "-100%", opacity: 0, transition: { duration: 0.5, ease: "easeInOut" }}}
             >
               <div className="flex flex-col gap-10 w-full h-full scroll-smooth p-10">
-                {Object.entries(mergeSubjects(selectedSubjects)).map(([section, subjects], index) => (
-                  <div key={index} className="mb-20 p-10">
-                    <h2 className="text-xl font-medium mb-4 text-white/50 uppercase">Section No.{index + 1}</h2>
-                    <h1 className="text-3xl font-bold mb-10 text-white">{section}</h1>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 3xl:grid-cols-7 4xl:grid-cols-8 gap-4">
-                      {subjects.map((subject, idx) => (
-                        <div 
-                          key={idx}
-                          className="bg-[#001f66] rounded-xl row-span-1 col-span-1 w-full h-full flex justify-center items-center flex-col gap-2 min-h-[350px] px-10 py-4"
-                        >
-                          <div className="border-2 border-[#f4b034] text-xs w-full h-[30%] mb-4 rounded-xl justify-center items-center flex">
-                            Image
+                <div className="w-full max-w-md mb-8 relative mx-auto mt-[100px]">
+                  <input
+                    type="text"
+                    placeholder="Search specific subjects..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="w-full p-5 pl-14 rounded-lg border bg-transparent border-bg-gray-700 text-white"
+                  />
+                  <FaSearch className="absolute left-5 top-1/2 transform -translate-y-1/2 text-white" />
+                </div>
+
+                {Object.entries(mergeSubjects(selectedSubjects)).map(([section, subjects], index) => {
+                  const filteredSubjects = subjects.filter(subject =>
+                    subject.subject.toLowerCase().includes(searchTerm.toLowerCase())
+                  );
+
+                  if (filteredSubjects.length === 0) return null;
+
+                  return (
+                    <div key={index} className="mb-20 p-10">
+                      <h2 className="text-xl font-medium mb-4 text-white/50 uppercase">Section No.{index + 1}</h2>
+                      <h1 className="text-3xl font-bold mb-10 text-white">{section}</h1>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 3xl:grid-cols-7 4xl:grid-cols-8 gap-4">
+                        {filteredSubjects.map((subject, idx) => (
+                          <div 
+                            key={idx}
+                            className="bg-[#001f66] rounded-xl row-span-1 col-span-1 w-full h-full flex justify-center items-center flex-col gap-2 min-h-[350px] px-10 py-4"
+                          >
+                            <div className="border-2 border-[#f4b034] text-xs w-full h-[30%] mb-4 rounded-xl justify-center items-center flex">
+                              Image
+                            </div>
+                            <div className="text-lg w-full">
+                              {subject.subject}
+                            </div>
+                            <div className="font-medium text-left text-base w-full">
+                              {subject.level}
+                            </div>
+                            <div className="font-medium text-left text-base w-full">
+                              Difficulty: {subject.difficulty}
+                            </div>
                           </div>
-                          <div className="text-lg w-full">
-                            {subject.subject}
-                          </div>
-                          <div className="font-medium text-left text-base w-full">
-                            {subject.level}
-                          </div>
-                          <div className="font-medium text-left text-base w-full">
-                            Difficulty: {subject.difficulty}
-                          </div>
-                        </div>
-                      ))}
+                        ))}
+                      </div>
                     </div>
+                  );
+                })}
+
+                {Object.values(mergeSubjects(selectedSubjects)).every(subjects => 
+                  subjects.every(subject => 
+                    !subject.subject.toLowerCase().includes(searchTerm.toLowerCase()) 
+                  )
+                ) && (
+                  <div className="text-2xl font-bold text-center mt-20">
+                    No results found. Try something else.
                   </div>
-                ))}
+                )}
               </div>
             </motion.div>
           )}

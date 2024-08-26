@@ -357,10 +357,10 @@ const SecondSlide = () => {
                               {subject.subject}
                             </div>
                             <div className="font-medium text-left text-base w-full">
-                              {subject.level}
+                              Level: {subject.level}
                             </div>
                             <div className="font-medium text-left text-base w-full">
-                              Difficulty: {subject.difficulty}
+                              Difficulty: {subject.difficulty}/100
                             </div>
                           </div>
                         ))}

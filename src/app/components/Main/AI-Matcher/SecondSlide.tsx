@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaCheck, FaSearch, FaSort } from 'react-icons/fa';
+import Select from 'react-select'
 import {
   math_subjects, 
   art_subjects, 
@@ -142,7 +143,15 @@ const SecondSlide = () => {
   const [animateSpecificSubjects, setAnimateSpecificSubjects] = useState(false);
 
   const [searchTerm, setSearchTerm] = useState('');
-  const [sortMethod, setSortMethod] = useState('default')
+  const [sortMethod, setSortMethod] = useState({ value: 'default', label: 'Default' });
+
+  const sortOptions = [
+    { value: 'default', label: 'Default' },
+    { value: 'levelAsc', label: 'Level (A-Z)' },
+    { value: 'levelDesc', label: 'Level (Z-A)' },
+    { value: 'difficultyAsc', label: 'Difficulty (Easy-Hard)' },
+    { value: 'difficultyDesc', label: 'Difficulty (Hard-Easy)' },
+  ];
 
   const [scrollEnabled, setScrollEnabled] = useState(false)
 
@@ -194,7 +203,7 @@ const SecondSlide = () => {
   );
 
   const sortSubjects = (subjects) => {
-    switch (sortMethod) {
+    switch (sortMethod.value) {
       case 'levelAsc':
         return [...subjects].sort((a, b) => a.level.localeCompare(b.level));
       case 'levelDesc':
@@ -206,7 +215,7 @@ const SecondSlide = () => {
       default:
         return subjects;
     }
-  }
+  };
 
   return (
     <div className={`w-full h-screen ${scrollEnabled ? "overflow-y-scroll" : "overflow-hidden"} scrollbar-hide`}>
@@ -266,7 +275,7 @@ const SecondSlide = () => {
               exit={{ y: "-100%", opacity: 0, transition: { duration: 0.5, ease: "easeInOut" }}}
             >
               <div className="flex flex-col gap-10 w-full h-full scroll-smooth p-10">
-                <div className="w-full max-w-md mb-8 relative mx-auto mt-[100px]">
+                <div className="w-full max-w-md relative mx-auto mt-[100px]">
                   <input
                     type="text"
                     placeholder="Search specific subjects..."
@@ -275,6 +284,20 @@ const SecondSlide = () => {
                     className="w-full p-5 pl-14 rounded-lg border bg-transparent border-bg-gray-700 text-white"
                   />
                   <FaSearch className="absolute left-5 top-1/2 transform -translate-y-1/2 text-white" />
+                </div>
+                <div className="relative w-1/4 mt-[-20px] mx-auto flex justify-center">
+                  <select
+                    value={sortMethod}
+                    onChange={(e) => setSortMethod(e.target.value)}
+                    className="appearance-none w-full bg-transparent text-xs rounded-xl text-white p-3 pr-8 rounded-md"
+                  >
+                    <option value="default">Default</option>
+                    <option value="levelAsc">Level (A-Z)</option>
+                    <option value="levelDesc">Level (Z-A)</option>
+                    <option value="difficultyAsc">Difficulty (Easy-Hard)</option>
+                    <option value="difficultyDesc">Difficulty (Hard-Easy)</option>
+                  </select>
+                  <FaSort className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 pointer-events-none" />
                 </div>
 
                 {Object.entries(mergeSubjects(selectedSubjects)).map(([section, subjects], index) => {

@@ -1,4 +1,6 @@
 // Import the functions you need from the SDKs you need
+import 'dotenv/config'
+
 import { initializeApp } from "firebase/app";
 import { getAnalytics, isSupported } from "firebase/analytics";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
@@ -6,14 +8,14 @@ import { getFirestore } from 'firebase/firestore';
 
 // Fetch the environment variables
 const firebaseConfig = {
-  apiKey: "AIzaSyAetqR2Fy_G9LpmfDXB27piUy6FMkEDbYg",
-  authDomain: "uniglow-19cda.firebaseapp.com",
-  databaseURL: "https://uniglow-19cda-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "uniglow-19cda",
-  storageBucket: "uniglow-19cda.appspot.com",
-  messagingSenderId: "1063138077415",
-  appId: "1:1063138077415:web:2eeb0c4749bd27e5c31042",
-  measurementId: "G-PQ5NBXN0CV"
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  databaseURL: process.env.NEXT_PUBLIC_FIREBASE_DATABASE_URL,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+  measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID
 };
 
 const app = initializeApp(firebaseConfig);
@@ -29,7 +31,7 @@ if (typeof window !== 'undefined') {
     if (supported) {
       analytics = getAnalytics(app);
     }
-  })
+  });
 }
 
-export { auth, googleProvider, db, analytics, firebaseConfig }
+export { auth, googleProvider, db, analytics, firebaseConfig };

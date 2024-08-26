@@ -143,14 +143,16 @@ const SecondSlide = () => {
   const [animateSpecificSubjects, setAnimateSpecificSubjects] = useState(false);
 
   const [searchTerm, setSearchTerm] = useState('');
-  const [sortMethod, setSortMethod] = useState({ value: 'default', label: 'Default' });
+  const [sortMethod, setSortMethod] = useState('default');
 
   const sortOptions = [
     { value: 'default', label: 'Default' },
-    { value: 'levelAsc', label: 'Level (A-Z)' },
-    { value: 'levelDesc', label: 'Level (Z-A)' },
+    { value: 'alphabeticalAsc', label: 'A-Z' },
+    { value: 'alphabeticalDesc', label: 'Z-A' },
     { value: 'difficultyAsc', label: 'Difficulty (Easy-Hard)' },
     { value: 'difficultyDesc', label: 'Difficulty (Hard-Easy)' },
+    { value: 'levelAsc', label: 'Level (Lower Secondary-Postgraduate)' },
+    { value: 'levelDesc', label: 'Level (Postgraduate-Lower Secondary)' },
   ];
 
   const [scrollEnabled, setScrollEnabled] = useState(false)
@@ -203,15 +205,41 @@ const SecondSlide = () => {
   );
 
   const sortSubjects = (subjects) => {
-    switch (sortMethod.value) {
-      case 'levelAsc':
-        return [...subjects].sort((a, b) => a.level.localeCompare(b.level));
-      case 'levelDesc':
-        return [...subjects].sort((a, b) => b.level.localeCompare(a.level));
+    
+    const safeCompare = (a, b, property) => {
+      const valueA = a[property] || '';
+      const valueB = b[property] || '';
+
+      return valueA.toString().localeCompare(valueB.toString())
+    }
+
+    const getLevelIndex = (level) => {
+      if (level.includes('Lower Secondary')) return 0;
+      if (level.includes('Upper Secondary')) return 1;
+      if (level.includes('University')) return 2;
+      if (level.includes('Postgraduate')) return 3;
+    }
+
+    const compareLevels = (a, b, isAscending) => {
+      const indexA = getLevelIndex(a.level)
+      const indexB = getLevelIndex(b.level)
+
+      return isAscending ? indexA - indexB : indexB - indexA;
+    }
+
+    switch (sortMethod) {
+      case 'alphabeticalAsc':
+        return [...subjects].sort((a, b) => safeCompare(a, b, 'subject'))
+      case 'alphabeticalDesc':
+        return [...subjects].sort((a, b) => safeCompare(b, a, 'subject'));
       case 'difficultyAsc':
-        return [...subjects].sort((a, b) => a.difficulty.localeCompare(b.difficulty));
+        return [...subjects].sort((a, b) => safeCompare(a, b, 'difficulty'));
       case 'difficultyDesc':
-        return [...subjects].sort((a, b) => b.difficulty.localeCompare(a.difficulty));
+        return [...subjects].sort((a, b) => safeCompare(b, a, 'difficulty'));
+      case 'levelAsc':
+        return [...subjects].sort((a, b) => compareLevels(a, b, true));
+      case 'levelDesc':
+        return [...subjects].sort((a, b) => compareLevels(a, b, false));
       default:
         return subjects;
     }
@@ -281,7 +309,7 @@ const SecondSlide = () => {
                     placeholder="Search specific subjects..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full p-5 pl-14 rounded-lg border bg-transparent border-bg-gray-700 text-white"
+                    className="w-full p-5 pl-14 rounded-lg border bg-black text-white"
                   />
                   <FaSearch className="absolute left-5 top-1/2 transform -translate-y-1/2 text-white" />
                 </div>
@@ -289,13 +317,16 @@ const SecondSlide = () => {
                   <select
                     value={sortMethod}
                     onChange={(e) => setSortMethod(e.target.value)}
-                    className="appearance-none w-full bg-transparent text-xs rounded-xl text-white p-3 pr-8 rounded-md"
+                    className="appearance-none w-full bg-transparent text-xs border rounded-xl text-white p-4 pr-8 rounded-md"
                   >
-                    <option value="default">Default</option>
-                    <option value="levelAsc">Level (A-Z)</option>
-                    <option value="levelDesc">Level (Z-A)</option>
-                    <option value="difficultyAsc">Difficulty (Easy-Hard)</option>
-                    <option value="difficultyDesc">Difficulty (Hard-Easy)</option>
+                    {sortOptions.map((option, index) => (
+                      <option
+                        key={index}
+                        value={option.value}
+                      >
+                        {option.label}
+                      </option>
+                    ))}
                   </select>
                   <FaSort className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 pointer-events-none" />
                 </div>
@@ -305,19 +336,21 @@ const SecondSlide = () => {
                     subject.subject.toLowerCase().includes(searchTerm.toLowerCase())
                   );
 
-                  if (filteredSubjects.length === 0) return null;
+                  const sortedSubjects = sortSubjects(filteredSubjects)
+
+                  if (sortedSubjects.length === 0) return null;
 
                   return (
                     <div key={index} className="mb-20 p-10">
                       <h2 className="text-xl font-medium mb-4 text-white/50 uppercase">Section No.{index + 1}</h2>
                       <h1 className="text-3xl font-bold mb-10 text-white">{section}</h1>
                       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 3xl:grid-cols-7 4xl:grid-cols-8 gap-4">
-                        {filteredSubjects.map((subject, idx) => (
+                        {sortedSubjects.map((subject, idx) => (
                           <div 
                             key={idx}
                             className="bg-[#001f66] rounded-xl row-span-1 col-span-1 w-full h-full flex justify-center items-center flex-col gap-2 min-h-[350px] px-10 py-4"
                           >
-                            <div className="border-2 border-[#f4b034] text-xs w-full h-[30%] mb-4 rounded-xl justify-center items-center flex">
+                            <div className="border-2 border-white/50 text-xs w-full h-[30%] mb-4 rounded-xl justify-center items-center flex">
                               Image
                             </div>
                             <div className="text-lg w-full">

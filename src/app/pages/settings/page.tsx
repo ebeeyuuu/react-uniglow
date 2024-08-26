@@ -133,7 +133,7 @@ const Page = () => {
                 />
                 <button
                   type="submit"
-                  className="text-lg font-medium flex bg-[#f57614] rounded-[10px] px-4 py-2 items-center text-white hover:py-3 hover:px-5 w-[100px] mt-[20px] justify-center smooth-animation"
+                  className="text-lg font-medium flex bg-[#f4b034] rounded-[10px] text-black px-4 py-2 items-center hover:py-3 hover:px-5 w-[100px] mt-[20px] justify-center smooth-animation"
                 >
                   Submit
                 </button>

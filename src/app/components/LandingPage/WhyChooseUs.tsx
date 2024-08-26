@@ -74,7 +74,7 @@ const WhyChooseUs: React.FC = () => {
           <div className="mt-4 flex justify-end">
             <button
               onClick={() => handleLearnMore(feature)}
-              className="border-4 border-[#fcec5f]/20 px-3 py-1 rounded-[10px] text-xs hover:bg-[#fcec5f] hover:border-[#fcec5f] transition-colors duration-300"
+              className="border-2 border-black px-3 py-1 rounded-[10px] text-xs hover:bg-black hover:text-white transition-colors duration-300"
             >
               Overview
             </button>

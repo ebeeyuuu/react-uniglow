@@ -124,7 +124,7 @@ const Hero: React.FC = () => {
   }, []);
 
   const imageVariants = {
-    initial: { scale: 1, filter: 'grayscale(100%) brightness(50%) opacity(50%)' },
+    initial: { scale: 1, filter: 'grayscale(100%) brightness(70%) opacity(70%)' },
     hover: { scale: 1.05, filter: 'grayscale(0%) brightness(80%) opacity(100%)' },
   };
 
@@ -137,7 +137,7 @@ const Hero: React.FC = () => {
   return (
     <div className="w-full flex justify-center items-center flex-col">
       <div className="flex flex-row justify-center items-center max-[900px]:flex-col mx-auto">
-        <div className="w-[90%] h-[70vh] grid grid-rows-11 grid-cols-11 gap-[20px] mt-[350px] max-[700px]:mt-[150px] text-black max-[900px]:gap-[15px] max-[700px]:grid-rows-none max-[700px]:grid-cols-3 max-[700px]:gap-[10px]">
+        <div className="w-[90%] h-[130vh] grid grid-rows-11 grid-cols-11 gap-[20px] mt-[150px] max-[700px]:mt-[50px] text-black max-[900px]:gap-[15px] max-[700px]:grid-rows-none max-[700px]:grid-cols-3 max-[700px]:gap-[10px]">
           <motion.div
             className="row-span-3 col-span-3 max-[700px]:row-span-1 max-[700px]:col-span-2 max-[700px]:h-[150px]"
             variants={imageVariants}

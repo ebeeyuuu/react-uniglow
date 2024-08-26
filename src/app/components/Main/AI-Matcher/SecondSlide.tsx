@@ -254,15 +254,18 @@ const SecondSlide = () => {
                       {subjects.map((subject, idx) => (
                         <div 
                           key={idx}
-                          className="bg-gray-800 rounded-xl row-span-1 col-span-1 w-full h-full flex justify-center items-center flex-col gap-4 min-h-[400px]"
+                          className="bg-[#001f66] rounded-xl row-span-1 col-span-1 w-full h-full flex justify-center items-center flex-col gap-2 min-h-[350px] px-10 py-4"
                         >
-                          <div className="text-2xl text-center w-full">
+                          <div className="border-2 border-[#f4b034] text-xs w-full h-[30%] mb-4 rounded-xl justify-center items-center flex">
+                            Image
+                          </div>
+                          <div className="text-lg w-full">
                             {subject.subject}
                           </div>
-                          <div className="text-lg font-medium text-left w-full text-center">
-                            Level: {subject.level}
+                          <div className="font-medium text-left text-base w-full">
+                            {subject.level}
                           </div>
-                          <div className="text-lg font-medium text-left w-full text-center">
+                          <div className="font-medium text-left text-base w-full">
                             Difficulty: {subject.difficulty}
                           </div>
                         </div>

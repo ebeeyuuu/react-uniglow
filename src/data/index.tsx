@@ -156,6 +156,7 @@ export const math_subjects = [
   { id: "sheaf_theory", subject: "Sheaf Theory", level: "Postgraduate", difficulty: 98 },
   { id: "etale_cohomology", subject: "Etale Cohomology", level: "Postgraduate", difficulty: 98 },
   { id: "algebraic_stacks", subject: "Algebraic Stacks", level: "Postgraduate", difficulty: 98 },
+
 ]
 export const art_subjects = [
   { id: "drawing", subject: "Drawing", level: "Lower Secondary", difficulty: 30 },

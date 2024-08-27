@@ -94,7 +94,7 @@ const ConfirmDialog = ({ onConfirm, onCancel, subjects }) => (
 
 const SelectionCounter = ({ count, onConfirm }) => (
   <motion.div 
-    className="absolute bottom-4 right-4 bg-black p-5 gap-x-4 rounded-lg shadow-md flex items-center border"
+    className="absolute bottom-4 right-4 bg-black p-5 gap-x-4 rounded-lg shadow-md flex items-center"
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
     exit={{ opacity: 0 }}
@@ -102,7 +102,7 @@ const SelectionCounter = ({ count, onConfirm }) => (
   >
     <span className="mr-2">{count}/10 subjects chosen</span>
     <button 
-      className="bg-green-500 hover:bg-green-400 text-black font-bold py-2 px-4 rounded-full transition-colors ease-in-out duration-500"
+      className="bg-white hover:bg-[#f4b034] text-black font-bold py-2 px-4 rounded-full transition-colors ease-in-out duration-500"
       onClick={onConfirm}
     >
       Confirm
@@ -138,8 +138,6 @@ const SubjectButton = ({ subject, onClick, isSelected, className }) => (
 
 const SecondSlide = () => {
   const [selectedSubjects, setSelectedSubjects] = useState([]);
-  const [selectedDetailedSubjects, setSelectedDetailedSubjects] = useState([]);
-
   const [isConfirmVisible, setIsConfirmVisible] = useState(false);
   const [animateGenericSubjects, setAnimateGenericSubjects] = useState(false);
   const [animateSpecificSubjects, setAnimateSpecificSubjects] = useState(false);
@@ -350,7 +348,7 @@ const SecondSlide = () => {
                         {sortedSubjects.map((subject, idx) => (
                           <div 
                             key={idx}
-                            className="bg-[#001f66] rounded-xl row-span-1 col-span-1 w-full h-full flex justify-center items-center flex-col gap-2 min-h-[350px] px-10 py-4"
+                            className="bg-[#001f66] hover:bg-[#003fd3] rounded-xl row-span-1 col-span-1 w-full h-full flex justify-center items-center flex-col gap-2 min-h-[350px] px-10 py-4 scale-100 hover:scale-[105%] transition-all duration-300 ease-in-out"
                           >
                             <div className="border-2 border-white/50 text-xs w-full h-[30%] mb-4 rounded-xl justify-center items-center flex">
                               Image

@@ -297,14 +297,14 @@ const Page = () => {
             <div className="flex justify-center gap-x-4 mt-4">
               <Link
                 href="/"
-                className="text-lg font-medium flex flex-row gap-x-3 bg-[#003366] rounded-[10px] px-4 py-2 h-[45px]"
+                className="text-lg font-medium flex flex-row gap-x-3 bg-[#00257a] rounded-[10px] px-4 py-2 h-[45px]"
               >
                 <div>Return</div>
                 <RiArrowGoBackLine className="mt-[6px]" />
               </Link>
               <button
                 type="submit"
-                className="text-lg font-medium flex flex-row gap-x-3 bg-[#4f46e5] rounded-[10px] px-4 py-2 items-center justify-center text-white w-[100px]"
+                className="text-lg font-medium flex flex-row gap-x-3 bg-[#003dcc] rounded-[10px] px-4 py-2 items-center justify-center text-white w-[100px]"
               >
                 Submit
               </button>

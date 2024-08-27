@@ -138,6 +138,8 @@ const SubjectButton = ({ subject, onClick, isSelected, className }) => (
 
 const SecondSlide = () => {
   const [selectedSubjects, setSelectedSubjects] = useState([]);
+  const [selectedDetailedSubjects, setSelectedDetailedSubjects] = useState([]);
+
   const [isConfirmVisible, setIsConfirmVisible] = useState(false);
   const [animateGenericSubjects, setAnimateGenericSubjects] = useState(false);
   const [animateSpecificSubjects, setAnimateSpecificSubjects] = useState(false);
@@ -344,7 +346,7 @@ const SecondSlide = () => {
                     <div key={index} className="mb-20 p-10">
                       <h2 className="text-xl font-medium mb-4 text-white/50 uppercase">Section No.{index + 1}</h2>
                       <h1 className="text-3xl font-bold mb-10 text-white">{section}</h1>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 3xl:grid-cols-7 4xl:grid-cols-8 gap-4">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 3xl:grid-cols-7 4xl:grid-cols-8 gap-4">
                         {sortedSubjects.map((subject, idx) => (
                           <div 
                             key={idx}

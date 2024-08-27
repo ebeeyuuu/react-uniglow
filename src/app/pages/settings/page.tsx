@@ -71,7 +71,7 @@ const Page = () => {
   return (
     <div className="w-full h-screen flex justify-center items-center">
       <div className="w-[85%] h-[55%] flex flex-row max-[900px]:flex-col-reverse max-w-[1500px]">
-        <div className="w-1/3 bg-[#003061b8] flex justify-center items-center max-[900px]:w-full max-[900px]:h-1/4 rounded-tl-[20px] rounded-bl-[20px] max-[900px]:rounded-br-[20px] max-[900px]:rounded-tl-none">
+        <div className="w-1/3 bg-[#00216e] flex justify-center items-center max-[900px]:w-full max-[900px]:h-1/4 rounded-tl-[20px] rounded-bl-[20px] max-[900px]:rounded-br-[20px] max-[900px]:rounded-tl-none">
           <div className="flex flex-col gap-y-[20px] p-[48px]">
             <div className="flex flex-col gap-y-[20px] max-[900px]:w-[60%] max-[900px]:mx-auto">
               <Link href="/" className="text-2xl font-bold flex flex-row gap-x-[15px] items-center max-[900px]:text-xl">
@@ -90,7 +90,7 @@ const Page = () => {
             </Link>
           </div>
         </div>
-        <div className="w-2/3 bg-[#013c78] flex justify-center items-center max-[900px]:w-full max-[900px]:h-3/4 rounded-tr-[20px] rounded-br-[20px] max-[900px]:rounded-tl-[20px] max-[900px]:rounded-br-none">
+        <div className="w-2/3 bg-[#0037b8] flex justify-center items-center max-[900px]:w-full max-[900px]:h-3/4 rounded-tr-[20px] rounded-br-[20px] max-[900px]:rounded-tl-[20px] max-[900px]:rounded-br-none">
           <div className="flex flex-col gap-y-[10px] items-center">
             <div className="text-4xl font-bold flex flex-row gap-x-[10px] items-center justify-start">
               Settings
@@ -133,7 +133,7 @@ const Page = () => {
                 />
                 <button
                   type="submit"
-                  className="text-lg font-medium flex bg-[#f4b034] rounded-[10px] text-black px-4 py-2 items-center hover:py-3 hover:px-5 w-[100px] mt-[20px] justify-center smooth-animation"
+                  className="text-lg font-medium flex bg-[#f48a34] text-black rounded-[10px] px-4 py-2 items-center hover:py-3 hover:px-5 w-[100px] mt-[20px] justify-center smooth-animation"
                 >
                   Submit
                 </button>

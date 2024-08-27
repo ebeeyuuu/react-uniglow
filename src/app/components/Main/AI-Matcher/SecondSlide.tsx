@@ -81,10 +81,10 @@ const ConfirmDialog = ({ onConfirm, onCancel, subjects }) => (
         ))}
       </ol>
       <div className="flex justify-center gap-x-4">
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={onConfirm}>
+        <button className="border-[#003dcc] border-2 bg-black hover:bg-[#003dcc] text-white font-bold py-3 px-5 rounded-lg transiton-all duration-300 ease-in-out" onClick={onConfirm}>
           Yes
         </button>
-        <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded" onClick={onCancel}>
+        <button className="border-[#f31722] border-2 bg-black hover:bg-[#f31722] text-white font-bold py-3 px-5 rounded-lg transition-all duration-300 ease-in-out" onClick={onCancel}>
           No
         </button>
       </div>

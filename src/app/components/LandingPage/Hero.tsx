@@ -137,9 +137,9 @@ const Hero: React.FC = () => {
   return (
     <div className="w-full flex justify-center items-center flex-col">
       <div className="flex flex-row justify-center items-center max-[900px]:flex-col mx-auto">
-        <div className="w-[90%] h-[100vh] grid grid-rows-11 grid-cols-11 gap-[20px] mt-[150px] max-[700px]:mt-[50px] text-black max-[900px]:gap-[15px] max-[700px]:grid-rows-none max-[700px]:grid-cols-3 max-[700px]:gap-[10px]">
+        <div className="w-[90%] h-[90vh] grid grid-rows-11 grid-cols-11 gap-[20px] mt-[150px] max-[700px]:mt-[50px] text-black max-[900px]:gap-[15px] max-[700px]:grid-rows-9 max-[700px]:grid-cols-3 max-[700px]:gap-[10px]">
           <motion.div
-            className="row-span-3 col-span-3 max-[700px]:row-span-1 max-[700px]:col-span-2 "
+            className="row-span-3 col-span-3 max-[700px]:row-span-1 max-[700px]:col-span-2"
             variants={imageVariants}
             initial="initial"
             whileHover="hover"
@@ -151,7 +151,7 @@ const Hero: React.FC = () => {
               className="object-center h-full w-full object-cover rounded-[10px] transition-all duration-300 ease-in-out"/>
           </motion.div>
           <motion.div
-            className="row-span-2 col-span-3 max-[700px]:row-span-1 max-[700px]:col-span-1 "
+            className="row-span-2 col-span-3 max-[700px]:row-span-1 max-[700px]:col-span-1"
             variants={imageVariants}
             initial="initial"
             whileHover="hover"
@@ -163,7 +163,7 @@ const Hero: React.FC = () => {
               className="object-center h-full w-full object-cover rounded-[10px] transition-all duration-300 ease-in-out"/>
           </motion.div>
           <motion.div
-            className="row-span-2 col-span-2 max-[700px]:row-span-1 max-[700px]:col-span-1 max-[700px]:h-[150px]"
+            className="row-span-2 col-span-2 max-[700px]:row-span-1 max-[700px]:col-span-1"
             variants={imageVariants}
             initial="initial"
             whileHover="hover"
@@ -175,7 +175,7 @@ const Hero: React.FC = () => {
               className="object-center h-full w-full object-cover rounded-[10px] transition-all duration-300 ease-in-out"/>
           </motion.div>
           <motion.div
-            className="row-span-2 col-span-3 max-[700px]:row-span-1 max-[700px]:col-span-2 max-[700px]:h-[150px]"
+            className="row-span-2 col-span-3 max-[700px]:row-span-1 max-[700px]:col-span-2"
             variants={imageVariants}
             initial="initial"
             whileHover="hover"
@@ -186,7 +186,7 @@ const Hero: React.FC = () => {
               alt="University 4"
               className="object-center h-full w-full object-cover rounded-[10px] transition-all duration-300 ease-in-out"/>
           </motion.div>
-          <div className="row-span-3 col-span-5 max-[700px]:row-auto max-[700px]:col-span-3 text-white flex justify-center items-center">
+          <div className="row-span-3 col-span-5 max-[700px]:row-span-2 max-[700px]:col-span-3 text-white flex justify-center items-center">
             <div className="flex flex-row items-center text-center gap-y-[15px] w-[80%] mx-auto max-[1000px]:flex-col max-[900px]:text-center max-[900px]:my-[100px]">
               <div className="mb-4 max-[1200px]:text-2xl max-[2000px]:text-3xl max-[4000px]:text-4xl font-bold text-left w-1/3 max-[1000px]:text-center max-[1000px]:w-full">
                 Find Your Dream University
@@ -206,7 +206,7 @@ const Hero: React.FC = () => {
             </div>
           </div>
           <motion.div
-            className="row-span-2 col-span-3 max-[700px]:row-span-1 max-[700px]:col-span-3 max-[700px]:h-[150px] max-[700px]:-order-1"
+            className="row-span-2 col-span-3 max-[700px]:row-span-1 max-[700px]:col-span-3 max-[700px]:-order-1"
             variants={imageVariants}
             initial="initial"
             whileHover="hover"
@@ -218,7 +218,7 @@ const Hero: React.FC = () => {
               className="object-center h-full w-full object-cover rounded-[10px] transition-all duration-300 ease-in-out"/>
           </motion.div>
           <motion.div
-            className="row-span-2 col-span-3 max-[700px]:row-span-1 max-[700px]:col-span-1 max-[700px]:h-[150px]"
+            className="row-span-2 col-span-3 max-[700px]:row-span-1 max-[700px]:col-span-1"
             variants={imageVariants}
             initial="initial"
             whileHover="hover"
@@ -230,7 +230,7 @@ const Hero: React.FC = () => {
               className="object-center h-full w-full object-cover rounded-[10px] transition-all duration-300 ease-in-out"/>
           </motion.div>
           <motion.div
-            className="row-span-3 col-span-3 max-[700px]:row-span-1 max-[700px]:col-span-2 max-[700px]:h-[150px]"
+            className="row-span-3 col-span-3 max-[700px]:row-span-1 max-[700px]:col-span-2"
             variants={imageVariants}
             initial="initial"
             whileHover="hover"
@@ -242,7 +242,7 @@ const Hero: React.FC = () => {
               className="object-center h-full w-full object-cover rounded-[10px] transition-all duration-300 ease-in-out"/>
           </motion.div>
           <motion.div
-            className="row-span-2 col-span-3 max-[700px]:row-span-1 max-[700px]:col-span-2 max-[700px]:h-[150px]"
+            className="row-span-2 col-span-3 max-[700px]:row-span-1 max-[700px]:col-span-2"
             variants={imageVariants}
             initial="initial"
             whileHover="hover"
@@ -254,7 +254,7 @@ const Hero: React.FC = () => {
               className="object-center h-full w-full object-cover rounded-[10px] transition-all duration-300 ease-in-out"/>
           </motion.div>
           <motion.div
-            className="row-span-2 col-span-2 max-[700px]:row-span-1 max-[700px]:col-span-1 max-[700px]:h-[150px]"
+            className="row-span-2 col-span-2 max-[700px]:row-span-1 max-[700px]:col-span-1"
             variants={imageVariants}
             initial="initial"
             whileHover="hover"
@@ -266,7 +266,7 @@ const Hero: React.FC = () => {
               className="object-center h-full w-full object-cover rounded-[10px] transition-all duration-300 ease-in-out"/>
           </motion.div>
           <motion.div
-            className="row-span-2 col-span-3 max-[700px]:row-span-1 max-[700px]:col-span-3 max-[700px]:h-[150px]"
+            className="row-span-2 col-span-3 max-[700px]:row-span-1 max-[700px]:col-span-3"
             variants={imageVariants}
             initial="initial"
             whileHover="hover"

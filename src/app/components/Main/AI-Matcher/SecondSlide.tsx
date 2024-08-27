@@ -110,6 +110,30 @@ const SelectionCounter = ({ count, onConfirm }) => (
   </motion.div>
 );
 
+const SectionCounter = ({ count, section, maxCount }) => (
+  <motion.div 
+    className="bg-black p-3 rounded-lg shadow-md flex items-center"
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }}
+    transition={{ duration: 0.5 }}
+  >
+    <span className="mr-2">{section}: {count}/{maxCount}</span>
+  </motion.div>
+);
+
+const TotalCounter = ({ count }) => (
+  <motion.div 
+    className="bg-black p-3 rounded-lg shadow-md flex items-center"
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }}
+    transition={{ duration: 0.5 }}
+  >
+    <span className="mr-2">Total: {count}/10</span>
+  </motion.div>
+);
+
 const Checkmark = ({ isSelected }) => (
   <motion.div 
     className={`absolute bottom-4 right-4 bg-black p-4 rounded-full ${isSelected ? 'opacity-100' : 'opacity-0'}`}
@@ -138,6 +162,10 @@ const SubjectButton = ({ subject, onClick, isSelected, className }) => (
 
 const SecondSlide = () => {
   const [selectedSubjects, setSelectedSubjects] = useState([]);
+  const [selectedDetailedSubjects, setSelectedDetailedSubjects] = useState<Subject[]>([]);
+
+  const [sectionCounts, setSectionCounts] = useState<{ [key: string]: number }>({});
+
   const [isConfirmVisible, setIsConfirmVisible] = useState(false);
   const [animateGenericSubjects, setAnimateGenericSubjects] = useState(false);
   const [animateSpecificSubjects, setAnimateSpecificSubjects] = useState(false);
@@ -163,6 +191,28 @@ const SecondSlide = () => {
         ? prev.filter(s => s !== subject)
         : [...prev, subject].slice(0, 10)
     );
+  };
+
+  const handleDetailedSubjectClick = (subject: Subject, section: string) => {
+    setSelectedDetailedSubjects(prev => {
+      const isAlreadySelected = prev.some(s => s.id === subject.id);
+      let newSelected;
+      if (isAlreadySelected) {
+        newSelected = prev.filter(s => s.id !== subject.id);
+      } else if (prev.length < 10) {
+        newSelected = [...prev, subject];
+      } else {
+        return prev; // Don't change if already at 10 selections
+      }
+      
+      // Update section counts
+      setSectionCounts(prevCounts => {
+        const newCount = newSelected.filter(s => s.subject.startsWith(section)).length;
+        return { ...prevCounts, [section]: newCount };
+      });
+
+      return newSelected;
+    });
   };
 
   const handleConfirmSelection = () => {
@@ -344,11 +394,12 @@ const SecondSlide = () => {
                     <div key={index} className="mb-20 p-10">
                       <h2 className="text-xl font-medium mb-4 text-white/50 uppercase">Section No.{index + 1}</h2>
                       <h1 className="text-3xl font-bold mb-10 text-white">{section}</h1>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 3xl:grid-cols-7 4xl:grid-cols-8 gap-4">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 3xl:grid-cols-7 4xl:grid-cols-8 gap-4">
                         {sortedSubjects.map((subject, idx) => (
                           <div 
                             key={idx}
                             className="bg-[#001f66] hover:bg-[#003fd3] rounded-xl row-span-1 col-span-1 w-full h-full flex justify-center items-center flex-col gap-2 min-h-[350px] px-10 py-4 scale-100 hover:scale-[105%] transition-all duration-300 ease-in-out"
+                            onClick={() => handleDetailedSubjectClick(subject, section)}
                           >
                             <div className="border-2 border-white/50 text-xs w-full h-[30%] mb-4 rounded-xl justify-center items-center flex">
                               Image
@@ -376,6 +427,14 @@ const SecondSlide = () => {
                 ) && (
                   <div className="text-2xl font-bold text-center mt-20">
                     No results found. Try something else.
+                  </div>
+                )}
+
+                {animateSpecificSubjects && (
+                  <div className="fixed bottom-4 right-4 flex flex-col gap-2 z-50">
+                    {Object.entries(sectionCounts).map(([section, count]) => (
+                      <SectionCounter key={section} count={count} section={section} maxCount={10} />
+                    ))}
                   </div>
                 )}
               </div>

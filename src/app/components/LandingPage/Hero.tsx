@@ -137,9 +137,9 @@ const Hero: React.FC = () => {
   return (
     <div className="w-full flex justify-center items-center flex-col">
       <div className="flex flex-row justify-center items-center max-[900px]:flex-col mx-auto">
-        <div className="w-[90%] h-[130vh] grid grid-rows-11 grid-cols-11 gap-[20px] mt-[150px] max-[700px]:mt-[50px] text-black max-[900px]:gap-[15px] max-[700px]:grid-rows-none max-[700px]:grid-cols-3 max-[700px]:gap-[10px]">
+        <div className="w-[90%] h-[100vh] grid grid-rows-11 grid-cols-11 gap-[20px] mt-[150px] max-[700px]:mt-[50px] text-black max-[900px]:gap-[15px] max-[700px]:grid-rows-none max-[700px]:grid-cols-3 max-[700px]:gap-[10px]">
           <motion.div
-            className="row-span-3 col-span-3 max-[700px]:row-span-1 max-[700px]:col-span-2 max-[700px]:h-[150px]"
+            className="row-span-3 col-span-3 max-[700px]:row-span-1 max-[700px]:col-span-2 "
             variants={imageVariants}
             initial="initial"
             whileHover="hover"
@@ -151,7 +151,7 @@ const Hero: React.FC = () => {
               className="object-center h-full w-full object-cover rounded-[10px] transition-all duration-300 ease-in-out"/>
           </motion.div>
           <motion.div
-            className="row-span-2 col-span-3 max-[700px]:row-span-1 max-[700px]:col-span-1 max-[700px]:h-[150px]"
+            className="row-span-2 col-span-3 max-[700px]:row-span-1 max-[700px]:col-span-1 "
             variants={imageVariants}
             initial="initial"
             whileHover="hover"

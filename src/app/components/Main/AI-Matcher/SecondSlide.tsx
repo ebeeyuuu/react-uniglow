@@ -112,25 +112,25 @@ const SelectionCounter = ({ count, onConfirm }) => (
 
 const SectionCounter = ({ count, section, maxCount }) => (
   <motion.div 
-    className="bg-[#02ad83]/70 p-5 backdrop-blur-sm rounded-lg shadow-md flex items-center"
+    className="bg-[#01785a] p-5 rounded-lg shadow-md flex items-center"
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
     exit={{ opacity: 0 }}
     transition={{ duration: 0.5 }}
   >
-    <span className="mr-2">{section}: {count} / {maxCount}</span>
+    <span className="mr-2">{section}: <span style={{ fontWeight: 1000 }} className="mr-1">{count}</span> / <span className="ml-1">{maxCount}</span></span>
   </motion.div>
 );
 
 const TotalCounter = ({ count, total }) => (
   <motion.div 
-    className="bg-[#f4b034]/70 backdrop-blur-sm p-5 rounded-lg shadow-md flex items-center"
+    className="bg-[#e1960c] p-5 rounded-lg shadow-md flex items-center"
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
     exit={{ opacity: 0 }}
     transition={{ duration: 0.5 }}
   >
-    <span className="mr-2">Total: {count} / {total}</span>
+    <span className="mr-2">Total: <span style={{ fontWeight: 1000 }} className="ml-1">{count}</span> / <span className="mr-1">{total}</span></span>
   </motion.div>
 );
 
@@ -200,10 +200,18 @@ const SecondSlide = () => {
 
   const handleDetailedSubjectClick = (subject: Subject) => {
     setSelectedDetailedSubjects(prev => {
-      const isAlreadySelected = prev.some(s => s.id === subject.id);
+      const isAlreadySelected = prev.some(s => 
+        s.id === subject.id &&
+        s.difficulty === subject.difficulty &&
+        s.level === subject.level
+      );
       let newSelected;
       if (isAlreadySelected) {
-        newSelected = prev.filter(s => s.id !== subject.id);
+        newSelected = prev.filter(s => 
+          !(s.id === subject.id &&
+            s.difficulty === subject.difficulty &&
+            s.level === subject.level)
+        );
       } else if (prev.length < 10) {
         newSelected = [...prev, subject];
       } else {
@@ -212,7 +220,13 @@ const SecondSlide = () => {
 
       // Update section counts
       const newSectionCounts = Object.entries(mergeSubjects(selectedSubjects)).reduce((counts, [section, subjects]) => {
-        counts[section] = newSelected.filter(s => subjects.some(subj => subj.id === s.id)).length;
+        counts[section] = newSelected.filter(s => 
+          subjects.some(subj => 
+            subj.id === s.id &&
+            subj.difficulty === s.difficulty &&
+            subj.level === s.level
+          )
+        ).length;
         return counts;
       }, {});
 
@@ -428,7 +442,13 @@ const SecondSlide = () => {
                             <div className="font-medium text-left text-sm w-full">
                               Difficulty: {subject.difficulty}/100
                             </div>
-                            <Checkmark isSelected={selectedDetailedSubjects.some(s => s.id === subject.id)}/>
+                            <Checkmark 
+                              isSelected={selectedDetailedSubjects.some(s => 
+                                s.id === subject.id &&
+                                s.difficulty === subject.difficulty &&
+                                s.level === subject.level
+                              )}
+                            />
                           </div>
                         ))}
                       </div>

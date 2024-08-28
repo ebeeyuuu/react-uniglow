@@ -14,13 +14,13 @@ const FirstSlide = () => {
           Here we help you decide on what university is best for you!
         </div>
         <div className="flex flex-row gap-x-[20px] justify-center items-center whitespace-nowrap">
-          <Link href="/pages/main" className="px-5 py-3 flex flex-row items-center gap-x-[10px] bg-[#003366] rounded-[10px]">
+          <Link href="/pages/main" className="px-5 py-3 flex flex-row items-center gap-x-[10px] bg-[#003dcc] rounded-[10px] border-4 border-[#003dcc]">
             <Home className="w-[20px] h-[20px]"/>
             <p className="font-medium whitespace-nowrap">
               Return to home page
             </p>
           </Link>
-          <Link href="/" className="px-5 py-3 flex flex-row items-center gap-x-[10px] border-4 border-[#003366] rounded-[10px]">
+          <Link href="/" className="px-5 py-3 flex flex-row items-center gap-x-[10px] border-4 border-[#003dcc] rounded-[10px]">
             <IoMdReturnLeft />
             <p className="font-medium whitespace-nowrap">
               Sign out

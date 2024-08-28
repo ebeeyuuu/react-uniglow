@@ -136,7 +136,7 @@ const TotalCounter = ({ count, total }) => (
 
 const Checkmark = ({ isSelected }) => (
   <motion.div 
-    className={`absolute bottom-4 right-4 bg-black p-4 rounded-full ${isSelected ? 'opacity-100' : 'opacity-0'}`}
+    className={`absolute bottom-2 right-2 p-3 ${isSelected ? 'opacity-100' : 'opacity-0'}`}
     initial={{ opacity: 0 }}
     animate={{ opacity: isSelected ? 1 : 0 }}
     transition={{ duration: 0.2 }}
@@ -419,13 +419,13 @@ const SecondSlide = () => {
                             <div className="border-2 border-white/50 text-xs w-full h-[30%] mb-4 rounded-xl justify-center items-center flex">
                               Image
                             </div>
-                            <div className="text-lg w-full">
+                            <div className="text-base w-full">
                               {subject.subject}
                             </div>
-                            <div className="font-medium text-left text-base w-full">
+                            <div className="font-medium text-left text-sm w-full">
                               Level: {subject.level}
                             </div>
-                            <div className="font-medium text-left text-base w-full">
+                            <div className="font-medium text-left text-sm w-full">
                               Difficulty: {subject.difficulty}/100
                             </div>
                             <Checkmark isSelected={selectedDetailedSubjects.some(s => s.id === subject.id)}/>

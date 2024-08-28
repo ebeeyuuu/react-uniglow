@@ -122,7 +122,7 @@ const SectionCounter = ({ count, section, maxCount }) => (
   </motion.div>
 );
 
-const TotalCounter = ({ count }) => (
+const TotalCounter = ({ count, total }) => (
   <motion.div 
     className="bg-black p-3 rounded-lg shadow-md flex items-center"
     initial={{ opacity: 0 }}
@@ -130,7 +130,7 @@ const TotalCounter = ({ count }) => (
     exit={{ opacity: 0 }}
     transition={{ duration: 0.5 }}
   >
-    <span className="mr-2">Total: {count}/10</span>
+    <span className="mr-2">Total: {count}/{total}</span>
   </motion.div>
 );
 
@@ -182,6 +182,11 @@ const SecondSlide = () => {
     { value: 'levelAsc', label: 'Level (Lower Secondary-Postgraduate)' },
     { value: 'levelDesc', label: 'Level (Postgraduate-Lower Secondary)' },
   ];
+
+  const totalSubjects = React.useMemo(() => {
+    return Object.values(mergeSubjects(selectedSubjects))
+      .reduce((acc, subjects) => acc + subjects.length, 0);
+  }, [selectedSubjects]);
 
   const [scrollEnabled, setScrollEnabled] = useState(false)
 
@@ -423,6 +428,7 @@ const SecondSlide = () => {
                             <div className="font-medium text-left text-base w-full">
                               Difficulty: {subject.difficulty}/100
                             </div>
+                            <Checkmark isSelected={selectedDetailedSubjects.some(s => s.id === subject.id)}/>
                           </div>
                         ))}
                       </div>
@@ -450,7 +456,10 @@ const SecondSlide = () => {
                         maxCount={subjects.length} 
                       />
                     ))}
-                    <TotalCounter count={selectedDetailedSubjects.length} />
+                    <TotalCounter 
+                      count={selectedDetailedSubjects.length} 
+                      total={totalSubjects}
+                    />
                   </div>
                 )}
               </div>

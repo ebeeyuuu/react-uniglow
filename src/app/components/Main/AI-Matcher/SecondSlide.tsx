@@ -112,7 +112,7 @@ const SelectionCounter = ({ count, onConfirm }) => (
 
 const SectionCounter = ({ count, section, maxCount }) => (
   <motion.div 
-    className="bg-[#01785a] p-5 rounded-lg shadow-md flex items-center"
+    className="bg-black p-5 rounded-lg shadow-md flex items-center"
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
     exit={{ opacity: 0 }}
@@ -124,7 +124,7 @@ const SectionCounter = ({ count, section, maxCount }) => (
 
 const TotalCounter = ({ count, total }) => (
   <motion.div 
-    className="bg-[#e1960c] p-5 rounded-lg shadow-md flex items-center"
+    className="bg-black p-5 rounded-lg shadow-md flex items-center"
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
     exit={{ opacity: 0 }}
@@ -136,7 +136,7 @@ const TotalCounter = ({ count, total }) => (
 
 const Checkmark = ({ isSelected }) => (
   <motion.div 
-    className={`absolute bottom-2 right-2 p-3 ${isSelected ? 'opacity-100' : 'opacity-0'}`}
+    className={`absolute bottom-2 right-2 p-3 bg-black rounded-full ${isSelected ? 'opacity-100' : 'opacity-0'}`}
     initial={{ opacity: 0 }}
     animate={{ opacity: isSelected ? 1 : 0 }}
     transition={{ duration: 0.2 }}
@@ -163,6 +163,8 @@ const SubjectButton = ({ subject, onClick, isSelected, className }) => (
 const SecondSlide = () => {
   const [selectedSubjects, setSelectedSubjects] = useState([]);
   const [selectedDetailedSubjects, setSelectedDetailedSubjects] = useState<Subject[]>([]);
+
+  const [showSelectedOnly, setShowSelectedOnly] = useState(false);
 
   const [sectionCounts, setSectionCounts] = useState<{ [key: string]: number }>({});
 
@@ -391,27 +393,47 @@ const SecondSlide = () => {
                   />
                   <FaSearch className="absolute left-5 top-1/2 transform -translate-y-1/2 text-white" />
                 </div>
-                <div className="relative w-1/4 mt-[-20px] mx-auto flex justify-center">
-                  <select
-                    value={sortMethod}
-                    onChange={(e) => setSortMethod(e.target.value)}
-                    className="appearance-none w-full bg-transparent text-xs border rounded-xl text-white p-4 pr-8 rounded-md"
-                  >
-                    {sortOptions.map((option, index) => (
-                      <option
-                        key={index}
-                        value={option.value}
+                <div className="relative w-1/4 mt-[-20px] mx-auto flex justify-center flex-row gap-x-4">
+                  <div className="relative w-full mx-auto flex items-center gap-x-4">
+                    <select
+                      value={sortMethod}
+                      onChange={(e) => setSortMethod(e.target.value)}
+                      className="appearance-none bg-black text-xs border rounded-xl p-4 flex justify-center items-center w-full"
+                      style={{ height: '100%' }}
+                    >
+                      {sortOptions.map((option, index) => (
+                        <option
+                          key={index}
+                          value={option.value}
+                          className="bg-black text-center"
+                        >
+                          Sort by: {option.label}
+                        </option>
+                      ))}
+                    </select>
+                    <div className="flex items-center justify-center">
+                      <button
+                        onClick={() => setShowSelectedOnly(!showSelectedOnly)}
+                        className={`p-4 rounded-xl smooth-animation text-xs hover:bg-[#003dcc] border-white bg-black hover:border-[#003dcc] ${
+                          showSelectedOnly
+                            ? 'bg-[#003dcc] border-[#003dcc] border'
+                            : 'bg-black border border-gray-300'
+                        }`}
                       >
-                        {option.label}
-                      </option>
-                    ))}
-                  </select>
-                  <FaSort className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 pointer-events-none" />
+                        {showSelectedOnly ? 'Show All Subjects' : 'Show Selected Subjects'}
+                      </button>
+                    </div>
+                  </div>
                 </div>
 
                 {Object.entries(mergeSubjects(selectedSubjects)).map(([section, subjects], index) => {
                   const filteredSubjects = subjects.filter(subject =>
-                    subject.subject.toLowerCase().includes(searchTerm.toLowerCase())
+                    subject.subject.toLowerCase().includes(searchTerm.toLowerCase()) &&
+                    (!showSelectedOnly || selectedDetailedSubjects.some(s =>
+                      s.id === subject.id &&
+                      s.difficulty === subject.difficulty &&
+                      s.level === subject.level
+                    ))
                   );
 
                   const sortedSubjects = sortSubjects(filteredSubjects)
@@ -458,11 +480,18 @@ const SecondSlide = () => {
 
                 {Object.values(mergeSubjects(selectedSubjects)).every(subjects => 
                   subjects.every(subject => 
-                    !subject.subject.toLowerCase().includes(searchTerm.toLowerCase()) 
+                    !subject.subject.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                    (showSelectedOnly && !selectedDetailedSubjects.some(s =>
+                      s.id === subject.id &&
+                      s.difficulty === subject.difficulty &&
+                      s.level === subject.level
+                    ))
                   )
                 ) && (
                   <div className="text-2xl font-bold text-center mt-20">
-                    No results found. Try something else.
+                    {showSelectedOnly
+                      ? "No selected subjects match your search. Try adjusting your filters."
+                      : "No results found. Try something else."}
                   </div>
                 )}
 

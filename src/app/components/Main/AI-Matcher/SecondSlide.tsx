@@ -440,7 +440,7 @@ const SecondSlide = () => {
                               Level: {subject.level}
                             </div>
                             <div className="font-medium text-left text-sm w-full">
-                              Difficulty: {subject.difficulty}/100
+                              Difficulty: {subject.difficulty} / 100
                             </div>
                             <Checkmark 
                               isSelected={selectedDetailedSubjects.some(s => 

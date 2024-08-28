@@ -193,7 +193,7 @@ const SecondSlide = () => {
     );
   };
 
-  const handleDetailedSubjectClick = (subject: Subject, section: string) => {
+  const handleDetailedSubjectClick = (subject: Subject) => {
     setSelectedDetailedSubjects(prev => {
       const isAlreadySelected = prev.some(s => s.id === subject.id);
       let newSelected;
@@ -204,12 +204,14 @@ const SecondSlide = () => {
       } else {
         return prev; // Don't change if already at 10 selections
       }
-      
+
       // Update section counts
-      setSectionCounts(prevCounts => {
-        const newCount = newSelected.filter(s => s.subject.startsWith(section)).length;
-        return { ...prevCounts, [section]: newCount };
-      });
+      const newSectionCounts = Object.entries(mergeSubjects(selectedSubjects)).reduce((counts, [section, subjects]) => {
+        counts[section] = newSelected.filter(s => subjects.some(subj => subj.id === s.id)).length;
+        return counts;
+      }, {});
+
+      setSectionCounts(newSectionCounts);
 
       return newSelected;
     });
@@ -236,6 +238,13 @@ const SecondSlide = () => {
       setScrollEnabled(true)
     }, 3000);
   })
+
+  useEffect(() => {
+    const initialCounts = Object.fromEntries(
+      Object.keys(mergeSubjects(selectedSubjects)).map(section => [section, 0])
+    );
+    setSectionCounts(initialCounts);
+  }, [selectedSubjects]);
 
   const subjects = [
     { name: "Science", className: "bg-[#003dcc]/75 row-span-1 col-span-2 max-[850px]:col-span-1" },
@@ -388,6 +397,7 @@ const SecondSlide = () => {
 
                   const sortedSubjects = sortSubjects(filteredSubjects)
 
+
                   if (sortedSubjects.length === 0) return null;
 
                   return (
@@ -432,9 +442,15 @@ const SecondSlide = () => {
 
                 {animateSpecificSubjects && (
                   <div className="fixed bottom-4 right-4 flex flex-col gap-2 z-50">
-                    {Object.entries(sectionCounts).map(([section, count]) => (
-                      <SectionCounter key={section} count={count} section={section} maxCount={10} />
+                    {Object.entries(mergeSubjects(selectedSubjects)).map(([section, subjects]) => (
+                      <SectionCounter 
+                        key={section} 
+                        count={sectionCounts[section] || 0} 
+                        section={section} 
+                        maxCount={subjects.length} 
+                      />
                     ))}
+                    <TotalCounter count={selectedDetailedSubjects.length} />
                   </div>
                 )}
               </div>

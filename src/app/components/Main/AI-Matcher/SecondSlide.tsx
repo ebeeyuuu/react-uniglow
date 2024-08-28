@@ -112,25 +112,25 @@ const SelectionCounter = ({ count, onConfirm }) => (
 
 const SectionCounter = ({ count, section, maxCount }) => (
   <motion.div 
-    className="bg-black p-3 rounded-lg shadow-md flex items-center"
+    className="bg-[#02ad83]/70 p-5 backdrop-blur-sm rounded-lg shadow-md flex items-center"
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
     exit={{ opacity: 0 }}
     transition={{ duration: 0.5 }}
   >
-    <span className="mr-2">{section}: {count}/{maxCount}</span>
+    <span className="mr-2">{section}: {count} / {maxCount}</span>
   </motion.div>
 );
 
 const TotalCounter = ({ count, total }) => (
   <motion.div 
-    className="bg-black p-3 rounded-lg shadow-md flex items-center"
+    className="bg-[#f4b034]/70 backdrop-blur-sm p-5 rounded-lg shadow-md flex items-center"
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
     exit={{ opacity: 0 }}
     transition={{ duration: 0.5 }}
   >
-    <span className="mr-2">Total: {count}/{total}</span>
+    <span className="mr-2">Total: {count} / {total}</span>
   </motion.div>
 );
 

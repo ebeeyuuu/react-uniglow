@@ -1,190 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaCheck, FaSearch, FaSort } from 'react-icons/fa';
-import Select from 'react-select'
-import {
-  math_subjects, 
-  art_subjects, 
-  science_subjects, 
-  english_subjects, 
-  history_subjects, 
-  geography_subjects, 
-  physical_education_subjects,
-  music_subjects,
-  language_subjects,
-  technology_subjects 
-} from "@/data"
+import { FaCheck, FaSearch } from 'react-icons/fa';
 
-type Subject = {
-  id: string;
-  subject: string;
-  level: string;
-  difficulty: string;
-}
+import ConfirmDialog from './SecondSlide/ConfirmDialog';
+import CollapsibleCounter from './SecondSlide/CollapsibleCounter';
+import SelectionCounter from './SecondSlide/SelectionCounter';
+import Checkmark from './SecondSlide/Checkmark';
 
-function mergeSubjects(subjectFilter: string[]) {
-  const categorizedSubjects: { [key: string]: Subject[] } = {};
-
-  subjectFilter.forEach((subject) => {
-    switch (subject) {
-      case "Mathematics":
-        categorizedSubjects["Mathematics"] = math_subjects;
-        break;
-      case "Art":
-        categorizedSubjects["Art"] = art_subjects;
-        break;
-      case "Science":
-        categorizedSubjects["Science"] = science_subjects;
-        break;
-      case "English":
-        categorizedSubjects["English"] = english_subjects;
-        break;
-      case "History":
-        categorizedSubjects["History"] = history_subjects;
-        break;
-      case "Geography":
-        categorizedSubjects["Geography"] = geography_subjects;
-        break;
-      case "Physical Education":
-        categorizedSubjects["Physical Education"] = physical_education_subjects;
-        break;
-      case "Music":
-        categorizedSubjects["Music"] = music_subjects;
-        break;
-      case "Languages":
-        categorizedSubjects["Languages"] = language_subjects;
-        break;
-      case "Technology":
-        categorizedSubjects["Technology"] = technology_subjects;
-        break;
-      default:
-        console.log(`Subject "${subject}" not recognized.`);
-    }
-  });
-
-  return categorizedSubjects;
-}
-
-const ConfirmDialog = ({ onConfirm, onCancel, subjects }) => (
-  <motion.div 
-    className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center"
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    exit={{ opacity: 0 }}
-    transition={{ duration: 0.5 }}
-  >
-    <div className="bg-black px-24 py-20 rounded-xl shadow-md">
-      <p className="text-xl font-bold mb-2">Confirm chosen subjects:</p>
-      <ol className="mb-10">
-        {(subjects.sort((a, b) => a.localeCompare(b))).map((subject, index) => (
-          <li key={subject} className="text-lg font-medium">{index + 1}. {subject}</li>
-        ))}
-      </ol>
-      <div className="flex justify-center gap-x-4">
-        <button className="border-[#003dcc] border-2 bg-black hover:bg-[#003dcc] text-white font-bold py-3 px-5 rounded-lg transiton-all duration-300 ease-in-out" onClick={onConfirm}>
-          Yes
-        </button>
-        <button className="border-[#f31722] border-2 bg-black hover:bg-[#f31722] text-white font-bold py-3 px-5 rounded-lg transition-all duration-300 ease-in-out" onClick={onCancel}>
-          No
-        </button>
-      </div>
-    </div>
-  </motion.div>
-);
-
-const SelectionCounter = ({ count, onConfirm }) => (
-  <motion.div 
-    className="absolute bottom-4 right-4 bg-black border p-3 gap-x-2 rounded-lg shadow-md flex items-center"
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    exit={{ opacity: 0 }}
-    transition={{ duration: 0.5 }}
-  >
-    <span className="mr-2">{count}/10 subjects chosen</span>
-    <button 
-      className="bg-white hover:bg-[#f4b034] text-black font-bold py-1 px-3 rounded-full transition-colors ease-in-out duration-500"
-      onClick={onConfirm}
-    >
-      Confirm
-    </button>
-  </motion.div>
-);
-
-const SectionCounter = ({ count, section, maxCount }) => (
-  <motion.div 
-    className="bg-black p-5 rounded-lg shadow-md flex items-center"
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    exit={{ opacity: 0 }}
-    transition={{ duration: 0.5 }}
-  >
-    <span className="mr-2">{section}: <span style={{ fontWeight: 1000 }} className="mr-1">{count}</span> / <span className="ml-1">{maxCount}</span></span>
-  </motion.div>
-);
-
-const TotalCounter = ({ count, total }) => (
-  <motion.div 
-    className="bg-black p-5 rounded-lg shadow-md flex items-center"
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    exit={{ opacity: 0 }}
-    transition={{ duration: 0.5 }}
-  >
-    <span className="mr-2">Total: <span style={{ fontWeight: 1000 }} className="ml-1">{count}</span> / <span className="mr-1">{total}</span></span>
-  </motion.div>
-);
-
-const Checkmark = ({ isSelected }) => (
-  <motion.div 
-    className={`absolute bottom-2 right-2 p-3 bg-black rounded-full ${isSelected ? 'opacity-100' : 'opacity-0'}`}
-    initial={{ opacity: 0 }}
-    animate={{ opacity: isSelected ? 1 : 0 }}
-    transition={{ duration: 0.2 }}
-  >
-    <FaCheck size={14} />
-  </motion.div>
-);
-
-const CollapsibleCounter = ({ totalSelected, totalSubjects, selectedSubjects, sectionCounts, onSubjectSelect }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [selectedSection, setSelectedSection] = useState(null);
-
-  const toggleOpen = () => {
-    setIsOpen(!isOpen);
-    if (isOpen) {
-      setSelectedSection(null)
-    }
-  };
-
-  const handleSubjectSelect = (subject) => {
-    setSelectedSection(subject);
-    onSubjectSelect(subject)
-  };
-
-  retrun (
-    <div className="fixed bottom-4 right-4 flex items-end">
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ x: 100, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            exit={{ x: 100, opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="mr-2 bg-black rounded-lg overflow-hidden"
-          >
-            {selectedSubjects.map((subject, index) => (
-              <motion.button
-                key={index}
-                className=""
-              >
-              </motion.button>
-            ))}
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
-  )
-}
+import { Subject, mergeSubjects } from './SecondSlide/mergeSubjects';
 
 const SubjectButton = ({ subject, onClick, isSelected, className }) => (
   <motion.div 
@@ -204,6 +27,8 @@ const SubjectButton = ({ subject, onClick, isSelected, className }) => (
 const SecondSlide = () => {
   const [selectedSubjects, setSelectedSubjects] = useState([]);
   const [selectedDetailedSubjects, setSelectedDetailedSubjects] = useState<Subject[]>([]);
+
+  const [selectedSection, setSelectedSection] = useState(null);
 
   const [showSelectedOnly, setShowSelectedOnly] = useState(false);
 
@@ -308,22 +133,9 @@ const SecondSlide = () => {
     setSectionCounts(initialCounts);
   }, [selectedSubjects]);
 
-  const subjects = [
-    { name: "Science", className: "bg-[#003dcc]/75 row-span-1 col-span-2 max-[850px]:col-span-1" },
-    { name: "English", className: "bg-[#08155e] row-span-1 col-span-1 max-[850px]:row-span-2" },
-    { name: "Mathematics", className: "bg-[#003dcc] row-span-2 col-span-2 max-[850px]:row-span-2 max-[850px]:col-span-1" },
-    { name: "Technology", className: "bg-[#00309f] row-span-2 col-span-1 max-[850px]:row-span-2" },
-    { name: "History", className: "bg-[#02ad83] row-span-1 col-span-1 max-[850px]:row-span-2" },
-    { name: "Geography", className: "bg-[#02ad83]/70 row-span-1 col-span-2 max-[850px]:row-span-2 max-[850px]:col-span-1" },
-    { name: "Art", className: "bg-[#08155e] row-span-2 col-span-1" },
-    { name: "Music", className: "bg-[#00309f]/80 row-span-1 col-span-1 max-[850px]:row-span-2" },
-    { name: "Physical Education", className: "bg-[#003dcc]/75 row-span-1 col-span-1 max-[850px]:row-span-2" },
-    { name: "Languages", className: "bg-[#003dcc] row-span-1 col-span-2 max-[850px]:col-span-1" }
-  ];
-
-  const filteredSubjects = subjects.filter(subject =>
-    subject.name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const handleSectionSelect = (section) => {
+    setSelectedSection(section)
+  }
 
   const sortSubjects = (subjects) => {
     
@@ -366,6 +178,19 @@ const SecondSlide = () => {
     }
   };
 
+  const generic_subjects = [
+    { name: "Science", className: "bg-[#003dcc]/75 row-span-1 col-span-2 max-[850px]:col-span-1" },
+    { name: "English", className: "bg-[#08155e] row-span-1 col-span-1 max-[850px]:row-span-2" },
+    { name: "Mathematics", className: "bg-[#003dcc] row-span-2 col-span-2 max-[850px]:row-span-2 max-[850px]:col-span-1" },
+    { name: "Technology", className: "bg-[#00309f] row-span-2 col-span-1 max-[850px]:row-span-2" },
+    { name: "History", className: "bg-[#02ad83] row-span-1 col-span-1 max-[850px]:row-span-2" },
+    { name: "Geography", className: "bg-[#02ad83]/70 row-span-1 col-span-2 max-[850px]:row-span-2 max-[850px]:col-span-1" },
+    { name: "Art", className: "bg-[#08155e] row-span-2 col-span-1" },
+    { name: "Music", className: "bg-[#00309f]/80 row-span-1 col-span-1 max-[850px]:row-span-2" },
+    { name: "Physical Education", className: "bg-[#003dcc]/75 row-span-1 col-span-1 max-[850px]:row-span-2" },
+    { name: "Languages", className: "bg-[#003dcc] row-span-1 col-span-2 max-[850px]:col-span-1" }
+  ];
+
   return (
     <div className={`w-full h-screen ${scrollEnabled ? "overflow-y-scroll" : "overflow-hidden"} scrollbar-hide`}>
       <div className="relative w-full h-[100vh] scroll-smooth">
@@ -387,7 +212,7 @@ const SecondSlide = () => {
               animate={{ y: 0, opacity: 1, transition: { duration: 0.5, ease: "easeInOut" } }}
               exit={{ y: '100%', opacity: 0, transition: { duration: 0.5, ease: "easeInOut" } }}
             >
-              {subjects.map(subject => (
+              {generic_subjects.map(subject => (
                 <SubjectButton 
                   key={subject.name}
                   subject={subject.name}
@@ -491,7 +316,7 @@ const SecondSlide = () => {
                           <div 
                             key={idx}
                             className="bg-[#001f66] hover:bg-[#003fd3] rounded-xl row-span-1 col-span-1 w-full h-full flex justify-center items-center flex-col gap-2 min-h-[350px] px-10 py-4 scale-100 hover:scale-[105%] transition-all duration-300 ease-in-out"
-                            onClick={() => handleDetailedSubjectClick(subject, section)}
+                            onClick={() => handleDetailedSubjectClick(subject)}
                           >
                             <div className="border-2 border-white/50 text-xs w-full h-[30%] mb-4 rounded-xl justify-center items-center flex">
                               Image
@@ -537,20 +362,13 @@ const SecondSlide = () => {
                 )}
 
                 {animateSpecificSubjects && (
-                  <div className="fixed bottom-4 right-4 flex flex-col gap-2 z-50">
-                    {Object.entries(mergeSubjects(selectedSubjects)).map(([section, subjects]) => (
-                      <SectionCounter 
-                        key={section} 
-                        count={sectionCounts[section] || 0} 
-                        section={section} 
-                        maxCount={subjects.length} 
-                      />
-                    ))}
-                    <TotalCounter 
-                      count={selectedDetailedSubjects.length} 
-                      total={totalSubjects}
-                    />
-                  </div>
+                  <CollapsibleCounter
+                    totalSelected={selectedDetailedSubjects.length}
+                    totalSubjects={totalSubjects}
+                    selectedSubjects={selectedSubjects}
+                    sectionCounts={sectionCounts}
+                    onSubjectSelect={handleSectionSelect}
+                  />
                 )}
               </div>
             </motion.div>

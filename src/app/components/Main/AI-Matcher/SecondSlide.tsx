@@ -94,7 +94,7 @@ const ConfirmDialog = ({ onConfirm, onCancel, subjects }) => (
 
 const SelectionCounter = ({ count, onConfirm }) => (
   <motion.div 
-    className="absolute bottom-4 right-4 bg-black p-5 gap-x-4 rounded-lg shadow-md flex items-center"
+    className="absolute bottom-4 right-4 bg-black border p-3 gap-x-2 rounded-lg shadow-md flex items-center"
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
     exit={{ opacity: 0 }}
@@ -102,7 +102,7 @@ const SelectionCounter = ({ count, onConfirm }) => (
   >
     <span className="mr-2">{count}/10 subjects chosen</span>
     <button 
-      className="bg-white hover:bg-[#f4b034] text-black font-bold py-2 px-4 rounded-full transition-colors ease-in-out duration-500"
+      className="bg-white hover:bg-[#f4b034] text-black font-bold py-1 px-3 rounded-full transition-colors ease-in-out duration-500"
       onClick={onConfirm}
     >
       Confirm
@@ -341,7 +341,7 @@ const SecondSlide = () => {
         <AnimatePresence>
           {animateGenericSubjects && !animateSpecificSubjects && (
             <motion.div
-              className="h-full w-full grid grid-cols-3 max-[850px]:grid-cols-2 grid-rows-6 max-[850px]:grid-rows-9 gap-[22px] py-10 px-4 absolute"
+              className="h-[85%] w-full grid grid-cols-3 max-[850px]:grid-cols-2 grid-rows-6 max-[850px]:grid-rows-9 gap-[22px] py-10 px-4 absolute"
               initial={{ y: 1000, opacity: 0 }}
               animate={{ y: 0, opacity: 1, transition: { duration: 0.5, ease: "easeInOut" } }}
               exit={{ y: '100%', opacity: 0, transition: { duration: 0.5, ease: "easeInOut" } }}
@@ -394,11 +394,11 @@ const SecondSlide = () => {
                   <FaSearch className="absolute left-5 top-1/2 transform -translate-y-1/2 text-white" />
                 </div>
                 <div className="relative w-1/4 mt-[-20px] mx-auto flex justify-center flex-row gap-x-4">
-                  <div className="relative w-full mx-auto flex items-center gap-x-4">
+                  <div className="relative w-full mx-auto items-center gap-x-4 flex justify-center">
                     <select
                       value={sortMethod}
                       onChange={(e) => setSortMethod(e.target.value)}
-                      className="appearance-none bg-black text-xs border rounded-xl p-4 flex justify-center items-center w-full"
+                      className="appearance-none bg-black text-xs border rounded-xl p-4 flex justify-center items-center w-[200px]"
                       style={{ height: '100%' }}
                     >
                       {sortOptions.map((option, index) => (

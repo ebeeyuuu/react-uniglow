@@ -2,6 +2,19 @@ import { MdPeople, MdConnectWithoutContact } from 'react-icons/md';
 import { BiDonateHeart } from 'react-icons/bi';
 import { SiActivitypub } from "react-icons/si";
 
+export const generic_subjects = [
+  { name: "Science", className: "bg-[#003dcc]/75 row-span-1 col-span-2 max-[850px]:col-span-1" },
+  { name: "English", className: "bg-[#08155e] row-span-1 col-span-1 max-[850px]:row-span-2" },
+  { name: "Mathematics", className: "bg-[#003dcc] row-span-2 col-span-2 max-[850px]:row-span-2 max-[850px]:col-span-1" },
+  { name: "Technology", className: "bg-[#00309f] row-span-2 col-span-1 max-[850px]:row-span-2" },
+  { name: "History", className: "bg-[#02ad83] row-span-1 col-span-1 max-[850px]:row-span-2" },
+  { name: "Geography", className: "bg-[#02ad83]/70 row-span-1 col-span-2 max-[850px]:row-span-2 max-[850px]:col-span-1" },
+  { name: "Art", className: "bg-[#08155e] row-span-2 col-span-1" },
+  { name: "Music", className: "bg-[#00309f]/80 row-span-1 col-span-1 max-[850px]:row-span-2" },
+  { name: "Physical Education", className: "bg-[#003dcc]/75 row-span-1 col-span-1 max-[850px]:row-span-2" },
+  { name: "Languages", className: "bg-[#003dcc] row-span-1 col-span-2 max-[850px]:col-span-1" }
+];
+
 export const navItems = [
     { href: "", label: "About Us", icon: MdPeople, size: 23, text: "About Us" },
     { href: "/pages/contact", label: "Contact", icon: MdConnectWithoutContact, size: 23, text: "Contact" },

@@ -145,6 +145,47 @@ const Checkmark = ({ isSelected }) => (
   </motion.div>
 );
 
+const CollapsibleCounter = ({ totalSelected, totalSubjects, selectedSubjects, sectionCounts, onSubjectSelect }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedSection, setSelectedSection] = useState(null);
+
+  const toggleOpen = () => {
+    setIsOpen(!isOpen);
+    if (isOpen) {
+      setSelectedSection(null)
+    }
+  };
+
+  const handleSubjectSelect = (subject) => {
+    setSelectedSection(subject);
+    onSubjectSelect(subject)
+  };
+
+  retrun (
+    <div className="fixed bottom-4 right-4 flex items-end">
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ x: 100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={{ x: 100, opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="mr-2 bg-black rounded-lg overflow-hidden"
+          >
+            {selectedSubjects.map((subject, index) => (
+              <motion.button
+                key={index}
+                className=""
+              >
+              </motion.button>
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  )
+}
+
 const SubjectButton = ({ subject, onClick, isSelected, className }) => (
   <motion.div 
     className={`${className} rounded-xl flex justify-center items-center smooth-animation cursor-pointer text-xl font-bold scale-100 hover:scale-[102%]`}

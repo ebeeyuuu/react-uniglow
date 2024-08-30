@@ -16,6 +16,8 @@ const SlidePresentation: React.FC<SlidePresentationProps> = ({
   const [currentSlide, setCurrentSlide] = useState(0);
   const [prevSlideIndex, setPrevSlideIndex] = useState(0);
 
+  const [slideStates, setSlideStates] = useState<Record<number, any>>({});
+
   const slideContents: (ReactElement | null)[] = Array(numSlides).fill(null);
   Children.forEach(children, (child, index) => {
     if (index < numSlides && React.isValidElement(child)) {
@@ -51,7 +53,14 @@ const SlidePresentation: React.FC<SlidePresentationProps> = ({
         className="flex justify-center items-center w-full h-[calc(100%-80px)]"
       >
         {slideContents[currentSlide] ? (
-          cloneElement(slideContents[currentSlide], { key: currentSlide })
+          cloneElement(slideContents[currentSlide], {
+            key: currentSlide,
+            slideState: slideStates[currentSlide] || {},
+            setSlideState: (state: any) => setSlideStates({
+              ...slideStates,
+              [currentSlide]: state,
+            }),
+          })
         ) : (
           <div key={currentSlide}>Blank Slide</div>
         )}
@@ -68,7 +77,6 @@ const SlidePresentation: React.FC<SlidePresentationProps> = ({
         <button
           onClick={nextSlide}
           disabled={currentSlide === numSlides - 1 || !canProceed()}
-          
           className="text-white flex items-center disabled:opacity-70 disabled:cursor-not-allowed px-5 py-3 h-[50px] rounded-xl bg-black/80 hover:bg-[#f4b034] border-2 border-[#f4b034] hover:text-black smooth-animation"
         >
           <span>Next</span>

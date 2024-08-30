@@ -1,7 +1,6 @@
 import React from 'react'
 import SlidePresentation from './SlidePresentation'
 
-// import slides from separate files
 import FirstSlide from './FirstSlide'
 import SecondSlide from './SecondSlide'
 import ThirdSlide from './ThirdSlide'
@@ -14,7 +13,7 @@ import EighthSlide from './EighthSlide'
 
 const Questions = () => {
   return (
-    <SlidePresentation numSlides={20}>
+    <SlidePresentation numSlides={8}>
       <FirstSlide />
       <SecondSlide />
       <ThirdSlide />

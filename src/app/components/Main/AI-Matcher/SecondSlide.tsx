@@ -24,7 +24,7 @@ const SubjectButton = ({ subject, onClick, isSelected, className }) => (
   </motion.div>
 );
 
-const SecondSlide = () => {
+const SecondSlide = ({ slideState, setSlideState }) => {
   const [selectedSubjects, setSelectedSubjects] = useState([]);
   const [selectedDetailedSubjects, setSelectedDetailedSubjects] = useState<Subject[]>([]);
 
@@ -207,7 +207,7 @@ const SecondSlide = () => {
         <AnimatePresence>
           {animateGenericSubjects && !animateSpecificSubjects && (
             <motion.div
-              className="h-full w-full grid grid-cols-3 max-[850px]:grid-cols-2 grid-rows-6 max-[850px]:grid-rows-9 gap-[22px] py-10 px-4 absolute"
+              className="h-[92%] w-full grid grid-cols-3 max-[850px]:grid-cols-2 grid-rows-6 max-[850px]:grid-rows-9 gap-[22px] py-10 px-4 absolute"
               initial={{ y: 1000, opacity: 0 }}
               animate={{ y: 0, opacity: 1, transition: { duration: 0.5, ease: "easeInOut" } }}
               exit={{ y: '100%', opacity: 0, transition: { duration: 0.5, ease: "easeInOut" } }}

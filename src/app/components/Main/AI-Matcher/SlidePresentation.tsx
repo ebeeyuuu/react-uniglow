@@ -5,11 +5,13 @@ import { motion } from "framer-motion";
 interface SlidePresentationProps {
   numSlides: number;
   children: ReactElement | ReactElement[];
+  canProceed?: () => boolean;
 }
 
 const SlidePresentation: React.FC<SlidePresentationProps> = ({
   numSlides,
   children,
+  canProceed = () => true,
 }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [prevSlideIndex, setPrevSlideIndex] = useState(0);
@@ -65,7 +67,8 @@ const SlidePresentation: React.FC<SlidePresentationProps> = ({
         </button>
         <button
           onClick={nextSlide}
-          disabled={currentSlide === numSlides - 1}
+          disabled={currentSlide === numSlides - 1 || !canProceed()}
+          
           className="text-white flex items-center disabled:opacity-70 disabled:cursor-not-allowed px-5 py-3 h-[50px] rounded-xl bg-black/80 hover:bg-[#f4b034] border-2 border-[#f4b034] hover:text-black smooth-animation"
         >
           <span>Next</span>

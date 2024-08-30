@@ -68,7 +68,7 @@ const CollapsibleCounter: React.FC<CollapsibleCounterProps> = ({
               {selectedSubjects.map((subject, index) => (
                 <button
                   key={index}
-                  className="block w-full text-left p-0 px-0 py-0 hover:px-2 hover:py-4 mb-4 rounded-xl hover:bg-gray-700 transition-all duration-500 ease-in-out"
+                  className="block w-full text-left p-0 px-0 py-0 hover:py-4 mb-4 rounded-xl hover:bg-[#028c6a] hover:px-4 transition-all duration-500 ease-in-out"
                   onClick={() => handleSubjectSelect(subject)}
                 >
                   {index + 1}: {subject}

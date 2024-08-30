@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 import { useHover } from "@/context/hoverContext";
 import { useRouter } from "next/navigation";
 import VROutline from "../../Icons/VROutline";
-import AnimatedGrid from "./AnimatedGrid"
-import { cn } from "@/lib/utils"
+import AnimatedGrid from "./AnimatedGrid";
+import { cn } from "@/lib/utils";
 
 interface VRToursSectionProps {
   index: number;
@@ -13,12 +13,11 @@ interface VRToursSectionProps {
 const VRToursSection: React.FC<VRToursSectionProps> = ({ index }) => {
   const router = useRouter();
   const { hoverStates, setHoverState } = useHover();
-  const isHovered = hoverStates[index]
+  const isHovered = hoverStates[index];
 
-  
   return (
     <div
-      className="row-span-1 col-span-1 max-[2000px]:col-span-2 max-[2000px]:-order-8 border-[3px] border-[#003366] hover:border-[#f4b034] max-[700px]:text-lg rounded-[10px] flex justify-center items-center text-xl font-bold text-center cursor-pointer transition-all duration-500 ease-in-out overflow-hidden bg-black"
+      className="row-span-1 col-span-1 max-[2000px]:col-span-2 max-[2000px]:-order-8 border-[3px] border-[#0037b8] hover:border-[#f4b034] max-[700px]:text-lg rounded-[10px] flex justify-center items-center text-xl font-bold text-center cursor-pointer transition-all duration-500 ease-in-out overflow-hidden bg-black"
       onClick={() => router.push("/pages/main/vr-tours")}
       onMouseEnter={() => setHoverState(index, true)}
       onMouseLeave={() => setHoverState(index, false)}
@@ -62,7 +61,7 @@ const VRToursSection: React.FC<VRToursSectionProps> = ({ index }) => {
             "absolute inset-x-0 inset-y-[-30%] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2",
             `transition-all duration-700 ease-in-out z-10 ${
               isHovered ? "opacity-100 skew-y-12" : "opacity-100 skew-y-0"
-            }`
+            }`,
           )}
         />
       </div>

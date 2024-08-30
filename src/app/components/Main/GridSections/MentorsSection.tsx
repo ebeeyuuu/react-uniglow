@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
-import { motion } from "framer-motion"
-import { useHover } from "@/context/hoverContext"
-import { useRouter } from "next/navigation"
+import { motion } from "framer-motion";
+import { useHover } from "@/context/hoverContext";
+import { useRouter } from "next/navigation";
 import Mentoring from "../../Icons/Mentoring";
 import { GoPersonFill } from "react-icons/go";
 import MentorConnectionBeams from "./MentorConnectionBeams";
@@ -13,14 +13,14 @@ interface MentorsSectionProps {
 const MentorsSection: React.FC<MentorsSectionProps> = ({ index }) => {
   const router = useRouter();
   const { hoverStates, setHoverState } = useHover();
-  const isHovered = hoverStates[index]
-  
-  const containerRef = useRef(null)
+  const isHovered = hoverStates[index];
+
+  const containerRef = useRef(null);
   const nodeRefs = Array.from({ length: 6 }, () => useRef(null));
-  
+
   return (
     <div
-      className="row-span-2 col-span-1 max-[2000px]:col-span-2 max-[1200px]:row-span-1 border-[3px] border-[#003366] hover:border-[#f4b034] max-[700px]:text-lg rounded-[10px] flex justify-center items-center text-xl font-bold text-center cursor-pointer transition-all duration-300 ease-in-out relative overflow-hidden bg-black"
+      className="row-span-2 col-span-1 max-[2000px]:col-span-2 max-[1200px]:row-span-1 border-[3px] border-[#0037b8] hover:border-[#f4b034] max-[700px]:text-lg rounded-[10px] flex justify-center items-center text-xl font-bold text-center cursor-pointer transition-all duration-300 ease-in-out relative overflow-hidden bg-black"
       onClick={() => router.push("/pages/main/mentors")}
       onMouseEnter={() => setHoverState(index, true)}
       onMouseLeave={() => setHoverState(index, false)}
@@ -97,14 +97,12 @@ const MentorsSection: React.FC<MentorsSectionProps> = ({ index }) => {
                 duration={5}
                 delay={Math.random()}
                 className={`${
-                  isHovered
-                    ? "opacity-100 scale-100"
-                    : "opacity-100 scale-150"
+                  isHovered ? "opacity-100 scale-100" : "opacity-100 scale-150"
                 } transition-all duration-700 ease-in-out`}
               />
             );
           }
-        })
+        }),
       )}
     </div>
   );

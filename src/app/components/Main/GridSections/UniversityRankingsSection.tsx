@@ -17,7 +17,7 @@ const UniversityRankingsSection: React.FC<UniversityRankingsSectionProps> = ({
 
   return (
     <div
-      className="row-span-1 col-span-1 max-[2000px]:col-span-2 border-[3px] border-[#003366] hover:border-[#f4b034] max-[700px]:text-lg rounded-[10px] flex justify-center items-center text-xl font-bold text-center cursor-pointer transition-all duration-300 ease-in-out relative overflow-hidden bg-black"
+      className="row-span-1 col-span-1 max-[2000px]:col-span-2 border-[3px] border-[#0037b8] hover:border-[#f4b034] max-[700px]:text-lg rounded-[10px] flex justify-center items-center text-xl font-bold text-center cursor-pointer transition-all duration-300 ease-in-out relative overflow-hidden bg-black"
       onClick={() => router.push("/pages/main/university-rankings")}
       onMouseEnter={() => setHoverState(index, true)}
       onMouseLeave={() => setHoverState(index, false)}
@@ -35,9 +35,7 @@ const UniversityRankingsSection: React.FC<UniversityRankingsSectionProps> = ({
                 className="flex items-center justify-center"
                 initial={{ opacity: 1, x: 0 }}
                 animate={
-                  isHovered
-                    ? { opacity: 0, x: -100 }
-                    : { opacity: 1, x: 0 }
+                  isHovered ? { opacity: 0, x: -100 } : { opacity: 1, x: 0 }
                 }
               >
                 <Rankings

@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useHover } from "@/context/hoverContext";
-import { useRouter } from 'next/navigation'
+import { useRouter } from "next/navigation";
 import BrainAI from "@/app/components/Icons/BrainAI";
 import WaveAnimation from "./WaveAnimation";
 
@@ -12,11 +12,11 @@ interface AIMatcherSectionProps {
 const AIMatcherSection: React.FC<AIMatcherSectionProps> = ({ index }) => {
   const router = useRouter();
   const { hoverStates, setHoverState } = useHover();
-  const isHovered = hoverStates[index]
+  const isHovered = hoverStates[index];
 
   return (
     <div
-      className={`relative row-span-1 col-span-2 max-[2000px]:col-span-4 max-[2000px]:-order-9 max-[700px]:text-lg rounded-[10px] flex justify-center items-center text-xl font-bold text-center cursor-pointer transition-all duration-500 ease-in-out overflow-hidden border-[3px] border-[#003366] hover:border-[#f4b034] bg-black`}
+      className={`relative row-span-1 col-span-2 max-[2000px]:col-span-4 max-[2000px]:-order-9 max-[700px]:text-lg rounded-[10px] flex justify-center items-center text-xl font-bold text-center cursor-pointer transition-all duration-500 ease-in-out overflow-hidden border-[3px] border-[#0037b8] hover:border-[#f4b034] bg-black`}
       onClick={() => router.push("/pages/main/ai-matching")}
       onMouseEnter={() => setHoverState(index, true)}
       onMouseLeave={() => setHoverState(index, false)}

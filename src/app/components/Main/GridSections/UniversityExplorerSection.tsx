@@ -1,13 +1,13 @@
-"use client"
+"use client";
 
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { useHover } from "@/context/hoverContext"
-import { useRouter } from "next/navigation"
+import { useHover } from "@/context/hoverContext";
+import { useRouter } from "next/navigation";
 
-import Explore from "@/app/components/Icons/Explore"
+import Explore from "@/app/components/Icons/Explore";
 
-import Image from "next/image"
+import Image from "next/image";
 import rippleGIF from "@/images/ripple.gif";
 
 import slide1 from "@/images/harvard.jpg";
@@ -17,7 +17,7 @@ import slide4 from "@/images/5.jpg";
 import slide5 from "@/images/11.jpg";
 
 interface UniversityExplorerSectionProps {
-  index: number
+  index: number;
 }
 
 const images = [
@@ -32,11 +32,13 @@ const images = [
   { src: slide5, alt: "Slide 5", description: "University of Pennsylvania" },
 ];
 
-const UniversityExplorerSection: React.FC<UniversityExplorerSectionProps> = ({ index }) => {
-  const router = useRouter()
-  const { hoverStates, setHoverState } = useHover()
-  const isHovered = hoverStates[index]
-  
+const UniversityExplorerSection: React.FC<UniversityExplorerSectionProps> = ({
+  index,
+}) => {
+  const router = useRouter();
+  const { hoverStates, setHoverState } = useHover();
+  const isHovered = hoverStates[index];
+
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -49,7 +51,7 @@ const UniversityExplorerSection: React.FC<UniversityExplorerSectionProps> = ({ i
 
   return (
     <div
-      className="row-span-2 col-span-3 max-[2000px]:col-span-6 max-[2000px]:-order-7 bg-black max-[700px]:text-lg rounded-[10px] flex justify-center items-center text-xl border-[3px] border-[#003366] hover:border-[#f4b034]/50 font-bold text-center cursor-pointer transition-all duration-500 ease-in-out relative overflow-hidden"
+      className="row-span-2 col-span-3 max-[2000px]:col-span-6 max-[2000px]:-order-7 bg-black max-[700px]:text-lg rounded-[10px] flex justify-center items-center text-xl border-[3px] border-[#0037b8] hover:border-[#f4b034] font-bold text-center cursor-pointer transition-all duration-500 ease-in-out relative overflow-hidden"
       onClick={() => router.push("/pages/main/university-explorer")}
       onMouseEnter={() => setHoverState(index, true)}
       onMouseLeave={() => setHoverState(index, false)}
@@ -72,9 +74,7 @@ const UniversityExplorerSection: React.FC<UniversityExplorerSectionProps> = ({ i
         <motion.div
           className="absolute z-50 flex items-center justify-center flex-col gap-y-[10px]"
           initial={{ opacity: 1, y: 0 }}
-          animate={
-            isHovered ? { opacity: 1, y: -10 } : { opacity: 1, y: 0 }
-          }
+          animate={isHovered ? { opacity: 1, y: -10 } : { opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
         >
           <Explore
@@ -85,9 +85,7 @@ const UniversityExplorerSection: React.FC<UniversityExplorerSectionProps> = ({ i
           <motion.p
             className="max-[1150px]:text-base max-[2000px]:text-lg max-[2800px]:text-xl max-[4000px]:text-2xl w-5/12 mx-auto text-wrap font-light"
             initial={{ opacity: 1, x: 0 }}
-            animate={
-              isHovered ? { opacity: 0, x: -100 } : { opacity: 1, x: 0 }
-            }
+            animate={isHovered ? { opacity: 0, x: -100 } : { opacity: 1, x: 0 }}
           >
             Struggling to access comprehensive database of global universities
             that easily filterable to match your criteria.
@@ -99,9 +97,7 @@ const UniversityExplorerSection: React.FC<UniversityExplorerSectionProps> = ({ i
         <motion.div
           className="absolute text-4xl z-50 max-[1300px]:text-3xl flex items-center justify-center"
           initial={{ y: 30, opacity: 0 }}
-          animate={
-            isHovered ? { y: 0, opacity: 1 } : { y: 30, opacity: 0 }
-          }
+          animate={isHovered ? { y: 0, opacity: 1 } : { y: 30, opacity: 0 }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
           style={{ fontWeight: 750 }}
         >

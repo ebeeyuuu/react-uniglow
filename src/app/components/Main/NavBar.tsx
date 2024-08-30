@@ -5,9 +5,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { Sling as Hamburger } from "hamburger-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaTimes } from 'react-icons/fa';
-import { useUser } from '@/context/userContext'; // Import the useUser hook
-import { useRouter } from 'next/navigation'
+import { FaTimes } from "react-icons/fa";
+import { useUser } from "@/context/userContext"; // Import the useUser hook
+import { useRouter } from "next/navigation";
 
 import placeholderpfp from "@/images/7.png";
 import AI from "../Icons/AI";
@@ -21,7 +21,7 @@ import Home from "../Icons/Home";
 const textVariants = {
   hidden: { x: 120 },
   visible: { x: 45, transition: { duration: 0.2 } },
-}
+};
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,9 +33,21 @@ const NavBar = () => {
     { href: "/pages/main", label: "Home", icon: Home },
     { href: "/pages/main/ai-matching", label: "AI Matching", icon: AI },
     { href: "/pages/main/vr-campus-tours", label: "VR Tours", icon: VR },
-    { href: "/pages/main/peer-mentor-connection", label: "Mentorship", icon: Mentorship },
-    { href: "/pages/main/interactive-curriculum-explorer", label: "Explorer", icon: Explore },
-    { href: "/pages/main/global-scholarship-finder", label: "Programs", icon: Program },
+    {
+      href: "/pages/main/peer-mentor-connection",
+      label: "Mentorship",
+      icon: Mentorship,
+    },
+    {
+      href: "/pages/main/interactive-curriculum-explorer",
+      label: "Explorer",
+      icon: Explore,
+    },
+    {
+      href: "/pages/main/global-scholarship-finder",
+      label: "Programs",
+      icon: Program,
+    },
   ];
 
   useEffect(() => {
@@ -54,7 +66,7 @@ const NavBar = () => {
   return (
     <div className="flex items-center justify-center h-screen">
       <nav
-        className={`bg-[#001c5c]/70 text-white p-4 flex flex-col h-[calc(100vh-70px)] justify-between items-center rounded-[20px] left-[20px] max-[1000px]:flex-row max-[1000px]:w-[calc(100vw-45px)] max-[1000px]:h-[100px] max-[1000px]:ml-0  absolute max-[1000px]:top-[40px] max-[1000px]:left-1/2 max-[1000px]:-translate-x-1/2 opacity-100 transition-colors duration-500 ease-in-out`}
+        className={`bg-[#001c5c] text-white p-4 flex flex-col h-[calc(100vh-70px)] justify-between items-center rounded-[20px] left-[20px] max-[1000px]:flex-row max-[1000px]:w-[calc(100vw-45px)] max-[1000px]:h-[100px] max-[1000px]:ml-0  absolute max-[1000px]:top-[40px] max-[1000px]:left-1/2 max-[1000px]:-translate-x-1/2 opacity-100 transition-colors duration-500 ease-in-out`}
         onMouseEnter={() => setIsHover(true)}
         onMouseLeave={() => setIsHover(false)}
       >
@@ -63,20 +75,34 @@ const NavBar = () => {
             src={placeholderpfp}
             alt=""
             className={`rounded-full max-[1000px]:my-auto max-[1000px]:ml-[30px] max-[1000px]:w-[40px] max-[1000px]:h-[40px] cursor-pointer smooth-animation w-[50px] h-[50px]`}
-            onClick={() => {router.push('/pages/settings')}}
+            onClick={() => {
+              router.push("/pages/settings");
+            }}
             style={{
               maxWidth: "100%",
-              height: "auto"
-            }} />
-          <p className={`max-[1000px]:text-sm mb-2 max-[1000px]:mb-0`}>{username === "" ? "Guest" : username}</p>
+              height: "auto",
+            }}
+          />
+          <p className={`max-[1000px]:text-sm mb-2 max-[1000px]:mb-0`}>
+            {username === "" ? "Guest" : username}
+          </p>
           {navItems.map(({ href, label, icon: Icon }) => (
-            <Link key={href} href={href} className={`flex items-center h-[50px] text-ellipsis overflow-hidden whitespace-nowrap smooth-animation`}>
-              <motion.div className="flex items-center justify-center relative"
+            <Link
+              key={href}
+              href={href}
+              className={`flex items-center h-[50px] text-ellipsis overflow-hidden whitespace-nowrap smooth-animation`}
+            >
+              <motion.div
+                className="flex items-center justify-center relative"
                 initial={{ x: 0 }}
-                animate={isHover ? { x: -50 } : { x: 0, transition: { duration: 0.8 } }}
+                animate={
+                  isHover ? { x: -50 } : { x: 0, transition: { duration: 0.8 } }
+                }
                 transition={{ type: "spring", stiffness: 200, damping: 40 }}
               >
-                <Icon className={`max-[1000px]:w-[25px] max-[1000px]:h-[25px] transition-all duration-500 ease-in-out absolute left-1/2 transform -translate-x-1/2 ${isHover ? "opacity-0" : ""}`} />
+                <Icon
+                  className={`max-[1000px]:w-[25px] max-[1000px]:h-[25px] transition-all duration-500 ease-in-out absolute left-1/2 transform -translate-x-1/2 ${isHover ? "opacity-0" : ""}`}
+                />
                 <motion.p
                   initial="hidden"
                   animate={isHover ? "visible" : "hidden"}
@@ -94,18 +120,31 @@ const NavBar = () => {
             src={placeholderpfp}
             alt=""
             className={`rounded-full w-[50px] h-[50px] max-[1000px]:my-auto cursor-pointer hidden max-[1000px]:flex smooth-animation`}
-            onClick={() => {router.push('/pages/settings')}}
+            onClick={() => {
+              router.push("/pages/settings");
+            }}
             style={{
               maxWidth: "100%",
-              height: "auto"
-            }} />
+              height: "auto",
+            }}
+          />
           <Link href="/">
             <Exit className="max-[1000px]:w-[25px] max-[1000px]:h-[25px]" />
           </Link>
         </div>
         <div className="hidden max-[1000px]:flex max-[600px]:items-center max-[600px]:justify-between">
-          <button onClick={() => setIsOpen(!isOpen)} aria-label="Toggle navigation menu" className="max-[1000px]:mr-[30px]">
-            <Hamburger toggled={isOpen} toggle={setIsOpen} direction="left" size={25} duration={0.8} />
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle navigation menu"
+            className="max-[1000px]:mr-[30px]"
+          >
+            <Hamburger
+              toggled={isOpen}
+              toggle={setIsOpen}
+              direction="left"
+              size={25}
+              duration={0.8}
+            />
           </button>
           <AnimatePresence>
             {isOpen && (
@@ -116,8 +155,12 @@ const NavBar = () => {
                 className="absolute top-0 right-0 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none bg-[#002347bc] flex flex-col text-black px-[60px] py-[30px] max-[1000px]:mt-[100px] z-50"
               >
                 {navItems.map(({ href, label, icon: Icon }) => (
-                  <Link key={href} href={href} className="flex items-center gap-x-[20px] my-4 text-lg hover:text-orange-500 smooth-animation w-full">
-                    <Icon className=""/>
+                  <Link
+                    key={href}
+                    href={href}
+                    className="flex items-center gap-x-[20px] my-4 text-lg hover:text-orange-500 smooth-animation w-full"
+                  >
+                    <Icon className="" />
                     <div>{label}</div>
                   </Link>
                 ))}
@@ -126,7 +169,10 @@ const NavBar = () => {
                   className="absolute bottom-2 right-2 p-1 rounded-full hover:bg-gray-200"
                   aria-label="Close menu"
                 >
-                  <FaTimes size={20} className="max-[1000px]:w-[25px] max-[1000px]:h-[25px] text-gray-600" />
+                  <FaTimes
+                    size={20}
+                    className="max-[1000px]:w-[25px] max-[1000px]:h-[25px] text-gray-600"
+                  />
                 </button>
               </motion.div>
             )}

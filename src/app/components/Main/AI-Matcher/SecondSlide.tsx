@@ -362,13 +362,15 @@ const SecondSlide = () => {
                 )}
 
                 {animateSpecificSubjects && (
-                  <CollapsibleCounter
-                    totalSelected={selectedDetailedSubjects.length}
-                    totalSubjects={totalSubjects}
-                    selectedSubjects={selectedSubjects}
-                    sectionCounts={sectionCounts}
-                    onSubjectSelect={handleSectionSelect}
-                  />
+                  <div className="relative w-full h-full">
+                    <CollapsibleCounter
+                      totalSelected={selectedDetailedSubjects.length}
+                      totalSubjects={totalSubjects}
+                      selectedSubjects={selectedSubjects}
+                      sectionCounts={sectionCounts}
+                      onSubjectSelect={handleSectionSelect}
+                    />
+                  </div>
                 )}
               </div>
             </motion.div>

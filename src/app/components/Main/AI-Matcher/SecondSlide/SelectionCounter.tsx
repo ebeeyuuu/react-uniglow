@@ -9,7 +9,7 @@ const SelectionCounter = ({ count, onConfirm }) => (
     exit={{ opacity: 0 }}
     transition={{ duration: 0.5 }}
   >
-    <span className="mr-2">{count}/10 subjects chosen</span>
+    <span className="mr-2">{count}/10 </span>
     <button 
       className="bg-white hover:bg-[#f4b034] text-black font-bold py-2 px-4 rounded-full transition-colors ease-in-out duration-500"
       onClick={onConfirm}

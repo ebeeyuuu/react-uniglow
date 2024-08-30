@@ -46,7 +46,7 @@ const SlidePresentation: React.FC<SlidePresentationProps> = ({
         animate={{ x: 0, opacity: 1 }}
         exit={{ x: currentSlide < prevSlideIndex ? 100 : -100, opacity: 0 }}
         transition={{ duration: 0.5 }}
-        className="flex justify-center items-center w-full h-full"
+        className="flex justify-center items-center w-full h-[calc(100%-80px)]"
       >
         {slideContents[currentSlide] ? (
           cloneElement(slideContents[currentSlide], { key: currentSlide })
@@ -54,7 +54,7 @@ const SlidePresentation: React.FC<SlidePresentationProps> = ({
           <div key={currentSlide}>Blank Slide</div>
         )}
       </motion.div>
-      <div className="flex justify-center flex-row w-full mt-4 absolute z-50 bottom-8 gap-x-4">
+      <div className="flex justify-center flex-row w-full mt-4 absolute z-40 bottom-8 left-0 right-0 gap-x-4 px-4">
         <button
           onClick={prevSlide}
           disabled={currentSlide === 0}

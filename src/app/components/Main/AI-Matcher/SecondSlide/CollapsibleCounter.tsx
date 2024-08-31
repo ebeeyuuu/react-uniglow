@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import SectionCounter from './SectionCounter';
-import { mergeSubjects } from './mergeSubjects';
-import { FaTimes } from 'react-icons/fa';
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import SectionCounter from "./SectionCounter";
+import { mergeSubjects } from "./mergeSubjects";
+import { FaTimes } from "react-icons/fa";
 
 interface CollapsibleCounterProps {
   totalSelected: number;
@@ -40,15 +40,15 @@ const CollapsibleCounter: React.FC<CollapsibleCounterProps> = ({
 
   useEffect(() => {
     const handleEscapeKey = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') {
+      if (event.key === "Escape") {
         setIsOpen(false);
       }
     };
 
-    document.addEventListener('keydown', handleEscapeKey);
+    document.addEventListener("keydown", handleEscapeKey);
 
     return () => {
-      document.removeEventListener('keydown', handleEscapeKey);
+      document.removeEventListener("keydown", handleEscapeKey);
     };
   }, []);
 
@@ -63,12 +63,12 @@ const CollapsibleCounter: React.FC<CollapsibleCounterProps> = ({
             transition={{ duration: 0.3 }}
             className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50"
           >
-            <div className="bg-black border rounded-xl p-20 relative">
-              <h2 className="text-2xl font-bold mb-4">Select a section</h2>
+            <div className="bg-black rounded-xl px-40 py-32 relative">
+              <h1 className="text-4xl font-bold mb-8">Select a section</h1>
               {selectedSubjects.map((subject, index) => (
                 <button
                   key={index}
-                  className="block w-full text-left p-0 px-0 py-0 hover:py-4 mb-4 rounded-xl hover:bg-[#028c6a] hover:px-4 transition-all duration-500 ease-in-out"
+                  className="block w-full text-left p-0 px-0 py-0 hover:py-4 mb-6 rounded-xl hover:bg-[#028c6a] hover:px-4 transition-all duration-500 ease-in-out text-lg"
                   onClick={() => handleSubjectSelect(subject)}
                 >
                   {index + 1}: {subject}
@@ -78,7 +78,7 @@ const CollapsibleCounter: React.FC<CollapsibleCounterProps> = ({
                 className="absolute bottom-4 right-4 p-2 rounded-full bg-black hover:bg-white hover:text-black transition-colors duration-500"
                 onClick={() => setIsOpen(false)}
               >
-                <FaTimes size={24}/>
+                <FaTimes size={24} />
               </button>
             </div>
           </motion.div>
@@ -91,7 +91,7 @@ const CollapsibleCounter: React.FC<CollapsibleCounterProps> = ({
           onClick={toggleOpen}
         >
           <span>
-            Selected: <span className="font-bold ml-1">{totalSelected}</span> /{' '}
+            Selected: <span className="font-bold ml-1">{totalSelected}</span> /{" "}
             <span className="mr-1">{totalSubjects}</span>
           </span>
         </button>

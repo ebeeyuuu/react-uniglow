@@ -41,6 +41,20 @@ const SecondSlide = ({ slideState, setSlideState, onNextSlide }) => {
   const [isDetailedConfirmVisible, setIsDetailedConfirmVisible] =
     useState(false);
 
+  useEffect(() => {
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setIsDetailedConfirmVisible(false);
+      }
+    };
+
+    document.addEventListener("keydown", handleEscape);
+
+    return () => {
+      document.removeEventListener("keydown", handleEscape);
+    };
+  }, []);
+
   const [animateGenericSubjects, setAnimateGenericSubjects] = useState(false);
   const [animateSpecificSubjects, setAnimateSpecificSubjects] = useState(false);
 
@@ -121,6 +135,10 @@ const SecondSlide = ({ slideState, setSlideState, onNextSlide }) => {
     setIsConfirmVisible(true);
   };
 
+  const handleCancel = () => {
+    setIsConfirmVisible(false);
+  };
+
   const handleFinalConfirm = () => {
     setIsConfirmVisible(false);
     setAnimateGenericSubjects(false);
@@ -129,11 +147,6 @@ const SecondSlide = ({ slideState, setSlideState, onNextSlide }) => {
 
   const handleConfirmClick = () => {
     setIsDetailedConfirmVisible(true);
-  };
-
-  const handleCancel = () => {
-    setIsConfirmVisible(false);
-    setAnimateGenericSubjects(true);
   };
 
   useEffect(() => {
@@ -464,9 +477,11 @@ const SecondSlide = ({ slideState, setSlideState, onNextSlide }) => {
 
                 {isDetailedConfirmVisible && (
                   <ConfirmDetailedSubjects
-                    onConfirm={() => {}}
-                    onCancel={() => {}}
-                    selectedSubjects={selectedSubjects}
+                    onConfirm={() => {
+                      setIsDetailedConfirmVisible(false);
+                    }}
+                    onCancel={() => setIsDetailedConfirmVisible(false)}
+                    selectedSubjects={selectedDetailedSubjects}
                   />
                 )}
               </div>

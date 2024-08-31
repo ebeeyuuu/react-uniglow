@@ -25,7 +25,7 @@ const CollapsibleCounter: React.FC<CollapsibleCounterProps> = ({
 
   return (
     <motion.div
-      className="fixed top-0 right-0 bg-black p-4 rounded-3xl shadow-lg z-50"
+      className="fixed top-0 right-0 bg-black/50 p-4 rounded-xl backdrop-blur-sm shadow-lg z-50"
       initial={{ y: "100%" }}
       animate={{ y: 0 }}
       transition={{ type: "spring", stiffness: 260, damping: 20 }}
@@ -44,7 +44,12 @@ const CollapsibleCounter: React.FC<CollapsibleCounterProps> = ({
         </div>
         <button
           onClick={onConfirmClick}
-          className="bg-[#003dcc] text-white px-4 py-2 rounded-lg hover:bg-[#002a8f] transition-colors duration-200"
+          className={`bg-[#003dcc] text-white px-4 py-2 rounded-lg transition-colors duration-200 ${
+            totalSelected === 0
+              ? "opacity-50 cursor-not-allowed"
+              : "hover:bg-[#002a8f]"
+          }`}
+          disabled={totalSelected === 0} // Disable button if no subjects are selected
         >
           Confirm Selection
         </button>

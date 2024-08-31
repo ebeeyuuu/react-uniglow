@@ -6,6 +6,7 @@ import ConfirmDialog from "./SecondSlide/ConfirmDialog";
 import CollapsibleCounter from "./SecondSlide/CollapsibleCounter";
 import SelectionCounter from "./SecondSlide/SelectionCounter";
 import Checkmark from "./SecondSlide/Checkmark";
+import ConfirmDetailedSubjects from "./SecondSlide/ConfirmDetailedSubjects";
 
 import { Subject, mergeSubjects } from "./SecondSlide/mergeSubjects";
 
@@ -22,7 +23,7 @@ const SubjectButton = ({ subject, onClick, isSelected, className }) => (
   </motion.div>
 );
 
-const SecondSlide = ({ slideState, setSlideState }) => {
+const SecondSlide = ({ slideState, setSlideState, onNextSlide }) => {
   const [selectedSubjects, setSelectedSubjects] = useState([]);
   const [selectedDetailedSubjects, setSelectedDetailedSubjects] = useState<
     Subject[]
@@ -37,6 +38,9 @@ const SecondSlide = ({ slideState, setSlideState }) => {
   );
 
   const [isConfirmVisible, setIsConfirmVisible] = useState(false);
+  const [isDetailedConfirmVisible, setIsDetailedConfirmVisible] =
+    useState(false);
+
   const [animateGenericSubjects, setAnimateGenericSubjects] = useState(false);
   const [animateSpecificSubjects, setAnimateSpecificSubjects] = useState(false);
 
@@ -121,6 +125,10 @@ const SecondSlide = ({ slideState, setSlideState }) => {
     setIsConfirmVisible(false);
     setAnimateGenericSubjects(false);
     setAnimateSpecificSubjects(true);
+  };
+
+  const handleConfirmClick = () => {
+    setIsDetailedConfirmVisible(true);
   };
 
   const handleCancel = () => {
@@ -449,8 +457,17 @@ const SecondSlide = ({ slideState, setSlideState }) => {
                       selectedSubjects={selectedSubjects}
                       sectionCounts={sectionCounts}
                       onSubjectSelect={handleSectionSelect}
+                      onConfirmClick={handleConfirmClick}
                     />
                   </div>
+                )}
+
+                {isDetailedConfirmVisible && (
+                  <ConfirmDetailedSubjects
+                    onConfirm={() => {}}
+                    onCancel={() => {}}
+                    selectedSubjects={selectedSubjects}
+                  />
                 )}
               </div>
             </motion.div>

@@ -12,12 +12,14 @@ interface ConfirmDetailedSubjectsProps {
   onConfirm: () => void;
   onCancel: () => void;
   selectedSubjects: { [key: string]: DetailedSubject[] };
+  categories: string[];
 }
 
 const ConfirmDetailedSubjects: React.FC<ConfirmDetailedSubjectsProps> = ({
   onConfirm,
   onCancel,
   selectedSubjects,
+  categories,
 }) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
@@ -47,17 +49,27 @@ const ConfirmDetailedSubjects: React.FC<ConfirmDetailedSubjectsProps> = ({
             <div
               className={`${isWideScreen ? "w-1/2 pr-4" : "h-1/2 mb-4"} p-10 scrollbar-hide rounded-xl bg-black/60 backdrop-blur-lg overflow-y-auto`}
             >
-              {Object.entries(selectedSubjects).map((subjects, index) => (
-                <div key={index} className="mb-6">
-                  <ul>
-                    {subjects.map((subject) => (
-                      <li key={subject.id} className="text-lg mb-2">
-                        {subject.subject}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
+              {categories.map((category, index) => {
+                const subjects = selectedSubjects;
+                if (subjects.length === 0) return null;
+                return (
+                  <div key={index} className="mb-6">
+                    <div className="text-lg font-medium mb-2 uppercase">
+                      Section No. {index + 1}
+                    </div>
+                    <div className="text-3xl font-extrabold mb-4">
+                      {category}
+                    </div>
+                    <ul>
+                      {subjects.map((subject, index) => (
+                        <li key={index} className="text-lg mb-2">
+                          {subject.subject}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                );
+              })}
             </div>
             <div
               className={`${isWideScreen ? "w-1/2 pl-4" : "h-1/2"} p-10 scrollbar-hide rounded-xl bg-black/60 backdrop-blur-lg overflow-y-auto`}
@@ -66,14 +78,11 @@ const ConfirmDetailedSubjects: React.FC<ConfirmDetailedSubjectsProps> = ({
                 All Selected Subjects
               </h3>
               <ul>
-                {Object.entries(selectedSubjects).map((subjects, index) => (
-                  <ul>
-                    {subjects.map((subject) => (
-                      <li key={subject.id} className="text-lg mb-2">
-                        {subject.subject}
-                      </li>
-                    ))}
-                  </ul>
+                {selectedSubjects.map((subject) => (
+                  <li key={subject.id} className="text-lg mb-2">
+                    {subject.subject} - Level: {subject.level}, Difficulty:{" "}
+                    {subject.difficulty}
+                  </li>
                 ))}
               </ul>
             </div>

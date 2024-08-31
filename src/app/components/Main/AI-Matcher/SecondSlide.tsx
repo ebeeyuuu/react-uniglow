@@ -482,6 +482,7 @@ const SecondSlide = ({ slideState, setSlideState, onNextSlide }) => {
                     }}
                     onCancel={() => setIsDetailedConfirmVisible(false)}
                     selectedSubjects={selectedDetailedSubjects}
+                    categories={selectedSubjects}
                   />
                 )}
               </div>

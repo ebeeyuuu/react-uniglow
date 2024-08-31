@@ -74,12 +74,12 @@ const ConfirmDetailedSubjects: React.FC<ConfirmDetailedSubjectsProps> = ({
             <div
               className={`${isWideScreen ? "w-1/2 pl-4" : "h-1/2"} p-10 scrollbar-hide rounded-xl bg-black/60 backdrop-blur-lg overflow-y-auto`}
             >
-              <h3 className="text-xl font-semibold mb-2">
+              <h3 className="text-3xl font-extrabold mb-2">
                 All Selected Subjects
               </h3>
               <ul>
                 {selectedSubjects.map((subject) => (
-                  <li key={subject.id} className="text-lg mb-2">
+                  <li key={subject.id} className="text-lg mb-6">
                     {subject.subject} - Level: {subject.level}, Difficulty:{" "}
                     {subject.difficulty}
                   </li>

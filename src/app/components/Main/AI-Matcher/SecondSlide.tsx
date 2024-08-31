@@ -88,10 +88,8 @@ const SecondSlide = ({ slideState, setSlideState }) => {
               s.level === subject.level
             ),
         );
-      } else if (prev.length < 10) {
-        newSelected = [...prev, subject];
       } else {
-        return prev; // Don't change if already at 10 selections
+        newSelected = [...prev, subject];
       }
 
       // Update section counts

@@ -1,8 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion'
+import React from "react";
+import { motion } from "framer-motion";
 
 const ConfirmDialog = ({ onConfirm, onCancel, subjects }) => (
-  <motion.div 
+  <motion.div
     className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center"
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
@@ -12,15 +12,25 @@ const ConfirmDialog = ({ onConfirm, onCancel, subjects }) => (
     <div className="bg-black px-24 py-20 rounded-xl shadow-md">
       <p className="text-xl font-bold mb-2">Confirm chosen subjects:</p>
       <ol className="mb-10">
-        {(subjects.sort((a, b) => a.localeCompare(b))).map((subject, index) => (
-          <li key={subject} className="text-lg font-medium">{index + 1}. {subject}</li>
-        ))}
+        {subjects
+          .sort((a, b) => a.localeCompare(b))
+          .map((subject, index) => (
+            <li key={subject} className="text-lg font-medium">
+              {index + 1}. {subject}
+            </li>
+          ))}
       </ol>
       <div className="flex justify-center gap-x-4">
-        <button className="border-[#003dcc] border-2 bg-black hover:bg-[#003dcc] text-white font-bold py-3 px-5 rounded-lg transiton-all duration-300 ease-in-out" onClick={onConfirm}>
+        <button
+          className="border-[#003dcc] border-2 bg-black hover:bg-[#003dcc] text-white font-bold py-3 px-5 rounded-lg transiton-all duration-300 ease-in-out"
+          onClick={onConfirm}
+        >
           Yes
         </button>
-        <button className="border-[#f31722] border-2 bg-black hover:bg-[#f31722] text-white font-bold py-3 px-5 rounded-lg transition-all duration-300 ease-in-out" onClick={onCancel}>
+        <button
+          className="border-[#f31722] border-2 bg-black hover:bg-[#f31722] text-white font-bold py-3 px-5 rounded-lg transition-all duration-300 ease-in-out"
+          onClick={onCancel}
+        >
           No
         </button>
       </div>

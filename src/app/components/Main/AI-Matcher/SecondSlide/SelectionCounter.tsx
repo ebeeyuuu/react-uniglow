@@ -11,7 +11,7 @@ const SelectionCounter = ({ count, onConfirm }) => (
   >
     <span className="mr-2 font-medium">{count}/10 </span>
     <button
-      className="bg-[#003dcc] border-white border-2 hover:border-[#e1960c] font-bold py-2 px-4 rounded-full transition-colors ease-in-out duration-500"
+      className="bg-[#003dcc] hover:bg-white hover:text-[#003dcc] font-bold py-2 px-4 rounded-full transition-colors ease-in-out duration-500"
       onClick={onConfirm}
     >
       Confirm

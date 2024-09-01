@@ -148,6 +148,25 @@ const SecondSlide = ({ slideState, setSlideState, onNextSlide }) => {
     setIsDetailedConfirmVisible(true);
   };
 
+  const handleRemoveSubject = (subjectToRemove: Subject) => {
+    setSelectedDetailedSubjects((prev) =>
+      prev.filter(
+        (subject) =>
+          !(
+            subject.id === subjectToRemove.id &&
+            subject.difficulty === subjectToRemove.difficulty &&
+            subject.level === subjectToRemove.level &&
+            subject.category === subject.category
+          ),
+      ),
+    );
+
+    setSectionCounts((prev) => ({
+      ...prev,
+      [subjectToRemove.category]: prev[subjectToRemove.category] - 1,
+    }));
+  };
+
   useEffect(() => {
     setTimeout(() => {
       setAnimateGenericSubjects(true);
@@ -482,6 +501,7 @@ const SecondSlide = ({ slideState, setSlideState, onNextSlide }) => {
                     onCancel={() => setIsDetailedConfirmVisible(false)}
                     selectedSubjects={selectedDetailedSubjects}
                     categories={selectedSubjects}
+                    onRemoveSubject={handleRemoveSubject}
                   />
                 )}
               </div>

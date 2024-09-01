@@ -23,6 +23,7 @@ const ConfirmDetailedSubjects: React.FC<ConfirmDetailedSubjectsProps> = ({
   onCancel,
   selectedSubjects,
   categories,
+  onRemoveSubject,
 }) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [removingSubject, setRemovingSubject] = useState<string | null>(null);
@@ -32,6 +33,15 @@ const ConfirmDetailedSubjects: React.FC<ConfirmDetailedSubjectsProps> = ({
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  useEffect(() => {
+    if (removingSubject) {
+      const timer = setTimeout(() => {
+        setRemovingSubject(null);
+      }, 300); // Match this with the animation duration
+      return () => clearTimeout(timer);
+    }
+  }, [removingSubject]);
 
   const groupedSubjects = categories.reduce(
     (acc, category) => {
@@ -45,10 +55,7 @@ const ConfirmDetailedSubjects: React.FC<ConfirmDetailedSubjectsProps> = ({
 
   const handleRemoveSubject = (subject: DetailedSubject) => {
     setRemovingSubject(subject.id);
-    setTimeout(() => {
-      onRemoveSubject(subject);
-      setRemovingSubject(null);
-    }, 300);
+    onRemoveSubject(subject);
   };
 
   return (
@@ -75,9 +82,9 @@ const ConfirmDetailedSubjects: React.FC<ConfirmDetailedSubjectsProps> = ({
                       {category}
                     </div>
                     <AnimatePresence>
-                      {subjects.map((subject, index) => (
+                      {subjects.map((subject) => (
                         <motion.div
-                          key={index}
+                          key={subject.id}
                           initial={{ opacity: 1, height: "auto" }}
                           animate={{
                             opacity: removingSubject === subject.id ? 0 : 1,

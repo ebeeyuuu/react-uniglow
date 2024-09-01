@@ -88,7 +88,7 @@ const SecondSlide = ({ slideState, setSlideState, onNextSlide }) => {
     );
   };
 
-  const handleDetailedSubjectClick = (subject: Subject) => {
+  const handleDetailedSubjectClick = (subject: Subject, category: string) => {
     setSelectedDetailedSubjects((prev) => {
       const isAlreadySelected = prev.some(
         (s) =>
@@ -107,10 +107,9 @@ const SecondSlide = ({ slideState, setSlideState, onNextSlide }) => {
             ),
         );
       } else {
-        newSelected = [...prev, subject];
+        newSelected = [...prev, { ...subject, category }];
       }
 
-      // Update section counts
       const newSectionCounts = Object.entries(
         mergeSubjects(selectedSubjects),
       ).reduce((counts, [section, subjects]) => {
@@ -408,7 +407,7 @@ const SecondSlide = ({ slideState, setSlideState, onNextSlide }) => {
                               key={idx}
                               className="bg-[#001f66] hover:bg-[#003fd3] rounded-xl row-span-1 col-span-1 w-full h-full flex justify-center items-center flex-col gap-2 min-h-[350px] px-10 py-4 scale-100 hover:scale-[105%] transition-all duration-300 ease-in-out"
                               onClick={() =>
-                                handleDetailedSubjectClick(subject)
+                                handleDetailedSubjectClick(subject, section)
                               }
                             >
                               <div className="border-2 border-white/50 text-xs w-full h-[30%] mb-4 rounded-xl justify-center items-center flex">

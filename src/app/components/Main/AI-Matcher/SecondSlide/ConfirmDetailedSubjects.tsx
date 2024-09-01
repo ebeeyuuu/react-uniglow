@@ -1,18 +1,21 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { FaTimes } from "react-icons/fa";
 
 interface DetailedSubject {
   id: string;
   subject: string;
   difficulty: number;
   level: string;
+  category: string;
 }
 
 interface ConfirmDetailedSubjectsProps {
   onConfirm: () => void;
   onCancel: () => void;
-  selectedSubjects: { [key: string]: DetailedSubject[] };
+  selectedSubjects: DetailedSubject[];
   categories: string[];
+  onRemoveSubject: (subject: DetailedSubject) => void;
 }
 
 const ConfirmDetailedSubjects: React.FC<ConfirmDetailedSubjectsProps> = ({
@@ -22,6 +25,7 @@ const ConfirmDetailedSubjects: React.FC<ConfirmDetailedSubjectsProps> = ({
   categories,
 }) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [removingSubject, setRemovingSubject] = useState<string | null>(null);
 
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
@@ -29,73 +33,84 @@ const ConfirmDetailedSubjects: React.FC<ConfirmDetailedSubjectsProps> = ({
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const isWideScreen = windowWidth > 1200;
+  const groupedSubjects = categories.reduce(
+    (acc, category) => {
+      acc[category] = selectedSubjects.filter(
+        (subject) => subject.category === category,
+      );
+      return acc;
+    },
+    {} as Record<string, DetailedSubject[]>,
+  );
+
+  const handleRemoveSubject = (subject: DetailedSubject) => {
+    setRemovingSubject(subject.id);
+    setTimeout(() => {
+      onRemoveSubject(subject);
+      setRemovingSubject(null);
+    }, 300);
+  };
 
   return (
     <AnimatePresence>
       <motion.div
-        className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center"
+        className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center p-4 scrollbar-hide"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <div
-          className={`rounded-xl shadow-md ${isWideScreen ? "w-4/5 h-3/4" : "w-11/12 h-5/6"}`}
-        >
-          <div
-            className={`flex ${isWideScreen ? "flex-row" : "flex-col"} h-[calc(100%-100px)] gap-6`}
-          >
-            <div
-              className={`${isWideScreen ? "w-1/2 pr-4" : "h-1/2 mb-4"} p-10 scrollbar-hide rounded-xl bg-black/60 backdrop-blur-lg overflow-y-auto`}
-            >
+        <div className="bg-black/60 backdrop-blur-lg rounded-xl shadow-md w-full max-w-7xl h-[90vh] overflow-hidden flex flex-col">
+          <div className="flex-grow overflow-y-auto p-6 scrollbar-hide">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {categories.map((category, index) => {
-                const subjects = selectedSubjects;
+                const subjects = groupedSubjects[category] || [];
                 if (subjects.length === 0) return null;
                 return (
-                  <div key={index} className="mb-6">
-                    <div className="text-lg font-medium mb-2 uppercase">
-                      Section No. {index + 1}
+                  <div key={index} className="bg-gray-800/50 p-14 rounded-lg">
+                    <div className="text-xl font-medium mb-1 text-gray-400 uppercase">
+                      Section {index + 1}
                     </div>
-                    <div className="text-3xl font-extrabold mb-4">
+                    <div className="text-3xl font-bold mb-3 text-white">
                       {category}
                     </div>
-                    <ul>
+                    <AnimatePresence>
                       {subjects.map((subject, index) => (
-                        <li key={index} className="text-lg mb-2">
-                          {subject.subject}
-                        </li>
+                        <motion.div
+                          key={index}
+                          initial={{ opacity: 1, height: "auto" }}
+                          animate={{
+                            opacity: removingSubject === subject.id ? 0 : 1,
+                            height: removingSubject === subject.id ? 0 : "auto",
+                          }}
+                          exit={{ opacity: 0, height: 0 }}
+                          transition={{ duration: 0.3 }}
+                          className="flex justify-between items-center text-sm text-gray-200 mb-2"
+                        >
+                          <span>{subject.subject}</span>
+                          <button
+                            onClick={() => handleRemoveSubject(subject)}
+                            className="text-white hover:text-red-500 transition-colors duration-200"
+                          >
+                            <FaTimes />
+                          </button>
+                        </motion.div>
                       ))}
-                    </ul>
+                    </AnimatePresence>
                   </div>
                 );
               })}
             </div>
-            <div
-              className={`${isWideScreen ? "w-1/2 pl-4" : "h-1/2"} p-10 scrollbar-hide rounded-xl bg-black/60 backdrop-blur-lg overflow-y-auto`}
-            >
-              <h3 className="text-3xl font-extrabold mb-2">
-                All Selected Subjects
-              </h3>
-              <ul>
-                {selectedSubjects.map((subject) => (
-                  <li key={subject.id} className="text-lg mb-6">
-                    {subject.subject} - Level: {subject.level}, Difficulty:{" "}
-                    {subject.difficulty}
-                  </li>
-                ))}
-              </ul>
-            </div>
           </div>
-          <div className="flex justify-center gap-x-4 mt-6">
+          <div className="flex justify-center gap-x-4 p-4 bg-black/80">
             <button
-              className="border-[#003dcc] border-2 bg-black hover:bg-[#003dcc] text-white font-bold py-3 px-5 rounded-lg transition-all duration-300 ease-in-out"
+              className="border-[#003dcc] border-2 bg-black hover:bg-[#003dcc] text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 ease-in-out"
               onClick={onConfirm}
             >
               Confirm
             </button>
             <button
-              className="border-[#f31722] border-2 bg-black hover:bg-[#f31722] text-white font-bold py-3 px-5 rounded-lg transition-all duration-300 ease-in-out"
+              className="border-[#f31722] border-2 bg-black hover:bg-[#f31722] text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 ease-in-out"
               onClick={onCancel}
             >
               Cancel

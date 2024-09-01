@@ -9,8 +9,8 @@ const ConfirmDialog = ({ onConfirm, onCancel, subjects }) => (
     exit={{ opacity: 0 }}
     transition={{ duration: 0.5 }}
   >
-    <div className="bg-black px-24 py-20 rounded-xl shadow-md">
-      <p className="text-xl font-bold mb-2">Confirm chosen subjects:</p>
+    <div className="bg-black/80 backdrop-blur-md px-24 py-20 rounded-xl shadow-md">
+      <p className="text-3xl font-bold mb-6">Confirm chosen subjects:</p>
       <ol className="mb-10">
         {subjects
           .sort((a, b) => a.localeCompare(b))

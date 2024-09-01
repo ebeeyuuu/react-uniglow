@@ -72,7 +72,6 @@ const ConfirmDetailedSubjects: React.FC<ConfirmDetailedSubjectsProps> = ({
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {categories.map((category, index) => {
                 const subjects = groupedSubjects[category] || [];
-                if (subjects.length === 0) return null;
                 return (
                   <div key={index} className="bg-gray-800/50 p-14 rounded-lg">
                     <div className="text-xl font-medium mb-1 text-gray-400 uppercase">
@@ -82,27 +81,34 @@ const ConfirmDetailedSubjects: React.FC<ConfirmDetailedSubjectsProps> = ({
                       {category}
                     </div>
                     <AnimatePresence>
-                      {subjects.map((subject) => (
-                        <motion.div
-                          key={subject.id}
-                          initial={{ opacity: 1, height: "auto" }}
-                          animate={{
-                            opacity: removingSubject === subject.id ? 0 : 1,
-                            height: removingSubject === subject.id ? 0 : "auto",
-                          }}
-                          exit={{ opacity: 0, height: 0 }}
-                          transition={{ duration: 0.3 }}
-                          className="flex justify-between items-center text-sm text-gray-200 mb-2"
-                        >
-                          <span>{subject.subject}</span>
-                          <button
-                            onClick={() => handleRemoveSubject(subject)}
-                            className="text-white hover:text-red-500 transition-colors duration-200"
+                      {subjects.length > 0 ? (
+                        subjects.map((subject) => (
+                          <motion.div
+                            key={subject.id}
+                            initial={{ opacity: 1, height: "auto" }}
+                            animate={{
+                              opacity: removingSubject === subject.id ? 0 : 1,
+                              height:
+                                removingSubject === subject.id ? 0 : "auto",
+                            }}
+                            exit={{ opacity: 0, height: 0 }}
+                            transition={{ duration: 0.3 }}
+                            className="flex justify-between items-center text-sm text-gray-200 mb-2"
                           >
-                            <FaTimes />
-                          </button>
-                        </motion.div>
-                      ))}
+                            <span>{subject.subject}</span>
+                            <button
+                              onClick={() => handleRemoveSubject(subject)}
+                              className="text-white hover:text-red-500 transition-colors duration-200"
+                            >
+                              <FaTimes />
+                            </button>
+                          </motion.div>
+                        ))
+                      ) : (
+                        <div className="text-gray-500">
+                          No selected subjects in this section
+                        </div>
+                      )}
                     </AnimatePresence>
                   </div>
                 );

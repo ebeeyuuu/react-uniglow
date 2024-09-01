@@ -171,7 +171,7 @@ const SecondSlide = ({ slideState, setSlideState, onNextSlide }) => {
     setTimeout(() => {
       setAnimateGenericSubjects(true);
       setScrollEnabled(true);
-    }, 3000);
+    }, 5000);
   });
 
   useEffect(() => {
@@ -277,8 +277,13 @@ const SecondSlide = ({ slideState, setSlideState, onNextSlide }) => {
       <div className="relative w-full h-[100vh] scroll-smooth">
         <AnimatePresence>
           {!animateGenericSubjects && !animateSpecificSubjects && (
-            <motion.div className="text-3xl font-bold fixed top-0 left-0 w-full h-full flex justify-center items-center p-12 text-center">
-              Let&apos;s talk about you - what subjects light you up?
+            <motion.div
+              className="text-3xl font-bold fixed top-0 left-0 w-full h-full flex justify-center items-center p-12 text-center"
+              initial={{ opacity: 1 }}
+              animate={{ opacity: 0 }}
+              transition={{ duration: 0.5, ease: "easeInOut", delay: 3 }}
+            >
+              What subjects light you up?
             </motion.div>
           )}
         </AnimatePresence>

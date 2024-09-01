@@ -68,16 +68,16 @@ const ConfirmDetailedSubjects: React.FC<ConfirmDetailedSubjectsProps> = ({
         transition={{ duration: 0.5 }}
       >
         <div className="bg-black/60 backdrop-blur-lg rounded-xl shadow-md w-full max-w-7xl h-[90vh] overflow-hidden flex flex-col">
-          <div className="flex-grow overflow-y-auto p-6 scrollbar-hide">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="flex-grow overflow-y-auto p-10 scrollbar-hide">
+            <div className="grid max-md:grid-cols-1 grid-cols-2 gap-6">
               {categories.map((category, index) => {
                 const subjects = groupedSubjects[category] || [];
                 return (
-                  <div key={index} className="bg-gray-800/50 p-14 rounded-lg">
+                  <div key={index} className="bg-gray-800/50 p-10 rounded-lg">
                     <div className="text-xl font-medium mb-1 text-gray-400 uppercase">
                       Section {index + 1}
                     </div>
-                    <div className="text-3xl font-bold mb-3 text-white">
+                    <div className="text-3xl font-bold mb-5 text-white">
                       {category}
                     </div>
                     <AnimatePresence>
@@ -93,7 +93,7 @@ const ConfirmDetailedSubjects: React.FC<ConfirmDetailedSubjectsProps> = ({
                             }}
                             exit={{ opacity: 0, height: 0 }}
                             transition={{ duration: 0.3 }}
-                            className="flex justify-between items-center text-sm text-gray-200 mb-2"
+                            className="flex justify-between items-center text-base text-gray-200 mb-2"
                           >
                             <span>{subject.subject}</span>
                             <button
@@ -115,7 +115,7 @@ const ConfirmDetailedSubjects: React.FC<ConfirmDetailedSubjectsProps> = ({
               })}
             </div>
           </div>
-          <div className="flex justify-center items-center gap-x-4 mb-20">
+          <div className="w-full flex justify-center items-center gap-x-4 mb-20">
             <button
               className="border-[#003dcc] border-2 bg-black hover:bg-[#003dcc] text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 ease-in-out text-lg"
               onClick={onConfirm}
@@ -123,7 +123,7 @@ const ConfirmDetailedSubjects: React.FC<ConfirmDetailedSubjectsProps> = ({
               Confirm
             </button>
             <button
-              className="border-[#f31722] border-2 bg-black hover:bg-[#f31722] text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 ease-in-out mt-[1px] text-lg"
+              className="border-[#f31722] border-2 bg-black hover:bg-[#f31722] text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 ease-in-out text-lg"
               onClick={onCancel}
             >
               Cancel

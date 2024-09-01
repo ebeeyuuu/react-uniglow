@@ -115,15 +115,15 @@ const ConfirmDetailedSubjects: React.FC<ConfirmDetailedSubjectsProps> = ({
               })}
             </div>
           </div>
-          <div className="flex justify-center gap-x-4 p-4 bg-black/80">
+          <div className="flex justify-center items-center gap-x-4 mb-20">
             <button
-              className="border-[#003dcc] border-2 bg-black hover:bg-[#003dcc] text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 ease-in-out"
+              className="border-[#003dcc] border-2 bg-black hover:bg-[#003dcc] text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 ease-in-out text-lg"
               onClick={onConfirm}
             >
               Confirm
             </button>
             <button
-              className="border-[#f31722] border-2 bg-black hover:bg-[#f31722] text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 ease-in-out"
+              className="border-[#f31722] border-2 bg-black hover:bg-[#f31722] text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 ease-in-out mt-[1px] text-lg"
               onClick={onCancel}
             >
               Cancel

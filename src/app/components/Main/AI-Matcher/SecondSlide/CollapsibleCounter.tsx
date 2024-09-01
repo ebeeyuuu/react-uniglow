@@ -67,7 +67,7 @@ const CollapsibleCounter: React.FC<CollapsibleCounterProps> = ({
             {selectedSubjects.map((subject) => (
               <div
                 key={subject}
-                className="flex justify-between items-center py-4 border-b border-gray-600"
+                className="flex justify-between items-center py-5 border-b border-white/80"
               >
                 <span className="text-white">{subject}</span>
                 <span className="text-white">

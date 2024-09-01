@@ -248,12 +248,12 @@ const SecondSlide = ({ slideState, setSlideState, onNextSlide }) => {
     },
     {
       name: "History",
-      className: "bg-[#02ad83] row-span-1 col-span-1 max-[850px]:row-span-2",
+      className: "bg-[#018967] row-span-1 col-span-1 max-[850px]:row-span-2",
     },
     {
       name: "Geography",
       className:
-        "bg-[#02ad83]/70 row-span-1 col-span-2 max-[850px]:row-span-2 max-[850px]:col-span-1",
+        "bg-[#018967]/70 row-span-1 col-span-2 max-[850px]:row-span-2 max-[850px]:col-span-1",
     },
     { name: "Art", className: "bg-[#08155e] row-span-2 col-span-1" },
     {
@@ -362,7 +362,7 @@ const SecondSlide = ({ slideState, setSlideState, onNextSlide }) => {
                     <select
                       value={sortMethod}
                       onChange={(e) => setSortMethod(e.target.value)}
-                      className="appearance-none bg-black text-xs border rounded-xl p-4 flex justify-center items-center w-[200px]"
+                      className="appearance-none bg-black text-xs border border-gray-300 hover:border-[#003dcc] smooth-animation rounded-xl p-4 flex justify-center items-center w-[150px] hover:bg-[#003dcc]"
                       style={{ height: "100%" }}
                     >
                       {sortOptions.map((option, index) => (
@@ -387,6 +387,14 @@ const SecondSlide = ({ slideState, setSlideState, onNextSlide }) => {
                         {showSelectedOnly
                           ? "Show All Subjects"
                           : "Show Selected Subjects"}
+                      </button>
+                    </div>
+                    <div className="flex items-center justify-center">
+                      <button
+                        onClick={() => setSelectedDetailedSubjects([])}
+                        className={`p-4 rounded-xl h-full w-full smooth-animation text-xs hover:bg-[#018967] border border-white bg-black hover:border-[#018967]`}
+                      >
+                        Clear Selected Subjects
                       </button>
                     </div>
                   </div>
@@ -414,10 +422,10 @@ const SecondSlide = ({ slideState, setSlideState, onNextSlide }) => {
 
                     return (
                       <div key={index} className="mb-20 p-10">
-                        <h2 className="text-xl font-medium mb-4 text-white/50 uppercase">
+                        <h2 className="text-2xl font-medium mb-4 text-[#f4b034] uppercase">
                           Section No.{index + 1}
                         </h2>
-                        <h1 className="text-3xl font-bold mb-10 text-white">
+                        <h1 className="text-5xl font-bold mb-16 text-white">
                           {section}
                         </h1>
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 3xl:grid-cols-7 4xl:grid-cols-8 gap-4">

@@ -73,11 +73,14 @@ const ConfirmDetailedSubjects: React.FC<ConfirmDetailedSubjectsProps> = ({
               {categories.map((category, index) => {
                 const subjects = groupedSubjects[category] || [];
                 return (
-                  <div key={index} className="bg-gray-800/50 p-10 rounded-lg">
-                    <div className="text-xl font-medium mb-1 text-gray-400 uppercase">
-                      Section {index + 1}
+                  <div
+                    key={index}
+                    className="bg-[#02ad83]/20 backdrop-blur-sm p-10 rounded-lg"
+                  >
+                    <div className="text-xl font-medium mb-3 text-[#f4b034]">
+                      Section No.{index + 1}
                     </div>
-                    <div className="text-3xl font-bold mb-5 text-white">
+                    <div className="text-3xl font-bold mb-8 text-white">
                       {category}
                     </div>
                     <AnimatePresence>
@@ -95,7 +98,9 @@ const ConfirmDetailedSubjects: React.FC<ConfirmDetailedSubjectsProps> = ({
                             transition={{ duration: 0.3 }}
                             className="flex justify-between items-center text-base text-gray-200 mb-2"
                           >
-                            <span>{subject.subject}</span>
+                            <span style={{ fontWeight: 600 }}>
+                              {subject.subject}
+                            </span>
                             <button
                               onClick={() => handleRemoveSubject(subject)}
                               className="text-white hover:text-red-500 transition-colors duration-200"
@@ -115,7 +120,7 @@ const ConfirmDetailedSubjects: React.FC<ConfirmDetailedSubjectsProps> = ({
               })}
             </div>
           </div>
-          <div className="w-full flex justify-center items-center gap-x-4 mb-20">
+          <div className="flex justify-center items-center gap-x-4 mb-16 bg-transparent">
             <button
               className="border-[#003dcc] border-2 bg-black hover:bg-[#003dcc] text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 ease-in-out text-lg"
               onClick={onConfirm}

@@ -7,21 +7,9 @@ import CollapsibleCounter from "./SecondSlide/CollapsibleCounter";
 import SelectionCounter from "./SecondSlide/SelectionCounter";
 import Checkmark from "./SecondSlide/Checkmark";
 import ConfirmDetailedSubjects from "./SecondSlide/ConfirmDetailedSubjects";
+import SubjectButton from "./SecondSlide/SubjectButton";
 
 import { Subject, mergeSubjects } from "./SecondSlide/mergeSubjects";
-
-const SubjectButton = ({ subject, onClick, isSelected, className }) => (
-  <motion.div
-    className={`${className} rounded-xl flex justify-center items-center smooth-animation cursor-pointer text-xl font-bold scale-100 hover:scale-[102%]`}
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    transition={{ duration: 0.2 }}
-    onClick={() => onClick(subject)}
-  >
-    {subject}
-    {isSelected && <Checkmark isSelected={isSelected} />}
-  </motion.div>
-);
 
 const SecondSlide = ({ slideState, setSlideState, onNextSlide }) => {
   const [selectedSubjects, setSelectedSubjects] = useState([]);

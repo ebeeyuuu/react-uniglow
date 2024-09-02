@@ -1,27 +1,61 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { universityEnvironmentData } from "@/data";
+import EndlessScroll from "./ThirdSlide/EndlessScroll";
 
 const ThirdSlide = () => {
+  const [selectedType, setSelectedType] = useState<string | null>(null);
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setSelectedType(null);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  });
+
+  const environments = ["bustlingCities", "suburbanAreas", "ruralSettings"];
+
+  const handleSelection = (type: string) => {
+    setSelectedType(type);
+  };
+
   return (
-    <div className="w-full flex justify-center items-center">
-      <div className="w-full flex flex-col gap-y-10">
-        <div className="text-center text-xl">
-          When you think about your ideal college location, do you picture
-          yourself in a <strong>bustling city</strong>, a{" "}
-          <strong>quiet suburban area</strong>, or a{" "}
-          <strong>rural setting</strong> surrounded by nature?
-        </div>
-        <div className="grid grid-cols-3 grid-rows-1 gap-4 h-[400px]">
-          <div className="bg-[#003dcc] rounded-xl items-center justify-center flex scale-100 hover:scale-[105%] transition-all duration-500 ease-in-out">
-            <p className="text-xl font-bold">Bustling Cities</p>
-          </div>
-          <div className="bg-[#003dcc] rounded-xl items-center justify-center flex scale-100 hover:scale-[105%] transition-all duration-500 ease-in-out">
-            <p className="text-xl font-bold">Suburban Areas</p>
-          </div>
-          <div className="bg-[#003dcc] rounded-xl items-center justify-center flex scale-100 hover:scale-[105%] transition-all duration-500 ease-in-out">
-            <p className="text-xl font-bold">Rural Settings</p>
-          </div>
-        </div>
+    <div className="w-full flex flex-col justify-center items-center overflow-y-auto scrollbar-hide">
+      <motion.div
+        className="text-center text-xl mb-10"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        When you think about your ideal college location, do you picture
+        yourself in a <strong>bustling city</strong>, a{" "}
+        <strong>quiet suburban area</strong>, or a{" "}
+        <strong>rural setting</strong> surrounded by nature?
+      </motion.div>
+      <div className="grid grid-cols-3 gap-4 w-full">
+        {environments.map((type) => (
+          <motion.div
+            key={type}
+            className="bg-[#003dcc] rounded-xl flex items-center justify-center cursor-pointer h-[400px]"
+            onClick={() => handleSelection(type)}
+            initial={{ scale: 1 }}
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.2, ease: "easeInOut" }}
+          >
+            <p className="text-xl font-bold uppercase italic">
+              {type.replace(/([A-Z])/g, " $1").trim()}
+            </p>
+          </motion.div>
+        ))}
       </div>
+      {selectedType && <EndlessScroll selectedCategory={selectedType} />}
     </div>
   );
 };

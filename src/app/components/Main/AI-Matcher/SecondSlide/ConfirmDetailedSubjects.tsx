@@ -75,7 +75,7 @@ const ConfirmDetailedSubjects: React.FC<ConfirmDetailedSubjectsProps> = ({
                 return (
                   <div
                     key={index}
-                    className="bg-[#02ad83]/20 backdrop-blur-sm p-10 rounded-lg"
+                    className="bg-[#02ad83]/40 backdrop-blur-sm p-10 rounded-lg"
                   >
                     <div className="text-xl font-medium mb-3 text-[#f4b034]">
                       Section No.{index + 1}
@@ -110,7 +110,7 @@ const ConfirmDetailedSubjects: React.FC<ConfirmDetailedSubjectsProps> = ({
                           </motion.div>
                         ))
                       ) : (
-                        <div className="text-gray-500">
+                        <div className="text-gray-300">
                           No selected subjects in this section
                         </div>
                       )}

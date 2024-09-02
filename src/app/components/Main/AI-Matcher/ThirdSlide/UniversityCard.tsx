@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const UniversityCard = ({ university, isActive }) => {
   return (
     <motion.div
-      className={`px-20 py-16 bg-[#024534] rounded-2xl shadow-md transition-transform min-h-[600px] duration-300 flex justify-center items-center flex-col ${
+      className={`px-20 py-16 bg-[#024534] mx-auto rounded-2xl shadow-md transition-transform min-h-[600px] duration-300 flex justify-center items-center flex-col ${
         isActive ? "scale-105" : "100"
       }`}
       initial={{ opacity: 0, y: 20 }}
@@ -17,7 +17,7 @@ const UniversityCard = ({ university, isActive }) => {
       <h3 className="text-xl font-semibold flex mr-auto mb-2">
         {university.name}
       </h3>
-      <p className="text-gray-300">{university.description}</p>
+      <p className="text-gray-300 mr-auto">{university.description}</p>
     </motion.div>
   );
 };

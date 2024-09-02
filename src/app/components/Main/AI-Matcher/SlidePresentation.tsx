@@ -15,7 +15,6 @@ const SlidePresentation: React.FC<SlidePresentationProps> = ({
 }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [prevSlideIndex, setPrevSlideIndex] = useState(0);
-
   const [slideStates, setSlideStates] = useState<Record<number, any>>({});
 
   const slideContents: (ReactElement | null)[] = Array(numSlides).fill(null);
@@ -63,6 +62,7 @@ const SlidePresentation: React.FC<SlidePresentationProps> = ({
                     ...prevStates,
                     [index]: state,
                   })),
+                onNextSlide: nextSlide,
               })
             ) : (
               <div>Blank Slide</div>

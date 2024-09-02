@@ -11,7 +11,17 @@ import SubjectButton from "./SecondSlide/SubjectButton";
 
 import { Subject, mergeSubjects } from "./SecondSlide/mergeSubjects";
 
-const SecondSlide = ({ slideState, setSlideState, onNextSlide }) => {
+type SlideProps = {
+  slideState: any;
+  setSlideState: (state: any) => void;
+  onNextSlide: () => void;
+};
+
+const SecondSlide: React.FC<SlideProps> = ({
+  slideState,
+  setSlideState,
+  onNextSlide,
+}) => {
   const [selectedSubjects, setSelectedSubjects] = useState([]);
   const [selectedDetailedSubjects, setSelectedDetailedSubjects] = useState<
     Subject[]
@@ -496,9 +506,7 @@ const SecondSlide = ({ slideState, setSlideState, onNextSlide }) => {
 
                 {isDetailedConfirmVisible && (
                   <ConfirmDetailedSubjects
-                    onConfirm={() => {
-                      setIsDetailedConfirmVisible(false);
-                    }}
+                    onConfirm={() => onNextSlide()}
                     onCancel={() => setIsDetailedConfirmVisible(false)}
                     selectedSubjects={selectedDetailedSubjects}
                     categories={selectedSubjects}

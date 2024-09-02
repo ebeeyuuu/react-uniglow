@@ -26,10 +26,14 @@ const ThirdSlide = () => {
     setSelectedType(type);
   };
 
+  const handleClose = () => {
+    setSelectedType(null);
+  };
+
   return (
-    <div className="relative w-full flex flex-col justify-center items-center overflow-y-auto scrollbar-hide">
+    <div className="relative w-full h-full flex flex-col justify-center items-center overflow-y-auto overflow-x-visible scrollbar-hide">
       <motion.div
-        className="text-center text-xl mb-10"
+        className="text-center text-xl mb-10 w-11/12"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -39,7 +43,7 @@ const ThirdSlide = () => {
         <strong>quiet suburban area</strong>, or a{" "}
         <strong>rural setting</strong> surrounded by nature?
       </motion.div>
-      <div className="grid grid-cols-3 gap-4 w-full">
+      <div className="grid grid-cols-3 gap-4 w-11/12">
         {environments.map((type) => (
           <motion.div
             key={type}
@@ -55,7 +59,9 @@ const ThirdSlide = () => {
           </motion.div>
         ))}
       </div>
-      {selectedType && <EndlessScroll selectedCategory={selectedType} />}
+      {selectedType && (
+        <EndlessScroll selectedCategory={selectedType} onClose={handleClose} />
+      )}
     </div>
   );
 };

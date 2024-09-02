@@ -12,7 +12,7 @@ const EndlessScroll = ({ selectedCategory, onClose }: EndlessScrollProps) => {
 
   return (
     <div className="absolute top-0 left-0 w-full h-full z-10 bg-black/20 backdrop-blur-sm">
-      <div className="overflow-y-auto scrollbar-hide flex flex-col gap-8 p-4 h-full">
+      <div className="overflow-y-auto scrollbar-hide flex flex-col gap-6 p-4 h-full">
         {universities.length ? (
           universities.map((university, index) => (
             <UniversityCard key={index} university={university} />

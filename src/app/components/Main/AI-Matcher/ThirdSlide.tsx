@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { universityEnvironmentData } from "@/data";
 import EndlessScroll from "./ThirdSlide/EndlessScroll";
@@ -18,7 +18,7 @@ const ThirdSlide = () => {
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
-  });
+  }, []);
 
   const environments = ["bustlingCities", "suburbanAreas", "ruralSettings"];
 
@@ -27,7 +27,7 @@ const ThirdSlide = () => {
   };
 
   return (
-    <div className="w-full flex flex-col justify-center items-center overflow-y-auto scrollbar-hide">
+    <div className="relative w-full flex flex-col justify-center items-center overflow-y-auto scrollbar-hide">
       <motion.div
         className="text-center text-xl mb-10"
         initial={{ opacity: 0, y: -20 }}

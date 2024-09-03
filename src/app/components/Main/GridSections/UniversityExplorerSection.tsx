@@ -72,7 +72,7 @@ const UniversityExplorerSection: React.FC<UniversityExplorerSectionProps> = ({
           unoptimized
         />
         <motion.div
-          className="absolute z-50 flex items-center justify-center flex-col gap-y-[10px]"
+          className="absolute z-0 flex items-center justify-center flex-col gap-y-[10px]"
           initial={{ opacity: 1, y: 0 }}
           animate={isHovered ? { opacity: 1, y: -10 } : { opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeInOut" }}

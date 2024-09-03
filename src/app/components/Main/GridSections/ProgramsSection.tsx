@@ -22,7 +22,7 @@ const ProgramsSection: React.FC<ProgramsSectionProps> = ({ index }) => {
     >
       <div className="p-5 max-[700px]:text-base max-[1000px]:text-lg max-[1300px]:text-2xl text-3xl transition-all duration-200 ease-in-out">
         <motion.div
-          className="flex justify-center items-center flex-col gap-y-[10px] z-10"
+          className="flex justify-center items-center flex-col gap-y-[10px]"
           initial={{ y: 0 }}
           animate={
             isHovered
@@ -52,7 +52,7 @@ const ProgramsSection: React.FC<ProgramsSectionProps> = ({ index }) => {
         </motion.div>
       </div>
       <motion.div
-        className="absolute max-[700px]:text-base max-[1000px]:text-lg max-[1300px]:text-2xl text-3xl z-50 flex items-center justify-center"
+        className="absolute max-[700px]:text-base max-[1000px]:text-lg max-[1300px]:text-2xl text-3xl flex items-center justify-center"
         initial={{ y: -30, opacity: 0 }}
         animate={
           isHovered

@@ -24,7 +24,7 @@ const FourthSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
         transition={{ duration: 0.5, ease: "easeInOut" }}
         className="flex flex-col items-center"
       >
-        <p className="text-center">
+        <p className="text-center text-3xl w-4/5">
           How important is access to cultural attractions like museums,
           theatres, or music venues in your ideal college town?
         </p>

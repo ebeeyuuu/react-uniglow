@@ -64,9 +64,9 @@ const NavBar = () => {
   }, []);
 
   return (
-    <div className="flex items-center justify-center h-screen">
+    <div className="flex items-center justify-center h-screen scrollbar-hide absolute z-50 left-1/2 -translate-x-1/2">
       <nav
-        className={`bg-[#001c5c] text-white p-4 flex flex-col h-[calc(100vh-70px)] justify-between items-center rounded-[20px] left-[20px] max-[1000px]:flex-row max-[1000px]:w-[calc(100vw-45px)] max-[1000px]:h-[100px] max-[1000px]:ml-0 absolute max-[1000px]:top-[40px] max-[1000px]:left-1/2 max-[1000px]:-translate-x-1/2 opacity-100 transition-colors duration-500 ease-in-out`}
+        className={`bg-[#001c5c] text-white p-4 flex flex-col h-[calc(100vh-70px)] justify-between items-center rounded-[20px] left-[20px] max-[1000px]:flex-row max-[1000px]:w-[calc(100vw-45px)] max-[1000px]:h-[100px] max-[1000px]:ml-0 absolute max-[1000px]:top-[20px] max-[1000px]:left-1/2 max-[1000px]:-translate-x-1/2 opacity-100 transition-colors duration-500 ease-in-out`}
         onMouseEnter={() => setIsHover(true)}
         onMouseLeave={() => setIsHover(false)}
       >
@@ -152,13 +152,13 @@ const NavBar = () => {
                 initial={{ opacity: 0, x: 30 }}
                 animate={{ opacity: 1, x: 0, transition: { duration: 0.5 } }}
                 exit={{ opacity: 0, x: 30 }}
-                className="absolute top-0 right-0 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none bg-[#002347bc] flex flex-col text-black px-[60px] py-[30px] max-[1000px]:mt-[100px] z-50"
+                className="absolute top-0 right-0 rounded-md shadow-lg bg-[#f4b034] ring-1 ring-black ring-opacity-5 focus:outline-none bg-[#002347bc] flex flex-col text-black px-[40px] py-[30px] max-[1000px]:mt-[100px] z-50"
               >
                 {navItems.map(({ href, label, icon: Icon }) => (
                   <Link
                     key={href}
                     href={href}
-                    className="flex items-center gap-x-[20px] my-4 text-lg hover:text-orange-500 smooth-animation w-full"
+                    className="flex items-center my-2 text-lg hover:text-white transition-all duration-300 ease-in-out w-full px-4 py-2 gap-x-[20px]"
                   >
                     <Icon className="" />
                     <div>{label}</div>
@@ -166,12 +166,12 @@ const NavBar = () => {
                 ))}
                 <button
                   onClick={() => setIsOpen(false)}
-                  className="absolute bottom-2 right-2 p-1 rounded-full hover:bg-gray-200"
+                  className="absolute bottom-2 right-2 p-3 rounded-full hover:bg-gray-200"
                   aria-label="Close menu"
                 >
                   <FaTimes
-                    size={20}
-                    className="max-[1000px]:w-[25px] max-[1000px]:h-[25px] text-gray-600"
+                    size={15}
+                    className="max-[1000px]:w-[25px] max-[1000px]:h-[25px] text-black"
                   />
                 </button>
               </motion.div>

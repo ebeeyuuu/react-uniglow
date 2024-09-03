@@ -72,7 +72,7 @@ const UniversityExplorerSection: React.FC<UniversityExplorerSectionProps> = ({
           unoptimized
         />
         <motion.div
-          className="absolute z-0 flex items-center justify-center flex-col gap-y-[10px]"
+          className="absolute z-10 flex items-center justify-center flex-col gap-y-[10px]"
           initial={{ opacity: 1, y: 0 }}
           animate={isHovered ? { opacity: 1, y: -10 } : { opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
@@ -95,7 +95,7 @@ const UniversityExplorerSection: React.FC<UniversityExplorerSectionProps> = ({
           </motion.p>
         </motion.div>
         <motion.div
-          className="absolute text-4xl z-50 max-[1300px]:text-3xl flex items-center justify-center"
+          className="absolute text-4xl z-10 max-[1300px]:text-3xl flex items-center justify-center"
           initial={{ y: 30, opacity: 0 }}
           animate={isHovered ? { y: 0, opacity: 1 } : { y: 30, opacity: 0 }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
@@ -106,7 +106,7 @@ const UniversityExplorerSection: React.FC<UniversityExplorerSectionProps> = ({
         {images.map((image, index) => (
           <motion.div
             key={index}
-            className={`absolute text-lg text-center z-50 mt-[90px] ${
+            className={`absolute text-lg text-center z-10 mt-[90px] ${
               index === currentIndex ? "opacity-100" : "opacity-0"
             }`}
             initial={{ y: 30, opacity: 0 }}

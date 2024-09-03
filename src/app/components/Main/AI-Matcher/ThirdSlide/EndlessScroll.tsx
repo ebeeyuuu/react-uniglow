@@ -11,8 +11,8 @@ const EndlessScroll = ({ selectedCategory, onClose }: EndlessScrollProps) => {
   const universities = universityEnvironmentData[selectedCategory] || [];
 
   return (
-    <div className="absolute top-0 left-0 w-full h-full z-10 bg-black/20 backdrop-blur-sm">
-      <div className="overflow-y-auto scrollbar-hide gap-6 p-4 h-full grid grid-cols-5 max-2xl:grid-cols-4 max-xl:grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1">
+    <div className="absolute top-0 left-0 w-full h-full z-10 bg-black/50 backdrop-blur-xl">
+      <div className="overflow-y-auto scrollbar-hide gap-6 p-4 h-full grid grid-cols-4 max-2xl:grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1">
         {universities.length ? (
           universities.map((university, index) => (
             <UniversityCard key={index} university={university} />

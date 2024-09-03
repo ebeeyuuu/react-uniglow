@@ -29,16 +29,19 @@ const ProgressSlider: React.FC<ProgressSliderProps> = ({ onValueChange }) => {
         max="100"
         value={progress}
         onChange={handleSliderChange}
-        className="w-[50vh] h-2 bg-gray-300 rounded-lg appearance-none mt-[30px]"
+        className="w-[30vh] h-[10px] bg-white rounded-lg appearance-none mt-8 cursor-pointer"
+        style={{
+          background: `linear-gradient(to right, #003dcc ${progress}%, #ddd ${progress}%)`,
+        }}
       />
       <input
         type="number"
         value={progress}
         onChange={handleSliderChange}
-        className="w-[60px] text-center border border-gray-300 rounded-md px-2 py-1 bg-black text-white appearance-none mt-[80px]"
+        className="w-[60px] text-center border border-gray-300 rounded-md px-2 py-1 bg-black text-white mt-20"
       />
       {/* Marks */}
-      <div className="absolute top-8 w-full flex justify-between px-2 text-xs text-white mt-[20px]">
+      <div className="absolute top-12 w-full flex justify-between px-2 text-xs text-white mt-4">
         {marks.map((mark) => (
           <div key={mark.value} className="relative w-full">
             {/* Mark */}
@@ -49,9 +52,9 @@ const ProgressSlider: React.FC<ProgressSliderProps> = ({ onValueChange }) => {
             {/* Label */}
             <div
               className="absolute top-4 left-1/2 transform -translate-x-1/2"
-              style={{ left: `calc(${mark.value}%)` }} // Adjust width based on text width
+              style={{ left: `calc(${mark.value}%)` }}
             >
-              <span className="block text-center">{mark.label}</span>
+              <span className="block text-center text-lg">{mark.label}</span>
             </div>
           </div>
         ))}

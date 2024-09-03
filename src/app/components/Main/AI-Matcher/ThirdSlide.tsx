@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import EndlessScroll from "./ThirdSlide/EndlessScroll";
 import Checkmark from "./ThirdSlide/Checkmark";
+import { FaArrowLeft } from "react-icons/fa";
 
 type SlideProps = {
   onNextSlide: () => void;
@@ -12,6 +13,8 @@ const ThirdSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
   const [hoveredType, setHoveredType] = useState<string | null>(null);
   const [categorySelected, setCategorySelected] = useState(false);
   const [showExamples, setShowExamples] = useState(false);
+
+  const [showArrow, setShowArrow] = useState(false);
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -33,6 +36,7 @@ const ThirdSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
   const handleSelection = (type: string) => {
     setSelectedType(type);
     setCategorySelected(true);
+    setShowArrow(true);
   };
 
   const handleConfirm = () => {
@@ -114,6 +118,15 @@ const ThirdSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
           >
             See examples
           </button>
+          {showArrow && (
+            <motion.div
+              className="flex justify-center items-center"
+              animate={{ x: [0, 20, 0] }}
+              transition={{ repeat: Infinity, duration: 1.5 }}
+            >
+              <FaArrowLeft className="text-white" size={20} />
+            </motion.div>
+          )}
         </motion.div>
       )}
 

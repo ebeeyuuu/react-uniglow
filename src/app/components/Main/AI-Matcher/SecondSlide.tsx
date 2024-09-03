@@ -169,7 +169,7 @@ const SecondSlide: React.FC<SlideProps> = ({
     setTimeout(() => {
       setAnimateGenericSubjects(true);
       setScrollEnabled(true);
-    }, 5000);
+    }, 3000);
   });
 
   useEffect(() => {

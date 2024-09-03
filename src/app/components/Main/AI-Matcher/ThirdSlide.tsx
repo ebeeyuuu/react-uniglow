@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { universityEnvironmentData } from "@/data";
 import EndlessScroll from "./ThirdSlide/EndlessScroll";
 
 const ThirdSlide = () => {
   const [selectedType, setSelectedType] = useState<string | null>(null);
+  const [hoveredType, setHoveredType] = useState<string | null>(null);
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -20,7 +21,11 @@ const ThirdSlide = () => {
     };
   }, []);
 
-  const environments = ["bustlingCities", "suburbanAreas", "ruralSettings"];
+  const environments = [
+    { type: "bustlingCities", example: "New York City, Los Angeles, Chicago" },
+    { type: "suburbanAreas", example: "Palo Alto, Evanston, Chapel Hill" },
+    { type: "ruralSettings", example: "Hanover, Amherst, Ithaca" },
+  ];
 
   const handleSelection = (type: string) => {
     setSelectedType(type);
@@ -44,18 +49,31 @@ const ThirdSlide = () => {
         <strong>rural setting</strong> surrounded by nature?
       </motion.div>
       <div className="grid grid-cols-3 gap-4 w-11/12">
-        {environments.map((type) => (
+        {environments.map(({ type, example }) => (
           <motion.div
             key={type}
-            className="bg-[#003dcc] rounded-xl flex items-center justify-center cursor-pointer h-[400px]"
+            className="bg-[#003dcc] rounded-xl flex items-center justify-center cursor-pointer h-[400px] relative overflow-hidden"
             onClick={() => handleSelection(type)}
+            onMouseEnter={() => setHoveredType(type)}
+            onMouseLeave={() => setHoveredType(null)}
             initial={{ scale: 1 }}
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2, ease: "easeInOut" }}
           >
-            <p className="text-xl font-bold uppercase italic">
-              {type.replace(/([A-Z])/g, " $1").trim()}
-            </p>
+            <AnimatePresence mode="wait">
+              <motion.p
+                key={hoveredType === type ? "example" : "type"}
+                className="text-xl font-bold uppercase italic text-center px-4"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.2 }}
+              >
+                {hoveredType === type
+                  ? `Examples: ${example}`
+                  : type.replace(/([A-Z])/g, " $1").trim()}
+              </motion.p>
+            </AnimatePresence>
           </motion.div>
         ))}
       </div>

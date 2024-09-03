@@ -21,11 +21,7 @@ const ThirdSlide = () => {
     };
   }, []);
 
-  const environments = [
-    { type: "bustlingCities", example: "New York City, Los Angeles, Chicago" },
-    { type: "suburbanAreas", example: "Palo Alto, Evanston, Chapel Hill" },
-    { type: "ruralSettings", example: "Hanover, Amherst, Ithaca" },
-  ];
+  const environments = ["bustlingCities", "suburbanAreas", "ruralSettings"];
 
   const handleSelection = (type: string) => {
     setSelectedType(type);
@@ -49,7 +45,7 @@ const ThirdSlide = () => {
         <strong>rural setting</strong> surrounded by nature?
       </motion.div>
       <div className="grid grid-cols-3 gap-4 w-11/12">
-        {environments.map(({ type, example }) => (
+        {environments.map((type) => (
           <motion.div
             key={type}
             className="bg-[#003dcc] rounded-xl flex items-center justify-center cursor-pointer h-[400px] relative overflow-hidden"
@@ -70,7 +66,7 @@ const ThirdSlide = () => {
                 transition={{ duration: 0.2 }}
               >
                 {hoveredType === type
-                  ? `Examples: ${example}`
+                  ? "See Examples?"
                   : type.replace(/([A-Z])/g, " $1").trim()}
               </motion.p>
             </AnimatePresence>

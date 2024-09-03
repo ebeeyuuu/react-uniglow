@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const UniversityCard = ({ university, isActive }) => {
   return (
     <motion.div
-      className={`px-20 py-16 bg-[#024534] mx-auto rounded-2xl shadow-md transition-transform min-h-[600px] duration-300 flex justify-center items-center flex-col ${
+      className={`px-20 py-16 bg-[#024534] w-full mx-auto rounded-2xl shadow-md transition-transform min-h-[600px] duration-300 flex justify-center items-center flex-col ${
         isActive ? "scale-105" : "100"
       }`}
       initial={{ opacity: 0, y: 20 }}

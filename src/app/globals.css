@@ -4,12 +4,12 @@
 
 @layer utilities {
   .smooth-animation {
-    transition: .5s ease-in-out
+    transition: 0.5s ease-in-out;
   }
 
   .gradient-hover {
     position: relative;
-    overflow: hidden
+    overflow: hidden;
   }
 
   .gradient-hover::before {
@@ -19,24 +19,29 @@
     left: -100%;
     width: 200%;
     height: 100%;
-    background: linear-gradient(to right, rgba(0, 123, 255, 0) 0, rgba(0, 128, 255, .5) 50%, rgba(0, 123, 255, 0) 100%);
-    transition: .5s;
-    opacity: 0
+    background: linear-gradient(
+      to right,
+      rgba(0, 123, 255, 0) 0,
+      rgba(0, 128, 255, 0.5) 50%,
+      rgba(0, 123, 255, 0) 100%
+    );
+    transition: 0.5s;
+    opacity: 0;
   }
 
   .gradient-hover:hover::before {
     left: 100%;
-    opacity: 1
+    opacity: 1;
   }
 
   .placeholder-white::placeholder {
     color: #fff;
-    opacity: .9
+    opacity: 0.9;
   }
 
   .placeholder-white::-ms-input-placeholder {
     color: #fff;
-    opacity: .9
+    opacity: 0.9;
   }
 
   .typing-cursor {
@@ -44,28 +49,27 @@
     width: 2px;
     height: 1em;
     color: #ff890a;
-    margin-left: 10px
+    margin-left: 10px;
   }
 
   .typing-cursor.blinking {
-    animation: .7s step-end 5 blink
+    animation: 0.7s step-end 5 blink;
   }
 
   @keyframes blink {
-
     from,
     to {
-      opacity: 1
+      opacity: 1;
     }
 
     50% {
-      opacity: 0
+      opacity: 0;
     }
   }
 
   .underline-animation {
     position: relative;
-    display: inline-block
+    display: inline-block;
   }
 
   .underline-animation::after {
@@ -78,12 +82,12 @@
     left: 0;
     background-color: #ff890a;
     transform-origin: bottom right;
-    transition: transform .5s ease-out
+    transition: transform 0.5s ease-out;
   }
 
   .underline-animation:hover::after {
     transform: scaleX(1);
-    transform-origin: bottom left
+    transform-origin: bottom left;
   }
 }
 
@@ -91,11 +95,11 @@ body {
   background: #020202;
   color: #fff;
   -ms-overflow-style: none;
-  scrollbar-width: 0px
+  scrollbar-width: 0px;
 }
 
 body::-webkit-scrollbar {
-  display: none
+  display: none;
 }
 
 .underline-container {
@@ -108,35 +112,44 @@ body::-webkit-scrollbar {
 }
 
 .underline-container:hover::after {
-  height: 20px
+  height: 20px;
 }
 
 .animate-pulse {
-  animation: .5s pulse
+  animation: 0.5s pulse;
 }
 
 .animate-fade {
-  animation: .5s fade
+  animation: 0.5s fade;
 }
 
 @keyframes pulse {
-
   0%,
   100% {
-    transform: scale(1)
+    transform: scale(1);
   }
 
   50% {
-    transform: scale(1.1)
+    transform: scale(1.1);
   }
 }
 
 @keyframes fade {
   0% {
-    opacity: 0
+    opacity: 0;
   }
 
   100% {
-    opacity: 1
+    opacity: 1;
   }
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
 }

@@ -10,44 +10,34 @@ interface EndlessScrollProps {
   onClose: () => void;
 }
 
-const ITEMS_PER_ROW = 4;
-const ROW_HEIGHT = 620;
-const OVERSCAN_COUNT = 5;
-
 const EndlessScroll = ({ selectedCategory, onClose }: EndlessScrollProps) => {
-  const universities = useMemo(
-    () => universityEnvironmentData[selectedCategory] || [],
-    [selectedCategory],
-  );
+  const universities = universityEnvironmentData[selectedCategory] || [];
   const [scrollOffset, setScrollOffset] = useState(0);
 
-  const totalRows = useMemo(
-    () => Math.ceil(universities.length / ITEMS_PER_ROW),
-    [universities.length],
-  );
-
-  const Row = useCallback(
-    ({ index, style }) => {
-      const startIndex = index * ITEMS_PER_ROW;
-      return (
-        <div
-          style={style}
-          className="grid grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1 gap-6 scrollbar-hide"
-        >
-          {Array.from({ length: ITEMS_PER_ROW }).map((_, offset) => {
-            const universityIndex = (startIndex + offset) % universities.length;
-            const university = universities[universityIndex];
-            return (
-              <UniversityCard
-                key={universityIndex}
-                university={university}
-                isActive={false}
-              />
-            );
-          })}
-        </div>
-      );
-    },
+  const Row = useMemo(
+    () =>
+      ({ index, style }) => {
+        const startIndex = index * 4; // 4 columns per row
+        return (
+          <div
+            style={style}
+            className="grid grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1 gap-6 scrollbar-hide"
+          >
+            {[0, 1, 2, 3].map((offset) => {
+              const universityIndex =
+                (startIndex + offset) % universities.length;
+              const university = universities[universityIndex];
+              return (
+                <UniversityCard
+                  key={universityIndex}
+                  university={university}
+                  isActive={false} // Add isActive logic if needed
+                />
+              );
+            })}
+          </div>
+        );
+      },
     [universities],
   );
 
@@ -62,12 +52,12 @@ const EndlessScroll = ({ selectedCategory, onClose }: EndlessScrollProps) => {
           <List
             className="List scrollbar-hide"
             height={height}
-            itemCount={totalRows}
-            itemSize={ROW_HEIGHT}
+            itemCount={Math.ceil((universities.length * 25) / 4)}
+            itemSize={620}
             width={width}
             onScroll={onScroll}
             scrollOffset={scrollOffset}
-            overscanCount={OVERSCAN_COUNT}
+            overscanCount={3} // Increase overscan to pre-load rows before they appear
           >
             {Row}
           </List>

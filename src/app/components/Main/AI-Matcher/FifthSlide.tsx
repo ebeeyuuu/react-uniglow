@@ -6,6 +6,8 @@ import TypeGroups from "./FifthSlide/TypeGroups";
 import ExampleClubs from "./FifthSlide/ExampleClubs";
 import ExampleGroups from "./FifthSlide/ExampleGroups";
 
+import { clubTypes } from "@/data";
+
 const FifthSlide = () => {
   const [animateTypeClubs, setAnimateTypeClubs] = useState(false);
 
@@ -18,7 +20,7 @@ const FifthSlide = () => {
   }, []);
 
   return (
-    <div className="w-full h-full flex justify-center items-center">
+    <div className="w-full h-full flex justify-center items-center overflow-y-auto scrollbar-hide relative">
       {!animateTypeClubs && (
         <motion.p
           className="text-3xl w-4/5 font-medium text-center"
@@ -32,12 +34,12 @@ const FifthSlide = () => {
       )}
       {animateTypeClubs && (
         <motion.div
-          className=""
+          className="absolute top-0 left-0"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
         >
-          <TypeClubs />
+          <TypeClubs clubTypes={clubTypes} />
         </motion.div>
       )}
     </div>

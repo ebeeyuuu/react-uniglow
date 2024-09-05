@@ -14,10 +14,8 @@ const FifthSlide = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setAnimateTypeClubs(true);
-    }, 10000);
-
-    return () => clearTimeout(timer); // Clear timeout on unmount
-  }, []);
+    }, 5000);
+  });
 
   return (
     <div className="w-full h-full flex justify-center items-center overflow-y-auto scrollbar-hide relative">
@@ -26,7 +24,7 @@ const FifthSlide = () => {
           className="text-3xl w-4/5 font-medium text-center"
           initial={{ opacity: 1 }}
           animate={{ opacity: 0 }}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
+          transition={{ duration: 0.8, ease: "easeInOut", delay: 3 }}
           onAnimationComplete={() => setAnimateTypeClubs(true)}
         >
           What kind of clubs or groups would you love to join in college?
@@ -37,7 +35,7 @@ const FifthSlide = () => {
           className="absolute top-0 left-0"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
+          transition={{ duration: 0.8, ease: "easeInOut", delay: 1 }}
         >
           <TypeClubs clubTypes={clubTypes} />
         </motion.div>

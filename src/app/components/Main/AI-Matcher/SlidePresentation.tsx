@@ -1,4 +1,4 @@
-import React, { useState, Children, cloneElement, ReactElement } from "react";
+import React, { useState, useRef, useCallback, ReactElement } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -14,25 +14,32 @@ const SlidePresentation: React.FC<SlidePresentationProps> = ({
   canProceed = () => true,
 }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [prevSlideIndex, setPrevSlideIndex] = useState(0);
-  const [slideStates, setSlideStates] = useState<Record<number, any>>({});
+  const [loadedSlides, setLoadedSlides] = useState<number[]>([0]);
+  const slideStates = useRef<Record<number, any>>({});
 
-  const slideContents: (ReactElement | null)[] = Array(numSlides).fill(null);
-  Children.forEach(children, (child, index) => {
-    if (index < numSlides && React.isValidElement(child)) {
-      slideContents[index] = child;
-    }
-  });
+  const getSlideContent = useCallback(
+    (index: number) => {
+      const childArray = React.Children.toArray(children);
+      return index < childArray.length ? childArray[index] : null;
+    },
+    [children],
+  );
+
+  const setSlideState = useCallback((index: number, state: any) => {
+    slideStates.current[index] = state;
+  }, []);
 
   const nextSlide = () => {
-    setPrevSlideIndex(currentSlide);
     if (currentSlide < numSlides - 1) {
-      setCurrentSlide(currentSlide + 1);
+      const nextIndex = currentSlide + 1;
+      setCurrentSlide(nextIndex);
+      if (!loadedSlides.includes(nextIndex)) {
+        setLoadedSlides((prev) => [...prev, nextIndex]);
+      }
     }
   };
 
   const prevSlide = () => {
-    setPrevSlideIndex(currentSlide);
     if (currentSlide > 0) {
       setCurrentSlide(currentSlide - 1);
     }
@@ -41,27 +48,28 @@ const SlidePresentation: React.FC<SlidePresentationProps> = ({
   return (
     <div className="w-full h-full flex flex-col justify-center items-center max-[1000px]:ml-0 px-[15px] overflow-hidden max-[700px]:px-[10px] max-[700px]:py-[15px] relative">
       <AnimatePresence>
-        {slideContents.map((slide, index) => (
+        {loadedSlides.map((slideIndex) => (
           <motion.div
-            key={index}
-            initial={{ opacity: 0, x: index > currentSlide ? 100 : -100 }}
+            key={slideIndex}
+            initial={{ opacity: 0, x: slideIndex > currentSlide ? 100 : -100 }}
             animate={{
-              opacity: index === currentSlide ? 1 : 0,
-              x: index === currentSlide ? 0 : index > currentSlide ? 100 : -100,
+              opacity: slideIndex === currentSlide ? 1 : 0,
+              x:
+                slideIndex === currentSlide
+                  ? 0
+                  : slideIndex > currentSlide
+                    ? 100
+                    : -100,
             }}
-            exit={{ opacity: 0, x: index > currentSlide ? 100 : -100 }}
+            exit={{ opacity: 0, x: slideIndex > currentSlide ? 100 : -100 }}
             transition={{ duration: 0.5 }}
-            style={{ display: index === currentSlide ? "flex" : "none" }}
+            style={{ display: slideIndex === currentSlide ? "flex" : "none" }}
             className="justify-center items-center w-full h-[calc(100%-80px)]"
           >
-            {slide ? (
-              cloneElement(slide, {
-                slideState: slideStates[index] || {},
-                setSlideState: (state: any) =>
-                  setSlideStates((prevStates) => ({
-                    ...prevStates,
-                    [index]: state,
-                  })),
+            {React.isValidElement(getSlideContent(slideIndex)) ? (
+              React.cloneElement(getSlideContent(slideIndex) as ReactElement, {
+                slideState: slideStates.current[slideIndex] || {},
+                setSlideState: (state: any) => setSlideState(slideIndex, state),
                 onNextSlide: nextSlide,
               })
             ) : (

@@ -5,238 +5,193 @@ import { SiActivitypub } from "react-icons/si";
 export const clubTypes = [
   {
     type: "Academic Clubs",
-    description:
-      "Clubs that focus on academic subjects, offering students opportunities to deepen their understanding and knowledge in specific fields of study.",
+    description: "Deepen knowledge in specific fields of study.",
   },
   {
     type: "Cultural Clubs",
-    description:
-      "Clubs that celebrate and promote cultural diversity, providing a space for students to connect with others who share similar cultural backgrounds or interests.",
+    description: "Celebrate and promote cultural diversity.",
   },
   {
     type: "Recreational Clubs",
-    description:
-      "Clubs that focus on leisure activities, such as sports, gaming, or hobbies, allowing students to unwind and enjoy their interests outside of academics.",
+    description: "Focus on leisure activities and hobbies.",
   },
   {
     type: "Volunteer Clubs",
-    description:
-      "Clubs dedicated to community service and volunteering, where students can participate in activities that give back to the community and help those in need.",
+    description: "Engage in community service and helping those in need.",
   },
   {
     type: "Professional Development Clubs",
-    description:
-      "Clubs that aim to enhance students' career prospects by providing networking opportunities, workshops, and resources related to specific industries or professions.",
+    description: "Enhance career prospects through networking and workshops.",
   },
   {
     type: "Political Clubs",
     description:
-      "Clubs that engage students in political discussions, activism, and campaigns, allowing them to explore and express their political beliefs and participate in civic activities.",
+      "Explore political beliefs and participate in civic activities.",
   },
   {
     type: "Artistic Clubs",
-    description:
-      "Clubs that encourage creativity and artistic expression through activities such as painting, drawing, photography, music, dance, and theater.",
+    description: "Encourage creativity through various art forms.",
   },
   {
-    type: "Entrepreneurship Clubs",
-    description:
-      "Clubs that support students interested in starting their own businesses or developing entrepreneurial skills through workshops, networking, and pitch competitions.",
+    type: "Entrepreneur Clubs",
+    description: "Support business creation and entrepreneurial skills.",
   },
   {
     type: "Environmental Clubs",
-    description:
-      "Clubs focused on sustainability and environmental awareness, where students can participate in activities aimed at protecting and preserving the environment.",
+    description: "Focus on sustainability and environmental awareness.",
   },
   {
     type: "Social Clubs",
-    description:
-      "Clubs that provide a platform for students to socialize, build friendships, and engage in various fun activities or events, often organized around common interests.",
+    description: "Provide platforms for socializing and building friendships.",
   },
   {
     type: "Religious or Spiritual Clubs",
-    description:
-      "Clubs that offer students a space to practice their faith, engage in spiritual discussions, and participate in religious activities with like-minded peers.",
+    description: "Offer space for faith practices and spiritual discussions.",
   },
   {
     type: "Sports Clubs",
-    description:
-      "Clubs centered around various sports activities, where students can participate in team sports, individual sports, or recreational athletics.",
+    description: "Participate in various sports and athletic activities.",
   },
   {
     type: "Debate Clubs",
-    description:
-      "Clubs that provide a platform for students to develop and practice their debating skills, often through organized debates and public speaking events.",
+    description: "Develop debating skills through organized debates.",
   },
   {
     type: "Literary Clubs",
-    description:
-      "Clubs focused on reading, writing, and discussing literature, where students can share their love for books, poetry, and creative writing.",
+    description: "Share passion for reading, writing, and literature.",
   },
   {
     type: "Science and Technology Clubs",
-    description:
-      "Clubs that bring together students interested in science, engineering, and technology, offering hands-on projects, competitions, and research opportunities.",
+    description: "Engage in hands-on projects and research in STEM fields.",
   },
   {
     type: "Gaming Clubs",
-    description:
-      "Clubs that cater to video game enthusiasts, offering a space for gaming sessions, tournaments, and discussions on gaming culture.",
+    description: "Cater to video game enthusiasts and gaming culture.",
   },
   {
     type: "Investment Clubs",
-    description:
-      "Clubs that focus on financial literacy and investing, where students can learn about stock markets, portfolio management, and personal finance.",
+    description: "Learn about financial markets and personal finance.",
   },
   {
     type: "Language Clubs",
-    description:
-      "Clubs dedicated to learning and practicing new languages, providing a space for language exchange, conversation practice, and cultural exploration.",
+    description: "Practice new languages and explore related cultures.",
   },
   {
     type: "Media and Journalism Clubs",
-    description:
-      "Clubs that offer students the opportunity to engage in journalism, media production, and content creation, often producing student newspapers, radio shows, or podcasts.",
+    description: "Engage in journalism and media production.",
   },
   {
     type: "Pre-Law Clubs",
-    description:
-      "Clubs that support students interested in pursuing a career in law, offering resources, mock trials, and networking opportunities with legal professionals.",
+    description: "Prepare for law careers through resources and networking.",
   },
   {
     type: "Pre-Medical Clubs",
-    description:
-      "Clubs that cater to students planning to attend medical school, providing resources, shadowing opportunities, and guidance on the medical school application process.",
+    description: "Support students planning to attend medical school.",
   },
   {
     type: "Dance Clubs",
-    description:
-      "Clubs that bring together students who share a passion for dance, offering classes, performances, and opportunities to explore various dance styles.",
+    description: "Explore various dance styles and performances.",
   },
   {
     type: "Theater and Drama Clubs",
-    description:
-      "Clubs focused on theater arts, where students can participate in acting, directing, stage management, and production of plays and performances.",
+    description: "Participate in acting and theater productions.",
   },
   {
     type: "Music Clubs",
-    description:
-      "Clubs that unite students with a shared interest in music, offering opportunities to perform, compose, or simply enjoy music together.",
+    description: "Unite music enthusiasts for performance and appreciation.",
   },
   {
     type: "Film and Photography Clubs",
-    description:
-      "Clubs that bring together students interested in film and photography, offering opportunities for film production, photo shoots, and discussions on visual arts.",
+    description: "Explore visual arts through film and photography.",
   },
   {
     type: "Robotics Clubs",
-    description:
-      "Clubs focused on robotics, where students can design, build, and program robots for competitions or educational purposes.",
+    description: "Design and build robots for competitions or learning.",
   },
   {
     type: "Model United Nations (MUN) Clubs",
-    description:
-      "Clubs that simulate United Nations conferences, allowing students to role-play as diplomats and debate international issues.",
+    description: "Simulate UN conferences and debate international issues.",
   },
   {
     type: "Quiz and Trivia Clubs",
-    description:
-      "Clubs that organize quiz competitions and trivia games, allowing students to test their knowledge on various topics in a fun and competitive environment.",
+    description: "Organize knowledge competitions on various topics.",
   },
   {
     type: "Peer Mentoring Clubs",
-    description:
-      "Clubs that pair experienced students with newer students to offer guidance, support, and advice on academic and personal matters.",
+    description: "Offer guidance and support to fellow students.",
   },
   {
     type: "Outdoor and Adventure Clubs",
-    description:
-      "Clubs that focus on outdoor activities, such as hiking, camping, rock climbing, and exploring nature, often organizing trips and adventures.",
+    description: "Organize outdoor activities and nature explorations.",
   },
   {
     type: "Student Government and Leadership Clubs",
-    description:
-      "Clubs that involve students in leadership roles and governance, allowing them to represent their peers, organize events, and participate in decision-making processes.",
+    description: "Involve students in leadership and campus governance.",
   },
   {
     type: "Charity and Fundraising Clubs",
-    description:
-      "Clubs that focus on raising funds for charitable causes and organizing events to support various non-profit organizations and humanitarian efforts.",
+    description: "Raise funds and support various charitable causes.",
   },
   {
     type: "Health and Wellness Clubs",
-    description:
-      "Clubs that promote physical and mental well-being, offering activities related to fitness, nutrition, mindfulness, and stress management.",
+    description: "Promote physical and mental well-being activities.",
   },
   {
     type: "Food and Cooking Clubs",
-    description:
-      "Clubs that bring together students who enjoy cooking and exploring different cuisines, often organizing cooking classes, food tastings, and culinary events.",
+    description: "Explore cuisines and share cooking experiences.",
   },
   {
     type: "Historical and Archaeological Clubs",
     description:
-      "Clubs that explore history and archaeology, offering discussions, research projects, and field trips related to historical and archaeological topics.",
+      "Explore history and archaeology through discussions and projects.",
   },
   {
     type: "Animal and Pet Clubs",
-    description:
-      "Clubs that focus on animal care, welfare, and pet-related activities, often involving volunteer work with animal shelters or advocacy for animal rights.",
+    description: "Focus on animal care, welfare, and related activities.",
   },
   {
     type: "Fashion and Design Clubs",
-    description:
-      "Clubs that explore fashion, design, and style, offering opportunities for students to create, discuss, and showcase their work in the fashion industry.",
+    description: "Explore and showcase work in fashion and design.",
   },
   {
     type: "Public Speaking and Communication Clubs",
-    description:
-      "Clubs that help students develop their public speaking, communication, and presentation skills through practice sessions, workshops, and events.",
+    description: "Develop public speaking and communication skills.",
   },
   {
     type: "Social Justice and Advocacy Clubs",
-    description:
-      "Clubs dedicated to social justice issues, where students can advocate for human rights, equality, and social change through activism and awareness campaigns.",
+    description: "Advocate for human rights and social change.",
   },
   {
     type: "Astronomy Clubs",
-    description:
-      "Clubs that bring together students interested in astronomy and space exploration, offering stargazing events, discussions, and research projects related to the cosmos.",
+    description: "Explore astronomy and space-related topics.",
   },
   {
     type: "Meditation and Mindfulness Clubs",
-    description:
-      "Clubs focused on promoting mental well-being through practices like meditation, yoga, and mindfulness exercises.",
+    description: "Practice meditation and mindfulness exercises.",
   },
   {
     type: "Peer Tutoring Clubs",
-    description:
-      "Clubs that provide tutoring services to fellow students, helping them with academic challenges and improving their understanding of various subjects.",
+    description: "Provide academic support to fellow students.",
   },
   {
     type: "Ethics and Philosophy Clubs",
-    description:
-      "Clubs that explore ethical issues and philosophical questions, offering discussions, debates, and readings on various philosophical topics.",
+    description: "Discuss ethical issues and philosophical questions.",
   },
   {
     type: "Adventure and Travel Clubs",
-    description:
-      "Clubs that organize trips, excursions, and travel-related activities for students interested in exploring new places and cultures.",
+    description: "Organize trips and explore new places and cultures.",
   },
   {
     type: "Cosplay and Anime Clubs",
-    description:
-      "Clubs that cater to fans of anime, manga, and cosplay, offering events, screenings, and opportunities to dress up and celebrate their favorite characters.",
+    description: "Celebrate anime, manga, and cosplay culture.",
   },
   {
     type: "DIY and Maker Clubs",
-    description:
-      "Clubs that focus on creating and building projects, from crafting and DIY projects to technology and engineering builds in maker spaces.",
+    description: "Create and build various projects and crafts.",
   },
   {
     type: "Board Game Clubs",
-    description:
-      "Clubs that bring together students who enjoy playing board games, offering regular game nights and opportunities to discover new board games.",
+    description: "Enjoy and discover various board games together.",
   },
 ];
 

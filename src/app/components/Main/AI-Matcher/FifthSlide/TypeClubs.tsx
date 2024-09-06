@@ -94,7 +94,10 @@ const TypeClubs: React.FC<TypeClubsProps> = ({ clubTypes }) => {
         </div>
       ))}
       <div className="fixed top-4 right-4">
-        <TypeClubsCounter totalCount={clubTypes.length} count={1} />
+        <TypeClubsCounter
+          totalCount={clubTypes.length}
+          count={selectedCards.filter(Boolean).length}
+        />
       </div>
     </div>
   );

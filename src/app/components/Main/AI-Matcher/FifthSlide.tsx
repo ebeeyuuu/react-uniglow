@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import TypeClubs from "./FifthSlide/TypeClubs";
 import TypeGroups from "./FifthSlide/TypeGroups";
@@ -8,7 +8,11 @@ import ExampleGroups from "./FifthSlide/ExampleGroups";
 
 import { clubTypes } from "@/data";
 
-const FifthSlide = () => {
+type SlideProps = {
+  onNextSlide: () => void;
+};
+
+const FifthSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
   const [animateTypeClubs, setAnimateTypeClubs] = useState(false);
 
   useEffect(() => {
@@ -37,7 +41,7 @@ const FifthSlide = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeInOut", delay: 1 }}
         >
-          <TypeClubs clubTypes={clubTypes} />
+          <TypeClubs clubTypes={clubTypes} onConfirm={() => {}} />
         </motion.div>
       )}
     </div>

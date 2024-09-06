@@ -193,6 +193,56 @@ export const clubTypes = [
     type: "Board Game Clubs",
     description: "Enjoy and discover various board games together.",
   },
+  {
+    type: "Chess Clubs",
+    description: "Learn and play chess, participate in tournaments.",
+  },
+  {
+    type: "Sustainability Clubs",
+    description:
+      "Promote eco-friendly practices and sustainability initiatives.",
+  },
+  {
+    type: "Coding and Programming Clubs",
+    description: "Develop coding skills and work on programming projects.",
+  },
+  {
+    type: "Book Clubs",
+    description: "Discuss and analyze various books and literary works.",
+  },
+  {
+    type: "Improv Comedy Clubs",
+    description: "Practice and perform improvisational comedy.",
+  },
+  {
+    type: "Fitness Clubs",
+    description:
+      "Engage in various fitness activities and promote healthy lifestyles.",
+  },
+  {
+    type: "Gardening Clubs",
+    description: "Learn about plants, gardening techniques, and horticulture.",
+  },
+  {
+    type: "Virtual Reality Clubs",
+    description: "Explore VR technology and its applications.",
+  },
+  {
+    type: "Podcasting Clubs",
+    description: "Create and produce podcasts on various topics.",
+  },
+  {
+    type: "Calligraphy and Handwriting Clubs",
+    description: "Practice and showcase calligraphy and handwriting skills.",
+  },
+  {
+    type: "Puzzle and Escape Room Clubs",
+    description: "Solve puzzles and design escape room challenges.",
+  },
+  {
+    type: "Car Enthusiast Clubs",
+    description: "Share passion for automobiles and automotive technology.",
+  },
 ];
 
 export const clubExamples = [];

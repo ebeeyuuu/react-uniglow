@@ -18,7 +18,7 @@ const FifthSlide = () => {
   });
 
   return (
-    <div className="w-full h-full flex justify-center items-center overflow-y-auto scrollbar-hide relative">
+    <div className="w-full h-[100vh] flex justify-center items-center overflow-y-auto scrollbar-hide relative">
       {!animateTypeClubs && (
         <motion.p
           className="text-3xl w-4/5 font-medium text-center"
@@ -32,7 +32,7 @@ const FifthSlide = () => {
       )}
       {animateTypeClubs && (
         <motion.div
-          className="absolute top-0 left-0"
+          className="absolute top-0 left-0 w-full h-full"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeInOut", delay: 1 }}

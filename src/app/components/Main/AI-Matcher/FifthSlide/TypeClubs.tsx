@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from "react";
 import Checkmark from "./Checkmark";
+import TypeClubsCounter from "./TypeClubsCounter";
 
 type Club = {
   type: string;
@@ -64,7 +65,7 @@ const TypeClubs: React.FC<TypeClubsProps> = ({ clubTypes }) => {
 
   return (
     <div
-      className={`p-2 sm:p-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-6 sm:gap-7 md:gap-8 h-full w-full`}
+      className={`p-2 sm:p-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-6 sm:gap-7 md:gap-8 h-full w-full relative`}
     >
       {layoutItems.map((club, index) => (
         <div
@@ -73,7 +74,7 @@ const TypeClubs: React.FC<TypeClubsProps> = ({ clubTypes }) => {
             bg-[#153684] shadow-xl shadow-[#003DCC]/50 rounded-lg 
             hover:shadow-[#f4b034]/50 transition-all duration-300 
             flex flex-col w-full h-full hover:border-black gap-2 
-            p-6 lg:p-8 xl:p-10 2xl:p-12 scale-100 hover:scale-105
+            p-6 lg:p-8 xl:p-10 2xl:p-12 scale-100 hover:scale-105 cursor-pointer
             ${club.rowSpan === 2 ? "row-span-2" : ""}
             ${club.colSpan ? `col-span-${club.colSpan}` : ""}
           `}
@@ -92,6 +93,9 @@ const TypeClubs: React.FC<TypeClubsProps> = ({ clubTypes }) => {
           <Checkmark isSelected={selectedCards[index]} />
         </div>
       ))}
+      <div className="fixed top-4 right-4">
+        <TypeClubsCounter totalCount={clubTypes.length} count={1} />
+      </div>
     </div>
   );
 };

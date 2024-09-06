@@ -243,6 +243,11 @@ export const clubTypes = [
     type: "Car Enthusiast Clubs",
     description: "Share passion for automobiles and automotive technology.",
   },
+  {
+    type: "Upcycling and Recycling Clubs",
+    description:
+      "Create new items from recycled materials and promote waste reduction.",
+  },
 ];
 
 export const clubExamples = [];

@@ -4,12 +4,12 @@ import { FaCheck } from "react-icons/fa";
 
 const Checkmark = ({ isSelected }) => (
   <motion.div
-    className={`absolute bottom-3 right-3 p-3 bg-black rounded-full ${isSelected ? "opacity-100" : "opacity-0"}`}
+    className={`absolute bottom-3 right-3 p-2 rounded-full ${isSelected ? "opacity-100" : "opacity-0"}`}
     initial={{ opacity: 0 }}
     animate={{ opacity: isSelected ? 1 : 0 }}
     transition={{ duration: 0.5 }}
   >
-    <FaCheck size={16} />
+    <FaCheck size={12} />
   </motion.div>
 );
 

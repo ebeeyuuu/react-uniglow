@@ -1,4 +1,5 @@
-import React, { useMemo } from "react";
+import React, { useState, useMemo } from "react";
+import Checkmark from "./Checkmark";
 
 type Club = {
   type: string;
@@ -12,6 +13,16 @@ interface TypeClubsProps {
 }
 
 const TypeClubs: React.FC<TypeClubsProps> = ({ clubTypes }) => {
+  const [selectedCards, setSelectedCards] = useState<boolean[]>(
+    Array(clubTypes.length).fill(false),
+  );
+
+  const toggleSelected = (index: number) => {
+    setSelectedCards((prev) =>
+      prev.map((selected, idx) => (idx === index ? !selected : selected)),
+    );
+  };
+
   const getColumnCount = () => {
     if (typeof window !== "undefined") {
       if (window.innerWidth >= 1536) return 6;
@@ -59,13 +70,14 @@ const TypeClubs: React.FC<TypeClubsProps> = ({ clubTypes }) => {
         <div
           key={index}
           className={`
-            bg-[#153684] shadow-lg shadow-[#003DCC]/50 rounded-lg 
+            bg-[#153684] shadow-xl shadow-[#003DCC]/50 rounded-lg 
             hover:shadow-[#f4b034]/50 transition-all duration-300 
             flex flex-col w-full h-full hover:border-black gap-2 
-            p-6 lg:p-8 xl:p-10 2xl:p-12
+            p-6 lg:p-8 xl:p-10 2xl:p-12 scale-100 hover:scale-105
             ${club.rowSpan === 2 ? "row-span-2" : ""}
             ${club.colSpan ? `col-span-${club.colSpan}` : ""}
           `}
+          onClick={() => toggleSelected(index)}
         >
           {club.type && (
             <>
@@ -77,6 +89,7 @@ const TypeClubs: React.FC<TypeClubsProps> = ({ clubTypes }) => {
               </p>
             </>
           )}
+          <Checkmark isSelected={selectedCards[index]} />
         </div>
       ))}
     </div>

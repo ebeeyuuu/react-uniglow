@@ -9,7 +9,7 @@ const Checkmark = ({ isSelected }) => (
     animate={{ opacity: isSelected ? 1 : 0 }}
     transition={{ duration: 0.5 }}
   >
-    <FaCheck size={12} />
+    <FaCheck size={15} />
   </motion.div>
 );
 

@@ -23,7 +23,10 @@ const TypeClubsCounter: React.FC<TypeClubsCounterProps> = ({
       <span className="mr-2 font-medium">
         {count}/{totalCount}
       </span>
-      <button className="bg-[#003dcc] hover:bg-transparent border border-[#003dcc] hover:border-white font-bold py-2 px-4 rounded-full transition-colors ease-in-out duration-500">
+      <button
+        className="bg-[#003dcc] hover:bg-transparent border border-[#003dcc] hover:border-white font-bold py-2 px-4 rounded-full transition-colors ease-in-out duration-500"
+        onClick={onConfirm}
+      >
         Confirm
       </button>
     </motion.div>

@@ -31,7 +31,7 @@ const EndlessScroll = ({ selectedCategory, onClose }: EndlessScrollProps) => {
                 <UniversityCard
                   key={universityIndex}
                   university={university}
-                  isActive={false} // Add isActive logic if needed
+                  isActive={false}
                 />
               );
             })}

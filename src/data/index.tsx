@@ -250,7 +250,340 @@ export const clubTypes = [
   },
 ];
 
-export const clubExamples = [];
+export const clubExamples = {
+  academicClubs: [
+    {
+      name: "Physics Society",
+      university: "Harvard University",
+      club_description:
+        "Fosters interest in physics through discussions and research projects.",
+      university_description:
+        "Ivy League university known for academic excellence.",
+    },
+    {
+      name: "Economics Association",
+      university: "Stanford University",
+      club_description:
+        "Engages students in economic theories and real-world applications.",
+      university_description:
+        "Renowned for innovation and research in Silicon Valley.",
+    },
+    {
+      name: "History Club",
+      university: "University of Oxford",
+      club_description:
+        "Focuses on historical events, research, and discussions.",
+      university_description:
+        "World-leading institution known for its tradition and scholarship.",
+    },
+    {
+      name: "Biology Society",
+      university: "Massachusetts Institute of Technology",
+      club_description:
+        "Promotes biological sciences through seminars and lab work.",
+      university_description:
+        "Leading research university known for STEM programs.",
+    },
+    {
+      name: "Literature Club",
+      university: "University of Cambridge",
+      club_description: "Explores classic and contemporary literature.",
+      university_description:
+        "Historic institution recognized for literature and arts.",
+    },
+    {
+      name: "Mathematics Society",
+      university: "Princeton University",
+      club_description:
+        "Offers problem-solving sessions and math competitions.",
+      university_description:
+        "Highly regarded for strong math and science programs.",
+    },
+    {
+      name: "Computer Science Club",
+      university: "California Institute of Technology",
+      club_description:
+        "Explores computational theories and coding challenges.",
+      university_description:
+        "Focuses on engineering and applied sciences research.",
+    },
+    {
+      name: "Philosophy Club",
+      university: "Yale University",
+      club_description: "Hosts debates on philosophical concepts and ethics.",
+      university_description:
+        "Ivy League university recognized for arts and humanities.",
+    },
+    {
+      name: "Chemistry Club",
+      university: "University of Chicago",
+      club_description:
+        "Promotes chemical research and networking with faculty.",
+      university_description:
+        "Known for rigorous academic programs and research.",
+    },
+    {
+      name: "Engineering Society",
+      university: "University of California, Berkeley",
+      club_description:
+        "Encourages innovation and projects in various engineering fields.",
+      university_description:
+        "Public research university with a focus on engineering and technology.",
+    },
+    {
+      name: "Political Science Club",
+      university: "Columbia University",
+      club_description: "Focuses on political theory and current events.",
+      university_description:
+        "Ivy League school located in New York City with strong social sciences.",
+    },
+    {
+      name: "Neuroscience Society",
+      university: "University College London",
+      club_description: "Discusses recent developments in brain science.",
+      university_description:
+        "Top UK institution known for medical research and innovation.",
+    },
+    {
+      name: "Sociology Club",
+      university: "University of Toronto",
+      club_description:
+        "Engages in sociological research and community outreach.",
+      university_description:
+        "Canada's largest university, recognized for social science programs.",
+    },
+    {
+      name: "Law Society",
+      university: "New York University",
+      club_description: "Discusses legal cases and concepts.",
+      university_description:
+        "Leading law school located in the heart of New York City.",
+    },
+    {
+      name: "Anthropology Club",
+      university: "University of Edinburgh",
+      club_description: "Studies human cultures and societies.",
+      university_description:
+        "Historic Scottish university known for research in humanities.",
+    },
+    {
+      name: "Environmental Science Society",
+      university: "University of Melbourne",
+      club_description: "Focuses on sustainability and environmental research.",
+      university_description:
+        "Australia's top-ranked university, known for environmental studies.",
+    },
+    {
+      name: "Astronomy Club",
+      university: "University of Tokyo",
+      club_description:
+        "Explores the universe through observations and research.",
+      university_description:
+        "Leading Japanese university with a focus on science and technology.",
+    },
+    {
+      name: "Linguistics Club",
+      university: "University of Pennsylvania",
+      club_description: "Discusses language theory and linguistic diversity.",
+      university_description:
+        "Ivy League university known for linguistics and humanities.",
+    },
+    {
+      name: "Business Society",
+      university: "London School of Economics",
+      club_description:
+        "Focuses on entrepreneurship and global business trends.",
+      university_description:
+        "World-renowned for economics and business programs.",
+    },
+    {
+      name: "Psychology Club",
+      university: "Duke University",
+      club_description:
+        "Promotes mental health awareness and psychological research.",
+      university_description:
+        "Known for medical research and strong academic programs.",
+    },
+    {
+      name: "Data Science Club",
+      university: "National University of Singapore",
+      club_description:
+        "Engages in data analysis and machine learning projects.",
+      university_description:
+        "Top Asian university known for innovation and technology.",
+    },
+    {
+      name: "International Relations Club",
+      university: "Georgetown University",
+      club_description:
+        "Discusses global diplomacy and international politics.",
+      university_description:
+        "Highly regarded for its international affairs programs.",
+    },
+    {
+      name: "Archaeology Society",
+      university: "University of Bristol",
+      club_description:
+        "Explores historical artifacts and ancient civilizations.",
+      university_description:
+        "UK-based research university with strong archaeology programs.",
+    },
+    {
+      name: "Statistics Club",
+      university: "Carnegie Mellon University",
+      club_description: "Analyzes data and statistical theories.",
+      university_description:
+        "Leading research university known for technology and applied sciences.",
+    },
+    {
+      name: "Public Health Club",
+      university: "University of Michigan",
+      club_description: "Promotes health awareness and policy discussions.",
+      university_description:
+        "Top public university with strong public health programs.",
+    },
+    {
+      name: "Classics Society",
+      university: "University of St Andrews",
+      club_description: "Explores ancient Greek and Roman cultures.",
+      university_description:
+        "Historic Scottish university known for classics and history.",
+    },
+    {
+      name: "Geography Club",
+      university: "McGill University",
+      club_description: "Discusses human geography and environmental impact.",
+      university_description:
+        "Canada's leading research university with diverse academic programs.",
+    },
+    {
+      name: "Artificial Intelligence Society",
+      university: "Imperial College London",
+      club_description: "Focuses on AI development and machine learning.",
+      university_description:
+        "Top-ranked UK university known for engineering and AI research.",
+    },
+    {
+      name: "Marketing Club",
+      university: "University of Southern California",
+      club_description:
+        "Engages in marketing strategies and business development.",
+      university_description:
+        "Leading university located in Los Angeles with a strong business school.",
+    },
+    {
+      name: "Civil Engineering Society",
+      university: "University of Sydney",
+      club_description:
+        "Focuses on infrastructure design and urban development.",
+      university_description:
+        "Australia's oldest university known for engineering and architecture.",
+    },
+    {
+      name: "Cybersecurity Club",
+      university: "Purdue University",
+      club_description: "Studies information security and ethical hacking.",
+      university_description:
+        "Renowned for its cybersecurity and computer science programs.",
+    },
+    {
+      name: "Biomedical Engineering Society",
+      university: "Johns Hopkins University",
+      club_description:
+        "Engages in medical innovation and engineering research.",
+      university_description:
+        "Top medical research institution with a focus on biomedical engineering.",
+    },
+    {
+      name: "Architecture Society",
+      university: "University of California, Los Angeles",
+      club_description: "Explores architectural design and urban planning.",
+      university_description:
+        "Public university known for its arts, film, and architecture programs.",
+    },
+    {
+      name: "Physics Club",
+      university: "University of Texas at Austin",
+      club_description:
+        "Encourages research and discussions in theoretical physics.",
+      university_description:
+        "Top U.S. public university with a strong focus on STEM programs.",
+    },
+    {
+      name: "Human Rights Society",
+      university: "University of British Columbia",
+      club_description: "Focuses on human rights issues and global justice.",
+      university_description:
+        "Canadian research university known for social sciences and global studies.",
+    },
+    {
+      name: "Robotics Society",
+      university: "University of Waterloo",
+      club_description: "Engages in robotics research and innovation.",
+      university_description:
+        "Canada's top university for engineering and technology.",
+    },
+    {
+      name: "Journalism Club",
+      university: "University of Missouri",
+      club_description: "Focuses on media ethics and reporting.",
+      university_description:
+        "Recognized for its journalism program and media studies.",
+    },
+    {
+      name: "Finance Club",
+      university: "University of Warwick",
+      club_description:
+        "Engages in financial markets and investment strategies.",
+      university_description:
+        "Top UK university known for its business and finance programs.",
+    },
+    {
+      name: "Sustainability Club",
+      university: "University of Queensland",
+      club_description:
+        "Promotes sustainable development and green initiatives.",
+      university_description:
+        "Top Australian university focused on environmental science.",
+    },
+    {
+      name: "Marine Biology Club",
+      university: "University of Hawaii",
+      club_description: "Studies marine ecosystems and conservation efforts.",
+      university_description:
+        "Located in the Pacific, known for its oceanic and environmental research.",
+    },
+    {
+      name: "Game Development Society",
+      university: "DigiPen Institute of Technology",
+      club_description: "Focuses on game design and software development.",
+      university_description:
+        "World-renowned for its programs in game development.",
+    },
+    {
+      name: "Ethics Society",
+      university: "University of Notre Dame",
+      club_description: "Discusses moral philosophy and ethical dilemmas.",
+      university_description:
+        "Catholic university known for humanities and moral philosophy.",
+    },
+    {
+      name: "Quantum Computing Club",
+      university: "University of Waterloo",
+      club_description:
+        "Explores quantum mechanics and computational applications.",
+      university_description:
+        "Leader in quantum computing research and technology.",
+    },
+    {
+      name: "Genetics Society",
+      university: "University of Copenhagen",
+      club_description: "Studies genetic engineering and biotechnology.",
+      university_description:
+        "Top Danish university known for medical and genetics research.",
+    },
+  ],
+};
 
 export const groupTypes = [];
 

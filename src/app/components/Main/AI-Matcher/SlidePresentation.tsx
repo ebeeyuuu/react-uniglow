@@ -14,6 +14,7 @@ const SlidePresentation: React.FC<SlidePresentationProps> = ({
   canProceed = () => true,
 }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [direction, setDirection] = useState(0); // Track the direction of the slide transition
   const [loadedSlides, setLoadedSlides] = useState<number[]>([0]);
   const slideStates = useRef<Record<number, any>>({});
 
@@ -31,6 +32,7 @@ const SlidePresentation: React.FC<SlidePresentationProps> = ({
 
   const nextSlide = () => {
     if (currentSlide < numSlides - 1) {
+      setDirection(1);
       const nextIndex = currentSlide + 1;
       setCurrentSlide(nextIndex);
       if (!loadedSlides.includes(nextIndex)) {
@@ -41,44 +43,56 @@ const SlidePresentation: React.FC<SlidePresentationProps> = ({
 
   const prevSlide = () => {
     if (currentSlide > 0) {
+      setDirection(-1);
       setCurrentSlide(currentSlide - 1);
     }
   };
 
+  const variants = {
+    enter: (direction: number) => ({
+      x: direction > 0 ? 500 : -500,
+      opacity: 0,
+    }),
+    center: {
+      zIndex: 1,
+      x: 0,
+      opacity: 1,
+    },
+    exit: (direction: number) => ({
+      zIndex: 0,
+      x: direction < 0 ? 500 : -500,
+      opacity: 0,
+    }),
+  };
+
   return (
     <div className="w-full h-full flex flex-col justify-center items-center max-[1000px]:ml-0 px-[15px] overflow-hidden max-[700px]:px-[10px] max-[700px]:py-[15px] relative">
-      <AnimatePresence>
-        {loadedSlides.map((slideIndex) => (
-          <motion.div
-            key={slideIndex}
-            initial={{ opacity: 0, x: slideIndex > currentSlide ? 100 : -100 }}
-            animate={{
-              opacity: slideIndex === currentSlide ? 1 : 0,
-              x:
-                slideIndex === currentSlide
-                  ? 0
-                  : slideIndex > currentSlide
-                    ? 100
-                    : -100,
-            }}
-            exit={{ opacity: 0, x: slideIndex > currentSlide ? 100 : -100 }}
-            transition={{ duration: 0.5 }}
-            style={{ display: slideIndex === currentSlide ? "flex" : "none" }}
-            className="justify-center items-center w-full h-[calc(100%-80px)]"
-          >
-            {React.isValidElement(getSlideContent(slideIndex)) ? (
-              React.cloneElement(getSlideContent(slideIndex) as ReactElement, {
-                slideState: slideStates.current[slideIndex] || {},
-                setSlideState: (state: any) => setSlideState(slideIndex, state),
-                onNextSlide: nextSlide,
-              })
-            ) : (
-              <div>Blank Slide</div>
-            )}
-          </motion.div>
-        ))}
+      <AnimatePresence initial={false} custom={direction}>
+        <motion.div
+          key={currentSlide}
+          custom={direction}
+          variants={variants}
+          initial="enter"
+          animate="center"
+          exit="exit"
+          transition={{
+            duration: 0.5,
+            ease: "easeInOut",
+          }}
+          className="absolute justify-center items-center flex w-full h-full"
+        >
+          {React.isValidElement(getSlideContent(currentSlide)) ? (
+            React.cloneElement(getSlideContent(currentSlide) as ReactElement, {
+              slideState: slideStates.current[currentSlide] || {},
+              setSlideState: (state: any) => setSlideState(currentSlide, state),
+              onNextSlide: nextSlide,
+            })
+          ) : (
+            <div>Blank Slide</div>
+          )}
+        </motion.div>
       </AnimatePresence>
-      <div className="flex justify-center flex-row w-full mt-4 absolute z-40 bottom-8 left-0 right-0 gap-x-4 px-4">
+      <div className="flex justify-center w-min mx-auto flex-row mt-4 absolute z-10 bottom-8 left-0 right-0 gap-x-4 px-4">
         <button
           onClick={prevSlide}
           disabled={currentSlide === 0}

@@ -583,6 +583,668 @@ export const clubExamples = {
         "Top Danish university known for medical and genetics research.",
     },
   ],
+  culturalClubs: [
+    {
+      name: "Latin American Student Association",
+      university: "Harvard University",
+      club_description: "Promotes Latin American culture and community.",
+      university_description:
+        "Ivy League university known for academic excellence.",
+    },
+    {
+      name: "Indian Cultural Society",
+      university: "Stanford University",
+      club_description: "Celebrates Indian traditions and festivals.",
+      university_description:
+        "Renowned for innovation and research in Silicon Valley.",
+    },
+    {
+      name: "Chinese Students and Scholars Association",
+      university: "University of Oxford",
+      club_description:
+        "Fosters Chinese culture through events and networking.",
+      university_description:
+        "World-leading institution known for its tradition and scholarship.",
+    },
+    {
+      name: "African Students Association",
+      university: "Massachusetts Institute of Technology",
+      club_description: "Promotes African culture and heritage.",
+      university_description:
+        "Leading research university known for STEM programs.",
+    },
+    {
+      name: "Arab Cultural Society",
+      university: "University of Cambridge",
+      club_description:
+        "Explores Arabic culture through events and discussions.",
+      university_description:
+        "Historic institution recognized for literature and arts.",
+    },
+    {
+      name: "Korean Student Association",
+      university: "Princeton University",
+      club_description: "Engages in promoting Korean culture and language.",
+      university_description: "Highly regarded for strong academic programs.",
+    },
+    {
+      name: "Hispanic Heritage Club",
+      university: "California Institute of Technology",
+      club_description:
+        "Celebrates Hispanic culture through social and cultural events.",
+      university_description:
+        "Focuses on engineering and applied sciences research.",
+    },
+    {
+      name: "Italian Society",
+      university: "Yale University",
+      club_description: "Promotes Italian traditions and cultural exchange.",
+      university_description:
+        "Ivy League university recognized for arts and humanities.",
+    },
+    {
+      name: "Russian Culture Club",
+      university: "University of Chicago",
+      club_description: "Engages in Russian cultural activities and language.",
+      university_description:
+        "Known for rigorous academic programs and research.",
+    },
+    {
+      name: "French Club",
+      university: "University of California, Berkeley",
+      club_description: "Celebrates French language, cuisine, and traditions.",
+      university_description:
+        "Public research university with a focus on humanities and social sciences.",
+    },
+    {
+      name: "Japanese Cultural Association",
+      university: "Columbia University",
+      club_description: "Promotes Japanese culture and traditions.",
+      university_description:
+        "Ivy League school located in New York City with strong social sciences.",
+    },
+    {
+      name: "Middle Eastern Cultural Society",
+      university: "University College London",
+      club_description:
+        "Focuses on Middle Eastern traditions and cultural exchange.",
+      university_description:
+        "Top UK institution known for medical research and innovation.",
+    },
+    {
+      name: "Filipino Student Association",
+      university: "University of Toronto",
+      club_description: "Celebrates Filipino heritage and fosters community.",
+      university_description:
+        "Canada's largest university, recognized for cultural diversity.",
+    },
+    {
+      name: "Jewish Students Union",
+      university: "New York University",
+      club_description: "Promotes Jewish culture and heritage through events.",
+      university_description:
+        "Leading university located in the heart of New York City.",
+    },
+    {
+      name: "Greek Society",
+      university: "University of Edinburgh",
+      club_description: "Focuses on Greek traditions, language, and culture.",
+      university_description:
+        "Historic Scottish university known for research in humanities.",
+    },
+    {
+      name: "Turkish Cultural Society",
+      university: "University of Melbourne",
+      club_description: "Celebrates Turkish culture and traditions.",
+      university_description:
+        "Australia's top-ranked university, known for diverse cultural studies.",
+    },
+    {
+      name: "Caribbean Students Association",
+      university: "University of Tokyo",
+      club_description: "Promotes Caribbean culture and fosters community.",
+      university_description:
+        "Leading Japanese university with a focus on global culture.",
+    },
+    {
+      name: "Persian Cultural Society",
+      university: "University of Pennsylvania",
+      club_description: "Engages in Persian cultural events and traditions.",
+      university_description:
+        "Ivy League university known for its humanities programs.",
+    },
+    {
+      name: "German Society",
+      university: "London School of Economics",
+      club_description: "Focuses on German culture, traditions, and language.",
+      university_description:
+        "World-renowned for social sciences and global studies.",
+    },
+    {
+      name: "Brazilian Cultural Club",
+      university: "Duke University",
+      club_description:
+        "Celebrates Brazilian culture, language, and traditions.",
+      university_description:
+        "Known for academic excellence and diverse programs.",
+    },
+    {
+      name: "Thai Student Association",
+      university: "National University of Singapore",
+      club_description: "Promotes Thai culture and language.",
+      university_description:
+        "Top Asian university known for multiculturalism and innovation.",
+    },
+    {
+      name: "Irish Cultural Society",
+      university: "Georgetown University",
+      club_description: "Explores Irish traditions, literature, and history.",
+      university_description:
+        "Highly regarded for its international affairs programs.",
+    },
+    {
+      name: "Indigenous Students Association",
+      university: "University of Queensland",
+      club_description: "Celebrates Indigenous Australian culture and history.",
+      university_description:
+        "Top Australian university known for its cultural programs.",
+    },
+    {
+      name: "Pakistani Student Association",
+      university: "University of Warwick",
+      club_description: "Focuses on Pakistani culture and traditions.",
+      university_description:
+        "Top UK university known for cultural and social science studies.",
+    },
+    {
+      name: "Scandinavian Club",
+      university: "McGill University",
+      club_description: "Celebrates Nordic culture and heritage.",
+      university_description:
+        "Canada's leading research university with a focus on global diversity.",
+    },
+    {
+      name: "Vietnamese Students Association",
+      university: "University of Southern California",
+      club_description: "Promotes Vietnamese culture and traditions.",
+      university_description:
+        "Leading university located in Los Angeles with a strong international focus.",
+    },
+    {
+      name: "Mexican Cultural Society",
+      university: "Purdue University",
+      club_description: "Celebrates Mexican culture and heritage.",
+      university_description:
+        "Known for strong engineering and international student communities.",
+    },
+    {
+      name: "Cuban Cultural Club",
+      university: "University of Miami",
+      club_description: "Engages in Cuban cultural celebrations and events.",
+      university_description:
+        "Located in Miami, known for a vibrant Latin American community.",
+    },
+    {
+      name: "Australian Indigenous Club",
+      university: "University of Sydney",
+      club_description:
+        "Focuses on Indigenous Australian heritage and culture.",
+      university_description:
+        "Australia's oldest university known for cultural diversity.",
+    },
+    {
+      name: "African Diaspora Society",
+      university: "Johns Hopkins University",
+      club_description: "Celebrates African Diaspora culture and heritage.",
+      university_description:
+        "Top medical research university with diverse cultural clubs.",
+    },
+    {
+      name: "Polish Cultural Society",
+      university: "University of Michigan",
+      club_description: "Promotes Polish traditions and community.",
+      university_description:
+        "Top public university with a strong cultural heritage focus.",
+    },
+    {
+      name: "Spanish Society",
+      university: "University of St Andrews",
+      club_description: "Explores Spanish culture, language, and traditions.",
+      university_description:
+        "Historic Scottish university known for its humanities and global focus.",
+    },
+    {
+      name: "Ethiopian Student Association",
+      university: "University of California, Los Angeles",
+      club_description: "Celebrates Ethiopian culture and traditions.",
+      university_description:
+        "Public university known for its cultural diversity and arts programs.",
+    },
+    {
+      name: "Celtic Cultural Society",
+      university: "University of British Columbia",
+      club_description: "Focuses on Celtic history and traditions.",
+      university_description:
+        "Canadian university with a diverse and vibrant student community.",
+    },
+    {
+      name: "Tamil Student Association",
+      university: "University of Waterloo",
+      club_description: "Promotes Tamil language and cultural events.",
+      university_description:
+        "Canada's top university for engineering and technology with strong cultural communities.",
+    },
+    {
+      name: "Armenian Student Association",
+      university: "University of San Francisco",
+      club_description: "Celebrates Armenian culture and traditions.",
+      university_description:
+        "Located in a diverse urban environment, known for cultural studies.",
+    },
+    {
+      name: "Nepali Cultural Club",
+      university: "Carnegie Mellon University",
+      club_description: "Focuses on Nepali traditions and cultural heritage.",
+      university_description:
+        "Leading research university with a vibrant international student population.",
+    },
+    {
+      name: "Moroccan Cultural Society",
+      university: "University of Warwick",
+      club_description: "Promotes Moroccan culture and history.",
+      university_description:
+        "Top UK university with a strong international focus.",
+    },
+    {
+      name: "Sri Lankan Students Union",
+      university: "University of Melbourne",
+      club_description: "Celebrates Sri Lankan culture and traditions.",
+      university_description:
+        "Australia's leading university with a multicultural student body.",
+    },
+    {
+      name: "Hmong Student Association",
+      university: "University of Wisconsin-Madison",
+      club_description: "Promotes Hmong cultural heritage.",
+      university_description:
+        "Top public university with diverse cultural clubs.",
+    },
+    {
+      name: "Native American Student Association",
+      university: "University of Arizona",
+      club_description:
+        "Focuses on Native American traditions and cultural events.",
+      university_description:
+        "Public research university with strong Indigenous studies programs.",
+    },
+    {
+      name: "Jewish Cultural Society",
+      university: "University of Manchester",
+      club_description:
+        "Promotes Jewish heritage through events and discussions.",
+      university_description:
+        "Leading UK university known for social sciences and cultural programs.",
+    },
+    {
+      name: "Serbian Cultural Club",
+      university: "University of Toronto",
+      club_description: "Focuses on Serbian culture and traditions.",
+      university_description:
+        "Canada's top-ranked university with a diverse cultural scene.",
+    },
+    {
+      name: "Tibetan Cultural Society",
+      university: "University of California, San Diego",
+      club_description: "Celebrates Tibetan traditions and cultural heritage.",
+      university_description:
+        "Public research university known for global cultural diversity.",
+    },
+    {
+      name: "Ukrainian Students Union",
+      university: "University of Alberta",
+      club_description: "Promotes Ukrainian culture and traditions.",
+      university_description:
+        "Top Canadian university known for its vibrant cultural clubs.",
+    },
+    {
+      name: "Welsh Society",
+      university: "University of Bristol",
+      club_description: "Focuses on Welsh language, culture, and traditions.",
+      university_description:
+        "Leading UK university with strong cultural and historical programs.",
+    },
+  ],
+  recreationalClubs: [
+    {
+      name: "Outdoor Adventure Club",
+      university: "University of California, Berkeley",
+      club_description: "Organizes hiking, camping, and outdoor activities.",
+      university_description:
+        "Top public research university known for its liberal arts programs.",
+    },
+    {
+      name: "Rock Climbing Club",
+      university: "Stanford University",
+      club_description:
+        "Offers climbing excursions and training for all levels.",
+      university_description:
+        "Known for innovation and proximity to outdoor adventures.",
+    },
+    {
+      name: "Sailing Club",
+      university: "Harvard University",
+      club_description: "Teaches sailing skills and hosts competitions.",
+      university_description:
+        "Prestigious Ivy League university located near the Charles River.",
+    },
+    {
+      name: "Ski & Snowboard Club",
+      university: "University of Colorado Boulder",
+      club_description: "Organizes skiing and snowboarding trips.",
+      university_description:
+        "Located near the Rocky Mountains, known for outdoor sports.",
+    },
+    {
+      name: "Ultimate Frisbee Club",
+      university: "Massachusetts Institute of Technology",
+      club_description: "Casual and competitive ultimate frisbee games.",
+      university_description:
+        "Renowned for cutting-edge research and technology programs.",
+    },
+    {
+      name: "Dance Marathon",
+      university: "University of Florida",
+      club_description: "Hosts dance events to raise funds for charity.",
+      university_description:
+        "Major public university with a vibrant campus life.",
+    },
+    {
+      name: "Photography Club",
+      university: "University of Michigan",
+      club_description: "Offers photography workshops and exhibitions.",
+      university_description:
+        "Top public research university with strong arts programs.",
+    },
+    {
+      name: "Cycling Club",
+      university: "University of Cambridge",
+      club_description: "Organizes road and mountain biking events.",
+      university_description:
+        "Historic university with a strong emphasis on sports.",
+    },
+    {
+      name: "Tabletop Gaming Club",
+      university: "New York University",
+      club_description:
+        "Hosts board game nights and strategy game tournaments.",
+      university_description:
+        "Located in the heart of New York City, known for arts and culture.",
+    },
+    {
+      name: "Surf Club",
+      university: "University of California, San Diego",
+      club_description:
+        "Surfing trips and competitions along the California coast.",
+      university_description:
+        "Leading public university located near popular beaches.",
+    },
+    {
+      name: "Scuba Diving Club",
+      university: "University of Miami",
+      club_description: "Offers scuba diving lessons and trips.",
+      university_description:
+        "Located near coastal waters, known for marine biology research.",
+    },
+    {
+      name: "Gaming Society",
+      university: "University of Oxford",
+      club_description: "Hosts casual and competitive video gaming events.",
+      university_description:
+        "World-renowned university with a diverse student body.",
+    },
+    {
+      name: "Running Club",
+      university: "University of Edinburgh",
+      club_description: "Organizes group runs for all experience levels.",
+      university_description:
+        "Historic university known for sports and outdoor activities.",
+    },
+    {
+      name: "Chess Club",
+      university: "Princeton University",
+      club_description: "Competitive and casual chess games and tournaments.",
+      university_description:
+        "Ivy League university with a strong focus on strategy games.",
+    },
+    {
+      name: "Fishing Club",
+      university: "Texas A&M University",
+      club_description: "Hosts fishing trips and workshops for all levels.",
+      university_description:
+        "Large public university known for its outdoor programs.",
+    },
+    {
+      name: "Volleyball Club",
+      university: "University of California, Los Angeles",
+      club_description:
+        "Organizes recreational volleyball games and tournaments.",
+      university_description:
+        "Public university known for its athletics and sports culture.",
+    },
+    {
+      name: "Yoga and Meditation Club",
+      university: "University of Toronto",
+      club_description: "Offers yoga and mindfulness sessions.",
+      university_description:
+        "Top Canadian university with a focus on well-being and diversity.",
+    },
+    {
+      name: "Parkour Club",
+      university: "University of Southern California",
+      club_description:
+        "Teaches parkour techniques and organizes urban training sessions.",
+      university_description:
+        "Located in Los Angeles, known for an active campus life.",
+    },
+    {
+      name: "E-Sports Club",
+      university: "University of Texas at Austin",
+      club_description: "Competitive and casual video game competitions.",
+      university_description:
+        "Major public university with a strong e-sports presence.",
+    },
+    {
+      name: "Martial Arts Club",
+      university: "Duke University",
+      club_description: "Offers classes in various martial arts disciplines.",
+      university_description:
+        "Known for academic excellence and a strong sports culture.",
+    },
+    {
+      name: "Kayaking Club",
+      university: "University of Virginia",
+      club_description: "Organizes river kayaking trips and training.",
+      university_description:
+        "Public university with access to the Blue Ridge Mountains.",
+    },
+    {
+      name: "Quidditch Club",
+      university: "University of Pittsburgh",
+      club_description: "Hosts Quidditch matches and tournaments.",
+      university_description:
+        "Public research university known for unique and fun recreational clubs.",
+    },
+    {
+      name: "Dance Club",
+      university: "University of North Carolina at Chapel Hill",
+      club_description: "Offers a variety of dance classes and events.",
+      university_description: "Top public university with a lively arts scene.",
+    },
+    {
+      name: "Ping Pong Club",
+      university: "University of Chicago",
+      club_description: "Casual and competitive table tennis matches.",
+      university_description:
+        "Known for rigorous academics and strong student engagement.",
+    },
+    {
+      name: "Archery Club",
+      university: "University of Nottingham",
+      club_description: "Offers archery lessons and competitions.",
+      university_description:
+        "UK university with a strong tradition in recreational sports.",
+    },
+    {
+      name: "Water Polo Club",
+      university: "University of California, Davis",
+      club_description:
+        "Organizes recreational and competitive water polo games.",
+      university_description:
+        "Public research university with a strong focus on athletics.",
+    },
+    {
+      name: "Badminton Club",
+      university: "University of Warwick",
+      club_description: "Recreational and competitive badminton games.",
+      university_description:
+        "Leading UK university with a strong focus on student activities.",
+    },
+    {
+      name: "Rowing Club",
+      university: "Yale University",
+      club_description: "Offers rowing training and competitions.",
+      university_description:
+        "Prestigious Ivy League university known for its rowing tradition.",
+    },
+    {
+      name: "Skydiving Club",
+      university: "Purdue University",
+      club_description: "Organizes skydiving trips and training.",
+      university_description:
+        "Known for its engineering programs and adventurous student clubs.",
+    },
+    {
+      name: "Equestrian Club",
+      university: "University of Kentucky",
+      club_description: "Teaches horseback riding and competes in events.",
+      university_description:
+        "Public university known for its equine programs and strong athletics.",
+    },
+    {
+      name: "Photography Walk Club",
+      university: "University of Sydney",
+      club_description: "Hosts photography walks to explore the city.",
+      university_description:
+        "Australia's top university with a vibrant student life.",
+    },
+    {
+      name: "Ballroom Dance Club",
+      university: "University of Arizona",
+      club_description: "Teaches ballroom dance styles and hosts events.",
+      university_description:
+        "Public university with a strong focus on arts and recreation.",
+    },
+    {
+      name: "Caving Club",
+      university: "University of Birmingham",
+      club_description: "Organizes cave exploration trips and training.",
+      university_description:
+        "Leading UK university with a focus on outdoor activities.",
+    },
+    {
+      name: "Stand-Up Comedy Club",
+      university: "University of Melbourne",
+      club_description:
+        "Encourages students to develop stand-up comedy skills.",
+      university_description:
+        "Top Australian university known for its creative arts programs.",
+    },
+    {
+      name: "Fencing Club",
+      university: "University of Pennsylvania",
+      club_description: "Offers fencing training and competitions.",
+      university_description:
+        "Ivy League university known for strong student-led clubs.",
+    },
+    {
+      name: "Kite Flying Club",
+      university: "University of Hawaii at Manoa",
+      club_description: "Hosts kite flying events and workshops.",
+      university_description:
+        "Public university located in a scenic environment.",
+    },
+    {
+      name: "Rugby Club",
+      university: "University of Edinburgh",
+      club_description: "Recreational and competitive rugby games.",
+      university_description:
+        "Scottish university known for strong sports programs.",
+    },
+    {
+      name: "Ice Skating Club",
+      university: "McGill University",
+      club_description: "Organizes ice skating lessons and social events.",
+      university_description:
+        "Leading Canadian university with a vibrant student life.",
+    },
+    {
+      name: "Dungeons & Dragons Club",
+      university: "Carnegie Mellon University",
+      club_description: "Hosts tabletop RPG sessions and campaigns.",
+      university_description:
+        "Top research university known for arts and technology integration.",
+    },
+    {
+      name: "Ultimate Frisbee Club",
+      university: "University of Waterloo",
+      club_description: "Organizes frisbee games and competitions.",
+      university_description:
+        "Canada's leading engineering university with a strong focus on student clubs.",
+    },
+    {
+      name: "Lacrosse Club",
+      university: "Johns Hopkins University",
+      club_description: "Recreational and competitive lacrosse games.",
+      university_description:
+        "Top medical research university with a strong lacrosse tradition.",
+    },
+    {
+      name: "Frisbee Golf Club",
+      university: "University of Wisconsin-Madison",
+      club_description: "Offers frisbee golf events and training.",
+      university_description:
+        "Top public university with a vibrant outdoor culture.",
+    },
+    {
+      name: "Rafting Club",
+      university: "University of Oregon",
+      club_description: "Organizes river rafting trips.",
+      university_description:
+        "Public research university known for its proximity to natural attractions.",
+    },
+    {
+      name: "Paintball Club",
+      university: "Rutgers University",
+      club_description: "Hosts paintball matches and tournaments.",
+      university_description:
+        "Large public university known for strong campus life.",
+    },
+    {
+      name: "Zumba Fitness Club",
+      university: "University of Queensland",
+      club_description: "Offers Zumba fitness classes for all levels.",
+      university_description:
+        "Top Australian university known for active student life.",
+    },
+    {
+      name: "Hacky Sack Club",
+      university: "University of Calgary",
+      club_description: "Organizes casual and competitive hacky sack games.",
+      university_description:
+        "Leading Canadian university known for its vibrant campus.",
+    },
+  ],
+  professionalDevelopmentClubs: [],
 };
 
 export const groupTypes = [];

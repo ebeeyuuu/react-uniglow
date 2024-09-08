@@ -50,7 +50,7 @@ const SlidePresentation: React.FC<SlidePresentationProps> = ({
 
   const variants = {
     enter: (direction: number) => ({
-      x: direction > 0 ? 500 : -500,
+      x: direction > 0 ? 2000 : -2000,
       opacity: 0,
     }),
     center: {
@@ -60,7 +60,7 @@ const SlidePresentation: React.FC<SlidePresentationProps> = ({
     },
     exit: (direction: number) => ({
       zIndex: 0,
-      x: direction < 0 ? 500 : -500,
+      x: direction < 0 ? 2000 : -2000,
       opacity: 0,
     }),
   };

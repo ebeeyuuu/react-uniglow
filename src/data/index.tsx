@@ -5592,3346 +5592,1405 @@ export const clubExamples = {
         "Top Australian university known for its focus on game testing and development.",
     },
   ],
-};
-
-export const groupTypes = [];
-
-export const groupExamples = [];
-
-export const universityEnvironmentData = {
-  bustlingCities: [
-    {
-      name: "New York University",
-      description:
-        "Located in the heart of New York City, known for its vibrant urban environment and cultural opportunities.",
-    },
-    {
-      name: "University of Southern California",
-      description:
-        "Situated in Los Angeles, surrounded by a dynamic cityscape with access to entertainment and industry hubs.",
-    },
-    {
-      name: "University of Chicago",
-      description:
-        "Located in the lively city of Chicago, offering a rich cultural scene and a bustling urban atmosphere.",
-    },
-    {
-      name: "University of Pennsylvania",
-      description:
-        "Situated in Philadelphia, providing students with a vibrant city life and numerous historical sites.",
-    },
-    {
-      name: "Boston University",
-      description:
-        "Located in Boston, known for its historic landmarks and active city environment.",
-    },
-    {
-      name: "University of Toronto",
-      description:
-        "In the heart of Toronto, blending academic excellence with the energy of Canada's largest city.",
-    },
-    {
-      name: "University of Sydney",
-      description:
-        "Located in Sydney, offering a blend of academic and cultural experiences in a bustling metropolitan setting.",
-    },
-    {
-      name: "University of Melbourne",
-      description:
-        "Situated in Melbourne, providing a vibrant urban environment with a thriving cultural scene.",
-    },
-    {
-      name: "University of Hong Kong",
-      description:
-        "In the vibrant city of Hong Kong, combining academic rigor with a bustling metropolitan life.",
-    },
-    {
-      name: "National University of Singapore",
-      description:
-        "Located in Singapore, offering an energetic city environment with a focus on innovation and global connections.",
-    },
-    {
-      name: "University of Tokyo",
-      description:
-        "Situated in Tokyo, blending traditional Japanese culture with the excitement of a major global city.",
-    },
-    {
-      name: "University of São Paulo",
-      description:
-        "In São Paulo, Brazil's largest city, known for its diverse culture and bustling city life.",
-    },
-    {
-      name: "University of Cape Town",
-      description:
-        "Located in Cape Town, offering a vibrant city experience with stunning natural surroundings.",
-    },
-    {
-      name: "University of Buenos Aires",
-      description:
-        "In Buenos Aires, providing students with a lively urban environment and rich cultural experiences.",
-    },
-    {
-      name: "University of Mumbai",
-      description:
-        "Situated in Mumbai, offering an energetic city atmosphere with a mix of historical and modern influences.",
-    },
-    {
-      name: "University of Istanbul",
-      description:
-        "Located in Istanbul, where students experience a blend of historic charm and modern urban life.",
-    },
-    {
-      name: "University of Seoul",
-      description:
-        "In Seoul, South Korea, providing a dynamic urban environment with a focus on innovation and culture.",
-    },
-    {
-      name: "University of Vienna",
-      description:
-        "Located in Vienna, blending academic excellence with a rich historical and cultural city environment.",
-    },
-    {
-      name: "University of Zurich",
-      description:
-        "In Zurich, Switzerland, offering a blend of academic rigor and a lively city atmosphere.",
-    },
-    {
-      name: "University of Geneva",
-      description:
-        "Situated in Geneva, known for its international atmosphere and vibrant city life.",
+  investmentClubs: [
+    {
+      name: "Student Investment Fund",
+      university: "University of Pennsylvania",
+      club_description:
+        "Manages a real portfolio and educates students on investment strategies.",
+      university_description:
+        "Top Ivy League university known for its finance and investment programs.",
     },
-    {
-      name: "University of Amsterdam",
-      description:
-        "Located in Amsterdam, offering a dynamic urban environment with a rich cultural heritage.",
-    },
-    {
-      name: "University of Copenhagen",
-      description:
-        "In Copenhagen, providing a blend of academic excellence and a vibrant city environment.",
-    },
-    {
-      name: "University of Oslo",
-      description:
-        "Located in Oslo, known for its vibrant city life and beautiful natural surroundings.",
-    },
-    {
-      name: "University of Helsinki",
-      description:
-        "Situated in Helsinki, offering a blend of urban energy and a commitment to academic excellence.",
+    {
+      name: "Finance & Investment Society",
+      university: "Harvard University",
+      club_description:
+        "Focuses on investment strategies, stock analysis, and finance-related events.",
+      university_description:
+        "World-renowned university with a strong finance and investment emphasis.",
     },
-    {
-      name: "University of Lisbon",
-      description:
-        "In Lisbon, Portugal, providing a lively city environment with a rich cultural backdrop.",
+    {
+      name: "Global Investment Club",
+      university: "University of Cambridge",
+      club_description:
+        "Explores global investment opportunities and strategies.",
+      university_description:
+        "Prestigious university known for international business and finance programs.",
     },
-    {
-      name: "University of Edinburgh",
-      description:
-        "Located in Edinburgh, offering a blend of historical charm and a vibrant urban atmosphere.",
+    {
+      name: "Investment Banking Society",
+      university: "New York University",
+      club_description:
+        "Prepares students for careers in investment banking and finance.",
+      university_description:
+        "Top university located in the heart of the global financial capital.",
     },
-    {
-      name: "University of Glasgow",
-      description:
-        "Situated in Glasgow, known for its lively city life and vibrant cultural scene.",
+    {
+      name: "Private Equity Club",
+      university: "London School of Economics",
+      club_description:
+        "Focuses on private equity investments and related financial education.",
+      university_description:
+        "Leading university in economics and finance with a strong investment focus.",
     },
-    {
-      name: "University of Dublin",
-      description:
-        "In Dublin, providing a blend of academic excellence and a lively urban environment.",
+    {
+      name: "Impact Investment Group",
+      university: "Stanford University",
+      club_description:
+        "Focuses on investments with social and environmental impacts.",
+      university_description:
+        "Top university known for innovation and impact investing.",
     },
-    {
-      name: "University of Warsaw",
-      description:
-        "Located in Warsaw, offering a dynamic city atmosphere with a focus on academic achievement.",
+    {
+      name: "Alternative Investments Club",
+      university: "Massachusetts Institute of Technology",
+      club_description:
+        "Explores hedge funds, real estate, and alternative asset classes.",
+      university_description:
+        "World-leading technology institution with strong finance research.",
     },
-    {
-      name: "University of Prague",
-      description:
-        "Situated in Prague, known for its rich history and vibrant city life.",
+    {
+      name: "Value Investing Club",
+      university: "Columbia University",
+      club_description: "Focuses on value investing principles and strategies.",
+      university_description:
+        "Top Ivy League university known for its finance and value investing programs.",
     },
     {
-      name: "University of Budapest",
-      description:
-        "In Budapest, providing a blend of academic rigor and a vibrant urban environment.",
+      name: "Venture Capital Club",
+      university: "University of California, Berkeley",
+      club_description:
+        "Educates students on venture capital and startup investment.",
+      university_description:
+        "Top university with a strong focus on entrepreneurship and venture capital.",
     },
     {
-      name: "University of Kraków",
-      description:
-        "Located in Kraków, offering a rich historical backdrop and a lively city atmosphere.",
+      name: "Quantitative Finance Society",
+      university: "Princeton University",
+      club_description:
+        "Focuses on quantitative investment strategies and modeling.",
+      university_description:
+        "Ivy League university known for its excellence in quantitative finance.",
     },
     {
-      name: "University of Porto",
-      description:
-        "In Porto, Portugal, known for its vibrant cultural scene and energetic urban environment.",
+      name: "Real Estate Investment Club",
+      university: "University of Southern California",
+      club_description:
+        "Focuses on real estate investment and development strategies.",
+      university_description:
+        "Top U.S. university with a strong real estate program.",
     },
     {
-      name: "University of Barcelona",
-      description:
-        "Located in Barcelona, blending academic excellence with a lively Mediterranean city environment.",
+      name: "Sustainable Investing Club",
+      university: "Yale University",
+      club_description:
+        "Focuses on sustainability-focused investment strategies.",
+      university_description:
+        "Ivy League university known for its strong focus on sustainability and ethics.",
     },
     {
-      name: "University of Milan",
-      description:
-        "In Milan, Italy, offering a vibrant urban setting with a focus on fashion, design, and business.",
+      name: "Tech Investing Society",
+      university: "University of Oxford",
+      club_description:
+        "Explores investment opportunities in technology and innovation.",
+      university_description:
+        "Prestigious university with a strong focus on tech and innovation investments.",
     },
     {
-      name: "University of Rome La Sapienza",
-      description:
-        "Located in Rome, providing a rich historical and cultural environment in a bustling city.",
+      name: "Crypto Investment Club",
+      university: "University of Toronto",
+      club_description: "Focuses on cryptocurrency and blockchain investments.",
+      university_description:
+        "Top Canadian university with a strong focus on financial technology.",
     },
     {
-      name: "University of Berlin",
-      description:
-        "In Berlin, Germany, known for its dynamic urban culture and rich history.",
+      name: "Equity Research Club",
+      university: "University of Chicago",
+      club_description:
+        "Analyzes and researches public equities for investment strategies.",
+      university_description:
+        "Leading university in finance with a focus on equity research.",
     },
     {
-      name: "University of Hamburg",
-      description:
-        "Located in Hamburg, blending academic rigor with a lively port city atmosphere.",
+      name: "Global Markets Investment Club",
+      university: "London Business School",
+      club_description:
+        "Focuses on global financial markets and investment opportunities.",
+      university_description:
+        "Top business school known for global finance and investment education.",
     },
     {
-      name: "University of Munich",
-      description:
-        "Situated in Munich, offering a vibrant city life combined with academic excellence.",
+      name: "Stock Pitch Club",
+      university: "Cornell University",
+      club_description:
+        "Hosts stock pitch competitions and teaches stock analysis.",
+      university_description:
+        "Top Ivy League university with a strong finance and investment focus.",
     },
     {
-      name: "University of Stuttgart",
-      description:
-        "In Stuttgart, Germany, providing a dynamic urban environment with a focus on engineering and technology.",
+      name: "Hedge Fund Society",
+      university: "University of Michigan",
+      club_description:
+        "Explores hedge fund strategies and career opportunities.",
+      university_description:
+        "Top public university with a strong finance and hedge fund focus.",
     },
     {
-      name: "University of Düsseldorf",
-      description:
-        "Located in Düsseldorf, known for its vibrant cultural scene and academic institutions.",
+      name: "Student Venture Fund",
+      university: "Duke University",
+      club_description:
+        "Focuses on venture capital and startup investment opportunities.",
+      university_description:
+        "Top U.S. university known for venture capital and entrepreneurship programs.",
     },
     {
-      name: "University of Frankfurt",
-      description:
-        "Situated in Frankfurt, Germany, blending academic rigor with a bustling financial hub.",
+      name: "Emerging Markets Club",
+      university: "University of Texas at Austin",
+      club_description:
+        "Explores investment opportunities in emerging markets.",
+      university_description:
+        "Leading U.S. university with a focus on global finance and investment.",
     },
     {
-      name: "University of Cologne",
-      description:
-        "In Cologne, offering a vibrant urban environment with a rich cultural backdrop.",
+      name: "Finance & Trading Society",
+      university: "University of Warwick",
+      club_description:
+        "Focuses on trading strategies and financial market analysis.",
+      university_description:
+        "Top UK university with a strong finance and trading emphasis.",
     },
     {
-      name: "University of Essen",
-      description:
-        "Located in Essen, providing a dynamic city atmosphere with a strong academic presence.",
+      name: "Socially Responsible Investing Club",
+      university: "University of Notre Dame",
+      club_description:
+        "Focuses on socially responsible and ethical investment strategies.",
+      university_description:
+        "Top U.S. university known for its focus on ethics and social responsibility.",
     },
     {
-      name: "University of Mannheim",
-      description:
-        "In Mannheim, Germany, known for its vibrant city life and focus on business studies.",
+      name: "FinTech Investment Club",
+      university: "Imperial College London",
+      club_description:
+        "Explores investments in financial technology and innovation.",
+      university_description:
+        "Top UK university with a focus on technology and innovation in finance.",
     },
     {
-      name: "University of Heidelberg",
-      description:
-        "Situated in Heidelberg, blending historical charm with a lively academic community.",
+      name: "International Finance Club",
+      university: "University of Edinburgh",
+      club_description: "Explores global finance and investment opportunities.",
+      university_description:
+        "Top Scottish university known for its strong international finance focus.",
     },
     {
-      name: "University of Lausanne",
-      description:
-        "Located in Lausanne, Switzerland, offering a vibrant city environment with a focus on international studies.",
+      name: "Investment Analysis Group",
+      university: "University of Melbourne",
+      club_description:
+        "Focuses on portfolio analysis and stock market strategies.",
+      university_description:
+        "Leading Australian university with a strong investment analysis program.",
     },
     {
-      name: "University of Lucerne",
-      description:
-        "In Lucerne, Switzerland, blending academic excellence with a picturesque urban setting.",
+      name: "Derivatives Trading Club",
+      university: "University of Sydney",
+      club_description:
+        "Explores derivatives trading strategies and risk management.",
+      university_description:
+        "Top Australian university known for its focus on finance and derivatives.",
     },
     {
-      name: "University of Bern",
-      description:
-        "Situated in Bern, offering a dynamic city life with a strong academic focus.",
+      name: "Real Asset Investment Club",
+      university: "University of British Columbia",
+      club_description:
+        "Focuses on real asset investment, including infrastructure and real estate.",
+      university_description:
+        "Top Canadian university with a strong real asset investment program.",
     },
     {
-      name: "University of Basel",
-      description:
-        "In Basel, Switzerland, known for its vibrant city culture and strong academic programs.",
+      name: "Growth Investing Society",
+      university: "Carnegie Mellon University",
+      club_description:
+        "Focuses on growth investing strategies in emerging industries.",
+      university_description:
+        "Top U.S. university known for its strong focus on technology and growth sectors.",
     },
     {
-      name: "University of Geneva",
-      description:
-        "Located in Geneva, offering a blend of international atmosphere and academic rigor.",
+      name: "Investment Research Group",
+      university: "University of Queensland",
+      club_description:
+        "Conducts research and analysis on investment trends and markets.",
+      university_description:
+        "Leading Australian university known for its finance and investment research.",
     },
     {
-      name: "University of Oslo",
-      description:
-        "In Oslo, blending vibrant city life with academic excellence.",
+      name: "Private Wealth Management Club",
+      university: "University of Toronto",
+      club_description: "Focuses on private wealth management strategies.",
+      university_description:
+        "Top Canadian university with a strong focus on finance and wealth management.",
     },
     {
-      name: "University of Stockholm",
-      description:
-        "Located in Stockholm, Sweden, providing a dynamic urban environment with a focus on innovation and research.",
+      name: "Corporate Finance Club",
+      university: "University of New South Wales",
+      club_description:
+        "Explores corporate finance and capital investment strategies.",
+      university_description:
+        "Leading Australian university with a strong corporate finance program.",
     },
     {
-      name: "University of Gothenburg",
-      description:
-        "In Gothenburg, Sweden, offering a vibrant city setting with strong academic programs.",
+      name: "Blockchain Investment Group",
+      university: "University of Cambridge",
+      club_description:
+        "Focuses on blockchain investments and financial technology.",
+      university_description:
+        "Prestigious university with a focus on blockchain and innovation in finance.",
     },
     {
-      name: "University of Uppsala",
-      description:
-        "Situated in Uppsala, Sweden, known for its rich academic history and vibrant city life.",
+      name: "Investment & Trading Society",
+      university: "University of Leeds",
+      club_description:
+        "Focuses on trading strategies and investment analysis.",
+      university_description:
+        "Top UK university with a strong finance and trading focus.",
     },
     {
-      name: "University of Helsinki",
-      description:
-        "In Helsinki, blending a dynamic urban environment with academic excellence.",
+      name: "Student Portfolio Management Club",
+      university: "McGill University",
+      club_description:
+        "Manages a student-run portfolio and teaches investment strategies.",
+      university_description:
+        "Top Canadian university with a strong emphasis on finance and investment.",
     },
     {
-      name: "University of Tallinn",
-      description:
-        "Located in Tallinn, Estonia, providing a vibrant city atmosphere with a focus on technology and innovation.",
+      name: "Global Finance Club",
+      university: "University of Hong Kong",
+      club_description:
+        "Focuses on global finance and investment opportunities in Asia.",
+      university_description:
+        "Leading Asian university known for its focus on global finance.",
     },
     {
-      name: "University of Vilnius",
-      description:
-        "In Vilnius, Lithuania, known for its vibrant city life and academic rigor.",
+      name: "Investment Strategy Club",
+      university: "University of Waterloo",
+      club_description:
+        "Teaches investment strategies and portfolio management.",
+      university_description:
+        "Top Canadian university with a focus on finance and technology.",
     },
     {
-      name: "University of Riga",
-      description:
-        "Situated in Riga, Latvia, offering a dynamic urban environment with a focus on cultural studies.",
+      name: "Risk Management Club",
+      university: "University of Virginia",
+      club_description: "Focuses on risk management and mitigation strategies.",
+      university_description:
+        "Top U.S. university with a strong focus on finance and risk management.",
     },
     {
-      name: "University of Warsaw",
-      description:
-        "In Warsaw, blending a vibrant city atmosphere with strong academic programs.",
+      name: "Entrepreneurship & Investment Club",
+      university: "University of Bath",
+      club_description:
+        "Explores investment opportunities in startups and entrepreneurship.",
+      university_description:
+        "Leading UK university known for its focus on entrepreneurship and venture capital.",
     },
     {
-      name: "University of Prague",
-      description:
-        "Located in Prague, offering a rich historical backdrop and dynamic city life.",
+      name: "Tech Finance Club",
+      university: "University of California, San Diego",
+      club_description:
+        "Focuses on finance and investment in the technology sector.",
+      university_description:
+        "Top U.S. university with a strong focus on technology and finance.",
     },
     {
-      name: "University of Budapest",
-      description:
-        "In Budapest, Hungary, known for its lively city culture and academic focus.",
+      name: "Financial Markets Society",
+      university: "University of Manchester",
+      club_description: "Explores financial markets and trading strategies.",
+      university_description:
+        "Top UK university with a strong emphasis on finance and financial markets.",
     },
     {
-      name: "University of Kraków",
-      description:
-        "Located in Kraków, blending a rich historical setting with vibrant urban life.",
+      name: "Investment Leadership Club",
+      university: "University of Sydney",
+      club_description:
+        "Focuses on leadership roles in finance and investment management.",
+      university_description:
+        "Top Australian university with a focus on finance and leadership.",
     },
     {
-      name: "University of Porto",
-      description:
-        "In Porto, Portugal, providing a lively city environment with a strong academic focus.",
+      name: "Venture Investment Group",
+      university: "University of Queensland",
+      club_description: "Focuses on venture capital and startup investments.",
+      university_description:
+        "Leading Australian university known for its focus on venture capital.",
     },
     {
-      name: "University of Florence",
-      description:
-        "Situated in Florence, Italy, offering a blend of academic excellence and rich cultural heritage.",
+      name: "Quantitative Investing Club",
+      university: "University of Melbourne",
+      club_description:
+        "Focuses on quantitative investing strategies and modeling.",
+      university_description:
+        "Leading Australian university known for its strong quantitative finance program.",
     },
     {
-      name: "University of Milan",
-      description:
-        "In Milan, blending a vibrant city atmosphere with a focus on design and business.",
+      name: "Emerging Tech Investment Club",
+      university: "University of California, Irvine",
+      club_description:
+        "Explores investment opportunities in emerging technologies.",
+      university_description:
+        "Top U.S. university with a focus on finance and emerging tech.",
     },
     {
-      name: "University of Rome La Sapienza",
-      description:
-        "Located in Rome, offering a dynamic urban environment with a rich historical backdrop.",
+      name: "Investment & Real Estate Club",
+      university: "University of Toronto",
+      club_description: "Focuses on real estate and investment strategies.",
+      university_description:
+        "Top Canadian university known for its focus on finance and real estate.",
     },
   ],
-  suburbanAreas: [
+  languageClubs: [
     {
-      name: "University of California, Berkeley",
-      description:
-        "Located in a suburban area with access to the vibrant city of San Francisco.",
+      name: "Spanish Language & Culture Club",
+      university: "University of California, Los Angeles",
+      club_description:
+        "Promotes Spanish language learning and cultural exchange.",
+      university_description:
+        "Top public university known for its global diversity and academic excellence.",
     },
     {
-      name: "University of Michigan",
-      description:
-        "Situated in Ann Arbor, known for its peaceful suburban setting and strong academic community.",
+      name: "French Language Society",
+      university: "Harvard University",
+      club_description:
+        "Enhances French language skills and appreciation for French culture.",
+      university_description:
+        "World-renowned Ivy League university with a rich cultural environment.",
     },
     {
-      name: "University of Virginia",
-      description:
-        "In Charlottesville, offering a tranquil suburban environment with a rich history.",
+      name: "Mandarin Language Club",
+      university: "University of Cambridge",
+      club_description:
+        "Focuses on learning Mandarin and understanding Chinese culture.",
+      university_description:
+        "Prestigious university with a strong global outlook and diverse student body.",
     },
     {
-      name: "University of North Carolina at Chapel Hill",
-      description:
-        "Located in Chapel Hill, blending a serene suburban setting with a strong academic presence.",
+      name: "German Language & Film Club",
+      university: "New York University",
+      club_description:
+        "Combines German language learning with film screenings and discussions.",
+      university_description:
+        "Top university with a vibrant cultural scene in the heart of New York City.",
     },
     {
-      name: "University of Wisconsin-Madison",
-      description:
-        "Situated in Madison, offering a peaceful suburban environment with a strong focus on education.",
+      name: "Japanese Language & Culture Association",
+      university: "University of Tokyo",
+      club_description:
+        "Provides opportunities to practice Japanese and learn about Japanese traditions.",
+      university_description:
+        "Top university in Japan with a strong focus on cultural and academic exchange.",
     },
     {
-      name: "University of Illinois at Urbana-Champaign",
-      description:
-        "In Urbana-Champaign, providing a calm suburban setting with a vibrant academic community.",
+      name: "Russian Language & Literature Club",
+      university: "Yale University",
+      club_description:
+        "Explores Russian language, literature, and culture through events and activities.",
+      university_description:
+        "Ivy League university known for its strong language and literature programs.",
     },
     {
-      name: "University of Minnesota",
-      description:
-        "Located in Minneapolis-St. Paul, combining a peaceful suburban atmosphere with a dynamic educational environment.",
+      name: "Arabic Language Association",
+      university: "University of Michigan",
+      club_description:
+        "Focuses on Arabic language skills and Middle Eastern cultural understanding.",
+      university_description:
+        "Top public university with a diverse student body and cultural programs.",
     },
     {
-      name: "University of Indiana",
-      description:
-        "In Bloomington, offering a serene suburban setting with a strong academic reputation.",
+      name: "Korean Language & Culture Club",
+      university: "Seoul National University",
+      club_description:
+        "Promotes Korean language proficiency and cultural events.",
+      university_description:
+        "Leading university in South Korea with a focus on global outreach and education.",
     },
     {
-      name: "University of Iowa",
-      description:
-        "Situated in Iowa City, known for its tranquil suburban environment and academic excellence.",
+      name: "Portuguese Language Club",
+      university: "University of Lisbon",
+      club_description: "Teaches Portuguese and explores Lusophone cultures.",
+      university_description:
+        "Top Portuguese university with a strong focus on language and cultural studies.",
     },
     {
-      name: "University of Kentucky",
-      description:
-        "Located in Lexington, providing a peaceful suburban setting with a focus on education.",
+      name: "Italian Language & Conversation Group",
+      university: "University of Oxford",
+      club_description:
+        "Encourages conversational Italian and cultural appreciation.",
+      university_description:
+        "Prestigious UK university known for its rich cultural and academic environment.",
     },
     {
-      name: "University of Oklahoma",
-      description:
-        "In Norman, offering a calm suburban environment with a strong academic community.",
+      name: "Hindi Language & Culture Club",
+      university: "Jawaharlal Nehru University",
+      club_description:
+        "Focuses on Hindi language practice and Indian cultural heritage.",
+      university_description:
+        "Top Indian university with a strong focus on language studies and cultural programs.",
     },
     {
-      name: "University of Arizona",
-      description:
-        "Located in Tucson, blending a tranquil suburban setting with a strong focus on education.",
+      name: "Latin Language Society",
+      university: "University of Edinburgh",
+      club_description:
+        "Explores Latin language and Roman culture through discussions and readings.",
+      university_description:
+        "Top UK university known for its classics and humanities programs.",
     },
     {
-      name: "University of Kansas",
-      description:
-        "Situated in Lawrence, known for its peaceful suburban environment and strong academic presence.",
+      name: "Swahili Language Club",
+      university: "University of Nairobi",
+      club_description:
+        "Promotes Swahili language learning and East African culture.",
+      university_description:
+        "Top Kenyan university with a focus on regional language and cultural education.",
     },
     {
-      name: "University of Colorado Boulder",
-      description:
-        "In Boulder, offering a serene suburban setting with a focus on academic achievement.",
+      name: "Hebrew Language & Cultural Club",
+      university: "Hebrew University of Jerusalem",
+      club_description:
+        "Provides opportunities for Hebrew language practice and cultural events.",
+      university_description:
+        "Leading university in Israel with a strong focus on language and cultural studies.",
     },
     {
-      name: "University of Oregon",
-      description:
-        "Located in Eugene, providing a peaceful suburban environment with a vibrant academic community.",
+      name: "American Sign Language Club",
+      university: "University of California, Berkeley",
+      club_description:
+        "Promotes ASL proficiency and awareness of Deaf culture.",
+      university_description:
+        "Top U.S. public university known for its social justice and inclusivity efforts.",
     },
     {
-      name: "University of South Carolina",
-      description:
-        "Situated in Columbia, known for its calm suburban setting and strong academic programs.",
+      name: "Turkish Language & Culture Group",
+      university: "Bogazici University",
+      club_description:
+        "Focuses on Turkish language practice and cultural exchange.",
+      university_description:
+        "Top university in Turkey known for its strong international connections and language programs.",
     },
     {
-      name: "University of Tennessee",
-      description:
-        "In Knoxville, offering a tranquil suburban environment with a focus on education.",
+      name: "Persian Language Club",
+      university: "University of Toronto",
+      club_description:
+        "Explores Persian language and culture through events and discussions.",
+      university_description:
+        "Top Canadian university with a diverse student body and global focus.",
     },
     {
-      name: "University of Alabama",
-      description:
-        "Located in Tuscaloosa, providing a serene suburban setting with a strong academic community.",
+      name: "Greek Language Society",
+      university: "University of Athens",
+      club_description:
+        "Promotes learning Modern Greek and engaging with Greek culture.",
+      university_description:
+        "Leading university in Greece with a focus on language and classical studies.",
     },
     {
-      name: "University of Mississippi",
-      description:
-        "In Oxford, offering a peaceful suburban environment with a focus on education.",
+      name: "Dutch Language & Culture Club",
+      university: "Leiden University",
+      club_description:
+        "Focuses on Dutch language learning and exploring Dutch culture.",
+      university_description:
+        "Top Dutch university with a rich history and global academic reputation.",
     },
     {
-      name: "University of Arkansas",
-      description:
-        "Situated in Fayetteville, known for its calm suburban setting and academic excellence.",
+      name: "Polish Language & Culture Association",
+      university: "University of Warsaw",
+      club_description:
+        "Promotes Polish language practice and appreciation for Polish culture.",
+      university_description:
+        "Top Polish university with a strong focus on cultural and language studies.",
     },
     {
-      name: "University of Missouri",
-      description:
-        "Located in Columbia, blending a tranquil suburban environment with a vibrant educational community.",
+      name: "Thai Language Club",
+      university: "Chulalongkorn University",
+      club_description:
+        "Encourages learning Thai and engaging with Thai cultural traditions.",
+      university_description:
+        "Top university in Thailand with a focus on global cultural exchange.",
     },
     {
-      name: "University of Nebraska-Lincoln",
-      description:
-        "In Lincoln, offering a peaceful suburban setting with a focus on academic achievement.",
+      name: "Vietnamese Language & Culture Society",
+      university: "Vietnam National University",
+      club_description:
+        "Promotes Vietnamese language learning and cultural appreciation.",
+      university_description:
+        "Leading Vietnamese university known for its focus on regional language and culture.",
     },
     {
-      name: "University of South Dakota",
-      description:
-        "Located in Vermillion, providing a serene suburban environment with a strong academic presence.",
+      name: "Urdu Language Society",
+      university: "Lahore University of Management Sciences",
+      club_description:
+        "Promotes learning Urdu and understanding Pakistani culture.",
+      university_description:
+        "Top Pakistani university known for its focus on language and cultural heritage.",
     },
     {
-      name: "University of North Dakota",
-      description:
-        "Situated in Grand Forks, known for its calm suburban setting and academic excellence.",
+      name: "Cantonese Language Club",
+      university: "University of Hong Kong",
+      club_description:
+        "Focuses on Cantonese language practice and cultural events.",
+      university_description:
+        "Top university in Hong Kong with a focus on language and cultural education.",
     },
     {
-      name: "University of Montana",
-      description:
-        "In Missoula, offering a tranquil suburban environment with a focus on education.",
+      name: "Swedish Language & Culture Group",
+      university: "Lund University",
+      club_description:
+        "Promotes Swedish language learning and cultural exploration.",
+      university_description:
+        "Top Swedish university known for its focus on language and cultural exchange.",
     },
     {
-      name: "University of Idaho",
-      description:
-        "Located in Moscow, blending a serene suburban setting with a strong academic community.",
+      name: "Tamil Language Society",
+      university: "University of Madras",
+      club_description:
+        "Focuses on Tamil language practice and South Indian cultural events.",
+      university_description:
+        "Leading university in India with a focus on Tamil language and heritage.",
     },
     {
-      name: "University of Wyoming",
-      description:
-        "In Laramie, providing a peaceful suburban environment with a focus on academic achievement.",
+      name: "Norwegian Language Club",
+      university: "University of Oslo",
+      club_description:
+        "Promotes learning Norwegian and exploring Norwegian culture.",
+      university_description:
+        "Top Norwegian university known for its focus on language and cultural studies.",
     },
     {
-      name: "University of Maine",
-      description:
-        "Situated in Orono, known for its calm suburban setting and vibrant educational community.",
+      name: "Finnish Language Society",
+      university: "University of Helsinki",
+      club_description:
+        "Focuses on learning Finnish and engaging with Finnish traditions.",
+      university_description:
+        "Leading Finnish university known for its strong language and cultural programs.",
     },
     {
-      name: "University of New Hampshire",
-      description:
-        "Located in Durham, offering a tranquil suburban environment with a strong academic focus.",
+      name: "Romanian Language & Culture Club",
+      university: "University of Bucharest",
+      club_description:
+        "Promotes Romanian language practice and appreciation for Romanian culture.",
+      university_description:
+        "Top Romanian university with a strong focus on language and cultural studies.",
     },
     {
-      name: "University of Vermont",
-      description:
-        "In Burlington, providing a serene suburban setting with a vibrant academic community.",
+      name: "Hungarian Language Society",
+      university: "Eötvös Loránd University",
+      club_description:
+        "Encourages learning Hungarian and engaging with Hungarian culture.",
+      university_description:
+        "Top Hungarian university known for its strong language and cultural focus.",
     },
     {
-      name: "Boston College",
-      description:
-        "Located in Chestnut Hill, Massachusetts, offering a blend of suburban tranquility and academic excellence.",
+      name: "Ukrainian Language & Culture Club",
+      university: "Kyiv National University",
+      club_description:
+        "Focuses on Ukrainian language learning and cultural appreciation.",
+      university_description:
+        "Leading Ukrainian university known for its focus on language and regional culture.",
     },
     {
-      name: "Wake Forest University",
-      description:
-        "In Winston-Salem, North Carolina, providing a peaceful suburban setting with a strong focus on education.",
+      name: "Indonesian Language & Cultural Association",
+      university: "University of Indonesia",
+      club_description:
+        "Promotes Indonesian language skills and cultural exchange.",
+      university_description:
+        "Top university in Indonesia with a strong focus on regional language and culture.",
     },
     {
-      name: "Duke University",
-      description:
-        "Located in Durham, North Carolina, known for its serene suburban environment and strong academic reputation.",
+      name: "Czech Language Society",
+      university: "Charles University",
+      club_description:
+        "Focuses on Czech language practice and cultural exploration.",
+      university_description:
+        "Top Czech university with a rich history and focus on language studies.",
     },
     {
-      name: "Emory University",
-      description:
-        "In Atlanta, Georgia, offering a blend of suburban tranquility with access to a major city.",
+      name: "Zulu Language & Culture Club",
+      university: "University of KwaZulu-Natal",
+      club_description:
+        "Promotes Zulu language learning and appreciation for Zulu culture.",
+      university_description:
+        "Leading South African university with a focus on regional language and culture.",
     },
     {
-      name: "Rice University",
-      description:
-        "Located in Houston, Texas, blending a calm suburban setting with a dynamic academic environment.",
+      name: "Filipino Language Society",
+      university: "University of the Philippines",
+      club_description:
+        "Focuses on promoting Filipino language skills and cultural awareness.",
+      university_description:
+        "Top university in the Philippines with a focus on national language and heritage.",
     },
     {
-      name: "Brigham Young University",
-      description:
-        "In Provo, Utah, providing a serene suburban atmosphere with a strong academic focus.",
+      name: "Esperanto Language Club",
+      university: "University of Zurich",
+      club_description:
+        "Encourages learning Esperanto and discussing its global potential.",
+      university_description:
+        "Top Swiss university known for its global outlook and linguistic diversity.",
     },
     {
-      name: "Vanderbilt University",
-      description:
-        "Located in Nashville, Tennessee, offering a peaceful suburban setting with a vibrant academic community.",
+      name: "Welsh Language & Culture Society",
+      university: "Cardiff University",
+      club_description:
+        "Promotes Welsh language learning and cultural appreciation.",
+      university_description:
+        "Top university in Wales with a strong focus on regional language and culture.",
     },
     {
-      name: "Southern Methodist University",
-      description:
-        "In Dallas, Texas, providing a blend of suburban tranquility with access to a major city.",
+      name: "Farsi Language Society",
+      university: "Tehran University",
+      club_description:
+        "Focuses on Farsi language skills and Persian cultural appreciation.",
+      university_description:
+        "Top university in Iran with a strong focus on language and cultural education.",
     },
     {
-      name: "University of Denver",
-      description:
-        "Located in Denver, Colorado, offering a suburban setting with a strong focus on education.",
+      name: "Icelandic Language Society",
+      university: "University of Iceland",
+      club_description:
+        "Promotes Icelandic language practice and cultural appreciation.",
+      university_description:
+        "Top Icelandic university with a focus on language and regional heritage.",
     },
     {
-      name: "Oklahoma State University",
-      description:
-        "In Stillwater, Oklahoma, providing a tranquil suburban environment with a focus on academic excellence.",
+      name: "Quechua Language Society",
+      university: "Pontifical Catholic University of Peru",
+      club_description:
+        "Focuses on promoting Quechua language learning and Andean culture.",
+      university_description:
+        "Top university in Peru with a focus on indigenous languages and cultures.",
     },
     {
-      name: "University of Tulsa",
-      description:
-        "Located in Tulsa, Oklahoma, blending a serene suburban setting with a strong academic presence.",
+      name: "Haitian Creole Language Society",
+      university: "University of Haiti",
+      club_description:
+        "Promotes learning Haitian Creole and understanding local traditions.",
+      university_description:
+        "Top Haitian university known for its focus on language and cultural education.",
     },
     {
-      name: "Creighton University",
-      description:
-        "In Omaha, Nebraska, offering a peaceful suburban environment with a focus on education.",
+      name: "Gaelic Language Club",
+      university: "University of Glasgow",
+      club_description:
+        "Focuses on Gaelic language practice and Scottish cultural events.",
+      university_description:
+        "Leading Scottish university with a focus on language and regional heritage.",
     },
     {
-      name: "Loyola University Chicago",
-      description:
-        "Located in Chicago, Illinois, offering a suburban setting with access to a major city.",
+      name: "Tibetan Language & Culture Society",
+      university: "Tibet University",
+      club_description:
+        "Promotes Tibetan language learning and cultural understanding.",
+      university_description:
+        "Top university in Tibet with a focus on regional language and traditions.",
     },
     {
-      name: "Fairfield University",
-      description:
-        "In Fairfield, Connecticut, providing a serene suburban atmosphere with a strong academic community.",
+      name: "Maori Language Society",
+      university: "University of Auckland",
+      club_description:
+        "Encourages learning Maori and engaging with New Zealand's indigenous culture.",
+      university_description:
+        "Top New Zealand university known for its focus on Maori language and heritage.",
     },
     {
-      name: "Marquette University",
-      description:
-        "Located in Milwaukee, Wisconsin, offering a peaceful suburban setting with a vibrant academic environment.",
-    },
-    {
-      name: "Loyola Marymount University",
-      description:
-        "In Los Angeles, California, providing a suburban atmosphere with access to a major city.",
-    },
-    {
-      name: "Gonzaga University",
-      description:
-        "Located in Spokane, Washington, offering a tranquil suburban setting with a strong academic presence.",
-    },
-    {
-      name: "Haverford College",
-      description:
-        "Located in Haverford, Pennsylvania, providing a serene suburban environment with a strong academic focus.",
-    },
-    {
-      name: "Swarthmore College",
-      description:
-        "In Swarthmore, Pennsylvania, blending a peaceful suburban setting with a vibrant academic atmosphere.",
-    },
-    {
-      name: "Bates College",
-      description:
-        "Situated in Lewiston, Maine, offering a tranquil suburban environment with a strong focus on education.",
-    },
-    {
-      name: "Bowdoin College",
-      description:
-        "In Brunswick, Maine, providing a serene suburban setting with a strong academic community.",
-    },
-    {
-      name: "Skidmore College",
-      description:
-        "Located in Saratoga Springs, New York, surrounded by the beauty of the rural countryside.",
-    },
-    {
-      name: "Saint Lawrence University",
-      description:
-        "Situated in Canton, New York, offering a peaceful rural setting with a strong academic focus.",
-    },
-    {
-      name: "Colorado College",
-      description:
-        "In Colorado Springs, Colorado, blending a serene rural environment with a vibrant educational community.",
-    },
-    {
-      name: "Earlham College",
-      description:
-        "Located in Richmond, Indiana, providing a tranquil rural setting with a focus on academic excellence.",
-    },
-    {
-      name: "Knox College",
-      description:
-        "Situated in Galesburg, Illinois, offering a peaceful rural environment with a strong academic presence.",
-    },
-    {
-      name: "Gustavus Adolphus College",
-      description:
-        "In Saint Peter, Minnesota, surrounded by a serene rural setting with a focus on education.",
-    },
-    {
-      name: "Carleton College",
-      description:
-        "Located in Northfield, Minnesota, blending a tranquil rural environment with a vibrant academic community.",
+      name: "Sinhala Language & Culture Society",
+      university: "University of Colombo",
+      club_description:
+        "Focuses on learning Sinhala and promoting Sri Lankan cultural heritage.",
+      university_description:
+        "Top Sri Lankan university with a strong focus on language and cultural programs.",
     },
   ],
-  ruralSettings: [
+  mediaAndJournalismClubs: [
     {
-      name: "University of Vermont",
-      description:
-        "Located in Burlington, surrounded by the scenic beauty of Vermont's rural landscapes.",
+      name: "The Harvard Crimson",
+      university: "Harvard University",
+      club_description:
+        "Harvard's student-run newspaper reporting campus and national news.",
+      university_description:
+        "Prestigious Ivy League university known for its academic excellence and research.",
     },
     {
-      name: "Oberlin College",
-      description:
-        "Situated in Oberlin, Ohio, offering a serene rural setting with a focus on academic and artistic excellence.",
+      name: "NYU Journalism Club",
+      university: "New York University",
+      club_description:
+        "Focuses on multimedia journalism and news writing skills.",
+      university_description:
+        "Top university located in the heart of New York, known for its media programs.",
     },
     {
-      name: "Williams College",
-      description:
-        "In Williamstown, Massachusetts, surrounded by the picturesque beauty of rural New England.",
+      name: "Daily Bruin",
+      university: "University of California, Los Angeles",
+      club_description:
+        "UCLA's independent student-run newspaper covering campus news.",
+      university_description:
+        "Top public university known for its strong media and communications programs.",
     },
     {
-      name: "Amherst College",
-      description:
-        "Located in Amherst, Massachusetts, providing a peaceful rural environment with a strong academic community.",
+      name: "The Stanford Daily",
+      university: "Stanford University",
+      club_description:
+        "Student-run newspaper covering campus events and global issues.",
+      university_description:
+        "World-renowned university known for innovation and research.",
     },
     {
-      name: "Middlebury College",
-      description:
-        "Situated in Middlebury, Vermont, offering a tranquil rural setting with a focus on academic achievement.",
+      name: "The Cambridge Review",
+      university: "University of Cambridge",
+      club_description:
+        "Focuses on investigative journalism and critical reporting.",
+      university_description:
+        "Prestigious UK university with a global reputation for academic excellence.",
     },
     {
-      name: "Haverford College",
-      description:
-        "In Haverford, Pennsylvania, surrounded by a serene rural environment and a strong academic community.",
+      name: "Oxford Media Society",
+      university: "University of Oxford",
+      club_description:
+        "Encourages student discussions on media, journalism, and ethics.",
+      university_description:
+        "Historic university with a strong humanities and media program.",
     },
     {
-      name: "Swarthmore College",
-      description:
-        "Located in Swarthmore, Pennsylvania, blending a peaceful rural setting with a vibrant academic atmosphere.",
+      name: "The Michigan Daily",
+      university: "University of Michigan",
+      club_description:
+        "Student-run newspaper reporting on campus and local news.",
+      university_description:
+        "Top public university with a strong reputation in journalism and media studies.",
     },
     {
-      name: "Bates College",
-      description:
-        "Situated in Lewiston, Maine, offering a tranquil rural environment with a strong focus on education.",
+      name: "The McGill Tribune",
+      university: "McGill University",
+      club_description:
+        "Independent student newspaper covering campus news and opinions.",
+      university_description:
+        "Top Canadian university known for its research and diverse student body.",
     },
     {
-      name: "Bowdoin College",
-      description:
-        "In Brunswick, Maine, providing a serene rural setting with a strong academic community.",
+      name: "USC Annenberg Media",
+      university: "University of Southern California",
+      club_description:
+        "Student-run multimedia platform focusing on news, sports, and entertainment.",
+      university_description:
+        "Private university renowned for its media, communication, and journalism programs.",
     },
     {
-      name: "Skidmore College",
-      description:
-        "Located in Saratoga Springs, New York, surrounded by the beauty of the rural countryside.",
+      name: "The Tartan",
+      university: "Carnegie Mellon University",
+      club_description:
+        "Student-run newspaper with a focus on campus tech and innovation.",
+      university_description:
+        "Leading university in tech and innovation, with a strong media department.",
     },
     {
-      name: "Saint Lawrence University",
-      description:
-        "Situated in Canton, New York, offering a peaceful rural setting with a strong academic focus.",
+      name: "Varsity Publications",
+      university: "University of Toronto",
+      club_description:
+        "Independent student newspaper and magazine covering university life.",
+      university_description:
+        "Top Canadian university known for its research and diverse academic offerings.",
     },
     {
-      name: "Colorado College",
-      description:
-        "In Colorado Springs, Colorado, blending a serene rural environment with a vibrant educational community.",
+      name: "Columbia Journalism Association",
+      university: "Columbia University",
+      club_description:
+        "Prepares students for careers in journalism through workshops and projects.",
+      university_description:
+        "Ivy League university with one of the top journalism schools in the world.",
     },
     {
-      name: "Earlham College",
-      description:
-        "Located in Richmond, Indiana, providing a tranquil rural setting with a focus on academic excellence.",
+      name: "The Daily Northwestern",
+      university: "Northwestern University",
+      club_description:
+        "Student-run newspaper that covers campus and Chicago news.",
+      university_description:
+        "Top private university known for its media and journalism programs.",
     },
     {
-      name: "Knox College",
-      description:
-        "Situated in Galesburg, Illinois, offering a peaceful rural environment with a strong academic presence.",
+      name: "The Hoya",
+      university: "Georgetown University",
+      club_description:
+        "Independent student newspaper with a focus on campus and national issues.",
+      university_description:
+        "Top university in Washington, D.C., known for its political science and media programs.",
     },
     {
-      name: "Gustavus Adolphus College",
-      description:
-        "In Saint Peter, Minnesota, surrounded by a serene rural setting with a focus on education.",
+      name: "The Cornell Daily Sun",
+      university: "Cornell University",
+      club_description:
+        "Student-run newspaper reporting on campus events and community news.",
+      university_description:
+        "Ivy League university with a diverse range of academic programs.",
     },
     {
-      name: "Carleton College",
-      description:
-        "Located in Northfield, Minnesota, blending a tranquil rural environment with a vibrant academic community.",
+      name: "The Cavalier Daily",
+      university: "University of Virginia",
+      club_description:
+        "Independent newspaper covering UVA campus news and opinions.",
+      university_description:
+        "Top public university with a strong focus on liberal arts and media studies.",
     },
     {
-      name: "Wabash College",
-      description:
-        "Situated in Crawfordsville, Indiana, offering a calm rural setting with a focus on academic achievement.",
+      name: "The Berkeley Beacon",
+      university: "Emerson College",
+      club_description: "Focuses on journalism and multimedia storytelling.",
+      university_description:
+        "Private college specializing in communication, media, and the arts.",
     },
     {
-      name: "The College of Wooster",
-      description:
-        "In Wooster, Ohio, providing a serene rural environment with a strong academic presence.",
+      name: "The Brown Daily Herald",
+      university: "Brown University",
+      club_description:
+        "Student-run newspaper covering campus, national, and global issues.",
+      university_description:
+        "Ivy League university known for its open curriculum and vibrant student life.",
     },
     {
-      name: "Hillsdale College",
-      description:
-        "Located in Hillsdale, Michigan, surrounded by a tranquil rural setting and a focus on education.",
+      name: "The Lantern",
+      university: "Ohio State University",
+      club_description:
+        "Independent student newspaper covering sports, news, and campus events.",
+      university_description:
+        "Top public university known for its large student body and diverse programs.",
     },
     {
-      name: "Sewanee: The University of the South",
-      description:
-        "Situated in Sewanee, Tennessee, offering a peaceful rural environment with a strong academic community.",
+      name: "The Daily Tar Heel",
+      university: "University of North Carolina at Chapel Hill",
+      club_description:
+        "Student-run newspaper reporting on campus and local news.",
+      university_description:
+        "Top public university known for its strong media and journalism programs.",
     },
     {
-      name: "Transylvania University",
-      description:
-        "In Lexington, Kentucky, blending a serene rural setting with a focus on academic excellence.",
+      name: "The Varsity News",
+      university: "University of Sydney",
+      club_description:
+        "Student-run publication focusing on Australian campus and cultural news.",
+      university_description:
+        "Leading Australian university with a focus on research and global impact.",
     },
     {
-      name: "Rhodes College",
-      description:
-        "Located in Memphis, Tennessee, providing a tranquil suburban setting with a strong academic community.",
+      name: "King's News & Media Club",
+      university: "King's College London",
+      club_description:
+        "Encourages student participation in media and journalism projects.",
+      university_description:
+        "Top UK university with a strong focus on humanities and media studies.",
     },
     {
-      name: "Wofford College",
-      description:
-        "Situated in Spartanburg, South Carolina, offering a serene rural environment with a vibrant educational atmosphere.",
+      name: "The Beaver",
+      university: "London School of Economics",
+      club_description:
+        "Student-run newspaper reporting on politics, economics, and campus life.",
+      university_description:
+        "Prestigious UK university known for economics and social sciences.",
     },
     {
-      name: "Berea College",
-      description:
-        "In Berea, Kentucky, surrounded by the beauty of rural landscapes with a focus on academic achievement.",
+      name: "The Trinity Times",
+      university: "University of Dublin, Trinity College",
+      club_description:
+        "Focuses on campus news, student opinions, and Irish cultural events.",
+      university_description:
+        "Top Irish university known for its academic excellence and student life.",
     },
     {
-      name: "Millsaps College",
-      description:
-        "Located in Jackson, Mississippi, offering a peaceful rural setting with a strong academic presence.",
+      name: "The UBC Thunderbird",
+      university: "University of British Columbia",
+      club_description:
+        "Student newspaper reporting on campus issues and events.",
+      university_description:
+        "Leading Canadian university known for research and diverse programs.",
     },
     {
-      name: "Juniata College",
-      description:
-        "Situated in Huntingdon, Pennsylvania, providing a serene rural environment with a focus on education.",
+      name: "The Chi Tribune",
+      university: "University of Chicago",
+      club_description:
+        "Focuses on investigative journalism and campus reporting.",
+      university_description:
+        "Private university known for its academic rigor and strong media programs.",
     },
     {
-      name: "Drew University",
-      description:
-        "In Madison, New Jersey, blending a tranquil rural setting with a strong academic community.",
+      name: "MediaLab",
+      university: "Massachusetts Institute of Technology",
+      club_description:
+        "Focuses on media innovation, technology, and digital journalism.",
+      university_description:
+        "Top university for STEM with a strong focus on media innovation.",
     },
     {
-      name: "Wheaton College",
-      description:
-        "Located in Wheaton, Illinois, offering a peaceful rural environment with a focus on academic excellence.",
+      name: "ANU Media Society",
+      university: "Australian National University",
+      club_description:
+        "Provides students with skills in journalism and multimedia production.",
+      university_description:
+        "Leading university in Australia known for research and media studies.",
     },
     {
-      name: "Hendrix College",
-      description:
-        "Situated in Conway, Arkansas, providing a serene rural setting with a vibrant academic community.",
+      name: "University Times",
+      university: "University of Cape Town",
+      club_description: "Focuses on campus and local news reporting.",
+      university_description:
+        "Top African university known for its strong focus on social sciences and media.",
     },
     {
-      name: "Lynchburg College",
-      description:
-        "In Lynchburg, Virginia, blending a tranquil rural environment with a strong focus on education.",
+      name: "Journalism Collective",
+      university: "University of Melbourne",
+      club_description:
+        "Engages students in journalism and media production projects.",
+      university_description:
+        "Top Australian university known for its diverse academic programs.",
+    },
+    {
+      name: "Tokyo Journalism Network",
+      university: "University of Tokyo",
+      club_description:
+        "Focuses on Japanese media and international journalism.",
+      university_description:
+        "Leading university in Japan with a strong focus on global academic outreach.",
+    },
+    {
+      name: "The Varsity",
+      university: "University of Toronto",
+      club_description:
+        "Student-run newspaper that reports on university and local news.",
+      university_description:
+        "Top Canadian university known for its research and global student body.",
+    },
+    {
+      name: "The Argonaut",
+      university: "University of Idaho",
+      club_description: "Covers university news, opinions, and local events.",
+      university_description:
+        "Public university in Idaho with a focus on student media and community engagement.",
+    },
+    {
+      name: "The Rice Thresher",
+      university: "Rice University",
+      club_description:
+        "Focuses on campus issues, sports, and student life reporting.",
+      university_description:
+        "Private university in Texas with a strong focus on media and journalism.",
+    },
+    {
+      name: "The Minnesota Daily",
+      university: "University of Minnesota",
+      club_description:
+        "Student-run newspaper reporting on university and local news.",
+      university_description:
+        "Public research university with strong media and journalism programs.",
+    },
+    {
+      name: "The Georgetown Voice",
+      university: "Georgetown University",
+      club_description:
+        "Covers campus politics, student opinions, and national issues.",
+      university_description:
+        "Top university in Washington, D.C., with a strong focus on media and politics.",
+    },
+    {
+      name: "Texas Student Media",
+      university: "University of Texas at Austin",
+      club_description:
+        "Provides multimedia journalism experiences for students.",
+      university_description:
+        "Top public university in Texas with a renowned journalism program.",
+    },
+    {
+      name: "Daily Princetonian",
+      university: "Princeton University",
+      club_description:
+        "Student-run newspaper covering campus and global news.",
+      university_description:
+        "Ivy League university with a focus on research and liberal arts.",
+    },
+    {
+      name: "The Vanderbilt Hustler",
+      university: "Vanderbilt University",
+      club_description:
+        "Student-run newspaper covering news, sports, and campus events.",
+      university_description:
+        "Private university in Tennessee known for its diverse student body and programs.",
+    },
+    {
+      name: "The Tech",
+      university: "Massachusetts Institute of Technology",
+      club_description:
+        "Focuses on tech news, campus issues, and student opinions.",
+      university_description:
+        "Leading university for STEM with a focus on innovation and media.",
+    },
+    {
+      name: "The Stony Brook Press",
+      university: "Stony Brook University",
+      club_description:
+        "Covers campus issues, student opinions, and local news.",
+      university_description:
+        "Top public university in New York known for its media and communications programs.",
+    },
+    {
+      name: "UCLA Radio",
+      university: "University of California, Los Angeles",
+      club_description:
+        "Student-run radio station covering campus events and music.",
+      university_description:
+        "Top public university with a renowned media and entertainment program.",
+    },
+    {
+      name: "The Daily Texan",
+      university: "University of Texas at Austin",
+      club_description:
+        "Student newspaper reporting on campus, local, and national news.",
+      university_description:
+        "Top public university with a strong media and communications department.",
+    },
+    {
+      name: "NYU Radio",
+      university: "New York University",
+      club_description:
+        "Student-run radio covering news, music, and student life.",
+      university_description:
+        "Top university in New York known for its media and communications programs.",
+    },
+    {
+      name: "The Observer",
+      university: "University of Notre Dame",
+      club_description:
+        "Student-run newspaper reporting on campus issues and national news.",
+      university_description:
+        "Private Catholic university known for its liberal arts and media programs.",
+    },
+    {
+      name: "The Emory Wheel",
+      university: "Emory University",
+      club_description: "Covers campus news, opinions, and local events.",
+      university_description:
+        "Private university in Georgia known for its media and humanities programs.",
+    },
+    {
+      name: "Media Matters Club",
+      university: "University of Glasgow",
+      club_description: "Engages students in media production and journalism.",
+      university_description:
+        "Leading Scottish university with a focus on liberal arts and media.",
     },
   ],
-};
-
-export const generic_subjects = [
-  {
-    name: "Science",
-    className: "bg-[#003dcc]/75 row-span-1 col-span-2 max-[850px]:col-span-1",
-  },
-  {
-    name: "English",
-    className: "bg-[#08155e] row-span-1 col-span-1 max-[850px]:row-span-2",
-  },
-  {
-    name: "Mathematics",
-    className:
-      "bg-[#003dcc] row-span-2 col-span-2 max-[850px]:row-span-2 max-[850px]:col-span-1",
-  },
-  {
-    name: "Technology",
-    className: "bg-[#00309f] row-span-2 col-span-1 max-[850px]:row-span-2",
-  },
-  {
-    name: "History",
-    className: "bg-[#02ad83] row-span-1 col-span-1 max-[850px]:row-span-2",
-  },
-  {
-    name: "Geography",
-    className:
-      "bg-[#02ad83]/70 row-span-1 col-span-2 max-[850px]:row-span-2 max-[850px]:col-span-1",
-  },
-  { name: "Art", className: "bg-[#08155e] row-span-2 col-span-1" },
-  {
-    name: "Music",
-    className: "bg-[#00309f]/80 row-span-1 col-span-1 max-[850px]:row-span-2",
-  },
-  {
-    name: "Physical Education",
-    className: "bg-[#003dcc]/75 row-span-1 col-span-1 max-[850px]:row-span-2",
-  },
-  {
-    name: "Languages",
-    className: "bg-[#003dcc] row-span-1 col-span-2 max-[850px]:col-span-1",
-  },
-];
-
-export const navItems = [
-  { href: "", label: "About Us", icon: MdPeople, size: 23, text: "About Us" },
-  {
-    href: "/pages/contact",
-    label: "Contact",
-    icon: MdConnectWithoutContact,
-    size: 23,
-    text: "Contact",
-  },
-  {
-    href: "/pages/programs",
-    label: "Programs",
-    icon: SiActivitypub,
-    size: 23,
-    text: "Programs",
-  },
-  {
-    href: "/pages/donate",
-    label: "Donate",
-    icon: BiDonateHeart,
-    size: 23,
-    text: "Donate",
-  },
-];
-
-export const math_subjects = [
-  {
-    id: "arithmetic",
-    subject: "Arithmetic",
-    level: "Lower Secondary",
-    difficulty: 25,
-  },
-  {
-    id: "algebra",
-    subject: "Algebra",
-    level: "Lower Secondary",
-    difficulty: 35,
-  },
-  {
-    id: "geometry",
-    subject: "Geometry",
-    level: "Lower Secondary",
-    difficulty: 40,
-  },
-  {
-    id: "trigonometry",
-    subject: "Trigonometry",
-    level: "Lower Secondary",
-    difficulty: 45,
-  },
-  {
-    id: "precalculus",
-    subject: "Precalculus",
-    level: "Lower Secondary",
-    difficulty: 50,
-  },
-  {
-    id: "calculus",
-    subject: "Calculus",
-    level: "Upper Secondary",
-    difficulty: 55,
-  },
-  {
-    id: "statistics",
-    subject: "Statistics",
-    level: "Upper Secondary",
-    difficulty: 55,
-  },
-  {
-    id: "probability",
-    subject: "Probability",
-    level: "Upper Secondary",
-    difficulty: 60,
-  },
-  {
-    id: "discrete_mathematics",
-    subject: "Discrete Mathematics",
-    level: "Upper Secondary",
-    difficulty: 65,
-  },
-  {
-    id: "linear_algebra",
-    subject: "Linear Algebra",
-    level: "Upper Secondary",
-    difficulty: 70,
-  },
-  {
-    id: "multivariable_calculus",
-    subject: "Multivariable Calculus",
-    level: "Upper Secondary",
-    difficulty: 75,
-  },
-  {
-    id: "differential_equations",
-    subject: "Differential Equations",
-    level: "Upper Secondary",
-    difficulty: 80,
-  },
-  { id: "topology", subject: "Topology", level: "University", difficulty: 85 },
-  {
-    id: "real_analysis",
-    subject: "Real Analysis",
-    level: "University",
-    difficulty: 85,
-  },
-  {
-    id: "complex_analysis",
-    subject: "Complex Analysis",
-    level: "University",
-    difficulty: 85,
-  },
-  {
-    id: "numerical_analysis",
-    subject: "Numerical Analysis",
-    level: "University",
-    difficulty: 80,
-  },
-  {
-    id: "mathematical_logic",
-    subject: "Mathematical Logic",
-    level: "University",
-    difficulty: 90,
-  },
-  {
-    id: "set_theory",
-    subject: "Set Theory",
-    level: "University",
-    difficulty: 90,
-  },
-  {
-    id: "combinatorics",
-    subject: "Combinatorics",
-    level: "University",
-    difficulty: 85,
-  },
-  {
-    id: "functional_analysis",
-    subject: "Functional Analysis",
-    level: "University",
-    difficulty: 95,
-  },
-  {
-    id: "game_theory",
-    subject: "Game Theory",
-    level: "University",
-    difficulty: 90,
-  },
-  {
-    id: "dynamical_systems",
-    subject: "Dynamical Systems",
-    level: "University",
-    difficulty: 95,
-  },
-  {
-    id: "measure_theory",
-    subject: "Measure Theory",
-    level: "University",
-    difficulty: 95,
-  },
-  {
-    id: "algebraic_geometry",
-    subject: "Algebraic Geometry",
-    level: "University",
-    difficulty: 95,
-  },
-  {
-    id: "operator_theory",
-    subject: "Operator Theory",
-    level: "University",
-    difficulty: 95,
-  },
-  {
-    id: "homotopy_theory",
-    subject: "Homotopy Theory",
-    level: "University",
-    difficulty: 95,
-  },
-  {
-    id: "category_theory",
-    subject: "Category Theory",
-    level: "University",
-    difficulty: 95,
-  },
-  {
-    id: "knot_theory",
-    subject: "Knot Theory",
-    level: "University",
-    difficulty: 90,
-  },
-  {
-    id: "cryptography",
-    subject: "Cryptography",
-    level: "University",
-    difficulty: 90,
-  },
-  {
-    id: "mathematical_physics",
-    subject: "Mathematical Physics",
-    level: "University",
-    difficulty: 90,
-  },
-  {
-    id: "financial_mathematics",
-    subject: "Financial Mathematics",
-    level: "University",
-    difficulty: 85,
-  },
-  {
-    id: "graph_theory",
-    subject: "Graph Theory",
-    level: "University",
-    difficulty: 85,
-  },
-  {
-    id: "algebraic_number_theory",
-    subject: "Algebraic Number Theory",
-    level: "University",
-    difficulty: 95,
-  },
-  {
-    id: "spectral_theory",
-    subject: "Spectral Theory",
-    level: "University",
-    difficulty: 95,
-  },
-  { id: "wavelets", subject: "Wavelets", level: "University", difficulty: 90 },
-  {
-    id: "topological_groups",
-    subject: "Topological Groups",
-    level: "University",
-    difficulty: 95,
-  },
-  {
-    id: "noncommutative_geometry",
-    subject: "Noncommutative Geometry",
-    level: "University",
-    difficulty: 95,
-  },
-  {
-    id: "analytic_number_theory",
-    subject: "Analytic Number Theory",
-    level: "University",
-    difficulty: 95,
-  },
-  {
-    id: "elliptic_curves",
-    subject: "Elliptic Curves",
-    level: "University",
-    difficulty: 95,
-  },
-  {
-    id: "modular_forms",
-    subject: "Modular Forms",
-    level: "University",
-    difficulty: 95,
-  },
-  {
-    id: "representation_theory",
-    subject: "Representation Theory",
-    level: "University",
-    difficulty: 95,
-  },
-  {
-    id: "differential_topology",
-    subject: "Differential Topology",
-    level: "University",
-    difficulty: 95,
-  },
-  {
-    id: "geometric_topology",
-    subject: "Geometric Topology",
-    level: "University",
-    difficulty: 95,
-  },
-  {
-    id: "topological_k_theory",
-    subject: "Topological K-theory",
-    level: "University",
-    difficulty: 95,
-  },
-  {
-    id: "cohomology_theory",
-    subject: "Cohomology Theory",
-    level: "University",
-    difficulty: 95,
-  },
-  {
-    id: "algebraic_k_theory",
-    subject: "Algebraic K-theory",
-    level: "University",
-    difficulty: 95,
-  },
-  {
-    id: "motivic_homotopy_theory",
-    subject: "Motivic Homotopy Theory",
-    level: "University",
-    difficulty: 95,
-  },
-  {
-    id: "derived_algebraic_geometry",
-    subject: "Derived Algebraic Geometry",
-    level: "University",
-    difficulty: 95,
-  },
-  {
-    id: "higher_category_theory",
-    subject: "Higher Category Theory",
-    level: "University",
-    difficulty: 95,
-  },
-  {
-    id: "homological_algebra",
-    subject: "Homological Algebra",
-    level: "University",
-    difficulty: 95,
-  },
-  {
-    id: "commutative_algebra",
-    subject: "Commutative Algebra",
-    level: "University",
-    difficulty: 95,
-  },
-  {
-    id: "noncommutative_algebra",
-    subject: "Noncommutative Algebra",
-    level: "University",
-    difficulty: 95,
-  },
-  {
-    id: "category_theory_and_logic",
-    subject: "Category Theory and Logic",
-    level: "University",
-    difficulty: 95,
-  },
-  {
-    id: "topos_theory",
-    subject: "Topos Theory",
-    level: "University",
-    difficulty: 95,
-  },
-  {
-    id: "sheaf_theory",
-    subject: "Sheaf Theory",
-    level: "University",
-    difficulty: 95,
-  },
-  {
-    id: "etale_cohomology",
-    subject: "Etale Cohomology",
-    level: "University",
-    difficulty: 95,
-  },
-  {
-    id: "algebraic_stacks",
-    subject: "Algebraic Stacks",
-    level: "University",
-    difficulty: 95,
-  },
-  {
-    id: "derived_functors",
-    subject: "Derived Functors",
-    level: "University",
-    difficulty: 95,
-  },
-  {
-    id: "spectral_sequences",
-    subject: "Spectral Sequences",
-    level: "University",
-    difficulty: 95,
-  },
-  {
-    id: "homotopy_type_theory",
-    subject: "Homotopy Type Theory",
-    level: "Postgraduate",
-    difficulty: 98,
-  },
-  {
-    id: "higher_homotopy_theory",
-    subject: "Higher Homotopy Theory",
-    level: "Postgraduate",
-    difficulty: 98,
-  },
-  {
-    id: "motivic_homotopy_theory",
-    subject: "Motivic Homotopy Theory",
-    level: "Postgraduate",
-    difficulty: 98,
-  },
-  {
-    id: "derived_algebraic_geometry",
-    subject: "Derived Algebraic Geometry",
-    level: "Postgraduate",
-    difficulty: 98,
-  },
-  {
-    id: "higher_category_theory",
-    subject: "Higher Category Theory",
-    level: "Postgraduate",
-    difficulty: 98,
-  },
-  {
-    id: "homological_algebra",
-    subject: "Homological Algebra",
-    level: "Postgraduate",
-    difficulty: 98,
-  },
-  {
-    id: "commutative_algebra",
-    subject: "Commutative Algebra",
-    level: "Postgraduate",
-    difficulty: 98,
-  },
-  {
-    id: "noncommutative_algebra",
-    subject: "Noncommutative Algebra",
-    level: "Postgraduate",
-    difficulty: 98,
-  },
-  {
-    id: "category_theory_and_logic",
-    subject: "Category Theory and Logic",
-    level: "Postgraduate",
-    difficulty: 98,
-  },
-  {
-    id: "topos_theory",
-    subject: "Topos Theory",
-    level: "Postgraduate",
-    difficulty: 98,
-  },
-  {
-    id: "sheaf_theory",
-    subject: "Sheaf Theory",
-    level: "Postgraduate",
-    difficulty: 98,
-  },
-  {
-    id: "etale_cohomology",
-    subject: "Etale Cohomology",
-    level: "Postgraduate",
-    difficulty: 98,
-  },
-  {
-    id: "algebraic_stacks",
-    subject: "Algebraic Stacks",
-    level: "Postgraduate",
-    difficulty: 98,
-  },
-  {
-    id: "derived_functors",
-    subject: "Derived Functors",
-    level: "Postgraduate",
-    difficulty: 98,
-  },
-  {
-    id: "spectral_sequences",
-    subject: "Spectral Sequences",
-    level: "Postgraduate",
-    difficulty: 98,
-  },
-];
-
-export const art_subjects = [
-  {
-    id: "drawing",
-    subject: "Drawing",
-    level: "Lower Secondary",
-    difficulty: 30,
-  },
-  {
-    id: "painting",
-    subject: "Painting",
-    level: "Lower Secondary",
-    difficulty: 40,
-  },
-  {
-    id: "sculpture",
-    subject: "Sculpture",
-    level: "Lower Secondary",
-    difficulty: 45,
-  },
-  {
-    id: "printmaking",
-    subject: "Printmaking",
-    level: "Upper Secondary",
-    difficulty: 50,
-  },
-  {
-    id: "ceramics",
-    subject: "Ceramics",
-    level: "Upper Secondary",
-    difficulty: 55,
-  },
-  {
-    id: "digital_art",
-    subject: "Digital Art",
-    level: "Upper Secondary",
-    difficulty: 60,
-  },
-  {
-    id: "art_history",
-    subject: "Art History",
-    level: "University",
-    difficulty: 70,
-  },
-  {
-    id: "modern_art",
-    subject: "Modern Art",
-    level: "University",
-    difficulty: 65,
-  },
-  {
-    id: "contemporary_art",
-    subject: "Contemporary Art",
-    level: "University",
-    difficulty: 70,
-  },
-  {
-    id: "graphic_design",
-    subject: "Graphic Design",
-    level: "University",
-    difficulty: 65,
-  },
-  {
-    id: "art_theory",
-    subject: "Art Theory",
-    level: "University",
-    difficulty: 75,
-  },
-  {
-    id: "color_theory",
-    subject: "Color Theory",
-    level: "University",
-    difficulty: 60,
-  },
-  {
-    id: "visual_arts",
-    subject: "Visual Arts",
-    level: "University",
-    difficulty: 70,
-  },
-  { id: "fine_art", subject: "Fine Art", level: "University", difficulty: 75 },
-  {
-    id: "conceptual_art",
-    subject: "Conceptual Art",
-    level: "University/Postgraduate",
-    difficulty: 80,
-  },
-  {
-    id: "performance_art",
-    subject: "Performance Art",
-    level: "University/Postgraduate",
-    difficulty: 75,
-  },
-  {
-    id: "installation_art",
-    subject: "Installation Art",
-    level: "University/Postgraduate",
-    difficulty: 80,
-  },
-  {
-    id: "abstract_art",
-    subject: "Abstract Art",
-    level: "University/Postgraduate",
-    difficulty: 70,
-  },
-  {
-    id: "art_conservation",
-    subject: "Art Conservation",
-    level: "Postgraduate",
-    difficulty: 85,
-  },
-  {
-    id: "museum_studies",
-    subject: "Museum Studies",
-    level: "Postgraduate",
-    difficulty: 80,
-  },
-  {
-    id: "art_education",
-    subject: "Art Education",
-    level: "Postgraduate",
-    difficulty: 70,
-  },
-  {
-    id: "arts_management",
-    subject: "Arts Management",
-    level: "Postgraduate",
-    difficulty: 75,
-  },
-  {
-    id: "cultural_studies",
-    subject: "Cultural Studies",
-    level: "Postgraduate",
-    difficulty: 80,
-  },
-  {
-    id: "media_arts",
-    subject: "Media Arts",
-    level: "Postgraduate",
-    difficulty: 75,
-  },
-  {
-    id: "illustration",
-    subject: "Illustration",
-    level: "University/Postgraduate",
-    difficulty: 70,
-  },
-  {
-    id: "textile_design",
-    subject: "Textile Design",
-    level: "University/Postgraduate",
-    difficulty: 65,
-  },
-  {
-    id: "fashion_design",
-    subject: "Fashion Design",
-    level: "University/Postgraduate",
-    difficulty: 75,
-  },
-  {
-    id: "architectural_design",
-    subject: "Architectural Design",
-    level: "Postgraduate",
-    difficulty: 80,
-  },
-  {
-    id: "visual_communication",
-    subject: "Visual Communication",
-    level: "University/Postgraduate",
-    difficulty: 70,
-  },
-  {
-    id: "digital_media",
-    subject: "Digital Media",
-    level: "University/Postgraduate",
-    difficulty: 75,
-  },
-  {
-    id: "interactive_design",
-    subject: "Interactive Design",
-    level: "Postgraduate",
-    difficulty: 80,
-  },
-  {
-    id: "art_and_technology",
-    subject: "Art and Technology",
-    level: "Postgraduate",
-    difficulty: 85,
-  },
-  {
-    id: "art_therapy",
-    subject: "Art Therapy",
-    level: "Postgraduate",
-    difficulty: 70,
-  },
-  {
-    id: "environmental_art",
-    subject: "Environmental Art",
-    level: "Postgraduate",
-    difficulty: 80,
-  },
-  {
-    id: "art_philosophy",
-    subject: "Art Philosophy",
-    level: "Postgraduate",
-    difficulty: 85,
-  },
-  {
-    id: "experimental_art",
-    subject: "Experimental Art",
-    level: "Postgraduate",
-    difficulty: 90,
-  },
-];
-
-export const science_subjects = [
-  {
-    id: "general_science",
-    subject: "General Science",
-    level: "Lower Secondary",
-    difficulty: 30,
-  },
-  {
-    id: "biology",
-    subject: "Biology",
-    level: "Lower Secondary",
-    difficulty: 40,
-  },
-  {
-    id: "chemistry",
-    subject: "Chemistry",
-    level: "Lower Secondary",
-    difficulty: 45,
-  },
-  {
-    id: "physics",
-    subject: "Physics",
-    level: "Lower Secondary",
-    difficulty: 50,
-  },
-  {
-    id: "earth_science",
-    subject: "Earth Science",
-    level: "Lower Secondary",
-    difficulty: 40,
-  },
-  {
-    id: "environmental_science",
-    subject: "Environmental Science",
-    level: "Upper Secondary",
-    difficulty: 55,
-  },
-  {
-    id: "astronomy",
-    subject: "Astronomy",
-    level: "Upper Secondary",
-    difficulty: 60,
-  },
-  {
-    id: "genetics",
-    subject: "Genetics",
-    level: "Upper Secondary",
-    difficulty: 65,
-  },
-  {
-    id: "organic_chemistry",
-    subject: "Organic Chemistry",
-    level: "Upper Secondary",
-    difficulty: 70,
-  },
-  {
-    id: "inorganic_chemistry",
-    subject: "Inorganic Chemistry",
-    level: "Upper Secondary",
-    difficulty: 70,
-  },
-  {
-    id: "quantum_physics",
-    subject: "Quantum Physics",
-    level: "University",
-    difficulty: 85,
-  },
-  {
-    id: "biochemistry",
-    subject: "Biochemistry",
-    level: "University",
-    difficulty: 80,
-  },
-  {
-    id: "molecular_biology",
-    subject: "Molecular Biology",
-    level: "University",
-    difficulty: 75,
-  },
-  {
-    id: "thermodynamics",
-    subject: "Thermodynamics",
-    level: "University",
-    difficulty: 80,
-  },
-  {
-    id: "nuclear_physics",
-    subject: "Nuclear Physics",
-    level: "University",
-    difficulty: 85,
-  },
-  {
-    id: "astrophysics",
-    subject: "Astrophysics",
-    level: "University",
-    difficulty: 90,
-  },
-  { id: "ecology", subject: "Ecology", level: "University", difficulty: 70 },
-  {
-    id: "neuroscience",
-    subject: "Neuroscience",
-    level: "University",
-    difficulty: 85,
-  },
-  {
-    id: "marine_biology",
-    subject: "Marine Biology",
-    level: "University",
-    difficulty: 75,
-  },
-  { id: "geology", subject: "Geology", level: "University", difficulty: 70 },
-  {
-    id: "climatology",
-    subject: "Climatology",
-    level: "University",
-    difficulty: 75,
-  },
-  {
-    id: "evolutionary_biology",
-    subject: "Evolutionary Biology",
-    level: "University",
-    difficulty: 80,
-  },
-  {
-    id: "organic_geochemistry",
-    subject: "Organic Geochemistry",
-    level: "University",
-    difficulty: 80,
-  },
-  {
-    id: "biophysics",
-    subject: "Biophysics",
-    level: "University",
-    difficulty: 85,
-  },
-  {
-    id: "materials_science",
-    subject: "Materials Science",
-    level: "University",
-    difficulty: 80,
-  },
-  {
-    id: "fluid_dynamics",
-    subject: "Fluid Dynamics",
-    level: "University",
-    difficulty: 85,
-  },
-  {
-    id: "astrobiology",
-    subject: "Astrobiology",
-    level: "Postgraduate",
-    difficulty: 90,
-  },
-  {
-    id: "pharmacology",
-    subject: "Pharmacology",
-    level: "Postgraduate",
-    difficulty: 85,
-  },
-  {
-    id: "genomics",
-    subject: "Genomics",
-    level: "Postgraduate",
-    difficulty: 90,
-  },
-  {
-    id: "biomedical_engineering",
-    subject: "Biomedical Engineering",
-    level: "Postgraduate",
-    difficulty: 85,
-  },
-  {
-    id: "neurobiology",
-    subject: "Neurobiology",
-    level: "Postgraduate",
-    difficulty: 90,
-  },
-  {
-    id: "theoretical_physics",
-    subject: "Theoretical Physics",
-    level: "Postgraduate",
-    difficulty: 95,
-  },
-  {
-    id: "chemical_engineering",
-    subject: "Chemical Engineering",
-    level: "Postgraduate",
-    difficulty: 85,
-  },
-  {
-    id: "environmental_engineering",
-    subject: "Environmental Engineering",
-    level: "Postgraduate",
-    difficulty: 80,
-  },
-  {
-    id: "bioinformatics",
-    subject: "Bioinformatics",
-    level: "Postgraduate",
-    difficulty: 90,
-  },
-  {
-    id: "computational_biology",
-    subject: "Computational Biology",
-    level: "Postgraduate",
-    difficulty: 85,
-  },
-  {
-    id: "space_science",
-    subject: "Space Science",
-    level: "Postgraduate",
-    difficulty: 90,
-  },
-  {
-    id: "systems_biology",
-    subject: "Systems Biology",
-    level: "Postgraduate",
-    difficulty: 85,
-  },
-  {
-    id: "scientific_computing",
-    subject: "Scientific Computing",
-    level: "Postgraduate",
-    difficulty: 80,
-  },
-  {
-    id: "environmental_chemistry",
-    subject: "Environmental Chemistry",
-    level: "Postgraduate",
-    difficulty: 85,
-  },
-  {
-    id: "climate_science",
-    subject: "Climate Science",
-    level: "Postgraduate",
-    difficulty: 85,
-  },
-  {
-    id: "geophysics",
-    subject: "Geophysics",
-    level: "Postgraduate",
-    difficulty: 90,
-  },
-];
-
-export const english_subjects = [
-  {
-    id: "general_english",
-    subject: "General English",
-    level: "Lower Secondary",
-    difficulty: 30,
-  },
-  {
-    id: "english_literature",
-    subject: "English Literature",
-    level: "Lower Secondary",
-    difficulty: 35,
-  },
-  {
-    id: "creative_writing",
-    subject: "Creative Writing",
-    level: "Lower Secondary",
-    difficulty: 40,
-  },
-  {
-    id: "english_composition",
-    subject: "English Composition",
-    level: "Lower Secondary",
-    difficulty: 35,
-  },
-  {
-    id: "grammar",
-    subject: "Grammar",
-    level: "Lower Secondary",
-    difficulty: 30,
-  },
-  {
-    id: "reading_comprehension",
-    subject: "Reading Comprehension",
-    level: "Lower Secondary",
-    difficulty: 30,
-  },
-  {
-    id: "public_speaking",
-    subject: "Public Speaking",
-    level: "Upper Secondary",
-    difficulty: 40,
-  },
-  {
-    id: "advanced_english",
-    subject: "Advanced English",
-    level: "Upper Secondary",
-    difficulty: 45,
-  },
-  {
-    id: "creative_nonfiction",
-    subject: "Creative Nonfiction",
-    level: "Upper Secondary",
-    difficulty: 50,
-  },
-  {
-    id: "modern_literature",
-    subject: "Modern Literature",
-    level: "Upper Secondary",
-    difficulty: 50,
-  },
-  {
-    id: "literary_analysis",
-    subject: "Literary Analysis",
-    level: "Upper Secondary",
-    difficulty: 55,
-  },
-  {
-    id: "rhetoric",
-    subject: "Rhetoric",
-    level: "Upper Secondary",
-    difficulty: 50,
-  },
-  {
-    id: "american_literature",
-    subject: "American Literature",
-    level: "University",
-    difficulty: 60,
-  },
-  {
-    id: "british_literature",
-    subject: "British Literature",
-    level: "University",
-    difficulty: 60,
-  },
-  {
-    id: "postcolonial_literature",
-    subject: "Postcolonial Literature",
-    level: "University",
-    difficulty: 65,
-  },
-  {
-    id: "gender_studies",
-    subject: "Gender Studies",
-    level: "University",
-    difficulty: 65,
-  },
-  {
-    id: "comparative_literature",
-    subject: "Comparative Literature",
-    level: "University",
-    difficulty: 70,
-  },
-  {
-    id: "historical_linguistics",
-    subject: "Historical Linguistics",
-    level: "University",
-    difficulty: 70,
-  },
-  {
-    id: "literary_theory",
-    subject: "Literary Theory",
-    level: "University",
-    difficulty: 75,
-  },
-  {
-    id: "sociolinguistics",
-    subject: "Sociolinguistics",
-    level: "University",
-    difficulty: 70,
-  },
-  {
-    id: "translation_studies",
-    subject: "Translation Studies",
-    level: "University",
-    difficulty: 70,
-  },
-  {
-    id: "creative_writing_advanced",
-    subject: "Advanced Creative Writing",
-    level: "University",
-    difficulty: 75,
-  },
-  {
-    id: "narrative_theory",
-    subject: "Narrative Theory",
-    level: "University",
-    difficulty: 75,
-  },
-  {
-    id: "applied_linguistics",
-    subject: "Applied Linguistics",
-    level: "University",
-    difficulty: 70,
-  },
-  {
-    id: "literary_history",
-    subject: "Literary History",
-    level: "University",
-    difficulty: 70,
-  },
-  {
-    id: "discourse_analysis",
-    subject: "Discourse Analysis",
-    level: "University",
-    difficulty: 75,
-  },
-  {
-    id: "stylistics",
-    subject: "Stylistics",
-    level: "University",
-    difficulty: 70,
-  },
-  {
-    id: "genre_studies",
-    subject: "Genre Studies",
-    level: "University",
-    difficulty: 75,
-  },
-  {
-    id: "literary_criticism",
-    subject: "Literary Criticism",
-    level: "University",
-    difficulty: 75,
-  },
-  {
-    id: "linguistic_theory",
-    subject: "Linguistic Theory",
-    level: "University",
-    difficulty: 75,
-  },
-  {
-    id: "corpus_linguistics",
-    subject: "Corpus Linguistics",
-    level: "University",
-    difficulty: 70,
-  },
-  {
-    id: "rhetorical_criticism",
-    subject: "Rhetorical Criticism",
-    level: "University",
-    difficulty: 75,
-  },
-  {
-    id: "ethnography_of_communication",
-    subject: "Ethnography of Communication",
-    level: "University",
-    difficulty: 70,
-  },
-  {
-    id: "eighteenth_century_literature",
-    subject: "Eighteenth-Century Literature",
-    level: "Postgraduate",
-    difficulty: 80,
-  },
-  {
-    id: "nineteenth_century_literature",
-    subject: "Nineteenth-Century Literature",
-    level: "Postgraduate",
-    difficulty: 80,
-  },
-  {
-    id: "twentieth_century_literature",
-    subject: "Twentieth-Century Literature",
-    level: "Postgraduate",
-    difficulty: 80,
-  },
-  {
-    id: "feminist_literary_criticism",
-    subject: "Feminist Literary Criticism",
-    level: "Postgraduate",
-    difficulty: 85,
-  },
-  {
-    id: "literary_modernism",
-    subject: "Literary Modernism",
-    level: "Postgraduate",
-    difficulty: 85,
-  },
-  {
-    id: "postmodern_literature",
-    subject: "Postmodern Literature",
-    level: "Postgraduate",
-    difficulty: 85,
-  },
-  {
-    id: "cultural_studies",
-    subject: "Cultural Studies",
-    level: "Postgraduate",
-    difficulty: 85,
-  },
-  {
-    id: "theory_of_reception",
-    subject: "Theory of Reception",
-    level: "Postgraduate",
-    difficulty: 85,
-  },
-  {
-    id: "media_studies",
-    subject: "Media Studies",
-    level: "Postgraduate",
-    difficulty: 80,
-  },
-  {
-    id: "literature_and_philosophy",
-    subject: "Literature and Philosophy",
-    level: "Postgraduate",
-    difficulty: 85,
-  },
-  {
-    id: "comparative_rhetoric",
-    subject: "Comparative Rhetoric",
-    level: "Postgraduate",
-    difficulty: 85,
-  },
-  {
-    id: "digital_humanities",
-    subject: "Digital Humanities",
-    level: "Postgraduate",
-    difficulty: 85,
-  },
-];
-
-export const history_subjects = [
-  {
-    id: "ancient_history",
-    subject: "Ancient History",
-    level: "Lower Secondary",
-    difficulty: 35,
-  },
-  {
-    id: "medieval_history",
-    subject: "Medieval History",
-    level: "Lower Secondary",
-    difficulty: 40,
-  },
-  {
-    id: "modern_history",
-    subject: "Modern History",
-    level: "Lower Secondary",
-    difficulty: 40,
-  },
-  {
-    id: "world_history",
-    subject: "World History",
-    level: "Lower Secondary",
-    difficulty: 35,
-  },
-  {
-    id: "us_history",
-    subject: "U.S. History",
-    level: "Lower Secondary",
-    difficulty: 35,
-  },
-  {
-    id: "european_history",
-    subject: "European History",
-    level: "Lower Secondary",
-    difficulty: 35,
-  },
-  {
-    id: "american_revolution",
-    subject: "American Revolution",
-    level: "Upper Secondary",
-    difficulty: 45,
-  },
-  {
-    id: "british_history",
-    subject: "British History",
-    level: "Upper Secondary",
-    difficulty: 45,
-  },
-  {
-    id: "russian_history",
-    subject: "Russian History",
-    level: "Upper Secondary",
-    difficulty: 50,
-  },
-  {
-    id: "asian_history",
-    subject: "Asian History",
-    level: "Upper Secondary",
-    difficulty: 50,
-  },
-  {
-    id: "colonial_history",
-    subject: "Colonial History",
-    level: "Upper Secondary",
-    difficulty: 50,
-  },
-  {
-    id: "history_of_science",
-    subject: "History of Science",
-    level: "Upper Secondary",
-    difficulty: 55,
-  },
-  {
-    id: "history_of_art",
-    subject: "History of Art",
-    level: "University",
-    difficulty: 60,
-  },
-  {
-    id: "economic_history",
-    subject: "Economic History",
-    level: "University",
-    difficulty: 60,
-  },
-  {
-    id: "political_history",
-    subject: "Political History",
-    level: "University",
-    difficulty: 65,
-  },
-  {
-    id: "social_history",
-    subject: "Social History",
-    level: "University",
-    difficulty: 65,
-  },
-  {
-    id: "military_history",
-    subject: "Military History",
-    level: "University",
-    difficulty: 60,
-  },
-  {
-    id: "historiography",
-    subject: "Historiography",
-    level: "University",
-    difficulty: 70,
-  },
-  {
-    id: "ancient_egyptian_history",
-    subject: "Ancient Egyptian History",
-    level: "University",
-    difficulty: 65,
-  },
-  {
-    id: "byzantine_history",
-    subject: "Byzantine History",
-    level: "University",
-    difficulty: 70,
-  },
-  {
-    id: "medieval_european_history",
-    subject: "Medieval European History",
-    level: "University",
-    difficulty: 70,
-  },
-  {
-    id: "renaissance_history",
-    subject: "Renaissance History",
-    level: "University",
-    difficulty: 70,
-  },
-  {
-    id: "industrial_revolution",
-    subject: "Industrial Revolution",
-    level: "University",
-    difficulty: 65,
-  },
-  {
-    id: "cold_war_history",
-    subject: "Cold War History",
-    level: "University",
-    difficulty: 70,
-  },
-  {
-    id: "history_of_technology",
-    subject: "History of Technology",
-    level: "University",
-    difficulty: 70,
-  },
-  {
-    id: "history_of_the_middle_east",
-    subject: "History of the Middle East",
-    level: "University",
-    difficulty: 70,
-  },
-  {
-    id: "latin_american_history",
-    subject: "Latin American History",
-    level: "University",
-    difficulty: 70,
-  },
-  {
-    id: "history_of_ancient_greece",
-    subject: "History of Ancient Greece",
-    level: "University",
-    difficulty: 70,
-  },
-  {
-    id: "history_of_rome",
-    subject: "History of Rome",
-    level: "University",
-    difficulty: 70,
-  },
-  {
-    id: "history_of_africa",
-    subject: "History of Africa",
-    level: "University",
-    difficulty: 70,
-  },
-  {
-    id: "history_of_india",
-    subject: "History of India",
-    level: "University",
-    difficulty: 70,
-  },
-  {
-    id: "modern_european_history",
-    subject: "Modern European History",
-    level: "University",
-    difficulty: 75,
-  },
-  {
-    id: "cultural_history",
-    subject: "Cultural History",
-    level: "Postgraduate",
-    difficulty: 80,
-  },
-  {
-    id: "global_history",
-    subject: "Global History",
-    level: "Postgraduate",
-    difficulty: 80,
-  },
-  {
-    id: "history_of_empires",
-    subject: "History of Empires",
-    level: "Postgraduate",
-    difficulty: 85,
-  },
-  {
-    id: "historical_theory",
-    subject: "Historical Theory",
-    level: "Postgraduate",
-    difficulty: 85,
-  },
-  {
-    id: "comparative_history",
-    subject: "Comparative History",
-    level: "Postgraduate",
-    difficulty: 85,
-  },
-  {
-    id: "postcolonial_history",
-    subject: "Postcolonial History",
-    level: "Postgraduate",
-    difficulty: 85,
-  },
-  {
-    id: "history_of_revolutions",
-    subject: "History of Revolutions",
-    level: "Postgraduate",
-    difficulty: 85,
-  },
-  {
-    id: "history_of_nations",
-    subject: "History of Nations",
-    level: "Postgraduate",
-    difficulty: 85,
-  },
-  {
-    id: "history_of_globalization",
-    subject: "History of Globalization",
-    level: "Postgraduate",
-    difficulty: 85,
-  },
-];
-export const geography_subjects = [
-  {
-    id: "physical_geography",
-    subject: "Physical Geography",
-    level: "Lower Secondary",
-    difficulty: 35,
-  },
-  {
-    id: "human_geography",
-    subject: "Human Geography",
-    level: "Lower Secondary",
-    difficulty: 35,
-  },
-  {
-    id: "environmental_geography",
-    subject: "Environmental Geography",
-    level: "Lower Secondary",
-    difficulty: 40,
-  },
-  {
-    id: "geographical_information_systems",
-    subject: "Geographical Information Systems (GIS)",
-    level: "Upper Secondary",
-    difficulty: 45,
-  },
-  {
-    id: "climate_change",
-    subject: "Climate Change",
-    level: "Upper Secondary",
-    difficulty: 45,
-  },
-  {
-    id: "geomorphology",
-    subject: "Geomorphology",
-    level: "Upper Secondary",
-    difficulty: 50,
-  },
-  {
-    id: "biogeography",
-    subject: "Biogeography",
-    level: "Upper Secondary",
-    difficulty: 50,
-  },
-  {
-    id: "urban_geography",
-    subject: "Urban Geography",
-    level: "University",
-    difficulty: 55,
-  },
-  {
-    id: "regional_geography",
-    subject: "Regional Geography",
-    level: "University",
-    difficulty: 55,
-  },
-  {
-    id: "economic_geography",
-    subject: "Economic Geography",
-    level: "University",
-    difficulty: 60,
-  },
-  {
-    id: "cultural_geography",
-    subject: "Cultural Geography",
-    level: "University",
-    difficulty: 60,
-  },
-  {
-    id: "hydrology",
-    subject: "Hydrology",
-    level: "University",
-    difficulty: 65,
-  },
-  {
-    id: "soils_geography",
-    subject: "Soils Geography",
-    level: "University",
-    difficulty: 65,
-  },
-  {
-    id: "cartography",
-    subject: "Cartography",
-    level: "University",
-    difficulty: 60,
-  },
-  {
-    id: "hazard_geography",
-    subject: "Hazard Geography",
-    level: "University",
-    difficulty: 65,
-  },
-  {
-    id: "glaciology",
-    subject: "Glaciology",
-    level: "University",
-    difficulty: 70,
-  },
-  {
-    id: "climatology",
-    subject: "Climatology",
-    level: "University",
-    difficulty: 70,
-  },
-  {
-    id: "sustainable_development",
-    subject: "Sustainable Development",
-    level: "University",
-    difficulty: 65,
-  },
-  {
-    id: "remote_sensing",
-    subject: "Remote Sensing",
-    level: "University",
-    difficulty: 70,
-  },
-  {
-    id: "geopolitics",
-    subject: "Geopolitics",
-    level: "Postgraduate",
-    difficulty: 75,
-  },
-  {
-    id: "advanced_cartography",
-    subject: "Advanced Cartography",
-    level: "Postgraduate",
-    difficulty: 80,
-  },
-  {
-    id: "advanced_geographical_information_systems",
-    subject: "Advanced Geographical Information Systems (GIS)",
-    level: "Postgraduate",
-    difficulty: 80,
-  },
-  {
-    id: "climate_systems",
-    subject: "Climate Systems",
-    level: "Postgraduate",
-    difficulty: 85,
-  },
-  {
-    id: "global_urban_studies",
-    subject: "Global Urban Studies",
-    level: "Postgraduate",
-    difficulty: 85,
-  },
-  {
-    id: "environmental_change",
-    subject: "Environmental Change",
-    level: "Postgraduate",
-    difficulty: 85,
-  },
-  {
-    id: "global_resource_management",
-    subject: "Global Resource Management",
-    level: "Postgraduate",
-    difficulty: 85,
-  },
-  {
-    id: "socio-environmental_issues",
-    subject: "Socio-environmental Issues",
-    level: "Postgraduate",
-    difficulty: 85,
-  },
-  {
-    id: "spatial_analysis",
-    subject: "Spatial Analysis",
-    level: "Postgraduate",
-    difficulty: 85,
-  },
-];
-
-export const physical_education_subjects = [
-  {
-    id: "fitness",
-    subject: "Fitness",
-    level: "Lower Secondary",
-    difficulty: 30,
-  },
-  {
-    id: "team_sports",
-    subject: "Team Sports",
-    level: "Lower Secondary",
-    difficulty: 35,
-  },
-  {
-    id: "individual_sports",
-    subject: "Individual Sports",
-    level: "Lower Secondary",
-    difficulty: 35,
-  },
-  {
-    id: "health_education",
-    subject: "Health Education",
-    level: "Lower Secondary",
-    difficulty: 30,
-  },
-  {
-    id: "athletics",
-    subject: "Athletics",
-    level: "Upper Secondary",
-    difficulty: 40,
-  },
-  {
-    id: "physical_fitness",
-    subject: "Physical Fitness",
-    level: "Upper Secondary",
-    difficulty: 40,
-  },
-  {
-    id: "sports_science",
-    subject: "Sports Science",
-    level: "Upper Secondary",
-    difficulty: 45,
-  },
-  {
-    id: "sports_medical",
-    subject: "Sports Medicine",
-    level: "Upper Secondary",
-    difficulty: 45,
-  },
-  {
-    id: "exercise_physiology",
-    subject: "Exercise Physiology",
-    level: "University",
-    difficulty: 50,
-  },
-  {
-    id: "biomechanics",
-    subject: "Biomechanics",
-    level: "University",
-    difficulty: 50,
-  },
-  {
-    id: "sports_nutrition",
-    subject: "Sports Nutrition",
-    level: "University",
-    difficulty: 50,
-  },
-  {
-    id: "motor_learning",
-    subject: "Motor Learning",
-    level: "University",
-    difficulty: 55,
-  },
-  {
-    id: "kinesiology",
-    subject: "Kinesiology",
-    level: "University",
-    difficulty: 55,
-  },
-  {
-    id: "sports_psychology",
-    subject: "Sports Psychology",
-    level: "University",
-    difficulty: 55,
-  },
-  {
-    id: "performance_analysis",
-    subject: "Performance Analysis",
-    level: "University",
-    difficulty: 60,
-  },
-  {
-    id: "sports_injury_rehabilitation",
-    subject: "Sports Injury Rehabilitation",
-    level: "University",
-    difficulty: 60,
-  },
-  {
-    id: "advanced_exercise_physiology",
-    subject: "Advanced Exercise Physiology",
-    level: "Postgraduate",
-    difficulty: 70,
-  },
-  {
-    id: "advanced_sports_science",
-    subject: "Advanced Sports Science",
-    level: "Postgraduate",
-    difficulty: 70,
-  },
-  {
-    id: "advanced_sports_psychology",
-    subject: "Advanced Sports Psychology",
-    level: "Postgraduate",
-    difficulty: 70,
-  },
-  {
-    id: "sports_management",
-    subject: "Sports Management",
-    level: "Postgraduate",
-    difficulty: 65,
-  },
-  {
-    id: "sports_performance",
-    subject: "Sports Performance",
-    level: "Postgraduate",
-    difficulty: 75,
-  },
-  {
-    id: "sports_technology",
-    subject: "Sports Technology",
-    level: "Postgraduate",
-    difficulty: 75,
-  },
-  {
-    id: "elite_athlete_training",
-    subject: "Elite Athlete Training",
-    level: "Postgraduate",
-    difficulty: 80,
-  },
-  {
-    id: "sports_research",
-    subject: "Sports Research",
-    level: "Postgraduate",
-    difficulty: 80,
-  },
-];
-
-export const music_subjects = [
-  {
-    id: "music_theory",
-    subject: "Music Theory",
-    level: "Lower Secondary",
-    difficulty: 35,
-  },
-  {
-    id: "basic_musicianship",
-    subject: "Basic Musicianship",
-    level: "Lower Secondary",
-    difficulty: 30,
-  },
-  { id: "choir", subject: "Choir", level: "Lower Secondary", difficulty: 30 },
-  { id: "band", subject: "Band", level: "Lower Secondary", difficulty: 30 },
-  {
-    id: "orchestra",
-    subject: "Orchestra",
-    level: "Lower Secondary",
-    difficulty: 35,
-  },
-  {
-    id: "music_appreciation",
-    subject: "Music Appreciation",
-    level: "Upper Secondary",
-    difficulty: 35,
-  },
-  {
-    id: "advanced_music_theory",
-    subject: "Advanced Music Theory",
-    level: "Upper Secondary",
-    difficulty: 40,
-  },
-  {
-    id: "music_history",
-    subject: "Music History",
-    level: "Upper Secondary",
-    difficulty: 40,
-  },
-  {
-    id: "instrumental_studies",
-    subject: "Instrumental Studies",
-    level: "Upper Secondary",
-    difficulty: 40,
-  },
-  {
-    id: "vocal_studies",
-    subject: "Vocal Studies",
-    level: "Upper Secondary",
-    difficulty: 40,
-  },
-  {
-    id: "composition",
-    subject: "Composition",
-    level: "University",
-    difficulty: 50,
-  },
-  {
-    id: "arranging",
-    subject: "Arranging",
-    level: "University",
-    difficulty: 50,
-  },
-  {
-    id: "music_technology",
-    subject: "Music Technology",
-    level: "University",
-    difficulty: 50,
-  },
-  {
-    id: "music_education",
-    subject: "Music Education",
-    level: "University",
-    difficulty: 55,
-  },
-  {
-    id: "ethnomusicology",
-    subject: "Ethnomusicology",
-    level: "University",
-    difficulty: 55,
-  },
-  {
-    id: "music_therapy",
-    subject: "Music Therapy",
-    level: "University",
-    difficulty: 55,
-  },
-  {
-    id: "advanced_music_history",
-    subject: "Advanced Music History",
-    level: "Postgraduate",
-    difficulty: 60,
-  },
-  {
-    id: "advanced_composition",
-    subject: "Advanced Composition",
-    level: "Postgraduate",
-    difficulty: 65,
-  },
-  {
-    id: "advanced_music_technology",
-    subject: "Advanced Music Technology",
-    level: "Postgraduate",
-    difficulty: 65,
-  },
-  {
-    id: "music_research",
-    subject: "Music Research",
-    level: "Postgraduate",
-    difficulty: 70,
-  },
-  {
-    id: "music_performance",
-    subject: "Music Performance",
-    level: "Postgraduate",
-    difficulty: 70,
-  },
-  {
-    id: "music_scholarship",
-    subject: "Music Scholarship",
-    level: "Postgraduate",
-    difficulty: 75,
-  },
-];
-
-export const language_subjects = [
-  // Specific Languages
-  { id: "english", subject: "English", level: "Secondary", difficulty: 30 },
-  { id: "french", subject: "French", level: "Secondary", difficulty: 40 },
-  { id: "spanish", subject: "Spanish", level: "Secondary", difficulty: 35 },
-  { id: "german", subject: "German", level: "Secondary", difficulty: 45 },
-  { id: "italian", subject: "Italian", level: "Secondary", difficulty: 30 },
-  { id: "mandarin", subject: "Mandarin", level: "University", difficulty: 70 },
-  { id: "japanese", subject: "Japanese", level: "University", difficulty: 60 },
-  { id: "korean", subject: "Korean", level: "University", difficulty: 55 },
-  {
-    id: "portuguese",
-    subject: "Portuguese",
-    level: "Secondary",
-    difficulty: 40,
-  },
-  { id: "arabic", subject: "Arabic", level: "University", difficulty: 75 },
-  { id: "russian", subject: "Russian", level: "University", difficulty: 65 },
-  { id: "hindi", subject: "Hindi", level: "University", difficulty: 50 },
-  { id: "bengali", subject: "Bengali", level: "University", difficulty: 45 },
-  { id: "swahili", subject: "Swahili", level: "University", difficulty: 40 },
-  // Language Study Areas
-  {
-    id: "language_studies",
-    subject: "Language Studies",
-    level: "University",
-    difficulty: 55,
-  },
-  {
-    id: "advanced_language_studies",
-    subject: "Advanced Language Studies",
-    level: "University",
-    difficulty: 70,
-  },
-  {
-    id: "linguistics",
-    subject: "Linguistics",
-    level: "University",
-    difficulty: 60,
-  },
-  {
-    id: "comparative_literature",
-    subject: "Comparative Literature",
-    level: "University",
-    difficulty: 65,
-  },
-  {
-    id: "translation_studies",
-    subject: "Translation Studies",
-    level: "University",
-    difficulty: 60,
-  },
-  {
-    id: "applied_linguistics",
-    subject: "Applied Linguistics",
-    level: "University",
-    difficulty: 55,
-  },
-  {
-    id: "language_culture",
-    subject: "Language and Culture",
-    level: "University",
-    difficulty: 50,
-  },
-  {
-    id: "language_policy",
-    subject: "Language Policy",
-    level: "University",
-    difficulty: 60,
-  },
-  {
-    id: "advanced_translation",
-    subject: "Advanced Translation",
-    level: "University",
-    difficulty: 65,
-  },
-  {
-    id: "language_research",
-    subject: "Language Research",
-    level: "University",
-    difficulty: 70,
-  },
-  {
-    id: "language_acquisition",
-    subject: "Language Acquisition",
-    level: "University",
-    difficulty: 60,
-  },
-  {
-    id: "language_cognition",
-    subject: "Language Cognition",
-    level: "University",
-    difficulty: 65,
-  },
-];
-
-export const technology_subjects = [
-  {
-    id: "software_engineering",
-    subject: "Software Engineering",
-    level: "Undergraduate",
-    difficulty: 80,
-  },
-  {
-    id: "information_technology",
-    subject: "Information Technology",
-    level: "Undergraduate",
-    difficulty: 70,
-  },
-  {
-    id: "cybersecurity",
-    subject: "Cybersecurity",
-    level: "Undergraduate",
-    difficulty: 85,
-  },
-  {
-    id: "artificial_intelligence",
-    subject: "Artificial Intelligence",
-    level: "Undergraduate",
-    difficulty: 90,
-  },
-  {
-    id: "machine_learning",
-    subject: "Machine Learning",
-    level: "Undergraduate",
-    difficulty: 85,
-  },
-  {
-    id: "data_science",
-    subject: "Data Science",
-    level: "Undergraduate",
-    difficulty: 80,
-  },
-  {
-    id: "big_data",
-    subject: "Big Data",
-    level: "Undergraduate",
-    difficulty: 75,
-  },
-  {
-    id: "cloud_computing",
-    subject: "Cloud Computing",
-    level: "Undergraduate",
-    difficulty: 70,
-  },
-  {
-    id: "networking",
-    subject: "Networking",
-    level: "Undergraduate",
-    difficulty: 65,
-  },
-  {
-    id: "database_management",
-    subject: "Database Management",
-    level: "Undergraduate",
-    difficulty: 70,
-  },
-  {
-    id: "web_development",
-    subject: "Web Development",
-    level: "Undergraduate",
-    difficulty: 60,
-  },
-  {
-    id: "mobile_app_development",
-    subject: "Mobile App Development",
-    level: "Undergraduate",
-    difficulty: 70,
-  },
-  {
-    id: "game_development",
-    subject: "Game Development",
-    level: "Undergraduate",
-    difficulty: 75,
-  },
-  {
-    id: "human_computer_interaction",
-    subject: "Human-Computer Interaction",
-    level: "Undergraduate",
-    difficulty: 65,
-  },
-  {
-    id: "internet_of_things",
-    subject: "Internet of Things",
-    level: "Undergraduate",
-    difficulty: 75,
-  },
-  {
-    id: "virtual_reality",
-    subject: "Virtual Reality",
-    level: "Undergraduate",
-    difficulty: 80,
-  },
-  {
-    id: "augmented_reality",
-    subject: "Augmented Reality",
-    level: "Undergraduate",
-    difficulty: 80,
-  },
-  {
-    id: "robotics",
-    subject: "Robotics",
-    level: "Undergraduate",
-    difficulty: 85,
-  },
-  {
-    id: "software_testing",
-    subject: "Software Testing",
-    level: "Undergraduate",
-    difficulty: 60,
-  },
-  {
-    id: "embedded_systems",
-    subject: "Embedded Systems",
-    level: "Undergraduate",
-    difficulty: 70,
-  },
-  {
-    id: "operating_systems",
-    subject: "Operating Systems",
-    level: "Undergraduate",
-    difficulty: 80,
-  },
-  {
-    id: "computer_graphics",
-    subject: "Computer Graphics",
-    level: "Undergraduate",
-    difficulty: 75,
-  },
-  {
-    id: "algorithms",
-    subject: "Algorithms",
-    level: "Undergraduate",
-    difficulty: 85,
-  },
-  {
-    id: "data_structures",
-    subject: "Data Structures",
-    level: "Undergraduate",
-    difficulty: 80,
-  },
-  {
-    id: "computer_networks",
-    subject: "Computer Networks",
-    level: "Undergraduate",
-    difficulty: 75,
-  },
-  {
-    id: "cryptography",
-    subject: "Cryptography",
-    level: "Undergraduate",
-    difficulty: 90,
-  },
-  {
-    id: "digital_signal_processing",
-    subject: "Digital Signal Processing",
-    level: "Undergraduate",
-    difficulty: 85,
-  },
-  {
-    id: "computational_theory",
-    subject: "Computational Theory",
-    level: "Undergraduate",
-    difficulty: 85,
-  },
-  {
-    id: "distributed_systems",
-    subject: "Distributed Systems",
-    level: "Undergraduate",
-    difficulty: 80,
-  },
-  {
-    id: "software_architecture",
-    subject: "Software Architecture",
-    level: "Undergraduate",
-    difficulty: 80,
-  },
-  {
-    id: "hardware_design",
-    subject: "Hardware Design",
-    level: "Undergraduate",
-    difficulty: 75,
-  },
-  {
-    id: "internet_security",
-    subject: "Internet Security",
-    level: "Undergraduate",
-    difficulty: 85,
-  },
-  {
-    id: "data_analytics",
-    subject: "Data Analytics",
-    level: "Undergraduate",
-    difficulty: 75,
-  },
-  {
-    id: "web_security",
-    subject: "Web Security",
-    level: "Undergraduate",
-    difficulty: 80,
-  },
-  {
-    id: "business_intelligence",
-    subject: "Business Intelligence",
-    level: "Undergraduate",
-    difficulty: 70,
-  },
-  {
-    id: "quantum_computing",
-    subject: "Quantum Computing",
-    level: "Postgraduate",
-    difficulty: 90,
-  },
-  {
-    id: "computer_vision",
-    subject: "Computer Vision",
-    level: "Undergraduate",
-    difficulty: 80,
-  },
-  {
-    id: "natural_language_processing",
-    subject: "Natural Language Processing",
-    level: "Undergraduate",
-    difficulty: 85,
-  },
-  {
-    id: "cloud_architecture",
-    subject: "Cloud Architecture",
-    level: "Undergraduate",
-    difficulty: 75,
-  },
-  {
-    id: "blockchain_technology",
-    subject: "Blockchain Technology",
-    level: "Undergraduate",
-    difficulty: 80,
-  },
-  {
-    id: "digital_marketing",
-    subject: "Digital Marketing",
-    level: "Undergraduate",
-    difficulty: 60,
-  },
-  {
-    id: "software_project_management",
-    subject: "Software Project Management",
-    level: "Undergraduate",
-    difficulty: 70,
-  },
-  {
-    id: "user_experience_design",
-    subject: "User Experience Design",
-    level: "Undergraduate",
-    difficulty: 65,
-  },
-  {
-    id: "user_interface_design",
-    subject: "User Interface Design",
-    level: "Undergraduate",
-    difficulty: 65,
-  },
-  {
-    id: "ethical_hacking",
-    subject: "Ethical Hacking",
-    level: "Undergraduate",
-    difficulty: 80,
-  },
-  {
-    id: "systems_analysis",
-    subject: "Systems Analysis",
-    level: "Undergraduate",
-    difficulty: 70,
-  },
-  {
-    id: "information_systems",
-    subject: "Information Systems",
-    level: "Undergraduate",
-    difficulty: 70,
-  },
-  {
-    id: "technology_management",
-    subject: "Technology Management",
-    level: "Undergraduate",
-    difficulty: 65,
-  },
-  {
-    id: "it_infrastructure",
-    subject: "IT Infrastructure",
-    level: "Undergraduate",
-    difficulty: 70,
-  },
-  {
-    id: "digital_transformation",
-    subject: "Digital Transformation",
-    level: "Undergraduate",
-    difficulty: 75,
-  },
-  {
-    id: "software_development_lifecycle",
-    subject: "Software Development Lifecycle",
-    level: "Undergraduate",
-    difficulty: 75,
-  },
-  {
-    id: "data_engineering",
-    subject: "Data Engineering",
-    level: "Undergraduate",
-    difficulty: 80,
-  },
-  {
-    id: "technology_innovation",
-    subject: "Technology Innovation",
-    level: "Undergraduate",
-    difficulty: 75,
-  },
-  {
-    id: "augmented_intelligence",
-    subject: "Augmented Intelligence",
-    level: "Undergraduate",
-    difficulty: 80,
-  },
-  {
-    id: "human_ai_interaction",
-    subject: "Human-AI Interaction",
-    level: "Undergraduate",
-    difficulty: 75,
-  },
-  {
-    id: "ethical_ai",
-    subject: "Ethical AI",
-    level: "Undergraduate",
-    difficulty: 70,
-  },
-  {
-    id: "computing_infrastructure",
-    subject: "Computing Infrastructure",
-    level: "Undergraduate",
-    difficulty: 70,
-  },
-  {
-    id: "information_retrieval",
-    subject: "Information Retrieval",
-    level: "Undergraduate",
-    difficulty: 75,
-  },
-  {
-    id: "digital_forensics",
-    subject: "Digital Forensics",
-    level: "Undergraduate",
-    difficulty: 80,
-  },
-  {
-    id: "data_privacy",
-    subject: "Data Privacy",
-    level: "Undergraduate",
-    difficulty: 75,
-  },
-  {
-    id: "smart_technologies",
-    subject: "Smart Technologies",
-    level: "Undergraduate",
-    difficulty: 70,
-  },
-  {
-    id: "biomedical_engineering",
-    subject: "Biomedical Engineering",
-    level: "Undergraduate",
-    difficulty: 80,
-  },
-  {
-    id: "environmental_technology",
-    subject: "Environmental Technology",
-    level: "Undergraduate",
-    difficulty: 70,
-  },
-  {
-    id: "automotive_technology",
-    subject: "Automotive Technology",
-    level: "Undergraduate",
-    difficulty: 75,
-  },
-  {
-    id: "aerospace_technology",
-    subject: "Aerospace Technology",
-    level: "Undergraduate",
-    difficulty: 75,
-  },
-  {
-    id: "nano_technology",
-    subject: "Nanotechnology",
-    level: "Undergraduate",
-    difficulty: 80,
-  },
-  {
-    id: "materials_science",
-    subject: "Materials Science",
-    level: "Undergraduate",
-    difficulty: 70,
-  },
-  {
-    id: "user_research",
-    subject: "User Research",
-    level: "Undergraduate",
-    difficulty: 60,
-  },
-  {
-    id: "technology_policy",
-    subject: "Technology Policy",
-    level: "Undergraduate",
-    difficulty: 65,
-  },
-  {
-    id: "computational_linguistics",
-    subject: "Computational Linguistics",
-    level: "Undergraduate",
-    difficulty: 75,
-  },
-  {
-    id: "digital_media",
-    subject: "Digital Media",
-    level: "Undergraduate",
-    difficulty: 60,
-  },
-  {
-    id: "interactive_design",
-    subject: "Interactive Design",
-    level: "Undergraduate",
-    difficulty: 70,
-  },
-  {
-    id: "geographic_information_systems",
-    subject: "Geographic Information Systems",
-    level: "Undergraduate",
-    difficulty: 70,
-  },
-  {
-    id: "web_design",
-    subject: "Web Design",
-    level: "Undergraduate",
-    difficulty: 60,
-  },
-  {
-    id: "human_robot_interaction",
-    subject: "Human-Robot Interaction",
-    level: "Undergraduate",
-    difficulty: 75,
-  },
-  {
-    id: "virtual_environments",
-    subject: "Virtual Environments",
-    level: "Undergraduate",
-    difficulty: 80,
-  },
-  {
-    id: "computational_modeling",
-    subject: "Computational Modeling",
-    level: "Undergraduate",
-    difficulty: 80,
-  },
-  {
-    id: "data_visualization",
-    subject: "Data Visualization",
-    level: "Undergraduate",
-    difficulty: 70,
-  },
-  {
-    id: "it_service_management",
-    subject: "IT Service Management",
-    level: "Undergraduate",
-    difficulty: 65,
-  },
-  {
-    id: "design_patterns",
-    subject: "Design Patterns",
-    level: "Undergraduate",
-    difficulty: 75,
-  },
-  {
-    id: "information_assurance",
-    subject: "Information Assurance",
-    level: "Undergraduate",
-    difficulty: 70,
-  },
-  {
-    id: "software_configuration_management",
-    subject: "Software Configuration Management",
-    level: "Undergraduate",
-    difficulty: 75,
-  },
-  {
-    id: "business_process_automation",
-    subject: "Business Process Automation",
-    level: "Undergraduate",
-    difficulty: 65,
-  },
-  {
-    id: "human_factors_engineering",
-    subject: "Human Factors Engineering",
-    level: "Undergraduate",
-    difficulty: 70,
-  },
-  {
-    id: "technology_in_education",
-    subject: "Technology in Education",
-    level: "Undergraduate",
-    difficulty: 60,
-  },
-  {
-    id: "information_technology_in_healthcare",
-    subject: "Information Technology in Healthcare",
-    level: "Undergraduate",
-    difficulty: 65,
-  },
-  {
-    id: "information_technology_in_business",
-    subject: "Information Technology in Business",
-    level: "Undergraduate",
-    difficulty: 65,
-  },
-  {
-    id: "advanced_computer_architecture",
-    subject: "Advanced Computer Architecture",
-    level: "Postgraduate",
-    difficulty: 85,
-  },
-];
+  preLawClubs: [
+    {
+      name: "Harvard Pre-Law Society",
+      university: "Harvard University",
+      club_description:
+        "Prepares students for law school with LSAT prep and legal discussions.",
+      university_description:
+        "Ivy League university known for its prestigious law program and academic excellence.",
+    },
+    {
+      name: "Yale Undergraduate Legal Aid Association",
+      university: "Yale University",
+      club_description:
+        "Provides legal aid services and prepares students for law careers.",
+      university_description:
+        "Ivy League university recognized for its world-renowned law school.",
+    },
+    {
+      name: "Berkeley Pre-Law Society",
+      university: "University of California, Berkeley",
+      club_description:
+        "Helps students explore legal careers and navigate law school admissions.",
+      university_description:
+        "Top public university known for its commitment to social justice and law.",
+    },
+    {
+      name: "NYU Pre-Law Society",
+      university: "New York University",
+      club_description:
+        "Offers law school resources, networking, and career guidance.",
+      university_description:
+        "Private university located in New York, known for strong law and legal studies programs.",
+    },
+    {
+      name: "Stanford Pre-Law Society",
+      university: "Stanford University",
+      club_description:
+        "Supports aspiring lawyers through workshops, panels, and networking events.",
+      university_description:
+        "Leading research university with a focus on innovation and law.",
+    },
+    {
+      name: "UCLA Pre-Law Society",
+      university: "University of California, Los Angeles",
+      club_description:
+        "Prepares students for law school and legal careers with resources and events.",
+      university_description:
+        "Top public university in California with a strong reputation in law and legal studies.",
+    },
+    {
+      name: "Georgetown Pre-Law Society",
+      university: "Georgetown University",
+      club_description:
+        "Offers law school prep and connections with law professionals.",
+      university_description:
+        "Top university in Washington, D.C., known for its law program and political ties.",
+    },
+    {
+      name: "Columbia Pre-Law Society",
+      university: "Columbia University",
+      club_description:
+        "Helps students prepare for law school with resources and mentorship.",
+      university_description:
+        "Ivy League university in New York known for its prestigious law school.",
+    },
+    {
+      name: "Cornell Pre-Law Society",
+      university: "Cornell University",
+      club_description:
+        "Provides law school application guidance and legal career insights.",
+      university_description:
+        "Ivy League university with a focus on interdisciplinary studies, including law.",
+    },
+    {
+      name: "USC Pre-Law Society",
+      university: "University of Southern California",
+      club_description:
+        "Prepares students for the legal field through law panels and LSAT prep.",
+      university_description:
+        "Private university in Los Angeles known for its strong legal studies programs.",
+    },
+    {
+      name: "University of Michigan Pre-Law Society",
+      university: "University of Michigan",
+      club_description:
+        "Supports aspiring law students with resources, mentorship, and networking.",
+      university_description:
+        "Top public university known for its prestigious law school and legal studies.",
+    },
+    {
+      name: "Northwestern Pre-Law Society",
+      university: "Northwestern University",
+      club_description:
+        "Connects students with law school resources and networking opportunities.",
+      university_description:
+        "Private university known for its top-tier law school and legal education.",
+    },
+    {
+      name: "Duke Pre-Law Society",
+      university: "Duke University",
+      club_description:
+        "Offers guidance and networking opportunities for aspiring law students.",
+      university_description:
+        "Private university known for its law school and interdisciplinary approach to law.",
+    },
+    {
+      name: "Penn State Pre-Law Society",
+      university: "Pennsylvania State University",
+      club_description:
+        "Prepares students for law school with LSAT prep and legal seminars.",
+      university_description:
+        "Top public university known for its large student body and diverse academic offerings.",
+    },
+    {
+      name: "Princeton Pre-Law Society",
+      university: "Princeton University",
+      club_description:
+        "Provides law school application support and legal career insights.",
+      university_description:
+        "Ivy League university with a focus on academic excellence and interdisciplinary studies.",
+    },
+    {
+      name: "University of Texas Pre-Law Society",
+      university: "University of Texas at Austin",
+      club_description:
+        "Helps students navigate the law school admissions process with workshops.",
+      university_description:
+        "Top public university in Texas known for its law program and large student body.",
+    },
+    {
+      name: "Boston University Pre-Law Society",
+      university: "Boston University",
+      club_description:
+        "Offers resources for LSAT prep and law school admissions.",
+      university_description:
+        "Private university in Boston with a strong law and legal studies program.",
+    },
+    {
+      name: "Emory Pre-Law Society",
+      university: "Emory University",
+      club_description:
+        "Connects students with law professionals and prepares for law school.",
+      university_description:
+        "Private university known for its legal studies and pre-professional programs.",
+    },
+    {
+      name: "University of Chicago Pre-Law Society",
+      university: "University of Chicago",
+      club_description:
+        "Supports students pursuing law school with networking and mentorship.",
+      university_description:
+        "Private university known for its prestigious law program and academic rigor.",
+    },
+    {
+      name: "Vanderbilt Pre-Law Society",
+      university: "Vanderbilt University",
+      club_description:
+        "Offers law school application resources and career panels.",
+      university_description:
+        "Private university in Tennessee known for its strong law school and pre-law programs.",
+    },
+    {
+      name: "UC Davis Pre-Law Society",
+      university: "University of California, Davis",
+      club_description:
+        "Provides law school application resources and legal career workshops.",
+      university_description:
+        "Public university in California known for its law school and diverse programs.",
+    },
+    {
+      name: "University of Florida Pre-Law Society",
+      university: "University of Florida",
+      club_description:
+        "Prepares students for law school with LSAT prep and legal discussions.",
+      university_description:
+        "Top public university in Florida known for its law program and large student body.",
+    },
+    {
+      name: "Ohio State Pre-Law Society",
+      university: "Ohio State University",
+      club_description:
+        "Supports aspiring law students with networking and application workshops.",
+      university_description:
+        "Top public university in Ohio known for its large campus and strong law program.",
+    },
+    {
+      name: "Notre Dame Pre-Law Society",
+      university: "University of Notre Dame",
+      club_description:
+        "Provides guidance and networking opportunities for aspiring lawyers.",
+      university_description:
+        "Private Catholic university known for its law school and pre-law programs.",
+    },
+    {
+      name: "Tulane Pre-Law Society",
+      university: "Tulane University",
+      club_description:
+        "Offers law school application workshops and legal career guidance.",
+      university_description:
+        "Private university in Louisiana known for its legal studies and pre-law program.",
+    },
+    {
+      name: "Wake Forest Pre-Law Society",
+      university: "Wake Forest University",
+      club_description:
+        "Supports students pursuing law school with LSAT prep and mentorship.",
+      university_description:
+        "Private university in North Carolina with a strong focus on pre-law education.",
+    },
+    {
+      name: "University of Arizona Pre-Law Society",
+      university: "University of Arizona",
+      club_description:
+        "Prepares students for law school with application workshops and resources.",
+      university_description:
+        "Public university in Arizona known for its law program and student community.",
+    },
+    {
+      name: "University of Washington Pre-Law Society",
+      university: "University of Washington",
+      club_description: "Offers LSAT prep and law school admission resources.",
+      university_description:
+        "Top public university in Washington known for its research and pre-law program.",
+    },
+    {
+      name: "University of Virginia Pre-Law Society",
+      university: "University of Virginia",
+      club_description:
+        "Supports aspiring law students with resources and networking.",
+      university_description:
+        "Top public university known for its prestigious law school and legal studies.",
+    },
+    {
+      name: "SMU Pre-Law Society",
+      university: "Southern Methodist University",
+      club_description:
+        "Prepares students for law school with LSAT prep and legal seminars.",
+      university_description:
+        "Private university in Texas known for its law program and strong pre-law support.",
+    },
+    {
+      name: "George Washington University Pre-Law Society",
+      university: "George Washington University",
+      club_description:
+        "Offers law school prep resources and legal career workshops.",
+      university_description:
+        "Private university in Washington, D.C., with a strong legal studies program.",
+    },
+    {
+      name: "Fordham Pre-Law Society",
+      university: "Fordham University",
+      club_description:
+        "Supports aspiring lawyers with networking and law school guidance.",
+      university_description:
+        "Private university in New York known for its law school and legal programs.",
+    },
+    {
+      name: "Indiana University Pre-Law Society",
+      university: "Indiana University Bloomington",
+      club_description:
+        "Provides law school prep resources and legal career workshops.",
+      university_description:
+        "Public university in Indiana known for its law program and student life.",
+    },
+    {
+      name: "University of Miami Pre-Law Society",
+      university: "University of Miami",
+      club_description:
+        "Prepares students for law school with LSAT prep and legal seminars.",
+      university_description:
+        "Private university in Florida known for its pre-law program and diverse student body.",
+    },
+    {
+      name: "University of Maryland Pre-Law Society",
+      university: "University of Maryland, College Park",
+      club_description:
+        "Supports aspiring law students with law school resources and networking.",
+      university_description:
+        "Public university in Maryland with a strong pre-law program and student community.",
+    },
+    {
+      name: "University of Colorado Pre-Law Society",
+      university: "University of Colorado Boulder",
+      club_description:
+        "Prepares students for law school with LSAT prep and legal resources.",
+      university_description:
+        "Public university in Colorado known for its law program and pre-law resources.",
+    },
+    {
+      name: "UC Santa Barbara Pre-Law Society",
+      university: "University of California, Santa Barbara",
+      club_description:
+        "Supports law school preparation through workshops and LSAT resources.",
+      university_description:
+        "Public university in California with a strong focus on legal studies and pre-law.",
+    },
+    {
+      name: "University of Kentucky Pre-Law Society",
+      university: "University of Kentucky",
+      club_description:
+        "Offers guidance on law school applications and LSAT prep.",
+      university_description:
+        "Public university in Kentucky known for its pre-law program and student support.",
+    },
+    {
+      name: "University of Alabama Pre-Law Society",
+      university: "University of Alabama",
+      club_description:
+        "Prepares students for law school with legal career workshops and LSAT prep.",
+      university_description:
+        "Public university in Alabama known for its law program and large student body.",
+    },
+    {
+      name: "University of 

@@ -13225,8 +13225,768 @@ export const clubExamples = {
         "Public university with a strong commitment to history and archaeology.",
     },
   ],
-  animalAndPetClubs: [],
-  fashionAndDesignclubs: [],
+  animalAndPetClubs: [
+    {
+      name: "UCLA Animal Welfare Club",
+      university: "University of California, Los Angeles",
+      club_description:
+        "Focuses on promoting animal rights and welfare through volunteer work and educational events.",
+      university_description:
+        "Public university with strong environmental and animal welfare initiatives.",
+    },
+    {
+      name: "University of Florida Pre-Vet Society",
+      university: "University of Florida",
+      club_description:
+        "Offers resources and networking opportunities for students interested in veterinary medicine and animal care.",
+      university_description:
+        "Public university with a robust program in animal sciences and veterinary studies.",
+    },
+    {
+      name: "Cornell University Pet Lovers Club",
+      university: "Cornell University",
+      club_description:
+        "Provides students with opportunities to engage in pet care, fostering, and animal rescue.",
+      university_description:
+        "Private Ivy League university known for its veterinary and animal science programs.",
+    },
+    {
+      name: "Texas A&M University Animal Rescue Team",
+      university: "Texas A&M University",
+      club_description:
+        "Dedicated to rescuing animals in need and supporting local shelters.",
+      university_description:
+        "Public university with one of the top veterinary programs in the country.",
+    },
+    {
+      name: "University of Wisconsin-Madison Humane Society",
+      university: "University of Wisconsin-Madison",
+      club_description:
+        "Focuses on animal welfare, adoption drives, and volunteering at local shelters.",
+      university_description:
+        "Public university with a strong commitment to animal welfare and research in animal sciences.",
+    },
+    {
+      name: "Ohio State University Companion Animal Club",
+      university: "Ohio State University",
+      club_description:
+        "Promotes responsible pet ownership and hosts events related to animal health and care.",
+      university_description:
+        "Public university with a strong veterinary medicine and animal science department.",
+    },
+    {
+      name: "University of Pennsylvania Animal Advocacy Society",
+      university: "University of Pennsylvania",
+      club_description:
+        "Dedicated to advocating for animal rights and providing education on ethical treatment of animals.",
+      university_description:
+        "Private Ivy League university with a renowned veterinary school.",
+    },
+    {
+      name: "University of Michigan Animal Lovers Club",
+      university: "University of Michigan",
+      club_description:
+        "Engages students in activities that support local animal shelters and fosters pets.",
+      university_description:
+        "Public university with active student groups supporting animal welfare and rights.",
+    },
+    {
+      name: "Duke University Pre-Veterinary Club",
+      university: "Duke University",
+      club_description:
+        "Offers resources and experiences for students pursuing careers in veterinary medicine.",
+      university_description:
+        "Private university with a focus on health sciences, including animal care.",
+    },
+    {
+      name: "Stanford University Animal Rights Club",
+      university: "Stanford University",
+      club_description:
+        "Advocates for animal rights through educational events and activism.",
+      university_description:
+        "Private university known for its focus on sustainability and animal welfare.",
+    },
+    {
+      name: "University of Georgia Pet Rescue Society",
+      university: "University of Georgia",
+      club_description:
+        "Facilitates animal rescue operations and fosters connections with local shelters.",
+      university_description:
+        "Public university with a top-rated veterinary program.",
+    },
+    {
+      name: "University of Colorado-Boulder Animal Welfare Coalition",
+      university: "University of Colorado-Boulder",
+      club_description:
+        "Promotes animal welfare and ethical treatment through events and volunteer opportunities.",
+      university_description:
+        "Public university with a strong commitment to environmental and animal welfare causes.",
+    },
+    {
+      name: "Harvard University Animal Protection Society",
+      university: "Harvard University",
+      club_description:
+        "Focuses on the protection and ethical treatment of animals through education and activism.",
+      university_description:
+        "Private Ivy League university with various initiatives supporting animal rights.",
+    },
+    {
+      name: "University of Illinois Urbana-Champaign Animal Lovers Club",
+      university: "University of Illinois Urbana-Champaign",
+      club_description:
+        "Supports local shelters and organizes pet adoption events.",
+      university_description:
+        "Public university with a strong focus on animal welfare and veterinary medicine.",
+    },
+    {
+      name: "UC Berkeley Animal Rights Collective",
+      university: "University of California, Berkeley",
+      club_description:
+        "Dedicated to animal rights advocacy and raising awareness about cruelty-free living.",
+      university_description:
+        "Public university with a strong focus on environmental sustainability and animal welfare.",
+    },
+    {
+      name: "University of Arizona Pre-Veterinary Club",
+      university: "University of Arizona",
+      club_description:
+        "Provides support and networking opportunities for students interested in veterinary careers.",
+      university_description:
+        "Public university with robust animal science and veterinary studies programs.",
+    },
+    {
+      name: "Michigan State University Animal Welfare Club",
+      university: "Michigan State University",
+      club_description:
+        "Promotes animal welfare through volunteer work and education about responsible pet ownership.",
+      university_description:
+        "Public university with a top veterinary school and animal science program.",
+    },
+    {
+      name: "University of Miami Animal Rescue Society",
+      university: "University of Miami",
+      club_description:
+        "Focuses on rescuing and fostering animals, as well as advocating for animal rights.",
+      university_description:
+        "Private university with active student involvement in animal welfare initiatives.",
+    },
+    {
+      name: "University of Maryland Pet Lovers Association",
+      university: "University of Maryland",
+      club_description:
+        "Encourages pet adoption and responsible ownership while supporting local animal shelters.",
+      university_description:
+        "Public university with active student groups supporting animal welfare.",
+    },
+    {
+      name: "University of Washington Humane Society",
+      university: "University of Washington",
+      club_description:
+        "Works with local animal shelters to promote pet adoption and responsible pet care.",
+      university_description:
+        "Public university with strong initiatives for animal welfare and ethical treatment.",
+    },
+    {
+      name: "Princeton University Animal Rights Club",
+      university: "Princeton University",
+      club_description:
+        "Focuses on ethical treatment of animals and animal rights advocacy.",
+      university_description:
+        "Private Ivy League university known for its research in ethics and activism.",
+    },
+    {
+      name: "Boston University Animal Welfare Society",
+      university: "Boston University",
+      club_description:
+        "Supports local animal shelters and promotes responsible pet care.",
+      university_description:
+        "Private university with a focus on community involvement and animal welfare.",
+    },
+    {
+      name: "University of Virginia Animal Rescue Group",
+      university: "University of Virginia",
+      club_description:
+        "Organizes animal rescue missions and educational events on pet care.",
+      university_description:
+        "Public university with a strong commitment to social responsibility and animal welfare.",
+    },
+    {
+      name: "Georgetown University Pre-Vet Club",
+      university: "Georgetown University",
+      club_description:
+        "Provides pre-veterinary students with opportunities for networking and animal care experience.",
+      university_description:
+        "Private university with a strong focus on health sciences.",
+    },
+    {
+      name: "Yale University Animal Rights Collective",
+      university: "Yale University",
+      club_description:
+        "Advocates for the ethical treatment of animals and hosts educational events on animal rights.",
+      university_description:
+        "Private Ivy League university with a commitment to activism and ethical research.",
+    },
+    {
+      name: "University of Texas at Austin Animal Welfare Club",
+      university: "University of Texas at Austin",
+      club_description: "Focuses on animal rights and supports local shelters.",
+      university_description:
+        "Public university with active student involvement in animal welfare and community outreach.",
+    },
+    {
+      name: "University of Southern California Animal Rescue Society",
+      university: "University of Southern California",
+      club_description:
+        "Supports local animal rescues through fundraising and volunteer efforts.",
+      university_description:
+        "Private university with a focus on community service and animal rights.",
+    },
+    {
+      name: "Brown University Pet Advocacy Club",
+      university: "Brown University",
+      club_description:
+        "Advocates for pet adoption and responsible ownership while supporting shelters.",
+      university_description:
+        "Private Ivy League university known for its commitment to social causes and activism.",
+    },
+    {
+      name: "Northwestern University Animal Rights Society",
+      university: "Northwestern University",
+      club_description:
+        "Advocates for animal rights through educational events and community outreach.",
+      university_description:
+        "Private university with a strong focus on social justice and animal welfare.",
+    },
+    {
+      name: "University of Chicago Animal Care Club",
+      university: "University of Chicago",
+      club_description:
+        "Promotes responsible pet care and supports animal welfare initiatives.",
+      university_description:
+        "Private university with a strong commitment to animal ethics and community service.",
+    },
+    {
+      name: "Vanderbilt University Animal Welfare Coalition",
+      university: "Vanderbilt University",
+      club_description:
+        "Supports animal shelters and advocates for ethical treatment of pets.",
+      university_description:
+        "Private university with active student involvement in animal welfare efforts.",
+    },
+    {
+      name: "University of North Carolina at Chapel Hill Pet Rescue Club",
+      university: "University of North Carolina at Chapel Hill",
+      club_description:
+        "Focuses on rescuing pets and supporting animal adoption drives.",
+      university_description:
+        "Public university known for its community service and animal rescue efforts.",
+    },
+    {
+      name: "University of Notre Dame Pre-Vet Society",
+      university: "University of Notre Dame",
+      club_description:
+        "Provides resources and experiences for students pursuing veterinary medicine.",
+      university_description:
+        "Private university with a focus on health and veterinary sciences.",
+    },
+    {
+      name: "Penn State University Animal Welfare Club",
+      university: "Penn State University",
+      club_description:
+        "Promotes animal welfare and educates students on responsible pet ownership.",
+      university_description:
+        "Public university with a strong program in veterinary science and animal welfare.",
+    },
+    {
+      name: "Purdue University Animal Care Society",
+      university: "Purdue University",
+      club_description:
+        "Supports local shelters and educates on responsible pet care.",
+      university_description:
+        "Public university with a top-ranked veterinary school and commitment to animal welfare.",
+    },
+    {
+      name: "University of Kentucky Pet Rescue Group",
+      university: "University of Kentucky",
+      club_description: "Organizes pet rescue missions and animal care events.",
+      university_description:
+        "Public university with strong community involvement in animal welfare efforts.",
+    },
+    {
+      name: "Columbia University Animal Advocacy Club",
+      university: "Columbia University",
+      club_description:
+        "Advocates for animal rights and educates students on ethical treatment.",
+      university_description:
+        "Private Ivy League university known for its commitment to activism and ethics.",
+    },
+    {
+      name: "University of Minnesota Animal Rescue Society",
+      university: "University of Minnesota",
+      club_description:
+        "Focuses on rescuing animals and fostering pets while advocating for ethical treatment.",
+      university_description:
+        "Public university with a strong program in animal sciences and welfare.",
+    },
+    {
+      name: "Emory University Pre-Veterinary Club",
+      university: "Emory University",
+      club_description:
+        "Supports students interested in veterinary medicine and offers animal care experiences.",
+      university_description:
+        "Private university with a strong focus on health sciences and animal care.",
+    },
+    {
+      name: "University of California, San Diego Animal Welfare Society",
+      university: "University of California, San Diego",
+      club_description:
+        "Supports local shelters and promotes responsible pet ownership.",
+      university_description:
+        "Public university with a commitment to sustainability and animal rights.",
+    },
+    {
+      name: "University of Oklahoma Animal Rights Collective",
+      university: "University of Oklahoma",
+      club_description:
+        "Advocates for animal rights through education and activism.",
+      university_description:
+        "Public university with a focus on ethics and animal welfare initiatives.",
+    },
+    {
+      name: "University of Pittsburgh Pet Rescue Association",
+      university: "University of Pittsburgh",
+      club_description:
+        "Focuses on rescuing and fostering animals in need while supporting local shelters.",
+      university_description:
+        "Public university with a strong commitment to community service and animal rescue.",
+    },
+    {
+      name: "University of South Carolina Animal Welfare Club",
+      university: "University of South Carolina",
+      club_description:
+        "Promotes animal rights and supports local shelters through volunteer work.",
+      university_description:
+        "Public university with active involvement in animal rights and welfare.",
+    },
+    {
+      name: "University of Tennessee Pre-Vet Society",
+      university: "University of Tennessee",
+      club_description:
+        "Provides students with resources and experiences in veterinary medicine and animal care.",
+      university_description:
+        "Public university with a strong veterinary and animal science program.",
+    },
+    {
+      name: "University of Alabama Animal Rescue Team",
+      university: "University of Alabama",
+      club_description:
+        "Focuses on rescuing animals and supporting local shelters.",
+      university_description:
+        "Public university with a focus on community outreach and animal welfare.",
+    },
+    {
+      name: "University of Mississippi Animal Rights Society",
+      university: "University of Mississippi",
+      club_description:
+        "Advocates for animal rights and provides education on ethical treatment of animals.",
+      university_description:
+        "Public university with a focus on social responsibility and animal ethics.",
+    },
+  ],
+  fashionAndDesignclubs: [
+    {
+      name: "FIT Fashion Design Club",
+      university: "Fashion Institute of Technology",
+      club_description:
+        "Provides opportunities for students to design, create, and showcase their fashion pieces in shows and exhibitions.",
+      university_description:
+        "Specialized college focused on art, fashion, business, design, and technology.",
+    },
+    {
+      name: "Parsons Design Collective",
+      university: "Parsons School of Design",
+      club_description:
+        "Promotes collaboration among students from various design disciplines, offering workshops and design showcases.",
+      university_description:
+        "Private art and design school known for innovation and creativity in the design industry.",
+    },
+    {
+      name: "RISD Apparel Design Club",
+      university: "Rhode Island School of Design",
+      club_description:
+        "Explores fashion design through hands-on projects and offers mentorship from industry professionals.",
+      university_description:
+        "Private art and design college known for its strong focus on visual arts and design education.",
+    },
+    {
+      name: "SCAD Fashion Club",
+      university: "Savannah College of Art and Design",
+      club_description:
+        "Encourages students to engage in fashion design, garment construction, and fashion show production.",
+      university_description:
+        "Private university with a focus on creative careers in art, design, and fashion.",
+    },
+    {
+      name: "UCLA Fashion and Student Trends",
+      university: "University of California, Los Angeles",
+      club_description:
+        "Provides opportunities for students interested in fashion to explore industry trends and create their own designs.",
+      university_description:
+        "Public university with a diverse range of student organizations, including fashion and design.",
+    },
+    {
+      name: "NYU Fashion Business Association",
+      university: "New York University",
+      club_description:
+        "Focuses on the business side of fashion, connecting students with industry leaders and organizing fashion-related events.",
+      university_description:
+        "Private university known for its connections to the fashion industry in New York City.",
+    },
+    {
+      name: "University of Michigan Fashion Media Collective",
+      university: "University of Michigan",
+      club_description:
+        "Combines fashion design and media, allowing students to explore fashion photography, styling, and production.",
+      university_description:
+        "Public university with a strong emphasis on interdisciplinary student initiatives.",
+    },
+    {
+      name: "Stanford University Design Collective",
+      university: "Stanford University",
+      club_description:
+        "A creative hub for students to explore all facets of design, from fashion to product and graphic design.",
+      university_description:
+        "Private university known for innovation and entrepreneurship, with a strong design focus.",
+    },
+    {
+      name: "Harvard College Fashion and Lifestyle Club",
+      university: "Harvard University",
+      club_description:
+        "Explores fashion trends, styling, and lifestyle design, hosting runway shows and networking events.",
+      university_description:
+        "Private Ivy League university with a growing interest in creative arts and fashion.",
+    },
+    {
+      name: "University of Texas at Austin Fashion Group",
+      university: "University of Texas at Austin",
+      club_description:
+        "Engages students in fashion design and styling projects, as well as organizing fashion shows.",
+      university_description:
+        "Public university with a large, active student body and diverse fashion and design clubs.",
+    },
+    {
+      name: "Cornell University Fashion Collective",
+      university: "Cornell University",
+      club_description:
+        "Provides a platform for students to showcase their fashion designs and explore the intersection of fashion and sustainability.",
+      university_description:
+        "Private Ivy League university with a strong program in fiber science and apparel design.",
+    },
+    {
+      name: "Northwestern University Fashion and Design Society",
+      university: "Northwestern University",
+      club_description:
+        "Hosts fashion shows, styling workshops, and collaborative design projects for students interested in fashion.",
+      university_description:
+        "Private university with active student groups and a focus on interdisciplinary design.",
+    },
+    {
+      name: "University of Southern California Fashion Industry Association",
+      university: "University of Southern California",
+      club_description:
+        "Bridges the gap between fashion design and business, offering students networking and industry insights.",
+      university_description:
+        "Private university with a strong focus on student involvement in creative industries.",
+    },
+    {
+      name: "Columbia University Fashion Society",
+      university: "Columbia University",
+      club_description:
+        "Offers students the opportunity to design, style, and learn about the fashion industry through events and workshops.",
+      university_description:
+        "Private Ivy League university with a vibrant fashion and design scene.",
+    },
+    {
+      name: "University of Pennsylvania Fashion and Design Club",
+      university: "University of Pennsylvania",
+      club_description:
+        "Focuses on design innovation and fashion entrepreneurship, with regular industry guest speakers.",
+      university_description:
+        "Private Ivy League university with a strong emphasis on business and design.",
+    },
+    {
+      name: "Duke University Fashion Forward",
+      university: "Duke University",
+      club_description:
+        "Encourages students to engage in fashion styling, trend forecasting, and runway production.",
+      university_description:
+        "Private university with a growing interest in fashion and student-led design projects.",
+    },
+    {
+      name: "Boston University Fashion and Retail Association",
+      university: "Boston University",
+      club_description:
+        "Provides resources for students interested in both fashion design and the retail industry, offering events and internships.",
+      university_description:
+        "Private university with a strong focus on fashion as part of its business and creative industries.",
+    },
+    {
+      name: "University of Miami Fashion Industry Organization",
+      university: "University of Miami",
+      club_description:
+        "Focuses on connecting students with fashion professionals and organizing fashion-related events and shows.",
+      university_description:
+        "Private university with an active fashion scene and student engagement.",
+    },
+    {
+      name: "Georgetown University Fashion Council",
+      university: "Georgetown University",
+      club_description:
+        "Combines fashion and business, providing networking opportunities and fashion show experiences.",
+      university_description:
+        "Private university with a focus on student-led entrepreneurial initiatives, including fashion.",
+    },
+    {
+      name: "University of Chicago Fashion and Design Club",
+      university: "University of Chicago",
+      club_description:
+        "Encourages students to engage in creative fashion projects, including garment design and fashion marketing.",
+      university_description:
+        "Private university with active student participation in arts and creative industries.",
+    },
+    {
+      name: "University of Virginia Fashion Design Association",
+      university: "University of Virginia",
+      club_description:
+        "Provides students with opportunities to design, create, and showcase their fashion collections.",
+      university_description:
+        "Public university with a strong commitment to arts and design programs.",
+    },
+    {
+      name: "University of North Carolina Fashion Board",
+      university: "University of North Carolina",
+      club_description:
+        "Focuses on fashion design, modeling, and styling, with an annual fashion show and events.",
+      university_description:
+        "Public university with active student involvement in creative and fashion projects.",
+    },
+    {
+      name: "University of Florida Trendsetters Fashion Club",
+      university: "University of Florida",
+      club_description:
+        "A student-run organization that promotes fashion trends, styling, and design projects.",
+      university_description:
+        "Public university with a vibrant fashion community.",
+    },
+    {
+      name: "Ohio State University Fashion Production Association",
+      university: "Ohio State University",
+      club_description:
+        "Produces a large-scale annual fashion show, giving students experience in design, production, and modeling.",
+      university_description:
+        "Public university with a strong emphasis on fashion production and design.",
+    },
+    {
+      name: "Michigan State University Fashion House",
+      university: "Michigan State University",
+      club_description:
+        "A creative hub for students interested in fashion design, production, and styling.",
+      university_description:
+        "Public university with active student participation in fashion-related activities.",
+    },
+    {
+      name: "University of Wisconsin-Madison Fashion and Retail Society",
+      university: "University of Wisconsin-Madison",
+      club_description:
+        "Connects students with fashion industry professionals and organizes fashion shows and styling workshops.",
+      university_description:
+        "Public university with strong business and design connections.",
+    },
+    {
+      name: "University of Arizona Fashion Club",
+      university: "University of Arizona",
+      club_description:
+        "Provides a platform for students to engage in fashion design, modeling, and production.",
+      university_description:
+        "Public university with a vibrant creative arts and fashion scene.",
+    },
+    {
+      name: "University of Illinois Fashion Network",
+      university: "University of Illinois Urbana-Champaign",
+      club_description:
+        "Focuses on fashion design, styling, and industry connections, with an annual fashion show.",
+      university_description:
+        "Public university with a strong focus on interdisciplinary design initiatives.",
+    },
+    {
+      name: "University of Washington Design Collective",
+      university: "University of Washington",
+      club_description:
+        "Brings together students from various design disciplines, including fashion, to collaborate on creative projects.",
+      university_description:
+        "Public university with a strong emphasis on design and innovation.",
+    },
+    {
+      name: "Penn State University Fashion Society",
+      university: "Penn State University",
+      club_description:
+        "Encourages students to engage in fashion design and production, hosting annual fashion events.",
+      university_description:
+        "Public university with a strong emphasis on creative industries and design.",
+    },
+    {
+      name: "University of Minnesota Fashion Collective",
+      university: "University of Minnesota",
+      club_description:
+        "Focuses on fashion design and styling, with opportunities for students to create and showcase their work.",
+      university_description:
+        "Public university with a strong fashion and design community.",
+    },
+    {
+      name: "University of Oregon Fashion Organization",
+      university: "University of Oregon",
+      club_description:
+        "Promotes student involvement in fashion design, styling, and trend forecasting.",
+      university_description:
+        "Public university with active student participation in fashion and design.",
+    },
+    {
+      name: "Temple University Fashion and Business Society",
+      university: "Temple University",
+      club_description:
+        "Focuses on the intersection of fashion design and business, providing students with industry connections.",
+      university_description:
+        "Public university with a strong emphasis on business and design.",
+    },
+    {
+      name: "University of Kentucky Fashion Design Association",
+      university: "University of Kentucky",
+      club_description:
+        "Encourages students to explore fashion design and production through collaborative projects.",
+      university_description:
+        "Public university with a strong creative arts and fashion design focus.",
+    },
+    {
+      name: "University of Iowa Fashion Club",
+      university: "University of Iowa",
+      club_description:
+        "Provides a platform for students to design, produce, and showcase their fashion collections.",
+      university_description:
+        "Public university with a growing focus on student-led fashion initiatives.",
+    },
+    {
+      name: "University of Colorado Fashion and Design Society",
+      university: "University of Colorado Boulder",
+      club_description:
+        "Focuses on fashion design, production, and industry connections, with an emphasis on sustainable fashion.",
+      university_description:
+        "Public university with a strong focus on sustainability and design.",
+    },
+    {
+      name: "University of Kansas Fashion Collective",
+      university: "University of Kansas",
+      club_description:
+        "Provides a creative space for students to explore fashion design, styling, and modeling.",
+      university_description:
+        "Public university with active student participation in creative industries.",
+    },
+    {
+      name: "University of Missouri Fashion Design Club",
+      university: "University of Missouri",
+      club_description:
+        "Engages students in fashion design and production, hosting an annual fashion show.",
+      university_description:
+        "Public university with a focus on creative arts and design programs.",
+    },
+    {
+      name: "University of Georgia Fashion and Retail Association",
+      university: "University of Georgia",
+      club_description:
+        "Combines fashion design and business, providing students with industry insights and networking opportunities.",
+      university_description:
+        "Public university with a strong connection to fashion and retail industries.",
+    },
+    {
+      name: "Auburn University Fashion Event Planning Society",
+      university: "Auburn University",
+      club_description:
+        "Focuses on event planning within the fashion industry, giving students hands-on experience.",
+      university_description:
+        "Public university with a strong focus on fashion events and industry connections.",
+    },
+    {
+      name: "University of Alabama Fashion Club",
+      university: "University of Alabama",
+      club_description:
+        "Promotes fashion design, styling, and production through student-led initiatives and events.",
+      university_description:
+        "Public university with active student participation in fashion and creative industries.",
+    },
+    {
+      name: "University of Nebraska Fashion Board",
+      university: "University of Nebraska-Lincoln",
+      club_description:
+        "Focuses on fashion design, production, and trend forecasting, with a strong emphasis on sustainability.",
+      university_description:
+        "Public university with a growing focus on fashion and design.",
+    },
+    {
+      name: "Indiana University Fashion Collective",
+      university: "Indiana University Bloomington",
+      club_description:
+        "Offers students opportunities to engage in fashion design, styling, and production.",
+      university_description:
+        "Public university with a strong commitment to creative industries and fashion.",
+    },
+    {
+      name: "University of Utah Fashion Club",
+      university: "University of Utah",
+      club_description:
+        "Encourages students to explore fashion design, styling, and trend analysis through hands-on projects.",
+      university_description:
+        "Public university with an active fashion and design community.",
+    },
+    {
+      name: "University of Oklahoma Fashion Design Society",
+      university: "University of Oklahoma",
+      club_description:
+        "Provides opportunities for students to create, design, and showcase fashion collections.",
+      university_description:
+        "Public university with a focus on fashion and design industries.",
+    },
+    {
+      name: "University of South Carolina Fashion Design Club",
+      university: "University of South Carolina",
+      club_description:
+        "Focuses on fashion design, styling, and production, with an annual fashion show.",
+      university_description:
+        "Public university with active student participation in fashion and design.",
+    },
+    {
+      name: "University of Tennessee Fashion Group",
+      university: "University of Tennessee",
+      club_description:
+        "Encourages students to engage in fashion design and production, organizing fashion-related events.",
+      university_description:
+        "Public university with a strong emphasis on creative industries and fashion design.",
+    },
+    {
+      name: "University of Louisville Fashion Collective",
+      university: "University of Louisville",
+      club_description:
+        "Provides a platform for students to engage in fashion design, styling, and production.",
+      university_description:
+        "Public university with a growing focus on fashion and design initiatives.",
+    },
+    {
+      name: "University of Houston Fashion Club",
+      university: "University of Houston",
+      club_description:
+        "Focuses on fashion design, production, and industry connections, with a strong focus on sustainability.",
+      university_description:
+        "Public university with a strong emphasis on fashion and creative industries.",
+    },
+  ],
   publicSpeakingAndCommunicationClubs: [],
   socialJusticeAndAdvocacyClubs: [],
   astronomyClubs: [],

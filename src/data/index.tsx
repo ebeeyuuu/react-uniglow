@@ -6993,4 +6993,9603 @@ export const clubExamples = {
         "Public university in Alabama known for its law program and large student body.",
     },
     {
-      name: "University of 
+      name: "University of Georgia Pre-Law Society",
+      university: "University of Georgia",
+      club_description:
+        "Supports aspiring lawyers with resources and law school preparation.",
+      university_description:
+        "Public university in Georgia known for its law program and pre-law resources.",
+    },
+    {
+      name: "University of Illinois Pre-Law Society",
+      university: "University of Illinois Urbana-Champaign",
+      club_description:
+        "Offers law school prep resources and networking opportunities.",
+      university_description:
+        "Top public university in Illinois known for its pre-law and legal programs.",
+    },
+    {
+      name: "University of Pittsburgh Pre-Law Society",
+      university: "University of Pittsburgh",
+      club_description:
+        "Prepares students for law school with LSAT resources and workshops.",
+      university_description:
+        "Public university in Pennsylvania known for its strong law school and pre-law program.",
+    },
+    {
+      name: "UC Irvine Pre-Law Society",
+      university: "University of California, Irvine",
+      club_description:
+        "Supports students pursuing law school with application guidance and LSAT prep.",
+      university_description:
+        "Public university in California known for its pre-law program and academic focus.",
+    },
+    {
+      name: "University of Kansas Pre-Law Society",
+      university: "University of Kansas",
+      club_description:
+        "Helps students prepare for law school with workshops and networking events.",
+      university_description:
+        "Public university in Kansas known for its strong law program and student resources.",
+    },
+    {
+      name: "Temple University Pre-Law Society",
+      university: "Temple University",
+      club_description:
+        "Provides guidance on law school applications and LSAT resources.",
+      university_description:
+        "Public university in Philadelphia with a strong pre-law program and legal studies.",
+    },
+    {
+      name: "Rutgers Pre-Law Society",
+      university: "Rutgers University",
+      club_description:
+        "Prepares students for law school with LSAT resources and workshops.",
+      university_description:
+        "Top public university in New Jersey known for its law program and large student body.",
+    },
+  ],
+  preMedicalClubs: [
+    {
+      name: "Harvard Premedical Society",
+      university: "Harvard University",
+      club_description:
+        "Provides support for aspiring medical students with resources and mentorship.",
+      university_description:
+        "Ivy League university with a strong focus on pre-med education and medical research.",
+    },
+    {
+      name: "Yale Premedical Society",
+      university: "Yale University",
+      club_description:
+        "Supports pre-med students with MCAT prep, shadowing opportunities, and networking.",
+      university_description:
+        "Ivy League university known for its top-tier medical program.",
+    },
+    {
+      name: "Berkeley Premedical Society",
+      university: "University of California, Berkeley",
+      club_description:
+        "Helps students prepare for medical school through workshops and clinical experiences.",
+      university_description:
+        "Public university with a reputation for excellence in science and medical fields.",
+    },
+    {
+      name: "NYU Premedical Society",
+      university: "New York University",
+      club_description:
+        "Offers pre-med students guidance, mentorship, and networking opportunities.",
+      university_description:
+        "Private university known for its strong medical school and pre-med programs.",
+    },
+    {
+      name: "Stanford Premedical Society",
+      university: "Stanford University",
+      club_description:
+        "Connects pre-med students with resources like MCAT prep and clinical experience.",
+      university_description:
+        "Prestigious university with a focus on innovation in medical research and education.",
+    },
+    {
+      name: "UCLA Premedical Society",
+      university: "University of California, Los Angeles",
+      club_description:
+        "Offers students MCAT prep and exposure to clinical experiences.",
+      university_description:
+        "Top public university in California known for its outstanding medical program.",
+    },
+    {
+      name: "Georgetown Premedical Society",
+      university: "Georgetown University",
+      club_description:
+        "Provides resources for medical school applications and healthcare-related volunteering.",
+      university_description:
+        "Private university with a strong focus on pre-med education and healthcare policy.",
+    },
+    {
+      name: "Columbia Premedical Society",
+      university: "Columbia University",
+      club_description:
+        "Helps students prepare for medical school with resources, mentorship, and networking.",
+      university_description:
+        "Ivy League university in New York known for its prestigious medical program.",
+    },
+    {
+      name: "Cornell Premedical Society",
+      university: "Cornell University",
+      club_description:
+        "Offers MCAT prep, healthcare career panels, and mentorship opportunities.",
+      university_description:
+        "Ivy League university with a strong focus on interdisciplinary studies, including medicine.",
+    },
+    {
+      name: "USC Premedical Society",
+      university: "University of Southern California",
+      club_description:
+        "Supports pre-med students with MCAT prep, clinical volunteering, and research.",
+      university_description:
+        "Private university in Los Angeles known for its leading medical and healthcare programs.",
+    },
+    {
+      name: "University of Michigan Premedical Society",
+      university: "University of Michigan",
+      club_description:
+        "Offers resources for pre-med students, including volunteering and research opportunities.",
+      university_description:
+        "Top public university with a renowned medical school and strong pre-med support.",
+    },
+    {
+      name: "Northwestern Premedical Society",
+      university: "Northwestern University",
+      club_description:
+        "Supports aspiring medical students with MCAT prep and clinical shadowing opportunities.",
+      university_description:
+        "Private university known for its excellent pre-med and medical programs.",
+    },
+    {
+      name: "Duke Premedical Society",
+      university: "Duke University",
+      club_description:
+        "Connects pre-med students with shadowing, research, and MCAT preparation.",
+      university_description:
+        "Private university known for its leading medical school and strong focus on healthcare.",
+    },
+    {
+      name: "Penn State Premedical Society",
+      university: "Pennsylvania State University",
+      club_description:
+        "Prepares students for medical school with resources, volunteer opportunities, and MCAT prep.",
+      university_description:
+        "Top public university known for its large student body and strong science programs.",
+    },
+    {
+      name: "Princeton Premedical Society",
+      university: "Princeton University",
+      club_description:
+        "Provides guidance for medical school applications and connects students with clinical opportunities.",
+      university_description:
+        "Ivy League university known for its academic excellence and interdisciplinary studies, including pre-med.",
+    },
+    {
+      name: "University of Texas Premedical Society",
+      university: "University of Texas at Austin",
+      club_description:
+        "Supports students in their journey to medical school with mentorship and volunteering.",
+      university_description:
+        "Top public university in Texas known for its pre-med and healthcare programs.",
+    },
+    {
+      name: "Boston University Premedical Society",
+      university: "Boston University",
+      club_description:
+        "Offers students resources for MCAT prep, clinical experience, and medical school applications.",
+      university_description:
+        "Private university known for its robust pre-med and medical programs.",
+    },
+    {
+      name: "Emory Premedical Society",
+      university: "Emory University",
+      club_description:
+        "Connects pre-med students with research, clinical experiences, and application workshops.",
+      university_description:
+        "Private university known for its healthcare and medical research programs.",
+    },
+    {
+      name: "University of Chicago Premedical Society",
+      university: "University of Chicago",
+      club_description:
+        "Offers students resources for medical school prep, clinical shadowing, and networking.",
+      university_description:
+        "Private university with a strong focus on research and pre-med education.",
+    },
+    {
+      name: "Vanderbilt Premedical Society",
+      university: "Vanderbilt University",
+      club_description:
+        "Provides guidance on MCAT prep, medical school applications, and clinical volunteering.",
+      university_description:
+        "Private university known for its medical research and pre-med support programs.",
+    },
+    {
+      name: "UC Davis Premedical Society",
+      university: "University of California, Davis",
+      club_description:
+        "Prepares students for medical school with MCAT prep and clinical shadowing.",
+      university_description:
+        "Public university in California known for its strong medical and healthcare programs.",
+    },
+    {
+      name: "University of Florida Premedical Society",
+      university: "University of Florida",
+      club_description:
+        "Supports pre-med students with clinical experiences, MCAT prep, and medical school guidance.",
+      university_description:
+        "Top public university in Florida known for its large student body and medical programs.",
+    },
+    {
+      name: "Ohio State Premedical Society",
+      university: "Ohio State University",
+      club_description:
+        "Provides resources for medical school prep, clinical shadowing, and healthcare volunteering.",
+      university_description:
+        "Top public university in Ohio known for its medical school and healthcare programs.",
+    },
+    {
+      name: "Notre Dame Premedical Society",
+      university: "University of Notre Dame",
+      club_description:
+        "Connects students with clinical and research opportunities, along with MCAT prep.",
+      university_description:
+        "Private Catholic university with a strong focus on pre-medical education.",
+    },
+    {
+      name: "Tulane Premedical Society",
+      university: "Tulane University",
+      club_description:
+        "Prepares students for medical school with MCAT prep, shadowing, and volunteer opportunities.",
+      university_description:
+        "Private university in Louisiana with strong pre-med and healthcare programs.",
+    },
+    {
+      name: "Wake Forest Premedical Society",
+      university: "Wake Forest University",
+      club_description:
+        "Offers pre-med students resources for medical school applications, MCAT prep, and clinical experience.",
+      university_description:
+        "Private university in North Carolina with a strong focus on pre-med education.",
+    },
+    {
+      name: "University of Arizona Premedical Society",
+      university: "University of Arizona",
+      club_description:
+        "Supports aspiring doctors with MCAT prep, shadowing opportunities, and application guidance.",
+      university_description:
+        "Public university in Arizona known for its healthcare programs and student resources.",
+    },
+    {
+      name: "University of Washington Premedical Society",
+      university: "University of Washington",
+      club_description:
+        "Provides pre-med students with clinical shadowing, research, and volunteer opportunities.",
+      university_description:
+        "Top public university known for its research and pre-medical education programs.",
+    },
+    {
+      name: "University of Virginia Premedical Society",
+      university: "University of Virginia",
+      club_description:
+        "Supports students with MCAT prep, clinical volunteering, and mentorship.",
+      university_description:
+        "Top public university known for its strong medical school and healthcare programs.",
+    },
+    {
+      name: "SMU Premedical Society",
+      university: "Southern Methodist University",
+      club_description:
+        "Helps students navigate the medical school application process with mentorship and clinical experience.",
+      university_description:
+        "Private university in Texas known for its healthcare and medical programs.",
+    },
+    {
+      name: "George Washington University Premedical Society",
+      university: "George Washington University",
+      club_description:
+        "Provides MCAT prep, clinical volunteering, and medical school guidance.",
+      university_description:
+        "Private university in Washington, D.C., known for its healthcare and medical programs.",
+    },
+    {
+      name: "Fordham Premedical Society",
+      university: "Fordham University",
+      club_description:
+        "Supports pre-med students with resources for clinical experiences and medical school prep.",
+      university_description:
+        "Private university in New York known for its strong healthcare programs.",
+    },
+    {
+      name: "Indiana University Premedical Society",
+      university: "Indiana University Bloomington",
+      club_description:
+        "Offers resources for MCAT prep, clinical volunteering, and medical school applications.",
+      university_description:
+        "Public university in Indiana known for its healthcare programs and pre-med resources.",
+    },
+    {
+      name: "University of Miami Premedical Society",
+      university: "University of Miami",
+      club_description:
+        "Supports aspiring medical students with MCAT prep, clinical shadowing, and volunteering.",
+      university_description:
+        "Private university in Florida known for its medical programs and pre-med support.",
+    },
+    {
+      name: "University of Maryland Premedical Society",
+      university: "University of Maryland, College Park",
+      club_description:
+        "Provides students with MCAT prep, clinical shadowing, and healthcare volunteering.",
+      university_description:
+        "Public university in Maryland known for its large student body and pre-med resources.",
+    },
+    {
+      name: "University of Colorado Premedical Society",
+      university: "University of Colorado Boulder",
+      club_description:
+        "Helps students prepare for medical school with resources, mentorship, and clinical experience.",
+      university_description:
+        "Public university in Colorado with a focus on science and medical programs.",
+    },
+    {
+      name: "Temple University Premedical Society",
+      university: "Temple University",
+      club_description:
+        "Provides resources for medical school prep, clinical volunteering, and MCAT workshops.",
+      university_description:
+        "Public university in Philadelphia known for its medical school and healthcare programs.",
+    },
+    {
+      name: "University of South Carolina Premedical Society",
+      university: "University of South Carolina",
+      club_description:
+        "Offers guidance on medical school applications, MCAT prep, and clinical experiences.",
+      university_description:
+        "Public university known for its healthcare programs and pre-med resources.",
+    },
+    {
+      name: "University of Wisconsin Premedical Society",
+      university: "University of Wisconsin-Madison",
+      club_description:
+        "Supports pre-med students with resources for MCAT prep, clinical volunteering, and research.",
+      university_description:
+        "Top public university known for its medical programs and research opportunities.",
+    },
+    {
+      name: "University of Minnesota Premedical Society",
+      university: "University of Minnesota",
+      club_description:
+        "Connects students with MCAT prep, clinical volunteering, and mentorship opportunities.",
+      university_description:
+        "Public university in Minnesota known for its healthcare programs and medical research.",
+    },
+    {
+      name: "University of Iowa Premedical Society",
+      university: "University of Iowa",
+      club_description:
+        "Helps students prepare for medical school with resources for MCAT prep and shadowing.",
+      university_description:
+        "Public university in Iowa known for its strong pre-med and medical programs.",
+    },
+    {
+      name: "University of Delaware Premedical Society",
+      university: "University of Delaware",
+      club_description:
+        "Supports students with MCAT resources, clinical volunteering, and mentorship.",
+      university_description:
+        "Public university in Delaware known for its medical research and pre-med programs.",
+    },
+    {
+      name: "Florida State Premedical Society",
+      university: "Florida State University",
+      club_description:
+        "Offers pre-med students MCAT prep, clinical shadowing, and medical school guidance.",
+      university_description:
+        "Public university in Florida known for its pre-med and medical programs.",
+    },
+    {
+      name: "UC San Diego Premedical Society",
+      university: "University of California, San Diego",
+      club_description:
+        "Provides support with MCAT prep, clinical volunteering, and medical school applications.",
+      university_description:
+        "Top public university in California known for its medical programs and research.",
+    },
+    {
+      name: "University of Nebraska Premedical Society",
+      university: "University of Nebraska",
+      club_description:
+        "Helps students prepare for medical school with resources, MCAT prep, and volunteering.",
+      university_description:
+        "Public university in Nebraska known for its healthcare and medical programs.",
+    },
+    {
+      name: "University of Arizona Premedical Society",
+      university: "University of Arizona",
+      club_description:
+        "Provides resources for MCAT prep, clinical shadowing, and volunteering opportunities.",
+      university_description:
+        "Public university in Arizona known for its medical school and healthcare programs.",
+    },
+  ],
+  danceClubs: [
+    {
+      name: "Harvard Ballroom Dance Team",
+      university: "Harvard University",
+      club_description:
+        "Competitive ballroom dance team that focuses on Latin and Standard dances.",
+      university_description:
+        "Ivy League university with a variety of student dance organizations.",
+    },
+    {
+      name: "Yale Dancers",
+      university: "Yale University",
+      club_description:
+        "A contemporary dance group that explores modern choreography and creative movement.",
+      university_description:
+        "Ivy League university known for fostering arts and creativity.",
+    },
+    {
+      name: "UC Berkeley Dance Team",
+      university: "University of California, Berkeley",
+      club_description:
+        "Performs at athletic events and competitions, with a focus on jazz and pom routines.",
+      university_description:
+        "Top public university with a strong student-run arts scene.",
+    },
+    {
+      name: "NYU Dance Team",
+      university: "New York University",
+      club_description:
+        "Performs jazz, hip hop, and contemporary routines at university events.",
+      university_description:
+        "Private university in NYC known for its strong performing arts programs.",
+    },
+    {
+      name: "Stanford Cardinal Ballet",
+      university: "Stanford University",
+      club_description:
+        "A student-run ballet company that produces classical and contemporary ballet performances.",
+      university_description:
+        "Prestigious university with a focus on both academic and artistic excellence.",
+    },
+    {
+      name: "UCLA Bruin Bhangra",
+      university: "University of California, Los Angeles",
+      club_description:
+        "Celebrates Punjabi culture through energetic Bhangra dance performances.",
+      university_description:
+        "Top public university in California with a large cultural dance scene.",
+    },
+    {
+      name: "Georgetown Rangila",
+      university: "Georgetown University",
+      club_description:
+        "A South Asian cultural dance group known for organizing an annual dance showcase.",
+      university_description:
+        "Private university known for its vibrant multicultural clubs.",
+    },
+    {
+      name: "Columbia University Ballet Collaborative",
+      university: "Columbia University",
+      club_description:
+        "Provides pre-professional ballet training and performance opportunities.",
+      university_description:
+        "Ivy League university with a strong student-led arts community.",
+    },
+    {
+      name: "Cornell BreakFree",
+      university: "Cornell University",
+      club_description:
+        "A hip hop and breakdancing group that promotes urban dance styles.",
+      university_description:
+        "Ivy League university with a diverse array of dance teams.",
+    },
+    {
+      name: "USC Repertory Dance Company",
+      university: "University of Southern California",
+      club_description:
+        "A contemporary dance company that focuses on modern and postmodern dance.",
+      university_description:
+        "Private university in Los Angeles with a strong performing arts reputation.",
+    },
+    {
+      name: "Michigan Dance Team",
+      university: "University of Michigan",
+      club_description:
+        "Performs at sports events and competitions, specializing in jazz, pom, and hip hop.",
+      university_description:
+        "Public university known for its extensive extracurricular activities and sports culture.",
+    },
+    {
+      name: "Northwestern Dance Marathon",
+      university: "Northwestern University",
+      club_description:
+        "Combines dance with philanthropy, raising funds for charity through a large dance marathon.",
+      university_description:
+        "Private university known for integrating service with student life.",
+    },
+    {
+      name: "Duke Sabrosura",
+      university: "Duke University",
+      club_description:
+        "A Latin dance team that specializes in Salsa, Bachata, and other Latin styles.",
+      university_description:
+        "Private university with a diverse range of cultural and performance clubs.",
+    },
+    {
+      name: "Penn State Lionettes",
+      university: "Pennsylvania State University",
+      club_description:
+        "The official dance team of Penn State, performing at football and basketball games.",
+      university_description:
+        "Public university with a vibrant sports culture and student involvement.",
+    },
+    {
+      name: "Princeton TapCats",
+      university: "Princeton University",
+      club_description:
+        "A student-run tap dance group that performs at university events.",
+      university_description:
+        "Ivy League university known for its commitment to fostering student creativity.",
+    },
+    {
+      name: "Texas Pom Squad",
+      university: "University of Texas at Austin",
+      club_description:
+        "Performs at athletic events with routines focused on pom, jazz, and hip hop.",
+      university_description:
+        "Top public university with a large student body and active dance community.",
+    },
+    {
+      name: "Boston University Fusion",
+      university: "Boston University",
+      club_description:
+        "A dance crew that blends hip hop, contemporary, and jazz styles.",
+      university_description:
+        "Private university known for its performing arts and vibrant student life.",
+    },
+    {
+      name: "Emory AHANA Dance",
+      university: "Emory University",
+      club_description:
+        "A multicultural dance team that performs styles ranging from hip hop to traditional cultural dances.",
+      university_description:
+        "Private university with a focus on diversity and cultural engagement.",
+    },
+    {
+      name: "UChicago Dance Council",
+      university: "University of Chicago",
+      club_description:
+        "Oversees various dance groups on campus, organizing performances and events.",
+      university_description:
+        "Private university known for its vibrant intellectual and cultural community.",
+    },
+    {
+      name: "Vanderbilt Vibe",
+      university: "Vanderbilt University",
+      club_description:
+        "A hip hop dance team that competes and performs at university events.",
+      university_description:
+        "Private university in Tennessee with a strong student-led dance scene.",
+    },
+    {
+      name: "UC Davis Dance Team",
+      university: "University of California, Davis",
+      club_description:
+        "Performs at sports events and competitions, with a focus on jazz, pom, and hip hop.",
+      university_description:
+        "Public university in California known for its strong dance community.",
+    },
+    {
+      name: "UF Extreme Dance",
+      university: "University of Florida",
+      club_description:
+        "A competitive hip hop dance team that performs at university and local events.",
+      university_description:
+        "Top public university in Florida with a diverse range of student organizations.",
+    },
+    {
+      name: "Ohio State Dance Team",
+      university: "Ohio State University",
+      club_description:
+        "Performs at football and basketball games, specializing in jazz, pom, and hip hop.",
+      university_description:
+        "Public university in Ohio with a strong sports and student activities culture.",
+    },
+    {
+      name: "Notre Dame Dance Company",
+      university: "University of Notre Dame",
+      club_description:
+        "A student-led dance group that performs a variety of styles, including ballet and contemporary.",
+      university_description:
+        "Private Catholic university with a strong tradition of student involvement in the arts.",
+    },
+    {
+      name: "Tulane Shockwave Dance Team",
+      university: "Tulane University",
+      club_description:
+        "Performs at Tulane athletic events, specializing in pom and hip hop routines.",
+      university_description:
+        "Private university in New Orleans with an active student life scene.",
+    },
+    {
+      name: "Wake Forest Salsa Club",
+      university: "Wake Forest University",
+      club_description:
+        "Teaches and performs Salsa and other Latin dance styles.",
+      university_description:
+        "Private university in North Carolina known for its cultural dance clubs.",
+    },
+    {
+      name: "University of Arizona Hip Hop Coalition",
+      university: "University of Arizona",
+      club_description:
+        "Promotes hip hop dance culture through performances and competitions.",
+      university_description:
+        "Public university in Arizona with a strong urban dance scene.",
+    },
+    {
+      name: "UW Dance Team",
+      university: "University of Washington",
+      club_description:
+        "Performs at football and basketball games with pom, jazz, and hip hop routines.",
+      university_description:
+        "Public university in Washington with a vibrant dance and sports culture.",
+    },
+    {
+      name: "UVA Salsa Club",
+      university: "University of Virginia",
+      club_description:
+        "Focuses on teaching and performing Salsa and other Latin dance forms.",
+      university_description:
+        "Public university in Virginia with a strong focus on cultural and performance arts.",
+    },
+    {
+      name: "SMU Pom Squad",
+      university: "Southern Methodist University",
+      club_description:
+        "Performs at athletic events, with routines in jazz, pom, and hip hop.",
+      university_description:
+        "Private university in Texas with a large student involvement in the arts and sports.",
+    },
+    {
+      name: "GW Balance Dance Group",
+      university: "George Washington University",
+      club_description:
+        "A contemporary dance group that promotes creative expression through choreography.",
+      university_description:
+        "Private university in Washington, D.C., with a focus on student-led arts.",
+    },
+    {
+      name: "Fordham Expressions Dance Alliance",
+      university: "Fordham University",
+      club_description:
+        "A contemporary and modern dance group that performs at various events.",
+      university_description:
+        "Private university in New York known for its strong performing arts culture.",
+    },
+    {
+      name: "IU HooSher Bhangra",
+      university: "Indiana University Bloomington",
+      club_description:
+        "A competitive Bhangra team that performs at cultural events and competitions.",
+      university_description:
+        "Public university in Indiana known for its strong cultural dance presence.",
+    },
+    {
+      name: "Miami University Dance Theatre",
+      university: "Miami University",
+      club_description:
+        "A contemporary dance group that performs student-choreographed works.",
+      university_description:
+        "Public university in Ohio with a focus on student-run arts and dance.",
+    },
+    {
+      name: "University of Maryland Terrapin Dance Team",
+      university: "University of Maryland, College Park",
+      club_description:
+        "Performs at athletic events, with routines focused on pom, jazz, and hip hop.",
+      university_description:
+        "Public university in Maryland known for its strong sports and dance culture.",
+    },
+    {
+      name: "Colorado Dance Team",
+      university: "University of Colorado Boulder",
+      club_description:
+        "Performs at football and basketball games, focusing on jazz, pom, and hip hop.",
+      university_description:
+        "Public university in Colorado with a strong student-run dance scene.",
+    },
+    {
+      name: "Temple Owl Dance Team",
+      university: "Temple University",
+      club_description:
+        "Performs at university sporting events with routines in pom, jazz, and hip hop.",
+      university_description:
+        "Public university in Philadelphia known for its sports and performing arts programs.",
+    },
+    {
+      name: "University of South Carolina Cockettes",
+      university: "University of South Carolina",
+      club_description:
+        "A hip hop and jazz dance team that performs at athletic events.",
+      university_description:
+        "Public university known for its strong sports and student-run organizations.",
+    },
+    {
+      name: "University of Kentucky Dance Team",
+      university: "University of Kentucky",
+      club_description:
+        "Performs at basketball and football games, specializing in pom and jazz routines.",
+      university_description:
+        "Public university in Kentucky known for its sports and student activities.",
+    },
+    {
+      name: "FSU Seminole Dance Force",
+      university: "Florida State University",
+      club_description:
+        "Performs hip hop, pom, and jazz routines at athletic events and competitions.",
+      university_description:
+        "Top public university in Florida with a large student-run dance community.",
+    },
+    {
+      name: "University of Minnesota Premier Dance Team",
+      university: "University of Minnesota",
+      club_description:
+        "Performs at sports events and competitions, with routines in jazz, pom, and hip hop.",
+      university_description:
+        "Public university in Minnesota with a large student activities scene.",
+    },
+    {
+      name: "University of Nebraska Dance Team",
+      university: "University of Nebraska",
+      club_description:
+        "Performs at football and basketball games, with routines focused on pom and jazz.",
+      university_description:
+        "Public university in Nebraska known for its student-run dance teams.",
+    },
+    {
+      name: "University of Tennessee Dance Society",
+      university: "University of Tennessee",
+      club_description:
+        "A student-led dance group that performs a variety of styles, from ballet to hip hop.",
+      university_description:
+        "Public university in Tennessee known for its strong student organizations.",
+    },
+    {
+      name: "Clemson Tiger Dancers",
+      university: "Clemson University",
+      club_description:
+        "Performs at athletic events and competitions, with routines in pom, jazz, and hip hop.",
+      university_description:
+        "Public university in South Carolina with a strong student involvement in the arts.",
+    },
+    {
+      name: "University of Delaware Dance Team",
+      university: "University of Delaware",
+      club_description:
+        "Performs at athletic events and competitions, specializing in jazz, pom, and hip hop.",
+      university_description:
+        "Public university in Delaware known for its strong student activities and sports.",
+    },
+    {
+      name: "University of Georgia Georgettes",
+      university: "University of Georgia",
+      club_description:
+        "Performs at athletic events, with routines in jazz, pom, and hip hop.",
+      university_description:
+        "Public university in Georgia with a strong sports culture and student-run activities.",
+    },
+    {
+      name: "Ole Miss Rebelettes",
+      university: "University of Mississippi",
+      club_description:
+        "Performs at football and basketball games, with routines focused on jazz and pom.",
+      university_description:
+        "Public university in Mississippi with a strong sports and student activities scene.",
+    },
+    {
+      name: "University of Oklahoma Pom Squad",
+      university: "University of Oklahoma",
+      club_description:
+        "Performs at university sporting events with jazz, pom, and hip hop routines.",
+      university_description:
+        "Public university in Oklahoma known for its sports and student-run dance groups.",
+    },
+  ],
+  theatreAndDramaClubs: [
+    {
+      name: "Harvard Radcliffe Dramatic Club",
+      university: "Harvard University",
+      club_description:
+        "Produces a wide range of theatrical performances including musicals, plays, and original works.",
+      university_description:
+        "Ivy League university known for its rich history in the arts and humanities.",
+    },
+    {
+      name: "Yale Dramat",
+      university: "Yale University",
+      club_description:
+        "The second-oldest college theater group in the U.S., producing high-quality student performances.",
+      university_description:
+        "Ivy League university with a prestigious theater tradition.",
+    },
+    {
+      name: "UC Berkeley Theatre Club",
+      university: "University of California, Berkeley",
+      club_description:
+        "Provides students with opportunities to act, direct, and work behind the scenes in various productions.",
+      university_description:
+        "Public university in California with a strong student-led performing arts scene.",
+    },
+    {
+      name: "NYU Tisch Drama Stageworks",
+      university: "New York University",
+      club_description:
+        "A theater company offering performance opportunities to students in the drama program.",
+      university_description:
+        "Private university with a top-ranked performing arts school in NYC.",
+    },
+    {
+      name: "Stanford Ram's Head Theatrical Society",
+      university: "Stanford University",
+      club_description:
+        "Stanford's oldest and largest student theater group, producing musicals, plays, and original works.",
+      university_description:
+        "Private university in California known for both academic and artistic excellence.",
+    },
+    {
+      name: "UCLA Act III Theatre Ensemble",
+      university: "University of California, Los Angeles",
+      club_description:
+        "A student-run theater company producing plays, musicals, and original work.",
+      university_description:
+        "Public university with a renowned film and theater program.",
+    },
+    {
+      name: "Georgetown Mask & Bauble Dramatic Society",
+      university: "Georgetown University",
+      club_description:
+        "The oldest continuously running student theater group in the U.S., producing classic and contemporary plays.",
+      university_description:
+        "Private university in Washington, D.C., known for its rich student-led arts scene.",
+    },
+    {
+      name: "Columbia Varsity Show",
+      university: "Columbia University",
+      club_description:
+        "An original student-written musical performed annually, with a strong satirical tone.",
+      university_description:
+        "Ivy League university with a tradition of student-driven artistic expression.",
+    },
+    {
+      name: "Cornell Melodramatics Theatre Company",
+      university: "Cornell University",
+      club_description:
+        "A student-run theater company known for its dedication to musical theater and plays.",
+      university_description:
+        "Ivy League university in New York with a diverse student theater community.",
+    },
+    {
+      name: "USC Independent Student Productions",
+      university: "University of Southern California",
+      club_description:
+        "Provides students with opportunities to create their own theater and film projects.",
+      university_description:
+        "Private university in Los Angeles known for its film and performing arts programs.",
+    },
+    {
+      name: "Michigan Rude Mechanicals",
+      university: "University of Michigan",
+      club_description:
+        "A student-run theater company that produces Shakespearean plays and other classical works.",
+      university_description:
+        "Public university with a strong performing arts tradition and student-led theater groups.",
+    },
+    {
+      name: "Northwestern WAVE Productions",
+      university: "Northwestern University",
+      club_description:
+        "A student theater group producing musicals and plays, focused on innovative and experimental work.",
+      university_description:
+        "Private university known for its prestigious theater program and student involvement in the arts.",
+    },
+    {
+      name: "Duke Hoof 'n' Horn",
+      university: "Duke University",
+      club_description:
+        "The oldest student-run musical theater group in the South, producing Broadway-style shows.",
+      university_description:
+        "Private university in North Carolina with a strong tradition of student-led theater.",
+    },
+    {
+      name: "Penn Players",
+      university: "University of Pennsylvania",
+      club_description:
+        "A student theater group focused on contemporary and experimental productions.",
+      university_description:
+        "Ivy League university in Philadelphia with a vibrant student arts community.",
+    },
+    {
+      name: "Princeton Triangle Club",
+      university: "Princeton University",
+      club_description:
+        "America's oldest touring collegiate musical-comedy troupe, known for producing original shows.",
+      university_description:
+        "Ivy League university with a strong tradition of student-written and performed theater.",
+    },
+    {
+      name: "Texas Theatre and Dance",
+      university: "University of Texas at Austin",
+      club_description:
+        "Produces a wide range of student-led performances, from classic to contemporary works.",
+      university_description:
+        "Top public university with a large performing arts program and student theater scene.",
+    },
+    {
+      name: "Boston University On Broadway",
+      university: "Boston University",
+      club_description:
+        "A student-run theater group focused on musical theater, producing several shows annually.",
+      university_description:
+        "Private university known for its strong student involvement in the performing arts.",
+    },
+    {
+      name: "Emory Ad Hoc Productions",
+      university: "Emory University",
+      club_description:
+        "Produces innovative and experimental theater, focusing on student-written and directed works.",
+      university_description:
+        "Private university with a vibrant and experimental student theater community.",
+    },
+    {
+      name: "UChicago Off-Off Campus",
+      university: "University of Chicago",
+      club_description:
+        "One of the oldest student-run improv comedy groups in the country, with a focus on sketch comedy.",
+      university_description:
+        "Private university with a strong intellectual and artistic student culture.",
+    },
+    {
+      name: "Vanderbilt Original Cast",
+      university: "Vanderbilt University",
+      club_description:
+        "A student-run musical theater group producing Broadway-style performances each semester.",
+      university_description:
+        "Private university in Tennessee with an active student-led theater and arts scene.",
+    },
+    {
+      name: "UC Davis Theatre & Dance",
+      university: "University of California, Davis",
+      club_description:
+        "Produces student-led performances ranging from musicals to contemporary plays.",
+      university_description:
+        "Public university with a vibrant student theater and arts community.",
+    },
+    {
+      name: "UF Florida Players",
+      university: "University of Florida",
+      club_description:
+        "A student-run theater company that produces a wide range of theatrical performances.",
+      university_description:
+        "Top public university in Florida with a diverse student theater scene.",
+    },
+    {
+      name: "Ohio State Theatre Group",
+      university: "Ohio State University",
+      club_description:
+        "Provides students with opportunities to act, direct, and work on technical aspects of theater productions.",
+      university_description:
+        "Public university in Ohio with a strong performing arts program.",
+    },
+    {
+      name: "Notre Dame Pasquerilla East Musical Company",
+      university: "University of Notre Dame",
+      club_description:
+        "Notre Dame's student-run musical theater group, producing a large-scale musical each year.",
+      university_description:
+        "Private Catholic university known for its strong tradition of student-led arts and theater.",
+    },
+    {
+      name: "Tulane Theatre Productions",
+      university: "Tulane University",
+      club_description:
+        "A student-driven theater company producing plays, musicals, and experimental works.",
+      university_description:
+        "Private university in New Orleans with a strong performing arts community.",
+    },
+    {
+      name: "Wake Forest Theatre",
+      university: "Wake Forest University",
+      club_description:
+        "Produces student-driven performances, ranging from Shakespeare to contemporary plays.",
+      university_description:
+        "Private university with a strong commitment to fostering student creativity in the arts.",
+    },
+    {
+      name: "University of Arizona Studio Series",
+      university: "University of Arizona",
+      club_description:
+        "A student-led theater group focusing on experimental and contemporary works.",
+      university_description:
+        "Public university in Arizona with a strong student-run performing arts program.",
+    },
+    {
+      name: "UW Undergraduate Theatre Society",
+      university: "University of Washington",
+      club_description:
+        "A student theater group that produces a variety of performances including classics, musicals, and original works.",
+      university_description:
+        "Public university with a thriving student-run arts and theater community.",
+    },
+    {
+      name: "UVA Spectrum Theatre",
+      university: "University of Virginia",
+      club_description:
+        "Focuses on productions that explore social issues and foster dialogue through the arts.",
+      university_description:
+        "Public university in Virginia with a diverse and active student theater scene.",
+    },
+    {
+      name: "SMU Meadows Theatre",
+      university: "Southern Methodist University",
+      club_description:
+        "Produces a wide range of performances from musicals to classical plays.",
+      university_description:
+        "Private university in Texas known for its strong performing arts program.",
+    },
+    {
+      name: "GW Generic Theatre Company",
+      university: "George Washington University",
+      club_description:
+        "A student-run theater group that produces classic and contemporary plays.",
+      university_description:
+        "Private university in Washington, D.C., with an active student-led performing arts scene.",
+    },
+    {
+      name: "Fordham Mimes and Mummers",
+      university: "Fordham University",
+      club_description:
+        "The oldest student theater group in New York City, producing a variety of classic and contemporary works.",
+      university_description:
+        "Private university in NYC with a strong tradition of student theater.",
+    },
+    {
+      name: "IU University Players",
+      university: "Indiana University Bloomington",
+      club_description:
+        "A student-run theater group producing contemporary and classical works.",
+      university_description:
+        "Public university in Indiana known for its strong student-run arts and theater scene.",
+    },
+    {
+      name: "Miami University Stage Left",
+      university: "Miami University",
+      club_description:
+        "Produces student-directed performances, focusing on innovative and thought-provoking theater.",
+      university_description:
+        "Public university in Ohio with a strong student-driven performing arts culture.",
+    },
+    {
+      name: "UMD The Hoot Theatre Company",
+      university: "University of Maryland, College Park",
+      club_description:
+        "Produces student-written and directed plays, with a focus on new and experimental works.",
+      university_description:
+        "Public university with a large student-run performing arts community.",
+    },
+    {
+      name: "Colorado Shakespeare Club",
+      university: "University of Colorado Boulder",
+      club_description:
+        "A student-run group focusing on performances of Shakespeare's works.",
+      university_description:
+        "Public university in Colorado with a strong tradition of student-driven performing arts.",
+    },
+    {
+      name: "Temple Broadway on Broad",
+      university: "Temple University",
+      club_description:
+        "A student-run musical theater group producing full-scale Broadway shows.",
+      university_description:
+        "Public university in Philadelphia with a strong student-run arts and theater community.",
+    },
+    {
+      name: "UCSB Shrunken Heads Theatre Company",
+      university: "University of California, Santa Barbara",
+      club_description:
+        "A student-run theater group known for its innovative and experimental productions.",
+      university_description:
+        "Public university in California with a vibrant student-led performing arts scene.",
+    },
+    {
+      name: "UGA Thalian Blackfriars",
+      university: "University of Georgia",
+      club_description:
+        "Produces a wide range of performances from contemporary plays to classic works.",
+      university_description:
+        "Public university in Georgia with a strong student-run arts and theater culture.",
+    },
+    {
+      name: "Florida State School of Theatre",
+      university: "Florida State University",
+      club_description:
+        "Produces student-led performances in a variety of genres, from musicals to contemporary drama.",
+      university_description:
+        "Top public university in Florida with a thriving student arts community.",
+    },
+    {
+      name: "BYU Young Ambassadors",
+      university: "Brigham Young University",
+      club_description:
+        "A touring musical theater group that combines song, dance, and acting.",
+      university_description:
+        "Private religious university with a strong performing arts program.",
+    },
+    {
+      name: "Purdue Purdue Theatre",
+      university: "Purdue University",
+      club_description:
+        "Produces student-led performances ranging from musicals to contemporary plays.",
+      university_description:
+        "Public university in Indiana with a vibrant performing arts scene.",
+    },
+    {
+      name: "Virginia Tech Theatre Club",
+      university: "Virginia Tech",
+      club_description:
+        "Provides students with opportunities to act, direct, and work on technical aspects of theater productions.",
+      university_description:
+        "Public university in Virginia known for its active student-run arts and theater groups.",
+    },
+    {
+      name: "University of Oregon No Shame Theatre",
+      university: "University of Oregon",
+      club_description:
+        "An experimental, student-run theater group encouraging bold, no-holds-barred performances.",
+      university_description:
+        "Public university with a lively student-run performing arts community.",
+    },
+    {
+      name: "UCLA Act III Theatre Ensemble",
+      university: "University of California, Los Angeles",
+      club_description:
+        "A student-run theater company producing plays, musicals, and original works.",
+      university_description:
+        "Public university with a renowned film and theater program.",
+    },
+    {
+      name: "Cal Poly Theatre",
+      university: "California Polytechnic State University",
+      club_description:
+        "Produces student-led performances ranging from musicals to contemporary plays.",
+      university_description:
+        "Public university with a strong student-run performing arts program.",
+    },
+    {
+      name: "Ohio University Theater Club",
+      university: "Ohio University",
+      club_description:
+        "Provides students with opportunities to act, direct, and work behind the scenes in various productions.",
+      university_description:
+        "Public university in Ohio with a strong student-run performing arts scene.",
+    },
+  ],
+  musicClubs: [
+    {
+      name: "Harvard Opportunes",
+      university: "Harvard University",
+      club_description:
+        "Harvard's premier co-ed a cappella group, performing a range of musical styles.",
+      university_description:
+        "Ivy League university with a strong tradition in arts and music.",
+    },
+    {
+      name: "Yale Whiffenpoofs",
+      university: "Yale University",
+      club_description:
+        "The world's oldest collegiate a cappella group, performing across the globe.",
+      university_description:
+        "Ivy League university known for its prestigious a cappella groups.",
+    },
+    {
+      name: "UC Berkeley Marching Band",
+      university: "University of California, Berkeley",
+      club_description:
+        "Student-led marching band performing at athletic events and parades.",
+      university_description:
+        "Public university with a strong student-led music and performance tradition.",
+    },
+    {
+      name: "NYU Chorale",
+      university: "New York University",
+      club_description:
+        "A student-run choir performing classical and contemporary choral works.",
+      university_description:
+        "Private university in New York with a vibrant performing arts scene.",
+    },
+    {
+      name: "Stanford Mendicants",
+      university: "Stanford University",
+      club_description:
+        "Stanford's oldest all-male a cappella group, performing a wide range of genres.",
+      university_description:
+        "Private university in California with a rich student-led music tradition.",
+    },
+    {
+      name: "UCLA Bruin Harmony",
+      university: "University of California, Los Angeles",
+      club_description:
+        "A men's a cappella group known for their high-energy performances and vocal arrangements.",
+      university_description:
+        "Public university in California with a renowned music program.",
+    },
+    {
+      name: "Georgetown Phantoms",
+      university: "Georgetown University",
+      club_description:
+        "Georgetown’s premier co-ed a cappella group performing pop, indie, and R&B hits.",
+      university_description:
+        "Private university in Washington, D.C., with a strong student-run music scene.",
+    },
+    {
+      name: "Columbia Orchestra",
+      university: "Columbia University",
+      club_description:
+        "A student orchestra performing classical symphonies and contemporary works.",
+      university_description:
+        "Ivy League university with a thriving music and arts culture.",
+    },
+    {
+      name: "Cornell Chordials",
+      university: "Cornell University",
+      club_description:
+        "An award-winning co-ed a cappella group known for its unique arrangements.",
+      university_description:
+        "Ivy League university in New York with a dynamic student music scene.",
+    },
+    {
+      name: "USC Thornton Jazz Orchestra",
+      university: "University of Southern California",
+      club_description:
+        "A jazz ensemble showcasing USC’s top musicians in various genres of jazz.",
+      university_description:
+        "Private university in Los Angeles with a prestigious music program.",
+    },
+    {
+      name: "Michigan G-Men",
+      university: "University of Michigan",
+      club_description:
+        "An all-male a cappella group known for its powerful vocals and dynamic performances.",
+      university_description:
+        "Public university with a rich tradition in student-led music groups.",
+    },
+    {
+      name: "Northwestern University Symphony Orchestra",
+      university: "Northwestern University",
+      club_description:
+        "A student orchestra performing a wide range of classical and modern symphonic works.",
+      university_description:
+        "Private university with one of the top music schools in the U.S.",
+    },
+    {
+      name: "Duke Pitchforks",
+      university: "Duke University",
+      club_description:
+        "Duke’s oldest all-male a cappella group, known for their high-energy performances.",
+      university_description:
+        "Private university in North Carolina with a vibrant music scene.",
+    },
+    {
+      name: "Penn Counterparts",
+      university: "University of Pennsylvania",
+      club_description:
+        "A co-ed a cappella group focusing on pop and R&B hits with unique vocal arrangements.",
+      university_description:
+        "Ivy League university in Philadelphia with a diverse student music scene.",
+    },
+    {
+      name: "Princeton Tigertones",
+      university: "Princeton University",
+      club_description:
+        "A renowned all-male a cappella group, performing a range of genres from classical to pop.",
+      university_description:
+        "Ivy League university known for its prestigious music and performing arts groups.",
+    },
+    {
+      name: "Texas Longhorn Band",
+      university: "University of Texas at Austin",
+      club_description:
+        "The official marching band of UT Austin, performing at sporting events and parades.",
+      university_description:
+        "Top public university in Texas with a large and active music community.",
+    },
+    {
+      name: "Boston University Pep Band",
+      university: "Boston University",
+      club_description:
+        "A high-energy band performing at sporting events and community gatherings.",
+      university_description:
+        "Private university in Boston with a strong student-led music scene.",
+    },
+    {
+      name: "Emory Dooley Noted",
+      university: "Emory University",
+      club_description:
+        "A co-ed a cappella group performing popular music with creative arrangements.",
+      university_description:
+        "Private university in Georgia with a growing music and performing arts culture.",
+    },
+    {
+      name: "UChicago Motet Choir",
+      university: "University of Chicago",
+      club_description:
+        "A student choir performing classical choral music and contemporary works.",
+      university_description:
+        "Private university with a rich tradition of student-led classical music ensembles.",
+    },
+    {
+      name: "Vanderbilt Melodores",
+      university: "Vanderbilt University",
+      club_description:
+        "An award-winning all-male a cappella group known for their dynamic performances.",
+      university_description:
+        "Private university in Tennessee with an active student-run music scene.",
+    },
+    {
+      name: "UC Davis Jazz Band",
+      university: "University of California, Davis",
+      club_description:
+        "A student-led jazz ensemble performing across various jazz styles and eras.",
+      university_description:
+        "Public university with a strong tradition in student-run music groups.",
+    },
+    {
+      name: "UF Symphonic Band",
+      university: "University of Florida",
+      club_description:
+        "A student symphonic band performing classical and contemporary works.",
+      university_description:
+        "Top public university in Florida with an active student music scene.",
+    },
+    {
+      name: "Ohio State Men's Glee Club",
+      university: "Ohio State University",
+      club_description:
+        "An award-winning men’s chorus performing classical and contemporary choral music.",
+      university_description:
+        "Public university in Ohio known for its large student-led music community.",
+    },
+    {
+      name: "Notre Dame Folk Choir",
+      university: "University of Notre Dame",
+      club_description:
+        "A student-run choir performing folk and religious music.",
+      university_description:
+        "Private Catholic university with a rich tradition in music and choral performance.",
+    },
+    {
+      name: "Tulane Green Wave Brass Band",
+      university: "Tulane University",
+      club_description:
+        "A New Orleans-style brass band performing at university events and parades.",
+      university_description:
+        "Private university in New Orleans with a vibrant student-run music scene.",
+    },
+    {
+      name: "Wake Forest Demon Divas",
+      university: "Wake Forest University",
+      club_description:
+        "An all-female a cappella group known for their powerful vocals and harmonies.",
+      university_description:
+        "Private university in North Carolina with a strong a cappella tradition.",
+    },
+    {
+      name: "University of Arizona Choir",
+      university: "University of Arizona",
+      club_description:
+        "A student choir performing classical and contemporary choral works.",
+      university_description:
+        "Public university in Arizona with a strong music program and student-led ensembles.",
+    },
+    {
+      name: "UW Marching Band",
+      university: "University of Washington",
+      club_description:
+        "The official marching band of UW, performing at athletic events and parades.",
+      university_description:
+        "Public university in Washington with a vibrant student music and marching band tradition.",
+    },
+    {
+      name: "UVA Academical Village People",
+      university: "University of Virginia",
+      club_description:
+        "A male a cappella group known for its creative vocal arrangements and entertaining performances.",
+      university_description:
+        "Public university in Virginia with a strong a cappella and student music scene.",
+    },
+    {
+      name: "SMU Meadows Wind Ensemble",
+      university: "Southern Methodist University",
+      club_description:
+        "A student wind ensemble performing classical and contemporary works.",
+      university_description:
+        "Private university in Texas known for its strong performing arts program.",
+    },
+    {
+      name: "GW Vibes",
+      university: "George Washington University",
+      club_description:
+        "A co-ed a cappella group performing a wide range of genres from pop to indie.",
+      university_description:
+        "Private university in Washington, D.C., with an active student music scene.",
+    },
+    {
+      name: "Fordham Ramblers",
+      university: "Fordham University",
+      club_description:
+        "Fordham’s all-male a cappella group known for their vibrant and powerful performances.",
+      university_description:
+        "Private university in New York City with a strong student-led music tradition.",
+    },
+    {
+      name: "IU Singing Hoosiers",
+      university: "Indiana University Bloomington",
+      club_description:
+        "A premier show choir performing a mix of contemporary pop and Broadway hits.",
+      university_description:
+        "Public university in Indiana with a rich tradition in choral and show choir performance.",
+    },
+    {
+      name: "Miami University Men's Glee Club",
+      university: "Miami University",
+      club_description:
+        "One of the oldest collegiate men’s glee clubs, performing classical and contemporary choral music.",
+      university_description:
+        "Public university in Ohio with a strong choral tradition.",
+    },
+    {
+      name: "UMD Jazz Ensemble",
+      university: "University of Maryland, College Park",
+      club_description:
+        "A student-led jazz band performing a variety of jazz styles.",
+      university_description:
+        "Public university with a vibrant student music scene.",
+    },
+    {
+      name: "Colorado Boulder a cappella",
+      university: "University of Colorado Boulder",
+      club_description:
+        "A collection of a cappella groups performing a variety of music genres.",
+      university_description:
+        "Public university in Colorado with a thriving student music culture.",
+    },
+    {
+      name: "Temple Diamond Marching Band",
+      university: "Temple University",
+      club_description:
+        "Temple’s marching band, performing at athletic events and community parades.",
+      university_description:
+        "Public university in Philadelphia with a strong tradition of student-led music groups.",
+    },
+    {
+      name: "Texas A&M Singing Cadets",
+      university: "Texas A&M University",
+      club_description:
+        "A premier men’s chorus performing a range of genres from classical to contemporary.",
+      university_description:
+        "Public university in Texas with a rich student-run choral tradition.",
+    },
+    {
+      name: "UIUC Marching Illini",
+      university: "University of Illinois Urbana-Champaign",
+      club_description:
+        "The official marching band of UIUC, performing at athletic events and parades.",
+      university_description:
+        "Public university in Illinois with a strong student-run music tradition.",
+    },
+    {
+      name: "Lehigh University Philharmonic",
+      university: "Lehigh University",
+      club_description:
+        "A student orchestra performing classical symphonies and contemporary works.",
+      university_description:
+        "Private university in Pennsylvania with a strong student-led music scene.",
+    },
+    {
+      name: "Pitt Pendulums",
+      university: "University of Pittsburgh",
+      club_description:
+        "A co-ed a cappella group performing contemporary pop and indie music.",
+      university_description:
+        "Public university in Pennsylvania with a vibrant student-run a cappella and music community.",
+    },
+    {
+      name: "UConn Marching Band",
+      university: "University of Connecticut",
+      club_description:
+        "The official marching band of UConn, performing at athletic events and parades.",
+      university_description:
+        "Public university with a strong tradition of student-led music groups.",
+    },
+    {
+      name: "Cal Poly Mustangs Band",
+      university: "California Polytechnic State University",
+      club_description:
+        "A student-led marching band performing at university and community events.",
+      university_description:
+        "Public university with a vibrant student music and performing arts scene.",
+    },
+    {
+      name: "Iowa State University Symphony",
+      university: "Iowa State University",
+      club_description:
+        "A student orchestra performing classical and modern symphonic works.",
+      university_description:
+        "Public university in Iowa with a strong student-led music tradition.",
+    },
+    {
+      name: "BYU Vocal Point",
+      university: "Brigham Young University",
+      club_description:
+        "A renowned a cappella group performing a wide variety of genres.",
+      university_description:
+        "Private religious university known for its prestigious a cappella and choral groups.",
+    },
+    {
+      name: "University of Richmond Octāves",
+      university: "University of Richmond",
+      club_description:
+        "An all-male a cappella group performing contemporary pop music.",
+      university_description:
+        "Private university in Virginia with an active a cappella and student music scene.",
+    },
+    {
+      name: "Penn State Blue Band",
+      university: "Pennsylvania State University",
+      club_description:
+        "Penn State’s official marching band, performing at athletic events and parades.",
+      university_description:
+        "Public university in Pennsylvania with a large student-run music community.",
+    },
+    {
+      name: "University of Miami Frost Symphony Orchestra",
+      university: "University of Miami",
+      club_description:
+        "A student orchestra performing classical and contemporary symphonic works.",
+      university_description:
+        "Private university in Florida with a renowned music program and active student music groups.",
+    },
+  ],
+  filmAndPhotographyClubs: [
+    {
+      name: "Harvard Film Club",
+      university: "Harvard University",
+      club_description:
+        "A student-run organization dedicated to film screenings, discussions, and producing short films.",
+      university_description:
+        "Ivy League university with a strong tradition in arts and humanities.",
+    },
+    {
+      name: "Yale Film Society",
+      university: "Yale University",
+      club_description:
+        "Promotes appreciation of film through screenings and discussions with industry professionals.",
+      university_description:
+        "Ivy League university known for its prestigious arts programs.",
+    },
+    {
+      name: "UC Berkeley Photography Club",
+      university: "University of California, Berkeley",
+      club_description:
+        "A community of photography enthusiasts offering workshops and gallery showcases.",
+      university_description:
+        "Public university with a vibrant creative arts scene.",
+    },
+    {
+      name: "NYU Tisch Film Club",
+      university: "New York University",
+      club_description:
+        "A club for NYU students passionate about film production and critical analysis.",
+      university_description:
+        "Private university in New York City with a renowned film school.",
+    },
+    {
+      name: "Stanford University Film Society",
+      university: "Stanford University",
+      club_description:
+        "Hosts screenings, discussions, and offers support for student filmmakers.",
+      university_description:
+        "Private university in California known for its tech and creative synergy.",
+    },
+    {
+      name: "UCLA Film and Photography Society",
+      university: "University of California, Los Angeles",
+      club_description:
+        "A student-run club offering film screenings, photography exhibitions, and collaborations.",
+      university_description:
+        "Public university in California with a strong focus on film and media studies.",
+    },
+    {
+      name: "Georgetown Photography Society",
+      university: "Georgetown University",
+      club_description:
+        "Provides workshops and events for students interested in improving their photography skills.",
+      university_description:
+        "Private university in Washington, D.C., with a growing photography and arts community.",
+    },
+    {
+      name: "Columbia University Film Production Club",
+      university: "Columbia University",
+      club_description:
+        "Focuses on student-led film projects, from script development to production.",
+      university_description:
+        "Ivy League university in New York City with a thriving film and media culture.",
+    },
+    {
+      name: "Cornell Film Club",
+      university: "Cornell University",
+      club_description:
+        "A student group dedicated to film screenings, analysis, and creation of original short films.",
+      university_description:
+        "Ivy League university with a strong emphasis on creative arts.",
+    },
+    {
+      name: "USC Cinema Club",
+      university: "University of Southern California",
+      club_description:
+        "USC’s premier student film club, providing opportunities for screenings and collaborations.",
+      university_description:
+        "Private university in Los Angeles with one of the top film schools in the world.",
+    },
+    {
+      name: "Michigan Photography Society",
+      university: "University of Michigan",
+      club_description:
+        "A club for photography lovers that organizes photo walks, exhibitions, and critiques.",
+      university_description:
+        "Public university with a vibrant arts community.",
+    },
+    {
+      name: "Northwestern Filmmakers Association",
+      university: "Northwestern University",
+      club_description:
+        "A club supporting student filmmakers through networking, workshops, and production resources.",
+      university_description:
+        "Private university with a top-tier film and theater program.",
+    },
+    {
+      name: "Duke Film Society",
+      university: "Duke University",
+      club_description:
+        "A student organization focused on film screenings, discussions, and student filmmaking.",
+      university_description:
+        "Private university in North Carolina with a strong film and arts scene.",
+    },
+    {
+      name: "Penn Photography Club",
+      university: "University of Pennsylvania",
+      club_description:
+        "Offers resources, workshops, and opportunities for student photographers to showcase their work.",
+      university_description:
+        "Ivy League university in Philadelphia with a dynamic creative arts community.",
+    },
+    {
+      name: "Princeton Film and Media Studies Club",
+      university: "Princeton University",
+      club_description:
+        "Encourages film appreciation through screenings, discussions, and student productions.",
+      university_description:
+        "Ivy League university with a growing focus on media and film.",
+    },
+    {
+      name: "Texas Filmmakers Club",
+      university: "University of Texas at Austin",
+      club_description:
+        "A student organization supporting the creation of student films, from scriptwriting to editing.",
+      university_description:
+        "Top public university in Texas with a renowned film and media program.",
+    },
+    {
+      name: "Boston University Photography Club",
+      university: "Boston University",
+      club_description:
+        "A club dedicated to exploring various forms of photography through workshops and exhibitions.",
+      university_description:
+        "Private university in Boston with a vibrant creative arts scene.",
+    },
+    {
+      name: "Emory Film Society",
+      university: "Emory University",
+      club_description:
+        "A group that hosts film screenings, discussions, and supports student filmmakers.",
+      university_description:
+        "Private university in Georgia with a growing film community.",
+    },
+    {
+      name: "University of Chicago Film Club",
+      university: "University of Chicago",
+      club_description:
+        "Hosts film screenings and discussions, and promotes student-led film projects.",
+      university_description:
+        "Private university with a rich tradition in film analysis and criticism.",
+    },
+    {
+      name: "Vanderbilt Photography Club",
+      university: "Vanderbilt University",
+      club_description:
+        "Offers students the chance to develop photography skills through workshops and exhibitions.",
+      university_description:
+        "Private university in Tennessee with an active student photography scene.",
+    },
+    {
+      name: "UC Davis Film Collective",
+      university: "University of California, Davis",
+      club_description:
+        "A student group supporting film production, screenings, and industry networking.",
+      university_description:
+        "Public university with a strong focus on media and creative arts.",
+    },
+    {
+      name: "UF Photography Club",
+      university: "University of Florida",
+      club_description:
+        "A club for photography enthusiasts that organizes workshops, photo walks, and exhibitions.",
+      university_description:
+        "Top public university in Florida with a vibrant photography scene.",
+    },
+    {
+      name: "Ohio State Film Club",
+      university: "Ohio State University",
+      club_description:
+        "A club dedicated to film screenings, discussions, and student film productions.",
+      university_description:
+        "Public university in Ohio known for its large creative arts community.",
+    },
+    {
+      name: "Notre Dame Photography Society",
+      university: "University of Notre Dame",
+      club_description:
+        "A student-run club focusing on photography workshops, exhibitions, and critique sessions.",
+      university_description:
+        "Private Catholic university with a rich tradition in visual arts.",
+    },
+    {
+      name: "Tulane Film and Media Arts Club",
+      university: "Tulane University",
+      club_description:
+        "A group for students passionate about film screenings, discussions, and production.",
+      university_description:
+        "Private university in New Orleans with a growing film and media scene.",
+    },
+    {
+      name: "Wake Forest Film Society",
+      university: "Wake Forest University",
+      club_description:
+        "Promotes film appreciation through screenings, discussions, and student productions.",
+      university_description:
+        "Private university in North Carolina with a strong film community.",
+    },
+    {
+      name: "University of Arizona Photography Club",
+      university: "University of Arizona",
+      club_description:
+        "Offers opportunities for students to develop their photography skills and showcase their work.",
+      university_description:
+        "Public university in Arizona with an active student-led photography scene.",
+    },
+    {
+      name: "UW Cinema Society",
+      university: "University of Washington",
+      club_description:
+        "A student group focused on hosting film screenings, discussions, and creating student films.",
+      university_description:
+        "Public university in Washington with a vibrant media and film production community.",
+    },
+    {
+      name: "UVA Photography Club",
+      university: "University of Virginia",
+      club_description:
+        "A club for students passionate about photography, offering workshops and exhibitions.",
+      university_description:
+        "Public university in Virginia with an active creative arts community.",
+    },
+    {
+      name: "SMU Film Society",
+      university: "Southern Methodist University",
+      club_description:
+        "A student organization promoting film appreciation and student-led film productions.",
+      university_description:
+        "Private university in Texas with a strong focus on media and film production.",
+    },
+    {
+      name: "GW Film Society",
+      university: "George Washington University",
+      club_description:
+        "Hosts film screenings, discussions, and supports student filmmakers.",
+      university_description:
+        "Private university in Washington, D.C., with a vibrant film community.",
+    },
+    {
+      name: "Fordham Film Collective",
+      university: "Fordham University",
+      club_description:
+        "A student group promoting film production and appreciation through events and collaborations.",
+      university_description:
+        "Private university in New York City with a strong student-led film scene.",
+    },
+    {
+      name: "IU Photography Club",
+      university: "Indiana University Bloomington",
+      club_description:
+        "A student organization offering resources, workshops, and opportunities to showcase photography.",
+      university_description:
+        "Public university in Indiana with a vibrant photography and visual arts community.",
+    },
+    {
+      name: "Miami University Film Society",
+      university: "Miami University",
+      club_description:
+        "Promotes film appreciation through screenings and discussions, and supports student filmmaking.",
+      university_description:
+        "Public university in Ohio with a dynamic film and creative arts scene.",
+    },
+    {
+      name: "UMD Film Club",
+      university: "University of Maryland, College Park",
+      club_description:
+        "A student-run club dedicated to film screenings, discussions, and producing student films.",
+      university_description:
+        "Public university with a large student-led film and media community.",
+    },
+    {
+      name: "CU Boulder Photography Club",
+      university: "University of Colorado Boulder",
+      club_description:
+        "A club offering opportunities to improve photography skills through workshops and exhibitions.",
+      university_description:
+        "Public university in Colorado with a vibrant student photography community.",
+    },
+    {
+      name: "Temple Film and Media Arts Society",
+      university: "Temple University",
+      club_description:
+        "A student group focused on promoting film screenings, discussions, and student filmmaking.",
+      university_description:
+        "Public university in Philadelphia with a strong media and arts program.",
+    },
+    {
+      name: "Texas A&M Photography Club",
+      university: "Texas A&M University",
+      club_description:
+        "Offers students a platform to develop their photography skills and share their work.",
+      university_description:
+        "Public university in Texas with a strong visual arts and photography community.",
+    },
+    {
+      name: "Clemson Film Society",
+      university: "Clemson University",
+      club_description:
+        "A student organization hosting film screenings, discussions, and supporting student filmmakers.",
+      university_description:
+        "Public university in South Carolina with a growing film and arts scene.",
+    },
+    {
+      name: "University of Delaware Photography Club",
+      university: "University of Delaware",
+      club_description:
+        "A club dedicated to exploring photography through workshops, exhibitions, and critiques.",
+      university_description:
+        "Public university in Delaware with a vibrant student photography community.",
+    },
+    {
+      name: "University of Kentucky Film Collective",
+      university: "University of Kentucky",
+      club_description:
+        "A club for students interested in film screenings, discussions, and creating student films.",
+      university_description:
+        "Public university in Kentucky with an active student-run film and media scene.",
+    },
+    {
+      name: "Marquette Film and Photography Society",
+      university: "Marquette University",
+      club_description:
+        "A student group promoting both film and photography through events and collaborations.",
+      university_description:
+        "Private Catholic university in Wisconsin with a growing media arts scene.",
+    },
+    {
+      name: "Rutgers Film Club",
+      university: "Rutgers University",
+      club_description:
+        "A club focused on promoting film appreciation through screenings and student film productions.",
+      university_description:
+        "Public university in New Jersey with a dynamic student-led film and media community.",
+    },
+    {
+      name: "University of Alabama Photography Club",
+      university: "University of Alabama",
+      club_description:
+        "A club offering workshops and exhibitions for students passionate about photography.",
+      university_description:
+        "Public university in Alabama with a growing photography and creative arts community.",
+    },
+    {
+      name: "Florida State Film Society",
+      university: "Florida State University",
+      club_description:
+        "A student-run organization focused on film appreciation, screenings, and student filmmaking.",
+      university_description:
+        "Public university in Florida with a prestigious film school.",
+    },
+    {
+      name: "Michigan State Photography Club",
+      university: "Michigan State University",
+      club_description:
+        "A club dedicated to improving photography skills through workshops and photo critiques.",
+      university_description:
+        "Public university in Michigan with a vibrant student photography scene.",
+    },
+  ],
+  roboticsClubs: [
+    {
+      name: "MIT Robotics Club",
+      university: "Massachusetts Institute of Technology",
+      club_description:
+        "Focuses on developing and programming advanced robots for various applications.",
+      university_description:
+        "Ivy League university known for its leading-edge technology and robotics research.",
+    },
+    {
+      name: "Stanford Robotics Club",
+      university: "Stanford University",
+      club_description:
+        "Engages in robotics projects, competitions, and workshops for students of all levels.",
+      university_description:
+        "Private university in California with a strong emphasis on engineering and robotics.",
+    },
+    {
+      name: "UC Berkeley Robotics Club",
+      university: "University of California, Berkeley",
+      club_description:
+        "Supports robotics research and competitions, offering hands-on projects and learning experiences.",
+      university_description:
+        "Public university in California with a renowned robotics and engineering program.",
+    },
+    {
+      name: "Carnegie Mellon Robotics Club",
+      university: "Carnegie Mellon University",
+      club_description:
+        "Provides opportunities for students to work on robotics projects and participate in competitions.",
+      university_description:
+        "Private university in Pennsylvania known for its top-ranked robotics and AI programs.",
+    },
+    {
+      name: "Georgia Tech Robotics Club",
+      university: "Georgia Institute of Technology",
+      club_description:
+        "Promotes robotics research, competitions, and student-led projects.",
+      university_description:
+        "Public university in Georgia with a prestigious engineering and robotics program.",
+    },
+    {
+      name: "University of Michigan Robotics Club",
+      university: "University of Michigan",
+      club_description:
+        "Offers a platform for students to engage in robotics research and competitions.",
+      university_description:
+        "Public university with a strong focus on engineering and robotics innovations.",
+    },
+    {
+      name: "University of Illinois Robotics Club",
+      university: "University of Illinois Urbana-Champaign",
+      club_description:
+        "Involves students in robotics projects and competitions, providing hands-on experience.",
+      university_description:
+        "Public university in Illinois with a well-regarded engineering and robotics program.",
+    },
+    {
+      name: "Purdue Robotics Club",
+      university: "Purdue University",
+      club_description:
+        "Supports robotics research and student projects, with a focus on practical applications.",
+      university_description:
+        "Public university in Indiana known for its engineering and robotics expertise.",
+    },
+    {
+      name: "Harvard Robotics Club",
+      university: "Harvard University",
+      club_description:
+        "Provides resources and support for students interested in robotics and related technologies.",
+      university_description:
+        "Ivy League university with a growing focus on robotics and engineering.",
+    },
+    {
+      name: "University of Texas Robotics Club",
+      university: "University of Texas at Austin",
+      club_description:
+        "Focuses on robotics projects, competitions, and research opportunities for students.",
+      university_description:
+        "Public university with a strong emphasis on engineering and robotics.",
+    },
+    {
+      name: "University of California, San Diego Robotics Club",
+      university: "University of California, San Diego",
+      club_description:
+        "Encourages robotics innovation through projects, workshops, and competitions.",
+      university_description:
+        "Public university with a notable engineering and robotics research program.",
+    },
+    {
+      name: "University of Washington Robotics Club",
+      university: "University of Washington",
+      club_description:
+        "Offers hands-on experience with robotics through student-led projects and competitions.",
+      university_description:
+        "Public university in Washington with a strong robotics and engineering focus.",
+    },
+    {
+      name: "University of Southern California Robotics Club",
+      university: "University of Southern California",
+      club_description:
+        "Provides opportunities for students to work on robotics projects and participate in research.",
+      university_description:
+        "Private university in California known for its engineering and robotics programs.",
+    },
+    {
+      name: "Northwestern Robotics Club",
+      university: "Northwestern University",
+      club_description:
+        "Engages students in robotics research, competitions, and hands-on projects.",
+      university_description:
+        "Private university with a strong focus on engineering and robotics.",
+    },
+    {
+      name: "University of Florida Robotics Club",
+      university: "University of Florida",
+      club_description:
+        "Supports student robotics projects and competitions, offering practical experience.",
+      university_description:
+        "Public university with a strong emphasis on engineering and robotics.",
+    },
+    {
+      name: "University of Pennsylvania Robotics Club",
+      university: "University of Pennsylvania",
+      club_description:
+        "Encourages student participation in robotics research and competitions.",
+      university_description:
+        "Ivy League university with a notable engineering and robotics program.",
+    },
+    {
+      name: "University of California, Irvine Robotics Club",
+      university: "University of California, Irvine",
+      club_description:
+        "Provides resources and support for student-led robotics projects and competitions.",
+      university_description:
+        "Public university in California known for its engineering and robotics research.",
+    },
+    {
+      name: "University of Wisconsin Robotics Club",
+      university: "University of Wisconsin-Madison",
+      club_description:
+        "Engages students in robotics through projects, competitions, and workshops.",
+      university_description:
+        "Public university with a strong focus on engineering and robotics.",
+    },
+    {
+      name: "University of Colorado Robotics Club",
+      university: "University of Colorado Boulder",
+      club_description:
+        "Offers opportunities for students to participate in robotics projects and research.",
+      university_description:
+        "Public university with a notable engineering and robotics program.",
+    },
+    {
+      name: "Duke Robotics Club",
+      university: "Duke University",
+      club_description:
+        "Promotes robotics research and student projects, providing hands-on learning experiences.",
+      university_description:
+        "Private university in North Carolina with a growing robotics and engineering program.",
+    },
+    {
+      name: "University of Maryland Robotics Club",
+      university: "University of Maryland, College Park",
+      club_description:
+        "Supports robotics research and student-led projects with a focus on innovation.",
+      university_description:
+        "Public university with a strong emphasis on engineering and robotics.",
+    },
+    {
+      name: "University of Arizona Robotics Club",
+      university: "University of Arizona",
+      club_description:
+        "Provides a platform for students to work on robotics projects and participate in competitions.",
+      university_description:
+        "Public university in Arizona with a notable engineering and robotics focus.",
+    },
+    {
+      name: "University of Illinois Robotics Club",
+      university: "University of Illinois Chicago",
+      club_description:
+        "Engages students in robotics research and hands-on projects.",
+      university_description:
+        "Public university with a strong focus on engineering and robotics.",
+    },
+    {
+      name: "University of Virginia Robotics Club",
+      university: "University of Virginia",
+      club_description:
+        "Offers opportunities for student involvement in robotics research and projects.",
+      university_description:
+        "Public university in Virginia with a growing robotics and engineering community.",
+    },
+    {
+      name: "University of Minnesota Robotics Club",
+      university: "University of Minnesota",
+      club_description:
+        "Provides support for student robotics projects, competitions, and research.",
+      university_description:
+        "Public university with a strong emphasis on engineering and robotics.",
+    },
+    {
+      name: "University of Iowa Robotics Club",
+      university: "University of Iowa",
+      club_description:
+        "Encourages student participation in robotics through projects and competitions.",
+      university_description:
+        "Public university with a growing focus on robotics and engineering.",
+    },
+    {
+      name: "University of Nebraska Robotics Club",
+      university: "University of Nebraska-Lincoln",
+      club_description:
+        "Supports student robotics projects and competitions, providing hands-on experience.",
+      university_description:
+        "Public university with a strong engineering and robotics program.",
+    },
+    {
+      name: "University of Oklahoma Robotics Club",
+      university: "University of Oklahoma",
+      club_description:
+        "Promotes robotics research and hands-on projects for students.",
+      university_description:
+        "Public university with a notable focus on engineering and robotics.",
+    },
+    {
+      name: "University of Tennessee Robotics Club",
+      university: "University of Tennessee",
+      club_description:
+        "Offers a platform for student-led robotics projects and competitions.",
+      university_description:
+        "Public university with a growing robotics and engineering program.",
+    },
+    {
+      name: "University of Kentucky Robotics Club",
+      university: "University of Kentucky",
+      club_description:
+        "Provides resources and support for student robotics projects and research.",
+      university_description:
+        "Public university with a strong focus on engineering and robotics.",
+    },
+    {
+      name: "University of Pittsburgh Robotics Club",
+      university: "University of Pittsburgh",
+      club_description:
+        "Engages students in robotics research, projects, and competitions.",
+      university_description:
+        "Public university with a notable robotics and engineering program.",
+    },
+    {
+      name: "University of South Carolina Robotics Club",
+      university: "University of South Carolina",
+      club_description:
+        "Supports robotics research and student projects with a focus on practical applications.",
+      university_description:
+        "Public university with a growing emphasis on engineering and robotics.",
+    },
+    {
+      name: "Clemson Robotics Club",
+      university: "Clemson University",
+      club_description:
+        "Promotes robotics research, competitions, and student-led projects.",
+      university_description:
+        "Public university with a strong focus on engineering and robotics.",
+    },
+    {
+      name: "Rutgers Robotics Club",
+      university: "Rutgers University",
+      club_description:
+        "Offers hands-on experience in robotics through projects and competitions.",
+      university_description:
+        "Public university in New Jersey with a dynamic robotics and engineering community.",
+    },
+    {
+      name: "Michigan State Robotics Club",
+      university: "Michigan State University",
+      club_description:
+        "Provides opportunities for student involvement in robotics projects and research.",
+      university_description:
+        "Public university in Michigan with a notable engineering and robotics focus.",
+    },
+    {
+      name: "Washington University Robotics Club",
+      university: "Washington University in St. Louis",
+      club_description:
+        "Supports student robotics projects and competitions with a focus on innovation.",
+      university_description:
+        "Private university in Missouri with a growing robotics and engineering program.",
+    },
+    {
+      name: "University of Miami Robotics Club",
+      university: "University of Miami",
+      club_description:
+        "Engages students in robotics through research projects, workshops, and competitions.",
+      university_description:
+        "Private university in Florida with a strong focus on engineering and robotics.",
+    },
+    {
+      name: "University of California, Santa Barbara Robotics Club",
+      university: "University of California, Santa Barbara",
+      club_description:
+        "Provides a platform for student robotics projects and research opportunities.",
+      university_description:
+        "Public university with a notable emphasis on engineering and robotics.",
+    },
+    {
+      name: "University of Notre Dame Robotics Club",
+      university: "University of Notre Dame",
+      club_description:
+        "Offers opportunities for students to engage in robotics projects and competitions.",
+      university_description:
+        "Private university with a growing focus on engineering and robotics.",
+    },
+    {
+      name: "University of San Diego Robotics Club",
+      university: "University of San Diego",
+      club_description:
+        "Supports student robotics projects and hands-on experience through workshops and competitions.",
+      university_description:
+        "Private university in California with a strong engineering and robotics focus.",
+    },
+    {
+      name: "University of Denver Robotics Club",
+      university: "University of Denver",
+      club_description:
+        "Engages students in robotics through hands-on projects and research opportunities.",
+      university_description:
+        "Private university in Colorado with a growing robotics and engineering program.",
+    },
+    {
+      name: "DePaul University Robotics Club",
+      university: "DePaul University",
+      club_description:
+        "Provides support for student robotics projects and competitions.",
+      university_description:
+        "Private university in Illinois with a notable focus on engineering and robotics.",
+    },
+    {
+      name: "Santa Clara University Robotics Club",
+      university: "Santa Clara University",
+      club_description:
+        "Offers opportunities for students to participate in robotics projects and research.",
+      university_description:
+        "Private university in California with a strong focus on engineering and robotics.",
+    },
+    {
+      name: "California State University, Long Beach Robotics Club",
+      university: "California State University, Long Beach",
+      club_description:
+        "Supports student robotics projects and hands-on learning experiences.",
+      university_description:
+        "Public university in California with a notable engineering and robotics program.",
+    },
+    {
+      name: "University of Central Florida Robotics Club",
+      university: "University of Central Florida",
+      club_description:
+        "Engages students in robotics research, projects, and competitions.",
+      university_description:
+        "Public university with a strong focus on engineering and robotics.",
+    },
+    {
+      name: "University of Houston Robotics Club",
+      university: "University of Houston",
+      club_description:
+        "Offers hands-on experience and research opportunities in robotics.",
+      university_description:
+        "Public university with a growing emphasis on engineering and robotics.",
+    },
+  ],
+  modelUnitedNationsClubs: [
+    {
+      name: "Harvard Model United Nations",
+      university: "Harvard University",
+      club_description:
+        "A prestigious MUN club offering extensive simulations and conferences with a focus on global diplomacy.",
+      university_description:
+        "Ivy League university known for its rigorous academic programs and influential MUN team.",
+    },
+    {
+      name: "Stanford Model United Nations",
+      university: "Stanford University",
+      club_description:
+        "Engages students in MUN conferences, fostering skills in diplomacy and international relations.",
+      university_description:
+        "Private university in California renowned for its strong MUN program and global influence.",
+    },
+    {
+      name: "Yale Model United Nations",
+      university: "Yale University",
+      club_description:
+        "Offers a platform for students to participate in high-level MUN simulations and develop negotiation skills.",
+      university_description:
+        "Ivy League university with a distinguished MUN team and a focus on global issues.",
+    },
+    {
+      name: "University of Chicago Model United Nations",
+      university: "University of Chicago",
+      club_description:
+        "Provides opportunities for students to engage in MUN conferences and enhance their understanding of international relations.",
+      university_description:
+        "Private university known for its strong MUN presence and academic rigor.",
+    },
+    {
+      name: "Columbia Model United Nations",
+      university: "Columbia University",
+      club_description:
+        "Promotes participation in MUN conferences, offering training and simulations to develop diplomatic skills.",
+      university_description:
+        "Ivy League university with a prominent MUN program and a global outlook.",
+    },
+    {
+      name: "MIT Model United Nations",
+      university: "Massachusetts Institute of Technology",
+      club_description:
+        "Supports student involvement in MUN conferences and simulations with a focus on technical and diplomatic skills.",
+      university_description:
+        "Ivy League university renowned for its technical excellence and influential MUN team.",
+    },
+    {
+      name: "University of California, Berkeley Model United Nations",
+      university: "University of California, Berkeley",
+      club_description:
+        "Encourages participation in MUN conferences and fosters skills in diplomacy and international policy.",
+      university_description:
+        "Public university with a strong emphasis on global issues and a leading MUN program.",
+    },
+    {
+      name: "University of California, Los Angeles Model United Nations",
+      university: "University of California, Los Angeles",
+      club_description:
+        "Provides opportunities for students to engage in MUN simulations and conferences with a focus on international diplomacy.",
+      university_description:
+        "Public university in California with a notable MUN team and global focus.",
+    },
+    {
+      name: "Georgetown University Model United Nations",
+      university: "Georgetown University",
+      club_description:
+        "Offers training and participation in MUN conferences, emphasizing diplomatic and international relations skills.",
+      university_description:
+        "Private university in Washington, D.C. known for its strong MUN program and global influence.",
+    },
+    {
+      name: "University of Pennsylvania Model United Nations",
+      university: "University of Pennsylvania",
+      club_description:
+        "Supports student engagement in MUN simulations and conferences, fostering skills in diplomacy and global issues.",
+      university_description:
+        "Ivy League university with a prominent MUN team and international focus.",
+    },
+    {
+      name: "Duke University Model United Nations",
+      university: "Duke University",
+      club_description:
+        "Encourages student participation in MUN conferences, offering training in international diplomacy and relations.",
+      university_description:
+        "Private university with a strong MUN program and emphasis on global issues.",
+    },
+    {
+      name: "University of Virginia Model United Nations",
+      university: "University of Virginia",
+      club_description:
+        "Provides a platform for students to engage in MUN conferences and develop diplomatic skills.",
+      university_description:
+        "Public university with a notable MUN team and focus on international relations.",
+    },
+    {
+      name: "University of Michigan Model United Nations",
+      university: "University of Michigan",
+      club_description:
+        "Promotes student involvement in MUN conferences and simulations with a focus on international diplomacy.",
+      university_description:
+        "Public university with a strong emphasis on global issues and a leading MUN program.",
+    },
+    {
+      name: "New York University Model United Nations",
+      university: "New York University",
+      club_description:
+        "Offers opportunities for students to participate in MUN conferences and develop skills in diplomacy and international relations.",
+      university_description:
+        "Private university in New York City with a prominent MUN team and global focus.",
+    },
+    {
+      name: "University of Texas Model United Nations",
+      university: "University of Texas at Austin",
+      club_description:
+        "Supports student participation in MUN conferences and simulations with a focus on diplomacy and global policy.",
+      university_description:
+        "Public university with a growing MUN program and international outlook.",
+    },
+    {
+      name: "University of North Carolina Model United Nations",
+      university: "University of North Carolina at Chapel Hill",
+      club_description:
+        "Encourages involvement in MUN conferences and provides training in diplomatic skills and international relations.",
+      university_description:
+        "Public university with a notable MUN team and emphasis on global issues.",
+    },
+    {
+      name: "University of Wisconsin Model United Nations",
+      university: "University of Wisconsin-Madison",
+      club_description:
+        "Provides a platform for students to engage in MUN simulations and conferences, fostering diplomatic skills.",
+      university_description:
+        "Public university with a strong MUN program and international focus.",
+    },
+    {
+      name: "University of Florida Model United Nations",
+      university: "University of Florida",
+      club_description:
+        "Offers opportunities for students to participate in MUN conferences and develop skills in international diplomacy.",
+      university_description:
+        "Public university with a growing MUN team and global outlook.",
+    },
+    {
+      name: "University of Arizona Model United Nations",
+      university: "University of Arizona",
+      club_description:
+        "Supports student engagement in MUN simulations and conferences with a focus on diplomatic and global issues.",
+      university_description:
+        "Public university with a notable MUN program and emphasis on international relations.",
+    },
+    {
+      name: "University of Illinois Model United Nations",
+      university: "University of Illinois Urbana-Champaign",
+      club_description:
+        "Encourages student participation in MUN conferences and provides training in diplomacy and international relations.",
+      university_description:
+        "Public university with a strong MUN team and focus on global issues.",
+    },
+    {
+      name: "University of Colorado Model United Nations",
+      university: "University of Colorado Boulder",
+      club_description:
+        "Provides a platform for students to engage in MUN conferences and develop skills in diplomacy.",
+      university_description:
+        "Public university with a growing MUN program and international focus.",
+    },
+    {
+      name: "University of Maryland Model United Nations",
+      university: "University of Maryland, College Park",
+      club_description:
+        "Supports student involvement in MUN simulations and conferences with a focus on global diplomacy.",
+      university_description:
+        "Public university with a notable MUN team and emphasis on international relations.",
+    },
+    {
+      name: "University of Pittsburgh Model United Nations",
+      university: "University of Pittsburgh",
+      club_description:
+        "Encourages participation in MUN conferences and provides training in diplomatic skills and international relations.",
+      university_description:
+        "Public university with a strong MUN program and focus on global issues.",
+    },
+    {
+      name: "University of Tennessee Model United Nations",
+      university: "University of Tennessee",
+      club_description:
+        "Offers opportunities for students to engage in MUN simulations and develop skills in diplomacy.",
+      university_description:
+        "Public university with a growing MUN team and international outlook.",
+    },
+    {
+      name: "University of Georgia Model United Nations",
+      university: "University of Georgia",
+      club_description:
+        "Supports student engagement in MUN conferences and provides training in international diplomacy.",
+      university_description:
+        "Public university with a notable MUN program and global focus.",
+    },
+    {
+      name: "University of Iowa Model United Nations",
+      university: "University of Iowa",
+      club_description:
+        "Provides a platform for students to participate in MUN simulations and conferences, fostering diplomatic skills.",
+      university_description:
+        "Public university with a growing MUN program and focus on international relations.",
+    },
+    {
+      name: "University of South Carolina Model United Nations",
+      university: "University of South Carolina",
+      club_description:
+        "Encourages student involvement in MUN conferences and provides training in diplomatic skills.",
+      university_description:
+        "Public university with a notable MUN team and emphasis on global issues.",
+    },
+    {
+      name: "Clemson University Model United Nations",
+      university: "Clemson University",
+      club_description:
+        "Offers opportunities for students to engage in MUN simulations and conferences with a focus on diplomacy.",
+      university_description:
+        "Public university with a strong MUN program and international outlook.",
+    },
+    {
+      name: "Rutgers Model United Nations",
+      university: "Rutgers University",
+      club_description:
+        "Supports student participation in MUN conferences and provides training in international diplomacy and relations.",
+      university_description:
+        "Public university with a growing MUN team and global focus.",
+    },
+    {
+      name: "Michigan State Model United Nations",
+      university: "Michigan State University",
+      club_description:
+        "Provides a platform for students to engage in MUN simulations and develop diplomatic skills.",
+      university_description:
+        "Public university with a notable MUN program and emphasis on global issues.",
+    },
+    {
+      name: "Washington University Model United Nations",
+      university: "Washington University in St. Louis",
+      club_description:
+        "Encourages student involvement in MUN conferences and provides training in diplomacy and international relations.",
+      university_description:
+        "Private university with a strong MUN team and international focus.",
+    },
+    {
+      name: "University of San Diego Model United Nations",
+      university: "University of San Diego",
+      club_description:
+        "Supports student engagement in MUN simulations and conferences, fostering diplomatic skills.",
+      university_description:
+        "Private university with a notable MUN program and global outlook.",
+    },
+    {
+      name: "Santa Clara University Model United Nations",
+      university: "Santa Clara University",
+      club_description:
+        "Offers opportunities for students to participate in MUN conferences and develop skills in international diplomacy.",
+      university_description:
+        "Private university with a strong MUN team and emphasis on global issues.",
+    },
+    {
+      name: "University of Denver Model United Nations",
+      university: "University of Denver",
+      club_description:
+        "Provides a platform for student involvement in MUN simulations and conferences.",
+      university_description:
+        "Private university with a notable MUN program and focus on international relations.",
+    },
+    {
+      name: "DePaul University Model United Nations",
+      university: "DePaul University",
+      club_description:
+        "Encourages participation in MUN conferences and provides training in diplomatic skills and international policy.",
+      university_description:
+        "Private university with a strong MUN program and global focus.",
+    },
+    {
+      name: "University of Miami Model United Nations",
+      university: "University of Miami",
+      club_description:
+        "Supports student engagement in MUN conferences and simulations, fostering diplomatic skills.",
+      university_description:
+        "Private university with a growing MUN team and emphasis on international relations.",
+    },
+    {
+      name: "University of Notre Dame Model United Nations",
+      university: "University of Notre Dame",
+      club_description:
+        "Offers opportunities for students to engage in MUN simulations and conferences with a focus on diplomacy.",
+      university_description:
+        "Private university with a notable MUN program and global outlook.",
+    },
+    {
+      name: "Loyola University Model United Nations",
+      university: "Loyola University Chicago",
+      club_description:
+        "Provides a platform for students to participate in MUN conferences and develop diplomatic skills.",
+      university_description:
+        "Private university with a strong MUN team and emphasis on international relations.",
+    },
+    {
+      name: "University of Tulsa Model United Nations",
+      university: "University of Tulsa",
+      club_description:
+        "Encourages student involvement in MUN simulations and conferences, offering training in diplomacy.",
+      university_description:
+        "Private university with a notable MUN program and global focus.",
+    },
+    {
+      name: "University of Kansas Model United Nations",
+      university: "University of Kansas",
+      club_description:
+        "Supports student participation in MUN conferences and provides training in international diplomacy and relations.",
+      university_description:
+        "Public university with a growing MUN team and emphasis on global issues.",
+    },
+    {
+      name: "University of Nebraska Model United Nations",
+      university: "University of Nebraska-Lincoln",
+      club_description:
+        "Provides opportunities for students to engage in MUN simulations and develop diplomatic skills.",
+      university_description:
+        "Public university with a notable MUN program and international focus.",
+    },
+    {
+      name: "University of Oregon Model United Nations",
+      university: "University of Oregon",
+      club_description:
+        "Encourages participation in MUN conferences and provides training in international diplomacy.",
+      university_description:
+        "Public university with a growing MUN team and global outlook.",
+    },
+    {
+      name: "University of Rhode Island Model United Nations",
+      university: "University of Rhode Island",
+      club_description:
+        "Supports student engagement in MUN simulations and conferences, fostering diplomatic skills.",
+      university_description:
+        "Public university with a strong MUN program and emphasis on international relations.",
+    },
+    {
+      name: "Syracuse University Model United Nations",
+      university: "Syracuse University",
+      club_description:
+        "Offers opportunities for students to participate in MUN conferences and develop skills in diplomacy.",
+      university_description:
+        "Private university with a notable MUN program and global focus.",
+    },
+    {
+      name: "American University Model United Nations",
+      university: "American University",
+      club_description:
+        "Provides a platform for student involvement in MUN simulations and conferences with a focus on diplomacy.",
+      university_description:
+        "Private university in Washington, D.C. with a strong MUN team and international outlook.",
+    },
+    {
+      name: "University of Dayton Model United Nations",
+      university: "University of Dayton",
+      club_description:
+        "Encourages student participation in MUN conferences and provides training in diplomatic skills and international relations.",
+      university_description:
+        "Private university with a growing MUN team and global focus.",
+    },
+    {
+      name: "Brandeis University Model United Nations",
+      university: "Brandeis University",
+      club_description:
+        "Supports student engagement in MUN simulations and conferences, fostering diplomatic skills.",
+      university_description:
+        "Private university with a notable MUN program and emphasis on international relations.",
+    },
+    {
+      name: "Johns Hopkins University Model United Nations",
+      university: "Johns Hopkins University",
+      club_description:
+        "Offers opportunities for students to participate in MUN conferences and develop skills in international diplomacy.",
+      university_description:
+        "Private university in Baltimore known for its strong MUN program and global focus.",
+    },
+    {
+      name: "University of St. Thomas Model United Nations",
+      university: "University of St. Thomas",
+      club_description:
+        "Provides a platform for student involvement in MUN simulations and conferences.",
+      university_description:
+        "Private university with a growing MUN team and emphasis on global issues.",
+    },
+    {
+      name: "Wake Forest University Model United Nations",
+      university: "Wake Forest University",
+      club_description:
+        "Encourages participation in MUN conferences and offers training in diplomatic skills and international relations.",
+      university_description:
+        "Private university with a notable MUN program and global focus.",
+    },
+    {
+      name: "Elon University Model United Nations",
+      university: "Elon University",
+      club_description:
+        "Supports student engagement in MUN simulations and conferences, fostering diplomatic skills.",
+      university_description:
+        "Private university with a strong MUN team and emphasis on international relations.",
+    },
+    {
+      name: "Fordham University Model United Nations",
+      university: "Fordham University",
+      club_description:
+        "Offers opportunities for students to participate in MUN conferences and develop skills in diplomacy.",
+      university_description:
+        "Private university with a notable MUN program and global focus.",
+    },
+    {
+      name: "Pepperdine University Model United Nations",
+      university: "Pepperdine University",
+      club_description:
+        "Provides a platform for student involvement in MUN simulations and conferences with a focus on diplomacy.",
+      university_description:
+        "Private university with a strong MUN team and emphasis on international relations.",
+    },
+    {
+      name: "Santa Clara University Model United Nations",
+      university: "Santa Clara University",
+      club_description:
+        "Supports student engagement in MUN conferences and simulations, fostering diplomatic skills.",
+      university_description:
+        "Private university with a notable MUN program and global outlook.",
+    },
+    {
+      name: "University of the Pacific Model United Nations",
+      university: "University of the Pacific",
+      club_description:
+        "Encourages participation in MUN conferences and provides training in international diplomacy and relations.",
+      university_description:
+        "Private university with a growing MUN team and emphasis on global issues.",
+    },
+    {
+      name: "Vanderbilt University Model United Nations",
+      university: "Vanderbilt University",
+      club_description:
+        "Offers opportunities for students to engage in MUN simulations and conferences with a focus on diplomacy.",
+      university_description:
+        "Private university with a notable MUN program and international focus.",
+    },
+    {
+      name: "University of Vermont Model United Nations",
+      university: "University of Vermont",
+      club_description:
+        "Provides a platform for students to participate in MUN simulations and develop diplomatic skills.",
+      university_description:
+        "Public university with a growing MUN team and emphasis on global issues.",
+    },
+  ],
+  quizAndTriviaClubs: [
+    {
+      name: "Harvard Quiz Bowl",
+      university: "Harvard University",
+      club_description:
+        "Engages students in competitive quiz bowl tournaments and trivia competitions, focusing on diverse topics.",
+      university_description:
+        "Ivy League university known for its rigorous academic environment and competitive quiz bowl team.",
+    },
+    {
+      name: "Stanford Quiz Club",
+      university: "Stanford University",
+      club_description:
+        "Hosts trivia nights and participates in national quiz bowl competitions, fostering knowledge across various subjects.",
+      university_description:
+        "Private university in California with a strong emphasis on academic excellence and a vibrant quiz club.",
+    },
+    {
+      name: "Yale Trivia Society",
+      university: "Yale University",
+      club_description:
+        "Organizes trivia contests and quiz competitions, encouraging students to showcase their knowledge and teamwork skills.",
+      university_description:
+        "Ivy League university with a distinguished quiz society and a focus on intellectual engagement.",
+    },
+    {
+      name: "University of Chicago Quiz Bowl",
+      university: "University of Chicago",
+      club_description:
+        "Provides opportunities for students to participate in quiz bowl tournaments and trivia games with a focus on broad topics.",
+      university_description:
+        "Private university known for its challenging academic programs and competitive quiz bowl team.",
+    },
+    {
+      name: "Columbia University Trivia Club",
+      university: "Columbia University",
+      club_description:
+        "Offers trivia competitions and quiz events, fostering a community of trivia enthusiasts and knowledge seekers.",
+      university_description:
+        "Ivy League university with a strong trivia club and a commitment to academic excellence.",
+    },
+    {
+      name: "MIT Quiz Team",
+      university: "Massachusetts Institute of Technology",
+      club_description:
+        "Participates in national and regional quiz bowl tournaments, focusing on a wide range of academic and general knowledge topics.",
+      university_description:
+        "Ivy League university renowned for its technical expertise and competitive quiz team.",
+    },
+    {
+      name: "University of California, Berkeley Quiz Bowl",
+      university: "University of California, Berkeley",
+      club_description:
+        "Hosts trivia nights and competes in quiz bowl tournaments, encouraging student participation in academic and general knowledge events.",
+      university_description:
+        "Public university with a strong emphasis on academic achievement and an active quiz bowl team.",
+    },
+    {
+      name: "University of California, Los Angeles Trivia Club",
+      university: "University of California, Los Angeles",
+      club_description:
+        "Organizes trivia competitions and quiz events, providing opportunities for students to test their knowledge and engage in friendly competition.",
+      university_description:
+        "Public university in California known for its vibrant trivia community and competitive quiz team.",
+    },
+    {
+      name: "Georgetown University Quiz Club",
+      university: "Georgetown University",
+      club_description:
+        "Supports student involvement in quiz bowl tournaments and trivia nights, focusing on academic and general knowledge.",
+      university_description:
+        "Private university in Washington, D.C. with a notable quiz club and emphasis on intellectual engagement.",
+    },
+    {
+      name: "University of Pennsylvania Quiz Bowl",
+      university: "University of Pennsylvania",
+      club_description:
+        "Offers a platform for students to participate in quiz bowl competitions and trivia events, fostering a love for knowledge.",
+      university_description:
+        "Ivy League university with a prominent quiz bowl team and a focus on academic excellence.",
+    },
+    {
+      name: "Duke University Trivia Society",
+      university: "Duke University",
+      club_description:
+        "Organizes trivia contests and quiz bowl tournaments, encouraging student participation and teamwork.",
+      university_description:
+        "Private university with a strong trivia society and commitment to academic engagement.",
+    },
+    {
+      name: "University of Virginia Quiz Bowl",
+      university: "University of Virginia",
+      club_description:
+        "Hosts quiz bowl tournaments and trivia events, providing students with opportunities to showcase their knowledge.",
+      university_description:
+        "Public university with a notable quiz bowl team and focus on intellectual activities.",
+    },
+    {
+      name: "University of Michigan Quiz Club",
+      university: "University of Michigan",
+      club_description:
+        "Supports student participation in quiz bowl competitions and trivia nights, fostering a competitive and knowledge-driven environment.",
+      university_description:
+        "Public university with a strong emphasis on academic achievement and an active quiz club.",
+    },
+    {
+      name: "New York University Trivia Team",
+      university: "New York University",
+      club_description:
+        "Offers opportunities for students to engage in trivia competitions and quiz bowl tournaments, focusing on diverse subjects.",
+      university_description:
+        "Private university in New York City with a vibrant trivia community and competitive quiz team.",
+    },
+    {
+      name: "University of Texas Quiz Bowl",
+      university: "University of Texas at Austin",
+      club_description:
+        "Organizes trivia events and participates in quiz bowl competitions, providing students with opportunities to test their knowledge.",
+      university_description:
+        "Public university with a growing quiz bowl team and emphasis on academic engagement.",
+    },
+    {
+      name: "University of North Carolina Quiz Club",
+      university: "University of North Carolina at Chapel Hill",
+      club_description:
+        "Supports student involvement in quiz bowl tournaments and trivia nights, fostering a love for knowledge and competition.",
+      university_description:
+        "Public university with a notable quiz club and commitment to intellectual activities.",
+    },
+    {
+      name: "University of Wisconsin Quiz Bowl",
+      university: "University of Wisconsin-Madison",
+      club_description:
+        "Offers a platform for students to participate in quiz bowl competitions and trivia events, promoting academic excellence.",
+      university_description:
+        "Public university with a strong quiz bowl team and focus on intellectual engagement.",
+    },
+    {
+      name: "University of Florida Trivia Club",
+      university: "University of Florida",
+      club_description:
+        "Encourages student participation in trivia contests and quiz bowl tournaments, focusing on diverse knowledge areas.",
+      university_description:
+        "Public university with a growing trivia community and emphasis on academic achievement.",
+    },
+    {
+      name: "University of Arizona Quiz Club",
+      university: "University of Arizona",
+      club_description:
+        "Provides opportunities for students to engage in quiz bowl competitions and trivia nights, fostering intellectual curiosity.",
+      university_description:
+        "Public university with a notable quiz club and commitment to academic excellence.",
+    },
+    {
+      name: "University of Illinois Quiz Bowl",
+      university: "University of Illinois Urbana-Champaign",
+      club_description:
+        "Organizes trivia events and quiz bowl tournaments, offering a platform for students to test their knowledge.",
+      university_description:
+        "Public university with a strong emphasis on academic engagement and a competitive quiz bowl team.",
+    },
+    {
+      name: "University of Colorado Quiz Club",
+      university: "University of Colorado Boulder",
+      club_description:
+        "Supports student involvement in quiz bowl competitions and trivia nights, promoting a love for knowledge and competition.",
+      university_description:
+        "Public university with a notable quiz club and focus on intellectual activities.",
+    },
+    {
+      name: "University of Maryland Quiz Bowl",
+      university: "University of Maryland, College Park",
+      club_description:
+        "Offers opportunities for students to participate in trivia contests and quiz bowl tournaments, encouraging academic excellence.",
+      university_description:
+        "Public university with a strong quiz bowl team and emphasis on intellectual engagement.",
+    },
+    {
+      name: "University of Pittsburgh Quiz Club",
+      university: "University of Pittsburgh",
+      club_description:
+        "Encourages student participation in quiz bowl competitions and trivia nights, fostering a competitive and knowledge-driven environment.",
+      university_description:
+        "Public university with a growing quiz club and focus on academic achievement.",
+    },
+    {
+      name: "University of Tennessee Trivia Society",
+      university: "University of Tennessee",
+      club_description:
+        "Organizes trivia events and quiz bowl tournaments, providing students with opportunities to test their knowledge.",
+      university_description:
+        "Public university with a notable trivia society and emphasis on intellectual engagement.",
+    },
+    {
+      name: "University of Georgia Quiz Bowl",
+      university: "University of Georgia",
+      club_description:
+        "Supports student involvement in quiz bowl competitions and trivia nights, fostering a love for knowledge and competition.",
+      university_description:
+        "Public university with a strong quiz bowl team and commitment to academic excellence.",
+    },
+    {
+      name: "University of Iowa Quiz Club",
+      university: "University of Iowa",
+      club_description:
+        "Offers a platform for students to engage in trivia contests and quiz bowl tournaments, focusing on diverse knowledge areas.",
+      university_description:
+        "Public university with a notable quiz club and emphasis on intellectual activities.",
+    },
+    {
+      name: "University of South Carolina Quiz Bowl",
+      university: "University of South Carolina",
+      club_description:
+        "Encourages student participation in quiz bowl competitions and trivia nights, providing opportunities to showcase knowledge.",
+      university_description:
+        "Public university with a growing quiz bowl team and focus on academic achievement.",
+    },
+    {
+      name: "Clemson University Quiz Club",
+      university: "Clemson University",
+      club_description:
+        "Provides opportunities for students to engage in quiz bowl tournaments and trivia contests, promoting academic excellence.",
+      university_description:
+        "Public university with a strong trivia community and emphasis on intellectual engagement.",
+    },
+    {
+      name: "Rutgers Quiz Bowl",
+      university: "Rutgers University",
+      club_description:
+        "Supports student involvement in trivia competitions and quiz bowl tournaments, fostering a love for knowledge.",
+      university_description:
+        "Public university with a notable quiz bowl team and focus on academic achievement.",
+    },
+    {
+      name: "Michigan State Quiz Club",
+      university: "Michigan State University",
+      club_description:
+        "Offers opportunities for students to participate in quiz bowl competitions and trivia events, promoting intellectual curiosity.",
+      university_description:
+        "Public university with a growing quiz club and emphasis on academic excellence.",
+    },
+    {
+      name: "Washington University Quiz Bowl",
+      university: "Washington University in St. Louis",
+      club_description:
+        "Organizes trivia nights and quiz bowl tournaments, providing students with a platform to test their knowledge.",
+      university_description:
+        "Private university with a strong quiz bowl team and commitment to intellectual engagement.",
+    },
+    {
+      name: "University of San Diego Trivia Club",
+      university: "University of San Diego",
+      club_description:
+        "Encourages student participation in trivia competitions and quiz bowl events, fostering a competitive and knowledge-driven environment.",
+      university_description:
+        "Private university with a notable trivia club and emphasis on academic achievement.",
+    },
+    {
+      name: "Santa Clara University Quiz Bowl",
+      university: "Santa Clara University",
+      club_description:
+        "Provides opportunities for students to engage in quiz bowl tournaments and trivia contests, promoting intellectual curiosity.",
+      university_description:
+        "Private university with a strong quiz bowl team and focus on academic excellence.",
+    },
+    {
+      name: "University of Denver Trivia Club",
+      university: "University of Denver",
+      club_description:
+        "Supports student involvement in trivia competitions and quiz bowl tournaments, fostering a love for knowledge.",
+      university_description:
+        "Private university with a growing trivia community and emphasis on intellectual activities.",
+    },
+    {
+      name: "American University Quiz Bowl",
+      university: "American University",
+      club_description:
+        "Offers opportunities for students to participate in quiz bowl tournaments and trivia nights, focusing on diverse topics.",
+      university_description:
+        "Private university in Washington, D.C. with a notable quiz bowl team and commitment to academic engagement.",
+    },
+    {
+      name: "DePaul University Quiz Club",
+      university: "DePaul University",
+      club_description:
+        "Organizes trivia events and quiz bowl competitions, providing students with opportunities to test their knowledge.",
+      university_description:
+        "Private university with a strong quiz bowl team and emphasis on intellectual activities.",
+    },
+    {
+      name: "University of Miami Quiz Bowl",
+      university: "University of Miami",
+      club_description:
+        "Encourages student participation in quiz bowl tournaments and trivia contests, fostering a competitive and knowledge-driven environment.",
+      university_description:
+        "Private university with a growing quiz club and commitment to academic excellence.",
+    },
+    {
+      name: "University of Notre Dame Trivia Society",
+      university: "University of Notre Dame",
+      club_description:
+        "Supports student involvement in trivia competitions and quiz bowl tournaments, providing a platform to showcase knowledge.",
+      university_description:
+        "Private university with a notable trivia society and emphasis on intellectual engagement.",
+    },
+    {
+      name: "Loyola University Chicago Quiz Bowl",
+      university: "Loyola University Chicago",
+      club_description:
+        "Offers opportunities for students to participate in quiz bowl tournaments and trivia nights, focusing on diverse topics.",
+      university_description:
+        "Private university with a strong quiz bowl team and commitment to academic achievement.",
+    },
+    {
+      name: "University of Tulsa Trivia Club",
+      university: "University of Tulsa",
+      club_description:
+        "Encourages student participation in trivia events and quiz bowl competitions, fostering a love for knowledge.",
+      university_description:
+        "Private university with a notable trivia club and emphasis on intellectual activities.",
+    },
+    {
+      name: "University of Kansas Quiz Bowl",
+      university: "University of Kansas",
+      club_description:
+        "Provides a platform for students to engage in quiz bowl tournaments and trivia contests, promoting academic excellence.",
+      university_description:
+        "Public university with a strong quiz bowl team and focus on intellectual engagement.",
+    },
+    {
+      name: "University of Nebraska Quiz Club",
+      university: "University of Nebraska-Lincoln",
+      club_description:
+        "Supports student involvement in quiz bowl competitions and trivia nights, offering opportunities to test knowledge.",
+      university_description:
+        "Public university with a growing quiz club and emphasis on academic achievement.",
+    },
+    {
+      name: "University of Oregon Quiz Bowl",
+      university: "University of Oregon",
+      club_description:
+        "Offers opportunities for students to participate in trivia contests and quiz bowl tournaments, fostering intellectual curiosity.",
+      university_description:
+        "Public university with a notable quiz bowl team and commitment to academic excellence.",
+    },
+    {
+      name: "University of Rhode Island Quiz Club",
+      university: "University of Rhode Island",
+      club_description:
+        "Encourages student participation in quiz bowl competitions and trivia nights, providing opportunities to showcase knowledge.",
+      university_description:
+        "Public university with a strong quiz club and emphasis on intellectual engagement.",
+    },
+    {
+      name: "Syracuse University Trivia Society",
+      university: "Syracuse University",
+      club_description:
+        "Organizes trivia events and quiz bowl tournaments, fostering a competitive and knowledge-driven environment.",
+      university_description:
+        "Private university with a notable trivia society and commitment to academic achievement.",
+    },
+    {
+      name: "American University Quiz Club",
+      university: "American University",
+      club_description:
+        "Supports student involvement in trivia competitions and quiz bowl tournaments, providing a platform to test knowledge.",
+      university_description:
+        "Private university with a strong quiz bowl team and focus on intellectual engagement.",
+    },
+    {
+      name: "University of Dayton Trivia Club",
+      university: "University of Dayton",
+      club_description:
+        "Offers opportunities for students to participate in quiz bowl competitions and trivia nights, fostering a love for knowledge.",
+      university_description:
+        "Private university with a growing trivia club and emphasis on academic excellence.",
+    },
+    {
+      name: "Brandeis University Quiz Bowl",
+      university: "Brandeis University",
+      club_description:
+        "Encourages student participation in trivia events and quiz bowl tournaments, promoting intellectual curiosity.",
+      university_description:
+        "Private university with a strong quiz bowl team and commitment to academic achievement.",
+    },
+    {
+      name: "Johns Hopkins University Trivia Club",
+      university: "Johns Hopkins University",
+      club_description:
+        "Organizes trivia competitions and quiz bowl events, providing students with opportunities to test their knowledge.",
+      university_description:
+        "Private university with a notable trivia club and emphasis on intellectual engagement.",
+    },
+    {
+      name: "University of St. Thomas Quiz Bowl",
+      university: "University of St. Thomas",
+      club_description:
+        "Supports student involvement in trivia contests and quiz bowl tournaments, fostering a competitive and knowledge-driven environment.",
+      university_description:
+        "Private university with a growing quiz bowl team and focus on academic excellence.",
+    },
+    {
+      name: "Wake Forest University Trivia Club",
+      university: "Wake Forest University",
+      club_description:
+        "Offers opportunities for students to participate in quiz bowl tournaments and trivia nights, promoting intellectual curiosity.",
+      university_description:
+        "Private university with a strong trivia club and emphasis on academic achievement.",
+    },
+    {
+      name: "Elon University Quiz Bowl",
+      university: "Elon University",
+      club_description:
+        "Encourages student participation in trivia competitions and quiz bowl events, providing opportunities to showcase knowledge.",
+      university_description:
+        "Private university with a notable quiz bowl team and commitment to intellectual engagement.",
+    },
+    {
+      name: "Fordham University Trivia Club",
+      university: "Fordham University",
+      club_description:
+        "Supports student involvement in quiz bowl tournaments and trivia nights, fostering a love for knowledge.",
+      university_description:
+        "Private university with a growing trivia club and emphasis on academic excellence.",
+    },
+    {
+      name: "Pepperdine University Quiz Bowl",
+      university: "Pepperdine University",
+      club_description:
+        "Organizes trivia contests and quiz bowl tournaments, providing students with opportunities to test their knowledge.",
+      university_description:
+        "Private university with a strong quiz bowl team and commitment to intellectual engagement.",
+    },
+    {
+      name: "Santa Clara University Trivia Club",
+      university: "Santa Clara University",
+      club_description:
+        "Offers opportunities for students to participate in trivia competitions and quiz bowl events, promoting academic achievement.",
+      university_description:
+        "Private university with a notable trivia club and emphasis on intellectual activities.",
+    },
+    {
+      name: "University of the Pacific Quiz Bowl",
+      university: "University of the Pacific",
+      club_description:
+        "Encourages student participation in quiz bowl tournaments and trivia contests, fostering a competitive and knowledge-driven environment.",
+      university_description:
+        "Private university with a strong quiz bowl team and commitment to academic excellence.",
+    },
+    {
+      name: "Vanderbilt University Trivia Club",
+      university: "Vanderbilt University",
+      club_description:
+        "Supports student involvement in trivia competitions and quiz bowl events, providing a platform to test knowledge.",
+      university_description:
+        "Private university with a notable trivia club and emphasis on intellectual engagement.",
+    },
+    {
+      name: "University of Vermont Quiz Bowl",
+      university: "University of Vermont",
+      club_description:
+        "Organizes trivia contests and quiz bowl tournaments, offering opportunities for students to showcase their knowledge.",
+      university_description:
+        "Public university with a growing quiz bowl team and commitment to academic excellence.",
+    },
+  ],
+  peerMentoringClubs: [
+    {
+      name: "Harvard Peer Mentoring Network",
+      university: "Harvard University",
+      club_description:
+        "Provides support and guidance through peer mentoring relationships, focusing on academic and personal development.",
+      university_description:
+        "Ivy League university known for its commitment to student support and academic excellence.",
+    },
+    {
+      name: "Stanford Peer Mentors",
+      university: "Stanford University",
+      club_description:
+        "Connects students with peer mentors for academic support, career advice, and personal growth.",
+      university_description:
+        "Private university in California with a strong emphasis on student development and peer mentoring programs.",
+    },
+    {
+      name: "Yale Peer Mentoring Program",
+      university: "Yale University",
+      club_description:
+        "Offers peer mentoring opportunities to help students navigate their academic and personal challenges.",
+      university_description:
+        "Ivy League university dedicated to fostering student success and providing mentorship.",
+    },
+    {
+      name: "University of Chicago Peer Mentoring",
+      university: "University of Chicago",
+      club_description:
+        "Facilitates peer mentoring relationships to support academic achievement and personal well-being.",
+      university_description:
+        "Private university known for its rigorous academics and supportive mentoring programs.",
+    },
+    {
+      name: "Columbia Peer Mentoring",
+      university: "Columbia University",
+      club_description:
+        "Connects students with mentors for academic guidance and personal development throughout their college journey.",
+      university_description:
+        "Ivy League university with a focus on student success and mentoring opportunities.",
+    },
+    {
+      name: "MIT Peer Mentorship Program",
+      university: "Massachusetts Institute of Technology",
+      club_description:
+        "Provides peer mentorship to support students in their academic and personal growth.",
+      university_description:
+        "Ivy League university renowned for its technical expertise and commitment to student mentoring.",
+    },
+    {
+      name: "University of California, Berkeley Peer Mentors",
+      university: "University of California, Berkeley",
+      club_description:
+        "Offers peer mentoring for academic support, career guidance, and personal development.",
+      university_description:
+        "Public university with a strong emphasis on student mentorship and academic achievement.",
+    },
+    {
+      name: "University of California, Los Angeles Peer Mentoring",
+      university: "University of California, Los Angeles",
+      club_description:
+        "Connects students with peer mentors to enhance academic performance and personal growth.",
+      university_description:
+        "Public university known for its supportive mentoring programs and focus on student success.",
+    },
+    {
+      name: "Georgetown Peer Mentoring Program",
+      university: "Georgetown University",
+      club_description:
+        "Facilitates peer mentoring relationships to assist students with academic and personal challenges.",
+      university_description:
+        "Private university in Washington, D.C. with a strong commitment to student mentoring and support.",
+    },
+    {
+      name: "University of Pennsylvania Peer Mentors",
+      university: "University of Pennsylvania",
+      club_description:
+        "Provides peer mentoring for academic assistance and personal development throughout the college experience.",
+      university_description:
+        "Ivy League university with a focus on comprehensive student support and mentoring programs.",
+    },
+    {
+      name: "Duke Peer Mentoring Network",
+      university: "Duke University",
+      club_description:
+        "Offers peer mentoring to help students navigate their academic and personal lives effectively.",
+      university_description:
+        "Private university with a notable peer mentoring network and commitment to student success.",
+    },
+    {
+      name: "University of Virginia Peer Mentoring",
+      university: "University of Virginia",
+      club_description:
+        "Supports students through peer mentoring relationships aimed at academic and personal development.",
+      university_description:
+        "Public university with a strong emphasis on student mentoring and support systems.",
+    },
+    {
+      name: "University of Michigan Peer Mentors",
+      university: "University of Michigan",
+      club_description:
+        "Connects students with peer mentors to enhance their academic and personal experiences.",
+      university_description:
+        "Public university with a robust peer mentoring program focused on student success.",
+    },
+    {
+      name: "New York University Peer Mentoring",
+      university: "New York University",
+      club_description:
+        "Provides opportunities for peer mentoring to support students in their academic and personal growth.",
+      university_description:
+        "Private university in New York City with a strong commitment to student development and mentoring.",
+    },
+    {
+      name: "University of Texas Peer Mentors",
+      university: "University of Texas at Austin",
+      club_description:
+        "Offers peer mentoring for academic support and personal development throughout the university experience.",
+      university_description:
+        "Public university with a focus on comprehensive student support and mentoring programs.",
+    },
+    {
+      name: "University of North Carolina Peer Mentoring",
+      university: "University of North Carolina at Chapel Hill",
+      club_description:
+        "Facilitates peer mentoring relationships to assist students with their academic and personal challenges.",
+      university_description:
+        "Public university with a notable peer mentoring program and emphasis on student success.",
+    },
+    {
+      name: "University of Wisconsin Peer Mentors",
+      university: "University of Wisconsin-Madison",
+      club_description:
+        "Supports students through peer mentoring for academic achievement and personal growth.",
+      university_description:
+        "Public university with a strong peer mentoring network and focus on student development.",
+    },
+    {
+      name: "University of Florida Peer Mentoring",
+      university: "University of Florida",
+      club_description:
+        "Provides peer mentoring opportunities to help students with academic and personal challenges.",
+      university_description:
+        "Public university with a robust peer mentoring program and emphasis on student support.",
+    },
+    {
+      name: "University of Arizona Peer Mentors",
+      university: "University of Arizona",
+      club_description:
+        "Offers peer mentoring for academic support and personal development throughout the college experience.",
+      university_description:
+        "Public university with a strong commitment to student success and mentoring opportunities.",
+    },
+    {
+      name: "University of Illinois Peer Mentoring",
+      university: "University of Illinois Urbana-Champaign",
+      club_description:
+        "Connects students with peer mentors to enhance their academic performance and personal growth.",
+      university_description:
+        "Public university with a focus on comprehensive student support and mentoring programs.",
+    },
+    {
+      name: "University of Colorado Peer Mentors",
+      university: "University of Colorado Boulder",
+      club_description:
+        "Supports student success through peer mentoring relationships aimed at academic and personal development.",
+      university_description:
+        "Public university with a strong peer mentoring program and emphasis on student achievement.",
+    },
+    {
+      name: "University of Maryland Peer Mentoring",
+      university: "University of Maryland, College Park",
+      club_description:
+        "Facilitates peer mentoring to assist students with academic and personal challenges throughout their university journey.",
+      university_description:
+        "Public university with a notable peer mentoring program and focus on student support.",
+    },
+    {
+      name: "University of Pittsburgh Peer Mentors",
+      university: "University of Pittsburgh",
+      club_description:
+        "Offers peer mentoring opportunities for academic assistance and personal development.",
+      university_description:
+        "Public university with a strong emphasis on student mentoring and support systems.",
+    },
+    {
+      name: "University of Tennessee Peer Mentoring",
+      university: "University of Tennessee",
+      club_description:
+        "Provides peer mentoring to support students in their academic and personal growth.",
+      university_description:
+        "Public university with a growing peer mentoring program and focus on student success.",
+    },
+    {
+      name: "University of Georgia Peer Mentors",
+      university: "University of Georgia",
+      club_description:
+        "Connects students with peer mentors to enhance their academic and personal experiences.",
+      university_description:
+        "Public university with a notable peer mentoring network and commitment to student development.",
+    },
+    {
+      name: "University of Iowa Peer Mentoring",
+      university: "University of Iowa",
+      club_description:
+        "Supports student success through peer mentoring relationships for academic and personal development.",
+      university_description:
+        "Public university with a strong peer mentoring program and emphasis on student achievement.",
+    },
+    {
+      name: "University of South Carolina Peer Mentors",
+      university: "University of South Carolina",
+      club_description:
+        "Facilitates peer mentoring for academic support and personal growth throughout the university experience.",
+      university_description:
+        "Public university with a robust peer mentoring program and focus on student success.",
+    },
+    {
+      name: "Clemson University Peer Mentoring",
+      university: "Clemson University",
+      club_description:
+        "Offers peer mentoring opportunities to assist students with academic and personal challenges.",
+      university_description:
+        "Public university with a growing peer mentoring network and commitment to student development.",
+    },
+    {
+      name: "Rutgers Peer Mentoring Program",
+      university: "Rutgers University",
+      club_description:
+        "Supports students through peer mentoring relationships aimed at academic and personal growth.",
+      university_description:
+        "Public university with a notable peer mentoring program and focus on student success.",
+    },
+    {
+      name: "Michigan State Peer Mentors",
+      university: "Michigan State University",
+      club_description:
+        "Provides peer mentoring for academic support and personal development throughout the college experience.",
+      university_description:
+        "Public university with a strong peer mentoring program and emphasis on student achievement.",
+    },
+    {
+      name: "Washington University Peer Mentoring",
+      university: "Washington University in St. Louis",
+      club_description:
+        "Connects students with peer mentors to enhance their academic performance and personal growth.",
+      university_description:
+        "Private university with a robust peer mentoring network and commitment to student success.",
+    },
+    {
+      name: "University of San Diego Peer Mentoring",
+      university: "University of San Diego",
+      club_description:
+        "Facilitates peer mentoring to support students in their academic and personal development.",
+      university_description:
+        "Private university with a notable peer mentoring program and emphasis on student support.",
+    },
+    {
+      name: "Santa Clara University Peer Mentors",
+      university: "Santa Clara University",
+      club_description:
+        "Offers opportunities for peer mentoring to assist students with academic and personal challenges.",
+      university_description:
+        "Private university with a strong commitment to student success and mentoring programs.",
+    },
+    {
+      name: "University of Denver Peer Mentoring",
+      university: "University of Denver",
+      club_description:
+        "Supports student success through peer mentoring relationships for academic and personal growth.",
+      university_description:
+        "Private university with a growing peer mentoring network and focus on student achievement.",
+    },
+    {
+      name: "American University Peer Mentors",
+      university: "American University",
+      club_description:
+        "Provides peer mentoring for academic support and personal development throughout the university journey.",
+      university_description:
+        "Private university with a strong commitment to student development and mentoring programs.",
+    },
+    {
+      name: "DePaul University Peer Mentoring",
+      university: "DePaul University",
+      club_description:
+        "Facilitates peer mentoring relationships to assist students with academic and personal challenges.",
+      university_description:
+        "Private university with a notable peer mentoring program and focus on student success.",
+    },
+    {
+      name: "University of Miami Peer Mentors",
+      university: "University of Miami",
+      club_description:
+        "Offers peer mentoring opportunities for academic support and personal growth.",
+      university_description:
+        "Private university with a growing peer mentoring network and emphasis on student achievement.",
+    },
+    {
+      name: "Loyola University Chicago Peer Mentoring",
+      university: "Loyola University Chicago",
+      club_description:
+        "Supports students through peer mentoring relationships for academic and personal development.",
+      university_description:
+        "Private university with a strong peer mentoring program and commitment to student success.",
+    },
+    {
+      name: "University of Notre Dame Peer Mentors",
+      university: "University of Notre Dame",
+      club_description:
+        "Provides peer mentoring for academic support and personal growth throughout the college experience.",
+      university_description:
+        "Private university with a notable peer mentoring network and emphasis on student success.",
+    },
+    {
+      name: "Wake Forest Peer Mentoring",
+      university: "Wake Forest University",
+      club_description:
+        "Connects students with peer mentors to enhance their academic and personal experiences.",
+      university_description:
+        "Private university with a strong commitment to student development and mentoring programs.",
+    },
+    {
+      name: "Elon University Peer Mentoring",
+      university: "Elon University",
+      club_description:
+        "Offers peer mentoring opportunities to assist students with academic and personal challenges.",
+      university_description:
+        "Private university with a growing peer mentoring network and emphasis on student achievement.",
+    },
+    {
+      name: "Fordham University Peer Mentoring",
+      university: "Fordham University",
+      club_description:
+        "Facilitates peer mentoring relationships to support students with academic and personal development.",
+      university_description:
+        "Private university with a strong peer mentoring program and commitment to student success.",
+    },
+    {
+      name: "Pepperdine University Peer Mentoring",
+      university: "Pepperdine University",
+      club_description:
+        "Supports students through peer mentoring relationships for academic and personal growth.",
+      university_description:
+        "Private university with a notable peer mentoring program and focus on student achievement.",
+    },
+    {
+      name: "Santa Clara University Peer Mentoring",
+      university: "Santa Clara University",
+      club_description:
+        "Offers peer mentoring opportunities to assist students with academic and personal challenges.",
+      university_description:
+        "Private university with a strong commitment to student success and mentoring programs.",
+    },
+    {
+      name: "University of the Pacific Peer Mentoring",
+      university: "University of the Pacific",
+      club_description:
+        "Provides peer mentoring for academic support and personal development throughout the university experience.",
+      university_description:
+        "Private university with a growing peer mentoring network and emphasis on student achievement.",
+    },
+    {
+      name: "Vanderbilt University Peer Mentoring",
+      university: "Vanderbilt University",
+      club_description:
+        "Connects students with peer mentors to enhance their academic and personal growth.",
+      university_description:
+        "Private university with a strong commitment to student development and mentoring programs.",
+    },
+    {
+      name: "University of Vermont Peer Mentors",
+      university: "University of Vermont",
+      club_description:
+        "Facilitates peer mentoring relationships to support students with academic and personal challenges.",
+      university_description:
+        "Public university with a notable peer mentoring program and focus on student success.",
+    },
+  ],
+  outdoorAndAdventureClubs: [
+    {
+      name: "Harvard Outdoor Adventure Club",
+      university: "Harvard University",
+      club_description:
+        "Organizes outdoor excursions including hiking, camping, and climbing trips.",
+      university_description:
+        "Ivy League university known for its diverse range of student activities and outdoor adventures.",
+    },
+    {
+      name: "Stanford Adventure Group",
+      university: "Stanford University",
+      club_description:
+        "Offers outdoor adventure opportunities such as backpacking, rock climbing, and wilderness survival.",
+      university_description:
+        "Private university in California with a focus on outdoor recreation and adventure.",
+    },
+    {
+      name: "Yale Outdoor Activities Club",
+      university: "Yale University",
+      club_description:
+        "Facilitates outdoor activities like hiking, kayaking, and mountaineering.",
+      university_description:
+        "Ivy League institution known for its active outdoor and adventure programs.",
+    },
+    {
+      name: "University of Chicago Outdoor Club",
+      university: "University of Chicago",
+      club_description:
+        "Provides opportunities for outdoor adventures including camping, trekking, and biking.",
+      university_description:
+        "Private university known for its diverse extracurricular offerings, including outdoor activities.",
+    },
+    {
+      name: "Columbia University Hiking Club",
+      university: "Columbia University",
+      club_description:
+        "Organizes hiking trips and outdoor adventures in various locations.",
+      university_description:
+        "Ivy League university with a strong focus on outdoor exploration and student engagement.",
+    },
+    {
+      name: "MIT Outdoor Adventure Society",
+      university: "Massachusetts Institute of Technology",
+      club_description:
+        "Offers a range of outdoor activities including climbing, trekking, and camping.",
+      university_description:
+        "Renowned for its emphasis on adventure and exploration as part of student life.",
+    },
+    {
+      name: "UC Berkeley Outdoor Club",
+      university: "University of California, Berkeley",
+      club_description:
+        "Facilitates outdoor adventures such as hiking, biking, and camping trips.",
+      university_description:
+        "Public university with a strong emphasis on environmental and outdoor activities.",
+    },
+    {
+      name: "UCLA Adventure Group",
+      university: "University of California, Los Angeles",
+      club_description:
+        "Provides opportunities for outdoor activities including rock climbing, hiking, and camping.",
+      university_description:
+        "Public university with a commitment to outdoor recreation and adventure.",
+    },
+    {
+      name: "Georgetown Outdoor Explorers",
+      university: "Georgetown University",
+      club_description:
+        "Organizes trips for hiking, kayaking, and other outdoor adventures.",
+      university_description:
+        "Private university in Washington, D.C. known for its active student engagement in outdoor activities.",
+    },
+    {
+      name: "University of Pennsylvania Outdoor Club",
+      university: "University of Pennsylvania",
+      club_description:
+        "Offers a variety of outdoor adventures including camping, hiking, and climbing.",
+      university_description:
+        "Ivy League institution with a strong focus on outdoor activities and student engagement.",
+    },
+    {
+      name: "Duke University Adventure Club",
+      university: "Duke University",
+      club_description:
+        "Facilitates outdoor activities such as trekking, climbing, and camping.",
+      university_description:
+        "Private university with a commitment to outdoor recreation and student activities.",
+    },
+    {
+      name: "University of Virginia Outdoor Club",
+      university: "University of Virginia",
+      club_description:
+        "Organizes outdoor adventures including hiking, canoeing, and camping.",
+      university_description:
+        "Public university known for its focus on student engagement and outdoor activities.",
+    },
+    {
+      name: "University of Michigan Outdoor Adventure Club",
+      university: "University of Michigan",
+      club_description:
+        "Offers outdoor adventures such as backpacking, rock climbing, and hiking.",
+      university_description:
+        "Public university with a strong emphasis on outdoor exploration and student activities.",
+    },
+    {
+      name: "New York University Outdoor Club",
+      university: "New York University",
+      club_description:
+        "Facilitates outdoor activities including hiking, camping, and biking.",
+      university_description:
+        "Private university with a diverse range of student activities, including outdoor adventures.",
+    },
+    {
+      name: "University of Texas Outdoor Adventures",
+      university: "University of Texas at Austin",
+      club_description:
+        "Organizes outdoor adventures like hiking, rock climbing, and camping trips.",
+      university_description:
+        "Public university with a focus on student engagement and outdoor exploration.",
+    },
+    {
+      name: "University of North Carolina Adventure Club",
+      university: "University of North Carolina at Chapel Hill",
+      club_description:
+        "Provides opportunities for outdoor activities including hiking, kayaking, and climbing.",
+      university_description:
+        "Public university with a strong commitment to student involvement in outdoor adventures.",
+    },
+    {
+      name: "University of Wisconsin Outdoor Club",
+      university: "University of Wisconsin-Madison",
+      club_description:
+        "Offers a range of outdoor adventures such as backpacking, climbing, and camping.",
+      university_description:
+        "Public university known for its emphasis on student engagement in outdoor activities.",
+    },
+    {
+      name: "University of Florida Adventure Club",
+      university: "University of Florida",
+      club_description:
+        "Facilitates outdoor adventures including hiking, kayaking, and camping.",
+      university_description:
+        "Public university with a strong focus on outdoor activities and student engagement.",
+    },
+    {
+      name: "University of Arizona Outdoor Explorers",
+      university: "University of Arizona",
+      club_description:
+        "Provides opportunities for outdoor activities like hiking, biking, and rock climbing.",
+      university_description:
+        "Public university with a commitment to outdoor adventure and student development.",
+    },
+    {
+      name: "University of Illinois Outdoor Club",
+      university: "University of Illinois Urbana-Champaign",
+      club_description:
+        "Organizes outdoor adventures such as hiking, camping, and climbing.",
+      university_description:
+        "Public university with a focus on student engagement and outdoor exploration.",
+    },
+    {
+      name: "University of Colorado Outdoor Club",
+      university: "University of Colorado Boulder",
+      club_description:
+        "Offers outdoor adventures including backpacking, rock climbing, and hiking.",
+      university_description:
+        "Public university known for its strong emphasis on student involvement in outdoor activities.",
+    },
+    {
+      name: "University of Maryland Outdoor Adventures",
+      university: "University of Maryland, College Park",
+      club_description:
+        "Facilitates outdoor activities like hiking, camping, and climbing trips.",
+      university_description:
+        "Public university with a strong commitment to student engagement in outdoor adventures.",
+    },
+    {
+      name: "University of Pittsburgh Adventure Club",
+      university: "University of Pittsburgh",
+      club_description:
+        "Provides opportunities for outdoor adventures including hiking, climbing, and camping.",
+      university_description:
+        "Public university known for its focus on student activities and outdoor exploration.",
+    },
+    {
+      name: "University of Tennessee Outdoor Club",
+      university: "University of Tennessee",
+      club_description:
+        "Organizes outdoor adventures such as hiking, kayaking, and camping.",
+      university_description:
+        "Public university with a strong emphasis on student engagement in outdoor activities.",
+    },
+    {
+      name: "University of Georgia Adventure Club",
+      university: "University of Georgia",
+      club_description:
+        "Offers opportunities for outdoor adventures including hiking, rock climbing, and camping.",
+      university_description:
+        "Public university with a commitment to student involvement in outdoor activities.",
+    },
+    {
+      name: "University of Iowa Outdoor Club",
+      university: "University of Iowa",
+      club_description:
+        "Facilitates outdoor activities such as hiking, biking, and camping.",
+      university_description:
+        "Public university known for its focus on student engagement and outdoor exploration.",
+    },
+    {
+      name: "University of South Carolina Adventure Club",
+      university: "University of South Carolina",
+      club_description:
+        "Provides opportunities for outdoor activities including hiking, climbing, and camping.",
+      university_description:
+        "Public university with a strong commitment to student development and outdoor adventures.",
+    },
+    {
+      name: "Clemson University Outdoor Club",
+      university: "Clemson University",
+      club_description:
+        "Organizes outdoor adventures such as hiking, kayaking, and camping.",
+      university_description:
+        "Public university with a focus on student engagement in outdoor activities.",
+    },
+    {
+      name: "Rutgers Outdoor Adventure Club",
+      university: "Rutgers University",
+      club_description:
+        "Offers opportunities for outdoor adventures including rock climbing, hiking, and camping.",
+      university_description:
+        "Public university known for its strong emphasis on student activities and outdoor exploration.",
+    },
+    {
+      name: "Michigan State Adventure Club",
+      university: "Michigan State University",
+      club_description:
+        "Facilitates outdoor adventures like hiking, camping, and climbing.",
+      university_description:
+        "Public university with a strong commitment to student engagement in outdoor activities.",
+    },
+    {
+      name: "Washington University Outdoor Club",
+      university: "Washington University in St. Louis",
+      club_description:
+        "Provides opportunities for outdoor adventures such as hiking, biking, and climbing.",
+      university_description:
+        "Private university known for its focus on student development and outdoor exploration.",
+    },
+    {
+      name: "University of San Diego Outdoor Adventures",
+      university: "University of San Diego",
+      club_description:
+        "Organizes outdoor activities including hiking, camping, and rock climbing.",
+      university_description:
+        "Private university with a strong commitment to student involvement in outdoor activities.",
+    },
+    {
+      name: "Santa Clara University Adventure Club",
+      university: "Santa Clara University",
+      club_description:
+        "Offers opportunities for outdoor adventures such as hiking, kayaking, and camping.",
+      university_description:
+        "Private university known for its focus on student engagement in outdoor exploration.",
+    },
+    {
+      name: "University of Denver Outdoor Club",
+      university: "University of Denver",
+      club_description:
+        "Facilitates outdoor activities including hiking, biking, and climbing.",
+      university_description:
+        "Private university with a strong commitment to student development and outdoor adventures.",
+    },
+    {
+      name: "American University Outdoor Club",
+      university: "American University",
+      club_description:
+        "Provides opportunities for outdoor adventures like hiking, camping, and climbing.",
+      university_description:
+        "Private university known for its strong emphasis on student activities and outdoor exploration.",
+    },
+    {
+      name: "DePaul University Adventure Club",
+      university: "DePaul University",
+      club_description:
+        "Organizes outdoor activities including hiking, rock climbing, and camping.",
+      university_description:
+        "Private university with a focus on student engagement in outdoor adventures.",
+    },
+    {
+      name: "University of Miami Outdoor Club",
+      university: "University of Miami",
+      club_description:
+        "Offers opportunities for outdoor adventures such as hiking, biking, and camping.",
+      university_description:
+        "Private university with a strong commitment to student involvement in outdoor activities.",
+    },
+    {
+      name: "Fordham University Outdoor Explorers",
+      university: "Fordham University",
+      club_description:
+        "Facilitates outdoor activities including hiking, camping, and climbing trips.",
+      university_description:
+        "Private university with a focus on student engagement in outdoor exploration.",
+    },
+    {
+      name: "Pepperdine University Outdoor Club",
+      university: "Pepperdine University",
+      club_description:
+        "Provides opportunities for outdoor adventures like hiking, kayaking, and camping.",
+      university_description:
+        "Private university known for its strong commitment to student development and outdoor activities.",
+    },
+    {
+      name: "University of the Pacific Outdoor Club",
+      university: "University of the Pacific",
+      club_description:
+        "Organizes outdoor adventures including hiking, rock climbing, and camping.",
+      university_description:
+        "Private university with a focus on student engagement in outdoor exploration.",
+    },
+    {
+      name: "Vanderbilt University Adventure Club",
+      university: "Vanderbilt University",
+      club_description:
+        "Offers opportunities for outdoor adventures such as hiking, climbing, and camping.",
+      university_description:
+        "Private university with a strong commitment to student involvement in outdoor activities.",
+    },
+    {
+      name: "University of Vermont Outdoor Club",
+      university: "University of Vermont",
+      club_description:
+        "Facilitates outdoor activities including hiking, biking, and climbing.",
+      university_description:
+        "Public university known for its focus on student engagement in outdoor adventures.",
+    },
+    {
+      name: "University of Massachusetts Adventure Club",
+      university: "University of Massachusetts Amherst",
+      club_description:
+        "Provides opportunities for outdoor adventures like hiking, camping, and climbing.",
+      university_description:
+        "Public university with a strong emphasis on student activities and outdoor exploration.",
+    },
+    {
+      name: "University of Rhode Island Outdoor Club",
+      university: "University of Rhode Island",
+      club_description:
+        "Organizes outdoor activities including hiking, kayaking, and camping.",
+      university_description:
+        "Public university with a commitment to student involvement in outdoor adventures.",
+    },
+    {
+      name: "University of New Hampshire Adventure Club",
+      university: "University of New Hampshire",
+      club_description:
+        "Offers opportunities for outdoor adventures such as hiking, biking, and climbing.",
+      university_description:
+        "Public university with a strong focus on student engagement in outdoor activities.",
+    },
+    {
+      name: "University of Maine Outdoor Club",
+      university: "University of Maine",
+      club_description:
+        "Facilitates outdoor activities including hiking, camping, and climbing trips.",
+      university_description:
+        "Public university known for its commitment to student involvement in outdoor adventures.",
+    },
+    {
+      name: "Syracuse University Adventure Club",
+      university: "Syracuse University",
+      club_description:
+        "Provides opportunities for outdoor adventures like hiking, kayaking, and climbing.",
+      university_description:
+        "Private university with a strong focus on student engagement in outdoor activities.",
+    },
+    {
+      name: "Boston College Outdoor Explorers",
+      university: "Boston College",
+      club_description:
+        "Organizes outdoor activities including hiking, camping, and climbing.",
+      university_description:
+        "Private university known for its commitment to student development and outdoor adventures.",
+    },
+    {
+      name: "Ohio State University Outdoor Club",
+      university: "Ohio State University",
+      club_description:
+        "Offers opportunities for outdoor adventures such as hiking, climbing, and camping.",
+      university_description:
+        "Public university with a strong emphasis on student activities and outdoor exploration.",
+    },
+    {
+      name: "Purdue University Adventure Club",
+      university: "Purdue University",
+      club_description:
+        "Facilitates outdoor activities including hiking, biking, and climbing.",
+      university_description:
+        "Public university known for its focus on student engagement in outdoor adventures.",
+    },
+    {
+      name: "University of Kentucky Outdoor Club",
+      university: "University of Kentucky",
+      club_description:
+        "Provides opportunities for outdoor adventures like hiking, camping, and climbing.",
+      university_description:
+        "Public university with a strong commitment to student involvement in outdoor activities.",
+    },
+    {
+      name: "Clemson University Outdoor Club",
+      university: "Clemson University",
+      club_description:
+        "Organizes outdoor activities including hiking, kayaking, and camping.",
+      university_description:
+        "Public university with a focus on student engagement in outdoor adventures.",
+    },
+    {
+      name: "University of Kansas Adventure Club",
+      university: "University of Kansas",
+      club_description:
+        "Offers opportunities for outdoor adventures such as hiking, rock climbing, and camping.",
+      university_description:
+        "Public university with a strong emphasis on student activities and outdoor exploration.",
+    },
+    {
+      name: "University of Nebraska Outdoor Club",
+      university: "University of Nebraska-Lincoln",
+      club_description:
+        "Facilitates outdoor activities including hiking, camping, and climbing.",
+      university_description:
+        "Public university known for its commitment to student engagement in outdoor adventures.",
+    },
+    {
+      name: "Iowa State University Adventure Club",
+      university: "Iowa State University",
+      club_description:
+        "Provides opportunities for outdoor adventures like hiking, biking, and climbing.",
+      university_description:
+        "Public university with a strong focus on student involvement in outdoor activities.",
+    },
+    {
+      name: "University of Oregon Outdoor Club",
+      university: "University of Oregon",
+      club_description:
+        "Organizes outdoor activities including hiking, camping, and climbing.",
+      university_description:
+        "Public university known for its emphasis on student engagement in outdoor adventures.",
+    },
+  ],
+  studentGovernmentAndLeadershipClubs: [
+    {
+      name: "Harvard College Student Government",
+      university: "Harvard University",
+      club_description:
+        "Represents student interests and organizes campus-wide initiatives.",
+      university_description:
+        "Ivy League university with a strong focus on student leadership and governance.",
+    },
+    {
+      name: "Stanford Associated Students",
+      university: "Stanford University",
+      club_description:
+        "Engages in student advocacy and organizes leadership development programs.",
+      university_description:
+        "Private university known for its active student government and leadership opportunities.",
+    },
+    {
+      name: "Yale College Council",
+      university: "Yale University",
+      club_description:
+        "Provides a platform for student voices and leads campus initiatives.",
+      university_description:
+        "Ivy League institution with a robust student government and leadership development programs.",
+    },
+    {
+      name: "University of Chicago Student Government",
+      university: "University of Chicago",
+      club_description:
+        "Works on student advocacy and leadership initiatives across campus.",
+      university_description:
+        "Private university known for its active student leadership and governance.",
+    },
+    {
+      name: "Columbia University Student Council",
+      university: "Columbia University",
+      club_description:
+        "Represents student interests and coordinates leadership activities.",
+      university_description:
+        "Ivy League university with a focus on student leadership and campus involvement.",
+    },
+    {
+      name: "MIT Student Government",
+      university: "Massachusetts Institute of Technology",
+      club_description:
+        "Organizes student advocacy efforts and leadership development programs.",
+      university_description:
+        "Renowned for its emphasis on student governance and leadership activities.",
+    },
+    {
+      name: "UC Berkeley ASUC",
+      university: "University of California, Berkeley",
+      club_description:
+        "Engages in student advocacy and leadership initiatives.",
+      university_description:
+        "Public university with a strong focus on student government and leadership development.",
+    },
+    {
+      name: "UCLA Associated Students",
+      university: "University of California, Los Angeles",
+      club_description: "Facilitates student advocacy and leadership programs.",
+      university_description:
+        "Public university known for its commitment to student leadership and governance.",
+    },
+    {
+      name: "Georgetown University Student Government",
+      university: "Georgetown University",
+      club_description:
+        "Represents student interests and leads campus-wide initiatives.",
+      university_description:
+        "Private university in Washington, D.C. with an active student government and leadership programs.",
+    },
+    {
+      name: "University of Pennsylvania Student Government",
+      university: "University of Pennsylvania",
+      club_description:
+        "Works on student representation and leadership development across campus.",
+      university_description:
+        "Ivy League institution with a focus on student leadership and governance.",
+    },
+    {
+      name: "Duke University Student Government",
+      university: "Duke University",
+      club_description:
+        "Organizes student advocacy efforts and leadership activities.",
+      university_description:
+        "Private university with a commitment to student governance and leadership development.",
+    },
+    {
+      name: "University of Virginia Student Government",
+      university: "University of Virginia",
+      club_description:
+        "Provides a platform for student representation and leadership initiatives.",
+      university_description:
+        "Public university known for its focus on student leadership and governance.",
+    },
+    {
+      name: "University of Michigan Student Government",
+      university: "University of Michigan",
+      club_description: "Engages in student advocacy and leadership programs.",
+      university_description:
+        "Public university with a strong emphasis on student governance and leadership development.",
+    },
+    {
+      name: "New York University Student Government",
+      university: "New York University",
+      club_description:
+        "Facilitates student representation and organizes leadership activities.",
+      university_description:
+        "Private university with a focus on student leadership and governance.",
+    },
+    {
+      name: "University of Texas Student Government",
+      university: "University of Texas at Austin",
+      club_description:
+        "Represents student interests and leads campus initiatives.",
+      university_description:
+        "Public university with a strong commitment to student governance and leadership.",
+    },
+    {
+      name: "University of North Carolina Student Government",
+      university: "University of North Carolina at Chapel Hill",
+      club_description: "Works on student advocacy and leadership development.",
+      university_description:
+        "Public university with a focus on student representation and governance.",
+    },
+    {
+      name: "University of Wisconsin Student Government",
+      university: "University of Wisconsin-Madison",
+      club_description:
+        "Organizes student representation and leadership initiatives.",
+      university_description:
+        "Public university with a strong emphasis on student leadership and governance.",
+    },
+    {
+      name: "University of Florida Student Government",
+      university: "University of Florida",
+      club_description: "Facilitates student advocacy and leadership programs.",
+      university_description:
+        "Public university with a commitment to student governance and leadership activities.",
+    },
+    {
+      name: "University of Arizona Student Government",
+      university: "University of Arizona",
+      club_description:
+        "Provides a platform for student representation and leadership.",
+      university_description:
+        "Public university known for its focus on student governance and leadership development.",
+    },
+    {
+      name: "University of Illinois Student Government",
+      university: "University of Illinois Urbana-Champaign",
+      club_description:
+        "Engages in student advocacy and leadership activities.",
+      university_description:
+        "Public university with a strong emphasis on student representation and governance.",
+    },
+    {
+      name: "University of Colorado Student Government",
+      university: "University of Colorado Boulder",
+      club_description:
+        "Organizes student representation and leadership programs.",
+      university_description:
+        "Public university with a focus on student governance and leadership development.",
+    },
+    {
+      name: "University of Maryland Student Government",
+      university: "University of Maryland, College Park",
+      club_description:
+        "Facilitates student advocacy and leadership initiatives.",
+      university_description:
+        "Public university known for its commitment to student governance and leadership activities.",
+    },
+    {
+      name: "University of Pittsburgh Student Government",
+      university: "University of Pittsburgh",
+      club_description:
+        "Represents student interests and leads leadership development programs.",
+      university_description:
+        "Public university with a strong focus on student engagement and governance.",
+    },
+    {
+      name: "University of Tennessee Student Government",
+      university: "University of Tennessee",
+      club_description:
+        "Works on student representation and leadership initiatives.",
+      university_description:
+        "Public university known for its emphasis on student governance and leadership development.",
+    },
+    {
+      name: "University of Georgia Student Government",
+      university: "University of Georgia",
+      club_description:
+        "Provides a platform for student advocacy and leadership.",
+      university_description:
+        "Public university with a focus on student representation and governance.",
+    },
+    {
+      name: "University of Iowa Student Government",
+      university: "University of Iowa",
+      club_description:
+        "Organizes student representation and leadership activities.",
+      university_description:
+        "Public university with a commitment to student engagement in governance.",
+    },
+    {
+      name: "University of South Carolina Student Government",
+      university: "University of South Carolina",
+      club_description:
+        "Facilitates student advocacy and leadership development.",
+      university_description:
+        "Public university with a strong focus on student governance and representation.",
+    },
+    {
+      name: "Clemson University Student Government",
+      university: "Clemson University",
+      club_description:
+        "Represents student interests and leads leadership initiatives.",
+      university_description:
+        "Public university with a focus on student engagement and governance.",
+    },
+    {
+      name: "Rutgers Student Government",
+      university: "Rutgers University",
+      club_description:
+        "Engages in student advocacy and organizes leadership activities.",
+      university_description:
+        "Public university known for its emphasis on student representation and governance.",
+    },
+    {
+      name: "Michigan State Student Government",
+      university: "Michigan State University",
+      club_description:
+        "Provides opportunities for student representation and leadership development.",
+      university_description:
+        "Public university with a strong commitment to student governance and activities.",
+    },
+    {
+      name: "Washington University Student Government",
+      university: "Washington University in St. Louis",
+      club_description:
+        "Organizes student advocacy efforts and leadership programs.",
+      university_description:
+        "Private university known for its focus on student engagement and governance.",
+    },
+    {
+      name: "University of San Diego Student Government",
+      university: "University of San Diego",
+      club_description:
+        "Facilitates student representation and leadership development.",
+      university_description:
+        "Private university with a strong commitment to student governance and activities.",
+    },
+    {
+      name: "Santa Clara University Student Government",
+      university: "Santa Clara University",
+      club_description:
+        "Represents student interests and organizes leadership initiatives.",
+      university_description:
+        "Private university known for its emphasis on student leadership and governance.",
+    },
+    {
+      name: "University of Denver Student Government",
+      university: "University of Denver",
+      club_description:
+        "Provides opportunities for student advocacy and leadership development.",
+      university_description:
+        "Private university with a strong focus on student governance and representation.",
+    },
+    {
+      name: "American University Student Government",
+      university: "American University",
+      club_description:
+        "Engages in student representation and organizes leadership activities.",
+      university_description:
+        "Private university with a commitment to student governance and leadership.",
+    },
+    {
+      name: "DePaul University Student Government",
+      university: "DePaul University",
+      club_description: "Facilitates student advocacy and leadership programs.",
+      university_description:
+        "Private university known for its focus on student engagement and governance.",
+    },
+    {
+      name: "University of Miami Student Government",
+      university: "University of Miami",
+      club_description:
+        "Represents student interests and leads leadership development efforts.",
+      university_description:
+        "Private university with a strong commitment to student governance and activities.",
+    },
+    {
+      name: "Fordham University Student Government",
+      university: "Fordham University",
+      club_description:
+        "Organizes student advocacy and leadership initiatives.",
+      university_description:
+        "Private university known for its focus on student representation and governance.",
+    },
+    {
+      name: "Pepperdine University Student Government",
+      university: "Pepperdine University",
+      club_description:
+        "Provides opportunities for student representation and leadership development.",
+      university_description:
+        "Private university with a commitment to student governance and engagement.",
+    },
+    {
+      name: "University of the Pacific Student Government",
+      university: "University of the Pacific",
+      club_description:
+        "Facilitates student advocacy and organizes leadership programs.",
+      university_description:
+        "Private university with a focus on student governance and leadership activities.",
+    },
+    {
+      name: "Vanderbilt University Student Government",
+      university: "Vanderbilt University",
+      club_description:
+        "Represents student interests and leads leadership development programs.",
+      university_description:
+        "Private university known for its emphasis on student engagement and governance.",
+    },
+    {
+      name: "University of Vermont Student Government",
+      university: "University of Vermont",
+      club_description:
+        "Engages in student representation and leadership initiatives.",
+      university_description:
+        "Public university with a strong focus on student governance and activities.",
+    },
+    {
+      name: "University of Massachusetts Student Government",
+      university: "University of Massachusetts Amherst",
+      club_description:
+        "Organizes student advocacy and leadership development programs.",
+      university_description:
+        "Public university with a commitment to student governance and representation.",
+    },
+    {
+      name: "University of Rhode Island Student Government",
+      university: "University of Rhode Island",
+      club_description:
+        "Facilitates student representation and leadership initiatives.",
+      university_description:
+        "Public university with a focus on student engagement and governance.",
+    },
+    {
+      name: "University of New Hampshire Student Government",
+      university: "University of New Hampshire",
+      club_description:
+        "Provides opportunities for student advocacy and leadership development.",
+      university_description:
+        "Public university known for its emphasis on student governance and activities.",
+    },
+    {
+      name: "University of Maine Student Government",
+      university: "University of Maine",
+      club_description:
+        "Represents student interests and leads leadership programs.",
+      university_description:
+        "Public university with a strong commitment to student governance and representation.",
+    },
+    {
+      name: "Syracuse University Student Government",
+      university: "Syracuse University",
+      club_description:
+        "Organizes student advocacy and leadership initiatives.",
+      university_description:
+        "Private university known for its focus on student representation and governance.",
+    },
+    {
+      name: "Boston College Student Government",
+      university: "Boston College",
+      club_description:
+        "Facilitates student representation and leadership activities.",
+      university_description:
+        "Private university with a strong emphasis on student governance and leadership.",
+    },
+    {
+      name: "Ohio State University Student Government",
+      university: "Ohio State University",
+      club_description:
+        "Provides opportunities for student advocacy and leadership development.",
+      university_description:
+        "Public university with a commitment to student governance and engagement.",
+    },
+    {
+      name: "Purdue University Student Government",
+      university: "Purdue University",
+      club_description:
+        "Represents student interests and organizes leadership initiatives.",
+      university_description:
+        "Public university known for its focus on student engagement and governance.",
+    },
+    {
+      name: "University of Kentucky Student Government",
+      university: "University of Kentucky",
+      club_description: "Engages in student advocacy and leadership programs.",
+      university_description:
+        "Public university with a strong emphasis on student governance and activities.",
+    },
+    {
+      name: "Clemson University Student Government",
+      university: "Clemson University",
+      club_description:
+        "Facilitates student representation and leadership development.",
+      university_description:
+        "Public university with a commitment to student governance and engagement.",
+    },
+    {
+      name: "University of Kansas Student Government",
+      university: "University of Kansas",
+      club_description:
+        "Organizes student advocacy and leadership initiatives.",
+      university_description:
+        "Public university with a focus on student representation and governance.",
+    },
+    {
+      name: "University of Nebraska Student Government",
+      university: "University of Nebraska-Lincoln",
+      club_description:
+        "Represents student interests and leads leadership development programs.",
+      university_description:
+        "Public university known for its emphasis on student governance and engagement.",
+    },
+    {
+      name: "Iowa State University Student Government",
+      university: "Iowa State University",
+      club_description:
+        "Provides opportunities for student advocacy and leadership development.",
+      university_description:
+        "Public university with a strong focus on student representation and governance.",
+    },
+    {
+      name: "University of Oregon Student Government",
+      university: "University of Oregon",
+      club_description:
+        "Facilitates student representation and leadership initiatives.",
+      university_description:
+        "Public university with a commitment to student governance and activities.",
+    },
+  ],
+  charityAndFundraisingClubs: [
+    {
+      name: "Harvard College Philanthropy",
+      university: "Harvard University",
+      club_description:
+        "Organizes fundraising events and charitable activities to support various causes.",
+      university_description:
+        "Ivy League university with a strong focus on community service and philanthropy.",
+    },
+    {
+      name: "Stanford Students for Charity",
+      university: "Stanford University",
+      club_description:
+        "Facilitates fundraising efforts and volunteer opportunities for local and global causes.",
+      university_description:
+        "Private university known for its commitment to community service and philanthropy.",
+    },
+    {
+      name: "Yale College Fundraisers",
+      university: "Yale University",
+      club_description:
+        "Engages in fundraising campaigns and charity events to support different nonprofits.",
+      university_description:
+        "Ivy League institution with a focus on philanthropy and community involvement.",
+    },
+    {
+      name: "University of Chicago Charity League",
+      university: "University of Chicago",
+      club_description:
+        "Organizes charity drives and fundraising activities to benefit various organizations.",
+      university_description:
+        "Private university known for its emphasis on charitable work and community service.",
+    },
+    {
+      name: "Columbia University Philanthropy Society",
+      university: "Columbia University",
+      club_description:
+        "Coordinates fundraising efforts and charitable events for local and international causes.",
+      university_description:
+        "Ivy League university with a strong commitment to philanthropy and community support.",
+    },
+    {
+      name: "MIT Charitable Initiatives",
+      university: "Massachusetts Institute of Technology",
+      club_description:
+        "Facilitates fundraising and charity events to support global and local causes.",
+      university_description:
+        "Renowned for its focus on innovation and philanthropy.",
+    },
+    {
+      name: "UC Berkeley Charity and Fundraising",
+      university: "University of California, Berkeley",
+      club_description:
+        "Organizes charity events and fundraising campaigns to support various nonprofits.",
+      university_description:
+        "Public university with a strong commitment to community service and charitable work.",
+    },
+    {
+      name: "UCLA Philanthropy Network",
+      university: "University of California, Los Angeles",
+      club_description:
+        "Engages in fundraising activities and charitable events for different causes.",
+      university_description:
+        "Public university known for its emphasis on community involvement and philanthropy.",
+    },
+    {
+      name: "Georgetown University Charity Group",
+      university: "Georgetown University",
+      club_description:
+        "Coordinates fundraising efforts and charity events to support a range of causes.",
+      university_description:
+        "Private university in Washington, D.C. with a strong focus on philanthropy and community service.",
+    },
+    {
+      name: "University of Pennsylvania Fundraisers",
+      university: "University of Pennsylvania",
+      club_description:
+        "Organizes charity drives and fundraising campaigns to benefit various organizations.",
+      university_description:
+        "Ivy League institution with a focus on community involvement and charitable work.",
+    },
+    {
+      name: "Duke University Charity Club",
+      university: "Duke University",
+      club_description:
+        "Facilitates fundraising events and charitable activities to support different causes.",
+      university_description:
+        "Private university with a strong commitment to philanthropy and community service.",
+    },
+    {
+      name: "University of Virginia Philanthropy",
+      university: "University of Virginia",
+      club_description:
+        "Organizes charity events and fundraising campaigns for local and global causes.",
+      university_description:
+        "Public university known for its focus on community involvement and charitable work.",
+    },
+    {
+      name: "University of Michigan Philanthropy Society",
+      university: "University of Michigan",
+      club_description:
+        "Engages in fundraising efforts and charity drives to support various nonprofits.",
+      university_description:
+        "Public university with a strong commitment to philanthropy and community service.",
+    },
+    {
+      name: "New York University Charity Initiative",
+      university: "New York University",
+      club_description:
+        "Coordinates fundraising events and charitable activities for diverse causes.",
+      university_description:
+        "Private university with a focus on community engagement and philanthropy.",
+    },
+    {
+      name: "University of Texas Charity Group",
+      university: "University of Texas at Austin",
+      club_description:
+        "Organizes charity events and fundraising campaigns to benefit local and global causes.",
+      university_description:
+        "Public university with a strong commitment to philanthropy and community service.",
+    },
+    {
+      name: "University of North Carolina Philanthropy",
+      university: "University of North Carolina at Chapel Hill",
+      club_description:
+        "Facilitates fundraising efforts and charitable activities for various organizations.",
+      university_description:
+        "Public university with an emphasis on community involvement and charitable work.",
+    },
+    {
+      name: "University of Wisconsin Fundraising",
+      university: "University of Wisconsin-Madison",
+      club_description:
+        "Engages in charity events and fundraising campaigns to support different causes.",
+      university_description:
+        "Public university with a focus on philanthropy and community service.",
+    },
+    {
+      name: "University of Florida Philanthropy",
+      university: "University of Florida",
+      club_description:
+        "Organizes charity drives and fundraising initiatives to benefit various nonprofits.",
+      university_description:
+        "Public university known for its commitment to community engagement and philanthropy.",
+    },
+    {
+      name: "University of Arizona Charity Club",
+      university: "University of Arizona",
+      club_description:
+        "Coordinates fundraising efforts and charity events for local and global causes.",
+      university_description:
+        "Public university with a strong focus on philanthropy and community service.",
+    },
+    {
+      name: "University of Illinois Fundraisers",
+      university: "University of Illinois Urbana-Champaign",
+      club_description:
+        "Organizes charity events and fundraising campaigns to support different causes.",
+      university_description:
+        "Public university with a commitment to philanthropy and community involvement.",
+    },
+    {
+      name: "University of Colorado Fundraising",
+      university: "University of Colorado Boulder",
+      club_description:
+        "Facilitates charity drives and fundraising events for various organizations.",
+      university_description:
+        "Public university known for its focus on community service and philanthropic activities.",
+    },
+    {
+      name: "University of Maryland Philanthropy",
+      university: "University of Maryland, College Park",
+      club_description:
+        "Engages in fundraising efforts and charity events to support local and global causes.",
+      university_description:
+        "Public university with a strong emphasis on community involvement and philanthropy.",
+    },
+    {
+      name: "University of Pittsburgh Charity Group",
+      university: "University of Pittsburgh",
+      club_description:
+        "Organizes charity drives and fundraising initiatives to benefit various organizations.",
+      university_description:
+        "Public university with a focus on philanthropy and community service.",
+    },
+    {
+      name: "University of Tennessee Fundraising",
+      university: "University of Tennessee",
+      club_description:
+        "Facilitates charity events and fundraising campaigns for different causes.",
+      university_description:
+        "Public university with a strong commitment to philanthropy and community engagement.",
+    },
+    {
+      name: "University of Georgia Philanthropy",
+      university: "University of Georgia",
+      club_description:
+        "Coordinates fundraising efforts and charity events to support various nonprofits.",
+      university_description:
+        "Public university known for its emphasis on community service and philanthropy.",
+    },
+    {
+      name: "University of Iowa Charity Club",
+      university: "University of Iowa",
+      club_description:
+        "Organizes charity drives and fundraising initiatives for local and global causes.",
+      university_description:
+        "Public university with a focus on philanthropy and community engagement.",
+    },
+    {
+      name: "University of South Carolina Philanthropy",
+      university: "University of South Carolina",
+      club_description:
+        "Facilitates charity events and fundraising campaigns for different causes.",
+      university_description:
+        "Public university with a strong commitment to community service and philanthropy.",
+    },
+    {
+      name: "Clemson University Charity Initiative",
+      university: "Clemson University",
+      club_description:
+        "Represents student interests through charity events and fundraising efforts.",
+      university_description:
+        "Public university known for its focus on philanthropy and community involvement.",
+    },
+    {
+      name: "Rutgers Charity Group",
+      university: "Rutgers University",
+      club_description:
+        "Engages in fundraising and charity activities to support various causes.",
+      university_description:
+        "Public university with a commitment to philanthropy and community service.",
+    },
+    {
+      name: "Michigan State Philanthropy",
+      university: "Michigan State University",
+      club_description:
+        "Organizes charity drives and fundraising campaigns for diverse causes.",
+      university_description:
+        "Public university with a strong emphasis on philanthropy and community engagement.",
+    },
+    {
+      name: "Washington University Fundraisers",
+      university: "Washington University in St. Louis",
+      club_description:
+        "Facilitates fundraising efforts and charitable activities for local and global causes.",
+      university_description:
+        "Private university known for its commitment to philanthropy and community service.",
+    },
+    {
+      name: "University of San Diego Philanthropy",
+      university: "University of San Diego",
+      club_description:
+        "Represents student interests through charity events and fundraising initiatives.",
+      university_description:
+        "Private university with a focus on community service and philanthropy.",
+    },
+    {
+      name: "Santa Clara University Charity Initiative",
+      university: "Santa Clara University",
+      club_description:
+        "Coordinates charity drives and fundraising campaigns for various nonprofits.",
+      university_description:
+        "Private university known for its commitment to philanthropy and community involvement.",
+    },
+    {
+      name: "University of Denver Charity Group",
+      university: "University of Denver",
+      club_description:
+        "Engages in fundraising efforts and charitable activities to support different causes.",
+      university_description:
+        "Private university with a strong focus on philanthropy and community service.",
+    },
+    {
+      name: "American University Charity Club",
+      university: "American University",
+      club_description:
+        "Organizes charity events and fundraising initiatives to benefit various organizations.",
+      university_description:
+        "Private university with a commitment to philanthropy and community engagement.",
+    },
+    {
+      name: "DePaul University Philanthropy",
+      university: "DePaul University",
+      club_description:
+        "Facilitates charity drives and fundraising efforts for local and global causes.",
+      university_description:
+        "Private university known for its focus on community service and philanthropic activities.",
+    },
+    {
+      name: "University of Miami Fundraisers",
+      university: "University of Miami",
+      club_description:
+        "Represents student interests through fundraising and charity events.",
+      university_description:
+        "Private university with a strong emphasis on philanthropy and community involvement.",
+    },
+    {
+      name: "Fordham University Charity Initiative",
+      university: "Fordham University",
+      club_description:
+        "Organizes charity drives and fundraising campaigns for diverse causes.",
+      university_description:
+        "Private university with a commitment to philanthropy and community service.",
+    },
+    {
+      name: "University of Notre Dame Philanthropy",
+      university: "University of Notre Dame",
+      club_description:
+        "Engages in fundraising efforts and charitable activities to support various nonprofits.",
+      university_description:
+        "Private university known for its focus on community service and philanthropy.",
+    },
+    {
+      name: "Vanderbilt University Charity Group",
+      university: "Vanderbilt University",
+      club_description:
+        "Facilitates charity events and fundraising initiatives for different causes.",
+      university_description:
+        "Private university with a strong commitment to philanthropy and community service.",
+    },
+    {
+      name: "Emory University Philanthropy",
+      university: "Emory University",
+      club_description:
+        "Coordinates fundraising campaigns and charity events to support various causes.",
+      university_description:
+        "Private university with a focus on community service and charitable work.",
+    },
+    {
+      name: "University of Richmond Charity Initiative",
+      university: "University of Richmond",
+      club_description:
+        "Organizes charity drives and fundraising efforts to benefit diverse nonprofits.",
+      university_description:
+        "Private university known for its commitment to philanthropy and community involvement.",
+    },
+    {
+      name: "Oberlin College Philanthropy",
+      university: "Oberlin College",
+      club_description:
+        "Represents student interests through charitable activities and fundraising events.",
+      university_description:
+        "Private liberal arts college with a focus on philanthropy and community service.",
+    },
+    {
+      name: "Swarthmore College Charity Group",
+      university: "Swarthmore College",
+      club_description:
+        "Engages in charity drives and fundraising campaigns to support various causes.",
+      university_description:
+        "Private liberal arts college with a strong commitment to philanthropy and community service.",
+    },
+    {
+      name: "Williams College Philanthropy",
+      university: "Williams College",
+      club_description:
+        "Facilitates fundraising events and charitable activities for diverse organizations.",
+      university_description:
+        "Private liberal arts college known for its focus on community service and philanthropy.",
+    },
+    {
+      name: "Amherst College Charity Initiative",
+      university: "Amherst College",
+      club_description:
+        "Coordinates charity drives and fundraising campaigns to benefit various nonprofits.",
+      university_description:
+        "Private liberal arts college with a strong emphasis on philanthropy and community service.",
+    },
+    {
+      name: "Wesleyan University Charity Club",
+      university: "Wesleyan University",
+      club_description:
+        "Organizes charity events and fundraising efforts to support different causes.",
+      university_description:
+        "Private liberal arts college known for its commitment to community service and philanthropy.",
+    },
+    {
+      name: "Reed College Philanthropy",
+      university: "Reed College",
+      club_description:
+        "Engages in fundraising campaigns and charitable activities for various causes.",
+      university_description:
+        "Private liberal arts college with a strong focus on community service and philanthropy.",
+    },
+    {
+      name: "Bennington College Charity Group",
+      university: "Bennington College",
+      club_description:
+        "Facilitates charity drives and fundraising events to benefit diverse nonprofits.",
+      university_description:
+        "Private liberal arts college known for its commitment to philanthropy and community service.",
+    },
+  ],
+  healthAndWellnessClubs: [
+    {
+      name: "Harvard Health and Wellness Club",
+      university: "Harvard University",
+      club_description:
+        "Promotes physical and mental well-being through workshops and fitness activities.",
+      university_description:
+        "Ivy League university with a focus on holistic student health and wellness.",
+    },
+    {
+      name: "Stanford Wellness Initiative",
+      university: "Stanford University",
+      club_description:
+        "Offers wellness programs and mental health support to improve student well-being.",
+      university_description:
+        "Private university known for its comprehensive health and wellness resources.",
+    },
+    {
+      name: "Yale Student Wellness Society",
+      university: "Yale University",
+      club_description:
+        "Provides resources and events focused on maintaining mental and physical health.",
+      university_description:
+        "Ivy League institution with strong support systems for student health and wellness.",
+    },
+    {
+      name: "University of Chicago Health Club",
+      university: "University of Chicago",
+      club_description:
+        "Organizes fitness classes and mental health workshops to promote student wellness.",
+      university_description:
+        "Private university with a commitment to holistic student health.",
+    },
+    {
+      name: "Columbia University Wellness Network",
+      university: "Columbia University",
+      club_description:
+        "Facilitates wellness activities and provides mental health resources for students.",
+      university_description:
+        "Ivy League university dedicated to promoting student well-being and health.",
+    },
+    {
+      name: "MIT Wellness Initiative",
+      university: "Massachusetts Institute of Technology",
+      club_description:
+        "Promotes physical fitness and mental health through various wellness programs.",
+      university_description:
+        "Renowned for its focus on innovation and comprehensive student health resources.",
+    },
+    {
+      name: "UC Berkeley Health and Wellness",
+      university: "University of California, Berkeley",
+      club_description:
+        "Offers a range of wellness programs including fitness classes and mental health support.",
+      university_description:
+        "Public university with a focus on student health and well-being.",
+    },
+    {
+      name: "UCLA Wellness Collective",
+      university: "University of California, Los Angeles",
+      club_description:
+        "Coordinates wellness events and mental health resources to support student well-being.",
+      university_description:
+        "Public university known for its extensive health and wellness programs.",
+    },
+    {
+      name: "Georgetown University Health Club",
+      university: "Georgetown University",
+      club_description:
+        "Provides wellness programs and mental health support for a balanced student lifestyle.",
+      university_description:
+        "Private university with a strong emphasis on student health and wellness.",
+    },
+    {
+      name: "University of Pennsylvania Wellness Society",
+      university: "University of Pennsylvania",
+      club_description:
+        "Facilitates wellness activities and mental health resources to enhance student life.",
+      university_description:
+        "Ivy League institution with comprehensive support for student well-being.",
+    },
+    {
+      name: "Duke University Health Initiative",
+      university: "Duke University",
+      club_description:
+        "Promotes physical and mental health through wellness programs and support services.",
+      university_description:
+        "Private university dedicated to fostering student health and wellness.",
+    },
+    {
+      name: "University of Virginia Wellness Group",
+      university: "University of Virginia",
+      club_description:
+        "Offers fitness classes and mental health workshops to support student well-being.",
+      university_description:
+        "Public university known for its focus on holistic student health.",
+    },
+    {
+      name: "University of Michigan Wellness Club",
+      university: "University of Michigan",
+      club_description:
+        "Organizes wellness activities and provides mental health resources for students.",
+      university_description:
+        "Public university with a commitment to comprehensive health and wellness programs.",
+    },
+    {
+      name: "New York University Wellness Initiative",
+      university: "New York University",
+      club_description:
+        "Facilitates wellness events and mental health support to improve student quality of life.",
+      university_description:
+        "Private university with a focus on holistic student health and wellness.",
+    },
+    {
+      name: "University of Texas Wellness Network",
+      university: "University of Texas at Austin",
+      club_description:
+        "Provides fitness programs and mental health resources to support student wellness.",
+      university_description:
+        "Public university dedicated to enhancing student health and well-being.",
+    },
+    {
+      name: "University of North Carolina Health Club",
+      university: "University of North Carolina at Chapel Hill",
+      club_description:
+        "Organizes wellness programs and mental health initiatives for student support.",
+      university_description:
+        "Public university with a strong focus on student health and wellness.",
+    },
+    {
+      name: "University of Wisconsin Wellness Society",
+      university: "University of Wisconsin-Madison",
+      club_description:
+        "Offers wellness activities and mental health resources to promote student well-being.",
+      university_description:
+        "Public university known for its emphasis on holistic student health.",
+    },
+    {
+      name: "University of Florida Wellness Group",
+      university: "University of Florida",
+      club_description:
+        "Facilitates fitness classes and mental health workshops to support student wellness.",
+      university_description:
+        "Public university with a commitment to comprehensive health and wellness programs.",
+    },
+    {
+      name: "University of Arizona Health Initiative",
+      university: "University of Arizona",
+      club_description:
+        "Promotes physical and mental health through wellness programs and support services.",
+      university_description:
+        "Public university known for its focus on student health and well-being.",
+    },
+    {
+      name: "University of Illinois Wellness Club",
+      university: "University of Illinois Urbana-Champaign",
+      club_description:
+        "Offers wellness events and mental health resources to support student life.",
+      university_description:
+        "Public university with a strong commitment to student health and wellness.",
+    },
+    {
+      name: "University of Colorado Wellness Network",
+      university: "University of Colorado Boulder",
+      club_description:
+        "Coordinates wellness programs and mental health support for students.",
+      university_description:
+        "Public university with a focus on promoting student well-being.",
+    },
+    {
+      name: "University of Maryland Health Club",
+      university: "University of Maryland, College Park",
+      club_description:
+        "Organizes fitness and wellness activities to support student health.",
+      university_description:
+        "Public university with a strong emphasis on holistic student wellness.",
+    },
+    {
+      name: "University of Pittsburgh Wellness Initiative",
+      university: "University of Pittsburgh",
+      club_description:
+        "Facilitates wellness events and mental health resources for students.",
+      university_description:
+        "Public university dedicated to comprehensive health and wellness programs.",
+    },
+    {
+      name: "University of Tennessee Wellness Group",
+      university: "University of Tennessee",
+      club_description:
+        "Promotes physical and mental health through various wellness activities.",
+      university_description:
+        "Public university known for its focus on student health and well-being.",
+    },
+    {
+      name: "University of Georgia Health Club",
+      university: "University of Georgia",
+      club_description:
+        "Offers fitness programs and mental health support for students.",
+      university_description:
+        "Public university with a strong commitment to holistic student wellness.",
+    },
+    {
+      name: "University of Iowa Wellness Initiative",
+      university: "University of Iowa",
+      club_description:
+        "Facilitates wellness programs and mental health resources for a balanced student lifestyle.",
+      university_description:
+        "Public university with a focus on comprehensive student health and wellness.",
+    },
+    {
+      name: "University of South Carolina Wellness Club",
+      university: "University of South Carolina",
+      club_description:
+        "Organizes fitness and wellness events to support student well-being.",
+      university_description:
+        "Public university known for its commitment to student health and wellness.",
+    },
+    {
+      name: "Clemson University Health Initiative",
+      university: "Clemson University",
+      club_description:
+        "Provides wellness activities and mental health support for students.",
+      university_description:
+        "Public university dedicated to enhancing student well-being and health.",
+    },
+    {
+      name: "Rutgers Wellness Network",
+      university: "Rutgers University",
+      club_description:
+        "Offers wellness programs and mental health resources to promote student health.",
+      university_description:
+        "Public university with a strong emphasis on holistic student wellness.",
+    },
+    {
+      name: "Michigan State Health Club",
+      university: "Michigan State University",
+      club_description:
+        "Coordinates fitness classes and mental health workshops to support student wellness.",
+      university_description:
+        "Public university known for its commitment to student health and well-being.",
+    },
+    {
+      name: "Washington University Wellness Society",
+      university: "Washington University in St. Louis",
+      club_description:
+        "Facilitates wellness events and mental health support for students.",
+      university_description:
+        "Private university with a strong focus on comprehensive student health and wellness.",
+    },
+    {
+      name: "University of San Diego Wellness Initiative",
+      university: "University of San Diego",
+      club_description:
+        "Organizes fitness programs and mental health workshops to support student well-being.",
+      university_description:
+        "Private university known for its commitment to student health and wellness.",
+    },
+    {
+      name: "Santa Clara University Health Club",
+      university: "Santa Clara University",
+      club_description:
+        "Offers wellness activities and mental health resources for a balanced student lifestyle.",
+      university_description:
+        "Private university with a focus on holistic student health and wellness.",
+    },
+    {
+      name: "University of Denver Wellness Initiative",
+      university: "University of Denver",
+      club_description:
+        "Coordinates wellness events and mental health support for students.",
+      university_description:
+        "Private university known for its emphasis on student health and well-being.",
+    },
+    {
+      name: "American University Wellness Club",
+      university: "American University",
+      club_description:
+        "Promotes physical fitness and mental health through various wellness programs.",
+      university_description:
+        "Private university with a strong commitment to student health and wellness.",
+    },
+    {
+      name: "DePaul University Health Initiative",
+      university: "DePaul University",
+      club_description:
+        "Provides wellness programs and mental health resources to support student well-being.",
+      university_description:
+        "Private university known for its focus on holistic student health.",
+    },
+    {
+      name: "University of Miami Wellness Society",
+      university: "University of Miami",
+      club_description:
+        "Facilitates wellness activities and mental health support for students.",
+      university_description:
+        "Private university with a strong commitment to comprehensive student health and wellness.",
+    },
+    {
+      name: "Fordham University Wellness Initiative",
+      university: "Fordham University",
+      club_description:
+        "Organizes fitness classes and mental health workshops to support student well-being.",
+      university_description:
+        "Private university with a focus on student health and wellness.",
+    },
+    {
+      name: "University of Notre Dame Health Club",
+      university: "University of Notre Dame",
+      club_description:
+        "Offers wellness programs and mental health resources to promote student health.",
+      university_description:
+        "Private university known for its commitment to holistic student wellness.",
+    },
+    {
+      name: "Vanderbilt University Wellness Group",
+      university: "Vanderbilt University",
+      club_description:
+        "Coordinates fitness and wellness activities to support student well-being.",
+      university_description:
+        "Private university dedicated to enhancing student health and wellness.",
+    },
+    {
+      name: "Emory University Health Initiative",
+      university: "Emory University",
+      club_description:
+        "Facilitates wellness events and mental health support for students.",
+      university_description:
+        "Private university with a strong focus on holistic student health.",
+    },
+    {
+      name: "University of Richmond Wellness Club",
+      university: "University of Richmond",
+      club_description:
+        "Provides wellness programs and mental health resources to support student well-being.",
+      university_description:
+        "Private university known for its emphasis on student health and wellness.",
+    },
+    {
+      name: "Oberlin College Wellness Initiative",
+      university: "Oberlin College",
+      club_description:
+        "Organizes fitness and wellness activities to promote student health.",
+      university_description:
+        "Private liberal arts college with a strong commitment to student wellness.",
+    },
+    {
+      name: "Swarthmore College Health Club",
+      university: "Swarthmore College",
+      club_description:
+        "Offers wellness programs and mental health support for students.",
+      university_description:
+        "Private liberal arts college with a focus on holistic student health.",
+    },
+    {
+      name: "Williams College Wellness Society",
+      university: "Williams College",
+      club_description:
+        "Coordinates wellness activities and mental health resources for student well-being.",
+      university_description:
+        "Private liberal arts college dedicated to promoting student health.",
+    },
+    {
+      name: "Amherst College Health Club",
+      university: "Amherst College",
+      club_description:
+        "Facilitates wellness programs and mental health support for students.",
+      university_description:
+        "Private liberal arts college with a commitment to comprehensive student health.",
+    },
+    {
+      name: "Wesleyan University Wellness Initiative",
+      university: "Wesleyan University",
+      club_description:
+        "Promotes physical fitness and mental health through various wellness events.",
+      university_description:
+        "Private liberal arts college with a strong emphasis on student well-being.",
+    },
+    {
+      name: "Reed College Health Group",
+      university: "Reed College",
+      club_description:
+        "Offers wellness programs and mental health resources for students.",
+      university_description:
+        "Private liberal arts college known for its commitment to holistic student health.",
+    },
+    {
+      name: "Bennington College Wellness Initiative",
+      university: "Bennington College",
+      club_description:
+        "Facilitates fitness and wellness activities to support student well-being.",
+      university_description:
+        "Private liberal arts college with a focus on comprehensive student health.",
+    },
+  ],
+  foodAndCookingClubs: [
+    {
+      name: "Harvard Culinary Club",
+      university: "Harvard University",
+      club_description:
+        "Hosts cooking classes and food events to explore diverse cuisines.",
+      university_description:
+        "Ivy League university with a strong focus on culinary arts and food culture.",
+    },
+    {
+      name: "Stanford Gourmet Society",
+      university: "Stanford University",
+      club_description:
+        "Organizes gourmet cooking events and food tastings for students.",
+      university_description:
+        "Private university known for its innovative approach to food and cooking.",
+    },
+    {
+      name: "Yale Foodie Club",
+      university: "Yale University",
+      club_description:
+        "Facilitates cooking workshops and food appreciation events for students.",
+      university_description:
+        "Ivy League institution with a commitment to exploring global cuisines.",
+    },
+    {
+      name: "University of Chicago Culinary Club",
+      university: "University of Chicago",
+      club_description:
+        "Offers cooking classes and food-related activities to enhance culinary skills.",
+      university_description:
+        "Private university with a focus on food culture and culinary exploration.",
+    },
+    {
+      name: "Columbia University Food Society",
+      university: "Columbia University",
+      club_description:
+        "Coordinates food events and cooking workshops to engage students in culinary arts.",
+      university_description:
+        "Ivy League university known for its diverse food culture and culinary events.",
+    },
+    {
+      name: "MIT Culinary Club",
+      university: "Massachusetts Institute of Technology",
+      club_description:
+        "Organizes cooking classes and food events to promote culinary skills among students.",
+      university_description:
+        "Renowned for its focus on technology and innovation, including culinary arts.",
+    },
+    {
+      name: "UC Berkeley Food Collective",
+      university: "University of California, Berkeley",
+      club_description:
+        "Facilitates cooking workshops and food events to celebrate diverse cuisines.",
+      university_description:
+        "Public university with a strong emphasis on food culture and culinary education.",
+    },
+    {
+      name: "UCLA Cooking Club",
+      university: "University of California, Los Angeles",
+      club_description:
+        "Hosts cooking classes and food-related events to engage students in culinary activities.",
+      university_description:
+        "Public university known for its vibrant food culture and culinary programs.",
+    },
+    {
+      name: "Georgetown University Culinary Society",
+      university: "Georgetown University",
+      club_description:
+        "Offers food events and cooking classes to explore different culinary traditions.",
+      university_description:
+        "Private university with a focus on diverse culinary experiences.",
+    },
+    {
+      name: "University of Pennsylvania Food Club",
+      university: "University of Pennsylvania",
+      club_description:
+        "Coordinates cooking workshops and food events for students interested in culinary arts.",
+      university_description:
+        "Ivy League institution with a commitment to food culture and culinary exploration.",
+    },
+    {
+      name: "Duke University Culinary Initiative",
+      university: "Duke University",
+      club_description:
+        "Organizes food events and cooking classes to enhance students' culinary skills.",
+      university_description:
+        "Private university known for its focus on diverse food experiences.",
+    },
+    {
+      name: "University of Virginia Food Society",
+      university: "University of Virginia",
+      club_description:
+        "Facilitates cooking classes and food events to celebrate culinary diversity.",
+      university_description:
+        "Public university with a strong emphasis on food culture and culinary arts.",
+    },
+    {
+      name: "University of Michigan Culinary Club",
+      university: "University of Michigan",
+      club_description:
+        "Hosts food events and cooking workshops to engage students in culinary activities.",
+      university_description:
+        "Public university with a focus on food culture and culinary skills.",
+    },
+    {
+      name: "New York University Foodie Group",
+      university: "New York University",
+      club_description:
+        "Offers cooking classes and food events to explore various cuisines and culinary techniques.",
+      university_description:
+        "Private university known for its vibrant food scene and culinary programs.",
+    },
+    {
+      name: "University of Texas Cooking Club",
+      university: "University of Texas at Austin",
+      club_description:
+        "Organizes food events and cooking workshops to celebrate diverse culinary traditions.",
+      university_description:
+        "Public university with a strong focus on food culture and culinary arts.",
+    },
+    {
+      name: "University of North Carolina Culinary Club",
+      university: "University of North Carolina at Chapel Hill",
+      club_description:
+        "Facilitates cooking classes and food events to enhance culinary skills among students.",
+      university_description:
+        "Public university known for its commitment to food culture and culinary exploration.",
+    },
+    {
+      name: "University of Wisconsin Food Society",
+      university: "University of Wisconsin-Madison",
+      club_description:
+        "Hosts food events and cooking workshops to engage students in diverse culinary practices.",
+      university_description:
+        "Public university with a focus on food culture and culinary education.",
+    },
+    {
+      name: "University of Florida Culinary Initiative",
+      university: "University of Florida",
+      club_description:
+        "Offers cooking classes and food events to explore various cuisines and culinary techniques.",
+      university_description:
+        "Public university with a strong emphasis on food culture and culinary arts.",
+    },
+    {
+      name: "University of Arizona Food Club",
+      university: "University of Arizona",
+      club_description:
+        "Organizes cooking workshops and food events to celebrate diverse culinary traditions.",
+      university_description:
+        "Public university known for its commitment to food culture and culinary skills.",
+    },
+    {
+      name: "University of Illinois Culinary Society",
+      university: "University of Illinois Urbana-Champaign",
+      club_description:
+        "Facilitates food events and cooking classes to enhance students' culinary skills.",
+      university_description:
+        "Public university with a focus on food culture and culinary education.",
+    },
+    {
+      name: "University of Colorado Food Collective",
+      university: "University of Colorado Boulder",
+      club_description:
+        "Hosts cooking classes and food-related events to engage students in diverse cuisines.",
+      university_description:
+        "Public university known for its vibrant food culture and culinary programs.",
+    },
+    {
+      name: "University of Maryland Culinary Club",
+      university: "University of Maryland, College Park",
+      club_description:
+        "Offers food events and cooking workshops to explore various culinary techniques.",
+      university_description:
+        "Public university with a strong focus on food culture and culinary skills.",
+    },
+    {
+      name: "University of Pittsburgh Food Initiative",
+      university: "University of Pittsburgh",
+      club_description:
+        "Organizes cooking classes and food events to celebrate diverse culinary traditions.",
+      university_description:
+        "Public university with a commitment to food culture and culinary arts.",
+    },
+    {
+      name: "University of Tennessee Culinary Club",
+      university: "University of Tennessee",
+      club_description:
+        "Facilitates food events and cooking workshops to enhance students' culinary skills.",
+      university_description:
+        "Public university with a strong emphasis on food culture and culinary education.",
+    },
+    {
+      name: "University of Georgia Food Society",
+      university: "University of Georgia",
+      club_description:
+        "Hosts cooking classes and food-related events to engage students in culinary practices.",
+      university_description:
+        "Public university known for its commitment to food culture and culinary arts.",
+    },
+    {
+      name: "University of Iowa Culinary Club",
+      university: "University of Iowa",
+      club_description:
+        "Offers food events and cooking workshops to explore diverse cuisines.",
+      university_description:
+        "Public university with a focus on food culture and culinary skills.",
+    },
+    {
+      name: "University of South Carolina Culinary Initiative",
+      university: "University of South Carolina",
+      club_description:
+        "Organizes cooking classes and food events to celebrate various culinary traditions.",
+      university_description:
+        "Public university with a strong commitment to food culture and culinary education.",
+    },
+    {
+      name: "Clemson University Food Society",
+      university: "Clemson University",
+      club_description:
+        "Facilitates food events and cooking workshops to enhance culinary skills.",
+      university_description:
+        "Public university known for its focus on food culture and culinary arts.",
+    },
+    {
+      name: "Rutgers Culinary Club",
+      university: "Rutgers University",
+      club_description:
+        "Offers cooking classes and food events to explore diverse cuisines and culinary techniques.",
+      university_description:
+        "Public university with a strong commitment to student culinary education.",
+    },
+    {
+      name: "Michigan State Food Initiative",
+      university: "Michigan State University",
+      club_description:
+        "Hosts food events and cooking workshops to celebrate culinary diversity.",
+      university_description:
+        "Public university known for its focus on food culture and culinary skills.",
+    },
+    {
+      name: "Washington University Culinary Society",
+      university: "Washington University in St. Louis",
+      club_description:
+        "Organizes cooking classes and food-related events to engage students in culinary practices.",
+      university_description:
+        "Private university with a strong emphasis on food culture and culinary education.",
+    },
+    {
+      name: "University of San Diego Culinary Club",
+      university: "University of San Diego",
+      club_description:
+        "Facilitates cooking workshops and food events to explore various cuisines.",
+      university_description:
+        "Private university known for its commitment to food culture and culinary skills.",
+    },
+    {
+      name: "Santa Clara University Food Initiative",
+      university: "Santa Clara University",
+      club_description:
+        "Hosts cooking classes and food events to enhance students' culinary skills.",
+      university_description:
+        "Private university with a focus on culinary arts and food culture.",
+    },
+    {
+      name: "University of Denver Culinary Society",
+      university: "University of Denver",
+      club_description:
+        "Offers food events and cooking workshops to celebrate diverse culinary traditions.",
+      university_description:
+        "Private university known for its strong focus on food culture and culinary arts.",
+    },
+    {
+      name: "American University Culinary Club",
+      university: "American University",
+      club_description:
+        "Facilitates cooking classes and food events to explore various cuisines and techniques.",
+      university_description:
+        "Private university with a commitment to culinary arts and food culture.",
+    },
+    {
+      name: "DePaul University Food Society",
+      university: "DePaul University",
+      club_description:
+        "Organizes food events and cooking workshops to enhance culinary skills among students.",
+      university_description:
+        "Private university known for its focus on diverse culinary experiences.",
+    },
+    {
+      name: "University of Miami Culinary Initiative",
+      university: "University of Miami",
+      club_description:
+        "Hosts cooking classes and food-related events to engage students in culinary practices.",
+      university_description:
+        "Private university with a strong emphasis on food culture and culinary arts.",
+    },
+    {
+      name: "Fordham University Food Club",
+      university: "Fordham University",
+      club_description:
+        "Facilitates food events and cooking workshops to celebrate diverse cuisines.",
+      university_description:
+        "Private university with a focus on culinary arts and food culture.",
+    },
+    {
+      name: "Loyola University Chicago Culinary Club",
+      university: "Loyola University Chicago",
+      club_description:
+        "Offers cooking classes and food-related events to explore various culinary traditions.",
+      university_description:
+        "Private university known for its commitment to food culture and culinary education.",
+    },
+    {
+      name: "Seton Hall University Food Society",
+      university: "Seton Hall University",
+      club_description:
+        "Organizes cooking workshops and food events to enhance culinary skills.",
+      university_description:
+        "Private university with a focus on diverse culinary experiences.",
+    },
+    {
+      name: "Marquette University Culinary Club",
+      university: "Marquette University",
+      club_description:
+        "Hosts food events and cooking classes to engage students in diverse cuisines.",
+      university_description:
+        "Private university known for its strong focus on food culture and culinary skills.",
+    },
+    {
+      name: "Creighton University Food Initiative",
+      university: "Creighton University",
+      club_description:
+        "Facilitates cooking workshops and food-related events to enhance students' culinary skills.",
+      university_description:
+        "Private university with a commitment to food culture and culinary arts.",
+    },
+    {
+      name: "University of Notre Dame Culinary Society",
+      university: "University of Notre Dame",
+      club_description:
+        "Offers cooking classes and food events to explore various cuisines.",
+      university_description:
+        "Private university with a focus on food culture and culinary education.",
+    },
+    {
+      name: "Villanova University Food Club",
+      university: "Villanova University",
+      club_description:
+        "Hosts food events and cooking workshops to celebrate diverse culinary traditions.",
+      university_description:
+        "Private university known for its commitment to culinary arts and food culture.",
+    },
+    {
+      name: "University of Hartford Culinary Club",
+      university: "University of Hartford",
+      club_description:
+        "Facilitates cooking classes and food events to explore various cuisines and techniques.",
+      university_description:
+        "Private university with a focus on food culture and culinary skills.",
+    },
+    {
+      name: "Quinnipiac University Food Society",
+      university: "Quinnipiac University",
+      club_description:
+        "Organizes cooking workshops and food events to enhance culinary skills among students.",
+      university_description:
+        "Private university with a strong emphasis on food culture and culinary education.",
+    },
+    {
+      name: "Northeastern University Culinary Initiative",
+      university: "Northeastern University",
+      club_description:
+        "Hosts food events and cooking classes to engage students in diverse cuisines.",
+      university_description:
+        "Private university known for its commitment to food culture and culinary arts.",
+    },
+    {
+      name: "University of Cincinnati Food Club",
+      university: "University of Cincinnati",
+      club_description:
+        "Facilitates cooking workshops and food-related events to explore various culinary traditions.",
+      university_description:
+        "Public university with a focus on food culture and culinary education.",
+    },
+    {
+      name: "University of Louisville Culinary Society",
+      university: "University of Louisville",
+      club_description:
+        "Offers cooking classes and food events to enhance students' culinary skills.",
+      university_description:
+        "Public university known for its strong focus on food culture and culinary arts.",
+    },
+    {
+      name: "Baylor University Food Initiative",
+      university: "Baylor University",
+      club_description:
+        "Organizes food events and cooking workshops to celebrate diverse culinary traditions.",
+      university_description:
+        "Private university with a commitment to food culture and culinary exploration.",
+    },
+    {
+      name: "Oklahoma State Culinary Club",
+      university: "Oklahoma State University",
+      club_description:
+        "Hosts cooking classes and food events to explore various cuisines and techniques.",
+      university_description:
+        "Public university with a strong focus on food culture and culinary education.",
+    },
+    {
+      name: "Missouri University of Science and Technology Food Society",
+      university: "Missouri University of Science and Technology",
+      club_description:
+        "Facilitates cooking workshops and food-related events to enhance culinary skills.",
+      university_description:
+        "Public university known for its emphasis on technology and culinary arts.",
+    },
+    {
+      name: "West Virginia University Culinary Club",
+      university: "West Virginia University",
+      club_description:
+        "Offers cooking classes and food events to explore diverse culinary traditions.",
+      university_description:
+        "Public university with a strong commitment to food culture and culinary skills.",
+    },
+    {
+      name: "University of Alabama Food Society",
+      university: "University of Alabama",
+      club_description:
+        "Organizes food events and cooking workshops to enhance students' culinary skills.",
+      university_description:
+        "Public university known for its commitment to diverse culinary experiences.",
+    },
+    {
+      name: "University of Mississippi Culinary Initiative",
+      university: "University of Mississippi",
+      club_description:
+        "Hosts cooking classes and food events to explore various cuisines.",
+      university_description:
+        "Public university with a focus on food culture and culinary education.",
+    },
+    {
+      name: "University of Nebraska Food Club",
+      university: "University of Nebraska",
+      club_description:
+        "Facilitates cooking workshops and food-related events to celebrate diverse culinary traditions.",
+      university_description:
+        "Public university with a strong emphasis on food culture and culinary skills.",
+    },
+    {
+      name: "University of Kansas Culinary Society",
+      university: "University of Kansas",
+      club_description:
+        "Offers cooking classes and food events to enhance students' culinary skills.",
+      university_description:
+        "Public university known for its focus on food culture and culinary arts.",
+    },
+    {
+      name: "Iowa State University Food Initiative",
+      university: "Iowa State University",
+      club_description:
+        "Organizes cooking workshops and food-related events to explore diverse cuisines.",
+      university_description:
+        "Public university with a commitment to food culture and culinary education.",
+    },
+  ],
+  historicalAndArchaeologicalClubs: [
+    {
+      name: "Harvard Historical Society",
+      university: "Harvard University",
+      club_description:
+        "Explores historical events and archaeological discoveries through lectures and field trips.",
+      university_description:
+        "Ivy League university with a rich history and strong focus on historical research.",
+    },
+    {
+      name: "Stanford Archaeological Club",
+      university: "Stanford University",
+      club_description:
+        "Engages in archaeological digs and historical studies to uncover ancient artifacts.",
+      university_description:
+        "Private university known for its commitment to historical and archaeological research.",
+    },
+    {
+      name: "Yale Historical Society",
+      university: "Yale University",
+      club_description:
+        "Organizes events and discussions on historical topics and archaeological findings.",
+      university_description:
+        "Ivy League institution with a deep focus on history and archaeology.",
+    },
+    {
+      name: "University of Chicago History Club",
+      university: "University of Chicago",
+      club_description:
+        "Hosts lectures and field trips to study historical events and archaeological sites.",
+      university_description:
+        "Private university renowned for its emphasis on historical and archaeological research.",
+    },
+    {
+      name: "Columbia University Archaeological Society",
+      university: "Columbia University",
+      club_description:
+        "Facilitates archaeological digs and historical research projects.",
+      university_description:
+        "Ivy League university with a strong focus on historical studies and archaeology.",
+    },
+    {
+      name: "MIT Historical Club",
+      university: "Massachusetts Institute of Technology",
+      club_description:
+        "Organizes historical discussions and archaeological research opportunities for students.",
+      university_description:
+        "Known for its technological focus, with a strong interest in historical research and archaeology.",
+    },
+    {
+      name: "UC Berkeley Historical Society",
+      university: "University of California, Berkeley",
+      club_description:
+        "Engages students in historical research and archaeological fieldwork.",
+      university_description:
+        "Public university known for its extensive historical and archaeological programs.",
+    },
+    {
+      name: "UCLA Archaeological Club",
+      university: "University of California, Los Angeles",
+      club_description:
+        "Offers opportunities for archaeological digs and historical research.",
+      university_description:
+        "Public university with a focus on historical studies and archaeological exploration.",
+    },
+    {
+      name: "Georgetown University History Society",
+      university: "Georgetown University",
+      club_description:
+        "Hosts events and research opportunities related to historical and archaeological studies.",
+      university_description:
+        "Private university with a strong commitment to historical and archaeological research.",
+    },
+    {
+      name: "University of Pennsylvania Archaeological Society",
+      university: "University of Pennsylvania",
+      club_description:
+        "Organizes field trips and research projects focused on historical and archaeological studies.",
+      university_description:
+        "Ivy League institution with a deep focus on historical research and archaeology.",
+    },
+    {
+      name: "Duke University Historical Club",
+      university: "Duke University",
+      club_description:
+        "Facilitates discussions and research on historical events and archaeological findings.",
+      university_description:
+        "Private university known for its strong emphasis on historical and archaeological studies.",
+    },
+    {
+      name: "University of Virginia History Club",
+      university: "University of Virginia",
+      club_description:
+        "Engages in historical research and archaeological exploration through various events.",
+      university_description:
+        "Public university with a commitment to history and archaeology.",
+    },
+    {
+      name: "University of Michigan Archaeological Society",
+      university: "University of Michigan",
+      club_description:
+        "Hosts archaeological digs and historical research projects for students.",
+      university_description:
+        "Public university known for its extensive historical and archaeological programs.",
+    },
+    {
+      name: "New York University History Club",
+      university: "New York University",
+      club_description:
+        "Organizes historical discussions and archaeological research opportunities.",
+      university_description:
+        "Private university with a strong focus on historical studies and archaeology.",
+    },
+    {
+      name: "University of Texas Historical Society",
+      university: "University of Texas at Austin",
+      club_description:
+        "Facilitates historical research and archaeological fieldwork for students.",
+      university_description:
+        "Public university with a deep interest in historical and archaeological studies.",
+    },
+    {
+      name: "University of North Carolina History Club",
+      university: "University of North Carolina at Chapel Hill",
+      club_description:
+        "Offers opportunities for historical and archaeological research through events and projects.",
+      university_description:
+        "Public university known for its commitment to history and archaeology.",
+    },
+    {
+      name: "University of Wisconsin Historical Society",
+      university: "University of Wisconsin-Madison",
+      club_description:
+        "Hosts research projects and field trips related to historical and archaeological studies.",
+      university_description:
+        "Public university with a focus on historical research and archaeological exploration.",
+    },
+    {
+      name: "University of Florida History Club",
+      university: "University of Florida",
+      club_description:
+        "Organizes events and research opportunities in history and archaeology.",
+      university_description:
+        "Public university with a strong emphasis on historical studies and archaeological research.",
+    },
+    {
+      name: "University of Arizona Archaeological Club",
+      university: "University of Arizona",
+      club_description:
+        "Facilitates archaeological digs and historical research projects for students.",
+      university_description:
+        "Public university known for its focus on historical and archaeological studies.",
+    },
+    {
+      name: "University of Illinois History Society",
+      university: "University of Illinois Urbana-Champaign",
+      club_description:
+        "Hosts lectures and research opportunities related to history and archaeology.",
+      university_description:
+        "Public university with a strong commitment to historical and archaeological research.",
+    },
+    {
+      name: "University of Colorado Historical Club",
+      university: "University of Colorado Boulder",
+      club_description:
+        "Organizes historical research projects and archaeological fieldwork for students.",
+      university_description:
+        "Public university known for its emphasis on history and archaeology.",
+    },
+    {
+      name: "University of Maryland Archaeological Society",
+      university: "University of Maryland, College Park",
+      club_description:
+        "Facilitates archaeological research and historical studies through various events.",
+      university_description:
+        "Public university with a focus on historical and archaeological research.",
+    },
+    {
+      name: "University of Pittsburgh History Club",
+      university: "University of Pittsburgh",
+      club_description:
+        "Engages students in historical research and archaeological exploration.",
+      university_description:
+        "Public university known for its commitment to history and archaeological studies.",
+    },
+    {
+      name: "University of Tennessee Historical Society",
+      university: "University of Tennessee",
+      club_description:
+        "Offers research opportunities and field trips related to historical and archaeological studies.",
+      university_description:
+        "Public university with a strong focus on historical and archaeological research.",
+    },
+    {
+      name: "University of Georgia Archaeological Club",
+      university: "University of Georgia",
+      club_description:
+        "Hosts archaeological digs and historical research events for students.",
+      university_description:
+        "Public university known for its emphasis on history and archaeology.",
+    },
+    {
+      name: "University of Iowa History Club",
+      university: "University of Iowa",
+      club_description:
+        "Facilitates historical research and archaeological fieldwork through various activities.",
+      university_description:
+        "Public university with a commitment to historical and archaeological studies.",
+    },
+    {
+      name: "University of South Carolina Historical Society",
+      university: "University of South Carolina",
+      club_description:
+        "Organizes research projects and field trips related to history and archaeology.",
+      university_description:
+        "Public university with a strong focus on historical and archaeological research.",
+    },
+    {
+      name: "Clemson University Archaeological Club",
+      university: "Clemson University",
+      club_description:
+        "Offers opportunities for archaeological digs and historical research.",
+      university_description:
+        "Public university known for its focus on history and archaeological studies.",
+    },
+    {
+      name: "Rutgers Historical Society",
+      university: "Rutgers University",
+      club_description:
+        "Hosts historical research events and archaeological field trips for students.",
+      university_description:
+        "Public university with a strong commitment to historical and archaeological studies.",
+    },
+    {
+      name: "Michigan State History Club",
+      university: "Michigan State University",
+      club_description:
+        "Facilitates historical research and archaeological exploration through various events.",
+      university_description:
+        "Public university with a focus on history and archaeology.",
+    },
+    {
+      name: "Washington University Archaeological Society",
+      university: "Washington University in St. Louis",
+      club_description:
+        "Organizes archaeological digs and historical research opportunities.",
+      university_description:
+        "Private university known for its commitment to historical and archaeological studies.",
+    },
+    {
+      name: "University of San Diego Historical Club",
+      university: "University of San Diego",
+      club_description:
+        "Offers opportunities for historical research and archaeological fieldwork.",
+      university_description:
+        "Private university with a strong focus on history and archaeology.",
+    },
+    {
+      name: "Santa Clara University Archaeological Society",
+      university: "Santa Clara University",
+      club_description:
+        "Facilitates archaeological research and historical studies through various events.",
+      university_description:
+        "Private university known for its commitment to historical and archaeological research.",
+    },
+    {
+      name: "University of Denver History Club",
+      university: "University of Denver",
+      club_description:
+        "Hosts historical research events and archaeological field trips for students.",
+      university_description:
+        "Private university with a focus on history and archaeology.",
+    },
+    {
+      name: "American University Archaeological Society",
+      university: "American University",
+      club_description:
+        "Offers opportunities for archaeological digs and historical research.",
+      university_description:
+        "Private university known for its commitment to historical and archaeological studies.",
+    },
+    {
+      name: "DePaul University Historical Society",
+      university: "DePaul University",
+      club_description:
+        "Organizes research projects and field trips related to history and archaeology.",
+      university_description:
+        "Private university with a strong focus on historical and archaeological research.",
+    },
+    {
+      name: "University of Miami History Club",
+      university: "University of Miami",
+      club_description:
+        "Facilitates historical research and archaeological exploration through various events.",
+      university_description:
+        "Private university with a commitment to history and archaeology.",
+    },
+    {
+      name: "Fordham University Archaeological Society",
+      university: "Fordham University",
+      club_description:
+        "Hosts archaeological digs and historical research opportunities for students.",
+      university_description:
+        "Private university known for its focus on historical and archaeological studies.",
+    },
+    {
+      name: "Loyola University Chicago Historical Club",
+      university: "Loyola University Chicago",
+      club_description:
+        "Organizes historical research projects and archaeological fieldwork.",
+      university_description:
+        "Private university with a strong emphasis on history and archaeology.",
+    },
+    {
+      name: "Seton Hall University Archaeological Society",
+      university: "Seton Hall University",
+      club_description:
+        "Facilitates archaeological research and historical studies through various activities.",
+      university_description:
+        "Private university with a focus on history and archaeology.",
+    },
+    {
+      name: "Marquette University History Club",
+      university: "Marquette University",
+      club_description:
+        "Offers opportunities for historical research and archaeological exploration.",
+      university_description:
+        "Private university known for its commitment to historical and archaeological research.",
+    },
+    {
+      name: "Creighton University Historical Society",
+      university: "Creighton University",
+      club_description:
+        "Hosts research projects and field trips related to history and archaeology.",
+      university_description:
+        "Private university with a strong focus on historical and archaeological studies.",
+    },
+    {
+      name: "University of Notre Dame Archaeological Society",
+      university: "University of Notre Dame",
+      club_description:
+        "Organizes archaeological digs and historical research events.",
+      university_description:
+        "Private university with a deep commitment to historical and archaeological studies.",
+    },
+    {
+      name: "Villanova University History Club",
+      university: "Villanova University",
+      club_description:
+        "Facilitates historical research and archaeological fieldwork through various events.",
+      university_description:
+        "Private university with a focus on history and archaeology.",
+    },
+    {
+      name: "University of Hartford Historical Society",
+      university: "University of Hartford",
+      club_description:
+        "Hosts historical research projects and archaeological digs.",
+      university_description:
+        "Private university known for its commitment to historical and archaeological research.",
+    },
+    {
+      name: "Quinnipiac University Archaeological Club",
+      university: "Quinnipiac University",
+      club_description:
+        "Offers opportunities for archaeological fieldwork and historical research.",
+      university_description:
+        "Private university with a strong emphasis on history and archaeology.",
+    },
+    {
+      name: "Northeastern University History Club",
+      university: "Northeastern University",
+      club_description:
+        "Organizes research projects and field trips related to historical and archaeological studies.",
+      university_description:
+        "Private university known for its focus on history and archaeology.",
+    },
+    {
+      name: "University of Cincinnati Historical Society",
+      university: "University of Cincinnati",
+      club_description:
+        "Facilitates historical research and archaeological exploration through various events.",
+      university_description:
+        "Public university with a strong commitment to historical and archaeological studies.",
+    },
+    {
+      name: "University of Louisville History Club",
+      university: "University of Louisville",
+      club_description:
+        "Hosts historical research projects and archaeological fieldwork.",
+      university_description:
+        "Public university known for its focus on history and archaeology.",
+    },
+    {
+      name: "Baylor University Historical Society",
+      university: "Baylor University",
+      club_description:
+        "Offers opportunities for historical research and archaeological exploration.",
+      university_description:
+        "Private university with a strong commitment to historical and archaeological studies.",
+    },
+    {
+      name: "Oklahoma State Historical Club",
+      university: "Oklahoma State University",
+      club_description:
+        "Facilitates historical research and archaeological fieldwork through various events.",
+      university_description:
+        "Public university with a focus on history and archaeology.",
+    },
+    {
+      name: "Missouri University of Science and Technology Historical Society",
+      university: "Missouri University of Science and Technology",
+      club_description:
+        "Organizes historical research projects and archaeological studies.",
+      university_description:
+        "Public university known for its emphasis on historical and archaeological research.",
+    },
+    {
+      name: "West Virginia University History Club",
+      university: "West Virginia University",
+      club_description:
+        "Hosts archaeological digs and historical research opportunities for students.",
+      university_description:
+        "Public university with a strong commitment to history and archaeology.",
+    },
+    {
+      name: "University of Alabama Historical Society",
+      university: "University of Alabama",
+      club_description:
+        "Offers opportunities for historical research and archaeological exploration.",
+      university_description:
+        "Public university known for its focus on history and archaeology.",
+    },
+    {
+      name: "University of Mississippi History Club",
+      university: "University of Mississippi",
+      club_description:
+        "Facilitates historical research and archaeological fieldwork through various events.",
+      university_description:
+        "Public university with a commitment to history and archaeology.",
+    },
+    {
+      name: "University of Nebraska Historical Society",
+      university: "University of Nebraska",
+      club_description:
+        "Organizes research projects and field trips related to historical and archaeological studies.",
+      university_description:
+        "Public university known for its strong focus on history and archaeology.",
+    },
+    {
+      name: "University of Kansas History Club",
+      university: "University of Kansas",
+      club_description:
+        "Hosts historical research events and archaeological digs for students.",
+      university_description:
+        "Public university with a focus on history and archaeology.",
+    },
+    {
+      name: "Iowa State University Historical Society",
+      university: "Iowa State University",
+      club_description:
+        "Offers opportunities for historical research and archaeological exploration.",
+      university_description:
+        "Public university with a strong commitment to history and archaeology.",
+    },
+  ],
+  animalAndPetClubs: [],
+  fashionAndDesignclubs: [],
+  publicSpeakingAndCommunicationClubs: [],
+  socialJusticeAndAdvocacyClubs: [],
+  astronomyClubs: [],
+  meditationAndMindfulnessClubs: [],
+  peerTutoringClubs: [],
+  ethicsAndPhilosophyClubs: [],
+  travelClubs: [],
+  cosplayAndAnimeClubs: [],
+  diyclubs: [],
+  boardGameClubs: [],
+  chessClubs: [],
+  sustainabilityClubs: [],
+  codingclubs: [],
+  bookClubs: [],
+  comedyClubs: [],
+  fitnessClubs: [],
+  gardeningClubs: [],
+  vrClubs: [],
+  podcastingclubs: [],
+  calligraphyAndHandwritingClubs: [],
+  puzzleAndEscapeRoomClubs: [],
+  carClubs: [],
+  recyclingClubs: [],
+};
+
+export const groupTypes = [];
+
+export const groupExamples = [];
+
+export const universityEnvironmentData = {
+  bustlingCities: [
+    {
+      name: "New York University",
+      description:
+        "Located in the heart of New York City, known for its vibrant urban environment and cultural opportunities.",
+    },
+    {
+      name: "University of Southern California",
+      description:
+        "Situated in Los Angeles, surrounded by a dynamic cityscape with access to entertainment and industry hubs.",
+    },
+    {
+      name: "University of Chicago",
+      description:
+        "Located in the lively city of Chicago, offering a rich cultural scene and a bustling urban atmosphere.",
+    },
+    {
+      name: "University of Pennsylvania",
+      description:
+        "Situated in Philadelphia, providing students with a vibrant city life and numerous historical sites.",
+    },
+    {
+      name: "Boston University",
+      description:
+        "Located in Boston, known for its historic landmarks and active city environment.",
+    },
+    {
+      name: "University of Toronto",
+      description:
+        "In the heart of Toronto, blending academic excellence with the energy of Canada's largest city.",
+    },
+    {
+      name: "University of Sydney",
+      description:
+        "Located in Sydney, offering a blend of academic and cultural experiences in a bustling metropolitan setting.",
+    },
+    {
+      name: "University of Melbourne",
+      description:
+        "Situated in Melbourne, providing a vibrant urban environment with a thriving cultural scene.",
+    },
+    {
+      name: "University of Hong Kong",
+      description:
+        "In the vibrant city of Hong Kong, combining academic rigor with a bustling metropolitan life.",
+    },
+    {
+      name: "National University of Singapore",
+      description:
+        "Located in Singapore, offering an energetic city environment with a focus on innovation and global connections.",
+    },
+    {
+      name: "University of Tokyo",
+      description:
+        "Situated in Tokyo, blending traditional Japanese culture with the excitement of a major global city.",
+    },
+    {
+      name: "University of São Paulo",
+      description:
+        "In São Paulo, Brazil's largest city, known for its diverse culture and bustling city life.",
+    },
+    {
+      name: "University of Cape Town",
+      description:
+        "Located in Cape Town, offering a vibrant city experience with stunning natural surroundings.",
+    },
+    {
+      name: "University of Buenos Aires",
+      description:
+        "In Buenos Aires, providing students with a lively urban environment and rich cultural experiences.",
+    },
+    {
+      name: "University of Mumbai",
+      description:
+        "Situated in Mumbai, offering an energetic city atmosphere with a mix of historical and modern influences.",
+    },
+    {
+      name: "University of Istanbul",
+      description:
+        "Located in Istanbul, where students experience a blend of historic charm and modern urban life.",
+    },
+    {
+      name: "University of Seoul",
+      description:
+        "In Seoul, South Korea, providing a dynamic urban environment with a focus on innovation and culture.",
+    },
+    {
+      name: "University of Vienna",
+      description:
+        "Located in Vienna, blending academic excellence with a rich historical and cultural city environment.",
+    },
+    {
+      name: "University of Zurich",
+      description:
+        "In Zurich, Switzerland, offering a blend of academic rigor and a lively city atmosphere.",
+    },
+    {
+      name: "University of Geneva",
+      description:
+        "Situated in Geneva, known for its international atmosphere and vibrant city life.",
+    },
+    {
+      name: "University of Amsterdam",
+      description:
+        "Located in Amsterdam, offering a dynamic urban environment with a rich cultural heritage.",
+    },
+    {
+      name: "University of Copenhagen",
+      description:
+        "In Copenhagen, providing a blend of academic excellence and a vibrant city environment.",
+    },
+    {
+      name: "University of Oslo",
+      description:
+        "Located in Oslo, known for its vibrant city life and beautiful natural surroundings.",
+    },
+    {
+      name: "University of Helsinki",
+      description:
+        "Situated in Helsinki, offering a blend of urban energy and a commitment to academic excellence.",
+    },
+    {
+      name: "University of Lisbon",
+      description:
+        "In Lisbon, Portugal, providing a lively city environment with a rich cultural backdrop.",
+    },
+    {
+      name: "University of Edinburgh",
+      description:
+        "Located in Edinburgh, offering a blend of historical charm and a vibrant urban atmosphere.",
+    },
+    {
+      name: "University of Glasgow",
+      description:
+        "Situated in Glasgow, known for its lively city life and vibrant cultural scene.",
+    },
+    {
+      name: "University of Dublin",
+      description:
+        "In Dublin, providing a blend of academic excellence and a lively urban environment.",
+    },
+    {
+      name: "University of Warsaw",
+      description:
+        "Located in Warsaw, offering a dynamic city atmosphere with a focus on academic achievement.",
+    },
+    {
+      name: "University of Prague",
+      description:
+        "Situated in Prague, known for its rich history and vibrant city life.",
+    },
+    {
+      name: "University of Budapest",
+      description:
+        "In Budapest, providing a blend of academic rigor and a vibrant urban environment.",
+    },
+    {
+      name: "University of Kraków",
+      description:
+        "Located in Kraków, offering a rich historical backdrop and a lively city atmosphere.",
+    },
+    {
+      name: "University of Porto",
+      description:
+        "In Porto, Portugal, known for its vibrant cultural scene and energetic urban environment.",
+    },
+    {
+      name: "University of Barcelona",
+      description:
+        "Located in Barcelona, blending academic excellence with a lively Mediterranean city environment.",
+    },
+    {
+      name: "University of Milan",
+      description:
+        "In Milan, Italy, offering a vibrant urban setting with a focus on fashion, design, and business.",
+    },
+    {
+      name: "University of Rome La Sapienza",
+      description:
+        "Located in Rome, providing a rich historical and cultural environment in a bustling city.",
+    },
+    {
+      name: "University of Berlin",
+      description:
+        "In Berlin, Germany, known for its dynamic urban culture and rich history.",
+    },
+    {
+      name: "University of Hamburg",
+      description:
+        "Located in Hamburg, blending academic rigor with a lively port city atmosphere.",
+    },
+    {
+      name: "University of Munich",
+      description:
+        "Situated in Munich, offering a vibrant city life combined with academic excellence.",
+    },
+    {
+      name: "University of Stuttgart",
+      description:
+        "In Stuttgart, Germany, providing a dynamic urban environment with a focus on engineering and technology.",
+    },
+    {
+      name: "University of Düsseldorf",
+      description:
+        "Located in Düsseldorf, known for its vibrant cultural scene and academic institutions.",
+    },
+    {
+      name: "University of Frankfurt",
+      description:
+        "Situated in Frankfurt, Germany, blending academic rigor with a bustling financial hub.",
+    },
+    {
+      name: "University of Cologne",
+      description:
+        "In Cologne, offering a vibrant urban environment with a rich cultural backdrop.",
+    },
+    {
+      name: "University of Essen",
+      description:
+        "Located in Essen, providing a dynamic city atmosphere with a strong academic presence.",
+    },
+    {
+      name: "University of Mannheim",
+      description:
+        "In Mannheim, Germany, known for its vibrant city life and focus on business studies.",
+    },
+    {
+      name: "University of Heidelberg",
+      description:
+        "Situated in Heidelberg, blending historical charm with a lively academic community.",
+    },
+    {
+      name: "University of Lausanne",
+      description:
+        "Located in Lausanne, Switzerland, offering a vibrant city environment with a focus on international studies.",
+    },
+    {
+      name: "University of Lucerne",
+      description:
+        "In Lucerne, Switzerland, blending academic excellence with a picturesque urban setting.",
+    },
+    {
+      name: "University of Bern",
+      description:
+        "Situated in Bern, offering a dynamic city life with a strong academic focus.",
+    },
+    {
+      name: "University of Basel",
+      description:
+        "In Basel, Switzerland, known for its vibrant city culture and strong academic programs.",
+    },
+    {
+      name: "University of Geneva",
+      description:
+        "Located in Geneva, offering a blend of international atmosphere and academic rigor.",
+    },
+    {
+      name: "University of Oslo",
+      description:
+        "In Oslo, blending vibrant city life with academic excellence.",
+    },
+    {
+      name: "University of Stockholm",
+      description:
+        "Located in Stockholm, Sweden, providing a dynamic urban environment with a focus on innovation and research.",
+    },
+    {
+      name: "University of Gothenburg",
+      description:
+        "In Gothenburg, Sweden, offering a vibrant city setting with strong academic programs.",
+    },
+    {
+      name: "University of Uppsala",
+      description:
+        "Situated in Uppsala, Sweden, known for its rich academic history and vibrant city life.",
+    },
+    {
+      name: "University of Helsinki",
+      description:
+        "In Helsinki, blending a dynamic urban environment with academic excellence.",
+    },
+    {
+      name: "University of Tallinn",
+      description:
+        "Located in Tallinn, Estonia, providing a vibrant city atmosphere with a focus on technology and innovation.",
+    },
+    {
+      name: "University of Vilnius",
+      description:
+        "In Vilnius, Lithuania, known for its vibrant city life and academic rigor.",
+    },
+    {
+      name: "University of Riga",
+      description:
+        "Situated in Riga, Latvia, offering a dynamic urban environment with a focus on cultural studies.",
+    },
+    {
+      name: "University of Warsaw",
+      description:
+        "In Warsaw, blending a vibrant city atmosphere with strong academic programs.",
+    },
+    {
+      name: "University of Prague",
+      description:
+        "Located in Prague, offering a rich historical backdrop and dynamic city life.",
+    },
+    {
+      name: "University of Budapest",
+      description:
+        "In Budapest, Hungary, known for its lively city culture and academic focus.",
+    },
+    {
+      name: "University of Kraków",
+      description:
+        "Located in Kraków, blending a rich historical setting with vibrant urban life.",
+    },
+    {
+      name: "University of Porto",
+      description:
+        "In Porto, Portugal, providing a lively city environment with a strong academic focus.",
+    },
+    {
+      name: "University of Florence",
+      description:
+        "Situated in Florence, Italy, offering a blend of academic excellence and rich cultural heritage.",
+    },
+    {
+      name: "University of Milan",
+      description:
+        "In Milan, blending a vibrant city atmosphere with a focus on design and business.",
+    },
+    {
+      name: "University of Rome La Sapienza",
+      description:
+        "Located in Rome, offering a dynamic urban environment with a rich historical backdrop.",
+    },
+  ],
+  suburbanAreas: [
+    {
+      name: "University of California, Berkeley",
+      description:
+        "Located in a suburban area with access to the vibrant city of San Francisco.",
+    },
+    {
+      name: "University of Michigan",
+      description:
+        "Situated in Ann Arbor, known for its peaceful suburban setting and strong academic community.",
+    },
+    {
+      name: "University of Virginia",
+      description:
+        "In Charlottesville, offering a tranquil suburban environment with a rich history.",
+    },
+    {
+      name: "University of North Carolina at Chapel Hill",
+      description:
+        "Located in Chapel Hill, blending a serene suburban setting with a strong academic presence.",
+    },
+    {
+      name: "University of Wisconsin-Madison",
+      description:
+        "Situated in Madison, offering a peaceful suburban environment with a strong focus on education.",
+    },
+    {
+      name: "University of Illinois at Urbana-Champaign",
+      description:
+        "In Urbana-Champaign, providing a calm suburban setting with a vibrant academic community.",
+    },
+    {
+      name: "University of Minnesota",
+      description:
+        "Located in Minneapolis-St. Paul, combining a peaceful suburban atmosphere with a dynamic educational environment.",
+    },
+    {
+      name: "University of Indiana",
+      description:
+        "In Bloomington, offering a serene suburban setting with a strong academic reputation.",
+    },
+    {
+      name: "University of Iowa",
+      description:
+        "Situated in Iowa City, known for its tranquil suburban environment and academic excellence.",
+    },
+    {
+      name: "University of Kentucky",
+      description:
+        "Located in Lexington, providing a peaceful suburban setting with a focus on education.",
+    },
+    {
+      name: "University of Oklahoma",
+      description:
+        "In Norman, offering a calm suburban environment with a strong academic community.",
+    },
+    {
+      name: "University of Arizona",
+      description:
+        "Located in Tucson, blending a tranquil suburban setting with a strong focus on education.",
+    },
+    {
+      name: "University of Kansas",
+      description:
+        "Situated in Lawrence, known for its peaceful suburban environment and strong academic presence.",
+    },
+    {
+      name: "University of Colorado Boulder",
+      description:
+        "In Boulder, offering a serene suburban setting with a focus on academic achievement.",
+    },
+    {
+      name: "University of Oregon",
+      description:
+        "Located in Eugene, providing a peaceful suburban environment with a vibrant academic community.",
+    },
+    {
+      name: "University of South Carolina",
+      description:
+        "Situated in Columbia, known for its calm suburban setting and strong academic programs.",
+    },
+    {
+      name: "University of Tennessee",
+      description:
+        "In Knoxville, offering a tranquil suburban environment with a focus on education.",
+    },
+    {
+      name: "University of Alabama",
+      description:
+        "Located in Tuscaloosa, providing a serene suburban setting with a strong academic community.",
+    },
+    {
+      name: "University of Mississippi",
+      description:
+        "In Oxford, offering a peaceful suburban environment with a focus on education.",
+    },
+    {
+      name: "University of Arkansas",
+      description:
+        "Situated in Fayetteville, known for its calm suburban setting and academic excellence.",
+    },
+    {
+      name: "University of Missouri",
+      description:
+        "Located in Columbia, blending a tranquil suburban environment with a vibrant educational community.",
+    },
+    {
+      name: "University of Nebraska-Lincoln",
+      description:
+        "In Lincoln, offering a peaceful suburban setting with a focus on academic achievement.",
+    },
+    {
+      name: "University of South Dakota",
+      description:
+        "Located in Vermillion, providing a serene suburban environment with a strong academic presence.",
+    },
+    {
+      name: "University of North Dakota",
+      description:
+        "Situated in Grand Forks, known for its calm suburban setting and academic excellence.",
+    },
+    {
+      name: "University of Montana",
+      description:
+        "In Missoula, offering a tranquil suburban environment with a focus on education.",
+    },
+    {
+      name: "University of Idaho",
+      description:
+        "Located in Moscow, blending a serene suburban setting with a strong academic community.",
+    },
+    {
+      name: "University of Wyoming",
+      description:
+        "In Laramie, providing a peaceful suburban environment with a focus on academic achievement.",
+    },
+    {
+      name: "University of Maine",
+      description:
+        "Situated in Orono, known for its calm suburban setting and vibrant educational community.",
+    },
+    {
+      name: "University of New Hampshire",
+      description:
+        "Located in Durham, offering a tranquil suburban environment with a strong academic focus.",
+    },
+    {
+      name: "University of Vermont",
+      description:
+        "In Burlington, providing a serene suburban setting with a vibrant academic community.",
+    },
+    {
+      name: "Boston College",
+      description:
+        "Located in Chestnut Hill, Massachusetts, offering a blend of suburban tranquility and academic excellence.",
+    },
+    {
+      name: "Wake Forest University",
+      description:
+        "In Winston-Salem, North Carolina, providing a peaceful suburban setting with a strong focus on education.",
+    },
+    {
+      name: "Duke University",
+      description:
+        "Located in Durham, North Carolina, known for its serene suburban environment and strong academic reputation.",
+    },
+    {
+      name: "Emory University",
+      description:
+        "In Atlanta, Georgia, offering a blend of suburban tranquility with access to a major city.",
+    },
+    {
+      name: "Rice University",
+      description:
+        "Located in Houston, Texas, blending a calm suburban setting with a dynamic academic environment.",
+    },
+    {
+      name: "Brigham Young University",
+      description:
+        "In Provo, Utah, providing a serene suburban atmosphere with a strong academic focus.",
+    },
+    {
+      name: "Vanderbilt University",
+      description:
+        "Located in Nashville, Tennessee, offering a peaceful suburban setting with a vibrant academic community.",
+    },
+    {
+      name: "Southern Methodist University",
+      description:
+        "In Dallas, Texas, providing a blend of suburban tranquility with access to a major city.",
+    },
+    {
+      name: "University of Denver",
+      description:
+        "Located in Denver, Colorado, offering a suburban setting with a strong focus on education.",
+    },
+    {
+      name: "Oklahoma State University",
+      description:
+        "In Stillwater, Oklahoma, providing a tranquil suburban environment with a focus on academic excellence.",
+    },
+    {
+      name: "University of Tulsa",
+      description:
+        "Located in Tulsa, Oklahoma, blending a serene suburban setting with a strong academic presence.",
+    },
+    {
+      name: "Creighton University",
+      description:
+        "In Omaha, Nebraska, offering a peaceful suburban environment with a focus on education.",
+    },
+    {
+      name: "Loyola University Chicago",
+      description:
+        "Located in Chicago, Illinois, offering a suburban setting with access to a major city.",
+    },
+    {
+      name: "Fairfield University",
+      description:
+        "In Fairfield, Connecticut, providing a serene suburban atmosphere with a strong academic community.",
+    },
+    {
+      name: "Marquette University",
+      description:
+        "Located in Milwaukee, Wisconsin, offering a peaceful suburban setting with a vibrant academic environment.",
+    },
+    {
+      name: "Loyola Marymount University",
+      description:
+        "In Los Angeles, California, providing a suburban atmosphere with access to a major city.",
+    },
+    {
+      name: "Gonzaga University",
+      description:
+        "Located in Spokane, Washington, offering a tranquil suburban setting with a strong academic presence.",
+    },
+    {
+      name: "Haverford College",
+      description:
+        "Located in Haverford, Pennsylvania, providing a serene suburban environment with a strong academic focus.",
+    },
+    {
+      name: "Swarthmore College",
+      description:
+        "In Swarthmore, Pennsylvania, blending a peaceful suburban setting with a vibrant academic atmosphere.",
+    },
+    {
+      name: "Bates College",
+      description:
+        "Situated in Lewiston, Maine, offering a tranquil suburban environment with a strong focus on education.",
+    },
+    {
+      name: "Bowdoin College",
+      description:
+        "In Brunswick, Maine, providing a serene suburban setting with a strong academic community.",
+    },
+    {
+      name: "Skidmore College",
+      description:
+        "Located in Saratoga Springs, New York, surrounded by the beauty of the rural countryside.",
+    },
+    {
+      name: "Saint Lawrence University",
+      description:
+        "Situated in Canton, New York, offering a peaceful rural setting with a strong academic focus.",
+    },
+    {
+      name: "Colorado College",
+      description:
+        "In Colorado Springs, Colorado, blending a serene rural environment with a vibrant educational community.",
+    },
+    {
+      name: "Earlham College",
+      description:
+        "Located in Richmond, Indiana, providing a tranquil rural setting with a focus on academic excellence.",
+    },
+    {
+      name: "Knox College",
+      description:
+        "Situated in Galesburg, Illinois, offering a peaceful rural environment with a strong academic presence.",
+    },
+    {
+      name: "Gustavus Adolphus College",
+      description:
+        "In Saint Peter, Minnesota, surrounded by a serene rural setting with a focus on education.",
+    },
+    {
+      name: "Carleton College",
+      description:
+        "Located in Northfield, Minnesota, blending a tranquil rural environment with a vibrant academic community.",
+    },
+  ],
+  ruralSettings: [
+    {
+      name: "University of Vermont",
+      description:
+        "Located in Burlington, surrounded by the scenic beauty of Vermont's rural landscapes.",
+    },
+    {
+      name: "Oberlin College",
+      description:
+        "Situated in Oberlin, Ohio, offering a serene rural setting with a focus on academic and artistic excellence.",
+    },
+    {
+      name: "Williams College",
+      description:
+        "In Williamstown, Massachusetts, surrounded by the picturesque beauty of rural New England.",
+    },
+    {
+      name: "Amherst College",
+      description:
+        "Located in Amherst, Massachusetts, providing a peaceful rural environment with a strong academic community.",
+    },
+    {
+      name: "Middlebury College",
+      description:
+        "Situated in Middlebury, Vermont, offering a tranquil rural setting with a focus on academic achievement.",
+    },
+    {
+      name: "Haverford College",
+      description:
+        "In Haverford, Pennsylvania, surrounded by a serene rural environment and a strong academic community.",
+    },
+    {
+      name: "Swarthmore College",
+      description:
+        "Located in Swarthmore, Pennsylvania, blending a peaceful rural setting with a vibrant academic atmosphere.",
+    },
+    {
+      name: "Bates College",
+      description:
+        "Situated in Lewiston, Maine, offering a tranquil rural environment with a strong focus on education.",
+    },
+    {
+      name: "Bowdoin College",
+      description:
+        "In Brunswick, Maine, providing a serene rural setting with a strong academic community.",
+    },
+    {
+      name: "Skidmore College",
+      description:
+        "Located in Saratoga Springs, New York, surrounded by the beauty of the rural countryside.",
+    },
+    {
+      name: "Saint Lawrence University",
+      description:
+        "Situated in Canton, New York, offering a peaceful rural setting with a strong academic focus.",
+    },
+    {
+      name: "Colorado College",
+      description:
+        "In Colorado Springs, Colorado, blending a serene rural environment with a vibrant educational community.",
+    },
+    {
+      name: "Earlham College",
+      description:
+        "Located in Richmond, Indiana, providing a tranquil rural setting with a focus on academic excellence.",
+    },
+    {
+      name: "Knox College",
+      description:
+        "Situated in Galesburg, Illinois, offering a peaceful rural environment with a strong academic presence.",
+    },
+    {
+      name: "Gustavus Adolphus College",
+      description:
+        "In Saint Peter, Minnesota, surrounded by a serene rural setting with a focus on education.",
+    },
+    {
+      name: "Carleton College",
+      description:
+        "Located in Northfield, Minnesota, blending a tranquil rural environment with a vibrant academic community.",
+    },
+    {
+      name: "Wabash College",
+      description:
+        "Situated in Crawfordsville, Indiana, offering a calm rural setting with a focus on academic achievement.",
+    },
+    {
+      name: "The College of Wooster",
+      description:
+        "In Wooster, Ohio, providing a serene rural environment with a strong academic presence.",
+    },
+    {
+      name: "Hillsdale College",
+      description:
+        "Located in Hillsdale, Michigan, surrounded by a tranquil rural setting and a focus on education.",
+    },
+    {
+      name: "Sewanee: The University of the South",
+      description:
+        "Situated in Sewanee, Tennessee, offering a peaceful rural environment with a strong academic community.",
+    },
+    {
+      name: "Transylvania University",
+      description:
+        "In Lexington, Kentucky, blending a serene rural setting with a focus on academic excellence.",
+    },
+    {
+      name: "Rhodes College",
+      description:
+        "Located in Memphis, Tennessee, providing a tranquil suburban setting with a strong academic community.",
+    },
+    {
+      name: "Wofford College",
+      description:
+        "Situated in Spartanburg, South Carolina, offering a serene rural environment with a vibrant educational atmosphere.",
+    },
+    {
+      name: "Berea College",
+      description:
+        "In Berea, Kentucky, surrounded by the beauty of rural landscapes with a focus on academic achievement.",
+    },
+    {
+      name: "Millsaps College",
+      description:
+        "Located in Jackson, Mississippi, offering a peaceful rural setting with a strong academic presence.",
+    },
+    {
+      name: "Juniata College",
+      description:
+        "Situated in Huntingdon, Pennsylvania, providing a serene rural environment with a focus on education.",
+    },
+    {
+      name: "Drew University",
+      description:
+        "In Madison, New Jersey, blending a tranquil rural setting with a strong academic community.",
+    },
+    {
+      name: "Wheaton College",
+      description:
+        "Located in Wheaton, Illinois, offering a peaceful rural environment with a focus on academic excellence.",
+    },
+    {
+      name: "Hendrix College",
+      description:
+        "Situated in Conway, Arkansas, providing a serene rural setting with a vibrant academic community.",
+    },
+    {
+      name: "Lynchburg College",
+      description:
+        "In Lynchburg, Virginia, blending a tranquil rural environment with a strong focus on education.",
+    },
+  ],
+};
+
+export const generic_subjects = [
+  {
+    name: "Science",
+    className: "bg-[#003dcc]/75 row-span-1 col-span-2 max-[850px]:col-span-1",
+  },
+  {
+    name: "English",
+    className: "bg-[#08155e] row-span-1 col-span-1 max-[850px]:row-span-2",
+  },
+  {
+    name: "Mathematics",
+    className:
+      "bg-[#003dcc] row-span-2 col-span-2 max-[850px]:row-span-2 max-[850px]:col-span-1",
+  },
+  {
+    name: "Technology",
+    className: "bg-[#00309f] row-span-2 col-span-1 max-[850px]:row-span-2",
+  },
+  {
+    name: "History",
+    className: "bg-[#02ad83] row-span-1 col-span-1 max-[850px]:row-span-2",
+  },
+  {
+    name: "Geography",
+    className:
+      "bg-[#02ad83]/70 row-span-1 col-span-2 max-[850px]:row-span-2 max-[850px]:col-span-1",
+  },
+  { name: "Art", className: "bg-[#08155e] row-span-2 col-span-1" },
+  {
+    name: "Music",
+    className: "bg-[#00309f]/80 row-span-1 col-span-1 max-[850px]:row-span-2",
+  },
+  {
+    name: "Physical Education",
+    className: "bg-[#003dcc]/75 row-span-1 col-span-1 max-[850px]:row-span-2",
+  },
+  {
+    name: "Languages",
+    className: "bg-[#003dcc] row-span-1 col-span-2 max-[850px]:col-span-1",
+  },
+];
+
+export const navItems = [
+  { href: "", label: "About Us", icon: MdPeople, size: 23, text: "About Us" },
+  {
+    href: "/pages/contact",
+    label: "Contact",
+    icon: MdConnectWithoutContact,
+    size: 23,
+    text: "Contact",
+  },
+  {
+    href: "/pages/programs",
+    label: "Programs",
+    icon: SiActivitypub,
+    size: 23,
+    text: "Programs",
+  },
+  {
+    href: "/pages/donate",
+    label: "Donate",
+    icon: BiDonateHeart,
+    size: 23,
+    text: "Donate",
+  },
+];
+
+export const math_subjects = [
+  {
+    id: "arithmetic",
+    subject: "Arithmetic",
+    level: "Lower Secondary",
+    difficulty: 25,
+  },
+  {
+    id: "algebra",
+    subject: "Algebra",
+    level: "Lower Secondary",
+    difficulty: 35,
+  },
+  {
+    id: "geometry",
+    subject: "Geometry",
+    level: "Lower Secondary",
+    difficulty: 40,
+  },
+  {
+    id: "trigonometry",
+    subject: "Trigonometry",
+    level: "Lower Secondary",
+    difficulty: 45,
+  },
+  {
+    id: "precalculus",
+    subject: "Precalculus",
+    level: "Lower Secondary",
+    difficulty: 50,
+  },
+  {
+    id: "calculus",
+    subject: "Calculus",
+    level: "Upper Secondary",
+    difficulty: 55,
+  },
+  {
+    id: "statistics",
+    subject: "Statistics",
+    level: "Upper Secondary",
+    difficulty: 55,
+  },
+  {
+    id: "probability",
+    subject: "Probability",
+    level: "Upper Secondary",
+    difficulty: 60,
+  },
+  {
+    id: "discrete_mathematics",
+    subject: "Discrete Mathematics",
+    level: "Upper Secondary",
+    difficulty: 65,
+  },
+  {
+    id: "linear_algebra",
+    subject: "Linear Algebra",
+    level: "Upper Secondary",
+    difficulty: 70,
+  },
+  {
+    id: "multivariable_calculus",
+    subject: "Multivariable Calculus",
+    level: "Upper Secondary",
+    difficulty: 75,
+  },
+  {
+    id: "differential_equations",
+    subject: "Differential Equations",
+    level: "Upper Secondary",
+    difficulty: 80,
+  },
+  { id: "topology", subject: "Topology", level: "University", difficulty: 85 },
+  {
+    id: "real_analysis",
+    subject: "Real Analysis",
+    level: "University",
+    difficulty: 85,
+  },
+  {
+    id: "complex_analysis",
+    subject: "Complex Analysis",
+    level: "University",
+    difficulty: 85,
+  },
+  {
+    id: "numerical_analysis",
+    subject: "Numerical Analysis",
+    level: "University",
+    difficulty: 80,
+  },
+  {
+    id: "mathematical_logic",
+    subject: "Mathematical Logic",
+    level: "University",
+    difficulty: 90,
+  },
+  {
+    id: "set_theory",
+    subject: "Set Theory",
+    level: "University",
+    difficulty: 90,
+  },
+  {
+    id: "combinatorics",
+    subject: "Combinatorics",
+    level: "University",
+    difficulty: 85,
+  },
+  {
+    id: "functional_analysis",
+    subject: "Functional Analysis",
+    level: "University",
+    difficulty: 95,
+  },
+  {
+    id: "game_theory",
+    subject: "Game Theory",
+    level: "University",
+    difficulty: 90,
+  },
+  {
+    id: "dynamical_systems",
+    subject: "Dynamical Systems",
+    level: "University",
+    difficulty: 95,
+  },
+  {
+    id: "measure_theory",
+    subject: "Measure Theory",
+    level: "University",
+    difficulty: 95,
+  },
+  {
+    id: "algebraic_geometry",
+    subject: "Algebraic Geometry",
+    level: "University",
+    difficulty: 95,
+  },
+  {
+    id: "operator_theory",
+    subject: "Operator Theory",
+    level: "University",
+    difficulty: 95,
+  },
+  {
+    id: "homotopy_theory",
+    subject: "Homotopy Theory",
+    level: "University",
+    difficulty: 95,
+  },
+  {
+    id: "category_theory",
+    subject: "Category Theory",
+    level: "University",
+    difficulty: 95,
+  },
+  {
+    id: "knot_theory",
+    subject: "Knot Theory",
+    level: "University",
+    difficulty: 90,
+  },
+  {
+    id: "cryptography",
+    subject: "Cryptography",
+    level: "University",
+    difficulty: 90,
+  },
+  {
+    id: "mathematical_physics",
+    subject: "Mathematical Physics",
+    level: "University",
+    difficulty: 90,
+  },
+  {
+    id: "financial_mathematics",
+    subject: "Financial Mathematics",
+    level: "University",
+    difficulty: 85,
+  },
+  {
+    id: "graph_theory",
+    subject: "Graph Theory",
+    level: "University",
+    difficulty: 85,
+  },
+  {
+    id: "algebraic_number_theory",
+    subject: "Algebraic Number Theory",
+    level: "University",
+    difficulty: 95,
+  },
+  {
+    id: "spectral_theory",
+    subject: "Spectral Theory",
+    level: "University",
+    difficulty: 95,
+  },
+  { id: "wavelets", subject: "Wavelets", level: "University", difficulty: 90 },
+  {
+    id: "topological_groups",
+    subject: "Topological Groups",
+    level: "University",
+    difficulty: 95,
+  },
+  {
+    id: "noncommutative_geometry",
+    subject: "Noncommutative Geometry",
+    level: "University",
+    difficulty: 95,
+  },
+  {
+    id: "analytic_number_theory",
+    subject: "Analytic Number Theory",
+    level: "University",
+    difficulty: 95,
+  },
+  {
+    id: "elliptic_curves",
+    subject: "Elliptic Curves",
+    level: "University",
+    difficulty: 95,
+  },
+  {
+    id: "modular_forms",
+    subject: "Modular Forms",
+    level: "University",
+    difficulty: 95,
+  },
+  {
+    id: "representation_theory",
+    subject: "Representation Theory",
+    level: "University",
+    difficulty: 95,
+  },
+  {
+    id: "differential_topology",
+    subject: "Differential Topology",
+    level: "University",
+    difficulty: 95,
+  },
+  {
+    id: "geometric_topology",
+    subject: "Geometric Topology",
+    level: "University",
+    difficulty: 95,
+  },
+  {
+    id: "topological_k_theory",
+    subject: "Topological K-theory",
+    level: "University",
+    difficulty: 95,
+  },
+  {
+    id: "cohomology_theory",
+    subject: "Cohomology Theory",
+    level: "University",
+    difficulty: 95,
+  },
+  {
+    id: "algebraic_k_theory",
+    subject: "Algebraic K-theory",
+    level: "University",
+    difficulty: 95,
+  },
+  {
+    id: "motivic_homotopy_theory",
+    subject: "Motivic Homotopy Theory",
+    level: "University",
+    difficulty: 95,
+  },
+  {
+    id: "derived_algebraic_geometry",
+    subject: "Derived Algebraic Geometry",
+    level: "University",
+    difficulty: 95,
+  },
+  {
+    id: "higher_category_theory",
+    subject: "Higher Category Theory",
+    level: "University",
+    difficulty: 95,
+  },
+  {
+    id: "homological_algebra",
+    subject: "Homological Algebra",
+    level: "University",
+    difficulty: 95,
+  },
+  {
+    id: "commutative_algebra",
+    subject: "Commutative Algebra",
+    level: "University",
+    difficulty: 95,
+  },
+  {
+    id: "noncommutative_algebra",
+    subject: "Noncommutative Algebra",
+    level: "University",
+    difficulty: 95,
+  },
+  {
+    id: "category_theory_and_logic",
+    subject: "Category Theory and Logic",
+    level: "University",
+    difficulty: 95,
+  },
+  {
+    id: "topos_theory",
+    subject: "Topos Theory",
+    level: "University",
+    difficulty: 95,
+  },
+  {
+    id: "sheaf_theory",
+    subject: "Sheaf Theory",
+    level: "University",
+    difficulty: 95,
+  },
+  {
+    id: "etale_cohomology",
+    subject: "Etale Cohomology",
+    level: "University",
+    difficulty: 95,
+  },
+  {
+    id: "algebraic_stacks",
+    subject: "Algebraic Stacks",
+    level: "University",
+    difficulty: 95,
+  },
+  {
+    id: "derived_functors",
+    subject: "Derived Functors",
+    level: "University",
+    difficulty: 95,
+  },
+  {
+    id: "spectral_sequences",
+    subject: "Spectral Sequences",
+    level: "University",
+    difficulty: 95,
+  },
+  {
+    id: "homotopy_type_theory",
+    subject: "Homotopy Type Theory",
+    level: "Postgraduate",
+    difficulty: 98,
+  },
+  {
+    id: "higher_homotopy_theory",
+    subject: "Higher Homotopy Theory",
+    level: "Postgraduate",
+    difficulty: 98,
+  },
+  {
+    id: "motivic_homotopy_theory",
+    subject: "Motivic Homotopy Theory",
+    level: "Postgraduate",
+    difficulty: 98,
+  },
+  {
+    id: "derived_algebraic_geometry",
+    subject: "Derived Algebraic Geometry",
+    level: "Postgraduate",
+    difficulty: 98,
+  },
+  {
+    id: "higher_category_theory",
+    subject: "Higher Category Theory",
+    level: "Postgraduate",
+    difficulty: 98,
+  },
+  {
+    id: "homological_algebra",
+    subject: "Homological Algebra",
+    level: "Postgraduate",
+    difficulty: 98,
+  },
+  {
+    id: "commutative_algebra",
+    subject: "Commutative Algebra",
+    level: "Postgraduate",
+    difficulty: 98,
+  },
+  {
+    id: "noncommutative_algebra",
+    subject: "Noncommutative Algebra",
+    level: "Postgraduate",
+    difficulty: 98,
+  },
+  {
+    id: "category_theory_and_logic",
+    subject: "Category Theory and Logic",
+    level: "Postgraduate",
+    difficulty: 98,
+  },
+  {
+    id: "topos_theory",
+    subject: "Topos Theory",
+    level: "Postgraduate",
+    difficulty: 98,
+  },
+  {
+    id: "sheaf_theory",
+    subject: "Sheaf Theory",
+    level: "Postgraduate",
+    difficulty: 98,
+  },
+  {
+    id: "etale_cohomology",
+    subject: "Etale Cohomology",
+    level: "Postgraduate",
+    difficulty: 98,
+  },
+  {
+    id: "algebraic_stacks",
+    subject: "Algebraic Stacks",
+    level: "Postgraduate",
+    difficulty: 98,
+  },
+  {
+    id: "derived_functors",
+    subject: "Derived Functors",
+    level: "Postgraduate",
+    difficulty: 98,
+  },
+  {
+    id: "spectral_sequences",
+    subject: "Spectral Sequences",
+    level: "Postgraduate",
+    difficulty: 98,
+  },
+];
+
+export const art_subjects = [
+  {
+    id: "drawing",
+    subject: "Drawing",
+    level: "Lower Secondary",
+    difficulty: 30,
+  },
+  {
+    id: "painting",
+    subject: "Painting",
+    level: "Lower Secondary",
+    difficulty: 40,
+  },
+  {
+    id: "sculpture",
+    subject: "Sculpture",
+    level: "Lower Secondary",
+    difficulty: 45,
+  },
+  {
+    id: "printmaking",
+    subject: "Printmaking",
+    level: "Upper Secondary",
+    difficulty: 50,
+  },
+  {
+    id: "ceramics",
+    subject: "Ceramics",
+    level: "Upper Secondary",
+    difficulty: 55,
+  },
+  {
+    id: "digital_art",
+    subject: "Digital Art",
+    level: "Upper Secondary",
+    difficulty: 60,
+  },
+  {
+    id: "art_history",
+    subject: "Art History",
+    level: "University",
+    difficulty: 70,
+  },
+  {
+    id: "modern_art",
+    subject: "Modern Art",
+    level: "University",
+    difficulty: 65,
+  },
+  {
+    id: "contemporary_art",
+    subject: "Contemporary Art",
+    level: "University",
+    difficulty: 70,
+  },
+  {
+    id: "graphic_design",
+    subject: "Graphic Design",
+    level: "University",
+    difficulty: 65,
+  },
+  {
+    id: "art_theory",
+    subject: "Art Theory",
+    level: "University",
+    difficulty: 75,
+  },
+  {
+    id: "color_theory",
+    subject: "Color Theory",
+    level: "University",
+    difficulty: 60,
+  },
+  {
+    id: "visual_arts",
+    subject: "Visual Arts",
+    level: "University",
+    difficulty: 70,
+  },
+  { id: "fine_art", subject: "Fine Art", level: "University", difficulty: 75 },
+  {
+    id: "conceptual_art",
+    subject: "Conceptual Art",
+    level: "University/Postgraduate",
+    difficulty: 80,
+  },
+  {
+    id: "performance_art",
+    subject: "Performance Art",
+    level: "University/Postgraduate",
+    difficulty: 75,
+  },
+  {
+    id: "installation_art",
+    subject: "Installation Art",
+    level: "University/Postgraduate",
+    difficulty: 80,
+  },
+  {
+    id: "abstract_art",
+    subject: "Abstract Art",
+    level: "University/Postgraduate",
+    difficulty: 70,
+  },
+  {
+    id: "art_conservation",
+    subject: "Art Conservation",
+    level: "Postgraduate",
+    difficulty: 85,
+  },
+  {
+    id: "museum_studies",
+    subject: "Museum Studies",
+    level: "Postgraduate",
+    difficulty: 80,
+  },
+  {
+    id: "art_education",
+    subject: "Art Education",
+    level: "Postgraduate",
+    difficulty: 70,
+  },
+  {
+    id: "arts_management",
+    subject: "Arts Management",
+    level: "Postgraduate",
+    difficulty: 75,
+  },
+  {
+    id: "cultural_studies",
+    subject: "Cultural Studies",
+    level: "Postgraduate",
+    difficulty: 80,
+  },
+  {
+    id: "media_arts",
+    subject: "Media Arts",
+    level: "Postgraduate",
+    difficulty: 75,
+  },
+  {
+    id: "illustration",
+    subject: "Illustration",
+    level: "University/Postgraduate",
+    difficulty: 70,
+  },
+  {
+    id: "textile_design",
+    subject: "Textile Design",
+    level: "University/Postgraduate",
+    difficulty: 65,
+  },
+  {
+    id: "fashion_design",
+    subject: "Fashion Design",
+    level: "University/Postgraduate",
+    difficulty: 75,
+  },
+  {
+    id: "architectural_design",
+    subject: "Architectural Design",
+    level: "Postgraduate",
+    difficulty: 80,
+  },
+  {
+    id: "visual_communication",
+    subject: "Visual Communication",
+    level: "University/Postgraduate",
+    difficulty: 70,
+  },
+  {
+    id: "digital_media",
+    subject: "Digital Media",
+    level: "University/Postgraduate",
+    difficulty: 75,
+  },
+  {
+    id: "interactive_design",
+    subject: "Interactive Design",
+    level: "Postgraduate",
+    difficulty: 80,
+  },
+  {
+    id: "art_and_technology",
+    subject: "Art and Technology",
+    level: "Postgraduate",
+    difficulty: 85,
+  },
+  {
+    id: "art_therapy",
+    subject: "Art Therapy",
+    level: "Postgraduate",
+    difficulty: 70,
+  },
+  {
+    id: "environmental_art",
+    subject: "Environmental Art",
+    level: "Postgraduate",
+    difficulty: 80,
+  },
+  {
+    id: "art_philosophy",
+    subject: "Art Philosophy",
+    level: "Postgraduate",
+    difficulty: 85,
+  },
+  {
+    id: "experimental_art",
+    subject: "Experimental Art",
+    level: "Postgraduate",
+    difficulty: 90,
+  },
+];
+
+export const science_subjects = [
+  {
+    id: "general_science",
+    subject: "General Science",
+    level: "Lower Secondary",
+    difficulty: 30,
+  },
+  {
+    id: "biology",
+    subject: "Biology",
+    level: "Lower Secondary",
+    difficulty: 40,
+  },
+  {
+    id: "chemistry",
+    subject: "Chemistry",
+    level: "Lower Secondary",
+    difficulty: 45,
+  },
+  {
+    id: "physics",
+    subject: "Physics",
+    level: "Lower Secondary",
+    difficulty: 50,
+  },
+  {
+    id: "earth_science",
+    subject: "Earth Science",
+    level: "Lower Secondary",
+    difficulty: 40,
+  },
+  {
+    id: "environmental_science",
+    subject: "Environmental Science",
+    level: "Upper Secondary",
+    difficulty: 55,
+  },
+  {
+    id: "astronomy",
+    subject: "Astronomy",
+    level: "Upper Secondary",
+    difficulty: 60,
+  },
+  {
+    id: "genetics",
+    subject: "Genetics",
+    level: "Upper Secondary",
+    difficulty: 65,
+  },
+  {
+    id: "organic_chemistry",
+    subject: "Organic Chemistry",
+    level: "Upper Secondary",
+    difficulty: 70,
+  },
+  {
+    id: "inorganic_chemistry",
+    subject: "Inorganic Chemistry",
+    level: "Upper Secondary",
+    difficulty: 70,
+  },
+  {
+    id: "quantum_physics",
+    subject: "Quantum Physics",
+    level: "University",
+    difficulty: 85,
+  },
+  {
+    id: "biochemistry",
+    subject: "Biochemistry",
+    level: "University",
+    difficulty: 80,
+  },
+  {
+    id: "molecular_biology",
+    subject: "Molecular Biology",
+    level: "University",
+    difficulty: 75,
+  },
+  {
+    id: "thermodynamics",
+    subject: "Thermodynamics",
+    level: "University",
+    difficulty: 80,
+  },
+  {
+    id: "nuclear_physics",
+    subject: "Nuclear Physics",
+    level: "University",
+    difficulty: 85,
+  },
+  {
+    id: "astrophysics",
+    subject: "Astrophysics",
+    level: "University",
+    difficulty: 90,
+  },
+  { id: "ecology", subject: "Ecology", level: "University", difficulty: 70 },
+  {
+    id: "neuroscience",
+    subject: "Neuroscience",
+    level: "University",
+    difficulty: 85,
+  },
+  {
+    id: "marine_biology",
+    subject: "Marine Biology",
+    level: "University",
+    difficulty: 75,
+  },
+  { id: "geology", subject: "Geology", level: "University", difficulty: 70 },
+  {
+    id: "climatology",
+    subject: "Climatology",
+    level: "University",
+    difficulty: 75,
+  },
+  {
+    id: "evolutionary_biology",
+    subject: "Evolutionary Biology",
+    level: "University",
+    difficulty: 80,
+  },
+  {
+    id: "organic_geochemistry",
+    subject: "Organic Geochemistry",
+    level: "University",
+    difficulty: 80,
+  },
+  {
+    id: "biophysics",
+    subject: "Biophysics",
+    level: "University",
+    difficulty: 85,
+  },
+  {
+    id: "materials_science",
+    subject: "Materials Science",
+    level: "University",
+    difficulty: 80,
+  },
+  {
+    id: "fluid_dynamics",
+    subject: "Fluid Dynamics",
+    level: "University",
+    difficulty: 85,
+  },
+  {
+    id: "astrobiology",
+    subject: "Astrobiology",
+    level: "Postgraduate",
+    difficulty: 90,
+  },
+  {
+    id: "pharmacology",
+    subject: "Pharmacology",
+    level: "Postgraduate",
+    difficulty: 85,
+  },
+  {
+    id: "genomics",
+    subject: "Genomics",
+    level: "Postgraduate",
+    difficulty: 90,
+  },
+  {
+    id: "biomedical_engineering",
+    subject: "Biomedical Engineering",
+    level: "Postgraduate",
+    difficulty: 85,
+  },
+  {
+    id: "neurobiology",
+    subject: "Neurobiology",
+    level: "Postgraduate",
+    difficulty: 90,
+  },
+  {
+    id: "theoretical_physics",
+    subject: "Theoretical Physics",
+    level: "Postgraduate",
+    difficulty: 95,
+  },
+  {
+    id: "chemical_engineering",
+    subject: "Chemical Engineering",
+    level: "Postgraduate",
+    difficulty: 85,
+  },
+  {
+    id: "environmental_engineering",
+    subject: "Environmental Engineering",
+    level: "Postgraduate",
+    difficulty: 80,
+  },
+  {
+    id: "bioinformatics",
+    subject: "Bioinformatics",
+    level: "Postgraduate",
+    difficulty: 90,
+  },
+  {
+    id: "computational_biology",
+    subject: "Computational Biology",
+    level: "Postgraduate",
+    difficulty: 85,
+  },
+  {
+    id: "space_science",
+    subject: "Space Science",
+    level: "Postgraduate",
+    difficulty: 90,
+  },
+  {
+    id: "systems_biology",
+    subject: "Systems Biology",
+    level: "Postgraduate",
+    difficulty: 85,
+  },
+  {
+    id: "scientific_computing",
+    subject: "Scientific Computing",
+    level: "Postgraduate",
+    difficulty: 80,
+  },
+  {
+    id: "environmental_chemistry",
+    subject: "Environmental Chemistry",
+    level: "Postgraduate",
+    difficulty: 85,
+  },
+  {
+    id: "climate_science",
+    subject: "Climate Science",
+    level: "Postgraduate",
+    difficulty: 85,
+  },
+  {
+    id: "geophysics",
+    subject: "Geophysics",
+    level: "Postgraduate",
+    difficulty: 90,
+  },
+];
+
+export const english_subjects = [
+  {
+    id: "general_english",
+    subject: "General English",
+    level: "Lower Secondary",
+    difficulty: 30,
+  },
+  {
+    id: "english_literature",
+    subject: "English Literature",
+    level: "Lower Secondary",
+    difficulty: 35,
+  },
+  {
+    id: "creative_writing",
+    subject: "Creative Writing",
+    level: "Lower Secondary",
+    difficulty: 40,
+  },
+  {
+    id: "english_composition",
+    subject: "English Composition",
+    level: "Lower Secondary",
+    difficulty: 35,
+  },
+  {
+    id: "grammar",
+    subject: "Grammar",
+    level: "Lower Secondary",
+    difficulty: 30,
+  },
+  {
+    id: "reading_comprehension",
+    subject: "Reading Comprehension",
+    level: "Lower Secondary",
+    difficulty: 30,
+  },
+  {
+    id: "public_speaking",
+    subject: "Public Speaking",
+    level: "Upper Secondary",
+    difficulty: 40,
+  },
+  {
+    id: "advanced_english",
+    subject: "Advanced English",
+    level: "Upper Secondary",
+    difficulty: 45,
+  },
+  {
+    id: "creative_nonfiction",
+    subject: "Creative Nonfiction",
+    level: "Upper Secondary",
+    difficulty: 50,
+  },
+  {
+    id: "modern_literature",
+    subject: "Modern Literature",
+    level: "Upper Secondary",
+    difficulty: 50,
+  },
+  {
+    id: "literary_analysis",
+    subject: "Literary Analysis",
+    level: "Upper Secondary",
+    difficulty: 55,
+  },
+  {
+    id: "rhetoric",
+    subject: "Rhetoric",
+    level: "Upper Secondary",
+    difficulty: 50,
+  },
+  {
+    id: "american_literature",
+    subject: "American Literature",
+    level: "University",
+    difficulty: 60,
+  },
+  {
+    id: "british_literature",
+    subject: "British Literature",
+    level: "University",
+    difficulty: 60,
+  },
+  {
+    id: "postcolonial_literature",
+    subject: "Postcolonial Literature",
+    level: "University",
+    difficulty: 65,
+  },
+  {
+    id: "gender_studies",
+    subject: "Gender Studies",
+    level: "University",
+    difficulty: 65,
+  },
+  {
+    id: "comparative_literature",
+    subject: "Comparative Literature",
+    level: "University",
+    difficulty: 70,
+  },
+  {
+    id: "historical_linguistics",
+    subject: "Historical Linguistics",
+    level: "University",
+    difficulty: 70,
+  },
+  {
+    id: "literary_theory",
+    subject: "Literary Theory",
+    level: "University",
+    difficulty: 75,
+  },
+  {
+    id: "sociolinguistics",
+    subject: "Sociolinguistics",
+    level: "University",
+    difficulty: 70,
+  },
+  {
+    id: "translation_studies",
+    subject: "Translation Studies",
+    level: "University",
+    difficulty: 70,
+  },
+  {
+    id: "creative_writing_advanced",
+    subject: "Advanced Creative Writing",
+    level: "University",
+    difficulty: 75,
+  },
+  {
+    id: "narrative_theory",
+    subject: "Narrative Theory",
+    level: "University",
+    difficulty: 75,
+  },
+  {
+    id: "applied_linguistics",
+    subject: "Applied Linguistics",
+    level: "University",
+    difficulty: 70,
+  },
+  {
+    id: "literary_history",
+    subject: "Literary History",
+    level: "University",
+    difficulty: 70,
+  },
+  {
+    id: "discourse_analysis",
+    subject: "Discourse Analysis",
+    level: "University",
+    difficulty: 75,
+  },
+  {
+    id: "stylistics",
+    subject: "Stylistics",
+    level: "University",
+    difficulty: 70,
+  },
+  {
+    id: "genre_studies",
+    subject: "Genre Studies",
+    level: "University",
+    difficulty: 75,
+  },
+  {
+    id: "literary_criticism",
+    subject: "Literary Criticism",
+    level: "University",
+    difficulty: 75,
+  },
+  {
+    id: "linguistic_theory",
+    subject: "Linguistic Theory",
+    level: "University",
+    difficulty: 75,
+  },
+  {
+    id: "corpus_linguistics",
+    subject: "Corpus Linguistics",
+    level: "University",
+    difficulty: 70,
+  },
+  {
+    id: "rhetorical_criticism",
+    subject: "Rhetorical Criticism",
+    level: "University",
+    difficulty: 75,
+  },
+  {
+    id: "ethnography_of_communication",
+    subject: "Ethnography of Communication",
+    level: "University",
+    difficulty: 70,
+  },
+  {
+    id: "eighteenth_century_literature",
+    subject: "Eighteenth-Century Literature",
+    level: "Postgraduate",
+    difficulty: 80,
+  },
+  {
+    id: "nineteenth_century_literature",
+    subject: "Nineteenth-Century Literature",
+    level: "Postgraduate",
+    difficulty: 80,
+  },
+  {
+    id: "twentieth_century_literature",
+    subject: "Twentieth-Century Literature",
+    level: "Postgraduate",
+    difficulty: 80,
+  },
+  {
+    id: "feminist_literary_criticism",
+    subject: "Feminist Literary Criticism",
+    level: "Postgraduate",
+    difficulty: 85,
+  },
+  {
+    id: "literary_modernism",
+    subject: "Literary Modernism",
+    level: "Postgraduate",
+    difficulty: 85,
+  },
+  {
+    id: "postmodern_literature",
+    subject: "Postmodern Literature",
+    level: "Postgraduate",
+    difficulty: 85,
+  },
+  {
+    id: "cultural_studies",
+    subject: "Cultural Studies",
+    level: "Postgraduate",
+    difficulty: 85,
+  },
+  {
+    id: "theory_of_reception",
+    subject: "Theory of Reception",
+    level: "Postgraduate",
+    difficulty: 85,
+  },
+  {
+    id: "media_studies",
+    subject: "Media Studies",
+    level: "Postgraduate",
+    difficulty: 80,
+  },
+  {
+    id: "literature_and_philosophy",
+    subject: "Literature and Philosophy",
+    level: "Postgraduate",
+    difficulty: 85,
+  },
+  {
+    id: "comparative_rhetoric",
+    subject: "Comparative Rhetoric",
+    level: "Postgraduate",
+    difficulty: 85,
+  },
+  {
+    id: "digital_humanities",
+    subject: "Digital Humanities",
+    level: "Postgraduate",
+    difficulty: 85,
+  },
+];
+
+export const history_subjects = [
+  {
+    id: "ancient_history",
+    subject: "Ancient History",
+    level: "Lower Secondary",
+    difficulty: 35,
+  },
+  {
+    id: "medieval_history",
+    subject: "Medieval History",
+    level: "Lower Secondary",
+    difficulty: 40,
+  },
+  {
+    id: "modern_history",
+    subject: "Modern History",
+    level: "Lower Secondary",
+    difficulty: 40,
+  },
+  {
+    id: "world_history",
+    subject: "World History",
+    level: "Lower Secondary",
+    difficulty: 35,
+  },
+  {
+    id: "us_history",
+    subject: "U.S. History",
+    level: "Lower Secondary",
+    difficulty: 35,
+  },
+  {
+    id: "european_history",
+    subject: "European History",
+    level: "Lower Secondary",
+    difficulty: 35,
+  },
+  {
+    id: "american_revolution",
+    subject: "American Revolution",
+    level: "Upper Secondary",
+    difficulty: 45,
+  },
+  {
+    id: "british_history",
+    subject: "British History",
+    level: "Upper Secondary",
+    difficulty: 45,
+  },
+  {
+    id: "russian_history",
+    subject: "Russian History",
+    level: "Upper Secondary",
+    difficulty: 50,
+  },
+  {
+    id: "asian_history",
+    subject: "Asian History",
+    level: "Upper Secondary",
+    difficulty: 50,
+  },
+  {
+    id: "colonial_history",
+    subject: "Colonial History",
+    level: "Upper Secondary",
+    difficulty: 50,
+  },
+  {
+    id: "history_of_science",
+    subject: "History of Science",
+    level: "Upper Secondary",
+    difficulty: 55,
+  },
+  {
+    id: "history_of_art",
+    subject: "History of Art",
+    level: "University",
+    difficulty: 60,
+  },
+  {
+    id: "economic_history",
+    subject: "Economic History",
+    level: "University",
+    difficulty: 60,
+  },
+  {
+    id: "political_history",
+    subject: "Political History",
+    level: "University",
+    difficulty: 65,
+  },
+  {
+    id: "social_history",
+    subject: "Social History",
+    level: "University",
+    difficulty: 65,
+  },
+  {
+    id: "military_history",
+    subject: "Military History",
+    level: "University",
+    difficulty: 60,
+  },
+  {
+    id: "historiography",
+    subject: "Historiography",
+    level: "University",
+    difficulty: 70,
+  },
+  {
+    id: "ancient_egyptian_history",
+    subject: "Ancient Egyptian History",
+    level: "University",
+    difficulty: 65,
+  },
+  {
+    id: "byzantine_history",
+    subject: "Byzantine History",
+    level: "University",
+    difficulty: 70,
+  },
+  {
+    id: "medieval_european_history",
+    subject: "Medieval European History",
+    level: "University",
+    difficulty: 70,
+  },
+  {
+    id: "renaissance_history",
+    subject: "Renaissance History",
+    level: "University",
+    difficulty: 70,
+  },
+  {
+    id: "industrial_revolution",
+    subject: "Industrial Revolution",
+    level: "University",
+    difficulty: 65,
+  },
+  {
+    id: "cold_war_history",
+    subject: "Cold War History",
+    level: "University",
+    difficulty: 70,
+  },
+  {
+    id: "history_of_technology",
+    subject: "History of Technology",
+    level: "University",
+    difficulty: 70,
+  },
+  {
+    id: "history_of_the_middle_east",
+    subject: "History of the Middle East",
+    level: "University",
+    difficulty: 70,
+  },
+  {
+    id: "latin_american_history",
+    subject: "Latin American History",
+    level: "University",
+    difficulty: 70,
+  },
+  {
+    id: "history_of_ancient_greece",
+    subject: "History of Ancient Greece",
+    level: "University",
+    difficulty: 70,
+  },
+  {
+    id: "history_of_rome",
+    subject: "History of Rome",
+    level: "University",
+    difficulty: 70,
+  },
+  {
+    id: "history_of_africa",
+    subject: "History of Africa",
+    level: "University",
+    difficulty: 70,
+  },
+  {
+    id: "history_of_india",
+    subject: "History of India",
+    level: "University",
+    difficulty: 70,
+  },
+  {
+    id: "modern_european_history",
+    subject: "Modern European History",
+    level: "University",
+    difficulty: 75,
+  },
+  {
+    id: "cultural_history",
+    subject: "Cultural History",
+    level: "Postgraduate",
+    difficulty: 80,
+  },
+  {
+    id: "global_history",
+    subject: "Global History",
+    level: "Postgraduate",
+    difficulty: 80,
+  },
+  {
+    id: "history_of_empires",
+    subject: "History of Empires",
+    level: "Postgraduate",
+    difficulty: 85,
+  },
+  {
+    id: "historical_theory",
+    subject: "Historical Theory",
+    level: "Postgraduate",
+    difficulty: 85,
+  },
+  {
+    id: "comparative_history",
+    subject: "Comparative History",
+    level: "Postgraduate",
+    difficulty: 85,
+  },
+  {
+    id: "postcolonial_history",
+    subject: "Postcolonial History",
+    level: "Postgraduate",
+    difficulty: 85,
+  },
+  {
+    id: "history_of_revolutions",
+    subject: "History of Revolutions",
+    level: "Postgraduate",
+    difficulty: 85,
+  },
+  {
+    id: "history_of_nations",
+    subject: "History of Nations",
+    level: "Postgraduate",
+    difficulty: 85,
+  },
+  {
+    id: "history_of_globalization",
+    subject: "History of Globalization",
+    level: "Postgraduate",
+    difficulty: 85,
+  },
+];
+export const geography_subjects = [
+  {
+    id: "physical_geography",
+    subject: "Physical Geography",
+    level: "Lower Secondary",
+    difficulty: 35,
+  },
+  {
+    id: "human_geography",
+    subject: "Human Geography",
+    level: "Lower Secondary",
+    difficulty: 35,
+  },
+  {
+    id: "environmental_geography",
+    subject: "Environmental Geography",
+    level: "Lower Secondary",
+    difficulty: 40,
+  },
+  {
+    id: "geographical_information_systems",
+    subject: "Geographical Information Systems (GIS)",
+    level: "Upper Secondary",
+    difficulty: 45,
+  },
+  {
+    id: "climate_change",
+    subject: "Climate Change",
+    level: "Upper Secondary",
+    difficulty: 45,
+  },
+  {
+    id: "geomorphology",
+    subject: "Geomorphology",
+    level: "Upper Secondary",
+    difficulty: 50,
+  },
+  {
+    id: "biogeography",
+    subject: "Biogeography",
+    level: "Upper Secondary",
+    difficulty: 50,
+  },
+  {
+    id: "urban_geography",
+    subject: "Urban Geography",
+    level: "University",
+    difficulty: 55,
+  },
+  {
+    id: "regional_geography",
+    subject: "Regional Geography",
+    level: "University",
+    difficulty: 55,
+  },
+  {
+    id: "economic_geography",
+    subject: "Economic Geography",
+    level: "University",
+    difficulty: 60,
+  },
+  {
+    id: "cultural_geography",
+    subject: "Cultural Geography",
+    level: "University",
+    difficulty: 60,
+  },
+  {
+    id: "hydrology",
+    subject: "Hydrology",
+    level: "University",
+    difficulty: 65,
+  },
+  {
+    id: "soils_geography",
+    subject: "Soils Geography",
+    level: "University",
+    difficulty: 65,
+  },
+  {
+    id: "cartography",
+    subject: "Cartography",
+    level: "University",
+    difficulty: 60,
+  },
+  {
+    id: "hazard_geography",
+    subject: "Hazard Geography",
+    level: "University",
+    difficulty: 65,
+  },
+  {
+    id: "glaciology",
+    subject: "Glaciology",
+    level: "University",
+    difficulty: 70,
+  },
+  {
+    id: "climatology",
+    subject: "Climatology",
+    level: "University",
+    difficulty: 70,
+  },
+  {
+    id: "sustainable_development",
+    subject: "Sustainable Development",
+    level: "University",
+    difficulty: 65,
+  },
+  {
+    id: "remote_sensing",
+    subject: "Remote Sensing",
+    level: "University",
+    difficulty: 70,
+  },
+  {
+    id: "geopolitics",
+    subject: "Geopolitics",
+    level: "Postgraduate",
+    difficulty: 75,
+  },
+  {
+    id: "advanced_cartography",
+    subject: "Advanced Cartography",
+    level: "Postgraduate",
+    difficulty: 80,
+  },
+  {
+    id: "advanced_geographical_information_systems",
+    subject: "Advanced Geographical Information Systems (GIS)",
+    level: "Postgraduate",
+    difficulty: 80,
+  },
+  {
+    id: "climate_systems",
+    subject: "Climate Systems",
+    level: "Postgraduate",
+    difficulty: 85,
+  },
+  {
+    id: "global_urban_studies",
+    subject: "Global Urban Studies",
+    level: "Postgraduate",
+    difficulty: 85,
+  },
+  {
+    id: "environmental_change",
+    subject: "Environmental Change",
+    level: "Postgraduate",
+    difficulty: 85,
+  },
+  {
+    id: "global_resource_management",
+    subject: "Global Resource Management",
+    level: "Postgraduate",
+    difficulty: 85,
+  },
+  {
+    id: "socio-environmental_issues",
+    subject: "Socio-environmental Issues",
+    level: "Postgraduate",
+    difficulty: 85,
+  },
+  {
+    id: "spatial_analysis",
+    subject: "Spatial Analysis",
+    level: "Postgraduate",
+    difficulty: 85,
+  },
+];
+
+export const physical_education_subjects = [
+  {
+    id: "fitness",
+    subject: "Fitness",
+    level: "Lower Secondary",
+    difficulty: 30,
+  },
+  {
+    id: "team_sports",
+    subject: "Team Sports",
+    level: "Lower Secondary",
+    difficulty: 35,
+  },
+  {
+    id: "individual_sports",
+    subject: "Individual Sports",
+    level: "Lower Secondary",
+    difficulty: 35,
+  },
+  {
+    id: "health_education",
+    subject: "Health Education",
+    level: "Lower Secondary",
+    difficulty: 30,
+  },
+  {
+    id: "athletics",
+    subject: "Athletics",
+    level: "Upper Secondary",
+    difficulty: 40,
+  },
+  {
+    id: "physical_fitness",
+    subject: "Physical Fitness",
+    level: "Upper Secondary",
+    difficulty: 40,
+  },
+  {
+    id: "sports_science",
+    subject: "Sports Science",
+    level: "Upper Secondary",
+    difficulty: 45,
+  },
+  {
+    id: "sports_medical",
+    subject: "Sports Medicine",
+    level: "Upper Secondary",
+    difficulty: 45,
+  },
+  {
+    id: "exercise_physiology",
+    subject: "Exercise Physiology",
+    level: "University",
+    difficulty: 50,
+  },
+  {
+    id: "biomechanics",
+    subject: "Biomechanics",
+    level: "University",
+    difficulty: 50,
+  },
+  {
+    id: "sports_nutrition",
+    subject: "Sports Nutrition",
+    level: "University",
+    difficulty: 50,
+  },
+  {
+    id: "motor_learning",
+    subject: "Motor Learning",
+    level: "University",
+    difficulty: 55,
+  },
+  {
+    id: "kinesiology",
+    subject: "Kinesiology",
+    level: "University",
+    difficulty: 55,
+  },
+  {
+    id: "sports_psychology",
+    subject: "Sports Psychology",
+    level: "University",
+    difficulty: 55,
+  },
+  {
+    id: "performance_analysis",
+    subject: "Performance Analysis",
+    level: "University",
+    difficulty: 60,
+  },
+  {
+    id: "sports_injury_rehabilitation",
+    subject: "Sports Injury Rehabilitation",
+    level: "University",
+    difficulty: 60,
+  },
+  {
+    id: "advanced_exercise_physiology",
+    subject: "Advanced Exercise Physiology",
+    level: "Postgraduate",
+    difficulty: 70,
+  },
+  {
+    id: "advanced_sports_science",
+    subject: "Advanced Sports Science",
+    level: "Postgraduate",
+    difficulty: 70,
+  },
+  {
+    id: "advanced_sports_psychology",
+    subject: "Advanced Sports Psychology",
+    level: "Postgraduate",
+    difficulty: 70,
+  },
+  {
+    id: "sports_management",
+    subject: "Sports Management",
+    level: "Postgraduate",
+    difficulty: 65,
+  },
+  {
+    id: "sports_performance",
+    subject: "Sports Performance",
+    level: "Postgraduate",
+    difficulty: 75,
+  },
+  {
+    id: "sports_technology",
+    subject: "Sports Technology",
+    level: "Postgraduate",
+    difficulty: 75,
+  },
+  {
+    id: "elite_athlete_training",
+    subject: "Elite Athlete Training",
+    level: "Postgraduate",
+    difficulty: 80,
+  },
+  {
+    id: "sports_research",
+    subject: "Sports Research",
+    level: "Postgraduate",
+    difficulty: 80,
+  },
+];
+
+export const music_subjects = [
+  {
+    id: "music_theory",
+    subject: "Music Theory",
+    level: "Lower Secondary",
+    difficulty: 35,
+  },
+  {
+    id: "basic_musicianship",
+    subject: "Basic Musicianship",
+    level: "Lower Secondary",
+    difficulty: 30,
+  },
+  { id: "choir", subject: "Choir", level: "Lower Secondary", difficulty: 30 },
+  { id: "band", subject: "Band", level: "Lower Secondary", difficulty: 30 },
+  {
+    id: "orchestra",
+    subject: "Orchestra",
+    level: "Lower Secondary",
+    difficulty: 35,
+  },
+  {
+    id: "music_appreciation",
+    subject: "Music Appreciation",
+    level: "Upper Secondary",
+    difficulty: 35,
+  },
+  {
+    id: "advanced_music_theory",
+    subject: "Advanced Music Theory",
+    level: "Upper Secondary",
+    difficulty: 40,
+  },
+  {
+    id: "music_history",
+    subject: "Music History",
+    level: "Upper Secondary",
+    difficulty: 40,
+  },
+  {
+    id: "instrumental_studies",
+    subject: "Instrumental Studies",
+    level: "Upper Secondary",
+    difficulty: 40,
+  },
+  {
+    id: "vocal_studies",
+    subject: "Vocal Studies",
+    level: "Upper Secondary",
+    difficulty: 40,
+  },
+  {
+    id: "composition",
+    subject: "Composition",
+    level: "University",
+    difficulty: 50,
+  },
+  {
+    id: "arranging",
+    subject: "Arranging",
+    level: "University",
+    difficulty: 50,
+  },
+  {
+    id: "music_technology",
+    subject: "Music Technology",
+    level: "University",
+    difficulty: 50,
+  },
+  {
+    id: "music_education",
+    subject: "Music Education",
+    level: "University",
+    difficulty: 55,
+  },
+  {
+    id: "ethnomusicology",
+    subject: "Ethnomusicology",
+    level: "University",
+    difficulty: 55,
+  },
+  {
+    id: "music_therapy",
+    subject: "Music Therapy",
+    level: "University",
+    difficulty: 55,
+  },
+  {
+    id: "advanced_music_history",
+    subject: "Advanced Music History",
+    level: "Postgraduate",
+    difficulty: 60,
+  },
+  {
+    id: "advanced_composition",
+    subject: "Advanced Composition",
+    level: "Postgraduate",
+    difficulty: 65,
+  },
+  {
+    id: "advanced_music_technology",
+    subject: "Advanced Music Technology",
+    level: "Postgraduate",
+    difficulty: 65,
+  },
+  {
+    id: "music_research",
+    subject: "Music Research",
+    level: "Postgraduate",
+    difficulty: 70,
+  },
+  {
+    id: "music_performance",
+    subject: "Music Performance",
+    level: "Postgraduate",
+    difficulty: 70,
+  },
+  {
+    id: "music_scholarship",
+    subject: "Music Scholarship",
+    level: "Postgraduate",
+    difficulty: 75,
+  },
+];
+
+export const language_subjects = [
+  // Specific Languages
+  { id: "english", subject: "English", level: "Secondary", difficulty: 30 },
+  { id: "french", subject: "French", level: "Secondary", difficulty: 40 },
+  { id: "spanish", subject: "Spanish", level: "Secondary", difficulty: 35 },
+  { id: "german", subject: "German", level: "Secondary", difficulty: 45 },
+  { id: "italian", subject: "Italian", level: "Secondary", difficulty: 30 },
+  { id: "mandarin", subject: "Mandarin", level: "University", difficulty: 70 },
+  { id: "japanese", subject: "Japanese", level: "University", difficulty: 60 },
+  { id: "korean", subject: "Korean", level: "University", difficulty: 55 },
+  {
+    id: "portuguese",
+    subject: "Portuguese",
+    level: "Secondary",
+    difficulty: 40,
+  },
+  { id: "arabic", subject: "Arabic", level: "University", difficulty: 75 },
+  { id: "russian", subject: "Russian", level: "University", difficulty: 65 },
+  { id: "hindi", subject: "Hindi", level: "University", difficulty: 50 },
+  { id: "bengali", subject: "Bengali", level: "University", difficulty: 45 },
+  { id: "swahili", subject: "Swahili", level: "University", difficulty: 40 },
+  // Language Study Areas
+  {
+    id: "language_studies",
+    subject: "Language Studies",
+    level: "University",
+    difficulty: 55,
+  },
+  {
+    id: "advanced_language_studies",
+    subject: "Advanced Language Studies",
+    level: "University",
+    difficulty: 70,
+  },
+  {
+    id: "linguistics",
+    subject: "Linguistics",
+    level: "University",
+    difficulty: 60,
+  },
+  {
+    id: "comparative_literature",
+    subject: "Comparative Literature",
+    level: "University",
+    difficulty: 65,
+  },
+  {
+    id: "translation_studies",
+    subject: "Translation Studies",
+    level: "University",
+    difficulty: 60,
+  },
+  {
+    id: "applied_linguistics",
+    subject: "Applied Linguistics",
+    level: "University",
+    difficulty: 55,
+  },
+  {
+    id: "language_culture",
+    subject: "Language and Culture",
+    level: "University",
+    difficulty: 50,
+  },
+  {
+    id: "language_policy",
+    subject: "Language Policy",
+    level: "University",
+    difficulty: 60,
+  },
+  {
+    id: "advanced_translation",
+    subject: "Advanced Translation",
+    level: "University",
+    difficulty: 65,
+  },
+  {
+    id: "language_research",
+    subject: "Language Research",
+    level: "University",
+    difficulty: 70,
+  },
+  {
+    id: "language_acquisition",
+    subject: "Language Acquisition",
+    level: "University",
+    difficulty: 60,
+  },
+  {
+    id: "language_cognition",
+    subject: "Language Cognition",
+    level: "University",
+    difficulty: 65,
+  },
+];
+
+export const technology_subjects = [
+  {
+    id: "software_engineering",
+    subject: "Software Engineering",
+    level: "Undergraduate",
+    difficulty: 80,
+  },
+  {
+    id: "information_technology",
+    subject: "Information Technology",
+    level: "Undergraduate",
+    difficulty: 70,
+  },
+  {
+    id: "cybersecurity",
+    subject: "Cybersecurity",
+    level: "Undergraduate",
+    difficulty: 85,
+  },
+  {
+    id: "artificial_intelligence",
+    subject: "Artificial Intelligence",
+    level: "Undergraduate",
+    difficulty: 90,
+  },
+  {
+    id: "machine_learning",
+    subject: "Machine Learning",
+    level: "Undergraduate",
+    difficulty: 85,
+  },
+  {
+    id: "data_science",
+    subject: "Data Science",
+    level: "Undergraduate",
+    difficulty: 80,
+  },
+  {
+    id: "big_data",
+    subject: "Big Data",
+    level: "Undergraduate",
+    difficulty: 75,
+  },
+  {
+    id: "cloud_computing",
+    subject: "Cloud Computing",
+    level: "Undergraduate",
+    difficulty: 70,
+  },
+  {
+    id: "networking",
+    subject: "Networking",
+    level: "Undergraduate",
+    difficulty: 65,
+  },
+  {
+    id: "database_management",
+    subject: "Database Management",
+    level: "Undergraduate",
+    difficulty: 70,
+  },
+  {
+    id: "web_development",
+    subject: "Web Development",
+    level: "Undergraduate",
+    difficulty: 60,
+  },
+  {
+    id: "mobile_app_development",
+    subject: "Mobile App Development",
+    level: "Undergraduate",
+    difficulty: 70,
+  },
+  {
+    id: "game_development",
+    subject: "Game Development",
+    level: "Undergraduate",
+    difficulty: 75,
+  },
+  {
+    id: "human_computer_interaction",
+    subject: "Human-Computer Interaction",
+    level: "Undergraduate",
+    difficulty: 65,
+  },
+  {
+    id: "internet_of_things",
+    subject: "Internet of Things",
+    level: "Undergraduate",
+    difficulty: 75,
+  },
+  {
+    id: "virtual_reality",
+    subject: "Virtual Reality",
+    level: "Undergraduate",
+    difficulty: 80,
+  },
+  {
+    id: "augmented_reality",
+    subject: "Augmented Reality",
+    level: "Undergraduate",
+    difficulty: 80,
+  },
+  {
+    id: "robotics",
+    subject: "Robotics",
+    level: "Undergraduate",
+    difficulty: 85,
+  },
+  {
+    id: "software_testing",
+    subject: "Software Testing",
+    level: "Undergraduate",
+    difficulty: 60,
+  },
+  {
+    id: "embedded_systems",
+    subject: "Embedded Systems",
+    level: "Undergraduate",
+    difficulty: 70,
+  },
+  {
+    id: "operating_systems",
+    subject: "Operating Systems",
+    level: "Undergraduate",
+    difficulty: 80,
+  },
+  {
+    id: "computer_graphics",
+    subject: "Computer Graphics",
+    level: "Undergraduate",
+    difficulty: 75,
+  },
+  {
+    id: "algorithms",
+    subject: "Algorithms",
+    level: "Undergraduate",
+    difficulty: 85,
+  },
+  {
+    id: "data_structures",
+    subject: "Data Structures",
+    level: "Undergraduate",
+    difficulty: 80,
+  },
+  {
+    id: "computer_networks",
+    subject: "Computer Networks",
+    level: "Undergraduate",
+    difficulty: 75,
+  },
+  {
+    id: "cryptography",
+    subject: "Cryptography",
+    level: "Undergraduate",
+    difficulty: 90,
+  },
+  {
+    id: "digital_signal_processing",
+    subject: "Digital Signal Processing",
+    level: "Undergraduate",
+    difficulty: 85,
+  },
+  {
+    id: "computational_theory",
+    subject: "Computational Theory",
+    level: "Undergraduate",
+    difficulty: 85,
+  },
+  {
+    id: "distributed_systems",
+    subject: "Distributed Systems",
+    level: "Undergraduate",
+    difficulty: 80,
+  },
+  {
+    id: "software_architecture",
+    subject: "Software Architecture",
+    level: "Undergraduate",
+    difficulty: 80,
+  },
+  {
+    id: "hardware_design",
+    subject: "Hardware Design",
+    level: "Undergraduate",
+    difficulty: 75,
+  },
+  {
+    id: "internet_security",
+    subject: "Internet Security",
+    level: "Undergraduate",
+    difficulty: 85,
+  },
+  {
+    id: "data_analytics",
+    subject: "Data Analytics",
+    level: "Undergraduate",
+    difficulty: 75,
+  },
+  {
+    id: "web_security",
+    subject: "Web Security",
+    level: "Undergraduate",
+    difficulty: 80,
+  },
+  {
+    id: "business_intelligence",
+    subject: "Business Intelligence",
+    level: "Undergraduate",
+    difficulty: 70,
+  },
+  {
+    id: "quantum_computing",
+    subject: "Quantum Computing",
+    level: "Postgraduate",
+    difficulty: 90,
+  },
+  {
+    id: "computer_vision",
+    subject: "Computer Vision",
+    level: "Undergraduate",
+    difficulty: 80,
+  },
+  {
+    id: "natural_language_processing",
+    subject: "Natural Language Processing",
+    level: "Undergraduate",
+    difficulty: 85,
+  },
+  {
+    id: "cloud_architecture",
+    subject: "Cloud Architecture",
+    level: "Undergraduate",
+    difficulty: 75,
+  },
+  {
+    id: "blockchain_technology",
+    subject: "Blockchain Technology",
+    level: "Undergraduate",
+    difficulty: 80,
+  },
+  {
+    id: "digital_marketing",
+    subject: "Digital Marketing",
+    level: "Undergraduate",
+    difficulty: 60,
+  },
+  {
+    id: "software_project_management",
+    subject: "Software Project Management",
+    level: "Undergraduate",
+    difficulty: 70,
+  },
+  {
+    id: "user_experience_design",
+    subject: "User Experience Design",
+    level: "Undergraduate",
+    difficulty: 65,
+  },
+  {
+    id: "user_interface_design",
+    subject: "User Interface Design",
+    level: "Undergraduate",
+    difficulty: 65,
+  },
+  {
+    id: "ethical_hacking",
+    subject: "Ethical Hacking",
+    level: "Undergraduate",
+    difficulty: 80,
+  },
+  {
+    id: "systems_analysis",
+    subject: "Systems Analysis",
+    level: "Undergraduate",
+    difficulty: 70,
+  },
+  {
+    id: "information_systems",
+    subject: "Information Systems",
+    level: "Undergraduate",
+    difficulty: 70,
+  },
+  {
+    id: "technology_management",
+    subject: "Technology Management",
+    level: "Undergraduate",
+    difficulty: 65,
+  },
+  {
+    id: "it_infrastructure",
+    subject: "IT Infrastructure",
+    level: "Undergraduate",
+    difficulty: 70,
+  },
+  {
+    id: "digital_transformation",
+    subject: "Digital Transformation",
+    level: "Undergraduate",
+    difficulty: 75,
+  },
+  {
+    id: "software_development_lifecycle",
+    subject: "Software Development Lifecycle",
+    level: "Undergraduate",
+    difficulty: 75,
+  },
+  {
+    id: "data_engineering",
+    subject: "Data Engineering",
+    level: "Undergraduate",
+    difficulty: 80,
+  },
+  {
+    id: "technology_innovation",
+    subject: "Technology Innovation",
+    level: "Undergraduate",
+    difficulty: 75,
+  },
+  {
+    id: "augmented_intelligence",
+    subject: "Augmented Intelligence",
+    level: "Undergraduate",
+    difficulty: 80,
+  },
+  {
+    id: "human_ai_interaction",
+    subject: "Human-AI Interaction",
+    level: "Undergraduate",
+    difficulty: 75,
+  },
+  {
+    id: "ethical_ai",
+    subject: "Ethical AI",
+    level: "Undergraduate",
+    difficulty: 70,
+  },
+  {
+    id: "computing_infrastructure",
+    subject: "Computing Infrastructure",
+    level: "Undergraduate",
+    difficulty: 70,
+  },
+  {
+    id: "information_retrieval",
+    subject: "Information Retrieval",
+    level: "Undergraduate",
+    difficulty: 75,
+  },
+  {
+    id: "digital_forensics",
+    subject: "Digital Forensics",
+    level: "Undergraduate",
+    difficulty: 80,
+  },
+  {
+    id: "data_privacy",
+    subject: "Data Privacy",
+    level: "Undergraduate",
+    difficulty: 75,
+  },
+  {
+    id: "smart_technologies",
+    subject: "Smart Technologies",
+    level: "Undergraduate",
+    difficulty: 70,
+  },
+  {
+    id: "biomedical_engineering",
+    subject: "Biomedical Engineering",
+    level: "Undergraduate",
+    difficulty: 80,
+  },
+  {
+    id: "environmental_technology",
+    subject: "Environmental Technology",
+    level: "Undergraduate",
+    difficulty: 70,
+  },
+  {
+    id: "automotive_technology",
+    subject: "Automotive Technology",
+    level: "Undergraduate",
+    difficulty: 75,
+  },
+  {
+    id: "aerospace_technology",
+    subject: "Aerospace Technology",
+    level: "Undergraduate",
+    difficulty: 75,
+  },
+  {
+    id: "nano_technology",
+    subject: "Nanotechnology",
+    level: "Undergraduate",
+    difficulty: 80,
+  },
+  {
+    id: "materials_science",
+    subject: "Materials Science",
+    level: "Undergraduate",
+    difficulty: 70,
+  },
+  {
+    id: "user_research",
+    subject: "User Research",
+    level: "Undergraduate",
+    difficulty: 60,
+  },
+  {
+    id: "technology_policy",
+    subject: "Technology Policy",
+    level: "Undergraduate",
+    difficulty: 65,
+  },
+  {
+    id: "computational_linguistics",
+    subject: "Computational Linguistics",
+    level: "Undergraduate",
+    difficulty: 75,
+  },
+  {
+    id: "digital_media",
+    subject: "Digital Media",
+    level: "Undergraduate",
+    difficulty: 60,
+  },
+  {
+    id: "interactive_design",
+    subject: "Interactive Design",
+    level: "Undergraduate",
+    difficulty: 70,
+  },
+  {
+    id: "geographic_information_systems",
+    subject: "Geographic Information Systems",
+    level: "Undergraduate",
+    difficulty: 70,
+  },
+  {
+    id: "web_design",
+    subject: "Web Design",
+    level: "Undergraduate",
+    difficulty: 60,
+  },
+  {
+    id: "human_robot_interaction",
+    subject: "Human-Robot Interaction",
+    level: "Undergraduate",
+    difficulty: 75,
+  },
+  {
+    id: "virtual_environments",
+    subject: "Virtual Environments",
+    level: "Undergraduate",
+    difficulty: 80,
+  },
+  {
+    id: "computational_modeling",
+    subject: "Computational Modeling",
+    level: "Undergraduate",
+    difficulty: 80,
+  },
+  {
+    id: "data_visualization",
+    subject: "Data Visualization",
+    level: "Undergraduate",
+    difficulty: 70,
+  },
+  {
+    id: "it_service_management",
+    subject: "IT Service Management",
+    level: "Undergraduate",
+    difficulty: 65,
+  },
+  {
+    id: "design_patterns",
+    subject: "Design Patterns",
+    level: "Undergraduate",
+    difficulty: 75,
+  },
+  {
+    id: "information_assurance",
+    subject: "Information Assurance",
+    level: "Undergraduate",
+    difficulty: 70,
+  },
+  {
+    id: "software_configuration_management",
+    subject: "Software Configuration Management",
+    level: "Undergraduate",
+    difficulty: 75,
+  },
+  {
+    id: "business_process_automation",
+    subject: "Business Process Automation",
+    level: "Undergraduate",
+    difficulty: 65,
+  },
+  {
+    id: "human_factors_engineering",
+    subject: "Human Factors Engineering",
+    level: "Undergraduate",
+    difficulty: 70,
+  },
+  {
+    id: "technology_in_education",
+    subject: "Technology in Education",
+    level: "Undergraduate",
+    difficulty: 60,
+  },
+  {
+    id: "information_technology_in_healthcare",
+    subject: "Information Technology in Healthcare",
+    level: "Undergraduate",
+    difficulty: 65,
+  },
+  {
+    id: "information_technology_in_business",
+    subject: "Information Technology in Business",
+    level: "Undergraduate",
+    difficulty: 65,
+  },
+  {
+    id: "advanced_computer_architecture",
+    subject: "Advanced Computer Architecture",
+    level: "Postgraduate",
+    difficulty: 85,
+  },
+];

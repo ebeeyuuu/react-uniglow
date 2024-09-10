@@ -1244,6 +1244,381 @@ export const clubExamples = {
         "Leading Canadian university known for its vibrant campus.",
     },
   ],
+  volunteerClubs: [
+    {
+      name: "Community Outreach Volunteers",
+      university: "Harvard University",
+      club_description:
+        "Focuses on organizing volunteer events for local communities.",
+      university_description:
+        "An Ivy League university known for its academic excellence and leadership.",
+    },
+    {
+      name: "Helping Hands Club",
+      university: "Stanford University",
+      club_description:
+        "Coordinates efforts to assist local shelters and charities.",
+      university_description:
+        "Renowned private university with a strong emphasis on research and innovation.",
+    },
+    {
+      name: "Service Above Self",
+      university: "Yale University",
+      club_description:
+        "Promotes student-led volunteer projects in underprivileged areas.",
+      university_description:
+        "An Ivy League institution known for its strong liberal arts education.",
+    },
+    {
+      name: "Volunteer Impact Group",
+      university: "University of California, Berkeley",
+      club_description:
+        "Engages students in community service and volunteerism.",
+      university_description:
+        "A top public university with a tradition of activism and academic rigor.",
+    },
+    {
+      name: "Global Volunteer Network",
+      university: "University of Cambridge",
+      club_description:
+        "Organizes international volunteer trips for student engagement.",
+      university_description:
+        "Prestigious university with a global reputation for academic excellence.",
+    },
+    {
+      name: "Hands Across Borders",
+      university: "Princeton University",
+      club_description:
+        "Facilitates cross-border volunteering and charity projects.",
+      university_description:
+        "A leading Ivy League university with a focus on public service.",
+    },
+    {
+      name: "Reach Out Initiative",
+      university: "University of Toronto",
+      club_description:
+        "Encourages students to participate in local volunteer opportunities.",
+      university_description:
+        "A premier Canadian university with a diverse and active student body.",
+    },
+    {
+      name: "Serve the City",
+      university: "University of Melbourne",
+      club_description:
+        "Works to improve local communities through student-led volunteer work.",
+      university_description:
+        "Australia’s leading public research university with a strong community presence.",
+    },
+    {
+      name: "Bright Future Volunteers",
+      university: "University of Oxford",
+      club_description:
+        "Supports student volunteering in education and healthcare fields.",
+      university_description:
+        "One of the world’s oldest and most prestigious universities.",
+    },
+    {
+      name: "Together We Can",
+      university: "University of Sydney",
+      club_description:
+        "Encourages volunteer efforts in environmental and social projects.",
+      university_description:
+        "Top university in Australia with a commitment to community impact.",
+    },
+    {
+      name: "Student Volunteer Alliance",
+      university: "Duke University",
+      club_description:
+        "Aims to connect students with local and national volunteer opportunities.",
+      university_description:
+        "A private research university known for its interdisciplinary programs.",
+    },
+    {
+      name: "Action for Change",
+      university: "Columbia University",
+      club_description:
+        "Promotes student involvement in volunteerism and social justice projects.",
+      university_description:
+        "An Ivy League university located in the heart of New York City.",
+    },
+    {
+      name: "Lend a Hand Club",
+      university: "University of Michigan",
+      club_description:
+        "Offers volunteer opportunities to support local communities.",
+      university_description:
+        "A leading public research university with a diverse student body.",
+    },
+    {
+      name: "Helping Hearts",
+      university: "University of Pennsylvania",
+      club_description:
+        "Focuses on healthcare volunteerism and support for medical nonprofits.",
+      university_description:
+        "A historic Ivy League institution known for its business and law programs.",
+    },
+    {
+      name: "Project Sunshine",
+      university: "New York University",
+      club_description:
+        "Coordinates volunteer work at local hospitals and healthcare centers.",
+      university_description:
+        "A private university in the heart of New York with a global focus.",
+    },
+    {
+      name: "Volunteer Leaders Association",
+      university: "University of Chicago",
+      club_description:
+        "Connects students to leadership roles in volunteer projects.",
+      university_description:
+        "A private research university known for its rigorous academics.",
+    },
+    {
+      name: "Good Deeds Club",
+      university: "University of Edinburgh",
+      club_description:
+        "Works on local community improvement and volunteering efforts.",
+      university_description:
+        "A top-ranked university in Scotland with a strong focus on research.",
+    },
+    {
+      name: "Student Volunteers for Change",
+      university: "Cornell University",
+      club_description:
+        "Focuses on connecting students to volunteer opportunities in education.",
+      university_description:
+        "An Ivy League institution known for its diverse academic programs.",
+    },
+    {
+      name: "Outreach Society",
+      university: "University of Southern California",
+      club_description:
+        "Organizes student participation in community outreach and support.",
+      university_description:
+        "A private university in Los Angeles with strong arts and engineering programs.",
+    },
+    {
+      name: "United Volunteers Club",
+      university: "University of British Columbia",
+      club_description:
+        "Engages students in international and local volunteering efforts.",
+      university_description:
+        "A leading Canadian university with a strong focus on sustainability.",
+    },
+    {
+      name: "Students for a Better World",
+      university: "Brown University",
+      club_description:
+        "Aims to improve global communities through student volunteerism.",
+      university_description:
+        "An Ivy League university with a unique approach to education.",
+    },
+    {
+      name: "Volunteer Hearts Network",
+      university: "University of Queensland",
+      club_description:
+        "Supports student involvement in healthcare and community volunteering.",
+      university_description:
+        "One of Australia’s leading research institutions.",
+    },
+    {
+      name: "Campus Service League",
+      university: "McGill University",
+      club_description:
+        "Promotes campus-wide participation in volunteer projects and community outreach.",
+      university_description:
+        "A prestigious Canadian university with strong research programs.",
+    },
+    {
+      name: "Service Scholars",
+      university: "University of Virginia",
+      club_description:
+        "Engages students in local volunteer programs, focusing on education.",
+      university_description:
+        "A public university with a long history of leadership in education.",
+    },
+    {
+      name: "Impact Volunteers Club",
+      university: "University of Notre Dame",
+      club_description:
+        "Connects students to local nonprofits and volunteering opportunities.",
+      university_description:
+        "A private Catholic university with a strong commitment to community service.",
+    },
+    {
+      name: "Change Makers Club",
+      university: "London School of Economics",
+      club_description:
+        "Focuses on driving social impact through student volunteering.",
+      university_description:
+        "A world-renowned institution specializing in social sciences.",
+    },
+    {
+      name: "Acts of Kindness Club",
+      university: "University of Texas at Austin",
+      club_description:
+        "Encourages students to volunteer for local charities and support groups.",
+      university_description:
+        "A major public research university known for its dynamic campus culture.",
+    },
+    {
+      name: "Generosity Initiative",
+      university: "University of California, Los Angeles",
+      club_description:
+        "Promotes volunteerism through partnerships with local organizations.",
+      university_description:
+        "A top-ranked public university known for its academic programs.",
+    },
+    {
+      name: "Global Outreach Volunteers",
+      university: "University of Sydney",
+      club_description:
+        "Organizes international volunteering and global service trips.",
+      university_description:
+        "Australia’s leading university with a global focus on research.",
+    },
+    {
+      name: "Helping Hands Network",
+      university: "University of Auckland",
+      club_description:
+        "Focuses on local volunteering opportunities and community support.",
+      university_description: "New Zealand’s premier research university.",
+    },
+    {
+      name: "Compassion in Action",
+      university: "University of Wisconsin-Madison",
+      club_description:
+        "Engages students in volunteer work focused on helping the homeless.",
+      university_description:
+        "A leading public research university in the United States.",
+    },
+    {
+      name: "Students Serve Society",
+      university: "Peking University",
+      club_description:
+        "Promotes student involvement in volunteerism across China.",
+      university_description:
+        "China’s top university with a strong tradition of student activism.",
+    },
+    {
+      name: "Community Builders",
+      university: "University of New South Wales",
+      club_description:
+        "Supports student-led volunteer projects to help local communities.",
+      university_description:
+        "One of Australia’s top universities with a focus on innovation.",
+    },
+    {
+      name: "Youth in Action",
+      university: "University of Cape Town",
+      club_description:
+        "Organizes volunteer efforts to empower underprivileged youth.",
+      university_description:
+        "South Africa’s leading university with a strong commitment to social justice.",
+    },
+    {
+      name: "Volunteers United",
+      university: "Tsinghua University",
+      club_description:
+        "Connects students with volunteering opportunities in China and abroad.",
+      university_description:
+        "One of China’s most prestigious research universities.",
+    },
+    {
+      name: "Humanity First",
+      university: "University of Hong Kong",
+      club_description:
+        "Engages students in international humanitarian volunteer projects.",
+      university_description:
+        "One of Asia’s top universities with a global outlook.",
+    },
+    {
+      name: "Future Leaders Volunteer Society",
+      university: "National University of Singapore",
+      club_description: "Trains students in leadership through volunteer work.",
+      university_description:
+        "A leading Asian university with a global presence.",
+    },
+    {
+      name: "Volunteer Connect",
+      university: "University of Amsterdam",
+      club_description:
+        "Connects students with volunteering opportunities across Europe.",
+      university_description:
+        "A premier European university known for its international programs.",
+    },
+    {
+      name: "Serve the Community",
+      university: "University of Warwick",
+      club_description:
+        "Encourages student participation in local service projects.",
+      university_description: "One of the UK’s leading research universities.",
+    },
+    {
+      name: "Hearts for Humanity",
+      university: "University of Copenhagen",
+      club_description:
+        "Focuses on student-led humanitarian efforts and social impact.",
+      university_description:
+        "A top university in Europe known for its research and academic programs.",
+    },
+    {
+      name: "Inspire Volunteers",
+      university: "University of Helsinki",
+      club_description:
+        "Promotes student volunteerism in local and global humanitarian projects.",
+      university_description:
+        "Finland’s top university with a focus on social innovation.",
+    },
+    {
+      name: "Unity in Service",
+      university: "University of Glasgow",
+      club_description:
+        "Focuses on community engagement and local volunteering.",
+      university_description:
+        "A historic Scottish university with a strong commitment to social impact.",
+    },
+    {
+      name: "Project Compassion",
+      university: "University of Sydney",
+      club_description:
+        "Coordinates student efforts in healthcare volunteerism.",
+      university_description:
+        "A top university in Australia with a strong commitment to research.",
+    },
+    {
+      name: "Empower Volunteers Club",
+      university: "University of California, San Diego",
+      club_description:
+        "Supports student involvement in environmental and social volunteering.",
+      university_description:
+        "A public research university with a strong environmental focus.",
+    },
+    {
+      name: "Compassionate Citizens",
+      university: "University of Illinois Urbana-Champaign",
+      club_description:
+        "Encourages volunteerism focused on local food banks and shelters.",
+      university_description:
+        "A top public research university in the United States.",
+    },
+    {
+      name: "Volunteers for Humanity",
+      university: "University of Maryland",
+      club_description:
+        "Engages students in humanitarian and disaster relief volunteer efforts.",
+      university_description:
+        "A leading public research university on the East Coast of the United States.",
+    },
+    {
+      name: "Charity Warriors Club",
+      university: "University of St Andrews",
+      club_description:
+        "Focuses on charitable activities and volunteerism in local communities.",
+      university_description:
+        "A historic Scottish university with a global reputation for excellence.",
+    },
+  ],
   professionalDevelopmentClubs: [
     {
       name: "Business Leaders Society",

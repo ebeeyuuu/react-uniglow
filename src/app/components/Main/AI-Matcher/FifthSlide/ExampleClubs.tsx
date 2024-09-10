@@ -12,11 +12,15 @@ interface ClubExamples {
   [section: string]: Club[];
 }
 
-const ExampleClubs = () => {
+interface ExampleClubsProps {
+  clubsList: ClubExamples[];
+}
+
+const ExampleClubs: React.FC<ExampleClubsProps> = ({ clubsList }) => {
   return (
     <div className="w-full h-full flex justify-center items-center relative overflow-y-auto overflow-x-hidden scrollbar-hide">
       <div className="absolute top-0 left-0 grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6">
-        {Object.entries(clubExamples).map(([section, clubs]) => (
+        {Object.entries(clubsList).map(([section, clubs]) => (
           <div
             key={section}
             className="selection min-h-[500px] flex justify-center border rounded-xl p-10 flex-col gap-4 text-wrap"

@@ -4,7 +4,7 @@ import React, { useEffect, useState, useCallback } from "react";
 import TypeClubs from "./FifthSlide/TypeClubs";
 import ExampleClubs from "./FifthSlide/ExampleClubs";
 
-import { clubTypes } from "@/data";
+import { clubTypes, clubExamples } from "@/data";
 
 type SlideProps = {
   onNextSlide: () => void;
@@ -65,7 +65,7 @@ const FifthSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
             animate={{ x: 0 }}
             transition={{ duration: 0.8, ease: "easeInOut" }}
           >
-            <ExampleClubs />
+            <ExampleClubs clubsList={clubExamples} />
           </motion.div>
         </AnimatePresence>
       )}

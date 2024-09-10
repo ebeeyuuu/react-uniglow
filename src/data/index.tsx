@@ -16997,20 +16997,5112 @@ export const clubExamples = {
         "Public university known for its commitment to academic excellence and vibrant campus activities.",
     },
   ],
-  boardGameClubs: [],
-  chessClubs: [],
-  sustainabilityClubs: [],
-  codingclubs: [],
-  bookClubs: [],
-  comedyClubs: [],
-  fitnessClubs: [],
-  gardeningClubs: [],
-  vrClubs: [],
-  podcastingclubs: [],
-  calligraphyAndHandwritingClubs: [],
-  puzzleAndEscapeRoomClubs: [],
-  carClubs: [],
-  recyclingClubs: [],
+  boardGameClubs: [
+    {
+      name: "Board Game Society",
+      university: "University of California Los Angeles",
+      club_description:
+        "Organizes regular board game nights and tournaments for students.",
+      university_description:
+        "Public university with a strong emphasis on student activities and engagement.",
+    },
+    {
+      name: "Game Night Club",
+      university: "University of Texas at Austin",
+      club_description:
+        "Hosts board game sessions, including strategy and party games, every week.",
+      university_description:
+        "Public university known for its vibrant campus life and diverse student body.",
+    },
+    {
+      name: "Board Gamers Club",
+      university: "University of Washington",
+      club_description:
+        "Provides opportunities for students to play and discuss various board games.",
+      university_description:
+        "Public university with a focus on research and active student community.",
+    },
+    {
+      name: "Game Enthusiasts Society",
+      university: "University of Florida",
+      club_description:
+        "Facilitates board game nights and tournaments, featuring both classic and modern games.",
+      university_description:
+        "Public university known for its strong academic programs and student involvement.",
+    },
+    {
+      name: "Strategy Games Club",
+      university: "University of Michigan",
+      club_description:
+        "Hosts strategy board game events and tournaments for students interested in complex games.",
+      university_description:
+        "Public research university with a commitment to academic rigor and student engagement.",
+    },
+    {
+      name: "Board Games and More Club",
+      university: "New York University",
+      club_description:
+        "Organizes weekly board game sessions and special events for board game enthusiasts.",
+      university_description:
+        "Private university with a global network and a strong emphasis on student activities.",
+    },
+    {
+      name: "Tabletop Gaming Club",
+      university: "University of Southern California",
+      club_description:
+        "Provides opportunities for students to play a variety of tabletop and board games.",
+      university_description:
+        "Private research university known for its innovation and vibrant campus life.",
+    },
+    {
+      name: "Classic Games Club",
+      university: "University of Chicago",
+      club_description:
+        "Hosts events centered around classic board games and new game releases.",
+      university_description:
+        "Private university with a focus on academic excellence and student engagement.",
+    },
+    {
+      name: "Board Game Nights Club",
+      university: "Stanford University",
+      club_description:
+        "Facilitates weekly board game nights featuring a mix of strategy and casual games.",
+      university_description:
+        "Private research university known for its academic rigor and vibrant student community.",
+    },
+    {
+      name: "Board Game Enthusiasts Society",
+      university: "University of California Berkeley",
+      club_description:
+        "Hosts board game nights and tournaments for students interested in various board games.",
+      university_description:
+        "Public university with a commitment to academic support and student activities.",
+    },
+    {
+      name: "Game Masters Club",
+      university: "University of Pennsylvania",
+      club_description:
+        "Organizes board game sessions and strategy game tournaments for students.",
+      university_description:
+        "Private Ivy League university with a strong focus on academic excellence and student involvement.",
+    },
+    {
+      name: "Tabletop Gamers Club",
+      university: "University of Virginia",
+      club_description:
+        "Facilitates tabletop and board game events, including role-playing games.",
+      university_description:
+        "Public university known for its commitment to student engagement and academic support.",
+    },
+    {
+      name: "Board Game Society",
+      university: "Duke University",
+      club_description:
+        "Hosts regular board game sessions and tournaments for students of all levels.",
+      university_description:
+        "Private research university with a focus on academic excellence and student life.",
+    },
+    {
+      name: "Gaming Club",
+      university: "University of Arizona",
+      club_description:
+        "Organizes board game events, tournaments, and casual gaming sessions.",
+      university_description:
+        "Public university known for its strong academic programs and vibrant campus community.",
+    },
+    {
+      name: "Board Game Club",
+      university: "University of Illinois Urbana-Champaign",
+      club_description:
+        "Provides opportunities for students to engage in various board game sessions and tournaments.",
+      university_description:
+        "Public university with a focus on research and student activities.",
+    },
+    {
+      name: "Strategy and Board Games Club",
+      university: "University of Colorado Boulder",
+      club_description:
+        "Hosts board game nights and strategy game events for students.",
+      university_description:
+        "Public university known for its commitment to academic rigor and student life.",
+    },
+    {
+      name: "Game Enthusiasts Club",
+      university: "University of Oregon",
+      club_description:
+        "Facilitates board game nights and tournaments, featuring both classic and modern games.",
+      university_description:
+        "Public university with a strong focus on academic support and student engagement.",
+    },
+    {
+      name: "Board Games Society",
+      university: "University of North Carolina at Chapel Hill",
+      club_description:
+        "Organizes regular board game sessions and tournaments for students.",
+      university_description:
+        "Public university known for its commitment to academic excellence and student involvement.",
+    },
+    {
+      name: "Board Game Club",
+      university: "University of Wisconsin-Madison",
+      club_description:
+        "Hosts board game nights, tournaments, and casual gaming sessions for students.",
+      university_description:
+        "Public university with a focus on academic rigor and vibrant campus life.",
+    },
+    {
+      name: "Board Games Enthusiasts Club",
+      university: "University of Miami",
+      club_description:
+        "Facilitates board game events and strategy sessions for students.",
+      university_description:
+        "Private research university known for its strong academic programs and student engagement.",
+    },
+    {
+      name: "Tabletop Gaming Society",
+      university: "University of Minnesota",
+      club_description:
+        "Organizes tabletop and board game nights, including strategy and party games.",
+      university_description:
+        "Public university with a focus on research and student activities.",
+    },
+    {
+      name: "Board Game Enthusiasts Club",
+      university: "University of South Florida",
+      club_description:
+        "Hosts board game events, including tournaments and casual play sessions.",
+      university_description:
+        "Public university known for its commitment to student success and academic excellence.",
+    },
+    {
+      name: "Board Game Club",
+      university: "University of Pittsburgh",
+      club_description:
+        "Facilitates board game sessions, including classic and modern games.",
+      university_description:
+        "Public university with a strong focus on academic support and student involvement.",
+    },
+    {
+      name: "Game Night Society",
+      university: "University of Delaware",
+      club_description:
+        "Organizes board game nights and tournaments for students.",
+      university_description:
+        "Public university known for its vibrant campus life and strong academic programs.",
+    },
+    {
+      name: "Board Games Club",
+      university: "University of Rhode Island",
+      club_description:
+        "Provides opportunities for students to play various board games and participate in tournaments.",
+      university_description:
+        "Public university with a focus on student engagement and academic support.",
+    },
+    {
+      name: "Classic and Modern Games Club",
+      university: "University of Kansas",
+      club_description:
+        "Hosts events featuring both classic and modern board games for students.",
+      university_description:
+        "Public university known for its strong academic programs and student activities.",
+    },
+    {
+      name: "Board Game Enthusiasts Society",
+      university: "University of Kentucky",
+      club_description:
+        "Facilitates board game nights and strategy sessions for students.",
+      university_description:
+        "Public university with a commitment to academic support and vibrant student life.",
+    },
+    {
+      name: "Gaming Club",
+      university: "University of Arkansas",
+      club_description:
+        "Organizes board game events, including strategy games and casual play sessions.",
+      university_description:
+        "Public university with a focus on academic excellence and student engagement.",
+    },
+    {
+      name: "Board Game Society",
+      university: "University of South Carolina",
+      club_description:
+        "Hosts regular board game sessions and tournaments for students.",
+      university_description:
+        "Public university known for its vibrant campus life and academic support.",
+    },
+    {
+      name: "Board Game Club",
+      university: "University of Tennessee",
+      club_description:
+        "Provides opportunities for students to participate in board game nights and tournaments.",
+      university_description:
+        "Public university with a strong focus on academic rigor and student engagement.",
+    },
+    {
+      name: "Tabletop Gaming Club",
+      university: "University of Nebraska",
+      club_description:
+        "Facilitates tabletop and board game events, including strategy games.",
+      university_description:
+        "Public university known for its commitment to academic support and student involvement.",
+    },
+    {
+      name: "Board Game Club",
+      university: "University of Montana",
+      club_description:
+        "Hosts board game nights and tournaments, featuring a variety of games.",
+      university_description:
+        "Public university with a focus on student success and academic excellence.",
+    },
+    {
+      name: "Board Games Society",
+      university: "University of Wyoming",
+      club_description:
+        "Organizes board game events, including casual play and strategy games.",
+      university_description:
+        "Public university known for its commitment to student engagement and academic support.",
+    },
+    {
+      name: "Board Game Enthusiasts Club",
+      university: "University of Maine",
+      club_description:
+        "Facilitates board game nights and tournaments for students.",
+      university_description:
+        "Public university with a strong focus on student life and academic excellence.",
+    },
+    {
+      name: "Board Game Club",
+      university: "University of Mississippi",
+      club_description:
+        "Hosts board game events, including strategy and casual games.",
+      university_description:
+        "Public university with a commitment to vibrant student activities and academic support.",
+    },
+    {
+      name: "Game Night Club",
+      university: "University of New Mexico",
+      club_description:
+        "Provides opportunities for students to engage in board game nights and tournaments.",
+      university_description:
+        "Public university known for its focus on student success and vibrant campus life.",
+    },
+  ],
+  chessClubs: [
+    {
+      name: "Chess Club",
+      university: "University of California Berkeley",
+      club_description:
+        "Organizes weekly chess matches and tournaments for players of all levels.",
+      university_description:
+        "Public university known for its strong academic programs and active student community.",
+    },
+    {
+      name: "Chess Enthusiasts Society",
+      university: "University of Texas at Austin",
+      club_description:
+        "Hosts chess tournaments and casual play sessions for students.",
+      university_description:
+        "Public university renowned for its vibrant campus life and diverse student body.",
+    },
+    {
+      name: "Campus Chess Club",
+      university: "University of Michigan",
+      club_description:
+        "Provides opportunities for students to participate in chess games and competitions.",
+      university_description:
+        "Public research university with a focus on academic excellence and student engagement.",
+    },
+    {
+      name: "Chess Masters Club",
+      university: "University of Washington",
+      club_description:
+        "Facilitates chess tournaments and practice sessions for students of all skill levels.",
+      university_description:
+        "Public university known for its commitment to research and active student life.",
+    },
+    {
+      name: "Chess Players Association",
+      university: "University of Florida",
+      club_description:
+        "Organizes regular chess games, workshops, and tournaments.",
+      university_description:
+        "Public university with a strong focus on academic support and vibrant campus activities.",
+    },
+    {
+      name: "Strategic Chess Club",
+      university: "University of Southern California",
+      club_description:
+        "Hosts chess tournaments and practice sessions, emphasizing strategic play.",
+      university_description:
+        "Private research university with a reputation for innovation and student engagement.",
+    },
+    {
+      name: "Chess Club",
+      university: "University of Pennsylvania",
+      club_description:
+        "Facilitates chess events and practice sessions for students.",
+      university_description:
+        "Private Ivy League university known for its commitment to academic rigor and student activities.",
+    },
+    {
+      name: "Campus Chess Society",
+      university: "New York University",
+      club_description:
+        "Provides opportunities for students to play and compete in chess tournaments.",
+      university_description:
+        "Private university with a global network and strong emphasis on student life.",
+    },
+    {
+      name: "Chess Club",
+      university: "University of Chicago",
+      club_description:
+        "Hosts chess matches and competitions, catering to players of all levels.",
+      university_description:
+        "Private university known for its academic excellence and active student community.",
+    },
+    {
+      name: "Chess Enthusiasts Club",
+      university: "Stanford University",
+      club_description:
+        "Organizes regular chess games and tournaments for students.",
+      university_description:
+        "Private research university with a focus on academic excellence and vibrant campus life.",
+    },
+    {
+      name: "Board and Chess Club",
+      university: "University of California Los Angeles",
+      club_description:
+        "Hosts chess tournaments and practice sessions, along with other board games.",
+      university_description:
+        "Public university with a commitment to a rich student experience and academic rigor.",
+    },
+    {
+      name: "Chess Society",
+      university: "University of Illinois Urbana-Champaign",
+      club_description:
+        "Facilitates chess tournaments and casual games for students.",
+      university_description:
+        "Public university known for its research focus and vibrant campus life.",
+    },
+    {
+      name: "Campus Chess Club",
+      university: "University of Arizona",
+      club_description:
+        "Provides opportunities for students to engage in chess tournaments and practice sessions.",
+      university_description:
+        "Public university with a strong focus on student success and academic programs.",
+    },
+    {
+      name: "Chess Club",
+      university: "University of Wisconsin-Madison",
+      club_description:
+        "Organizes chess games and tournaments for students of all levels.",
+      university_description:
+        "Public university known for its academic rigor and student engagement.",
+    },
+    {
+      name: "Chess Club",
+      university: "University of Virginia",
+      club_description:
+        "Hosts chess matches, practice sessions, and tournaments for students.",
+      university_description:
+        "Public university with a commitment to academic excellence and vibrant student life.",
+    },
+    {
+      name: "Chess and Strategy Club",
+      university: "University of Maryland",
+      club_description:
+        "Facilitates chess games and strategic play sessions for students.",
+      university_description:
+        "Public university known for its research focus and active student community.",
+    },
+    {
+      name: "Chess Club",
+      university: "University of South Carolina",
+      club_description:
+        "Provides opportunities for students to play and compete in chess tournaments.",
+      university_description:
+        "Public university with a focus on student success and vibrant campus activities.",
+    },
+    {
+      name: "Campus Chess Society",
+      university: "University of Iowa",
+      club_description:
+        "Hosts chess tournaments and practice sessions for students.",
+      university_description:
+        "Public university known for its strong academic programs and active student life.",
+    },
+    {
+      name: "Chess Club",
+      university: "University of Georgia",
+      club_description: "Organizes chess games and tournaments for students.",
+      university_description:
+        "Public university with a commitment to academic excellence and student engagement.",
+    },
+    {
+      name: "Chess Club",
+      university: "University of North Carolina at Chapel Hill",
+      club_description:
+        "Facilitates chess tournaments and casual play sessions for students.",
+      university_description:
+        "Public university known for its vibrant campus life and strong academic programs.",
+    },
+    {
+      name: "Chess Society",
+      university: "University of Oklahoma",
+      club_description:
+        "Hosts regular chess matches and tournaments for students.",
+      university_description:
+        "Public university with a focus on research and active student engagement.",
+    },
+    {
+      name: "Campus Chess Club",
+      university: "University of Nebraska",
+      club_description:
+        "Provides opportunities for students to participate in chess tournaments and practice sessions.",
+      university_description:
+        "Public university known for its academic support and vibrant campus life.",
+    },
+    {
+      name: "Chess Enthusiasts Club",
+      university: "University of Alabama",
+      club_description:
+        "Organizes chess games and tournaments, focusing on strategic play.",
+      university_description:
+        "Public university with a strong emphasis on academic support and student activities.",
+    },
+    {
+      name: "Chess Club",
+      university: "University of Tennessee",
+      club_description:
+        "Hosts chess sessions and tournaments for students of all skill levels.",
+      university_description:
+        "Public university with a commitment to vibrant student life and academic excellence.",
+    },
+    {
+      name: "Chess Club",
+      university: "University of Connecticut",
+      club_description:
+        "Facilitates chess practice sessions and competitive play for students.",
+      university_description:
+        "Public university known for its strong academic programs and student engagement.",
+    },
+    {
+      name: "Chess Society",
+      university: "University of Colorado Boulder",
+      club_description:
+        "Organizes chess tournaments and casual games for students.",
+      university_description:
+        "Public university with a focus on academic excellence and vibrant campus activities.",
+    },
+    {
+      name: "Chess Club",
+      university: "University of Mississippi",
+      club_description:
+        "Provides opportunities for students to engage in chess matches and tournaments.",
+      university_description:
+        "Public university known for its commitment to student success and academic support.",
+    },
+    {
+      name: "Campus Chess Club",
+      university: "University of Kansas",
+      club_description:
+        "Hosts chess tournaments and practice sessions for students.",
+      university_description:
+        "Public university with a strong focus on research and student engagement.",
+    },
+    {
+      name: "Chess Enthusiasts Society",
+      university: "University of South Florida",
+      club_description:
+        "Facilitates chess games and strategic sessions for students.",
+      university_description:
+        "Public university known for its vibrant campus life and strong academic programs.",
+    },
+    {
+      name: "Chess Club",
+      university: "University of Arkansas",
+      club_description:
+        "Organizes chess tournaments and practice sessions for students.",
+      university_description:
+        "Public university with a commitment to academic support and student engagement.",
+    },
+    {
+      name: "Chess Club",
+      university: "University of South Carolina Upstate",
+      club_description:
+        "Provides opportunities for students to participate in chess games and tournaments.",
+      university_description:
+        "Public university with a focus on academic excellence and student life.",
+    },
+    {
+      name: "Chess Society",
+      university: "University of Richmond",
+      club_description:
+        "Hosts chess tournaments and casual play sessions for students.",
+      university_description:
+        "Private university known for its strong academic programs and student engagement.",
+    },
+    {
+      name: "Chess Club",
+      university: "University of Nevada Las Vegas",
+      club_description:
+        "Facilitates chess games and tournaments, catering to students of all skill levels.",
+      university_description:
+        "Public university with a focus on student success and vibrant campus activities.",
+    },
+    {
+      name: "Chess Enthusiasts Club",
+      university: "University of New Hampshire",
+      club_description:
+        "Organizes chess tournaments and practice sessions for students.",
+      university_description:
+        "Public university known for its commitment to academic support and student life.",
+    },
+    {
+      name: "Campus Chess Society",
+      university: "University of Montana",
+      club_description: "Hosts chess matches and tournaments for students.",
+      university_description:
+        "Public university with a strong focus on research and student engagement.",
+    },
+    {
+      name: "Chess Club",
+      university: "University of Missouri",
+      club_description:
+        "Provides opportunities for students to participate in chess games and tournaments.",
+      university_description:
+        "Public university with a commitment to academic excellence and vibrant student life.",
+    },
+    {
+      name: "Chess Club",
+      university: "University of Tennessee Chattanooga",
+      club_description:
+        "Facilitates chess practice sessions and competitive play for students.",
+      university_description:
+        "Public university known for its strong academic programs and student involvement.",
+    },
+    {
+      name: "Campus Chess Club",
+      university: "University of St. Thomas",
+      club_description:
+        "Hosts chess tournaments and casual play sessions for students.",
+      university_description:
+        "Private university with a focus on student success and vibrant campus life.",
+    },
+    {
+      name: "Chess Club",
+      university: "University of Wisconsin Whitewater",
+      club_description:
+        "Organizes chess games and tournaments, catering to various skill levels.",
+      university_description:
+        "Public university known for its commitment to academic support and student activities.",
+    },
+    {
+      name: "Chess Society",
+      university: "University of Central Florida",
+      club_description:
+        "Provides opportunities for students to engage in chess tournaments and practice sessions.",
+      university_description:
+        "Public university with a strong emphasis on academic excellence and student life.",
+    },
+    {
+      name: "Campus Chess Club",
+      university: "University of Idaho",
+      club_description:
+        "Hosts regular chess matches and tournaments for students.",
+      university_description:
+        "Public university known for its focus on research and active student engagement.",
+    },
+  ],
+  sustainabilityClubs: [
+    {
+      name: "Green Campus Initiative",
+      university: "University of California Berkeley",
+      club_description:
+        "Promotes sustainability through campus-wide initiatives and environmental education.",
+      university_description:
+        "Public university known for its strong emphasis on environmental science and activism.",
+    },
+    {
+      name: "Sustainable Living Club",
+      university: "University of Michigan",
+      club_description:
+        "Focuses on sustainable living practices and campus sustainability projects.",
+      university_description:
+        "Public research university with a commitment to sustainability and green initiatives.",
+    },
+    {
+      name: "Eco Warriors",
+      university: "University of Washington",
+      club_description:
+        "Organizes events and projects to promote environmental sustainability on campus.",
+      university_description:
+        "Public university known for its strong environmental science programs and sustainability efforts.",
+    },
+    {
+      name: "Campus Green Team",
+      university: "University of Florida",
+      club_description:
+        "Works on campus sustainability projects and raises awareness about environmental issues.",
+      university_description:
+        "Public university with a vibrant student community and a focus on sustainability.",
+    },
+    {
+      name: "Sustainability and Environment Club",
+      university: "University of Southern California",
+      club_description:
+        "Promotes environmental sustainability through education and action on campus.",
+      university_description:
+        "Private research university with a focus on innovation and student engagement in sustainability.",
+    },
+    {
+      name: "Eco Club",
+      university: "University of Pennsylvania",
+      club_description:
+        "Focuses on campus sustainability and environmental activism through various initiatives.",
+      university_description:
+        "Private Ivy League university known for its commitment to sustainability and academic excellence.",
+    },
+    {
+      name: "Green Society",
+      university: "New York University",
+      club_description:
+        "Organizes events and campaigns to promote environmental sustainability and awareness.",
+      university_description:
+        "Private university with a global network and strong emphasis on sustainability.",
+    },
+    {
+      name: "Sustainable Solutions Club",
+      university: "University of Chicago",
+      club_description:
+        "Provides opportunities for students to engage in sustainability projects and initiatives.",
+      university_description:
+        "Private university known for its commitment to academic rigor and environmental awareness.",
+    },
+    {
+      name: "Campus Sustainability Club",
+      university: "Stanford University",
+      club_description:
+        "Promotes environmental sustainability and sustainable practices on campus.",
+      university_description:
+        "Private research university with a strong focus on sustainability and innovation.",
+    },
+    {
+      name: "Eco-Friendly Campus Club",
+      university: "University of California Los Angeles",
+      club_description:
+        "Facilitates sustainability projects and initiatives aimed at reducing campus environmental impact.",
+      university_description:
+        "Public university with a commitment to green initiatives and student involvement.",
+    },
+    {
+      name: "Green Campus Network",
+      university: "University of Illinois Urbana-Champaign",
+      club_description:
+        "Works on sustainability projects and raises awareness about environmental issues.",
+      university_description:
+        "Public university known for its research focus and active student community.",
+    },
+    {
+      name: "Environmental Action Club",
+      university: "University of Arizona",
+      club_description:
+        "Engages students in environmental sustainability projects and initiatives.",
+      university_description:
+        "Public university with a strong emphasis on academic excellence and sustainability.",
+    },
+    {
+      name: "Sustainability Club",
+      university: "University of Wisconsin-Madison",
+      club_description:
+        "Organizes events and projects to promote sustainable practices and environmental awareness.",
+      university_description:
+        "Public university known for its commitment to sustainability and research.",
+    },
+    {
+      name: "Eco-Friendly Initiative",
+      university: "University of Virginia",
+      club_description:
+        "Promotes campus sustainability and environmental awareness through various initiatives.",
+      university_description:
+        "Public university with a focus on academic excellence and student engagement in sustainability.",
+    },
+    {
+      name: "Sustainable Practices Club",
+      university: "University of Maryland",
+      club_description:
+        "Facilitates sustainability projects and educational events on campus.",
+      university_description:
+        "Public university known for its research focus and commitment to environmental issues.",
+    },
+    {
+      name: "Green Student Coalition",
+      university: "University of South Carolina",
+      club_description:
+        "Works on sustainability initiatives and promotes environmental awareness on campus.",
+      university_description:
+        "Public university with a commitment to student success and sustainability.",
+    },
+    {
+      name: "Campus Eco Club",
+      university: "University of Iowa",
+      club_description:
+        "Provides opportunities for students to participate in environmental sustainability projects.",
+      university_description:
+        "Public university known for its strong academic programs and commitment to sustainability.",
+    },
+    {
+      name: "Eco Campus Club",
+      university: "University of Georgia",
+      club_description:
+        "Organizes sustainability initiatives and raises awareness about environmental issues.",
+      university_description:
+        "Public university with a focus on academic excellence and student engagement.",
+    },
+    {
+      name: "Green Initiatives Club",
+      university: "University of North Carolina at Chapel Hill",
+      club_description:
+        "Promotes environmental sustainability through campus projects and education.",
+      university_description:
+        "Public university known for its vibrant student life and commitment to sustainability.",
+    },
+    {
+      name: "Campus Green Club",
+      university: "University of Oklahoma",
+      club_description:
+        "Facilitates sustainability projects and environmental education on campus.",
+      university_description:
+        "Public university with a focus on research and active student engagement in sustainability.",
+    },
+    {
+      name: "Sustainable Campus Club",
+      university: "University of Nebraska",
+      club_description:
+        "Organizes events and projects to promote sustainability and reduce environmental impact.",
+      university_description:
+        "Public university known for its commitment to academic support and student involvement.",
+    },
+    {
+      name: "Eco-Friendly Club",
+      university: "University of Alabama",
+      club_description:
+        "Engages students in sustainability initiatives and promotes green practices on campus.",
+      university_description:
+        "Public university with a strong emphasis on academic support and environmental awareness.",
+    },
+    {
+      name: "Green Campus Club",
+      university: "University of Tennessee",
+      club_description:
+        "Promotes environmental sustainability through various campus initiatives and events.",
+      university_description:
+        "Public university with a commitment to vibrant student life and sustainability.",
+    },
+    {
+      name: "Sustainability Society",
+      university: "University of Connecticut",
+      club_description:
+        "Facilitates sustainability projects and raises environmental awareness among students.",
+      university_description:
+        "Public university known for its strong academic programs and commitment to sustainability.",
+    },
+    {
+      name: "Campus Green Initiative",
+      university: "University of Colorado Boulder",
+      club_description:
+        "Organizes sustainability events and projects to promote environmental stewardship.",
+      university_description:
+        "Public university with a focus on academic excellence and green initiatives.",
+    },
+    {
+      name: "Sustainable Solutions Society",
+      university: "University of Mississippi",
+      club_description:
+        "Provides opportunities for students to engage in sustainability projects and initiatives.",
+      university_description:
+        "Public university with a commitment to academic excellence and student involvement.",
+    },
+    {
+      name: "Green Campus Coalition",
+      university: "University of Kansas",
+      club_description:
+        "Hosts sustainability events and initiatives to promote environmental awareness.",
+      university_description:
+        "Public university known for its strong research focus and vibrant student life.",
+    },
+    {
+      name: "Eco Campus Initiative",
+      university: "University of South Florida",
+      club_description:
+        "Facilitates sustainability projects and educational events on campus.",
+      university_description:
+        "Public university with a focus on academic success and environmental awareness.",
+    },
+    {
+      name: "Sustainability Club",
+      university: "University of New Hampshire",
+      club_description:
+        "Promotes environmental sustainability through various campus initiatives and projects.",
+      university_description:
+        "Public university known for its commitment to research and student engagement.",
+    },
+    {
+      name: "Campus Green Society",
+      university: "University of Montana",
+      club_description:
+        "Organizes sustainability events and projects to reduce campus environmental impact.",
+      university_description:
+        "Public university with a strong focus on research and sustainability.",
+    },
+    {
+      name: "Sustainable Campus Coalition",
+      university: "University of Missouri",
+      club_description:
+        "Provides opportunities for students to participate in sustainability projects and initiatives.",
+      university_description:
+        "Public university known for its commitment to academic excellence and environmental awareness.",
+    },
+    {
+      name: "Green Campus Club",
+      university: "University of Tennessee Chattanooga",
+      club_description:
+        "Facilitates sustainability projects and environmental education on campus.",
+      university_description:
+        "Public university with a focus on student success and sustainability.",
+    },
+    {
+      name: "Eco-Friendly Campus Club",
+      university: "University of St. Thomas",
+      club_description:
+        "Hosts events and projects to promote sustainability and green practices.",
+      university_description:
+        "Private university known for its strong academic programs and commitment to sustainability.",
+    },
+    {
+      name: "Sustainability Society",
+      university: "University of Wisconsin Whitewater",
+      club_description:
+        "Organizes sustainability initiatives and raises awareness about environmental issues.",
+      university_description:
+        "Public university with a commitment to student success and environmental stewardship.",
+    },
+    {
+      name: "Campus Green Club",
+      university: "University of Central Florida",
+      club_description:
+        "Provides opportunities for students to engage in sustainability projects and initiatives.",
+      university_description:
+        "Public university known for its vibrant campus life and commitment to sustainability.",
+    },
+    {
+      name: "Eco Club",
+      university: "University of Idaho",
+      club_description:
+        "Promotes environmental sustainability through campus projects and events.",
+      university_description:
+        "Public university with a strong focus on research and student engagement in sustainability.",
+    },
+    {
+      name: "Sustainable Solutions Club",
+      university: "University of Alabama Birmingham",
+      club_description:
+        "Facilitates sustainability projects and environmental education on campus.",
+      university_description:
+        "Public university known for its commitment to academic excellence and student involvement.",
+    },
+  ],
+  codingclubs: [
+    {
+      name: "Code Club",
+      university: "Massachusetts Institute of Technology",
+      club_description:
+        "Focuses on coding projects, hackathons, and workshops for all skill levels.",
+      university_description:
+        "Private research university renowned for its cutting-edge technology and engineering programs.",
+    },
+    {
+      name: "Developer's Circle",
+      university: "Stanford University",
+      club_description:
+        "Hosts coding events, coding challenges, and offers mentorship for aspiring developers.",
+      university_description:
+        "Private research university known for its strong emphasis on innovation and technology.",
+    },
+    {
+      name: "Tech Builders",
+      university: "University of California Berkeley",
+      club_description:
+        "Engages students in coding workshops, projects, and hackathons to build tech solutions.",
+      university_description:
+        "Public university with a strong reputation in technology and engineering disciplines.",
+    },
+    {
+      name: "Code Warriors",
+      university: "University of Illinois Urbana-Champaign",
+      club_description:
+        "Offers coding tutorials, hackathons, and collaborative projects for coding enthusiasts.",
+      university_description:
+        "Public university recognized for its research excellence and technological innovation.",
+    },
+    {
+      name: "Programming Society",
+      university: "University of Michigan",
+      club_description:
+        "Focuses on coding competitions, workshops, and collaborative programming projects.",
+      university_description:
+        "Public research university with a strong emphasis on engineering and computer science.",
+    },
+    {
+      name: "Tech Innovators",
+      university: "University of Texas at Austin",
+      club_description:
+        "Organizes coding events, workshops, and collaborative projects for tech enthusiasts.",
+      university_description:
+        "Public university known for its strong engineering and technology programs.",
+    },
+    {
+      name: "Code Enthusiasts",
+      university: "University of Washington",
+      club_description:
+        "Provides coding tutorials, hackathons, and collaborative projects for students of all levels.",
+      university_description:
+        "Public university recognized for its commitment to technology and innovation.",
+    },
+    {
+      name: "Programming Guild",
+      university: "University of California Los Angeles",
+      club_description:
+        "Hosts coding challenges, workshops, and coding projects to foster programming skills.",
+      university_description:
+        "Public university known for its excellence in technology and engineering.",
+    },
+    {
+      name: "Hackathon Hub",
+      university: "University of Florida",
+      club_description:
+        "Organizes hackathons, coding workshops, and collaborative tech projects.",
+      university_description:
+        "Public university with a vibrant tech community and strong emphasis on innovation.",
+    },
+    {
+      name: "Code Masters",
+      university: "Carnegie Mellon University",
+      club_description:
+        "Focuses on coding projects, competitions, and educational workshops for developers.",
+      university_description:
+        "Private research university renowned for its top-ranked computer science and engineering programs.",
+    },
+    {
+      name: "Coder's Club",
+      university: "Georgia Institute of Technology",
+      club_description:
+        "Offers coding workshops, hackathons, and collaborative projects for aspiring coders.",
+      university_description:
+        "Public research university known for its strong engineering and technology programs.",
+    },
+    {
+      name: "Code Collective",
+      university: "University of Pennsylvania",
+      club_description:
+        "Provides opportunities for coding, hackathons, and collaborative tech projects.",
+      university_description:
+        "Private Ivy League university with a strong focus on technology and innovation.",
+    },
+    {
+      name: "Coding Alliance",
+      university: "University of California San Diego",
+      club_description:
+        "Hosts coding events, workshops, and collaborative projects for tech enthusiasts.",
+      university_description:
+        "Public university with a focus on technological innovation and research.",
+    },
+    {
+      name: "Tech Enthusiasts Club",
+      university: "University of Wisconsin-Madison",
+      club_description:
+        "Engages students in coding challenges, workshops, and tech projects.",
+      university_description:
+        "Public university known for its commitment to research and technology.",
+    },
+    {
+      name: "Programming Pioneers",
+      university: "University of Southern California",
+      club_description:
+        "Organizes coding workshops, hackathons, and collaborative tech projects.",
+      university_description:
+        "Private research university with a focus on innovation and technology.",
+    },
+    {
+      name: "DevOps Club",
+      university: "University of Arizona",
+      club_description:
+        "Offers coding tutorials, hackathons, and DevOps workshops for students.",
+      university_description:
+        "Public university known for its commitment to technological advancement and research.",
+    },
+    {
+      name: "Code Network",
+      university: "University of Colorado Boulder",
+      club_description:
+        "Hosts coding events, collaborative projects, and workshops for developers.",
+      university_description:
+        "Public university with a focus on innovation and technology.",
+    },
+    {
+      name: "Coding Club",
+      university: "University of Notre Dame",
+      club_description:
+        "Engages students in coding challenges, workshops, and collaborative tech projects.",
+      university_description:
+        "Private university known for its strong academic programs and focus on technology.",
+    },
+    {
+      name: "Tech Solutions Club",
+      university: "University of Virginia",
+      club_description:
+        "Organizes coding events, hackathons, and collaborative projects to solve tech problems.",
+      university_description:
+        "Public university with a focus on academic excellence and technological innovation.",
+    },
+    {
+      name: "Software Developers Society",
+      university: "University of Maryland",
+      club_description:
+        "Provides coding tutorials, hackathons, and software development projects.",
+      university_description:
+        "Public university known for its commitment to research and technology.",
+    },
+    {
+      name: "Code Collaborators",
+      university: "University of Minnesota",
+      club_description:
+        "Focuses on coding workshops, collaborative projects, and hackathons for tech enthusiasts.",
+      university_description:
+        "Public university with a strong emphasis on engineering and technology.",
+    },
+    {
+      name: "Tech Team",
+      university: "University of Georgia",
+      club_description:
+        "Hosts coding events, hackathons, and workshops for aspiring developers.",
+      university_description:
+        "Public university known for its strong academic programs and tech initiatives.",
+    },
+    {
+      name: "Programming Network",
+      university: "Purdue University",
+      club_description:
+        "Offers coding challenges, collaborative projects, and educational workshops.",
+      university_description:
+        "Public university recognized for its engineering and computer science programs.",
+    },
+    {
+      name: "Coding Creators",
+      university: "University of Iowa",
+      club_description:
+        "Organizes coding workshops, hackathons, and collaborative tech projects.",
+      university_description:
+        "Public university known for its focus on research and student engagement.",
+    },
+    {
+      name: "Tech Innovators Club",
+      university: "University of Missouri",
+      club_description:
+        "Provides opportunities for coding, tech projects, and educational events.",
+      university_description:
+        "Public university with a strong emphasis on research and technological advancement.",
+    },
+    {
+      name: "Code Enthusiasts Society",
+      university: "University of Tennessee",
+      club_description:
+        "Focuses on coding events, workshops, and collaborative projects for tech enthusiasts.",
+      university_description:
+        "Public university known for its commitment to innovation and student success.",
+    },
+    {
+      name: "Hackathon Heroes",
+      university: "University of Kansas",
+      club_description:
+        "Hosts coding competitions, hackathons, and collaborative tech projects.",
+      university_description:
+        "Public university with a strong emphasis on research and student involvement.",
+    },
+    {
+      name: "Programming Club",
+      university: "University of Oregon",
+      club_description:
+        "Engages students in coding challenges, workshops, and collaborative projects.",
+      university_description:
+        "Public university known for its commitment to academic excellence and innovation.",
+    },
+    {
+      name: "Code Developers Society",
+      university: "University of California Irvine",
+      club_description:
+        "Provides opportunities for coding projects, workshops, and hackathons.",
+      university_description:
+        "Public university with a focus on technological research and innovation.",
+    },
+    {
+      name: "Tech Solutions Society",
+      university: "University of South Carolina",
+      club_description:
+        "Organizes coding workshops, hackathons, and collaborative tech projects.",
+      university_description:
+        "Public university known for its strong focus on research and technology.",
+    },
+    {
+      name: "Coding Innovators",
+      university: "University of North Carolina at Chapel Hill",
+      club_description:
+        "Hosts coding events, collaborative projects, and educational workshops for developers.",
+      university_description:
+        "Public university with a strong emphasis on academic excellence and technology.",
+    },
+    {
+      name: "Code Collective Club",
+      university: "University of Alabama",
+      club_description:
+        "Provides opportunities for coding, hackathons, and tech projects.",
+      university_description:
+        "Public university known for its focus on innovation and student engagement.",
+    },
+    {
+      name: "Programming Society",
+      university: "University of Mississippi",
+      club_description:
+        "Engages students in coding challenges, workshops, and collaborative projects.",
+      university_description:
+        "Public university with a commitment to academic excellence and technology.",
+    },
+    {
+      name: "Tech Wizards Club",
+      university: "University of Nebraska",
+      club_description:
+        "Focuses on coding workshops, hackathons, and collaborative tech projects.",
+      university_description:
+        "Public university with a strong emphasis on research and innovation.",
+    },
+    {
+      name: "Code Enthusiasts Club",
+      university: "University of Alabama Birmingham",
+      club_description:
+        "Organizes coding events, hackathons, and collaborative projects for students.",
+      university_description:
+        "Public university known for its strong commitment to technology and student success.",
+    },
+    {
+      name: "Hackathon Collective",
+      university: "University of Oklahoma",
+      club_description:
+        "Hosts coding challenges, workshops, and tech projects to engage students.",
+      university_description:
+        "Public university with a focus on research and technological advancement.",
+    },
+    {
+      name: "Coding Alliance Club",
+      university: "University of St. Thomas",
+      club_description:
+        "Provides opportunities for coding tutorials, projects, and collaborative tech events.",
+      university_description:
+        "Private university known for its strong academic programs and focus on technology.",
+    },
+    {
+      name: "Tech Enthusiasts Society",
+      university: "University of Denver",
+      club_description:
+        "Engages students in coding challenges, workshops, and collaborative tech projects.",
+      university_description:
+        "Private university with a strong emphasis on innovation and technology.",
+    },
+    {
+      name: "Programming Club",
+      university: "Loyola University Chicago",
+      club_description:
+        "Organizes coding events, hackathons, and collaborative projects for developers.",
+      university_description:
+        "Private university known for its commitment to academic excellence and technological advancement.",
+    },
+    {
+      name: "Code Collective",
+      university: "Santa Clara University",
+      club_description:
+        "Offers opportunities for coding workshops, hackathons, and collaborative projects.",
+      university_description:
+        "Private university with a focus on technology and innovation.",
+    },
+    {
+      name: "Tech Builders Club",
+      university: "Wake Forest University",
+      club_description:
+        "Hosts coding challenges, workshops, and collaborative projects for tech enthusiasts.",
+      university_description:
+        "Private university known for its strong academic programs and focus on innovation.",
+    },
+    {
+      name: "Coding Innovators Society",
+      university: "DePaul University",
+      club_description:
+        "Provides opportunities for coding events, hackathons, and collaborative tech projects.",
+      university_description:
+        "Private university with a focus on research and technology.",
+    },
+  ],
+  bookClubs: [
+    {
+      name: "Literary Explorers",
+      university: "Harvard University",
+      club_description:
+        "Focuses on exploring classic and contemporary literature through discussions and reviews.",
+      university_description:
+        "Private Ivy League university known for its prestigious academic programs and research excellence.",
+    },
+    {
+      name: "Bookworms Society",
+      university: "University of Oxford",
+      club_description:
+        "Hosts book discussions, reading challenges, and author meet-ups.",
+      university_description:
+        "Prestigious university renowned for its rich history and strong academic programs.",
+    },
+    {
+      name: "The Reading Room",
+      university: "University of Cambridge",
+      club_description:
+        "Offers a space for reading, discussing, and analyzing diverse literary works.",
+      university_description:
+        "Renowned university with a strong emphasis on academic research and intellectual development.",
+    },
+    {
+      name: "Page Turners",
+      university: "Stanford University",
+      club_description:
+        "Engages students in book discussions, literary events, and author Q&As.",
+      university_description:
+        "Private research university known for its innovation and excellence in education.",
+    },
+    {
+      name: "Novel Ideas",
+      university: "University of California Berkeley",
+      club_description:
+        "Organizes book discussions, reading groups, and literary workshops.",
+      university_description:
+        "Public university known for its strong commitment to research and academic excellence.",
+    },
+    {
+      name: "Readers' Haven",
+      university: "University of Chicago",
+      club_description:
+        "Hosts discussions on a wide range of literary genres and periods.",
+      university_description:
+        "Private university renowned for its rigorous academic programs and intellectual environment.",
+    },
+    {
+      name: "Book Enthusiasts",
+      university: "University of Pennsylvania",
+      club_description:
+        "Provides a forum for book discussions, reading challenges, and literary events.",
+      university_description:
+        "Private Ivy League university with a strong focus on academic excellence and research.",
+    },
+    {
+      name: "The Book Nook",
+      university: "Columbia University",
+      club_description:
+        "Focuses on reading diverse books and engaging in thoughtful discussions.",
+      university_description:
+        "Private Ivy League university known for its commitment to academic and research excellence.",
+    },
+    {
+      name: "Literature Circle",
+      university: "Yale University",
+      club_description:
+        "Hosts book discussions, author events, and literary analysis sessions.",
+      university_description:
+        "Private Ivy League university with a strong emphasis on academic rigor and research.",
+    },
+    {
+      name: "Page Seekers",
+      university: "Princeton University",
+      club_description:
+        "Engages students in reading diverse genres and participating in literary discussions.",
+      university_description:
+        "Private Ivy League university known for its prestigious academic programs and research excellence.",
+    },
+    {
+      name: "The Novel Club",
+      university: "University of California Los Angeles",
+      club_description:
+        "Organizes book discussions, reading groups, and literary workshops.",
+      university_description:
+        "Public university with a strong emphasis on innovation and academic excellence.",
+    },
+    {
+      name: "Book Lovers Unite",
+      university: "University of Southern California",
+      club_description:
+        "Provides a space for book discussions, author meet-ups, and reading challenges.",
+      university_description:
+        "Private research university known for its strong academic programs and vibrant campus life.",
+    },
+    {
+      name: "Literary Society",
+      university: "University of Texas at Austin",
+      club_description:
+        "Hosts discussions on a variety of literary works and genres.",
+      university_description:
+        "Public university known for its commitment to academic excellence and research.",
+    },
+    {
+      name: "Chapter One Club",
+      university: "University of Virginia",
+      club_description:
+        "Focuses on reading and discussing a wide range of books and literary genres.",
+      university_description:
+        "Public university with a strong emphasis on academic excellence and intellectual growth.",
+    },
+    {
+      name: "The Reading Group",
+      university: "University of North Carolina at Chapel Hill",
+      club_description:
+        "Offers book discussions, reading challenges, and literary events for students.",
+      university_description:
+        "Public university known for its commitment to research and academic development.",
+    },
+    {
+      name: "Book Club",
+      university: "University of Wisconsin-Madison",
+      club_description:
+        "Organizes book readings, discussions, and literary workshops.",
+      university_description:
+        "Public university recognized for its strong academic programs and research initiatives.",
+    },
+    {
+      name: "Literary Lounge",
+      university: "University of Michigan",
+      club_description:
+        "Hosts discussions on classic and contemporary literature, and author events.",
+      university_description:
+        "Public university known for its strong emphasis on research and academic excellence.",
+    },
+    {
+      name: "The Literary Lounge",
+      university: "University of Illinois Urbana-Champaign",
+      club_description:
+        "Provides a platform for book discussions, reading challenges, and literary events.",
+      university_description:
+        "Public university with a focus on academic research and intellectual engagement.",
+    },
+    {
+      name: "Readers' Circle",
+      university: "University of Florida",
+      club_description:
+        "Engages students in discussions about various literary genres and authors.",
+      university_description:
+        "Public university known for its vibrant academic community and research excellence.",
+    },
+    {
+      name: "Book Discussion Club",
+      university: "University of Georgia",
+      club_description:
+        "Offers a space for discussing books, participating in reading challenges, and attending literary events.",
+      university_description:
+        "Public university recognized for its strong commitment to academic success and research.",
+    },
+    {
+      name: "The Novel Society",
+      university: "University of Arizona",
+      club_description:
+        "Hosts book discussions, reading groups, and literary workshops.",
+      university_description:
+        "Public university known for its commitment to research and student engagement.",
+    },
+    {
+      name: "Chapter Club",
+      university: "University of Colorado Boulder",
+      club_description:
+        "Focuses on diverse literary genres and provides opportunities for engaging discussions.",
+      university_description:
+        "Public university with a strong emphasis on academic research and innovation.",
+    },
+    {
+      name: "The Book Circle",
+      university: "University of Washington",
+      club_description:
+        "Organizes book discussions, author events, and reading challenges.",
+      university_description:
+        "Public university recognized for its excellence in research and academic programs.",
+    },
+    {
+      name: "Literature Enthusiasts",
+      university: "University of California San Diego",
+      club_description:
+        "Provides a space for literary discussions, reading challenges, and workshops.",
+      university_description:
+        "Public university known for its strong focus on research and technology.",
+    },
+    {
+      name: "Reading Explorers",
+      university: "University of Maryland",
+      club_description:
+        "Hosts book discussions, literary workshops, and author meet-ups.",
+      university_description:
+        "Public university recognized for its commitment to academic excellence and research.",
+    },
+    {
+      name: "Book Buffs",
+      university: "University of Missouri",
+      club_description:
+        "Offers book discussions, reading challenges, and literary events.",
+      university_description:
+        "Public university with a focus on academic research and student engagement.",
+    },
+    {
+      name: "Page Turners Club",
+      university: "University of Iowa",
+      club_description:
+        "Focuses on diverse literary works and provides opportunities for in-depth discussions.",
+      university_description:
+        "Public university known for its commitment to academic success and research.",
+    },
+    {
+      name: "The Literary Group",
+      university: "University of Nebraska",
+      club_description:
+        "Organizes book readings, discussions, and literary workshops.",
+      university_description:
+        "Public university with a strong emphasis on research and academic excellence.",
+    },
+    {
+      name: "Book Enthusiasts Club",
+      university: "University of Kansas",
+      club_description:
+        "Engages students in discussions about various books and literary genres.",
+      university_description:
+        "Public university recognized for its strong academic programs and research focus.",
+    },
+    {
+      name: "Literature Lovers",
+      university: "University of Alabama",
+      club_description:
+        "Hosts book discussions, reading groups, and literary workshops.",
+      university_description:
+        "Public university known for its commitment to academic excellence and research.",
+    },
+    {
+      name: "The Book Club",
+      university: "University of Mississippi",
+      club_description:
+        "Offers a space for reading diverse books and engaging in literary discussions.",
+      university_description:
+        "Public university recognized for its strong academic programs and research initiatives.",
+    },
+    {
+      name: "Chapter One Society",
+      university: "University of Tennessee",
+      club_description:
+        "Focuses on book discussions, reading challenges, and literary events.",
+      university_description:
+        "Public university with a strong emphasis on academic excellence and student engagement.",
+    },
+    {
+      name: "Reading Enthusiasts",
+      university: "University of South Carolina",
+      club_description:
+        "Organizes book discussions, author events, and literary workshops.",
+      university_description:
+        "Public university known for its commitment to research and academic success.",
+    },
+    {
+      name: "The Literary Circle",
+      university: "University of Oregon",
+      club_description:
+        "Provides a platform for book discussions, reading challenges, and literary events.",
+      university_description:
+        "Public university with a focus on academic excellence and innovation.",
+    },
+    {
+      name: "Book Society",
+      university: "University of St. Thomas",
+      club_description:
+        "Hosts book readings, discussions, and literary workshops for students.",
+      university_description:
+        "Private university known for its strong academic programs and student engagement.",
+    },
+    {
+      name: "The Page Turners",
+      university: "DePaul University",
+      club_description:
+        "Offers opportunities for book discussions, reading challenges, and literary events.",
+      university_description:
+        "Private university with a focus on academic excellence and research.",
+    },
+    {
+      name: "Book Club Society",
+      university: "Santa Clara University",
+      club_description:
+        "Organizes discussions on a wide range of books and literary genres.",
+      university_description:
+        "Private university known for its commitment to innovation and academic success.",
+    },
+    {
+      name: "Literary Club",
+      university: "Loyola University Chicago",
+      club_description:
+        "Engages students in book discussions, author events, and literary workshops.",
+      university_description:
+        "Private university with a strong emphasis on academic excellence and student development.",
+    },
+    {
+      name: "The Novel Lounge",
+      university: "Fordham University",
+      club_description:
+        "Focuses on reading and discussing diverse literary works.",
+      university_description:
+        "Private university known for its strong academic programs and commitment to student engagement.",
+    },
+    {
+      name: "Book Discussion Society",
+      university: "Seton Hall University",
+      club_description:
+        "Hosts book readings, discussions, and literary workshops.",
+      university_description:
+        "Private university with a strong focus on academic research and student development.",
+    },
+    {
+      name: "Chapter Club Society",
+      university: "Providence College",
+      club_description:
+        "Provides a space for engaging in book discussions and literary events.",
+      university_description:
+        "Private university recognized for its commitment to academic excellence and student success.",
+    },
+    {
+      name: "The Reading Club",
+      university: "Saint Joseph's University",
+      club_description:
+        "Offers book discussions, reading challenges, and literary workshops.",
+      university_description:
+        "Private university known for its emphasis on academic achievement and student engagement.",
+    },
+    {
+      name: "Book Lovers Club",
+      university: "Marquette University",
+      club_description:
+        "Organizes book readings, discussions, and literary events.",
+      university_description:
+        "Private university recognized for its strong academic programs and commitment to student development.",
+    },
+    {
+      name: "Literature Society",
+      university: "Creighton University",
+      club_description:
+        "Focuses on reading and discussing diverse books and literary genres.",
+      university_description:
+        "Private university known for its commitment to academic success and student engagement.",
+    },
+    {
+      name: "The Literary Lounge",
+      university: "Villanova University",
+      club_description:
+        "Hosts book discussions, author events, and literary workshops.",
+      university_description:
+        "Private university recognized for its strong academic programs and student development.",
+    },
+    {
+      name: "Page Turners Society",
+      university: "Duquesne University",
+      club_description:
+        "Provides a platform for book discussions, reading challenges, and literary events.",
+      university_description:
+        "Private university with a focus on academic excellence and student engagement.",
+    },
+    {
+      name: "The Book Enthusiasts",
+      university: "Catholic University of America",
+      club_description:
+        "Engages students in discussions about various literary works and genres.",
+      university_description:
+        "Private university known for its strong academic programs and research focus.",
+    },
+    {
+      name: "Book Readers Club",
+      university: "Syracuse University",
+      club_description:
+        "Hosts book discussions, reading groups, and literary workshops.",
+      university_description:
+        "Private university recognized for its commitment to academic success and research.",
+    },
+    {
+      name: "Literary Circle Society",
+      university: "American University",
+      club_description:
+        "Focuses on diverse literary genres and provides opportunities for engaging discussions.",
+      university_description:
+        "Private university known for its strong academic programs and commitment to student success.",
+    },
+    {
+      name: "Chapter Society",
+      university: "George Washington University",
+      club_description:
+        "Organizes book discussions, author events, and reading challenges.",
+      university_description:
+        "Private university recognized for its commitment to academic excellence and research.",
+    },
+    {
+      name: "The Book Club",
+      university: "The George Washington University",
+      club_description:
+        "Provides a space for engaging in book discussions and literary events.",
+      university_description:
+        "Private university known for its focus on academic research and intellectual development.",
+    },
+    {
+      name: "Literary Society Club",
+      university: "University of Hartford",
+      club_description:
+        "Hosts book readings, discussions, and literary workshops.",
+      university_description:
+        "Private university with a focus on academic excellence and student engagement.",
+    },
+    {
+      name: "Reading Club",
+      university: "Rider University",
+      club_description:
+        "Engages students in discussions about various books and literary genres.",
+      university_description:
+        "Private university known for its commitment to academic success and student development.",
+    },
+    {
+      name: "The Book Society",
+      university: "Monmouth University",
+      club_description:
+        "Offers book discussions, reading challenges, and literary events.",
+      university_description:
+        "Private university with a strong emphasis on academic excellence and student engagement.",
+    },
+    {
+      name: "Literature Club",
+      university: "Seton Hall University",
+      club_description:
+        "Focuses on reading and discussing diverse literary works and genres.",
+      university_description:
+        "Private university known for its strong academic programs and commitment to research.",
+    },
+    {
+      name: "The Literary Club",
+      university: "Loyola Marymount University",
+      club_description:
+        "Hosts book discussions, reading challenges, and literary events.",
+      university_description:
+        "Private university recognized for its emphasis on academic excellence and student development.",
+    },
+  ],
+  comedyClubs: [
+    {
+      name: "Laugh Out Loud",
+      university: "Harvard University",
+      club_description:
+        "Hosts weekly stand-up comedy shows and open mic nights.",
+      university_description:
+        "Private Ivy League university known for its prestigious academic programs and research excellence.",
+    },
+    {
+      name: "The Giggle Club",
+      university: "University of Oxford",
+      club_description:
+        "Offers stand-up performances, improv nights, and comedy workshops.",
+      university_description:
+        "Prestigious university renowned for its rich history and strong academic programs.",
+    },
+    {
+      name: "Comedy Corner",
+      university: "University of Cambridge",
+      club_description:
+        "Features open mic nights, comedy sketches, and stand-up events.",
+      university_description:
+        "Renowned university with a strong emphasis on academic research and intellectual development.",
+    },
+    {
+      name: "Jokes and Giggles",
+      university: "Stanford University",
+      club_description:
+        "Hosts regular comedy shows, improv sessions, and open mic events.",
+      university_description:
+        "Private research university known for its innovation and excellence in education.",
+    },
+    {
+      name: "The Funny Bone",
+      university: "University of California Berkeley",
+      club_description:
+        "Organizes stand-up comedy nights, improv shows, and comedy workshops.",
+      university_description:
+        "Public university known for its strong commitment to research and academic excellence.",
+    },
+    {
+      name: "Comedy Central",
+      university: "University of Chicago",
+      club_description:
+        "Offers a platform for stand-up comedy, improv nights, and comedic performances.",
+      university_description:
+        "Private university renowned for its rigorous academic programs and intellectual environment.",
+    },
+    {
+      name: "Laughter Lounge",
+      university: "University of Pennsylvania",
+      club_description:
+        "Hosts comedy shows, improv nights, and comedy workshops for students.",
+      university_description:
+        "Private Ivy League university with a strong focus on academic excellence and research.",
+    },
+    {
+      name: "The Comedy Club",
+      university: "Columbia University",
+      club_description:
+        "Features stand-up performances, sketch comedy, and open mic nights.",
+      university_description:
+        "Private Ivy League university known for its commitment to academic and research excellence.",
+    },
+    {
+      name: "Stand-Up Society",
+      university: "Yale University",
+      club_description:
+        "Provides opportunities for students to perform stand-up comedy and improv.",
+      university_description:
+        "Private Ivy League university with a strong emphasis on academic rigor and research.",
+    },
+    {
+      name: "Comedy Collective",
+      university: "Princeton University",
+      club_description:
+        "Hosts stand-up shows, comedy workshops, and improv nights.",
+      university_description:
+        "Private Ivy League university known for its prestigious academic programs and research excellence.",
+    },
+    {
+      name: "Joke Junction",
+      university: "University of California Los Angeles",
+      club_description:
+        "Organizes comedy events, improv sessions, and stand-up performances.",
+      university_description:
+        "Public university with a strong emphasis on innovation and academic excellence.",
+    },
+    {
+      name: "Laughing Matters",
+      university: "University of Southern California",
+      club_description:
+        "Provides a platform for stand-up comedy, improv nights, and comedic performances.",
+      university_description:
+        "Private research university known for its strong academic programs and vibrant campus life.",
+    },
+    {
+      name: "The Comedy Den",
+      university: "University of Texas at Austin",
+      club_description:
+        "Hosts comedy shows, improv nights, and comedy workshops.",
+      university_description:
+        "Public university known for its commitment to academic excellence and research.",
+    },
+    {
+      name: "Funny Business",
+      university: "University of Virginia",
+      club_description:
+        "Features stand-up comedy events, improv shows, and open mic nights.",
+      university_description:
+        "Public university with a strong emphasis on academic excellence and intellectual growth.",
+    },
+    {
+      name: "Laugh Lines",
+      university: "University of North Carolina at Chapel Hill",
+      club_description:
+        "Organizes comedy performances, improv sessions, and stand-up events.",
+      university_description:
+        "Public university known for its commitment to research and academic development.",
+    },
+    {
+      name: "Comic Relief",
+      university: "University of Wisconsin-Madison",
+      club_description:
+        "Hosts regular comedy nights, stand-up shows, and improv performances.",
+      university_description:
+        "Public university recognized for its strong academic programs and research initiatives.",
+    },
+    {
+      name: "The Comedy Stage",
+      university: "University of Michigan",
+      club_description:
+        "Offers a space for stand-up comedy, improv nights, and comedic performances.",
+      university_description:
+        "Public university known for its strong emphasis on research and academic excellence.",
+    },
+    {
+      name: "Humor Hub",
+      university: "University of Illinois Urbana-Champaign",
+      club_description:
+        "Provides opportunities for comedy performances, improv workshops, and open mic nights.",
+      university_description:
+        "Public university with a focus on academic research and intellectual engagement.",
+    },
+    {
+      name: "Giggles Galore",
+      university: "University of Florida",
+      club_description:
+        "Hosts stand-up comedy shows, improv sessions, and comedy workshops.",
+      university_description:
+        "Public university known for its vibrant academic community and research excellence.",
+    },
+    {
+      name: "The Laugh Lounge",
+      university: "University of Georgia",
+      club_description:
+        "Features comedy performances, improv nights, and stand-up events.",
+      university_description:
+        "Public university recognized for its strong commitment to academic success and research.",
+    },
+    {
+      name: "Comedy Craze",
+      university: "University of Arizona",
+      club_description:
+        "Organizes stand-up shows, improv sessions, and comedy workshops.",
+      university_description:
+        "Public university known for its commitment to research and student engagement.",
+    },
+    {
+      name: "Jester's Court",
+      university: "University of Colorado Boulder",
+      club_description:
+        "Hosts comedy performances, improv nights, and stand-up events.",
+      university_description:
+        "Public university with a strong emphasis on academic research and innovation.",
+    },
+    {
+      name: "The Comic Club",
+      university: "University of Washington",
+      club_description:
+        "Provides a space for stand-up comedy, improv shows, and comedic performances.",
+      university_description:
+        "Public university recognized for its excellence in research and academic programs.",
+    },
+    {
+      name: "Laugh Lounge",
+      university: "University of California San Diego",
+      club_description:
+        "Offers opportunities for comedy performances, improv sessions, and stand-up events.",
+      university_description:
+        "Public university known for its strong focus on research and technology.",
+    },
+    {
+      name: "The Comedy Crew",
+      university: "University of Maryland",
+      club_description:
+        "Hosts stand-up comedy shows, improv nights, and comedy workshops.",
+      university_description:
+        "Public university recognized for its commitment to academic excellence and research.",
+    },
+    {
+      name: "Laughing Legends",
+      university: "University of Missouri",
+      club_description:
+        "Features comedy events, improv shows, and stand-up performances.",
+      university_description:
+        "Public university with a focus on academic research and student engagement.",
+    },
+    {
+      name: "Comedy Clubhouse",
+      university: "University of Iowa",
+      club_description:
+        "Organizes stand-up comedy nights, improv sessions, and comedy workshops.",
+      university_description:
+        "Public university known for its commitment to academic success and research.",
+    },
+    {
+      name: "The Laugh Factory",
+      university: "University of Nebraska",
+      club_description:
+        "Hosts regular comedy shows, improv nights, and comedic performances.",
+      university_description:
+        "Public university recognized for its strong academic programs and research focus.",
+    },
+    {
+      name: "Giggles and Grins",
+      university: "University of Kansas",
+      club_description:
+        "Provides a platform for comedy performances, improv sessions, and open mic nights.",
+      university_description:
+        "Public university with a strong emphasis on academic excellence and student engagement.",
+    },
+    {
+      name: "The Jester's Den",
+      university: "University of Alabama",
+      club_description:
+        "Features stand-up comedy, improv nights, and comedic performances.",
+      university_description:
+        "Public university known for its commitment to academic excellence and research.",
+    },
+    {
+      name: "Comic Society",
+      university: "University of Mississippi",
+      club_description:
+        "Hosts comedy shows, improv sessions, and stand-up events.",
+      university_description:
+        "Public university recognized for its strong academic programs and research initiatives.",
+    },
+    {
+      name: "Humor Hub",
+      university: "Chapter Club",
+      club_description:
+        "Offers opportunities for stand-up comedy performances, improv nights, and comedy workshops.",
+      university_description:
+        "Public university with a strong focus on academic research and intellectual engagement.",
+    },
+    {
+      name: "The Laugh Squad",
+      university: "Saint Joseph's University",
+      club_description:
+        "Organizes stand-up comedy shows, improv sessions, and comedy workshops.",
+      university_description:
+        "Private university known for its emphasis on academic achievement and student engagement.",
+    },
+    {
+      name: "Comedy Collective",
+      university: "Marquette University",
+      club_description:
+        "Provides a space for stand-up comedy, improv nights, and comedic performances.",
+      university_description:
+        "Private university recognized for its strong academic programs and student development.",
+    },
+    {
+      name: "The Comedy Stage",
+      university: "Creighton University",
+      club_description:
+        "Hosts comedy events, improv nights, and stand-up performances.",
+      university_description:
+        "Private university known for its commitment to academic success and student engagement.",
+    },
+    {
+      name: "Laughter Lounge",
+      university: "Villanova University",
+      club_description:
+        "Offers a platform for comedy performances, improv sessions, and stand-up shows.",
+      university_description:
+        "Private university recognized for its strong academic programs and commitment to student development.",
+    },
+    {
+      name: "Joke Junction",
+      university: "Duquesne University",
+      club_description:
+        "Features stand-up comedy, improv nights, and comedic performances.",
+      university_description:
+        "Private university with a focus on academic excellence and student engagement.",
+    },
+    {
+      name: "Giggles Galore",
+      university: "Catholic University of America",
+      club_description:
+        "Hosts stand-up comedy shows, improv sessions, and comedy workshops.",
+      university_description:
+        "Private university known for its strong academic programs and commitment to research.",
+    },
+    {
+      name: "The Comedy Club",
+      university: "Syracuse University",
+      club_description:
+        "Provides opportunities for comedy performances, improv sessions, and stand-up events.",
+      university_description:
+        "Private university recognized for its commitment to academic success and research.",
+    },
+    {
+      name: "Comedy Crew",
+      university: "American University",
+      club_description:
+        "Organizes comedy events, improv shows, and stand-up performances.",
+      university_description:
+        "Private university known for its strong academic programs and commitment to student success.",
+    },
+    {
+      name: "Laughing Legends",
+      university: "George Washington University",
+      club_description:
+        "Hosts stand-up comedy shows, improv nights, and comedy workshops.",
+      university_description:
+        "Private university recognized for its commitment to academic excellence and research.",
+    },
+    {
+      name: "Humor Hub",
+      university: "The George Washington University",
+      club_description:
+        "Features comedy performances, improv sessions, and stand-up events.",
+      university_description:
+        "Private university known for its focus on academic research and intellectual development.",
+    },
+    {
+      name: "Comedy Society",
+      university: "University of Hartford",
+      club_description:
+        "Provides a platform for stand-up comedy, improv nights, and comedic performances.",
+      university_description:
+        "Private university with a strong focus on academic excellence and student engagement.",
+    },
+    {
+      name: "The Laugh Lounge",
+      university: "Rider University",
+      club_description:
+        "Hosts comedy events, improv sessions, and stand-up shows.",
+      university_description:
+        "Private university known for its commitment to academic success and student development.",
+    },
+    {
+      name: "Comedy Collective",
+      university: "Monmouth University",
+      club_description:
+        "Organizes stand-up comedy nights, improv sessions, and comedy workshops.",
+      university_description:
+        "Private university with a strong emphasis on academic excellence and student engagement.",
+    },
+    {
+      name: "Joke Junction",
+      university: "Seton Hall University",
+      club_description:
+        "Features stand-up performances, improv shows, and comedic events.",
+      university_description:
+        "Private university known for its strong academic programs and commitment to research.",
+    },
+    {
+      name: "Laugh Out Loud",
+      university: "Loyola Marymount University",
+      club_description:
+        "Hosts comedy performances, improv nights, and stand-up events.",
+      university_description:
+        "Private university recognized for its emphasis on academic excellence and student development.",
+    },
+  ],
+  fitnessClubs: [
+    {
+      name: "Fit for Life",
+      university: "Harvard University",
+      club_description:
+        "Offers group workouts, personal training, and fitness classes.",
+      university_description:
+        "Private Ivy League university known for its prestigious academic programs and research excellence.",
+    },
+    {
+      name: "Campus Fitness",
+      university: "University of Oxford",
+      club_description:
+        "Provides fitness classes, gym access, and wellness workshops.",
+      university_description:
+        "Prestigious university renowned for its rich history and strong academic programs.",
+    },
+    {
+      name: "Workout Warriors",
+      university: "University of Cambridge",
+      club_description:
+        "Hosts group exercise sessions, personal training, and fitness challenges.",
+      university_description:
+        "Renowned university with a strong emphasis on academic research and intellectual development.",
+    },
+    {
+      name: "Active Lifestyle",
+      university: "Stanford University",
+      club_description:
+        "Features fitness classes, gym facilities, and wellness events.",
+      university_description:
+        "Private research university known for its innovation and excellence in education.",
+    },
+    {
+      name: "Healthy Living",
+      university: "University of California Berkeley",
+      club_description:
+        "Offers a range of fitness classes, personal training, and health workshops.",
+      university_description:
+        "Public university known for its strong commitment to research and academic excellence.",
+    },
+    {
+      name: "Fit and Fun",
+      university: "University of Chicago",
+      club_description:
+        "Provides group workouts, fitness challenges, and wellness seminars.",
+      university_description:
+        "Private university renowned for its rigorous academic programs and intellectual environment.",
+    },
+    {
+      name: "Campus Gym",
+      university: "University of Pennsylvania",
+      club_description:
+        "Hosts fitness classes, gym access, and health-related workshops.",
+      university_description:
+        "Private Ivy League university with a strong focus on academic excellence and research.",
+    },
+    {
+      name: "Fitness Fusion",
+      university: "Columbia University",
+      club_description:
+        "Offers a variety of fitness classes, personal training, and wellness events.",
+      university_description:
+        "Private Ivy League university known for its commitment to academic and research excellence.",
+    },
+    {
+      name: "FitLife Club",
+      university: "Yale University",
+      club_description:
+        "Provides group fitness classes, gym access, and wellness workshops.",
+      university_description:
+        "Private Ivy League university with a strong emphasis on academic rigor and research.",
+    },
+    {
+      name: "Exercise Enthusiasts",
+      university: "Princeton University",
+      club_description:
+        "Features fitness classes, personal training sessions, and wellness seminars.",
+      university_description:
+        "Private Ivy League university known for its prestigious academic programs and research excellence.",
+    },
+    {
+      name: "Health and Fitness",
+      university: "University of California Los Angeles",
+      club_description:
+        "Hosts a variety of fitness classes, gym facilities, and health workshops.",
+      university_description:
+        "Public university with a strong emphasis on innovation and academic excellence.",
+    },
+    {
+      name: "Fit & Thrive",
+      university: "University of Southern California",
+      club_description:
+        "Offers fitness classes, personal training, and wellness events for students.",
+      university_description:
+        "Private research university known for its strong academic programs and vibrant campus life.",
+    },
+    {
+      name: "The Fitness Hub",
+      university: "University of Texas at Austin",
+      club_description:
+        "Provides group workouts, fitness challenges, and wellness workshops.",
+      university_description:
+        "Public university known for its commitment to academic excellence and research.",
+    },
+    {
+      name: "Active Minds",
+      university: "University of Virginia",
+      club_description:
+        "Hosts fitness classes, personal training, and health-related events.",
+      university_description:
+        "Public university with a strong emphasis on academic excellence and intellectual growth.",
+    },
+    {
+      name: "FitFam",
+      university: "University of North Carolina at Chapel Hill",
+      club_description:
+        "Features group exercise sessions, gym access, and wellness seminars.",
+      university_description:
+        "Public university known for its commitment to research and academic development.",
+    },
+    {
+      name: "Fitness Crew",
+      university: "University of Wisconsin-Madison",
+      club_description:
+        "Offers fitness classes, personal training, and health workshops.",
+      university_description:
+        "Public university recognized for its strong academic programs and research initiatives.",
+    },
+    {
+      name: "Gym Geeks",
+      university: "University of Michigan",
+      club_description:
+        "Provides group workouts, fitness challenges, and wellness events.",
+      university_description:
+        "Public university known for its strong emphasis on research and academic excellence.",
+    },
+    {
+      name: "Health Hive",
+      university: "University of Illinois Urbana-Champaign",
+      club_description:
+        "Hosts a range of fitness classes, personal training, and health workshops.",
+      university_description:
+        "Public university with a focus on academic research and intellectual engagement.",
+    },
+    {
+      name: "Wellness Warriors",
+      university: "University of Florida",
+      club_description:
+        "Offers fitness classes, gym access, and wellness events for students.",
+      university_description:
+        "Public university known for its vibrant academic community and research excellence.",
+    },
+    {
+      name: "The Workout Zone",
+      university: "University of Georgia",
+      club_description:
+        "Provides group fitness classes, personal training, and health workshops.",
+      university_description:
+        "Public university recognized for its strong commitment to academic success and research.",
+    },
+    {
+      name: "Active Life Club",
+      university: "University of Arizona",
+      club_description:
+        "Features fitness classes, gym facilities, and wellness events.",
+      university_description:
+        "Public university known for its commitment to research and student engagement.",
+    },
+    {
+      name: "Fitness Clubhouse",
+      university: "University of Colorado Boulder",
+      club_description:
+        "Hosts group workouts, fitness challenges, and health-related events.",
+      university_description:
+        "Public university with a strong emphasis on academic research and innovation.",
+    },
+    {
+      name: "Campus Fit",
+      university: "University of Washington",
+      club_description:
+        "Offers a range of fitness classes, gym access, and wellness workshops.",
+      university_description:
+        "Public university recognized for its excellence in research and academic programs.",
+    },
+    {
+      name: "Fit Fam",
+      university: "University of California San Diego",
+      club_description:
+        "Provides group fitness classes, personal training, and wellness events.",
+      university_description:
+        "Public university known for its strong focus on research and technology.",
+    },
+    {
+      name: "Health Hub",
+      university: "University of Maryland",
+      club_description:
+        "Hosts fitness classes, personal training sessions, and health workshops.",
+      university_description:
+        "Public university recognized for its commitment to academic excellence and research.",
+    },
+    {
+      name: "Fit and Fabulous",
+      university: "University of Missouri",
+      club_description:
+        "Features group workouts, fitness challenges, and wellness events.",
+      university_description:
+        "Public university with a focus on academic research and student engagement.",
+    },
+    {
+      name: "Gym Gurus",
+      university: "University of Iowa",
+      club_description:
+        "Offers fitness classes, gym access, and wellness workshops for students.",
+      university_description:
+        "Public university known for its commitment to academic success and research.",
+    },
+    {
+      name: "Fitness Focus",
+      university: "University of Nebraska",
+      club_description:
+        "Provides opportunities for group workouts, fitness challenges, and health workshops.",
+      university_description:
+        "Public university recognized for its strong academic programs and research focus.",
+    },
+    {
+      name: "Wellness Warriors",
+      university: "University of Kansas",
+      club_description:
+        "Hosts a variety of fitness classes, gym access, and wellness events.",
+      university_description:
+        "Public university with a strong emphasis on academic excellence and student engagement.",
+    },
+    {
+      name: "Active Campus",
+      university: "University of Alabama",
+      club_description:
+        "Features fitness classes, personal training, and health workshops.",
+      university_description:
+        "Public university known for its commitment to academic excellence and research.",
+    },
+    {
+      name: "Campus Fitness Club",
+      university: "University of Mississippi",
+      club_description:
+        "Provides group workouts, fitness challenges, and wellness events.",
+      university_description:
+        "Public university recognized for its strong academic programs and research initiatives.",
+    },
+    {
+      name: "FitLife",
+      university: "University of Hartford",
+      club_description:
+        "Offers fitness classes, personal training, and wellness workshops.",
+      university_description:
+        "Private university with a strong focus on academic excellence and student engagement.",
+    },
+    {
+      name: "Healthy Campus",
+      university: "Marquette University",
+      club_description:
+        "Hosts group fitness classes, gym access, and health-related events.",
+      university_description:
+        "Private university recognized for its strong academic programs and student development.",
+    },
+    {
+      name: "Fit & Fun Club",
+      university: "Creighton University",
+      club_description:
+        "Provides opportunities for fitness classes, personal training, and wellness events.",
+      university_description:
+        "Private university known for its commitment to academic success and student engagement.",
+    },
+    {
+      name: "Campus Workout",
+      university: "Villanova University",
+      club_description:
+        "Features group workouts, fitness challenges, and health workshops.",
+      university_description:
+        "Private university recognized for its strong academic programs and commitment to student development.",
+    },
+    {
+      name: "Active Life",
+      university: "Duquesne University",
+      club_description:
+        "Offers fitness classes, gym access, and wellness events for students.",
+      university_description:
+        "Private university with a focus on academic excellence and student engagement.",
+    },
+    {
+      name: "Fit Community",
+      university: "Catholic University of America",
+      club_description:
+        "Hosts group fitness sessions, personal training, and wellness workshops.",
+      university_description:
+        "Private university known for its strong academic programs and commitment to research.",
+    },
+    {
+      name: "Fitness Network",
+      university: "Syracuse University",
+      club_description:
+        "Provides opportunities for fitness classes, gym access, and health-related events.",
+      university_description:
+        "Private university recognized for its commitment to academic success and research.",
+    },
+    {
+      name: "Wellness Club",
+      university: "American University",
+      club_description:
+        "Features group workouts, fitness challenges, and wellness seminars.",
+      university_description:
+        "Private university known for its strong academic programs and commitment to student success.",
+    },
+    {
+      name: "Active Minds Club",
+      university: "George Washington University",
+      club_description:
+        "Hosts fitness classes, personal training, and health workshops.",
+      university_description:
+        "Private university recognized for its commitment to academic excellence and research.",
+    },
+    {
+      name: "Campus Fit",
+      university: "The George Washington University",
+      club_description:
+        "Offers fitness classes, gym facilities, and wellness events.",
+      university_description:
+        "Private university known for its focus on academic research and student development.",
+    },
+    {
+      name: "Fitness Focus",
+      university: "Loyola Marymount University",
+      club_description:
+        "Provides group fitness classes, personal training, and wellness events.",
+      university_description:
+        "Private university recognized for its emphasis on academic excellence and student engagement.",
+    },
+    {
+      name: "Healthy Lifestyle Club",
+      university: "University of San Diego",
+      club_description:
+        "Features fitness classes, gym access, and health workshops.",
+      university_description:
+        "Private university known for its strong commitment to academic success and research.",
+    },
+    {
+      name: "Fit Generation",
+      university: "Santa Clara University",
+      club_description:
+        "Hosts group workouts, fitness challenges, and wellness seminars.",
+      university_description:
+        "Private university recognized for its academic programs and student-focused approach.",
+    },
+  ],
+  gardeningClubs: [
+    {
+      name: "Green Thumbs",
+      university: "University of California Berkeley",
+      club_description:
+        "Offers workshops on plant care, garden design, and sustainable gardening.",
+      university_description:
+        "Public university known for its innovation and commitment to academic excellence.",
+    },
+    {
+      name: "Campus Gardeners",
+      university: "University of Michigan",
+      club_description:
+        "Hosts gardening sessions, plant swaps, and community garden projects.",
+      university_description:
+        "Public university recognized for its strong academic programs and research excellence.",
+    },
+    {
+      name: "Botanical Society",
+      university: "University of Florida",
+      club_description:
+        "Provides gardening classes, plant care tips, and garden design workshops.",
+      university_description:
+        "Public university with a focus on research and academic success.",
+    },
+    {
+      name: "Garden Club",
+      university: "University of Texas at Austin",
+      club_description:
+        "Features gardening events, plant care seminars, and garden tours.",
+      university_description:
+        "Public university known for its commitment to academic and research excellence.",
+    },
+    {
+      name: "Green Campus",
+      university: "University of Washington",
+      club_description:
+        "Hosts community gardening events, workshops, and plant exchanges.",
+      university_description:
+        "Public university recognized for its strong emphasis on research and innovation.",
+    },
+    {
+      name: "Eco-Gardeners",
+      university: "University of Colorado Boulder",
+      club_description:
+        "Offers sustainable gardening practices, plant care workshops, and community garden projects.",
+      university_description:
+        "Public university with a commitment to academic excellence and environmental sustainability.",
+    },
+    {
+      name: "Urban Gardeners",
+      university: "New York University",
+      club_description:
+        "Provides urban gardening tips, plant care advice, and community garden initiatives.",
+      university_description:
+        "Private university known for its focus on research and academic rigor.",
+    },
+    {
+      name: "The Greenhouse",
+      university: "University of Chicago",
+      club_description:
+        "Features gardening workshops, plant swaps, and sustainable garden practices.",
+      university_description:
+        "Private university renowned for its strong academic programs and intellectual environment.",
+    },
+    {
+      name: "Campus Blooms",
+      university: "University of Pennsylvania",
+      club_description:
+        "Hosts plant care classes, garden design workshops, and community garden projects.",
+      university_description:
+        "Private Ivy League university known for its commitment to academic excellence.",
+    },
+    {
+      name: "Floral Society",
+      university: "Columbia University",
+      club_description:
+        "Offers gardening seminars, plant care tips, and community garden events.",
+      university_description:
+        "Private Ivy League university recognized for its strong academic programs and research focus.",
+    },
+    {
+      name: "Green Scene",
+      university: "Harvard University",
+      club_description:
+        "Provides workshops on plant care, sustainable gardening, and garden design.",
+      university_description:
+        "Private Ivy League university known for its prestigious academic programs and research excellence.",
+    },
+    {
+      name: "Eco-Garden Club",
+      university: "Yale University",
+      club_description:
+        "Features sustainable gardening workshops, plant exchanges, and garden design classes.",
+      university_description:
+        "Private Ivy League university with a strong emphasis on academic research and student development.",
+    },
+    {
+      name: "Campus Growers",
+      university: "Princeton University",
+      club_description:
+        "Hosts gardening events, plant care seminars, and community garden projects.",
+      university_description:
+        "Private Ivy League university known for its prestigious academic programs and commitment to research.",
+    },
+    {
+      name: "Botanical Enthusiasts",
+      university: "Stanford University",
+      club_description:
+        "Offers plant care workshops, garden design classes, and community gardening initiatives.",
+      university_description:
+        "Private research university recognized for its innovation and academic excellence.",
+    },
+    {
+      name: "Garden Guardians",
+      university: "University of California Los Angeles",
+      club_description:
+        "Provides gardening classes, plant swaps, and sustainable gardening practices.",
+      university_description:
+        "Public university known for its commitment to research and academic success.",
+    },
+    {
+      name: "Green Thumb Society",
+      university: "University of Southern California",
+      club_description:
+        "Features gardening workshops, plant care tips, and community garden events.",
+      university_description:
+        "Private research university with a focus on academic excellence and student engagement.",
+    },
+    {
+      name: "Campus Botanists",
+      university: "University of California San Diego",
+      club_description:
+        "Hosts gardening sessions, plant exchanges, and sustainable garden projects.",
+      university_description:
+        "Public university recognized for its academic programs and research focus.",
+    },
+    {
+      name: "Eco-Garden Society",
+      university: "University of Wisconsin-Madison",
+      club_description:
+        "Offers workshops on plant care, garden design, and sustainability practices.",
+      university_description:
+        "Public university known for its strong academic programs and research initiatives.",
+    },
+    {
+      name: "The Garden Group",
+      university: "University of Minnesota",
+      club_description:
+        "Provides gardening seminars, plant care workshops, and community garden events.",
+      university_description:
+        "Public university with a commitment to research and academic excellence.",
+    },
+    {
+      name: "Campus Gardens",
+      university: "University of Illinois Urbana-Champaign",
+      club_description:
+        "Features gardening classes, plant swaps, and sustainable garden practices.",
+      university_description:
+        "Public university known for its focus on academic research and student engagement.",
+    },
+    {
+      name: "Garden Explorers",
+      university: "University of North Carolina at Chapel Hill",
+      club_description:
+        "Hosts plant care workshops, garden design classes, and community garden projects.",
+      university_description:
+        "Public university recognized for its strong academic programs and research focus.",
+    },
+    {
+      name: "Green Campus Club",
+      university: "University of Georgia",
+      club_description:
+        "Offers gardening events, plant exchanges, and sustainable gardening practices.",
+      university_description:
+        "Public university with a strong emphasis on academic excellence and research.",
+    },
+    {
+      name: "Campus Cultivators",
+      university: "University of Alabama",
+      club_description:
+        "Provides workshops on plant care, garden design, and community gardening.",
+      university_description:
+        "Public university known for its commitment to academic success and research.",
+    },
+    {
+      name: "Garden Society",
+      university: "University of Missouri",
+      club_description:
+        "Features gardening classes, plant care tips, and community garden events.",
+      university_description:
+        "Public university recognized for its strong academic programs and student engagement.",
+    },
+    {
+      name: "Urban Growers",
+      university: "University of Iowa",
+      club_description:
+        "Hosts gardening sessions, plant swaps, and sustainable garden projects.",
+      university_description:
+        "Public university known for its commitment to research and academic excellence.",
+    },
+    {
+      name: "Eco-Gardeners",
+      university: "University of Nebraska",
+      club_description:
+        "Offers gardening workshops, plant care seminars, and community garden initiatives.",
+      university_description:
+        "Public university recognized for its strong academic focus and research commitment.",
+    },
+    {
+      name: "The Green Team",
+      university: "University of Kansas",
+      club_description:
+        "Provides plant care tips, gardening classes, and community gardening events.",
+      university_description:
+        "Public university known for its academic excellence and research initiatives.",
+    },
+    {
+      name: "Campus Flora",
+      university: "University of Oklahoma",
+      club_description:
+        "Features gardening workshops, plant exchanges, and sustainable garden practices.",
+      university_description:
+        "Public university recognized for its commitment to academic success and research.",
+    },
+    {
+      name: "The Botanical Club",
+      university: "University of South Carolina",
+      club_description:
+        "Hosts gardening events, plant care seminars, and community garden projects.",
+      university_description:
+        "Public university known for its strong academic programs and research focus.",
+    },
+    {
+      name: "Green Life Club",
+      university: "University of Tennessee",
+      club_description:
+        "Offers plant care workshops, gardening classes, and community gardening events.",
+      university_description:
+        "Public university recognized for its commitment to research and academic success.",
+    },
+    {
+      name: "Eco-Plant Society",
+      university: "Clemson University",
+      club_description:
+        "Provides gardening seminars, plant swaps, and sustainable garden practices.",
+      university_description:
+        "Public university known for its strong emphasis on academic excellence and research.",
+    },
+    {
+      name: "Campus Gardeners Club",
+      university: "North Carolina State University",
+      club_description:
+        "Features gardening classes, plant care workshops, and community garden events.",
+      university_description:
+        "Public university recognized for its academic programs and research focus.",
+    },
+    {
+      name: "Botanical Clubhouse",
+      university: "Auburn University",
+      club_description:
+        "Hosts gardening sessions, plant exchanges, and sustainable gardening practices.",
+      university_description:
+        "Public university known for its strong academic programs and research excellence.",
+    },
+    {
+      name: "Garden Enthusiasts",
+      university: "Mississippi State University",
+      club_description:
+        "Offers gardening workshops, plant care tips, and community garden initiatives.",
+      university_description:
+        "Public university recognized for its commitment to academic success and research.",
+    },
+    {
+      name: "The Plant Society",
+      university: "Louisiana State University",
+      club_description:
+        "Provides plant care seminars, gardening classes, and community garden projects.",
+      university_description:
+        "Public university known for its strong emphasis on academic and research excellence.",
+    },
+    {
+      name: "Eco-Gardeners Club",
+      university: "Oklahoma State University",
+      club_description:
+        "Features gardening workshops, plant care tips, and sustainable garden practices.",
+      university_description:
+        "Public university recognized for its focus on academic research and student engagement.",
+    },
+    {
+      name: "Green Space Club",
+      university: "University of Louisville",
+      club_description:
+        "Hosts gardening events, plant care seminars, and community gardening projects.",
+      university_description:
+        "Public university known for its commitment to research and academic success.",
+    },
+    {
+      name: "Campus Grow",
+      university: "University of Arkansas",
+      club_description:
+        "Offers plant care workshops, gardening classes, and sustainable garden initiatives.",
+      university_description:
+        "Public university recognized for its strong academic programs and research focus.",
+    },
+    {
+      name: "Flora Society",
+      university: "West Virginia University",
+      club_description:
+        "Provides gardening seminars, plant exchanges, and community garden projects.",
+      university_description:
+        "Public university known for its commitment to academic excellence and research.",
+    },
+    {
+      name: "Green Garden Club",
+      university: "University of Montana",
+      club_description:
+        "Features gardening workshops, plant care tips, and community gardening events.",
+      university_description:
+        "Public university recognized for its focus on academic research and sustainability.",
+    },
+    {
+      name: "Campus Botanists Club",
+      university: "University of Wyoming",
+      club_description:
+        "Hosts gardening sessions, plant swaps, and sustainable gardening practices.",
+      university_description:
+        "Public university known for its commitment to academic excellence and research.",
+    },
+    {
+      name: "The Garden Network",
+      university: "Montana State University",
+      club_description:
+        "Offers plant care seminars, gardening classes, and community gardening events.",
+      university_description:
+        "Public university recognized for its strong academic programs and research focus.",
+    },
+    {
+      name: "Botanical Explorers",
+      university: "Idaho State University",
+      club_description:
+        "Provides gardening workshops, plant care tips, and sustainable garden practices.",
+      university_description:
+        "Public university known for its commitment to academic success and research.",
+    },
+  ],
+  vrClubs: [
+    {
+      name: "Virtual Reality Society",
+      university: "Stanford University",
+      club_description:
+        "Explores VR technology, applications, and immersive experiences.",
+      university_description:
+        "Private research university known for its innovation and academic excellence.",
+    },
+    {
+      name: "VR Innovators",
+      university: "University of California Berkeley",
+      club_description:
+        "Focuses on VR development, programming, and creative applications.",
+      university_description:
+        "Public university renowned for its strong academic programs and research focus.",
+    },
+    {
+      name: "Immersive Tech Club",
+      university: "Massachusetts Institute of Technology",
+      club_description:
+        "Hosts VR workshops, hackathons, and technology discussions.",
+      university_description:
+        "Private research university known for its technological advancements and academic rigor.",
+    },
+    {
+      name: "Virtual Horizons",
+      university: "University of Michigan",
+      club_description:
+        "Offers VR experiences, development sessions, and tech talks.",
+      university_description:
+        "Public university recognized for its commitment to research and academic success.",
+    },
+    {
+      name: "VR Explorers",
+      university: "University of Washington",
+      club_description:
+        "Features VR simulations, development projects, and community events.",
+      university_description:
+        "Public university known for its strong emphasis on research and innovation.",
+    },
+    {
+      name: "Future Reality Club",
+      university: "University of California Los Angeles",
+      club_description:
+        "Provides VR tech workshops, immersive experience sessions, and development labs.",
+      university_description:
+        "Public university with a focus on academic excellence and research.",
+    },
+    {
+      name: "Virtual Ventures",
+      university: "University of Southern California",
+      club_description:
+        "Hosts VR development sessions, tech demos, and innovation talks.",
+      university_description:
+        "Private research university recognized for its academic and technological programs.",
+    },
+    {
+      name: "VR Creators",
+      university: "New York University",
+      club_description:
+        "Explores VR content creation, tech advancements, and immersive experiences.",
+      university_description:
+        "Private university known for its strong academic programs and focus on innovation.",
+    },
+    {
+      name: "Virtual Reality Enthusiasts",
+      university: "University of Florida",
+      club_description:
+        "Features VR workshops, development projects, and tech discussions.",
+      university_description:
+        "Public university recognized for its commitment to academic excellence and research.",
+    },
+    {
+      name: "VR Pioneers",
+      university: "University of Texas at Austin",
+      club_description:
+        "Offers VR simulations, development labs, and technology showcases.",
+      university_description:
+        "Public university known for its strong academic and research programs.",
+    },
+    {
+      name: "Virtual Tech Club",
+      university: "University of Illinois Urbana-Champaign",
+      club_description:
+        "Hosts VR tech talks, development workshops, and immersive events.",
+      university_description:
+        "Public university recognized for its research excellence and academic programs.",
+    },
+    {
+      name: "VR Visionaries",
+      university: "University of Pennsylvania",
+      club_description:
+        "Provides VR development sessions, technology demonstrations, and community events.",
+      university_description:
+        "Private Ivy League university known for its academic excellence and research focus.",
+    },
+    {
+      name: "Digital Realities",
+      university: "Columbia University",
+      club_description:
+        "Explores VR technology, development projects, and immersive experiences.",
+      university_description:
+        "Private Ivy League university recognized for its strong academic programs and research.",
+    },
+    {
+      name: "VR Innovate",
+      university: "Harvard University",
+      club_description:
+        "Features VR workshops, tech talks, and development labs.",
+      university_description:
+        "Private Ivy League university known for its prestigious academic programs and research excellence.",
+    },
+    {
+      name: "Immersive Tech Society",
+      university: "Yale University",
+      club_description:
+        "Hosts VR events, development sessions, and technology showcases.",
+      university_description:
+        "Private Ivy League university with a focus on academic research and innovation.",
+    },
+    {
+      name: "Virtual Reality Club",
+      university: "Princeton University",
+      club_description:
+        "Offers VR technology discussions, development workshops, and immersive experiences.",
+      university_description:
+        "Private Ivy League university known for its commitment to research and academic excellence.",
+    },
+    {
+      name: "Virtual Horizons Club",
+      university: "California Institute of Technology",
+      club_description:
+        "Provides VR development sessions, tech demos, and immersive experience labs.",
+      university_description:
+        "Private research university known for its focus on scientific and technological advancement.",
+    },
+    {
+      name: "Future Reality Society",
+      university: "University of California San Diego",
+      club_description:
+        "Features VR workshops, tech talks, and development projects.",
+      university_description:
+        "Public university recognized for its academic research and innovation.",
+    },
+    {
+      name: "Immersive Innovations",
+      university: "University of Wisconsin-Madison",
+      club_description:
+        "Hosts VR technology sessions, development labs, and community events.",
+      university_description:
+        "Public university with a strong emphasis on research and academic excellence.",
+    },
+    {
+      name: "Virtual Realms",
+      university: "University of Minnesota",
+      club_description:
+        "Explores VR tech, development workshops, and immersive experiences.",
+      university_description:
+        "Public university known for its academic programs and research focus.",
+    },
+    {
+      name: "VR Explorers Club",
+      university: "University of Colorado Boulder",
+      club_description:
+        "Offers VR development sessions, tech demos, and immersive workshops.",
+      university_description:
+        "Public university recognized for its commitment to research and academic success.",
+    },
+    {
+      name: "Digital Worlds",
+      university: "University of North Carolina at Chapel Hill",
+      club_description:
+        "Provides VR technology talks, development projects, and community events.",
+      university_description:
+        "Public university with a strong focus on academic and research excellence.",
+    },
+    {
+      name: "Virtual Tech Society",
+      university: "University of Georgia",
+      club_description:
+        "Features VR workshops, immersive tech labs, and development sessions.",
+      university_description:
+        "Public university known for its academic excellence and research programs.",
+    },
+    {
+      name: "VR Vision Club",
+      university: "University of Alabama",
+      club_description:
+        "Hosts VR technology events, development labs, and immersive experiences.",
+      university_description:
+        "Public university recognized for its commitment to academic research and success.",
+    },
+    {
+      name: "Virtual Futures",
+      university: "University of Missouri",
+      club_description:
+        "Offers VR tech sessions, development workshops, and community events.",
+      university_description:
+        "Public university with a strong emphasis on academic research and innovation.",
+    },
+    {
+      name: "VR Innovators Club",
+      university: "University of Iowa",
+      club_description:
+        "Explores VR development, technology demos, and immersive experiences.",
+      university_description:
+        "Public university known for its commitment to research and academic success.",
+    },
+    {
+      name: "Immersive Tech Club",
+      university: "University of Nebraska",
+      club_description:
+        "Provides VR workshops, development labs, and tech discussions.",
+      university_description:
+        "Public university recognized for its focus on academic research and student engagement.",
+    },
+    {
+      name: "Virtual Tech Enthusiasts",
+      university: "University of Kansas",
+      club_description:
+        "Features VR technology showcases, development sessions, and immersive events.",
+      university_description:
+        "Public university known for its academic programs and research focus.",
+    },
+    {
+      name: "Future Realities",
+      university: "University of Oklahoma",
+      club_description:
+        "Offers VR tech talks, development workshops, and community garden events.",
+      university_description:
+        "Public university recognized for its strong academic programs and research excellence.",
+    },
+    {
+      name: "Virtual Horizons Society",
+      university: "University of Arkansas",
+      club_description:
+        "Hosts VR technology sessions, immersive experience labs, and development projects.",
+      university_description:
+        "Public university with a commitment to academic success and research.",
+    },
+    {
+      name: "Immersive Experiences Club",
+      university: "West Virginia University",
+      club_description:
+        "Provides VR workshops, tech talks, and development labs.",
+      university_description:
+        "Public university known for its focus on research and academic excellence.",
+    },
+    {
+      name: "VR Visionaries Club",
+      university: "Louisiana State University",
+      club_description:
+        "Features VR development sessions, technology demonstrations, and immersive events.",
+      university_description:
+        "Public university recognized for its strong academic and research programs.",
+    },
+    {
+      name: "Digital Realities Club",
+      university: "Oklahoma State University",
+      club_description:
+        "Offers VR tech showcases, development workshops, and community events.",
+      university_description:
+        "Public university with a focus on academic research and innovation.",
+    },
+    {
+      name: "Virtual Reality Enthusiasts Club",
+      university: "University of Louisville",
+      club_description:
+        "Hosts VR technology discussions, development labs, and immersive experiences.",
+      university_description:
+        "Public university known for its commitment to research and academic excellence.",
+    },
+    {
+      name: "Future Tech Club",
+      university: "Montana State University",
+      club_description:
+        "Provides VR workshops, tech talks, and immersive experience sessions.",
+      university_description:
+        "Public university recognized for its strong academic programs and research focus.",
+    },
+    {
+      name: "Immersive VR Club",
+      university: "Idaho State University",
+      club_description:
+        "Features VR technology events, development projects, and community workshops.",
+      university_description:
+        "Public university known for its commitment to academic research and success.",
+    },
+    {
+      name: "VR Innovations",
+      university: "University of Alaska Anchorage",
+      club_description:
+        "Offers VR development labs, tech talks, and immersive experience events.",
+      university_description:
+        "Public university recognized for its strong academic and research programs.",
+    },
+    {
+      name: "Virtual Realities Club",
+      university: "University of South Dakota",
+      club_description:
+        "Provides VR workshops, technology showcases, and community events.",
+      university_description:
+        "Public university known for its focus on research and academic excellence.",
+    },
+    {
+      name: "Immersive Tech Society",
+      university: "South Dakota State University",
+      club_description:
+        "Hosts VR development sessions, tech demos, and immersive experience labs.",
+      university_description:
+        "Public university with a commitment to academic research and innovation.",
+    },
+    {
+      name: "Future VR Club",
+      university: "University of Wyoming",
+      club_description:
+        "Features VR technology discussions, development workshops, and community events.",
+      university_description:
+        "Public university known for its focus on academic excellence and research.",
+    },
+  ],
+  podcastingclubs: [
+    {
+      name: "Podcast Producers Society",
+      university: "University of California Los Angeles",
+      club_description:
+        "Focuses on podcast creation, production techniques, and media discussions.",
+      university_description:
+        "Public university known for its strong academic programs and media influence.",
+    },
+    {
+      name: "The Podcast Network",
+      university: "New York University",
+      club_description:
+        "Offers workshops on podcasting skills, editing, and content development.",
+      university_description:
+        "Private university recognized for its robust media and arts programs.",
+    },
+    {
+      name: "Podcasters United",
+      university: "University of Texas at Austin",
+      club_description:
+        "Provides resources for podcast creation, distribution, and audience engagement.",
+      university_description:
+        "Public university known for its commitment to research and media excellence.",
+    },
+    {
+      name: "Podcasting Innovators",
+      university: "University of Southern California",
+      club_description:
+        "Hosts events on podcast technology, storytelling, and digital media trends.",
+      university_description:
+        "Private university renowned for its strong focus on media and communications.",
+    },
+    {
+      name: "Creative Podcasts Club",
+      university: "University of Michigan",
+      club_description:
+        "Explores podcast production techniques, creative storytelling, and media analysis.",
+      university_description:
+        "Public university recognized for its diverse academic programs and research focus.",
+    },
+    {
+      name: "Podcasts & Media Club",
+      university: "University of Florida",
+      club_description:
+        "Features workshops on podcast production, editing, and marketing strategies.",
+      university_description:
+        "Public university known for its commitment to academic excellence and media studies.",
+    },
+    {
+      name: "The Podcast Workshop",
+      university: "University of Illinois Urbana-Champaign",
+      club_description:
+        "Offers hands-on training in podcast recording, editing, and distribution.",
+      university_description:
+        "Public university recognized for its strong research programs and media studies.",
+    },
+    {
+      name: "NextGen Podcasters",
+      university: "University of Wisconsin-Madison",
+      club_description:
+        "Provides resources and support for aspiring podcasters, including production tools and marketing tips.",
+      university_description:
+        "Public university known for its focus on research and academic success.",
+    },
+    {
+      name: "Podcasting Hub",
+      university: "University of Pennsylvania",
+      club_description:
+        "Hosts events on podcast creation, digital media, and audience engagement.",
+      university_description:
+        "Private Ivy League university recognized for its strong academic and media programs.",
+    },
+    {
+      name: "Digital Podcast Society",
+      university: "Columbia University",
+      club_description:
+        "Features discussions on podcast technology, storytelling, and media trends.",
+      university_description:
+        "Private Ivy League university known for its prestigious academic programs and media focus.",
+    },
+    {
+      name: "Podcast Creators Club",
+      university: "Harvard University",
+      club_description:
+        "Offers workshops on podcast production, creative writing, and digital media.",
+      university_description:
+        "Private Ivy League university recognized for its excellence in academic and media fields.",
+    },
+    {
+      name: "The Podcast Club",
+      university: "Yale University",
+      club_description:
+        "Focuses on podcasting skills, storytelling techniques, and media production.",
+      university_description:
+        "Private Ivy League university known for its commitment to academic research and media studies.",
+    },
+    {
+      name: "Innovative Podcasts",
+      university: "Princeton University",
+      club_description:
+        "Provides resources and training for podcast creation, editing, and marketing.",
+      university_description:
+        "Private Ivy League university with a strong emphasis on research and media excellence.",
+    },
+    {
+      name: "Podcast Masters",
+      university: "University of California Berkeley",
+      club_description:
+        "Hosts podcasting workshops, technology discussions, and production labs.",
+      university_description:
+        "Public university recognized for its innovation and media programs.",
+    },
+    {
+      name: "Podcasting Society",
+      university: "University of Southern California",
+      club_description:
+        "Explores podcasting techniques, content development, and audience strategies.",
+      university_description:
+        "Private university known for its strong media and communication programs.",
+    },
+    {
+      name: "Creative Media Club",
+      university: "University of Miami",
+      club_description:
+        "Focuses on podcast production, media storytelling, and content creation.",
+      university_description:
+        "Private university recognized for its media programs and academic excellence.",
+    },
+    {
+      name: "Podcasters Collective",
+      university: "University of Washington",
+      club_description:
+        "Offers workshops on podcasting skills, content development, and media engagement.",
+      university_description:
+        "Public university known for its research focus and innovative media programs.",
+    },
+    {
+      name: "The Podcast Network Club",
+      university: "University of North Carolina at Chapel Hill",
+      club_description:
+        "Provides resources for podcast creation, editing, and marketing strategies.",
+      university_description:
+        "Public university known for its strong academic and media studies programs.",
+    },
+    {
+      name: "Podcast Club",
+      university: "University of Arizona",
+      club_description:
+        "Hosts podcast workshops, editing sessions, and digital media discussions.",
+      university_description:
+        "Public university recognized for its commitment to academic excellence and media research.",
+    },
+    {
+      name: "Podcast Production Hub",
+      university: "University of Colorado Boulder",
+      club_description:
+        "Focuses on podcast creation, production techniques, and content development.",
+      university_description:
+        "Public university known for its innovation and academic programs.",
+    },
+    {
+      name: "The Podcast Studio",
+      university: "University of Oregon",
+      club_description:
+        "Offers training in podcast recording, editing, and distribution.",
+      university_description:
+        "Public university with a strong emphasis on media studies and academic research.",
+    },
+    {
+      name: "Podcast Enthusiasts",
+      university: "University of Connecticut",
+      club_description:
+        "Features workshops on podcast production, storytelling, and media trends.",
+      university_description:
+        "Public university known for its commitment to research and academic excellence.",
+    },
+    {
+      name: "Podcast Production Society",
+      university: "University of Maryland",
+      club_description:
+        "Provides resources and support for podcast creation and media engagement.",
+      university_description:
+        "Public university recognized for its strong media programs and research focus.",
+    },
+    {
+      name: "Podcasts & Technology Club",
+      university: "University of Virginia",
+      club_description:
+        "Hosts events on podcast technology, production techniques, and media analysis.",
+      university_description:
+        "Public university known for its commitment to academic and media research.",
+    },
+    {
+      name: "Podcasting Innovations",
+      university: "University of Pittsburgh",
+      club_description:
+        "Focuses on podcast creation, editing, and digital media trends.",
+      university_description:
+        "Public university recognized for its strong academic programs and research excellence.",
+    },
+    {
+      name: "The Podcast Network",
+      university: "Ohio State University",
+      club_description:
+        "Offers workshops on podcast production, content development, and media engagement.",
+      university_description:
+        "Public university known for its commitment to academic success and research.",
+    },
+    {
+      name: "Podcast Creators",
+      university: "Michigan State University",
+      club_description:
+        "Features events on podcast technology, storytelling, and production techniques.",
+      university_description:
+        "Public university recognized for its strong research programs and media studies.",
+    },
+    {
+      name: "Creative Podcasters Club",
+      university: "Indiana University Bloomington",
+      club_description:
+        "Provides resources for podcast creation, editing, and content development.",
+      university_description:
+        "Public university known for its focus on academic excellence and media research.",
+    },
+    {
+      name: "Podcasting Club",
+      university: "University of Kansas",
+      club_description:
+        "Hosts workshops on podcasting skills, technology, and audience engagement.",
+      university_description:
+        "Public university recognized for its strong academic and research programs.",
+    },
+    {
+      name: "The Podcast Project",
+      university: "University of Iowa",
+      club_description:
+        "Focuses on podcast production, creative storytelling, and digital media.",
+      university_description:
+        "Public university known for its commitment to research and academic excellence.",
+    },
+    {
+      name: "Podcast Society",
+      university: "University of South Carolina",
+      club_description:
+        "Offers training in podcast creation, editing, and marketing strategies.",
+      university_description:
+        "Public university with a strong focus on media studies and research excellence.",
+    },
+    {
+      name: "Podcasts and Media Club",
+      university: "University of Tennessee",
+      club_description:
+        "Provides resources for podcast production, content development, and technology discussions.",
+      university_description:
+        "Public university recognized for its strong academic and media programs.",
+    },
+    {
+      name: "Podcast Club",
+      university: "University of Mississippi",
+      club_description:
+        "Features workshops on podcast creation, editing, and digital media trends.",
+      university_description:
+        "Public university known for its commitment to academic research and media excellence.",
+    },
+    {
+      name: "Podcast Producers",
+      university: "Louisiana State University",
+      club_description:
+        "Hosts events on podcast production, storytelling, and media engagement.",
+      university_description:
+        "Public university recognized for its strong research programs and media studies.",
+    },
+    {
+      name: "Podcasts Network Club",
+      university: "University of Alabama",
+      club_description:
+        "Offers resources and support for podcast creation, editing, and distribution.",
+      university_description:
+        "Public university known for its academic excellence and media research.",
+    },
+    {
+      name: "Podcasting Club",
+      university: "West Virginia University",
+      club_description:
+        "Features workshops on podcast production, technology, and content development.",
+      university_description:
+        "Public university recognized for its focus on research and media studies.",
+    },
+    {
+      name: "Podcasting Hub",
+      university: "South Dakota State University",
+      club_description:
+        "Provides training in podcast creation, editing, and audience engagement.",
+      university_description:
+        "Public university known for its strong academic and media programs.",
+    },
+    {
+      name: "The Podcast Workshop",
+      university: "Montana State University",
+      club_description:
+        "Focuses on podcast production techniques, content creation, and media analysis.",
+      university_description:
+        "Public university recognized for its commitment to research and academic success.",
+    },
+    {
+      name: "Creative Podcasts Club",
+      university: "Idaho State University",
+      club_description:
+        "Offers workshops on podcasting skills, editing, and content development.",
+      university_description:
+        "Public university known for its focus on academic and media excellence.",
+    },
+    {
+      name: "Podcast Production Network",
+      university: "University of Alaska Anchorage",
+      club_description:
+        "Hosts podcast technology sessions, development labs, and community events.",
+      university_description:
+        "Public university recognized for its strong academic programs and research focus.",
+    },
+    {
+      name: "Podcasters Guild",
+      university: "University of Wyoming",
+      club_description:
+        "Provides resources and support for podcast creation, editing, and marketing.",
+      university_description:
+        "Public university known for its academic excellence and media studies.",
+    },
+    {
+      name: "The Podcast Studio",
+      university: "University of Nebraska-Lincoln",
+      club_description:
+        "Features events on podcast technology, storytelling, and production techniques.",
+      university_description:
+        "Public university recognized for its commitment to academic research and media programs.",
+    },
+    {
+      name: "Podcast Club",
+      university: "University of Hawaii",
+      club_description:
+        "Offers training in podcast creation, editing, and digital media strategies.",
+      university_description:
+        "Public university known for its focus on academic excellence and media studies.",
+    },
+    {
+      name: "Podcasting Society",
+      university: "University of Central Florida",
+      club_description:
+        "Hosts workshops on podcast production, content development, and technology discussions.",
+      university_description:
+        "Public university recognized for its strong academic programs and media research.",
+    },
+    {
+      name: "Podcasters Network",
+      university: "Georgia State University",
+      club_description:
+        "Provides resources for podcast creation, editing, and audience engagement.",
+      university_description:
+        "Public university known for its commitment to research and media studies.",
+    },
+    {
+      name: "Creative Media Club",
+      university: "Florida State University",
+      club_description:
+        "Focuses on podcast production techniques, storytelling, and digital media.",
+      university_description:
+        "Public university recognized for its strong academic and media programs.",
+    },
+    {
+      name: "Podcast Creators",
+      university: "University of South Florida",
+      club_description:
+        "Offers workshops on podcasting skills, editing, and content development.",
+      university_description:
+        "Public university known for its research focus and media excellence.",
+    },
+    {
+      name: "The Podcast Society",
+      university: "University of New Mexico",
+      club_description:
+        "Hosts events on podcast technology, production, and media engagement.",
+      university_description:
+        "Public university recognized for its strong academic programs and media studies.",
+    },
+    {
+      name: "Podcast Club",
+      university: "University of Vermont",
+      club_description:
+        "Provides resources and support for podcast creation, editing, and distribution.",
+      university_description:
+        "Public university known for its focus on academic research and media excellence.",
+    },
+    {
+      name: "Podcasting Innovations",
+      university: "University of Rhode Island",
+      club_description:
+        "Features workshops on podcast production, storytelling, and media analysis.",
+      university_description:
+        "Public university recognized for its strong academic and media programs.",
+    },
+  ],
+  calligraphyAndHandwritingClubs: [
+    {
+      name: "Calligraphy Club",
+      university: "University of California Berkeley",
+      club_description:
+        "Offers workshops on calligraphy techniques and artistic handwriting.",
+      university_description:
+        "Public university known for its diverse academic programs and artistic focus.",
+    },
+    {
+      name: "Handwriting Society",
+      university: "New York University",
+      club_description:
+        "Focuses on improving handwriting skills and exploring calligraphy styles.",
+      university_description:
+        "Private university recognized for its strong arts and design programs.",
+    },
+    {
+      name: "Artistic Letters Club",
+      university: "University of Texas at Austin",
+      club_description:
+        "Provides training in various calligraphy styles and creative writing techniques.",
+      university_description:
+        "Public university known for its commitment to arts and humanities.",
+    },
+    {
+      name: "Elegant Script Club",
+      university: "University of Southern California",
+      club_description:
+        "Hosts events on calligraphy methods, letter design, and handwriting improvement.",
+      university_description:
+        "Private university renowned for its arts and communication programs.",
+    },
+    {
+      name: "Modern Calligraphy Club",
+      university: "University of Michigan",
+      club_description:
+        "Offers classes on contemporary calligraphy and artistic handwriting styles.",
+      university_description:
+        "Public university known for its comprehensive academic and creative arts programs.",
+    },
+    {
+      name: "Handwriting Workshop",
+      university: "University of Florida",
+      club_description:
+        "Features workshops on improving handwriting and mastering calligraphy techniques.",
+      university_description:
+        "Public university recognized for its focus on academic and artistic excellence.",
+    },
+    {
+      name: "Calligraphy & Ink Club",
+      university: "University of Illinois Urbana-Champaign",
+      club_description:
+        "Explores traditional and modern calligraphy methods and artistic handwriting.",
+      university_description:
+        "Public university known for its strong research programs and creative arts focus.",
+    },
+    {
+      name: "Elegant Letters Society",
+      university: "University of Washington",
+      club_description:
+        "Provides resources for calligraphy practice, letter design, and handwriting techniques.",
+      university_description:
+        "Public university recognized for its innovation in arts and research.",
+    },
+    {
+      name: "Creative Calligraphy Club",
+      university: "University of Pennsylvania",
+      club_description:
+        "Hosts events on calligraphy styles, artistic writing, and creative lettering.",
+      university_description:
+        "Private Ivy League university known for its strong arts and humanities programs.",
+    },
+    {
+      name: "Handwriting Enthusiasts",
+      university: "Columbia University",
+      club_description:
+        "Focuses on enhancing handwriting skills and exploring various calligraphy styles.",
+      university_description:
+        "Private Ivy League university renowned for its academic and creative arts programs.",
+    },
+    {
+      name: "Art of Letters Club",
+      university: "Harvard University",
+      club_description:
+        "Offers classes on traditional and modern calligraphy techniques and handwriting improvement.",
+      university_description:
+        "Private Ivy League university known for its excellence in arts and humanities.",
+    },
+    {
+      name: "Calligraphy Masters",
+      university: "Yale University",
+      club_description:
+        "Provides resources and workshops on advanced calligraphy and artistic handwriting.",
+      university_description:
+        "Private Ivy League university recognized for its commitment to academic and creative excellence.",
+    },
+    {
+      name: "Script & Style Club",
+      university: "Princeton University",
+      club_description:
+        "Hosts workshops and discussions on calligraphy techniques and creative writing.",
+      university_description:
+        "Private Ivy League university known for its strong focus on arts and research.",
+    },
+    {
+      name: "The Calligraphy Network",
+      university: "University of California Los Angeles",
+      club_description:
+        "Offers training in various calligraphy styles and handwriting techniques.",
+      university_description:
+        "Public university known for its innovative approach to arts and humanities.",
+    },
+    {
+      name: "Handwriting Club",
+      university: "University of Southern California",
+      club_description:
+        "Focuses on improving handwriting skills and exploring different calligraphy methods.",
+      university_description:
+        "Private university renowned for its strong media and arts programs.",
+    },
+    {
+      name: "Calligraphy & Design Society",
+      university: "University of Miami",
+      club_description:
+        "Provides resources and workshops on calligraphy design and handwriting techniques.",
+      university_description:
+        "Private university known for its creative arts programs and academic excellence.",
+    },
+    {
+      name: "Lettering Arts Club",
+      university: "University of Colorado Boulder",
+      club_description:
+        "Hosts events on calligraphy styles, artistic writing, and creative lettering.",
+      university_description:
+        "Public university recognized for its focus on research and artistic innovation.",
+    },
+    {
+      name: "Modern Script Club",
+      university: "University of Oregon",
+      club_description:
+        "Offers classes on contemporary calligraphy and handwriting improvement.",
+      university_description:
+        "Public university known for its commitment to academic and artistic excellence.",
+    },
+    {
+      name: "Calligraphy Workshop",
+      university: "University of Connecticut",
+      club_description:
+        "Features workshops on traditional and modern calligraphy techniques and handwriting skills.",
+      university_description:
+        "Public university recognized for its strong academic and creative arts programs.",
+    },
+    {
+      name: "Elegant Scripts Club",
+      university: "University of Maryland",
+      club_description:
+        "Focuses on artistic handwriting, calligraphy techniques, and creative letter design.",
+      university_description:
+        "Public university known for its commitment to research and media excellence.",
+    },
+    {
+      name: "Artistic Calligraphy Club",
+      university: "University of Virginia",
+      club_description:
+        "Provides training in various calligraphy styles and enhances handwriting skills.",
+      university_description:
+        "Public university recognized for its strong focus on arts and academic research.",
+    },
+    {
+      name: "Creative Scripts Club",
+      university: "University of Pittsburgh",
+      club_description:
+        "Offers workshops on creative calligraphy and handwriting techniques.",
+      university_description:
+        "Public university known for its strong academic and artistic programs.",
+    },
+    {
+      name: "Calligraphy Art Society",
+      university: "Ohio State University",
+      club_description:
+        "Hosts events on calligraphy design, artistic handwriting, and letter styles.",
+      university_description:
+        "Public university recognized for its focus on research and creative arts.",
+    },
+    {
+      name: "Handwriting Arts Club",
+      university: "Michigan State University",
+      club_description:
+        "Focuses on enhancing handwriting skills and exploring calligraphy styles.",
+      university_description:
+        "Public university known for its strong academic and media programs.",
+    },
+    {
+      name: "Elegant Handwriting Club",
+      university: "Indiana University Bloomington",
+      club_description:
+        "Provides resources and workshops on calligraphy techniques and creative writing.",
+      university_description:
+        "Public university recognized for its commitment to academic and artistic excellence.",
+    },
+    {
+      name: "Art of Handwriting Club",
+      university: "University of Kansas",
+      club_description:
+        "Offers training in artistic handwriting and calligraphy design.",
+      university_description:
+        "Public university known for its strong research and creative arts programs.",
+    },
+    {
+      name: "Calligraphy & Letters Society",
+      university: "University of Iowa",
+      club_description:
+        "Focuses on calligraphy techniques, letter design, and handwriting improvement.",
+      university_description:
+        "Public university recognized for its commitment to academic research and artistic innovation.",
+    },
+    {
+      name: "Creative Calligraphy Workshop",
+      university: "University of South Carolina",
+      club_description:
+        "Hosts workshops on calligraphy styles, handwriting skills, and artistic design.",
+      university_description:
+        "Public university known for its strong focus on research and media studies.",
+    },
+    {
+      name: "Elegant Script Society",
+      university: "University of Tennessee",
+      club_description:
+        "Provides resources for mastering calligraphy techniques and improving handwriting.",
+      university_description:
+        "Public university recognized for its commitment to academic excellence and creative arts.",
+    },
+    {
+      name: "Calligraphy Club",
+      university: "University of Mississippi",
+      club_description:
+        "Offers classes and workshops on traditional and modern calligraphy techniques.",
+      university_description:
+        "Public university known for its strong academic and artistic programs.",
+    },
+    {
+      name: "Handwriting Society",
+      university: "Louisiana State University",
+      club_description:
+        "Focuses on enhancing handwriting skills and exploring calligraphy methods.",
+      university_description:
+        "Public university recognized for its commitment to research and media excellence.",
+    },
+    {
+      name: "Creative Letters Club",
+      university: "University of Alabama",
+      club_description:
+        "Provides training in artistic handwriting and calligraphy design.",
+      university_description:
+        "Public university known for its strong academic and creative arts programs.",
+    },
+    {
+      name: "Calligraphy Network",
+      university: "West Virginia University",
+      club_description:
+        "Hosts events on calligraphy techniques, letter design, and handwriting improvement.",
+      university_description:
+        "Public university recognized for its commitment to academic research and creative excellence.",
+    },
+    {
+      name: "Artistic Scripts Club",
+      university: "South Dakota State University",
+      club_description:
+        "Offers workshops on calligraphy and handwriting techniques.",
+      university_description:
+        "Public university known for its focus on academic and artistic success.",
+    },
+    {
+      name: "Elegant Letters Workshop",
+      university: "Montana State University",
+      club_description:
+        "Focuses on enhancing calligraphy skills and creative handwriting design.",
+      university_description:
+        "Public university recognized for its strong academic programs and artistic focus.",
+    },
+    {
+      name: "Calligraphy & Design Club",
+      university: "Idaho State University",
+      club_description:
+        "Provides resources and training in various calligraphy styles and handwriting techniques.",
+      university_description:
+        "Public university known for its commitment to academic and creative excellence.",
+    },
+    {
+      name: "Handwriting Arts Society",
+      university: "University of Alaska Anchorage",
+      club_description:
+        "Hosts events on artistic handwriting and calligraphy techniques.",
+      university_description:
+        "Public university recognized for its strong focus on academic research and creative arts.",
+    },
+    {
+      name: "Artistic Handwriting Club",
+      university: "University of Wyoming",
+      club_description:
+        "Offers classes and workshops on calligraphy and handwriting skills.",
+      university_description:
+        "Public university known for its commitment to academic and artistic excellence.",
+    },
+    {
+      name: "Calligraphy Workshop",
+      university: "University of Nebraska-Lincoln",
+      club_description:
+        "Focuses on traditional and modern calligraphy techniques and handwriting improvement.",
+      university_description:
+        "Public university recognized for its strong academic and creative programs.",
+    },
+    {
+      name: "Creative Calligraphy Club",
+      university: "University of Hawaii",
+      club_description:
+        "Provides resources for mastering calligraphy styles and artistic handwriting.",
+      university_description:
+        "Public university known for its innovative approach to arts and academic success.",
+    },
+    {
+      name: "Elegant Scripts Society",
+      university: "University of Central Florida",
+      club_description:
+        "Hosts workshops on calligraphy design, artistic handwriting, and creative lettering.",
+      university_description:
+        "Public university recognized for its commitment to research and media excellence.",
+    },
+    {
+      name: "Art of Letters Club",
+      university: "Georgia State University",
+      club_description:
+        "Offers training in various calligraphy techniques and handwriting improvement.",
+      university_description:
+        "Public university known for its strong focus on academic and creative excellence.",
+    },
+    {
+      name: "Calligraphy Society",
+      university: "Florida State University",
+      club_description:
+        "Focuses on artistic handwriting and calligraphy techniques.",
+      university_description:
+        "Public university recognized for its strong academic and media programs.",
+    },
+    {
+      name: "Creative Scripts Workshop",
+      university: "University of South Florida",
+      club_description:
+        "Provides workshops on calligraphy design, handwriting skills, and artistic techniques.",
+      university_description:
+        "Public university known for its commitment to research and creative arts.",
+    },
+    {
+      name: "Elegant Handwriting Club",
+      university: "University of New Mexico",
+      club_description:
+        "Hosts events on various calligraphy styles and handwriting improvement.",
+      university_description:
+        "Public university recognized for its strong academic programs and artistic focus.",
+    },
+    {
+      name: "Artistic Calligraphy Society",
+      university: "University of Vermont",
+      club_description:
+        "Offers training in calligraphy techniques and creative handwriting design.",
+      university_description:
+        "Public university known for its commitment to academic and artistic excellence.",
+    },
+    {
+      name: "Calligraphy & Ink Club",
+      university: "University of Rhode Island",
+      club_description:
+        "Provides resources for mastering calligraphy styles and artistic writing.",
+      university_description:
+        "Public university recognized for its strong academic and creative arts programs.",
+    },
+    {
+      name: "Handwriting & Design Society",
+      university: "University of Colorado Denver",
+      club_description:
+        "Focuses on artistic handwriting, calligraphy design, and creative techniques.",
+      university_description:
+        "Public university known for its innovative approach to arts and academic success.",
+    },
+    {
+      name: "Elegant Letters Club",
+      university: "University of Arizona",
+      club_description:
+        "Hosts workshops on calligraphy styles, handwriting improvement, and artistic design.",
+      university_description:
+        "Public university recognized for its commitment to research and creative excellence.",
+    },
+    {
+      name: "Creative Calligraphy Society",
+      university: "University of Nevada Las Vegas",
+      club_description:
+        "Provides training and resources for calligraphy and handwriting techniques.",
+      university_description:
+        "Public university known for its strong focus on academic and artistic programs.",
+    },
+    {
+      name: "Calligraphy Arts Club",
+      university: "University of Hawaii at Manoa",
+      club_description:
+        "Focuses on enhancing calligraphy skills and exploring creative handwriting styles.",
+      university_description:
+        "Public university recognized for its strong academic and artistic focus.",
+    },
+    {
+      name: "Art of Handwriting Society",
+      university: "University of Delaware",
+      club_description:
+        "Offers workshops on calligraphy and handwriting techniques.",
+      university_description:
+        "Public university known for its commitment to academic research and creative excellence.",
+    },
+    {
+      name: "Elegant Scripts Club",
+      university: "University of Montana",
+      club_description:
+        "Hosts events on artistic handwriting, calligraphy techniques, and creative lettering.",
+      university_description:
+        "Public university recognized for its strong focus on academic and artistic programs.",
+    },
+    {
+      name: "Calligraphy Workshop",
+      university: "University of South Dakota",
+      club_description:
+        "Provides training in calligraphy styles and handwriting improvement.",
+      university_description:
+        "Public university known for its commitment to academic and creative excellence.",
+    },
+    {
+      name: "Creative Letters Society",
+      university: "University of North Dakota",
+      club_description:
+        "Focuses on artistic handwriting, calligraphy design, and creative techniques.",
+      university_description:
+        "Public university recognized for its strong focus on academic and artistic programs.",
+    },
+    {
+      name: "Calligraphy & Handwriting Club",
+      university: "University of West Virginia",
+      club_description:
+        "Offers resources and workshops on calligraphy styles and handwriting skills.",
+      university_description:
+        "Public university known for its commitment to research and creative arts.",
+    },
+    {
+      name: "Artistic Scripts Club",
+      university: "University of Idaho",
+      club_description:
+        "Hosts events on calligraphy techniques, artistic handwriting, and creative design.",
+      university_description:
+        "Public university recognized for its strong focus on academic and artistic excellence.",
+    },
+  ],
+  puzzleAndEscapeRoomClubs: [
+    {
+      name: "Escape Room Enthusiasts",
+      university: "University of California Berkeley",
+      club_description:
+        "Organizes group visits to local escape rooms and hosts puzzle-solving events.",
+      university_description:
+        "Public university known for its diverse academic programs and active student community.",
+    },
+    {
+      name: "Puzzle Solvers Club",
+      university: "New York University",
+      club_description:
+        "Focuses on solving various types of puzzles and hosting escape room challenges.",
+      university_description:
+        "Private university recognized for its strong arts and design programs.",
+    },
+    {
+      name: "Escape Room Society",
+      university: "University of Texas at Austin",
+      club_description:
+        "Offers events and workshops related to escape rooms and puzzle-solving strategies.",
+      university_description:
+        "Public university known for its commitment to arts and humanities.",
+    },
+    {
+      name: "Puzzle Masters Club",
+      university: "University of Southern California",
+      club_description:
+        "Hosts puzzle-solving competitions and escape room adventures for members.",
+      university_description:
+        "Private university renowned for its arts and communication programs.",
+    },
+    {
+      name: "Escape Room Explorers",
+      university: "University of Michigan",
+      club_description:
+        "Provides opportunities for students to experience escape rooms and participate in puzzle-solving events.",
+      university_description:
+        "Public university known for its comprehensive academic and creative arts programs.",
+    },
+    {
+      name: "Puzzle & Escape Room Workshop",
+      university: "University of Florida",
+      club_description:
+        "Features workshops on escape room strategies and complex puzzle-solving techniques.",
+      university_description:
+        "Public university recognized for its focus on academic and artistic excellence.",
+    },
+    {
+      name: "Escape Room Club",
+      university: "University of Illinois Urbana-Champaign",
+      club_description:
+        "Organizes group visits to escape rooms and holds puzzle-solving competitions.",
+      university_description:
+        "Public university known for its strong research programs and creative arts focus.",
+    },
+    {
+      name: "Puzzle Enthusiasts Society",
+      university: "University of Washington",
+      club_description:
+        "Focuses on solving a wide range of puzzles and exploring escape room experiences.",
+      university_description:
+        "Public university recognized for its innovation in arts and research.",
+    },
+    {
+      name: "Escape Room Adventurers",
+      university: "University of Pennsylvania",
+      club_description:
+        "Hosts events and challenges related to escape rooms and intricate puzzles.",
+      university_description:
+        "Private Ivy League university known for its strong arts and humanities programs.",
+    },
+    {
+      name: "Puzzle Challenge Club",
+      university: "Columbia University",
+      club_description:
+        "Provides opportunities for students to engage in challenging puzzles and escape room activities.",
+      university_description:
+        "Private Ivy League university renowned for its academic and creative arts programs.",
+    },
+    {
+      name: "Escape Room Gamers",
+      university: "Harvard University",
+      club_description:
+        "Offers group activities related to escape rooms and advanced puzzle-solving.",
+      university_description:
+        "Private Ivy League university known for its excellence in arts and humanities.",
+    },
+    {
+      name: "Puzzle & Escape Club",
+      university: "Yale University",
+      club_description:
+        "Hosts workshops and events centered around puzzles and escape room challenges.",
+      university_description:
+        "Private Ivy League university recognized for its commitment to academic and creative excellence.",
+    },
+    {
+      name: "Escape Room Fanatics",
+      university: "Princeton University",
+      club_description:
+        "Focuses on exploring escape room experiences and solving complex puzzles.",
+      university_description:
+        "Private Ivy League university known for its strong focus on arts and research.",
+    },
+    {
+      name: "Puzzle Savants Club",
+      university: "University of California Los Angeles",
+      club_description:
+        "Organizes escape room visits and hosts events for puzzle enthusiasts.",
+      university_description:
+        "Public university known for its innovative approach to arts and humanities.",
+    },
+    {
+      name: "Escape Room Society",
+      university: "University of Southern California",
+      club_description:
+        "Features activities related to escape rooms and various types of puzzles.",
+      university_description:
+        "Private university renowned for its strong media and arts programs.",
+    },
+    {
+      name: "Puzzle & Escape Adventures",
+      university: "University of Miami",
+      club_description:
+        "Provides opportunities for students to participate in escape room challenges and solve complex puzzles.",
+      university_description:
+        "Private university known for its creative arts programs and academic excellence.",
+    },
+    {
+      name: "Escape Room Explorers Club",
+      university: "University of Colorado Boulder",
+      club_description:
+        "Hosts events and challenges related to escape rooms and puzzle-solving activities.",
+      university_description:
+        "Public university recognized for its focus on research and artistic innovation.",
+    },
+    {
+      name: "Puzzle Wizards Club",
+      university: "University of Oregon",
+      club_description:
+        "Offers workshops and events on solving puzzles and experiencing escape rooms.",
+      university_description:
+        "Public university known for its commitment to academic and artistic excellence.",
+    },
+    {
+      name: "Escape Room Network",
+      university: "University of Connecticut",
+      club_description:
+        "Focuses on organizing escape room adventures and solving intricate puzzles.",
+      university_description:
+        "Public university recognized for its strong academic and creative arts programs.",
+    },
+    {
+      name: "Puzzle Solvers Society",
+      university: "University of Maryland",
+      club_description:
+        "Provides opportunities for students to participate in puzzle-solving events and escape room challenges.",
+      university_description:
+        "Public university known for its commitment to research and media excellence.",
+    },
+    {
+      name: "Escape Room Enthusiasts Club",
+      university: "University of Virginia",
+      club_description:
+        "Hosts events focused on escape rooms and challenging puzzles.",
+      university_description:
+        "Public university recognized for its strong focus on arts and academic research.",
+    },
+    {
+      name: "Puzzle & Escape Masters",
+      university: "University of Pittsburgh",
+      club_description:
+        "Offers activities and workshops related to solving puzzles and exploring escape rooms.",
+      university_description:
+        "Public university known for its strong academic and artistic programs.",
+    },
+    {
+      name: "Escape Room Society Club",
+      university: "Ohio State University",
+      club_description:
+        "Focuses on organizing group visits to escape rooms and solving complex puzzles.",
+      university_description:
+        "Public university recognized for its focus on research and creative arts.",
+    },
+    {
+      name: "Puzzle Adventure Club",
+      university: "Michigan State University",
+      club_description:
+        "Provides opportunities for students to engage in puzzle-solving activities and escape room challenges.",
+      university_description:
+        "Public university known for its strong academic and media programs.",
+    },
+    {
+      name: "Escape Room Artisans",
+      university: "Indiana University Bloomington",
+      club_description:
+        "Hosts workshops and events centered around escape rooms and intricate puzzles.",
+      university_description:
+        "Public university recognized for its commitment to academic and artistic excellence.",
+    },
+    {
+      name: "Puzzle Explorers Club",
+      university: "University of Kansas",
+      club_description:
+        "Offers events and challenges related to puzzles and escape rooms.",
+      university_description:
+        "Public university known for its strong research and creative arts programs.",
+    },
+    {
+      name: "Escape Room Enthusiasts",
+      university: "University of Iowa",
+      club_description:
+        "Focuses on solving puzzles and experiencing escape rooms through organized events.",
+      university_description:
+        "Public university recognized for its commitment to academic research and artistic innovation.",
+    },
+    {
+      name: "Puzzle & Escape Club",
+      university: "University of South Carolina",
+      club_description:
+        "Provides opportunities for students to participate in escape room challenges and puzzle-solving events.",
+      university_description:
+        "Public university known for its strong focus on research and creative arts.",
+    },
+    {
+      name: "Escape Room & Puzzle Society",
+      university: "University of Tennessee",
+      club_description:
+        "Hosts events focused on puzzle-solving and escape room experiences.",
+      university_description:
+        "Public university recognized for its commitment to academic excellence and creative arts.",
+    },
+    {
+      name: "Puzzle Club",
+      university: "University of Mississippi",
+      club_description:
+        "Offers workshops and events on solving various puzzles and participating in escape room activities.",
+      university_description:
+        "Public university known for its strong academic and artistic programs.",
+    },
+    {
+      name: "Escape Room Society",
+      university: "Louisiana State University",
+      club_description:
+        "Focuses on organizing group visits to escape rooms and solving complex puzzles.",
+      university_description:
+        "Public university recognized for its commitment to research and media excellence.",
+    },
+    {
+      name: "Puzzle Enthusiasts Club",
+      university: "University of Alabama",
+      club_description:
+        "Provides resources and events related to puzzles and escape room challenges.",
+      university_description:
+        "Public university known for its strong academic and creative arts programs.",
+    },
+    {
+      name: "Escape Room Club",
+      university: "West Virginia University",
+      club_description:
+        "Hosts workshops and events focused on escape rooms and intricate puzzles.",
+      university_description:
+        "Public university recognized for its commitment to academic and artistic excellence.",
+    },
+    {
+      name: "Puzzle Adventures Society",
+      university: "South Dakota State University",
+      club_description:
+        "Offers opportunities for students to engage in puzzle-solving activities and escape room experiences.",
+      university_description:
+        "Public university known for its focus on academic and artistic success.",
+    },
+    {
+      name: "Escape Room Network",
+      university: "Montana State University",
+      club_description:
+        "Focuses on organizing escape room adventures and solving complex puzzles.",
+      university_description:
+        "Public university recognized for its strong academic programs and artistic focus.",
+    },
+    {
+      name: "Puzzle & Escape Workshop",
+      university: "Idaho State University",
+      club_description:
+        "Provides resources and events for solving puzzles and experiencing escape rooms.",
+      university_description:
+        "Public university known for its commitment to academic and creative excellence.",
+    },
+    {
+      name: "Escape Room Club",
+      university: "University of Alaska Anchorage",
+      club_description:
+        "Hosts events and challenges related to escape rooms and puzzle-solving activities.",
+      university_description:
+        "Public university recognized for its strong focus on academic research and creative arts.",
+    },
+    {
+      name: "Puzzle Solvers Society",
+      university: "University of Wyoming",
+      club_description:
+        "Offers workshops and events on solving various puzzles and engaging in escape room experiences.",
+      university_description:
+        "Public university known for its commitment to academic and artistic excellence.",
+    },
+    {
+      name: "Escape Room Enthusiasts Club",
+      university: "University of Nebraska-Lincoln",
+      club_description:
+        "Focuses on organizing escape room visits and solving intricate puzzles.",
+      university_description:
+        "Public university recognized for its strong academic and creative programs.",
+    },
+    {
+      name: "Puzzle Masters Society",
+      university: "University of Maine",
+      club_description:
+        "Provides opportunities for students to participate in puzzle-solving events and escape room challenges.",
+      university_description:
+        "Public university known for its strong focus on research and creative arts.",
+    },
+    {
+      name: "Escape Room Explorers Club",
+      university: "University of New Hampshire",
+      club_description:
+        "Hosts workshops and events centered around escape rooms and puzzle-solving activities.",
+      university_description:
+        "Public university recognized for its commitment to academic and creative excellence.",
+    },
+    {
+      name: "Puzzle Solvers Network",
+      university: "University of Vermont",
+      club_description:
+        "Offers events and challenges related to puzzles and escape rooms.",
+      university_description:
+        "Public university known for its strong focus on academic research and artistic innovation.",
+    },
+  ],
+  carClubs: [
+    {
+      name: "Speed Demons Club",
+      university: "University of California Berkeley",
+      club_description:
+        "Hosts car shows and racing events, and organizes trips to car-related expos.",
+      university_description:
+        "Public university known for its diverse academic programs and active student community.",
+    },
+    {
+      name: "Classic Car Society",
+      university: "New York University",
+      club_description:
+        "Focuses on restoring and showcasing classic cars, and organizes meetups and rallies.",
+      university_description:
+        "Private university recognized for its strong arts and design programs.",
+    },
+    {
+      name: "Auto Enthusiasts Club",
+      university: "University of Texas at Austin",
+      club_description:
+        "Offers events for car enthusiasts, including car meets, workshops, and track days.",
+      university_description:
+        "Public university known for its commitment to arts and humanities.",
+    },
+    {
+      name: "Motorheads Club",
+      university: "University of Southern California",
+      club_description:
+        "Hosts car shows, maintenance workshops, and organizes trips to car racing events.",
+      university_description:
+        "Private university renowned for its arts and communication programs.",
+    },
+    {
+      name: "Exotic Car Club",
+      university: "University of Michigan",
+      club_description:
+        "Provides opportunities to view and discuss exotic cars, and organizes exclusive car events.",
+      university_description:
+        "Public university known for its comprehensive academic and creative arts programs.",
+    },
+    {
+      name: "Performance Car Group",
+      university: "University of Florida",
+      club_description:
+        "Focuses on high-performance cars and organizes track days and performance workshops.",
+      university_description:
+        "Public university recognized for its focus on academic and artistic excellence.",
+    },
+    {
+      name: "Auto Restoration Club",
+      university: "University of Illinois Urbana-Champaign",
+      club_description:
+        "Features events and workshops on restoring classic and vintage cars.",
+      university_description:
+        "Public university known for its strong research programs and creative arts focus.",
+    },
+    {
+      name: "Sports Car Society",
+      university: "University of Washington",
+      club_description:
+        "Hosts events and shows for sports car enthusiasts, including test drives and meetups.",
+      university_description:
+        "Public university recognized for its innovation in arts and research.",
+    },
+    {
+      name: "Car Culture Club",
+      university: "University of Pennsylvania",
+      club_description:
+        "Focuses on car culture, including car shows and discussions about automotive trends.",
+      university_description:
+        "Private Ivy League university known for its strong arts and humanities programs.",
+    },
+    {
+      name: "Auto Racing Club",
+      university: "Columbia University",
+      club_description:
+        "Provides opportunities to participate in and watch racing events, and organizes car racing workshops.",
+      university_description:
+        "Private Ivy League university renowned for its academic and creative arts programs.",
+    },
+    {
+      name: "Custom Cars Club",
+      university: "Harvard University",
+      club_description:
+        "Offers workshops on customizing cars and hosts custom car shows and exhibitions.",
+      university_description:
+        "Private Ivy League university known for its excellence in arts and humanities.",
+    },
+    {
+      name: "Vehicle Enthusiasts Club",
+      university: "Yale University",
+      club_description:
+        "Hosts events and meetups focused on various types of vehicles and car-related activities.",
+      university_description:
+        "Private Ivy League university recognized for its commitment to academic and creative excellence.",
+    },
+    {
+      name: "Luxury Car Club",
+      university: "Princeton University",
+      club_description:
+        "Focuses on luxury cars and organizes exclusive events and networking opportunities for car enthusiasts.",
+      university_description:
+        "Private Ivy League university known for its strong focus on arts and research.",
+    },
+    {
+      name: "Tuning and Modding Club",
+      university: "University of California Los Angeles",
+      club_description:
+        "Provides workshops and events related to car tuning and modifications.",
+      university_description:
+        "Public university known for its innovative approach to arts and humanities.",
+    },
+    {
+      name: "Auto Design Society",
+      university: "University of Southern California",
+      club_description:
+        "Focuses on car design and customization, and hosts design workshops and exhibitions.",
+      university_description:
+        "Private university renowned for its strong media and arts programs.",
+    },
+    {
+      name: "Car Meetups Club",
+      university: "University of Miami",
+      club_description:
+        "Offers events for car enthusiasts to meet and discuss their passion for cars.",
+      university_description:
+        "Private university known for its creative arts programs and academic excellence.",
+    },
+    {
+      name: "Classic Car Collectors",
+      university: "University of Colorado Boulder",
+      club_description:
+        "Hosts meetups and exhibitions focused on classic car collections and restorations.",
+      university_description:
+        "Public university recognized for its focus on research and artistic innovation.",
+    },
+    {
+      name: "High-Performance Auto Club",
+      university: "University of Oregon",
+      club_description:
+        "Features events and workshops related to high-performance cars and modifications.",
+      university_description:
+        "Public university known for its commitment to academic and artistic excellence.",
+    },
+    {
+      name: "Auto Enthusiasts Network",
+      university: "University of Connecticut",
+      club_description:
+        "Focuses on car culture and hosts car shows, track days, and discussions.",
+      university_description:
+        "Public university recognized for its strong academic and creative arts programs.",
+    },
+    {
+      name: "Vehicle Restoration Club",
+      university: "University of Maryland",
+      club_description:
+        "Offers workshops on vehicle restoration and organizes events for car restorers.",
+      university_description:
+        "Public university known for its commitment to research and media excellence.",
+    },
+    {
+      name: "Car Show Society",
+      university: "University of Virginia",
+      club_description:
+        "Hosts car shows and exhibitions, and organizes trips to automotive events.",
+      university_description:
+        "Public university recognized for its strong focus on arts and academic research.",
+    },
+    {
+      name: "Modified Car Club",
+      university: "University of Pittsburgh",
+      club_description:
+        "Focuses on modified cars and hosts events and workshops related to car modifications.",
+      university_description:
+        "Public university known for its strong academic and artistic programs.",
+    },
+    {
+      name: "Automotive Innovation Club",
+      university: "Ohio State University",
+      club_description:
+        "Provides opportunities for students to engage in automotive innovation and technology.",
+      university_description:
+        "Public university recognized for its focus on research and creative arts.",
+    },
+    {
+      name: "Car Culture Network",
+      university: "Michigan State University",
+      club_description:
+        "Offers events and meetups for car enthusiasts to share their passion and knowledge.",
+      university_description:
+        "Public university known for its strong academic and media programs.",
+    },
+    {
+      name: "Custom Car Creations",
+      university: "Indiana University Bloomington",
+      club_description:
+        "Focuses on creating custom cars and hosting exhibitions and design workshops.",
+      university_description:
+        "Public university recognized for its commitment to academic and artistic excellence.",
+    },
+    {
+      name: "Automotive Enthusiasts Club",
+      university: "University of Kansas",
+      club_description:
+        "Hosts events and discussions centered around various types of cars and automotive trends.",
+      university_description:
+        "Public university known for its strong research and creative arts programs.",
+    },
+    {
+      name: "Luxury Auto Club",
+      university: "University of Iowa",
+      club_description:
+        "Offers exclusive events and shows related to luxury cars and automotive innovations.",
+      university_description:
+        "Public university recognized for its commitment to academic research and artistic innovation.",
+    },
+    {
+      name: "Performance Car Enthusiasts",
+      university: "University of South Carolina",
+      club_description:
+        "Focuses on performance cars and hosts events like track days and tuning workshops.",
+      university_description:
+        "Public university known for its strong focus on research and creative arts.",
+    },
+    {
+      name: "Exotic Vehicle Club",
+      university: "University of Tennessee",
+      club_description:
+        "Provides opportunities to view and discuss exotic vehicles through organized events.",
+      university_description:
+        "Public university recognized for its commitment to academic excellence and creative arts.",
+    },
+    {
+      name: "Car Restoration Network",
+      university: "University of Mississippi",
+      club_description:
+        "Hosts workshops and events focused on car restoration and maintenance.",
+      university_description:
+        "Public university known for its strong academic and artistic programs.",
+    },
+    {
+      name: "Auto Design Club",
+      university: "Louisiana State University",
+      club_description:
+        "Offers events and workshops related to car design and customization.",
+      university_description:
+        "Public university recognized for its commitment to research and media excellence.",
+    },
+    {
+      name: "Vehicle Modification Society",
+      university: "University of Alabama",
+      club_description:
+        "Focuses on vehicle modifications and hosts events and workshops related to car tuning.",
+      university_description:
+        "Public university known for its strong academic and creative arts programs.",
+    },
+    {
+      name: "Car Enthusiasts Society",
+      university: "West Virginia University",
+      club_description:
+        "Hosts events and meetups for car enthusiasts, including shows and racing events.",
+      university_description:
+        "Public university recognized for its commitment to academic and artistic excellence.",
+    },
+    {
+      name: "Modified Vehicles Club",
+      university: "South Dakota State University",
+      club_description:
+        "Provides opportunities for students to engage in vehicle modifications and attend related events.",
+      university_description:
+        "Public university known for its focus on academic and artistic success.",
+    },
+    {
+      name: "Auto Innovations Club",
+      university: "Montana State University",
+      club_description:
+        "Focuses on automotive innovations and organizes events and discussions on car technology.",
+      university_description:
+        "Public university recognized for its strong academic programs and artistic focus.",
+    },
+    {
+      name: "Car Show Enthusiasts",
+      university: "Idaho State University",
+      club_description:
+        "Hosts car shows and exhibitions, and provides opportunities for networking among car enthusiasts.",
+      university_description:
+        "Public university known for its commitment to academic and creative excellence.",
+    },
+    {
+      name: "Auto Restoration Society",
+      university: "University of Alaska Anchorage",
+      club_description:
+        "Features events and workshops on restoring classic and vintage cars.",
+      university_description:
+        "Public university recognized for its strong focus on academic research and creative arts.",
+    },
+    {
+      name: "Performance Car Network",
+      university: "University of Wyoming",
+      club_description:
+        "Offers opportunities for students to engage in high-performance car events and discussions.",
+      university_description:
+        "Public university known for its commitment to academic and artistic excellence.",
+    },
+    {
+      name: "Luxury Auto Enthusiasts",
+      university: "University of Nebraska-Lincoln",
+      club_description:
+        "Focuses on luxury vehicles and hosts exclusive events and shows.",
+      university_description:
+        "Public university recognized for its strong academic and creative arts programs.",
+    },
+    {
+      name: "Vehicle Customization Club",
+      university: "University of Arkansas",
+      club_description:
+        "Provides workshops and events related to vehicle customization and tuning.",
+      university_description:
+        "Public university known for its commitment to academic and artistic success.",
+    },
+    {
+      name: "Classic Vehicle Network",
+      university: "University of South Dakota",
+      club_description:
+        "Hosts events and meetups for classic vehicle enthusiasts and restorers.",
+      university_description:
+        "Public university recognized for its strong focus on academic and creative arts.",
+    },
+    {
+      name: "High-Performance Auto Enthusiasts",
+      university: "University of North Dakota",
+      club_description:
+        "Focuses on high-performance cars and offers events and workshops related to car modifications.",
+      university_description:
+        "Public university known for its commitment to research and artistic excellence.",
+    },
+    {
+      name: "Auto Design and Restoration Club",
+      university: "University of Montana",
+      club_description:
+        "Offers events and workshops on car design and restoration, including exhibitions and meetups.",
+      university_description:
+        "Public university recognized for its strong academic and creative arts programs.",
+    },
+    {
+      name: "Custom Cars Network",
+      university: "University of Hawaii",
+      club_description:
+        "Hosts events and workshops focused on customizing and modifying cars.",
+      university_description:
+        "Public university known for its commitment to academic and creative excellence.",
+    },
+    {
+      name: "Vehicle Enthusiasts Society",
+      university: "University of Guam",
+      club_description:
+        "Provides opportunities for students to engage in vehicle-related activities and events.",
+      university_description:
+        "Public university recognized for its strong focus on research and creative arts.",
+    },
+    {
+      name: "Luxury Car Network",
+      university: "University of Puerto Rico",
+      club_description:
+        "Offers exclusive events and meetups for luxury car enthusiasts.",
+      university_description:
+        "Public university known for its commitment to academic and artistic excellence.",
+    },
+    {
+      name: "Classic Auto Club",
+      university: "University of the Virgin Islands",
+      club_description:
+        "Focuses on classic cars and hosts events and exhibitions for car collectors.",
+      university_description:
+        "Public university recognized for its strong academic and creative arts programs.",
+    },
+    {
+      name: "Performance Vehicles Club",
+      university: "University of Arizona",
+      club_description:
+        "Hosts events and workshops focused on performance vehicles and modifications.",
+      university_description:
+        "Public university known for its commitment to academic and artistic excellence.",
+    },
+    {
+      name: "Auto Restoration Club",
+      university: "University of Nevada, Reno",
+      club_description:
+        "Provides opportunities for students to participate in car restoration and related events.",
+      university_description:
+        "Public university recognized for its strong focus on research and creative arts.",
+    },
+    {
+      name: "Car Culture Network",
+      university: "University of Oregon State",
+      club_description:
+        "Hosts events and discussions related to various aspects of car culture and automotive trends.",
+      university_description:
+        "Public university known for its commitment to academic and creative success.",
+    },
+    {
+      name: "Customized Vehicles Society",
+      university: "University of New Mexico",
+      club_description:
+        "Offers workshops and events on vehicle customization and tuning.",
+      university_description:
+        "Public university recognized for its strong academic and creative arts programs.",
+    },
+    {
+      name: "Exotic Car Enthusiasts Club",
+      university: "University of Colorado Denver",
+      club_description:
+        "Focuses on exotic cars and organizes exclusive events and meetups for enthusiasts.",
+      university_description:
+        "Public university known for its commitment to academic and artistic excellence.",
+    },
+    {
+      name: "Classic Car Collectors Society",
+      university: "University of Oklahoma",
+      club_description:
+        "Hosts events and exhibitions for classic car collectors and restorers.",
+      university_description:
+        "Public university recognized for its strong focus on academic and creative arts.",
+    },
+    {
+      name: "Auto Design Club",
+      university: "University of North Carolina Charlotte",
+      club_description:
+        "Provides opportunities for students to engage in car design and customization.",
+      university_description:
+        "Public university known for its commitment to academic and creative excellence.",
+    },
+    {
+      name: "High-Performance Auto Enthusiasts",
+      university: "University of Central Florida",
+      club_description:
+        "Offers workshops and events focused on high-performance cars and modifications.",
+      university_description:
+        "Public university recognized for its strong focus on research and creative arts.",
+    },
+    {
+      name: "Vehicle Customization Club",
+      university: "University of South Florida",
+      club_description:
+        "Focuses on vehicle customization and organizes related events and workshops.",
+      university_description:
+        "Public university known for its commitment to academic and artistic success.",
+    },
+    {
+      name: "Auto Enthusiasts Society",
+      university: "University of Texas Dallas",
+      club_description:
+        "Hosts events and meetups centered around various types of cars and automotive trends.",
+      university_description:
+        "Public university recognized for its strong academic and creative arts programs.",
+    },
+  ],
+  recyclingClubs: [
+    {
+      name: "Eco Warriors Club",
+      university: "University of California Berkeley",
+      club_description:
+        "Organizes recycling drives and awareness campaigns, and collaborates on sustainability projects.",
+      university_description:
+        "Public university known for its diverse academic programs and active student community.",
+    },
+    {
+      name: "Green Earth Society",
+      university: "New York University",
+      club_description:
+        "Focuses on recycling initiatives and environmental education through workshops and campus events.",
+      university_description:
+        "Private university recognized for its strong arts and design programs.",
+    },
+    {
+      name: "Recycle Revolution",
+      university: "University of Texas at Austin",
+      club_description:
+        "Hosts recycling drives, educational seminars, and collaborates with local businesses for sustainability.",
+      university_description:
+        "Public university known for its commitment to arts and humanities.",
+    },
+    {
+      name: "Sustainable Campus Club",
+      university: "University of Southern California",
+      club_description:
+        "Promotes recycling and waste reduction through campus-wide initiatives and community outreach.",
+      university_description:
+        "Private university renowned for its arts and communication programs.",
+    },
+    {
+      name: "Eco-Friendly Initiative",
+      university: "University of Michigan",
+      club_description:
+        "Focuses on campus recycling programs, environmental education, and partnerships with local environmental organizations.",
+      university_description:
+        "Public university known for its comprehensive academic and creative arts programs.",
+    },
+    {
+      name: "Green Campus Collective",
+      university: "University of Florida",
+      club_description:
+        "Organizes recycling events and advocates for sustainability practices within the campus and community.",
+      university_description:
+        "Public university recognized for its focus on academic and artistic excellence.",
+    },
+    {
+      name: "Recycling Advocates",
+      university: "University of Illinois Urbana-Champaign",
+      club_description:
+        "Offers workshops on recycling practices, coordinates recycling drives, and promotes sustainable living.",
+      university_description:
+        "Public university known for its strong research programs and creative arts focus.",
+    },
+    {
+      name: "Eco-Conscious Club",
+      university: "University of Washington",
+      club_description:
+        "Hosts educational events on recycling and sustainability, and partners with local businesses to promote eco-friendly practices.",
+      university_description:
+        "Public university recognized for its innovation in arts and research.",
+    },
+    {
+      name: "Campus Recycling Network",
+      university: "University of Pennsylvania",
+      club_description:
+        "Focuses on recycling initiatives, sustainability education, and organizing campus-wide recycling drives.",
+      university_description:
+        "Private Ivy League university known for its strong arts and humanities programs.",
+    },
+    {
+      name: "Environmental Sustainability Club",
+      university: "Columbia University",
+      club_description:
+        "Provides opportunities for students to engage in recycling projects, environmental advocacy, and campus sustainability initiatives.",
+      university_description:
+        "Private Ivy League university renowned for its academic and creative arts programs.",
+    },
+    {
+      name: "Recycling and Waste Management Society",
+      university: "Harvard University",
+      club_description:
+        "Focuses on recycling programs, waste reduction, and environmental education through campus events and workshops.",
+      university_description:
+        "Private Ivy League university known for its excellence in arts and humanities.",
+    },
+    {
+      name: "Eco-Action Group",
+      university: "Yale University",
+      club_description:
+        "Offers events and initiatives focused on recycling, waste reduction, and environmental sustainability.",
+      university_description:
+        "Private Ivy League university recognized for its commitment to academic and creative excellence.",
+    },
+    {
+      name: "Green Initiative Club",
+      university: "Princeton University",
+      club_description:
+        "Hosts recycling drives, sustainability workshops, and promotes environmental awareness on campus.",
+      university_description:
+        "Private Ivy League university known for its strong focus on arts and research.",
+    },
+    {
+      name: "Recycling Enthusiasts Network",
+      university: "University of California Los Angeles",
+      club_description:
+        "Focuses on organizing recycling events, educating the campus about sustainability, and collaborating with local organizations.",
+      university_description:
+        "Public university known for its innovative approach to arts and humanities.",
+    },
+    {
+      name: "Sustainable Living Society",
+      university: "University of Southern California",
+      club_description:
+        "Offers workshops and events related to recycling and sustainability, and promotes eco-friendly practices.",
+      university_description:
+        "Private university renowned for its strong media and arts programs.",
+    },
+    {
+      name: "Campus Green Club",
+      university: "University of Miami",
+      club_description:
+        "Organizes recycling drives, campus cleanups, and sustainability awareness events.",
+      university_description:
+        "Private university known for its creative arts programs and academic excellence.",
+    },
+    {
+      name: "Eco-Friendly Collective",
+      university: "University of Colorado Boulder",
+      club_description:
+        "Hosts events and educational seminars on recycling, waste management, and sustainability practices.",
+      university_description:
+        "Public university recognized for its focus on research and artistic innovation.",
+    },
+    {
+      name: "Recycling Awareness Club",
+      university: "University of Oregon",
+      club_description:
+        "Focuses on promoting recycling and sustainability through campus-wide initiatives and community outreach.",
+      university_description:
+        "Public university known for its commitment to academic and artistic excellence.",
+    },
+    {
+      name: "Environmental Action Network",
+      university: "University of Connecticut",
+      club_description:
+        "Offers workshops on recycling and sustainability, and collaborates on environmental projects with local organizations.",
+      university_description:
+        "Public university recognized for its strong academic and creative arts programs.",
+    },
+    {
+      name: "Recycling and Sustainability Group",
+      university: "University of Maryland",
+      club_description:
+        "Provides opportunities for students to engage in recycling initiatives and environmental advocacy.",
+      university_description:
+        "Public university known for its commitment to research and media excellence.",
+    },
+    {
+      name: "Green Campus Coalition",
+      university: "University of Virginia",
+      club_description:
+        "Hosts events and drives focused on recycling and sustainable living, and promotes eco-friendly practices.",
+      university_description:
+        "Public university recognized for its strong focus on arts and academic research.",
+    },
+    {
+      name: "Recycling Outreach Club",
+      university: "University of Pittsburgh",
+      club_description:
+        "Organizes recycling drives, educational events, and collaborates with local businesses for sustainability.",
+      university_description:
+        "Public university known for its strong academic and artistic programs.",
+    },
+    {
+      name: "Eco-Sustainability Club",
+      university: "Ohio State University",
+      club_description:
+        "Focuses on recycling initiatives, sustainability education, and campus-wide environmental projects.",
+      university_description:
+        "Public university recognized for its focus on research and creative arts.",
+    },
+    {
+      name: "Campus Green Initiative",
+      university: "Michigan State University",
+      club_description:
+        "Hosts recycling events, workshops, and discussions on environmental sustainability.",
+      university_description:
+        "Public university known for its strong academic and media programs.",
+    },
+    {
+      name: "Recycling Projects Society",
+      university: "Indiana University Bloomington",
+      club_description:
+        "Offers workshops and initiatives focused on recycling and sustainability, and engages in community outreach.",
+      university_description:
+        "Public university recognized for its commitment to academic and artistic excellence.",
+    },
+    {
+      name: "Eco-Friendly Campus Club",
+      university: "University of Kansas",
+      club_description:
+        "Organizes recycling drives, educational seminars, and sustainability initiatives on campus.",
+      university_description:
+        "Public university known for its strong research and creative arts programs.",
+    },
+    {
+      name: "Green Campus Advocates",
+      university: "University of Iowa",
+      club_description:
+        "Focuses on recycling programs, environmental education, and organizing sustainability events.",
+      university_description:
+        "Public university recognized for its commitment to academic research and artistic innovation.",
+    },
+    {
+      name: "Recycling and Sustainability Advocates",
+      university: "University of South Carolina",
+      club_description:
+        "Hosts recycling drives, educational workshops, and promotes eco-friendly practices on campus.",
+      university_description:
+        "Public university known for its strong focus on research and creative arts.",
+    },
+    {
+      name: "Campus Eco-Action Network",
+      university: "University of Tennessee",
+      club_description:
+        "Offers events and initiatives related to recycling, waste management, and sustainability education.",
+      university_description:
+        "Public university recognized for its commitment to academic and artistic excellence.",
+    },
+    {
+      name: "Sustainable Living Initiative",
+      university: "Louisiana State University",
+      club_description:
+        "Focuses on recycling and sustainability through campus-wide projects and community outreach.",
+      university_description:
+        "Public university known for its commitment to research and media excellence.",
+    },
+    {
+      name: "Recycling Champions Club",
+      university: "University of Alabama",
+      club_description:
+        "Hosts recycling events, workshops, and educational seminars focused on environmental sustainability.",
+      university_description:
+        "Public university recognized for its strong academic and creative arts programs.",
+    },
+    {
+      name: "Eco-Conscious Campus Club",
+      university: "West Virginia University",
+      club_description:
+        "Organizes events and drives focused on recycling, waste reduction, and sustainability.",
+      university_description:
+        "Public university known for its commitment to academic and artistic excellence.",
+    },
+    {
+      name: "Recycling Innovation Club",
+      university: "South Dakota State University",
+      club_description:
+        "Offers workshops and initiatives related to innovative recycling practices and sustainability education.",
+      university_description:
+        "Public university recognized for its focus on academic and artistic success.",
+    },
+    {
+      name: "Environmental Recycling Society",
+      university: "Montana State University",
+      club_description:
+        "Focuses on recycling and environmental advocacy through events, seminars, and community outreach.",
+      university_description:
+        "Public university known for its strong academic programs and artistic focus.",
+    },
+    {
+      name: "Campus Green Initiative Network",
+      university: "Idaho State University",
+      club_description:
+        "Hosts recycling drives, workshops, and sustainability events to promote eco-friendly practices.",
+      university_description:
+        "Public university recognized for its commitment to academic and creative excellence.",
+    },
+    {
+      name: "Eco-Friendly Advocates Club",
+      university: "University of Alaska Anchorage",
+      club_description:
+        "Focuses on recycling initiatives and environmental sustainability through campus and community events.",
+      university_description:
+        "Public university known for its strong focus on academic research and creative arts.",
+    },
+    {
+      name: "Recycling Education Club",
+      university: "University of Wyoming",
+      club_description:
+        "Offers educational events and workshops on recycling and sustainability, and promotes campus-wide initiatives.",
+      university_description:
+        "Public university recognized for its commitment to academic and artistic excellence.",
+    },
+    {
+      name: "Sustainable Recycling Society",
+      university: "University of Nebraska-Lincoln",
+      club_description:
+        "Hosts recycling drives and sustainability workshops, and engages in environmental advocacy.",
+      university_description:
+        "Public university known for its focus on research and creative arts.",
+    },
+    {
+      name: "Green Recycling Network",
+      university: "University of Oklahoma",
+      club_description:
+        "Organizes recycling events, educational seminars, and sustainability initiatives on campus.",
+      university_description:
+        "Public university recognized for its strong academic and artistic programs.",
+    },
+    {
+      name: "Campus Sustainability Club",
+      university: "University of Missouri",
+      club_description:
+        "Focuses on recycling and environmental sustainability through workshops, events, and community outreach.",
+      university_description:
+        "Public university known for its commitment to academic and creative success.",
+    },
+    {
+      name: "Eco-Action Recycling Club",
+      university: "University of Arkansas",
+      club_description:
+        "Offers events and initiatives focused on recycling practices and sustainability education.",
+      university_description:
+        "Public university recognized for its strong academic and artistic focus.",
+    },
+    {
+      name: "Green Initiative Society",
+      university: "University of Montana",
+      club_description:
+        "Hosts recycling drives, educational workshops, and sustainability events on campus.",
+      university_description:
+        "Public university known for its commitment to research and creative arts.",
+    },
+    {
+      name: "Recycling Outreach Network",
+      university: "University of Hawaii",
+      club_description:
+        "Focuses on recycling initiatives, environmental advocacy, and campus sustainability projects.",
+      university_description:
+        "Public university recognized for its strong academic and creative arts programs.",
+    },
+  ],
 };
 
 export const universityEnvironmentData = {

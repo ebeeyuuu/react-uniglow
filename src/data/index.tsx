@@ -13987,15 +13987,3016 @@ export const clubExamples = {
         "Public university with a strong emphasis on fashion and creative industries.",
     },
   ],
-  publicSpeakingAndCommunicationClubs: [],
-  socialJusticeAndAdvocacyClubs: [],
-  astronomyClubs: [],
-  meditationAndMindfulnessClubs: [],
-  peerTutoringClubs: [],
-  ethicsAndPhilosophyClubs: [],
-  travelClubs: [],
-  cosplayAndAnimeClubs: [],
-  diyclubs: [],
+  publicSpeakingAndCommunicationClubs: [
+    {
+      name: "University of Texas Speech and Debate Society",
+      university: "University of Texas at Austin",
+      club_description:
+        "Focuses on public speaking, debate, and effective communication, hosting regular events and competitions.",
+      university_description:
+        "Public university with a strong tradition in speech and debate activities.",
+    },
+    {
+      name: "University of California Berkeley Public Speaking Club",
+      university: "University of California Berkeley",
+      club_description:
+        "Encourages students to develop public speaking skills through workshops, practice sessions, and competitions.",
+      university_description:
+        "Public university known for fostering leadership and communication skills.",
+    },
+    {
+      name: "University of Michigan Toastmasters",
+      university: "University of Michigan",
+      club_description:
+        "Part of the international Toastmasters organization, helping students improve public speaking and leadership skills.",
+      university_description:
+        "Public university with a focus on developing well-rounded communicators.",
+    },
+    {
+      name: "University of Florida Gators Speech Club",
+      university: "University of Florida",
+      club_description:
+        "Focuses on speechwriting, delivery, and persuasion, preparing students for both academic and professional communication.",
+      university_description:
+        "Public university with active student participation in public speaking and debate.",
+    },
+    {
+      name: "University of Illinois Communication Club",
+      university: "University of Illinois Urbana-Champaign",
+      club_description:
+        "Develops students’ verbal and non-verbal communication skills through interactive workshops and speech events.",
+      university_description:
+        "Public university with a strong focus on leadership and effective communication.",
+    },
+    {
+      name: "University of North Carolina Public Speaking Society",
+      university: "University of North Carolina at Chapel Hill",
+      club_description:
+        "Engages students in public speaking practice, debate, and effective communication techniques.",
+      university_description:
+        "Public university known for its commitment to leadership and communication development.",
+    },
+    {
+      name: "Ohio State University Orators",
+      university: "Ohio State University",
+      club_description:
+        "Encourages students to refine their public speaking and oratory skills through practice sessions and competitions.",
+      university_description:
+        "Public university with a strong tradition of public speaking and debate.",
+    },
+    {
+      name: "University of Washington Speech and Communication Club",
+      university: "University of Washington",
+      club_description:
+        "Focuses on developing effective communication strategies for academic and professional settings.",
+      university_description:
+        "Public university with a growing focus on communication skills and leadership.",
+    },
+    {
+      name: "Arizona State University Debate and Public Speaking Club",
+      university: "Arizona State University",
+      club_description:
+        "Combines debate and public speaking skills with a focus on persuasive communication and rhetoric.",
+      university_description:
+        "Public university known for fostering debate and communication skills.",
+    },
+    {
+      name: "University of Minnesota Public Speaking and Debate Society",
+      university: "University of Minnesota",
+      club_description:
+        "Encourages students to develop and refine their public speaking and debate skills through workshops and competitions.",
+      university_description:
+        "Public university with a focus on effective communication and leadership.",
+    },
+    {
+      name: "University of Georgia Public Speaking Club",
+      university: "University of Georgia",
+      club_description:
+        "Helps students enhance their public speaking, persuasive writing, and speech delivery techniques.",
+      university_description:
+        "Public university with a strong tradition in leadership and communication.",
+    },
+    {
+      name: "University of Arizona Toastmasters Club",
+      university: "University of Arizona",
+      club_description:
+        "Part of the international Toastmasters organization, focusing on public speaking and leadership development.",
+      university_description:
+        "Public university with active participation in public speaking initiatives.",
+    },
+    {
+      name: "University of Missouri Communication Society",
+      university: "University of Missouri",
+      club_description:
+        "Develops public speaking, rhetoric, and persuasive communication skills, hosting regular speech events.",
+      university_description:
+        "Public university with a strong focus on leadership and communication.",
+    },
+    {
+      name: "University of Alabama Oratory Society",
+      university: "University of Alabama",
+      club_description:
+        "Provides students with opportunities to practice public speaking, debate, and persuasive communication.",
+      university_description:
+        "Public university with a tradition in oratory and communication activities.",
+    },
+    {
+      name: "University of Kentucky Speech and Debate Team",
+      university: "University of Kentucky",
+      club_description:
+        "Offers a platform for students to improve their public speaking and debate skills through competitions and workshops.",
+      university_description:
+        "Public university with a strong focus on debate and effective communication.",
+    },
+    {
+      name: "University of South Carolina Public Speaking Society",
+      university: "University of South Carolina",
+      club_description:
+        "Encourages students to engage in public speaking and debate, with a focus on persuasive communication.",
+      university_description:
+        "Public university with active student participation in communication and leadership.",
+    },
+    {
+      name: "University of Tennessee Speech and Communication Club",
+      university: "University of Tennessee",
+      club_description:
+        "Provides opportunities for students to enhance their public speaking and leadership skills through practice and events.",
+      university_description:
+        "Public university known for its strong focus on communication development.",
+    },
+    {
+      name: "University of Utah Orators Club",
+      university: "University of Utah",
+      club_description:
+        "Focuses on public speaking, speechwriting, and persuasive communication, offering workshops and events.",
+      university_description:
+        "Public university with a commitment to fostering communication skills.",
+    },
+    {
+      name: "Indiana University Public Speaking Society",
+      university: "Indiana University Bloomington",
+      club_description:
+        "Helps students develop public speaking skills for both academic and professional contexts.",
+      university_description:
+        "Public university with a focus on leadership and effective communication.",
+    },
+    {
+      name: "University of Kansas Communication Club",
+      university: "University of Kansas",
+      club_description:
+        "Engages students in public speaking, debate, and rhetoric, with a focus on persuasive communication.",
+      university_description:
+        "Public university with active participation in communication initiatives.",
+    },
+    {
+      name: "University of Nebraska Public Speaking Association",
+      university: "University of Nebraska-Lincoln",
+      club_description:
+        "Encourages students to practice public speaking, debate, and persuasive communication through workshops and competitions.",
+      university_description:
+        "Public university with a growing focus on communication and leadership development.",
+    },
+    {
+      name: "University of Houston Communication Society",
+      university: "University of Houston",
+      club_description:
+        "Develops students' public speaking and communication skills for academic and professional success.",
+      university_description:
+        "Public university with a strong focus on communication and leadership.",
+    },
+    {
+      name: "University of Louisville Speech Club",
+      university: "University of Louisville",
+      club_description:
+        "Encourages students to refine their public speaking skills through practice sessions and speech competitions.",
+      university_description:
+        "Public university with an emphasis on communication skills development.",
+    },
+    {
+      name: "University of Oklahoma Oratory Society",
+      university: "University of Oklahoma",
+      club_description:
+        "Provides a platform for students to practice public speaking, persuasive communication, and debate.",
+      university_description:
+        "Public university with a focus on leadership and communication.",
+    },
+    {
+      name: "University of Colorado Public Speaking and Debate Club",
+      university: "University of Colorado Boulder",
+      club_description:
+        "Focuses on developing students' public speaking and debate skills, hosting regular events and competitions.",
+      university_description:
+        "Public university with a growing focus on effective communication and leadership.",
+    },
+    {
+      name: "University of Iowa Public Speaking League",
+      university: "University of Iowa",
+      club_description:
+        "Organizes regular workshops and competitions to help students improve their public speaking and persuasion skills.",
+      university_description:
+        "Public university that supports leadership and public speaking initiatives.",
+    },
+    {
+      name: "University of Connecticut Communication Club",
+      university: "University of Connecticut",
+      club_description:
+        "Helps students develop strong public speaking and communication skills for various contexts.",
+      university_description:
+        "Public university with a focus on leadership and effective communication.",
+    },
+    {
+      name: "Penn State University Oratory Society",
+      university: "Penn State University",
+      club_description:
+        "Encourages students to participate in public speaking events and debates to refine communication skills.",
+      university_description:
+        "Public university known for fostering leadership and communication excellence.",
+    },
+    {
+      name: "University of Oregon Public Speaking Association",
+      university: "University of Oregon",
+      club_description:
+        "Provides opportunities for students to practice public speaking in a supportive environment.",
+      university_description:
+        "Public university that emphasizes leadership and communication development.",
+    },
+    {
+      name: "University of Vermont Speech and Debate Club",
+      university: "University of Vermont",
+      club_description:
+        "Hosts workshops and competitions to help students refine their public speaking and debating abilities.",
+      university_description:
+        "Public university with a strong focus on communication and leadership.",
+    },
+    {
+      name: "University of Delaware Public Speaking Society",
+      university: "University of Delaware",
+      club_description:
+        "Focuses on public speaking, debate, and persuasive communication through practice sessions and events.",
+      university_description:
+        "Public university with active participation in communication initiatives.",
+    },
+    {
+      name: "University of Massachusetts Oratory Club",
+      university: "University of Massachusetts Amherst",
+      club_description:
+        "Organizes workshops and speech competitions to help students improve their public speaking and rhetoric.",
+      university_description:
+        "Public university known for its strong emphasis on leadership and communication.",
+    },
+    {
+      name: "University of New Mexico Communication Club",
+      university: "University of New Mexico",
+      club_description:
+        "Focuses on improving students' public speaking and communication skills through regular practice sessions.",
+      university_description:
+        "Public university with a commitment to fostering communication excellence.",
+    },
+    {
+      name: "University of Nevada Public Speaking Association",
+      university: "University of Nevada, Reno",
+      club_description:
+        "Encourages students to develop effective public speaking skills for academic and professional success.",
+      university_description:
+        "Public university with a growing focus on leadership and communication.",
+    },
+    {
+      name: "University of Hawaii Public Speaking Society",
+      university: "University of Hawaii at Manoa",
+      club_description:
+        "Offers opportunities for students to practice public speaking, debate, and persuasive communication.",
+      university_description:
+        "Public university with a focus on leadership and effective communication.",
+    },
+    {
+      name: "University of Rhode Island Speech Club",
+      university: "University of Rhode Island",
+      club_description:
+        "Helps students enhance their public speaking, debate, and communication skills through workshops and events.",
+      university_description:
+        "Public university that supports leadership and communication initiatives.",
+    },
+    {
+      name: "University of Idaho Public Speaking and Debate Club",
+      university: "University of Idaho",
+      club_description:
+        "Focuses on developing students' public speaking, rhetoric, and persuasive communication skills.",
+      university_description:
+        "Public university with a tradition in oratory and communication development.",
+    },
+    {
+      name: "University of Alaska Anchorage Orators Club",
+      university: "University of Alaska Anchorage",
+      club_description:
+        "Encourages students to refine their public speaking and debate skills through practice sessions and events.",
+      university_description:
+        "Public university with a growing focus on leadership and communication.",
+    },
+    {
+      name: "University of Wyoming Speech Club",
+      university: "University of Wyoming",
+      club_description:
+        "Provides a platform for students to practice public speaking, persuasive writing, and communication.",
+      university_description:
+        "Public university that emphasizes communication and leadership development.",
+    },
+    {
+      name: "University of Maine Public Speaking Society",
+      university: "University of Maine",
+      club_description:
+        "Offers regular workshops and competitions to help students enhance their public speaking skills.",
+      university_description:
+        "Public university known for fostering leadership and communication excellence.",
+    },
+    {
+      name: "University of Mississippi Oratory Club",
+      university: "University of Mississippi",
+      club_description:
+        "Encourages students to participate in public speaking and debate events to refine their communication skills.",
+      university_description:
+        "Public university with a strong focus on leadership and effective communication.",
+    },
+    {
+      name: "University of Montana Communication Society",
+      university: "University of Montana",
+      club_description:
+        "Helps students develop public speaking and persuasive communication skills for various contexts.",
+      university_description:
+        "Public university with active participation in communication and leadership initiatives.",
+    },
+    {
+      name: "University of Arkansas Public Speaking Association",
+      university: "University of Arkansas",
+      club_description:
+        "Focuses on improving students' public speaking and communication abilities through practice and events.",
+      university_description:
+        "Public university with a commitment to leadership and communication.",
+    },
+    {
+      name: "University of North Dakota Speech Club",
+      university: "University of North Dakota",
+      club_description:
+        "Provides opportunities for students to practice public speaking, debate, and persuasive communication.",
+      university_description:
+        "Public university known for fostering leadership and communication excellence.",
+    },
+    {
+      name: "University of South Dakota Public Speaking Society",
+      university: "University of South Dakota",
+      club_description:
+        "Encourages students to develop public speaking and leadership skills through practice sessions and workshops.",
+      university_description:
+        "Public university with a strong focus on communication and leadership development.",
+    },
+    {
+      name: "University of New Hampshire Speech and Debate Club",
+      university: "University of New Hampshire",
+      club_description:
+        "Focuses on helping students improve their public speaking and debating skills through competitions and events.",
+      university_description:
+        "Public university that supports leadership and effective communication development.",
+    },
+    {
+      name: "University of Alaska Fairbanks Communication Club",
+      university: "University of Alaska Fairbanks",
+      club_description:
+        "Encourages students to develop strong public speaking, debate, and persuasive communication skills.",
+      university_description:
+        "Public university known for its commitment to leadership and communication.",
+    },
+    {
+      name: "University of North Carolina Wilmington Public Speaking Society",
+      university: "University of North Carolina Wilmington",
+      club_description:
+        "Focuses on helping students develop public speaking and communication skills through practice and events.",
+      university_description:
+        "Public university with a growing emphasis on leadership and communication.",
+    },
+  ],
+  socialJusticeAndAdvocacyClubs: [
+    {
+      name: "Harvard Social Justice Coalition",
+      university: "Harvard University",
+      club_description:
+        "Focuses on addressing social inequalities and advocating for marginalized communities through educational events and activism.",
+      university_description:
+        "Private Ivy League university with a strong tradition in social advocacy and leadership.",
+    },
+    {
+      name: "Stanford Students for Justice",
+      university: "Stanford University",
+      club_description:
+        "Encourages students to engage in social justice initiatives, promoting equality and activism on campus and beyond.",
+      university_description:
+        "Private research university known for its strong commitment to social justice and public service.",
+    },
+    {
+      name: "Yale Law Students for Social Justice",
+      university: "Yale University",
+      club_description:
+        "Provides a platform for law students to advocate for social change, focusing on issues like racial justice, human rights, and public interest law.",
+      university_description:
+        "Private Ivy League university with a strong emphasis on law, advocacy, and human rights.",
+    },
+    {
+      name: "Columbia Justice for All",
+      university: "Columbia University",
+      club_description:
+        "A student-run organization advocating for racial equality, LGBTQ+ rights, and economic justice through activism and education.",
+      university_description:
+        "Private Ivy League university known for its leadership in social justice and activism.",
+    },
+    {
+      name: "Princeton Coalition for Social Justice",
+      university: "Princeton University",
+      club_description:
+        "Promotes discussions and actions around racial justice, environmental justice, and economic equality.",
+      university_description:
+        "Private Ivy League university with a tradition of leadership in social issues.",
+    },
+    {
+      name: "University of California Berkeley Students for Justice in Palestine",
+      university: "University of California Berkeley",
+      club_description:
+        "Focuses on advocating for the rights of Palestinians and raising awareness about social justice issues in the Middle East.",
+      university_description:
+        "Public university with a long history of student activism and advocacy for global justice.",
+    },
+    {
+      name: "University of Michigan Social Justice Action Committee",
+      university: "University of Michigan",
+      club_description:
+        "Engages in activism and advocacy for marginalized communities, with a focus on racial justice, gender equality, and workers' rights.",
+      university_description:
+        "Public university with a strong commitment to social justice and student activism.",
+    },
+    {
+      name: "University of Chicago Social Justice Initiative",
+      university: "University of Chicago",
+      club_description:
+        "Encourages students to participate in activism related to racial justice, economic inequality, and immigrant rights.",
+      university_description:
+        "Private research university known for its focus on advocacy and public interest work.",
+    },
+    {
+      name: "University of Pennsylvania Students Against Injustice",
+      university: "University of Pennsylvania",
+      club_description:
+        "Promotes awareness and action against social inequalities, focusing on education, economic justice, and environmental issues.",
+      university_description:
+        "Private Ivy League university with a focus on social justice and civic engagement.",
+    },
+    {
+      name: "Brown University Social Justice Advocates",
+      university: "Brown University",
+      club_description:
+        "A group dedicated to promoting social justice through activism, education, and community organizing.",
+      university_description:
+        "Private Ivy League university known for its progressive approach to social issues.",
+    },
+    {
+      name: "University of Texas Advocates for Social Justice",
+      university: "University of Texas at Austin",
+      club_description:
+        "Advocates for marginalized communities and works on campaigns related to racial equality, immigration rights, and economic justice.",
+      university_description:
+        "Public university with a strong tradition of activism and social justice work.",
+    },
+    {
+      name: "University of Florida Social Justice League",
+      university: "University of Florida",
+      club_description:
+        "Engages in activism and advocacy for social justice issues, including gender equality, environmental justice, and workers' rights.",
+      university_description:
+        "Public university with a commitment to social justice and student-led advocacy.",
+    },
+    {
+      name: "Cornell University Advocates for Justice",
+      university: "Cornell University",
+      club_description:
+        "Promotes activism and awareness on social justice issues like racial inequality, gender rights, and economic disparities.",
+      university_description:
+        "Private Ivy League university known for its dedication to social activism and justice.",
+    },
+    {
+      name: "University of Southern California Social Justice Alliance",
+      university: "University of Southern California",
+      club_description:
+        "Focuses on social advocacy, working on campaigns related to racial justice, economic inequality, and immigrant rights.",
+      university_description:
+        "Private research university with a focus on social change and community activism.",
+    },
+    {
+      name: "University of Virginia Students for Social Justice",
+      university: "University of Virginia",
+      club_description:
+        "Promotes activism and advocacy for racial and economic justice, with a focus on education and community outreach.",
+      university_description:
+        "Public university with a strong focus on civic engagement and justice advocacy.",
+    },
+    {
+      name: "Duke University Social Justice Advocates",
+      university: "Duke University",
+      club_description:
+        "Encourages students to engage in advocacy for social justice causes, focusing on racial equality, LGBTQ+ rights, and economic justice.",
+      university_description:
+        "Private research university known for its commitment to activism and public service.",
+    },
+    {
+      name: "University of North Carolina Chapel Hill Social Justice Collective",
+      university: "University of North Carolina at Chapel Hill",
+      club_description:
+        "A student-led group working on social justice issues related to racial and gender equality, immigration, and environmental justice.",
+      university_description:
+        "Public university with a long history of student activism and leadership in social justice.",
+    },
+    {
+      name: "Georgetown University Advocates for Social Change",
+      university: "Georgetown University",
+      club_description:
+        "Works on campaigns for racial justice, gender equality, and immigrant rights, promoting activism and community engagement.",
+      university_description:
+        "Private university known for its focus on global justice and advocacy.",
+    },
+    {
+      name: "New York University Students for Social Justice",
+      university: "New York University",
+      club_description:
+        "Encourages student activism around issues like racial justice, LGBTQ+ rights, and economic equality.",
+      university_description:
+        "Private research university with a focus on social change and advocacy for marginalized communities.",
+    },
+    {
+      name: "University of California Los Angeles Social Justice Coalition",
+      university: "University of California Los Angeles",
+      club_description:
+        "Engages students in activism around racial justice, immigrant rights, and environmental issues, promoting social equality.",
+      university_description:
+        "Public university with a long tradition of student-led activism for social justice.",
+    },
+    {
+      name: "University of Wisconsin-Madison Social Justice League",
+      university: "University of Wisconsin-Madison",
+      club_description:
+        "Advocates for marginalized communities, focusing on racial justice, gender equality, and workers' rights.",
+      university_description:
+        "Public university with a strong focus on social justice and activism.",
+    },
+    {
+      name: "University of Washington Social Justice Forum",
+      university: "University of Washington",
+      club_description:
+        "Promotes activism and awareness around racial justice, environmental justice, and economic equality.",
+      university_description:
+        "Public university with a commitment to advocacy and social justice.",
+    },
+    {
+      name: "University of Miami Social Justice Action Group",
+      university: "University of Miami",
+      club_description:
+        "Focuses on promoting racial justice, gender equality, and environmental advocacy through education and activism.",
+      university_description:
+        "Private research university known for its commitment to social justice causes.",
+    },
+    {
+      name: "University of Illinois Urbana-Champaign Advocates for Justice",
+      university: "University of Illinois Urbana-Champaign",
+      club_description:
+        "Encourages student activism and engagement with social justice issues, focusing on economic inequality and environmental justice.",
+      university_description:
+        "Public university with a strong tradition in activism and public service.",
+    },
+    {
+      name: "University of Minnesota Social Justice Collective",
+      university: "University of Minnesota",
+      club_description:
+        "Promotes social justice through activism, focusing on racial equality, economic justice, and immigrant rights.",
+      university_description:
+        "Public university with a long history of leadership in social justice and advocacy.",
+    },
+    {
+      name: "University of Arizona Social Justice Club",
+      university: "University of Arizona",
+      club_description:
+        "Works on campaigns for racial justice, environmental justice, and gender equality, advocating for marginalized communities.",
+      university_description:
+        "Public university with a commitment to student-led advocacy for social change.",
+    },
+    {
+      name: "University of California San Diego Students for Social Justice",
+      university: "University of California San Diego",
+      club_description:
+        "Focuses on advocacy for racial justice, gender equality, and immigrant rights through activism and education.",
+      university_description:
+        "Public university with a tradition of student activism and social justice advocacy.",
+    },
+    {
+      name: "University of Colorado Boulder Social Justice League",
+      university: "University of Colorado Boulder",
+      club_description:
+        "Engages in activism and advocacy for social justice issues, including racial equality, economic justice, and environmental advocacy.",
+      university_description:
+        "Public university with a strong focus on student activism and social change.",
+    },
+    {
+      name: "University of Notre Dame Advocates for Justice",
+      university: "University of Notre Dame",
+      club_description:
+        "A student-led group focused on social justice issues, including racial justice, gender equality, and workers' rights.",
+      university_description:
+        "Private research university known for its focus on social advocacy and leadership.",
+    },
+    {
+      name: "Indiana University Social Justice Coalition",
+      university: "Indiana University Bloomington",
+      club_description:
+        "Promotes awareness and action around social justice issues, focusing on economic inequality and racial justice.",
+      university_description:
+        "Public university with a strong tradition of leadership in social activism and public service.",
+    },
+    {
+      name: "University of Maryland Students for Justice",
+      university: "University of Maryland",
+      club_description:
+        "Focuses on advocating for marginalized communities, with campaigns around racial equality, immigrant rights, and environmental justice.",
+      university_description:
+        "Public university with a commitment to social justice and student-led advocacy.",
+    },
+  ],
+  astronomyClubs: [
+    {
+      name: "Harvard Astronomy Club",
+      university: "Harvard University",
+      club_description:
+        "Offers students the opportunity to explore astronomy through telescope observations, stargazing events, and discussions on space science.",
+      university_description:
+        "Private Ivy League university with a strong program in astrophysics and space science.",
+    },
+    {
+      name: "Stanford University Astronomy Club",
+      university: "Stanford University",
+      club_description:
+        "Encourages students to delve into astronomical research, participate in stargazing sessions, and learn about the cosmos.",
+      university_description:
+        "Private research university known for its programs in physics and space exploration.",
+    },
+    {
+      name: "Yale Astronomy Society",
+      university: "Yale University",
+      club_description:
+        "Promotes the study of astronomy and cosmology through lectures, night sky observations, and collaborative projects.",
+      university_description:
+        "Private Ivy League university with an established tradition in science and astronomy education.",
+    },
+    {
+      name: "Columbia University Astronomy Club",
+      university: "Columbia University",
+      club_description:
+        "Provides students with hands-on experience in astronomy through telescope nights, space observation, and research discussions.",
+      university_description:
+        "Private Ivy League university with a strong focus on space research and astrophysics.",
+    },
+    {
+      name: "Princeton Astronomy Society",
+      university: "Princeton University",
+      club_description:
+        "Fosters interest in astronomy by hosting stargazing events, discussions on astrophysics, and lectures from renowned scientists.",
+      university_description:
+        "Private Ivy League university with leading programs in astrophysics and space research.",
+    },
+    {
+      name: "UC Berkeley Astronomy Club",
+      university: "University of California Berkeley",
+      club_description:
+        "Offers students opportunities for night sky observation, learning about constellations, and participating in space-related discussions.",
+      university_description:
+        "Public university with a renowned astronomy and astrophysics department.",
+    },
+    {
+      name: "University of Michigan Astronomy Club",
+      university: "University of Michigan",
+      club_description:
+        "Engages students in astronomy through hands-on observation sessions, telescope viewing, and discussions on space science.",
+      university_description:
+        "Public university known for its strong programs in space exploration and physics.",
+    },
+    {
+      name: "University of Chicago Astronomy Club",
+      university: "University of Chicago",
+      club_description:
+        "Promotes interest in astronomy through stargazing, astronomy talks, and hands-on experience with telescopes and space simulations.",
+      university_description:
+        "Private research university with leading space science programs.",
+    },
+    {
+      name: "University of Pennsylvania Astronomy Society",
+      university: "University of Pennsylvania",
+      club_description:
+        "Offers students the chance to explore the cosmos through stargazing nights, astrophysics discussions, and astronomy research.",
+      university_description:
+        "Private Ivy League university with a focus on astronomy and scientific research.",
+    },
+    {
+      name: "Brown University Astronomy Club",
+      university: "Brown University",
+      club_description:
+        "Promotes interest in astronomy and space exploration through observation events, space discussions, and collaborative projects.",
+      university_description:
+        "Private Ivy League university with a strong tradition in science education.",
+    },
+    {
+      name: "University of Texas Astronomy Association",
+      university: "University of Texas at Austin",
+      club_description:
+        "Encourages students to engage in astronomy through telescope observations, stargazing events, and astrophysics lectures.",
+      university_description:
+        "Public university with strong programs in astrophysics and space research.",
+    },
+    {
+      name: "University of Florida Astronomy Society",
+      university: "University of Florida",
+      club_description:
+        "Promotes student interest in astronomy through stargazing nights, lectures, and hands-on experience with telescopes.",
+      university_description:
+        "Public university with a commitment to space science and exploration.",
+    },
+    {
+      name: "Cornell University Astronomy Club",
+      university: "Cornell University",
+      club_description:
+        "Offers students the chance to explore the universe through night sky observations, telescope viewing, and astrophysics discussions.",
+      university_description:
+        "Private Ivy League university known for its programs in space exploration and astronomy.",
+    },
+    {
+      name: "University of Southern California Astronomy Club",
+      university: "University of Southern California",
+      club_description:
+        "Encourages students to explore astronomy through stargazing sessions, space talks, and telescope observations.",
+      university_description:
+        "Private research university with a focus on astronomy and space science.",
+    },
+    {
+      name: "University of Virginia Astronomy Society",
+      university: "University of Virginia",
+      club_description:
+        "Promotes the study of astronomy and astrophysics through stargazing events, astronomy lectures, and research projects.",
+      university_description:
+        "Public university with a strong tradition in astronomy and physics education.",
+    },
+    {
+      name: "Duke University Astronomy Club",
+      university: "Duke University",
+      club_description:
+        "Provides opportunities for students to engage in stargazing, telescope observations, and discussions on astronomy and cosmology.",
+      university_description:
+        "Private research university with a focus on science and space exploration.",
+    },
+    {
+      name: "UNC Chapel Hill Astronomy Club",
+      university: "University of North Carolina at Chapel Hill",
+      club_description:
+        "Promotes astronomy through night sky observations, astrophysics discussions, and hands-on experience with space research.",
+      university_description:
+        "Public university with a long history of student-led astronomy programs.",
+    },
+    {
+      name: "Georgetown University Astronomy Association",
+      university: "Georgetown University",
+      club_description:
+        "Encourages students to explore astronomy through stargazing events, telescope observations, and discussions on space science.",
+      university_description:
+        "Private university with a growing focus on science and astronomy.",
+    },
+    {
+      name: "NYU Astronomy Club",
+      university: "New York University",
+      club_description:
+        "Promotes the study of the universe through stargazing sessions, astrophysics discussions, and space-related projects.",
+      university_description:
+        "Private research university with an interest in astronomy and space exploration.",
+    },
+    {
+      name: "UCLA Astronomy Society",
+      university: "University of California Los Angeles",
+      club_description:
+        "Offers students opportunities to learn about astronomy through night sky observations, telescope viewing, and space research discussions.",
+      university_description:
+        "Public university with a strong focus on space science and exploration.",
+    },
+    {
+      name: "University of Wisconsin Astronomy Club",
+      university: "University of Wisconsin-Madison",
+      club_description:
+        "Provides opportunities for stargazing, space research discussions, and hands-on experience with telescopes and astronomy equipment.",
+      university_description:
+        "Public university with a renowned astronomy program.",
+    },
+    {
+      name: "University of Washington Astronomy Society",
+      university: "University of Washington",
+      club_description:
+        "Encourages students to explore astronomy through stargazing nights, astrophysics lectures, and space-related projects.",
+      university_description:
+        "Public university known for its programs in space science and astronomy.",
+    },
+    {
+      name: "University of Miami Astronomy Club",
+      university: "University of Miami",
+      club_description:
+        "Offers students the chance to engage in astronomy through telescope viewing, space science discussions, and stargazing events.",
+      university_description:
+        "Private research university with a commitment to space science education.",
+    },
+    {
+      name: "University of Illinois Astronomy Association",
+      university: "University of Illinois Urbana-Champaign",
+      club_description:
+        "Promotes student interest in astronomy through hands-on observation sessions, astrophysics discussions, and space exploration events.",
+      university_description:
+        "Public university with a long history of leadership in space science.",
+    },
+    {
+      name: "University of Minnesota Astronomy Society",
+      university: "University of Minnesota",
+      club_description:
+        "Encourages students to engage in astronomy through night sky observations, telescope viewing, and discussions on the universe.",
+      university_description:
+        "Public university known for its strong programs in physics and astronomy.",
+    },
+    {
+      name: "University of Arizona Astronomy Club",
+      university: "University of Arizona",
+      club_description:
+        "Provides opportunities for stargazing, space science discussions, and hands-on telescope observation sessions.",
+      university_description:
+        "Public university with a strong tradition in astronomy and space exploration.",
+    },
+    {
+      name: "UC San Diego Astronomy Society",
+      university: "University of California San Diego",
+      club_description:
+        "Encourages students to explore the cosmos through stargazing events, telescope viewing, and astrophysics discussions.",
+      university_description:
+        "Public university with a renowned astronomy program.",
+    },
+    {
+      name: "University of Colorado Boulder Astronomy Club",
+      university: "University of Colorado Boulder",
+      club_description:
+        "Promotes interest in astronomy through space observation nights, telescope sessions, and collaborative research projects.",
+      university_description:
+        "Public university with a strong focus on space science and astrophysics.",
+    },
+    {
+      name: "University of Notre Dame Astronomy Club",
+      university: "University of Notre Dame",
+      club_description:
+        "Provides students with the chance to explore astronomy through stargazing events, telescope observations, and space science lectures.",
+      university_description:
+        "Private research university known for its strong programs in science and astronomy.",
+    },
+    {
+      name: "Indiana University Astronomy Society",
+      university: "Indiana University Bloomington",
+      club_description:
+        "Promotes student interest in astronomy through night sky observations, astrophysics discussions, and space exploration events.",
+      university_description:
+        "Public university with a commitment to student-led space science initiatives.",
+    },
+    {
+      name: "University of Maryland Astronomy Club",
+      university: "University of Maryland",
+      club_description:
+        "Encourages students to explore the universe through telescope sessions, stargazing nights, and space-related discussions.",
+      university_description:
+        "Public university with a long tradition of leadership in astronomy and space research.",
+    },
+    {
+      name: "University of Pittsburgh Astronomy Association",
+      university: "University of Pittsburgh",
+      club_description:
+        "Promotes student involvement in astronomy through stargazing events, space science talks, and telescope observations.",
+      university_description:
+        "Public university with a strong focus on space exploration and physics.",
+    },
+    {
+      name: "University of Georgia Astronomy Club",
+      university: "University of Georgia",
+      club_description:
+        "Provides students with the opportunity to engage in astronomy through stargazing sessions, telescope viewing, and space science discussions.",
+      university_description:
+        "Public university with a strong commitment to space science education.",
+    },
+  ],
+  meditationAndMindfulnessClubs: [
+    {
+      name: "Harvard Meditation Club",
+      university: "Harvard University",
+      club_description:
+        "Provides a space for students to practice mindfulness, meditation, and stress-relief techniques to enhance mental well-being.",
+      university_description:
+        "Private Ivy League university known for its focus on student mental health and well-being.",
+    },
+    {
+      name: "Stanford Mindfulness and Meditation Club",
+      university: "Stanford University",
+      club_description:
+        "Offers weekly meditation sessions, mindfulness workshops, and stress management techniques for students.",
+      university_description:
+        "Private research university with a focus on holistic student development and mental health.",
+    },
+    {
+      name: "Yale Mindfulness Club",
+      university: "Yale University",
+      club_description:
+        "Encourages students to engage in meditation practices, mindfulness training, and emotional resilience activities.",
+      university_description:
+        "Private Ivy League university with a commitment to fostering student well-being.",
+    },
+    {
+      name: "Columbia University Meditation Society",
+      university: "Columbia University",
+      club_description:
+        "Promotes meditation, mindfulness, and relaxation techniques to help students manage academic stress and mental health.",
+      university_description:
+        "Private Ivy League university with strong mental health programs for students.",
+    },
+    {
+      name: "Princeton Mindfulness Club",
+      university: "Princeton University",
+      club_description:
+        "Provides opportunities for students to engage in meditation, mindfulness workshops, and mental relaxation exercises.",
+      university_description:
+        "Private Ivy League university with a holistic approach to student well-being.",
+    },
+    {
+      name: "UC Berkeley Mindfulness and Meditation Club",
+      university: "University of California Berkeley",
+      club_description:
+        "Offers students mindfulness sessions, meditation workshops, and stress-relief techniques to support mental well-being.",
+      university_description:
+        "Public university with a strong focus on mental health and mindfulness practices.",
+    },
+    {
+      name: "University of Michigan Meditation Society",
+      university: "University of Michigan",
+      club_description:
+        "Promotes mindfulness, meditation, and self-care practices to help students cope with stress and anxiety.",
+      university_description:
+        "Public university known for its comprehensive student mental health services.",
+    },
+    {
+      name: "University of Chicago Mindfulness Club",
+      university: "University of Chicago",
+      club_description:
+        "Encourages students to engage in meditation, mindfulness practices, and emotional well-being exercises.",
+      university_description:
+        "Private research university with a strong focus on mental health and emotional wellness.",
+    },
+    {
+      name: "University of Pennsylvania Meditation and Mindfulness Club",
+      university: "University of Pennsylvania",
+      club_description:
+        "Provides meditation sessions, mindfulness training, and stress-relief activities to support student well-being.",
+      university_description:
+        "Private Ivy League university with a strong commitment to student mental health.",
+    },
+    {
+      name: "Brown University Mindfulness Club",
+      university: "Brown University",
+      club_description:
+        "Offers opportunities for students to practice mindfulness, meditation, and relaxation exercises for mental clarity and well-being.",
+      university_description:
+        "Private Ivy League university with a focus on holistic student development.",
+    },
+    {
+      name: "University of Texas Mindfulness Association",
+      university: "University of Texas at Austin",
+      club_description:
+        "Encourages students to explore mindfulness practices, meditation, and emotional resilience techniques to manage stress.",
+      university_description:
+        "Public university with robust mental health programs and mindfulness initiatives.",
+    },
+    {
+      name: "University of Florida Meditation Club",
+      university: "University of Florida",
+      club_description:
+        "Offers students weekly meditation sessions, mindfulness workshops, and mental well-being support to alleviate stress.",
+      university_description:
+        "Public university with a commitment to student mental health and wellness.",
+    },
+    {
+      name: "Cornell University Meditation Society",
+      university: "Cornell University",
+      club_description:
+        "Promotes mindfulness, meditation, and self-care practices to help students manage stress and emotional well-being.",
+      university_description:
+        "Private Ivy League university with a strong focus on mental health and student well-being.",
+    },
+    {
+      name: "University of Southern California Meditation Club",
+      university: "University of Southern California",
+      club_description:
+        "Provides meditation sessions, mindfulness training, and mental health workshops to help students cope with stress.",
+      university_description:
+        "Private research university with a strong commitment to student mental health and well-being.",
+    },
+    {
+      name: "University of Virginia Mindfulness Society",
+      university: "University of Virginia",
+      club_description:
+        "Encourages students to engage in mindfulness practices, meditation, and emotional well-being activities.",
+      university_description:
+        "Public university with a strong tradition of supporting student mental health and mindfulness.",
+    },
+    {
+      name: "Duke University Meditation Club",
+      university: "Duke University",
+      club_description:
+        "Provides students with opportunities to engage in meditation, mindfulness workshops, and stress-relief techniques for mental clarity.",
+      university_description:
+        "Private research university with a strong commitment to holistic student development and mental health.",
+    },
+    {
+      name: "UNC Chapel Hill Meditation Club",
+      university: "University of North Carolina at Chapel Hill",
+      club_description:
+        "Promotes mindfulness, meditation, and self-care practices to help students manage stress and enhance mental well-being.",
+      university_description:
+        "Public university with a commitment to student mental health and well-being.",
+    },
+    {
+      name: "Georgetown University Mindfulness Society",
+      university: "Georgetown University",
+      club_description:
+        "Offers meditation sessions, mindfulness workshops, and stress-relief activities to support student emotional wellness.",
+      university_description:
+        "Private university with a strong focus on holistic student development and mental health.",
+    },
+    {
+      name: "NYU Mindfulness and Meditation Club",
+      university: "New York University",
+      club_description:
+        "Encourages students to practice mindfulness, meditation, and stress-relief techniques to manage academic and personal challenges.",
+      university_description:
+        "Private research university with comprehensive student mental health programs.",
+    },
+    {
+      name: "UCLA Meditation and Mindfulness Society",
+      university: "University of California Los Angeles",
+      club_description:
+        "Promotes mindfulness practices, meditation sessions, and emotional well-being activities to support student mental health.",
+      university_description:
+        "Public university known for its mental health programs and mindfulness initiatives.",
+    },
+    {
+      name: "University of Wisconsin Meditation Club",
+      university: "University of Wisconsin-Madison",
+      club_description:
+        "Offers students the chance to engage in meditation practices, mindfulness workshops, and stress-relief activities.",
+      university_description:
+        "Public university with a strong focus on student mental health and well-being.",
+    },
+    {
+      name: "University of Washington Mindfulness Association",
+      university: "University of Washington",
+      club_description:
+        "Provides opportunities for students to engage in mindfulness, meditation, and emotional wellness practices.",
+      university_description:
+        "Public university with a robust commitment to student mental health and wellness.",
+    },
+    {
+      name: "University of Miami Meditation Society",
+      university: "University of Miami",
+      club_description:
+        "Promotes mindfulness practices, meditation, and relaxation techniques to support student mental well-being.",
+      university_description:
+        "Private research university with a focus on holistic student development.",
+    },
+    {
+      name: "University of Illinois Mindfulness Club",
+      university: "University of Illinois Urbana-Champaign",
+      club_description:
+        "Offers students weekly meditation sessions, mindfulness workshops, and emotional well-being support.",
+      university_description:
+        "Public university with a strong focus on mindfulness and mental health initiatives.",
+    },
+    {
+      name: "University of Minnesota Meditation Club",
+      university: "University of Minnesota",
+      club_description:
+        "Encourages students to practice mindfulness, meditation, and stress-relief techniques for mental clarity and well-being.",
+      university_description:
+        "Public university with a strong tradition of supporting student mental health.",
+    },
+    {
+      name: "University of Arizona Mindfulness and Meditation Society",
+      university: "University of Arizona",
+      club_description:
+        "Provides students with opportunities to engage in mindfulness practices, meditation sessions, and stress management workshops.",
+      university_description:
+        "Public university with a commitment to student mental health and wellness.",
+    },
+    {
+      name: "UC San Diego Meditation Society",
+      university: "University of California San Diego",
+      club_description:
+        "Promotes mindfulness, meditation, and self-care practices to help students manage academic stress and personal challenges.",
+      university_description:
+        "Public university with strong mental health programs and mindfulness initiatives.",
+    },
+    {
+      name: "University of Colorado Boulder Meditation Club",
+      university: "University of Colorado Boulder",
+      club_description:
+        "Offers students the chance to engage in meditation practices, mindfulness workshops, and stress-relief techniques.",
+      university_description:
+        "Public university known for its focus on mental health and student wellness.",
+    },
+    {
+      name: "University of Notre Dame Meditation Society",
+      university: "University of Notre Dame",
+      club_description:
+        "Promotes mindfulness, meditation, and emotional well-being practices to help students cope with stress and anxiety.",
+      university_description:
+        "Private research university with a commitment to holistic student development.",
+    },
+    {
+      name: "Indiana University Mindfulness Club",
+      university: "Indiana University Bloomington",
+      club_description:
+        "Provides opportunities for students to engage in mindfulness practices, meditation sessions, and emotional resilience techniques.",
+      university_description:
+        "Public university with a strong focus on mental health and student wellness.",
+    },
+    {
+      name: "University of Maryland Meditation Association",
+      university: "University of Maryland",
+      club_description:
+        "Encourages students to practice mindfulness, meditation, and stress-relief techniques to support mental well-being.",
+      university_description:
+        "Public university with a commitment to supporting student mental health.",
+    },
+    {
+      name: "University of Pittsburgh Mindfulness Society",
+      university: "University of Pittsburgh",
+      club_description:
+        "Offers meditation sessions, mindfulness training, and emotional wellness workshops to help students manage stress.",
+      university_description:
+        "Public university known for its strong mental health programs and mindfulness initiatives.",
+    },
+    {
+      name: "University of Georgia Meditation Club",
+      university: "University of Georgia",
+      club_description:
+        "Promotes mindfulness, meditation, and emotional well-being practices to help students cope with academic and personal stress.",
+      university_description:
+        "Public university with a strong commitment to student mental health.",
+    },
+  ],
+  peerTutoringClubs: [
+    {
+      name: "Harvard Peer Tutoring Program",
+      university: "Harvard University",
+      club_description:
+        "Offers peer-led tutoring sessions in various subjects, helping students enhance their academic skills through collaborative learning.",
+      university_description:
+        "Private Ivy League university with a strong focus on academic excellence and student support services.",
+    },
+    {
+      name: "Stanford Peer Tutoring Network",
+      university: "Stanford University",
+      club_description:
+        "Provides peer tutoring across a wide range of subjects, promoting collaborative learning and academic success.",
+      university_description:
+        "Private research university known for its emphasis on student collaboration and academic achievement.",
+    },
+    {
+      name: "Yale Tutoring Club",
+      university: "Yale University",
+      club_description:
+        "Encourages peer-to-peer tutoring to help students improve in challenging courses and gain study skills.",
+      university_description:
+        "Private Ivy League university with a robust support system for academic success.",
+    },
+    {
+      name: "Columbia University Peer Tutoring Association",
+      university: "Columbia University",
+      club_description:
+        "Offers tutoring sessions led by student volunteers, aimed at supporting peers in academic challenges.",
+      university_description:
+        "Private Ivy League university with a focus on collaborative academic support.",
+    },
+    {
+      name: "Princeton Peer Tutoring Society",
+      university: "Princeton University",
+      club_description:
+        "Provides peer-led tutoring and study sessions for students in need of academic assistance.",
+      university_description:
+        "Private Ivy League university dedicated to fostering academic excellence through student support.",
+    },
+    {
+      name: "UC Berkeley Peer Learning Program",
+      university: "University of California Berkeley",
+      club_description:
+        "Offers peer tutoring services in various subjects, helping students navigate challenging coursework.",
+      university_description:
+        "Public university with a strong commitment to collaborative academic support and student success.",
+    },
+    {
+      name: "University of Michigan Tutoring Club",
+      university: "University of Michigan",
+      club_description:
+        "Provides peer tutoring and academic workshops, helping students improve their study habits and course performance.",
+      university_description:
+        "Public university known for its comprehensive academic support programs.",
+    },
+    {
+      name: "University of Chicago Peer Tutoring Program",
+      university: "University of Chicago",
+      club_description:
+        "Encourages peer-to-peer tutoring in core subjects, fostering collaboration and academic improvement.",
+      university_description:
+        "Private research university with a strong focus on academic rigor and student support.",
+    },
+    {
+      name: "University of Pennsylvania Tutoring Society",
+      university: "University of Pennsylvania",
+      club_description:
+        "Offers peer tutoring in a range of subjects to help students excel academically and enhance their study techniques.",
+      university_description:
+        "Private Ivy League university with comprehensive academic support services.",
+    },
+    {
+      name: "Brown Peer Tutoring Network",
+      university: "Brown University",
+      club_description:
+        "Provides peer-led academic support, fostering collaborative learning and subject mastery.",
+      university_description:
+        "Private Ivy League university with a focus on individualized academic support.",
+    },
+    {
+      name: "University of Texas Peer Tutoring Club",
+      university: "University of Texas at Austin",
+      club_description:
+        "Offers peer tutoring and study groups to help students succeed in difficult courses.",
+      university_description:
+        "Public university with a robust academic support system aimed at fostering student success.",
+    },
+    {
+      name: "University of Florida Peer Tutoring Association",
+      university: "University of Florida",
+      club_description:
+        "Provides tutoring in a wide range of subjects to assist students in improving academic performance.",
+      university_description:
+        "Public university with a strong emphasis on peer-to-peer academic support and collaborative learning.",
+    },
+    {
+      name: "Cornell Peer Tutoring Program",
+      university: "Cornell University",
+      club_description:
+        "Offers peer tutoring services, helping students improve in academic areas through personalized support.",
+      university_description:
+        "Private Ivy League university with a focus on collaborative academic achievement.",
+    },
+    {
+      name: "University of Southern California Peer Tutoring Society",
+      university: "University of Southern California",
+      club_description:
+        "Encourages peer tutoring in core subjects to promote academic success and enhance student learning.",
+      university_description:
+        "Private research university with strong academic support initiatives.",
+    },
+    {
+      name: "University of Virginia Peer Tutoring Program",
+      university: "University of Virginia",
+      club_description:
+        "Provides peer-led tutoring sessions in various subjects to help students excel academically.",
+      university_description:
+        "Public university with a tradition of supporting students through academic challenges.",
+    },
+    {
+      name: "Duke University Peer Tutoring Network",
+      university: "Duke University",
+      club_description:
+        "Offers peer-to-peer academic support in challenging courses, promoting collaborative learning and academic success.",
+      university_description:
+        "Private research university with a strong emphasis on academic achievement and student support.",
+    },
+    {
+      name: "UNC Chapel Hill Tutoring Club",
+      university: "University of North Carolina at Chapel Hill",
+      club_description:
+        "Encourages peer tutoring in a variety of subjects, helping students improve academically and develop strong study habits.",
+      university_description:
+        "Public university with a strong focus on academic excellence and student support services.",
+    },
+    {
+      name: "Georgetown Peer Tutoring Society",
+      university: "Georgetown University",
+      club_description:
+        "Provides peer-led academic tutoring and study sessions to assist students in difficult courses.",
+      university_description:
+        "Private university with a commitment to academic excellence and peer-led support services.",
+    },
+    {
+      name: "NYU Peer Learning Network",
+      university: "New York University",
+      club_description:
+        "Offers peer tutoring in various subjects, helping students overcome academic challenges and improve performance.",
+      university_description:
+        "Private research university with a strong focus on collaborative academic support.",
+    },
+    {
+      name: "UCLA Peer Tutoring Club",
+      university: "University of California Los Angeles",
+      club_description:
+        "Provides peer tutoring sessions in challenging subjects, helping students improve their academic performance.",
+      university_description:
+        "Public university with comprehensive peer-to-peer tutoring programs.",
+    },
+    {
+      name: "University of Wisconsin Peer Tutoring Program",
+      university: "University of Wisconsin-Madison",
+      club_description:
+        "Offers peer tutoring services across a range of subjects to help students achieve academic success.",
+      university_description:
+        "Public university known for its strong academic support initiatives.",
+    },
+    {
+      name: "University of Washington Tutoring Network",
+      university: "University of Washington",
+      club_description:
+        "Provides peer-led tutoring in various subjects, promoting collaborative learning and academic achievement.",
+      university_description:
+        "Public university with a strong commitment to peer-to-peer academic support.",
+    },
+    {
+      name: "University of Miami Tutoring Society",
+      university: "University of Miami",
+      club_description:
+        "Encourages students to participate in peer tutoring and study sessions to improve academic performance.",
+      university_description:
+        "Private research university with a focus on collaborative learning and academic success.",
+    },
+    {
+      name: "University of Illinois Peer Tutoring Program",
+      university: "University of Illinois Urbana-Champaign",
+      club_description:
+        "Offers peer tutoring services to assist students in challenging courses and foster academic excellence.",
+      university_description:
+        "Public university with a robust academic support system.",
+    },
+    {
+      name: "University of Minnesota Peer Learning Club",
+      university: "University of Minnesota",
+      club_description:
+        "Provides peer tutoring in various subjects, helping students navigate difficult coursework.",
+      university_description:
+        "Public university with strong peer-to-peer academic support programs.",
+    },
+    {
+      name: "University of Arizona Peer Tutoring Network",
+      university: "University of Arizona",
+      club_description:
+        "Offers peer-led tutoring and study groups to help students improve their academic skills.",
+      university_description:
+        "Public university with a strong focus on academic support and student success.",
+    },
+    {
+      name: "UC San Diego Peer Tutoring Program",
+      university: "University of California San Diego",
+      club_description:
+        "Provides peer tutoring across multiple disciplines, fostering academic achievement through collaboration.",
+      university_description:
+        "Public university with a commitment to peer-led academic support.",
+    },
+    {
+      name: "University of Colorado Peer Learning Society",
+      university: "University of Colorado Boulder",
+      club_description:
+        "Encourages students to engage in peer tutoring to enhance their understanding of challenging subjects.",
+      university_description:
+        "Public university with a strong focus on collaborative learning and academic success.",
+    },
+    {
+      name: "University of Notre Dame Peer Tutoring Network",
+      university: "University of Notre Dame",
+      club_description:
+        "Offers peer-led tutoring services to help students improve academically and achieve academic goals.",
+      university_description:
+        "Private research university with a commitment to academic excellence through student support.",
+    },
+    {
+      name: "Indiana University Tutoring Club",
+      university: "Indiana University Bloomington",
+      club_description:
+        "Provides peer tutoring and study sessions, helping students excel academically and overcome challenges.",
+      university_description:
+        "Public university with a strong academic support system.",
+    },
+    {
+      name: "University of Maryland Peer Tutoring Society",
+      university: "University of Maryland",
+      club_description:
+        "Offers peer-led academic support to help students improve in challenging subjects.",
+      university_description:
+        "Public university with a robust commitment to student success through peer tutoring.",
+    },
+    {
+      name: "University of Pittsburgh Peer Learning Program",
+      university: "University of Pittsburgh",
+      club_description:
+        "Provides peer tutoring and study sessions to help students achieve academic excellence.",
+      university_description:
+        "Public university known for its strong peer-to-peer academic support initiatives.",
+    },
+    {
+      name: "University of Georgia Tutoring Club",
+      university: "University of Georgia",
+      club_description:
+        "Encourages students to participate in peer tutoring to improve academic performance and subject understanding.",
+      university_description:
+        "Public university with a strong focus on collaborative academic support.",
+    },
+    {
+      name: "Ohio State Peer Tutoring Network",
+      university: "Ohio State University",
+      club_description:
+        "Provides peer tutoring across a range of subjects, helping students achieve academic success.",
+      university_description:
+        "Public university with comprehensive academic support services.",
+    },
+    {
+      name: "University of Iowa Peer Tutoring Club",
+      university: "University of Iowa",
+      club_description:
+        "Offers peer-led tutoring in core subjects, helping students improve academically and develop strong study habits.",
+      university_description:
+        "Public university with a strong focus on student success and academic support.",
+    },
+    {
+      name: "University of Kansas Peer Tutoring Society",
+      university: "University of Kansas",
+      club_description:
+        "Provides tutoring sessions led by student volunteers to help peers succeed academically.",
+      university_description:
+        "Public university with a strong commitment to collaborative learning and academic achievement.",
+    },
+    {
+      name: "University of Missouri Peer Learning Program",
+      university: "University of Missouri",
+      club_description:
+        "Offers peer tutoring services in a variety of subjects, promoting academic improvement and success.",
+      university_description:
+        "Public university with a strong focus on peer-led academic support.",
+    },
+    {
+      name: "University of Oklahoma Peer Tutoring Network",
+      university: "University of Oklahoma",
+      club_description:
+        "Encourages peer tutoring in challenging subjects, helping students improve their study skills and academic performance.",
+      university_description:
+        "Public university with a strong academic support system and peer-to-peer learning initiatives.",
+    },
+    {
+      name: "University of South Carolina Peer Tutoring Program",
+      university: "University of South Carolina",
+      club_description:
+        "Offers peer tutoring services to assist students in academic challenges and promote collaborative learning.",
+      university_description:
+        "Public university with a focus on student success through academic support programs.",
+    },
+    {
+      name: "University of Alabama Peer Learning Network",
+      university: "University of Alabama",
+      club_description:
+        "Provides peer-led tutoring and study sessions to help students improve their academic performance.",
+      university_description:
+        "Public university with strong peer-to-peer academic support initiatives.",
+    },
+    {
+      name: "University of Kentucky Peer Tutoring Club",
+      university: "University of Kentucky",
+      club_description:
+        "Offers peer tutoring services to help students overcome academic challenges and achieve success.",
+      university_description:
+        "Public university with a strong academic support system and peer tutoring services.",
+    },
+    {
+      name: "University of Tennessee Tutoring Society",
+      university: "University of Tennessee",
+      club_description:
+        "Encourages peer tutoring in a wide range of subjects to help students improve academically.",
+      university_description:
+        "Public university with a strong focus on academic support and collaborative learning.",
+    },
+    {
+      name: "University of Arkansas Peer Tutoring Network",
+      university: "University of Arkansas",
+      club_description:
+        "Offers peer tutoring in core subjects to help students excel academically and overcome challenges.",
+      university_description:
+        "Public university with a strong academic support system and collaborative learning initiatives.",
+    },
+    {
+      name: "University of Nebraska Peer Tutoring Club",
+      university: "University of Nebraska-Lincoln",
+      club_description:
+        "Provides peer tutoring in various subjects, promoting academic success through collaborative learning.",
+      university_description:
+        "Public university with a strong focus on student success through academic support.",
+    },
+    {
+      name: "University of Houston Peer Learning Society",
+      university: "University of Houston",
+      club_description:
+        "Offers peer tutoring and study sessions to help students improve their academic performance.",
+      university_description:
+        "Public university with a commitment to academic excellence through peer support services.",
+    },
+    {
+      name: "University of Central Florida Tutoring Program",
+      university: "University of Central Florida",
+      club_description:
+        "Encourages peer tutoring in various subjects to help students improve academically and succeed in challenging courses.",
+      university_description:
+        "Public university with a strong academic support system and peer tutoring initiatives.",
+    },
+  ],
+  ethicsAndPhilosophyClubs: [
+    {
+      name: "Harvard Philosophy Society",
+      university: "Harvard University",
+      club_description:
+        "Explores philosophical questions and ethical issues through discussions and lectures, fostering a deeper understanding of various philosophical traditions.",
+      university_description:
+        "Private Ivy League university with a strong focus on academic excellence and intellectual exploration.",
+    },
+    {
+      name: "Stanford Ethics Club",
+      university: "Stanford University",
+      club_description:
+        "Engages in discussions on contemporary ethical issues and philosophical debates, promoting critical thinking and ethical reasoning.",
+      university_description:
+        "Private research university known for its emphasis on academic rigor and interdisciplinary studies.",
+    },
+    {
+      name: "Yale Philosophy Club",
+      university: "Yale University",
+      club_description:
+        "Provides a platform for students to explore philosophical theories and ethical dilemmas through debates and seminars.",
+      university_description:
+        "Private Ivy League university renowned for its academic strength and intellectual engagement.",
+    },
+    {
+      name: "Columbia University Ethics Society",
+      university: "Columbia University",
+      club_description:
+        "Focuses on ethical theory and its application to modern issues, encouraging thoughtful analysis and discussion.",
+      university_description:
+        "Private Ivy League institution with a commitment to academic excellence and ethical inquiry.",
+    },
+    {
+      name: "Princeton Philosophy Forum",
+      university: "Princeton University",
+      club_description:
+        "Offers a space for exploring philosophical questions and ethical challenges through lectures, discussions, and collaborative projects.",
+      university_description:
+        "Private Ivy League university with a strong emphasis on philosophical and ethical studies.",
+    },
+    {
+      name: "UC Berkeley Philosophy Club",
+      university: "University of California Berkeley",
+      club_description:
+        "Facilitates discussions on various philosophical topics and ethical issues, fostering a community of thoughtful inquiry.",
+      university_description:
+        "Public university with a commitment to intellectual exploration and academic rigor.",
+    },
+    {
+      name: "University of Michigan Philosophy Society",
+      university: "University of Michigan",
+      club_description:
+        "Provides opportunities for students to engage in philosophical discussions and explore ethical questions through workshops and seminars.",
+      university_description:
+        "Public research university known for its academic excellence and diverse intellectual community.",
+    },
+    {
+      name: "University of Chicago Ethics Club",
+      university: "University of Chicago",
+      club_description:
+        "Explores ethical theories and contemporary moral issues through debates, discussions, and guest lectures.",
+      university_description:
+        "Private research university with a strong focus on critical thinking and ethical analysis.",
+    },
+    {
+      name: "University of Pennsylvania Philosophy Club",
+      university: "University of Pennsylvania",
+      club_description:
+        "Offers a forum for discussing philosophical ideas and ethical dilemmas, promoting rigorous analysis and intellectual exchange.",
+      university_description:
+        "Private Ivy League university with a commitment to philosophical and ethical studies.",
+    },
+    {
+      name: "Brown University Ethics Society",
+      university: "Brown University",
+      club_description:
+        "Encourages discussions on ethical issues and philosophical theories, providing a platform for thoughtful debate and analysis.",
+      university_description:
+        "Private Ivy League university known for its innovative approach to academic studies.",
+    },
+    {
+      name: "University of Texas Ethics Club",
+      university: "University of Texas at Austin",
+      club_description:
+        "Provides a space for students to explore ethical issues and philosophical questions through discussions and presentations.",
+      university_description:
+        "Public university with a strong commitment to academic excellence and interdisciplinary studies.",
+    },
+    {
+      name: "University of Florida Philosophy Society",
+      university: "University of Florida",
+      club_description:
+        "Offers discussions and seminars on philosophical theories and ethical issues, fostering a community of critical thinkers.",
+      university_description:
+        "Public university known for its comprehensive academic programs and intellectual engagement.",
+    },
+    {
+      name: "Cornell University Philosophy Club",
+      university: "Cornell University",
+      club_description:
+        "Focuses on philosophical debates and ethical discussions, providing a platform for exploring diverse philosophical traditions.",
+      university_description:
+        "Private Ivy League university with a strong emphasis on academic exploration and intellectual growth.",
+    },
+    {
+      name: "University of Southern California Ethics Club",
+      university: "University of Southern California",
+      club_description:
+        "Engages in discussions on ethical dilemmas and philosophical theories, promoting critical thinking and moral reasoning.",
+      university_description:
+        "Private research university with a commitment to interdisciplinary studies and ethical inquiry.",
+    },
+    {
+      name: "University of Virginia Philosophy Society",
+      university: "University of Virginia",
+      club_description:
+        "Provides a forum for philosophical discussions and ethical debates, encouraging thoughtful exploration of various theories.",
+      university_description:
+        "Public university known for its strong academic programs and intellectual community.",
+    },
+    {
+      name: "Duke University Ethics Club",
+      university: "Duke University",
+      club_description:
+        "Facilitates discussions on ethical issues and philosophical questions, promoting intellectual curiosity and critical thinking.",
+      university_description:
+        "Private research university with a strong focus on academic excellence and ethical inquiry.",
+    },
+    {
+      name: "UNC Chapel Hill Philosophy Club",
+      university: "University of North Carolina at Chapel Hill",
+      club_description:
+        "Offers opportunities for students to engage in philosophical discussions and explore ethical issues through seminars and workshops.",
+      university_description:
+        "Public university with a commitment to academic excellence and intellectual engagement.",
+    },
+    {
+      name: "Georgetown University Ethics Society",
+      university: "Georgetown University",
+      club_description:
+        "Encourages discussions on contemporary ethical issues and philosophical theories, fostering a community of critical thinkers.",
+      university_description:
+        "Private university with a strong focus on ethical studies and interdisciplinary research.",
+    },
+    {
+      name: "NYU Philosophy Club",
+      university: "New York University",
+      club_description:
+        "Provides a platform for philosophical discussions and ethical debates, promoting intellectual exploration and critical analysis.",
+      university_description:
+        "Private research university known for its emphasis on academic excellence and philosophical inquiry.",
+    },
+    {
+      name: "UCLA Ethics Society",
+      university: "University of California Los Angeles",
+      club_description:
+        "Offers a space for students to explore ethical theories and philosophical questions through discussions and lectures.",
+      university_description:
+        "Public university with a commitment to academic rigor and intellectual exploration.",
+    },
+    {
+      name: "University of Wisconsin Philosophy Club",
+      university: "University of Wisconsin-Madison",
+      club_description:
+        "Facilitates discussions on philosophical theories and ethical issues, promoting academic inquiry and critical thinking.",
+      university_description:
+        "Public university known for its strong academic support and intellectual community.",
+    },
+    {
+      name: "University of Washington Ethics Club",
+      university: "University of Washington",
+      club_description:
+        "Engages in discussions on ethical dilemmas and philosophical theories, encouraging thoughtful analysis and debate.",
+      university_description:
+        "Public university with a strong focus on academic excellence and interdisciplinary studies.",
+    },
+    {
+      name: "University of Miami Philosophy Society",
+      university: "University of Miami",
+      club_description:
+        "Provides opportunities for students to discuss philosophical ideas and ethical issues through seminars and workshops.",
+      university_description:
+        "Private research university with a commitment to academic rigor and intellectual growth.",
+    },
+    {
+      name: "University of Illinois Philosophy Club",
+      university: "University of Illinois Urbana-Champaign",
+      club_description:
+        "Offers discussions and lectures on philosophical theories and ethical questions, fostering a community of intellectual inquiry.",
+      university_description:
+        "Public university known for its strong academic programs and commitment to student engagement.",
+    },
+    {
+      name: "University of Minnesota Philosophy Society",
+      university: "University of Minnesota",
+      club_description:
+        "Encourages philosophical discussions and ethical debates, promoting critical thinking and intellectual exploration.",
+      university_description:
+        "Public university with a robust commitment to academic support and intellectual engagement.",
+    },
+    {
+      name: "University of Arizona Ethics Club",
+      university: "University of Arizona",
+      club_description:
+        "Provides a space for exploring ethical issues and philosophical theories through discussions and seminars.",
+      university_description:
+        "Public university with a strong focus on academic excellence and interdisciplinary studies.",
+    },
+    {
+      name: "UC San Diego Philosophy Club",
+      university: "University of California San Diego",
+      club_description:
+        "Facilitates discussions on philosophical ideas and ethical issues, promoting a community of critical thinkers.",
+      university_description:
+        "Public university with a strong commitment to academic support and intellectual engagement.",
+    },
+    {
+      name: "University of Colorado Ethics Society",
+      university: "University of Colorado Boulder",
+      club_description:
+        "Offers opportunities for students to explore ethical dilemmas and philosophical questions through discussions and lectures.",
+      university_description:
+        "Public university with a commitment to academic rigor and collaborative learning.",
+    },
+    {
+      name: "University of Notre Dame Philosophy Club",
+      university: "University of Notre Dame",
+      club_description:
+        "Encourages discussions on philosophical theories and ethical issues, fostering a community of thoughtful inquiry.",
+      university_description:
+        "Private research university with a strong emphasis on intellectual exploration and academic support.",
+    },
+    {
+      name: "Indiana University Philosophy Society",
+      university: "Indiana University Bloomington",
+      club_description:
+        "Provides a forum for philosophical discussions and ethical debates, promoting academic growth and critical thinking.",
+      university_description:
+        "Public university with a commitment to academic excellence and student engagement.",
+    },
+    {
+      name: "University of Maryland Ethics Club",
+      university: "University of Maryland",
+      club_description:
+        "Engages students in discussions on ethical issues and philosophical theories, promoting intellectual curiosity and critical analysis.",
+      university_description:
+        "Public university with a strong focus on academic support and interdisciplinary studies.",
+    },
+    {
+      name: "University of Pittsburgh Philosophy Society",
+      university: "University of Pittsburgh",
+      club_description:
+        "Offers discussions and seminars on philosophical theories and ethical questions, fostering a community of intellectual engagement.",
+      university_description:
+        "Public university known for its strong academic programs and commitment to student success.",
+    },
+    {
+      name: "University of Georgia Ethics Club",
+      university: "University of Georgia",
+      club_description:
+        "Facilitates discussions on philosophical ideas and ethical dilemmas, encouraging critical thinking and intellectual exploration.",
+      university_description:
+        "Public university with a strong commitment to academic excellence and collaborative learning.",
+    },
+    {
+      name: "Ohio State Philosophy Club",
+      university: "Ohio State University",
+      club_description:
+        "Provides a platform for discussing philosophical theories and ethical issues, promoting thoughtful analysis and debate.",
+      university_description:
+        "Public university with a robust academic support system and commitment to intellectual growth.",
+    },
+    {
+      name: "University of Iowa Philosophy Society",
+      university: "University of Iowa",
+      club_description:
+        "Encourages discussions on philosophical ideas and ethical dilemmas through seminars and workshops.",
+      university_description:
+        "Public university with a strong focus on academic support and student engagement.",
+    },
+    {
+      name: "University of Massachusetts Philosophy Club",
+      university: "University of Massachusetts Amherst",
+      club_description:
+        "Offers opportunities for students to explore philosophical theories and ethical questions through discussions and lectures.",
+      university_description:
+        "Public university known for its commitment to academic excellence and intellectual growth.",
+    },
+    {
+      name: "University of Connecticut Ethics Club",
+      university: "University of Connecticut",
+      club_description:
+        "Engages students in discussions on ethical issues and philosophical theories, promoting intellectual curiosity and critical thinking.",
+      university_description:
+        "Public university with a strong focus on academic support and interdisciplinary studies.",
+    },
+    {
+      name: "University of Rhode Island Philosophy Society",
+      university: "University of Rhode Island",
+      club_description:
+        "Provides a space for exploring philosophical ideas and ethical issues through discussions and seminars.",
+      university_description:
+        "Public university with a commitment to academic excellence and intellectual exploration.",
+    },
+    {
+      name: "University of Kansas Ethics Club",
+      university: "University of Kansas",
+      club_description:
+        "Facilitates discussions on philosophical theories and ethical questions, promoting a community of thoughtful inquiry.",
+      university_description:
+        "Public university known for its strong academic programs and commitment to student success.",
+    },
+    {
+      name: "University of Delaware Philosophy Club",
+      university: "University of Delaware",
+      club_description:
+        "Offers opportunities for philosophical discussions and ethical debates, fostering intellectual engagement and critical thinking.",
+      university_description:
+        "Public university with a strong focus on academic support and interdisciplinary research.",
+    },
+    {
+      name: "University of Oregon Ethics Society",
+      university: "University of Oregon",
+      club_description:
+        "Encourages discussions on ethical issues and philosophical theories, promoting a community of critical thinkers.",
+      university_description:
+        "Public university with a commitment to academic excellence and collaborative learning.",
+    },
+    {
+      name: "University of Nevada Philosophy Club",
+      university: "University of Nevada, Reno",
+      club_description:
+        "Provides a platform for exploring philosophical ideas and ethical dilemmas through discussions and seminars.",
+      university_description:
+        "Public university known for its strong academic programs and intellectual community.",
+    },
+    {
+      name: "University of San Diego Ethics Club",
+      university: "University of San Diego",
+      club_description:
+        "Facilitates discussions on ethical issues and philosophical questions, promoting thoughtful analysis and intellectual engagement.",
+      university_description:
+        "Private university with a strong emphasis on academic excellence and ethical inquiry.",
+    },
+    {
+      name: "University of South Florida Philosophy Society",
+      university: "University of South Florida",
+      club_description:
+        "Offers opportunities for philosophical discussions and ethical debates, fostering a community of critical thinkers.",
+      university_description:
+        "Public university with a commitment to academic rigor and intellectual exploration.",
+    },
+    {
+      name: "University of Tulsa Ethics Club",
+      university: "University of Tulsa",
+      club_description:
+        "Engages in discussions on ethical issues and philosophical theories, encouraging thoughtful analysis and debate.",
+      university_description:
+        "Private university with a strong focus on academic support and intellectual growth.",
+    },
+    {
+      name: "University of New Mexico Philosophy Society",
+      university: "University of New Mexico",
+      club_description:
+        "Provides a forum for exploring philosophical ideas and ethical questions through discussions and seminars.",
+      university_description:
+        "Public university with a commitment to academic excellence and interdisciplinary studies.",
+    },
+    {
+      name: "University of Alabama Philosophy Club",
+      university: "University of Alabama",
+      club_description:
+        "Facilitates discussions on philosophical theories and ethical issues, promoting a community of intellectual inquiry.",
+      university_description:
+        "Public university known for its strong academic programs and commitment to student success.",
+    },
+    {
+      name: "University of Wisconsin Ethics Society",
+      university: "University of Wisconsin-Madison",
+      club_description:
+        "Offers opportunities for students to explore ethical issues and philosophical theories through discussions and lectures.",
+      university_description:
+        "Public university with a robust commitment to academic support and intellectual engagement.",
+    },
+    {
+      name: "University of Montana Philosophy Club",
+      university: "University of Montana",
+      club_description:
+        "Encourages discussions on philosophical ideas and ethical dilemmas through seminars and workshops.",
+      university_description:
+        "Public university with a strong focus on academic excellence and collaborative learning.",
+    },
+    {
+      name: "University of Wyoming Ethics Club",
+      university: "University of Wyoming",
+      club_description:
+        "Provides a space for exploring philosophical theories and ethical questions through discussions and seminars.",
+      university_description:
+        "Public university known for its commitment to academic rigor and intellectual growth.",
+    },
+    {
+      name: "University of Maine Philosophy Society",
+      university: "University of Maine",
+      club_description:
+        "Facilitates discussions on philosophical theories and ethical issues, promoting a community of critical thinkers.",
+      university_description:
+        "Public university with a strong focus on academic support and student engagement.",
+    },
+    {
+      name: "University of Mississippi Ethics Club",
+      university: "University of Mississippi",
+      club_description:
+        "Offers a platform for exploring ethical issues and philosophical questions through discussions and lectures.",
+      university_description:
+        "Public university with a commitment to academic excellence and interdisciplinary studies.",
+    },
+  ],
+  travelClubs: [
+    {
+      name: "Travel Enthusiasts Club",
+      university: "University of California Berkeley",
+      club_description:
+        "Organizes trips and adventures around the world, focusing on cultural exploration and travel experiences.",
+      university_description:
+        "Public university known for its diverse academic programs and vibrant campus life.",
+    },
+    {
+      name: "Global Explorers Club",
+      university: "University of Michigan",
+      club_description:
+        "Facilitates student travel experiences with a focus on cultural exchange and global understanding.",
+      university_description:
+        "Public research university with a strong emphasis on academic excellence and student engagement.",
+    },
+    {
+      name: "Adventure Seekers Club",
+      university: "University of Texas at Austin",
+      club_description:
+        "Plans and executes exciting travel adventures, including hiking, camping, and international trips.",
+      university_description:
+        "Public university known for its commitment to academic rigor and diverse student body.",
+    },
+    {
+      name: "Wanderlust Society",
+      university: "University of Washington",
+      club_description:
+        "Offers opportunities for students to travel and explore new destinations, promoting global awareness and cultural appreciation.",
+      university_description:
+        "Public university with a strong focus on research and student engagement.",
+    },
+    {
+      name: "Travel Club",
+      university: "University of Florida",
+      club_description:
+        "Provides travel opportunities and organizes group trips for students interested in exploring new places and cultures.",
+      university_description:
+        "Public university known for its strong academic programs and vibrant campus activities.",
+    },
+    {
+      name: "International Travel Group",
+      university: "University of Pennsylvania",
+      club_description:
+        "Coordinates international trips and cultural exchanges, focusing on broadening students' global perspectives.",
+      university_description:
+        "Private Ivy League university with a commitment to academic excellence and global engagement.",
+    },
+    {
+      name: "Globetrotters Club",
+      university: "New York University",
+      club_description:
+        "Organizes travel experiences and cultural events to help students explore different parts of the world.",
+      university_description:
+        "Private research university known for its academic strength and global network.",
+    },
+    {
+      name: "Explore More Club",
+      university: "University of Southern California",
+      club_description:
+        "Plans and arranges travel adventures and excursions, encouraging students to experience new cultures and destinations.",
+      university_description:
+        "Private research university with a strong focus on student engagement and global opportunities.",
+    },
+    {
+      name: "Travel Enthusiasts Society",
+      university: "University of Chicago",
+      club_description:
+        "Facilitates travel experiences and cultural exploration through organized trips and events.",
+      university_description:
+        "Private research university known for its intellectual rigor and vibrant campus community.",
+    },
+    {
+      name: "Journey Club",
+      university: "Stanford University",
+      club_description:
+        "Offers opportunities for students to travel and explore new destinations, promoting a deeper understanding of global cultures.",
+      university_description:
+        "Private research university with a commitment to academic excellence and global engagement.",
+    },
+    {
+      name: "Global Adventures Club",
+      university: "University of California Los Angeles",
+      club_description:
+        "Coordinates trips and cultural excursions for students to explore new places and enhance global awareness.",
+      university_description:
+        "Public university known for its diverse academic programs and active campus life.",
+    },
+    {
+      name: "Discoverers Club",
+      university: "University of Wisconsin-Madison",
+      club_description:
+        "Organizes travel opportunities and cultural experiences for students interested in exploring different parts of the world.",
+      university_description:
+        "Public university with a strong focus on research and student engagement.",
+    },
+    {
+      name: "Travel Experience Club",
+      university: "University of North Carolina at Chapel Hill",
+      club_description:
+        "Facilitates student travel and exploration through organized trips and cultural activities.",
+      university_description:
+        "Public university known for its commitment to academic excellence and vibrant campus life.",
+    },
+    {
+      name: "Adventurers Club",
+      university: "University of Virginia",
+      club_description:
+        "Provides opportunities for students to engage in travel and adventure, promoting cultural exploration and global understanding.",
+      university_description:
+        "Public university with a strong focus on academic support and student activities.",
+    },
+    {
+      name: "Explore and Discover Club",
+      university: "Duke University",
+      club_description:
+        "Organizes trips and travel experiences for students, focusing on cultural exchange and global exploration.",
+      university_description:
+        "Private research university with a commitment to academic excellence and global engagement.",
+    },
+    {
+      name: "World Travelers Society",
+      university: "University of Arizona",
+      club_description:
+        "Facilitates travel and adventure opportunities for students, encouraging exploration and cultural understanding.",
+      university_description:
+        "Public university known for its strong academic programs and diverse student community.",
+    },
+    {
+      name: "Cultural Explorers Club",
+      university: "University of Illinois Urbana-Champaign",
+      club_description:
+        "Offers organized travel experiences and cultural activities to help students explore new destinations.",
+      university_description:
+        "Public university with a focus on research and student engagement.",
+    },
+    {
+      name: "Global Journeys Club",
+      university: "University of Minnesota",
+      club_description:
+        "Coordinates travel opportunities and cultural excursions for students interested in global exploration.",
+      university_description:
+        "Public university known for its academic strength and commitment to student success.",
+    },
+    {
+      name: "Travel and Culture Club",
+      university: "University of Colorado Boulder",
+      club_description:
+        "Organizes trips and cultural events to provide students with diverse travel experiences and global perspectives.",
+      university_description:
+        "Public university with a strong emphasis on academic excellence and intellectual engagement.",
+    },
+    {
+      name: "International Adventures Club",
+      university: "University of Oregon",
+      club_description:
+        "Facilitates student travel and adventure through organized trips and cultural activities.",
+      university_description:
+        "Public university known for its commitment to academic support and student engagement.",
+    },
+    {
+      name: "Voyagers Club",
+      university: "University of Connecticut",
+      club_description:
+        "Provides travel and exploration opportunities for students, promoting cultural exchange and global understanding.",
+      university_description:
+        "Public university with a focus on academic rigor and diverse student experiences.",
+    },
+    {
+      name: "World Explorers Society",
+      university: "University of Rhode Island",
+      club_description:
+        "Offers organized travel experiences and cultural events for students interested in exploring new destinations.",
+      university_description:
+        "Public university known for its academic programs and student engagement.",
+    },
+    {
+      name: "Global Horizons Club",
+      university: "University of Kansas",
+      club_description:
+        "Organizes travel adventures and cultural activities, promoting global awareness and exploration.",
+      university_description:
+        "Public university with a strong emphasis on academic support and student activities.",
+    },
+    {
+      name: "Journey Seekers Club",
+      university: "University of Alabama",
+      club_description:
+        "Facilitates travel experiences and cultural exploration through organized trips and events.",
+      university_description:
+        "Public university known for its commitment to academic excellence and student success.",
+    },
+    {
+      name: "Travel Ventures Club",
+      university: "University of South Florida",
+      club_description:
+        "Provides opportunities for students to engage in travel and adventure, promoting cultural understanding and global perspectives.",
+      university_description:
+        "Public university with a strong focus on academic rigor and student engagement.",
+    },
+    {
+      name: "Adventure Awaits Club",
+      university: "University of Miami",
+      club_description:
+        "Organizes trips and travel experiences for students, focusing on exploration and cultural exchange.",
+      university_description:
+        "Private research university known for its strong academic programs and vibrant campus life.",
+    },
+    {
+      name: "Cultural Journey Club",
+      university: "University of Pittsburgh",
+      club_description:
+        "Facilitates organized travel and cultural experiences for students interested in global exploration.",
+      university_description:
+        "Public university with a commitment to academic excellence and intellectual engagement.",
+    },
+    {
+      name: "Global Travel Club",
+      university: "University of Delaware",
+      club_description:
+        "Offers opportunities for students to explore new destinations and cultures through organized trips and events.",
+      university_description:
+        "Public university known for its strong academic support and vibrant campus life.",
+    },
+    {
+      name: "Explorers Club",
+      university: "University of San Diego",
+      club_description:
+        "Coordinates travel adventures and cultural excursions, promoting global awareness and exploration.",
+      university_description:
+        "Private university with a commitment to academic excellence and student engagement.",
+    },
+    {
+      name: "Wanderers Club",
+      university: "University of San Francisco",
+      club_description:
+        "Provides opportunities for travel and cultural exploration through organized trips and activities.",
+      university_description:
+        "Private university with a focus on academic support and student engagement.",
+    },
+    {
+      name: "Travel and Adventure Society",
+      university: "University of Hawaii",
+      club_description:
+        "Organizes travel experiences and adventures for students, fostering cultural understanding and exploration.",
+      university_description:
+        "Public university known for its commitment to academic excellence and diverse student community.",
+    },
+    {
+      name: "Journey Club",
+      university: "University of New Mexico",
+      club_description:
+        "Facilitates travel and exploration opportunities for students through organized trips and cultural activities.",
+      university_description:
+        "Public university with a strong focus on academic support and intellectual engagement.",
+    },
+    {
+      name: "Explorer Society",
+      university: "University of Montana",
+      club_description:
+        "Offers opportunities for students to engage in travel and adventure, promoting cultural exchange and global understanding.",
+      university_description:
+        "Public university known for its commitment to academic excellence and student success.",
+    },
+    {
+      name: "Travel and Culture Society",
+      university: "University of Wyoming",
+      club_description:
+        "Coordinates travel experiences and cultural events, fostering global awareness and exploration.",
+      university_description:
+        "Public university with a strong focus on academic support and student engagement.",
+    },
+    {
+      name: "Global Journeys Society",
+      university: "University of Maine",
+      club_description:
+        "Provides travel opportunities and cultural excursions for students interested in exploring new destinations.",
+      university_description:
+        "Public university known for its strong academic programs and commitment to student success.",
+    },
+    {
+      name: "International Travel Society",
+      university: "University of Alabama Birmingham",
+      club_description:
+        "Facilitates travel and adventure opportunities for students through organized trips and cultural activities.",
+      university_description:
+        "Public university with a focus on academic excellence and diverse student community.",
+    },
+    {
+      name: "Cultural Voyages Club",
+      university: "University of Mississippi",
+      club_description:
+        "Organizes travel experiences and cultural exploration opportunities for students.",
+      university_description:
+        "Public university known for its commitment to academic rigor and student engagement.",
+    },
+    {
+      name: "Global Adventure Club",
+      university: "University of Iowa",
+      club_description:
+        "Offers organized travel and cultural activities to provide students with diverse global experiences.",
+      university_description:
+        "Public university with a strong emphasis on academic excellence and student engagement.",
+    },
+    {
+      name: "Journey Seekers Society",
+      university: "University of Nebraska",
+      club_description:
+        "Coordinates travel adventures and cultural experiences, fostering global understanding and exploration.",
+      university_description:
+        "Public university known for its commitment to academic support and student activities.",
+    },
+    {
+      name: "Exploration Club",
+      university: "University of South Carolina",
+      club_description:
+        "Facilitates travel and cultural events for students, promoting global awareness and exploration.",
+      university_description:
+        "Public university with a strong focus on academic excellence and vibrant campus life.",
+    },
+    {
+      name: "Travel and Discovery Club",
+      university: "University of Tennessee",
+      club_description:
+        "Provides opportunities for students to engage in travel and adventure, promoting cultural exchange and global understanding.",
+      university_description:
+        "Public university known for its strong academic programs and student support.",
+    },
+    {
+      name: "Global Expedition Club",
+      university: "University of Arkansas",
+      club_description:
+        "Offers organized trips and cultural experiences for students interested in exploring new destinations.",
+      university_description:
+        "Public university with a commitment to academic rigor and student success.",
+    },
+    {
+      name: "Travel Enthusiasts Society",
+      university: "University of Oklahoma",
+      club_description:
+        "Facilitates travel and adventure opportunities through organized trips and cultural events.",
+      university_description:
+        "Public university known for its commitment to academic support and vibrant campus activities.",
+    },
+    {
+      name: "Journey Adventures Club",
+      university: "University of Kentucky",
+      club_description:
+        "Organizes travel experiences and cultural excursions for students, promoting global exploration and understanding.",
+      university_description:
+        "Public university with a strong focus on academic excellence and student engagement.",
+    },
+    {
+      name: "Global Explorers Society",
+      university: "University of Louisville",
+      club_description:
+        "Provides opportunities for travel and adventure through organized trips and cultural activities.",
+      university_description:
+        "Public university known for its commitment to academic rigor and vibrant campus life.",
+    },
+    {
+      name: "Adventure Seekers Society",
+      university: "University of Colorado Denver",
+      club_description:
+        "Facilitates travel and exploration opportunities for students through organized adventures and cultural events.",
+      university_description:
+        "Public university with a focus on academic excellence and diverse student experiences.",
+    },
+    {
+      name: "Wanderlust Society",
+      university: "University of Kansas",
+      club_description:
+        "Offers organized trips and travel experiences to help students explore new cultures and destinations.",
+      university_description:
+        "Public university known for its strong academic programs and student engagement.",
+    },
+    {
+      name: "Travel Opportunities Club",
+      university: "University of Georgia",
+      club_description:
+        "Coordinates travel and cultural experiences for students interested in global exploration and understanding.",
+      university_description:
+        "Public university with a strong focus on academic support and student success.",
+    },
+  ],
+  cosplayAndAnimeClubs: [
+    {
+      name: "Anime Club",
+      university: "University of California Los Angeles",
+      club_description:
+        "Hosts anime screenings, cosplay events, and discussions about anime and manga.",
+      university_description:
+        "Public university known for its diverse academic programs and vibrant campus life.",
+    },
+    {
+      name: "Cosplay Society",
+      university: "University of Texas at Austin",
+      club_description:
+        "Organizes cosplay meetups, conventions, and costume workshops for fans of anime and cosplay.",
+      university_description:
+        "Public university with a strong emphasis on academic excellence and student engagement.",
+    },
+    {
+      name: "Otaku Club",
+      university: "University of Washington",
+      club_description:
+        "Provides a space for anime and manga enthusiasts to gather, discuss, and participate in cosplay activities.",
+      university_description:
+        "Public university with a focus on research and a vibrant student community.",
+    },
+    {
+      name: "Anime Enthusiasts Club",
+      university: "University of Florida",
+      club_description:
+        "Hosts anime viewings, cosplay events, and anime-related activities for fans.",
+      university_description:
+        "Public university known for its strong academic programs and vibrant campus life.",
+    },
+    {
+      name: "Cosplay Creators Club",
+      university: "University of Michigan",
+      club_description:
+        "Facilitates cosplay creation and participates in conventions, including costume design workshops and events.",
+      university_description:
+        "Public research university with a focus on academic excellence and student engagement.",
+    },
+    {
+      name: "Manga and Anime Society",
+      university: "New York University",
+      club_description:
+        "Organizes anime screenings, manga discussions, and cosplay events for fans of Japanese pop culture.",
+      university_description:
+        "Private research university with a global network and diverse academic programs.",
+    },
+    {
+      name: "Anime and Cosplay Club",
+      university: "University of Southern California",
+      club_description:
+        "Provides opportunities for students to engage in anime viewings, cosplay activities, and fan discussions.",
+      university_description:
+        "Private research university known for its strong academic programs and vibrant campus life.",
+    },
+    {
+      name: "Anime Fans United",
+      university: "University of Chicago",
+      club_description:
+        "Hosts anime screenings, cosplay events, and discussions about Japanese culture and media.",
+      university_description:
+        "Private research university with a focus on intellectual rigor and student engagement.",
+    },
+    {
+      name: "Cosplay Enthusiasts Club",
+      university: "Stanford University",
+      club_description:
+        "Organizes cosplay events, anime viewings, and costume-making workshops for fans.",
+      university_description:
+        "Private research university with a commitment to academic excellence and diverse student activities.",
+    },
+    {
+      name: "Anime and Manga Club",
+      university: "University of California Berkeley",
+      club_description:
+        "Facilitates anime screenings, manga discussions, and cosplay events for fans.",
+      university_description:
+        "Public university known for its diverse academic programs and vibrant campus life.",
+    },
+    {
+      name: "Cosplay & Anime Society",
+      university: "University of Pennsylvania",
+      club_description:
+        "Hosts cosplay events, anime screenings, and fan discussions about Japanese media.",
+      university_description:
+        "Private Ivy League university with a strong focus on academic excellence and student engagement.",
+    },
+    {
+      name: "Anime Fanatics Club",
+      university: "University of Virginia",
+      club_description:
+        "Provides a space for anime fans to enjoy screenings, participate in cosplay events, and discuss manga.",
+      university_description:
+        "Public university known for its commitment to academic support and student activities.",
+    },
+    {
+      name: "Otaku Society",
+      university: "Duke University",
+      club_description:
+        "Organizes anime viewings, cosplay conventions, and discussions on anime and manga.",
+      university_description:
+        "Private research university with a commitment to academic excellence and global engagement.",
+    },
+    {
+      name: "Cosplay Club",
+      university: "University of Arizona",
+      club_description:
+        "Facilitates cosplay creation, anime screenings, and related activities for fans.",
+      university_description:
+        "Public university known for its strong academic programs and diverse student community.",
+    },
+    {
+      name: "Anime Club",
+      university: "University of Illinois Urbana-Champaign",
+      club_description:
+        "Hosts anime screenings, cosplay events, and discussions about Japanese culture and media.",
+      university_description:
+        "Public university with a strong focus on research and student engagement.",
+    },
+    {
+      name: "Manga Enthusiasts Club",
+      university: "University of Colorado Boulder",
+      club_description:
+        "Provides opportunities for students to engage in anime viewings, manga discussions, and cosplay activities.",
+      university_description:
+        "Public university known for its academic rigor and vibrant campus life.",
+    },
+    {
+      name: "Anime and Cosplay Society",
+      university: "University of Oregon",
+      club_description:
+        "Organizes anime screenings, cosplay events, and fan discussions for enthusiasts.",
+      university_description:
+        "Public university with a commitment to student engagement and academic excellence.",
+    },
+    {
+      name: "Cosplay Creators Society",
+      university: "University of North Carolina at Chapel Hill",
+      club_description:
+        "Facilitates cosplay creation and participation in conventions, with a focus on costume design and anime fandom.",
+      university_description:
+        "Public university known for its vibrant campus life and academic support.",
+    },
+    {
+      name: "Anime Enthusiasts Society",
+      university: "University of Wisconsin-Madison",
+      club_description:
+        "Hosts anime screenings, cosplay events, and fan discussions about anime and manga.",
+      university_description:
+        "Public university with a strong focus on research and student activities.",
+    },
+    {
+      name: "Otaku Club",
+      university: "University of Miami",
+      club_description:
+        "Organizes anime viewings, cosplay events, and related activities for fans of Japanese media.",
+      university_description:
+        "Private research university known for its vibrant campus life and academic excellence.",
+    },
+    {
+      name: "Anime & Manga Club",
+      university: "University of Minnesota",
+      club_description:
+        "Provides opportunities for students to enjoy anime screenings, participate in cosplay, and discuss manga.",
+      university_description:
+        "Public university with a strong emphasis on academic support and student engagement.",
+    },
+    {
+      name: "Cosplay Enthusiasts Society",
+      university: "University of South Florida",
+      club_description:
+        "Facilitates cosplay creation, anime screenings, and fan discussions for enthusiasts.",
+      university_description:
+        "Public university known for its commitment to academic rigor and vibrant campus life.",
+    },
+    {
+      name: "Anime and Cosplay Club",
+      university: "University of Pittsburgh",
+      club_description:
+        "Hosts anime viewings, cosplay events, and discussions on Japanese culture and media.",
+      university_description:
+        "Public university with a strong focus on academic excellence and student success.",
+    },
+    {
+      name: "Manga and Anime Enthusiasts Club",
+      university: "University of Delaware",
+      club_description:
+        "Organizes anime screenings, cosplay conventions, and discussions about Japanese media.",
+      university_description:
+        "Public university known for its commitment to academic rigor and vibrant campus activities.",
+    },
+    {
+      name: "Anime Society",
+      university: "University of Rhode Island",
+      club_description:
+        "Provides opportunities for anime fans to enjoy screenings, cosplay events, and discussions.",
+      university_description:
+        "Public university with a strong focus on student engagement and academic support.",
+    },
+    {
+      name: "Cosplay Club",
+      university: "University of Kansas",
+      club_description:
+        "Facilitates cosplay creation and participation in conventions, with a focus on anime fandom.",
+      university_description:
+        "Public university known for its commitment to academic excellence and student activities.",
+    },
+    {
+      name: "Anime and Manga Society",
+      university: "University of Alabama",
+      club_description:
+        "Organizes anime viewings, cosplay events, and discussions about Japanese pop culture.",
+      university_description:
+        "Public university with a strong focus on student success and academic rigor.",
+    },
+    {
+      name: "Cosplay Enthusiasts Club",
+      university: "University of Kentucky",
+      club_description:
+        "Hosts cosplay events, anime screenings, and fan discussions about Japanese media.",
+      university_description:
+        "Public university known for its commitment to academic excellence and student engagement.",
+    },
+    {
+      name: "Anime & Manga Enthusiasts Club",
+      university: "University of Arkansas",
+      club_description:
+        "Provides opportunities for students to engage in anime viewings, cosplay activities, and manga discussions.",
+      university_description:
+        "Public university with a strong focus on academic rigor and student support.",
+    },
+    {
+      name: "Cosplay Creators Club",
+      university: "University of South Carolina",
+      club_description:
+        "Organizes cosplay creation workshops, anime screenings, and related activities for fans.",
+      university_description:
+        "Public university known for its commitment to student success and academic excellence.",
+    },
+    {
+      name: "Anime and Cosplay Club",
+      university: "University of Tennessee",
+      club_description:
+        "Facilitates anime viewings, cosplay events, and discussions about Japanese pop culture.",
+      university_description:
+        "Public university with a focus on academic rigor and student engagement.",
+    },
+    {
+      name: "Manga Club",
+      university: "University of Nebraska",
+      club_description:
+        "Hosts anime screenings, manga discussions, and cosplay events for fans of Japanese media.",
+      university_description:
+        "Public university known for its commitment to academic support and vibrant campus life.",
+    },
+    {
+      name: "Anime Enthusiasts Society",
+      university: "University of Montana",
+      club_description:
+        "Provides opportunities for students to enjoy anime viewings, participate in cosplay, and discuss manga.",
+      university_description:
+        "Public university with a strong emphasis on academic excellence and student engagement.",
+    },
+    {
+      name: "Cosplay Society",
+      university: "University of Wyoming",
+      club_description:
+        "Organizes cosplay events and anime screenings, focusing on Japanese pop culture and costume creation.",
+      university_description:
+        "Public university known for its commitment to academic support and vibrant campus activities.",
+    },
+    {
+      name: "Anime Club",
+      university: "University of Maine",
+      club_description:
+        "Facilitates anime viewings, cosplay events, and fan discussions about Japanese media.",
+      university_description:
+        "Public university with a strong focus on academic excellence and student engagement.",
+    },
+    {
+      name: "Cosplay and Anime Society",
+      university: "University of Mississippi",
+      club_description:
+        "Hosts anime screenings, cosplay events, and discussions on Japanese pop culture and media.",
+      university_description:
+        "Public university known for its strong academic programs and vibrant campus life.",
+    },
+    {
+      name: "Anime & Cosplay Club",
+      university: "University of Oregon",
+      club_description:
+        "Provides opportunities for students to engage in anime viewings, cosplay activities, and manga discussions.",
+      university_description:
+        "Public university with a focus on academic support and student success.",
+    },
+    {
+      name: "Manga Enthusiasts Club",
+      university: "University of Idaho",
+      club_description:
+        "Organizes anime screenings, cosplay events, and discussions on Japanese culture and media.",
+      university_description:
+        "Public university known for its commitment to academic rigor and student engagement.",
+    },
+    {
+      name: "Anime Club",
+      university: "University of Nevada",
+      club_description:
+        "Hosts anime viewings, cosplay events, and fan discussions about Japanese media and culture.",
+      university_description:
+        "Public university with a strong emphasis on academic support and student activities.",
+    },
+    {
+      name: "Cosplay & Anime Society",
+      university: "University of California San Diego",
+      club_description:
+        "Facilitates anime viewings, cosplay creation, and fan discussions about Japanese pop culture.",
+      university_description:
+        "Public university known for its research focus and vibrant student community.",
+    },
+    {
+      name: "Anime and Manga Enthusiasts Club",
+      university: "University of Connecticut",
+      club_description:
+        "Provides opportunities for students to enjoy anime screenings, participate in cosplay, and discuss manga.",
+      university_description:
+        "Public university with a commitment to academic excellence and student support.",
+    },
+    {
+      name: "Cosplay Club",
+      university: "University of Wisconsin-Milwaukee",
+      club_description:
+        "Organizes cosplay events, anime viewings, and discussions on Japanese media and culture.",
+      university_description:
+        "Public university with a strong focus on academic rigor and vibrant campus life.",
+    },
+    {
+      name: "Anime Enthusiasts Club",
+      university: "University of Alabama at Birmingham",
+      club_description:
+        "Hosts anime screenings, cosplay events, and fan discussions about Japanese media.",
+      university_description:
+        "Public university known for its commitment to academic support and student engagement.",
+    },
+    {
+      name: "Cosplay Creators Society",
+      university: "University of South Dakota",
+      club_description:
+        "Facilitates cosplay creation and participation in conventions, with a focus on anime fandom.",
+      university_description:
+        "Public university with a strong emphasis on student success and academic excellence.",
+    },
+    {
+      name: "Anime Club",
+      university: "University of North Dakota",
+      club_description:
+        "Organizes anime screenings, cosplay events, and discussions on Japanese pop culture.",
+      university_description:
+        "Public university known for its commitment to academic rigor and student support.",
+    },
+    {
+      name: "Cosplay and Anime Enthusiasts Club",
+      university: "University of New Mexico",
+      club_description:
+        "Provides opportunities for students to engage in anime viewings, cosplay activities, and manga discussions.",
+      university_description:
+        "Public university with a focus on academic excellence and vibrant campus life.",
+    },
+  ],
+  diyclubs: [
+    {
+      name: "DIY Club",
+      university: "University of California Los Angeles",
+      club_description:
+        "Organizes workshops and events focused on DIY projects and crafting.",
+      university_description:
+        "Public university known for its innovative programs and diverse student community.",
+    },
+    {
+      name: "Crafting Club",
+      university: "University of Texas at Austin",
+      club_description:
+        "Hosts events for crafting, DIY projects, and hands-on creative activities.",
+      university_description:
+        "Public university with a vibrant campus life and strong academic programs.",
+    },
+    {
+      name: "DIY Enthusiasts Society",
+      university: "University of Washington",
+      club_description:
+        "Provides resources and workshops for students interested in various DIY projects.",
+      university_description:
+        "Public university known for its research and diverse student body.",
+    },
+    {
+      name: "Creative DIY Club",
+      university: "University of Florida",
+      club_description:
+        "Facilitates DIY projects, crafting sessions, and creative workshops for students.",
+      university_description:
+        "Public university with a strong focus on academic excellence and student engagement.",
+    },
+    {
+      name: "DIY Makers Club",
+      university: "University of Michigan",
+      club_description:
+        "Organizes hands-on workshops and DIY project events for students.",
+      university_description:
+        "Public research university known for its academic rigor and vibrant student community.",
+    },
+    {
+      name: "DIY Arts Club",
+      university: "New York University",
+      club_description:
+        "Hosts creative workshops and events focused on various DIY arts and crafts.",
+      university_description:
+        "Private university with a global network and strong emphasis on creative arts.",
+    },
+    {
+      name: "DIY Projects Society",
+      university: "University of Southern California",
+      club_description:
+        "Provides opportunities for students to engage in DIY projects and creative workshops.",
+      university_description:
+        "Private research university with a focus on academic excellence and student activities.",
+    },
+    {
+      name: "Crafts and DIY Club",
+      university: "University of Chicago",
+      club_description:
+        "Organizes crafting sessions, DIY workshops, and project events.",
+      university_description:
+        "Private university with a commitment to academic rigor and student engagement.",
+    },
+    {
+      name: "DIY Creative Club",
+      university: "Stanford University",
+      club_description:
+        "Facilitates DIY projects and creative workshops, including crafting and hands-on activities.",
+      university_description:
+        "Private research university known for its innovation and strong academic programs.",
+    },
+    {
+      name: "DIY and Crafts Society",
+      university: "University of California Berkeley",
+      club_description:
+        "Hosts DIY workshops, crafting events, and creative project sessions for students.",
+      university_description:
+        "Public university with a diverse academic environment and active student life.",
+    },
+    {
+      name: "DIY Makers Society",
+      university: "University of Pennsylvania",
+      club_description:
+        "Organizes DIY project workshops, crafting sessions, and creative events.",
+      university_description:
+        "Private Ivy League university with a focus on academic excellence and student activities.",
+    },
+    {
+      name: "DIY Enthusiasts Club",
+      university: "University of Virginia",
+      club_description:
+        "Provides opportunities for students to participate in DIY projects and creative workshops.",
+      university_description:
+        "Public university known for its commitment to academic support and vibrant campus life.",
+    },
+    {
+      name: "DIY Projects Club",
+      university: "Duke University",
+      club_description:
+        "Facilitates workshops and events for various DIY projects and crafts.",
+      university_description:
+        "Private research university with a strong emphasis on academic excellence and student engagement.",
+    },
+    {
+      name: "Crafting Enthusiasts Club",
+      university: "University of Arizona",
+      club_description:
+        "Organizes crafting sessions, DIY workshops, and creative project events.",
+      university_description:
+        "Public university known for its strong academic programs and vibrant campus community.",
+    },
+    {
+      name: "DIY Arts and Crafts Society",
+      university: "University of Illinois Urbana-Champaign",
+      club_description:
+        "Hosts DIY project events, crafting workshops, and creative sessions.",
+      university_description:
+        "Public university with a focus on research and student engagement.",
+    },
+    {
+      name: "Creative DIY Club",
+      university: "University of Colorado Boulder",
+      club_description:
+        "Provides resources for DIY projects, crafting sessions, and creative activities.",
+      university_description:
+        "Public university known for its commitment to academic rigor and student life.",
+    },
+    {
+      name: "DIY Projects and Crafts Club",
+      university: "University of Oregon",
+      club_description:
+        "Organizes DIY workshops, crafting events, and creative project sessions.",
+      university_description:
+        "Public university with a focus on student engagement and academic support.",
+    },
+    {
+      name: "DIY Creators Society",
+      university: "University of North Carolina at Chapel Hill",
+      club_description:
+        "Facilitates DIY project creation and hands-on workshops for students.",
+      university_description:
+        "Public university known for its strong academic programs and vibrant campus life.",
+    },
+    {
+      name: "DIY and Crafting Club",
+      university: "University of Wisconsin-Madison",
+      club_description:
+        "Hosts DIY workshops, crafting sessions, and creative events for students.",
+      university_description:
+        "Public university with a focus on research and student activities.",
+    },
+    {
+      name: "Creative Projects Club",
+      university: "University of Miami",
+      club_description:
+        "Organizes DIY events, crafting workshops, and creative sessions for students.",
+      university_description:
+        "Private research university with a commitment to academic excellence and student engagement.",
+    },
+    {
+      name: "DIY and Arts Club",
+      university: "University of Minnesota",
+      club_description:
+        "Provides opportunities for students to engage in DIY projects, crafting, and creative activities.",
+      university_description:
+        "Public university known for its strong academic programs and vibrant student community.",
+    },
+    {
+      name: "DIY Crafting Society",
+      university: "University of South Florida",
+      club_description:
+        "Facilitates DIY project creation, crafting workshops, and creative events.",
+      university_description:
+        "Public university with a focus on academic excellence and student engagement.",
+    },
+    {
+      name: "DIY Arts Enthusiasts Club",
+      university: "University of Pittsburgh",
+      club_description:
+        "Hosts DIY projects, crafting events, and creative workshops for students.",
+      university_description:
+        "Public university known for its commitment to academic rigor and vibrant campus life.",
+    },
+    {
+      name: "Craft and DIY Club",
+      university: "University of Delaware",
+      club_description:
+        "Organizes crafting sessions, DIY workshops, and creative project events.",
+      university_description:
+        "Public university with a strong focus on academic support and student activities.",
+    },
+    {
+      name: "DIY Club",
+      university: "University of Rhode Island",
+      club_description:
+        "Provides opportunities for students to engage in DIY projects and creative workshops.",
+      university_description:
+        "Public university with a commitment to academic excellence and student engagement.",
+    },
+    {
+      name: "Creative DIY Society",
+      university: "University of Kansas",
+      club_description:
+        "Hosts DIY project events, crafting sessions, and creative workshops for students.",
+      university_description:
+        "Public university known for its strong academic programs and vibrant campus community.",
+    },
+    {
+      name: "DIY Makers Club",
+      university: "University of Kentucky",
+      club_description:
+        "Facilitates DIY project creation, crafting events, and creative workshops.",
+      university_description:
+        "Public university with a focus on academic support and student activities.",
+    },
+    {
+      name: "DIY and Creative Arts Club",
+      university: "University of Arkansas",
+      club_description:
+        "Organizes DIY projects, crafting sessions, and creative events for students.",
+      university_description:
+        "Public university known for its commitment to academic excellence and vibrant student life.",
+    },
+    {
+      name: "Crafts and DIY Society",
+      university: "University of South Carolina",
+      club_description:
+        "Hosts DIY workshops, crafting sessions, and creative project events.",
+      university_description:
+        "Public university with a strong focus on student success and academic support.",
+    },
+    {
+      name: "DIY Creative Club",
+      university: "University of Tennessee",
+      club_description:
+        "Provides opportunities for students to engage in DIY projects and crafting activities.",
+      university_description:
+        "Public university known for its commitment to academic rigor and vibrant campus life.",
+    },
+    {
+      name: "DIY Projects Enthusiasts Club",
+      university: "University of Nebraska",
+      club_description:
+        "Organizes DIY project workshops, crafting events, and creative sessions.",
+      university_description:
+        "Public university with a strong focus on academic support and student engagement.",
+    },
+    {
+      name: "DIY Arts and Crafts Club",
+      university: "University of Montana",
+      club_description:
+        "Facilitates DIY projects, crafting workshops, and creative events for students.",
+      university_description:
+        "Public university known for its commitment to academic excellence and student support.",
+    },
+    {
+      name: "Crafting and DIY Club",
+      university: "University of Wyoming",
+      club_description:
+        "Hosts DIY workshops, crafting sessions, and creative activities for students.",
+      university_description:
+        "Public university with a focus on academic rigor and vibrant campus life.",
+    },
+    {
+      name: "DIY and Crafting Society",
+      university: "University of Maine",
+      club_description:
+        "Provides resources and events for students interested in DIY projects and crafting.",
+      university_description:
+        "Public university with a commitment to academic excellence and student engagement.",
+    },
+    {
+      name: "Creative DIY Enthusiasts Club",
+      university: "University of Mississippi",
+      club_description:
+        "Organizes DIY project events, crafting workshops, and creative sessions.",
+      university_description:
+        "Public university known for its strong academic programs and vibrant student life.",
+    },
+    {
+      name: "DIY and Craft Club",
+      university: "University of Oregon",
+      club_description:
+        "Facilitates DIY projects, crafting events, and creative activities for students.",
+      university_description:
+        "Public university with a strong focus on student success and academic support.",
+    },
+    {
+      name: "DIY Creators Club",
+      university: "University of New Mexico",
+      club_description:
+        "Hosts DIY workshops, crafting sessions, and creative projects for students.",
+      university_description:
+        "Public university known for its commitment to academic excellence and vibrant campus activities.",
+    },
+  ],
   boardGameClubs: [],
   chessClubs: [],
   sustainabilityClubs: [],
@@ -14011,10 +17012,6 @@ export const clubExamples = {
   carClubs: [],
   recyclingClubs: [],
 };
-
-export const groupTypes = [];
-
-export const groupExamples = [];
 
 export const universityEnvironmentData = {
   bustlingCities: [

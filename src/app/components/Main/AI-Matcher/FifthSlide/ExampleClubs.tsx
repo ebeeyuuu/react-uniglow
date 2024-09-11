@@ -1,5 +1,4 @@
-import React from "react";
-import { clubExamples } from "@/data";
+import React, { useMemo } from "react";
 
 interface Club {
   name: string;
@@ -13,33 +12,46 @@ interface ClubExamples {
 }
 
 interface ExampleClubsProps {
-  clubsList: ClubExamples[];
+  clubsList: ClubExamples;
+  selectedTypes: string[];
 }
 
-const ExampleClubs: React.FC<ExampleClubsProps> = ({ clubsList }) => {
+const convertTypeToKey = (type: string): string => {
+  return type
+    .toLowerCase()
+    .replace(/\s+/g, "") // Remove spaces
+    .replace(/clubs?$/i, "Clubs"); // Ensure it ends with 'Clubs'
+};
+
+const ExampleClubs: React.FC<ExampleClubsProps> = ({
+  clubsList,
+  selectedTypes,
+}) => {
+  const filteredClubsList = useMemo(() => {
+    if (selectedTypes.length === 0) return clubsList;
+
+    const convertedTypes = selectedTypes.map(convertTypeToKey);
+
+    return Object.fromEntries(
+      Object.entries(clubsList).filter(([section]) =>
+        convertedTypes.includes(section),
+      ),
+    );
+  }, [clubsList, selectedTypes]);
+
+  console.log("Selected Types:", selectedTypes);
+  console.log("Converted Types:", selectedTypes.map(convertTypeToKey));
+  console.log("Filtered Clubs List:", filteredClubsList);
+
   return (
     <div className="w-full h-full flex justify-center items-center relative overflow-y-auto overflow-x-hidden scrollbar-hide">
       <div className="absolute top-0 left-0 grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6">
-        {Object.entries(clubsList).map(([section, clubs]) => (
+        {Object.entries(filteredClubsList).map(([section, clubs]) => (
           <div
             key={section}
             className="selection min-h-[500px] flex justify-center border rounded-xl p-10 flex-col gap-4 text-wrap"
           >
             <div className="text-lg font-bold">{section}</div>
-            <div>
-              {clubs.map((club, index) => (
-                <div className="flex flex-col mb-8 gap-2" key={index}>
-                  <div className="text-lg font-semibold">{club.name}</div>
-                  <div className="text-base font-medium">{club.university}</div>
-                  <div className="text-xs font-light">
-                    {club.club_description}
-                  </div>
-                  <div className="text-xs font-light">
-                    {club.university_description}
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
         ))}
       </div>

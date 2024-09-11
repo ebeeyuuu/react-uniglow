@@ -15,6 +15,8 @@ const FifthSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
   const [animateIntroText, setAnimateIntroText] = useState(true);
   const [showExampleClubs, setShowExampleClubs] = useState(false);
 
+  const [selectedClubTypes, setSelectedClubTypes] = useState<string[]>([]);
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setAnimateTypeClubs(true);
@@ -24,7 +26,8 @@ const FifthSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
     return () => clearTimeout(timer);
   }, []);
 
-  const typeClubsConfirm = useCallback(() => {
+  const typeClubsConfirm = useCallback((selectedTypes: string[]) => {
+    setSelectedClubTypes(selectedTypes);
     setAnimateTypeClubs(false);
     setAnimateIntroText(false);
     setShowExampleClubs(true);
@@ -65,7 +68,10 @@ const FifthSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
             animate={{ x: 0 }}
             transition={{ duration: 0.8, ease: "easeInOut" }}
           >
-            <ExampleClubs clubsList={clubExamples} />
+            <ExampleClubs
+              clubsList={clubExamples}
+              selectedTypes={selectedClubTypes}
+            />
           </motion.div>
         </AnimatePresence>
       )}

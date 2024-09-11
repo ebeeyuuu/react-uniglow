@@ -11,7 +11,7 @@ type Club = {
 
 interface TypeClubsProps {
   clubTypes: Club[];
-  onConfirm: () => void;
+  onConfirm: (selectedTypes: string[]) => void;
 }
 
 const TypeClubs: React.FC<TypeClubsProps> = ({ clubTypes, onConfirm }) => {
@@ -34,6 +34,8 @@ const TypeClubs: React.FC<TypeClubsProps> = ({ clubTypes, onConfirm }) => {
     }
     return 2;
   };
+
+  console.log(clubTypes);
 
   const columnCount = getColumnCount();
 
@@ -63,6 +65,13 @@ const TypeClubs: React.FC<TypeClubsProps> = ({ clubTypes, onConfirm }) => {
 
     return layout;
   }, [clubTypes, columnCount]);
+
+  const handleConfirm = () => {
+    const selectedTypes = clubTypes
+      .filter((_, index) => selectedCards[index])
+      .map((club) => club.type);
+    onConfirm(selectedTypes);
+  };
 
   return (
     <div
@@ -98,7 +107,7 @@ const TypeClubs: React.FC<TypeClubsProps> = ({ clubTypes, onConfirm }) => {
         <TypeClubsCounter
           totalCount={clubTypes.length}
           count={selectedCards.filter(Boolean).length}
-          onConfirm={onConfirm}
+          onConfirm={handleConfirm}
         />
       </div>
     </div>

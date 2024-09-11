@@ -23,6 +23,14 @@ const convertTypeToKey = (type: string): string => {
     .replace(/clubs?$/i, "Clubs"); // Ensure it ends with 'Clubs'
 };
 
+const convertKeyToDisplayName = (key: string): string => {
+  const words = key.replace(/([A-Z])/g, " $1").trim();
+  return words
+    .split(" ")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+};
+
 const ExampleClubs: React.FC<ExampleClubsProps> = ({
   clubsList,
   selectedTypes,
@@ -51,7 +59,9 @@ const ExampleClubs: React.FC<ExampleClubsProps> = ({
             key={section}
             className="selection min-h-[500px] flex justify-center border rounded-xl p-10 flex-col gap-4 text-wrap"
           >
-            <div className="text-lg font-bold">{section}</div>
+            <div className="text-lg font-bold">
+              {convertKeyToDisplayName(section)}
+            </div>
           </div>
         ))}
       </div>

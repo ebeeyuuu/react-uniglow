@@ -75,8 +75,8 @@ const ExampleClubs: React.FC<ExampleClubsProps> = ({
   };
 
   return (
-    <div className="w-full h-full relative overflow-hidden">
-      <div className="grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6">
+    <div className="w-full h-full overflow-hidden flex justify-center items-center p-8">
+      <div className="grid gap-2 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6">
         {Object.entries(filteredClubsList).map(([section, clubs]) => (
           <motion.div
             key={section}
@@ -114,7 +114,7 @@ const ExampleClubs: React.FC<ExampleClubsProps> = ({
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.3, delay: 0.5 }}
-                className="text-lg font-bold text-center"
+                className="text-2xl p-20 font-bold text-center"
               >
                 {convertKeyToDisplayName(section)}
               </motion.div>
@@ -128,25 +128,42 @@ const ExampleClubs: React.FC<ExampleClubsProps> = ({
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.3 }}
-                    className="w-full h-full overflow-y-auto scrollbar-hide p-8"
+                    className="w-full h-full overflow-y-auto scrollbar-hide p-12"
                   >
-                    <h2 className="text-2xl font-bold mb-6">
+                    <h2 className="text-4xl font-bold mb-10">
                       {convertKeyToDisplayName(section)}
                     </h2>
-                    {clubs.map((club, index) => (
-                      <div className="flex flex-col mb-8 gap-2" key={index}>
-                        <div className="text-lg font-semibold">{club.name}</div>
-                        <div className="text-backgroundColor">
-                          {club.club_description}
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6">
+                      {clubs.map((club, index) => (
+                        <div
+                          className="flex flex-col border border-gray-500 p-10 rounded-xl"
+                          key={index}
+                        >
+                          {/* Wrapping the club and university sections and applying divide-y here */}
+                          <div className="divide-y divide-gray-500">
+                            <div className="pb-6">
+                              {/* Club Section */}
+                              <div className="text-xl font-semibold">
+                                {club.name}
+                              </div>
+                              <div className="text-lg font-light text-gray-300">
+                                {club.club_description}
+                              </div>
+                            </div>
+
+                            <div className="pt-6">
+                              {/* University Section */}
+                              <div className="text-xl font-semibold">
+                                {club.university}
+                              </div>
+                              <div className="text-lg font-light text-gray-300">
+                                {club.university_description}
+                              </div>
+                            </div>
+                          </div>
                         </div>
-                        <div className="text-base font-medium">
-                          {club.university}
-                        </div>
-                        <div className="text-xs font-light">
-                          {club.university_description}
-                        </div>
-                      </div>
-                    ))}
+                      ))}
+                    </div>
                     <button
                       onClick={(e) => {
                         e.stopPropagation();

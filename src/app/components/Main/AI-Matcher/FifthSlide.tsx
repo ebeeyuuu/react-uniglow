@@ -63,7 +63,7 @@ const FifthSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
       {showExampleClubs && (
         <AnimatePresence>
           <motion.div
-            className="absolute top-0 left-0 w-full h-full"
+            className="absolute w-full h-full"
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
             transition={{ duration: 0.8, ease: "easeInOut" }}

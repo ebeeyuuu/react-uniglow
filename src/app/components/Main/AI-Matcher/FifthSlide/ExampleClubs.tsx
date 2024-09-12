@@ -32,12 +32,18 @@ const convertKeyToDisplayName = (key: string): string => {
     .join(" ");
 };
 
+const borderVariants = {
+  expanded: { borderColor: "#000000" },
+  collapsed: { borderColor: "#FFFFFF" },
+};
+
 const ExampleClubs: React.FC<ExampleClubsProps> = ({
   clubsList,
   selectedTypes,
 }) => {
   const [expandedSection, setExpandedSection] = useState<string | null>(null);
   const [showContent, setShowContent] = useState(false);
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   const filteredClubsList = useMemo(() => {
     if (selectedTypes.length === 0) return clubsList;
@@ -52,13 +58,19 @@ const ExampleClubs: React.FC<ExampleClubsProps> = ({
   }, [clubsList, selectedTypes]);
 
   const handleExpand = (section: string) => {
+    setIsTransitioning(true);
     if (expandedSection === section) {
       setShowContent(false);
-      setTimeout(() => setExpandedSection(null), 300); // Close after content fade out
+      setTimeout(() => {
+        setExpandedSection(null);
+        setIsTransitioning(false);
+      }, 300);
     } else {
-      setExpandedSection(section);
       setShowContent(false);
-      setTimeout(() => setShowContent(true), 500); // Show content after expansion animation
+      setTimeout(() => {
+        setExpandedSection(section);
+        setTimeout(() => setShowContent(true), 200);
+      }, 100);
     }
   };
 
@@ -73,20 +85,39 @@ const ExampleClubs: React.FC<ExampleClubsProps> = ({
             initial={false}
             animate={{
               zIndex: expandedSection === section ? 10 : 1,
+              scale: expandedSection === section ? 1 : 0.95,
+              ...borderVariants[
+              expandedSection === section ? "expanded" : "collapsed"
+              ],
             }}
-            transition={{ duration: 0.5 }}
-            className={`selection flex justify-center items-center border rounded-xl p-6 cursor-pointer
-              ${expandedSection === section ? "fixed inset-0 bg-black text-white" : "hover:scale-105"}
+            transition={{
+              type: "spring",
+              stiffness: 300,
+              damping: 30,
+              duration: 0.3,
+              borderColor: {
+                delay: expandedSection === section ? 0 : 0.5,
+                duration: 0.3,
+              },
+            }}
+            onLayoutAnimationComplete={() => setIsTransitioning(false)}
+            className={`selection flex justify-center items-center rounded-xl p-6 cursor-pointer
+              ${expandedSection === section ? "fixed inset-0 bg-black text-white border-2 border-black" : "hover:scale-105 border-2 border-white"}
             `}
             style={{
               width: expandedSection === section ? "100%" : "auto",
               height: expandedSection === section ? "100%" : "auto",
             }}
           >
-            {expandedSection !== section && (
-              <div className="text-lg font-bold text-center">
+            {expandedSection !== section && !isTransitioning && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.3, delay: 0.5 }}
+                className="text-lg font-bold text-center"
+              >
                 {convertKeyToDisplayName(section)}
-              </div>
+              </motion.div>
             )}
 
             {expandedSection === section && (

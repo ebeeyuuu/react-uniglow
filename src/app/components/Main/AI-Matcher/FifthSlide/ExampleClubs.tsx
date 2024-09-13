@@ -1,5 +1,7 @@
-import React, { useMemo, useState } from "react";
+import React, { useMemo, useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+
+import ExamplesNotif from "./ExamplesNotif";
 
 interface Club {
   name: string;
@@ -45,6 +47,8 @@ const ExampleClubs: React.FC<ExampleClubsProps> = ({
   const [showContent, setShowContent] = useState(false);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
+  const [isBounce, setIsBounce] = useState(true);
+
   const filteredClubsList = useMemo(() => {
     if (selectedTypes.length === 0) return clubsList;
 
@@ -64,9 +68,11 @@ const ExampleClubs: React.FC<ExampleClubsProps> = ({
       setTimeout(() => {
         setExpandedSection(null);
         setIsTransitioning(false);
+        setIsBounce(true);
       }, 300);
     } else {
       setShowContent(false);
+      setIsBounce(false);
       setTimeout(() => {
         setExpandedSection(section);
         setTimeout(() => setShowContent(true), 200);
@@ -74,8 +80,18 @@ const ExampleClubs: React.FC<ExampleClubsProps> = ({
     }
   };
 
+  useEffect(() => {
+    if (isBounce) {
+      const timer = setTimeout(() => {
+        setIsBounce(false);
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [isBounce]);
+
   return (
-    <div className="w-full h-full overflow-hidden flex justify-center items-center p-8">
+    <div className="w-full h-full overflow-hidden flex justify-center items-center p-8 relative">
+      <ExamplesNotif isBounce={isBounce} />
       <div className="grid gap-2 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6">
         {Object.entries(filteredClubsList).map(([section, clubs]) => (
           <motion.div

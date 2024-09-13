@@ -43,7 +43,7 @@ const NavBar = () => {
   const pathname = usePathname();
 
   useEffect(() => {
-    setActiveLink(pathname);
+    setActiveLink(pathname === "/about" ? "" : pathname);
   }, [pathname]);
 
   useEffect(() => {
@@ -205,7 +205,7 @@ const NavBar = () => {
   ];
 
   const handleMenuOpen = (
-    menu: "explore" | "programs" | "about" | "contact" | "donate"
+    menu: "explore" | "programs" | "about" | "contact" | "donate",
   ) => {
     if (menu === "explore") {
       setExploreOpen(true);
@@ -250,9 +250,9 @@ const NavBar = () => {
           {navItems.map(({ href, label, icon: Icon, size }) => (
             <div key={href} className="relative">
               {label === "Programs" ||
-              label === "About Us" ||
-              label === "Contact" ||
-              label === "Donate" ? (
+                label === "About Us" ||
+                label === "Contact" ||
+                label === "Donate" ? (
                 <button
                   onClick={() =>
                     handleMenuOpen(
@@ -262,16 +262,15 @@ const NavBar = () => {
                           ? "about"
                           : label === "Contact"
                             ? "contact"
-                            : "donate"
+                            : "donate",
                     )
                   }
                   className={`
                     flex flex-row gap-x-3 items-center px-3 py-2 rounded-[10px] 
                     transition-all duration-300 ease-in-out 
-                    ${
-                      activeLink === href
-                        ? "bg-white text-black"
-                        : "gradient-hover"
+                    ${activeLink === href
+                      ? "bg-white text-black"
+                      : "gradient-hover"
                     }
                   `}
                 >
@@ -284,10 +283,9 @@ const NavBar = () => {
                   className={`
                     flex flex-row gap-x-3 items-center px-3 py-2 rounded-[10px] 
                     transition-all duration-300 ease-in-out 
-                    ${
-                      activeLink === href
-                        ? "bg-white text-black"
-                        : "gradient-hover"
+                    ${activeLink === href && href !== "/about"
+                      ? "bg-white text-black"
+                      : "gradient-hover"
                     }
                   `}
                 >
@@ -458,10 +456,9 @@ const NavBar = () => {
               className={`
                 px-4 py-2 border-2 border-white 
                 hover:bg-white rounded-full hover:text-black smooth-animation font-semibold 
-                ${
-                  activeLink === "/explore"
-                    ? "bg-white text-black rounded-[10px]"
-                    : ""
+                ${activeLink === "/explore"
+                  ? "bg-white text-black rounded-[10px]"
+                  : ""
                 }
               `}
             >

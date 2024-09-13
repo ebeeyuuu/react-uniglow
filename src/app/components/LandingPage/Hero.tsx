@@ -18,6 +18,9 @@ import caltech from "@/images/16.jpg";
 
 import TrustedCompaniesMarquee from "./TrustedCompaniesMarquee";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 interface University {
   src: StaticImageData;
   alt: string;
@@ -101,6 +104,10 @@ const universities: University[] = [
 const Hero: React.FC = () => {
   const [expandedImage, setExpandedImage] = useState<number | null>(null);
 
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   const handleImageClick = (index: number) => {
     setExpandedImage(index);
   };
@@ -124,8 +131,14 @@ const Hero: React.FC = () => {
   }, []);
 
   const imageVariants = {
-    initial: { scale: 1, filter: 'grayscale(100%) brightness(70%) opacity(70%)' },
-    hover: { scale: 1.05, filter: 'grayscale(0%) brightness(80%) opacity(100%)' },
+    initial: {
+      scale: 1,
+      filter: "grayscale(100%) brightness(70%) opacity(70%)",
+    },
+    hover: {
+      scale: 1.05,
+      filter: "grayscale(0%) brightness(80%) opacity(100%)",
+    },
   };
 
   const expandedVariants = {
@@ -137,18 +150,21 @@ const Hero: React.FC = () => {
   return (
     <div className="w-full flex justify-center items-center flex-col">
       <div className="flex flex-row justify-center items-center max-[900px]:flex-col mx-auto">
-        <div className="w-[90%] h-[90vh] grid grid-rows-11 grid-cols-11 gap-[20px] mt-[150px] max-[700px]:mt-[50px] text-black max-[900px]:gap-[15px] max-[700px]:grid-rows-9 max-[700px]:grid-cols-3 max-[700px]:gap-[10px]">
+        <div className="w-[90%] h-[90vh] grid grid-rows-10 grid-cols-11 gap-[20px] mt-[150px] max-[700px]:mt-[50px] text-black max-[900px]:gap-[15px] max-[700px]:grid-rows-9 max-[700px]:grid-cols-3 max-[700px]:gap-[10px]">
           <motion.div
             className="row-span-3 col-span-3 max-[700px]:row-span-1 max-[700px]:col-span-2"
             variants={imageVariants}
             initial="initial"
             whileHover="hover"
             onClick={() => handleImageClick(0)}
+            data-aos="fade-up"
+            data-aos-delay="300"
           >
             <Image
               src={harvard}
               alt="University 1"
-              className="object-center h-full w-full object-cover rounded-[10px] transition-all duration-300 ease-in-out"/>
+              className="object-center h-full w-full object-cover rounded-[10px] transition-all duration-300 ease-in-out"
+            />
           </motion.div>
           <motion.div
             className="row-span-2 col-span-3 max-[700px]:row-span-1 max-[700px]:col-span-1"
@@ -156,11 +172,14 @@ const Hero: React.FC = () => {
             initial="initial"
             whileHover="hover"
             onClick={() => handleImageClick(1)}
+            data-aos="fade-up"
+            data-aos-delay="350"
           >
             <Image
               src={stanford}
               alt="University 2"
-              className="object-center h-full w-full object-cover rounded-[10px] transition-all duration-300 ease-in-out"/>
+              className="object-center h-full w-full object-cover rounded-[10px] transition-all duration-300 ease-in-out"
+            />
           </motion.div>
           <motion.div
             className="row-span-2 col-span-2 max-[700px]:row-span-1 max-[700px]:col-span-1"
@@ -168,11 +187,14 @@ const Hero: React.FC = () => {
             initial="initial"
             whileHover="hover"
             onClick={() => handleImageClick(2)}
+            data-aos="fade-up"
+            data-aos-delay="400"
           >
             <Image
               src={mit}
               alt="University 3"
-              className="object-center h-full w-full object-cover rounded-[10px] transition-all duration-300 ease-in-out"/>
+              className="object-center h-full w-full object-cover rounded-[10px] transition-all duration-300 ease-in-out"
+            />
           </motion.div>
           <motion.div
             className="row-span-2 col-span-3 max-[700px]:row-span-1 max-[700px]:col-span-2"
@@ -180,26 +202,34 @@ const Hero: React.FC = () => {
             initial="initial"
             whileHover="hover"
             onClick={() => handleImageClick(3)}
+            data-aos="fade-up"
+            data-aos-delay="450"
           >
             <Image
               src={yale}
               alt="University 4"
-              className="object-center h-full w-full object-cover rounded-[10px] transition-all duration-300 ease-in-out"/>
+              className="object-center h-full w-full object-cover rounded-[10px] transition-all duration-300 ease-in-out"
+            />
           </motion.div>
-          <div className="row-span-3 col-span-5 max-[700px]:row-span-2 max-[700px]:col-span-3 text-white flex justify-center items-center">
+          <div
+            className="row-span-3 col-span-5 max-[700px]:row-span-2 max-[700px]:col-span-3 text-white flex justify-center items-center"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
             <div className="flex flex-row items-center text-center gap-y-[15px] w-[80%] mx-auto max-[1000px]:flex-col max-[900px]:text-center max-[900px]:my-[100px]">
-              <div className="mb-4 max-[1200px]:text-2xl max-[2000px]:text-3xl max-[4000px]:text-4xl font-bold text-left w-1/3 max-[1000px]:text-center max-[1000px]:w-full">
+              <div className="mb-4 max-[1200px]:text-xl max-[2000px]:text-3xl max-[4000px]:text-4xl font-bold text-left w-1/3 max-[1000px]:text-center max-[1000px]:w-full">
                 Find Your Dream University
               </div>
               <div className="flex flex-col w-5/12 ml-auto max-[1000px]:w-full">
                 <div className="mb-2 text-right max-[1000px]:text-center max-[1200px]:text-xs max-[2000px]:text-sm max-[4000px]:text-base">
-                  Discover your <span className="font-bold italic mx-[5px]">dream</span>
+                  Discover your{" "}
+                  <span className="font-bold italic mx-[5px]">dream</span>
                   and explore the
                   <span className="font-bold italic mx-[5px]">
-                    world's opportunities!
+                    world&apos;s opportunities!
                   </span>
                 </div>
-                <div className="border-2 border-[#f4b034] hover:bg-[#f4b034] hover:text-black mt-[15px] text-sm font-medium py-3 px-5 flex justify-end font-medium ml-auto max-[1000px]:ml-0 max-[1000px]:justify-center smooth-animation max-[900px]:w-[150px] max-[900px]:mx-auto">
+                <div className="border-2 border-[#f4b034] hover:bg-[#f4b034] hover:text-black mt-[15px] text-xs py-3 px-5 flex justify-end font-medium ml-auto max-[1000px]:ml-0 max-[1000px]:justify-center smooth-animation max-[900px]:w-[150px] max-[900px]:mx-auto max-[1000px]:py-2 max-[1000px]:px-4">
                   <Link href="/pages/signup">Get Started</Link>
                 </div>
               </div>
@@ -211,11 +241,14 @@ const Hero: React.FC = () => {
             initial="initial"
             whileHover="hover"
             onClick={() => handleImageClick(4)}
+            data-aos="fade-up"
+            data-aos-delay="550"
           >
             <Image
               src={princeton}
               alt="University 5"
-              className="object-center h-full w-full object-cover rounded-[10px] transition-all duration-300 ease-in-out"/>
+              className="object-center h-full w-full object-cover rounded-[10px] transition-all duration-300 ease-in-out"
+            />
           </motion.div>
           <motion.div
             className="row-span-2 col-span-3 max-[700px]:row-span-1 max-[700px]:col-span-1"
@@ -223,11 +256,14 @@ const Hero: React.FC = () => {
             initial="initial"
             whileHover="hover"
             onClick={() => handleImageClick(5)}
+            data-aos="fade-up"
+            data-aos-delay="500"
           >
             <Image
               src={columbia}
               alt="University 6"
-              className="object-center h-full w-full object-cover rounded-[10px] transition-all duration-300 ease-in-out"/>
+              className="object-center h-full w-full object-cover rounded-[10px] transition-all duration-300 ease-in-out"
+            />
           </motion.div>
           <motion.div
             className="row-span-3 col-span-3 max-[700px]:row-span-1 max-[700px]:col-span-2"
@@ -235,11 +271,14 @@ const Hero: React.FC = () => {
             initial="initial"
             whileHover="hover"
             onClick={() => handleImageClick(6)}
+            data-aos="fade-up"
+            data-aos-delay="750"
           >
             <Image
               src={chicago}
               alt="University 7"
-              className="object-center h-full w-full object-cover rounded-[10px] transition-all duration-300 ease-in-out"/>
+              className="object-center h-full w-full object-cover rounded-[10px] transition-all duration-300 ease-in-out"
+            />
           </motion.div>
           <motion.div
             className="row-span-2 col-span-3 max-[700px]:row-span-1 max-[700px]:col-span-2"
@@ -247,11 +286,14 @@ const Hero: React.FC = () => {
             initial="initial"
             whileHover="hover"
             onClick={() => handleImageClick(7)}
+            data-aos="fade-up"
+            data-aos-delay="600"
           >
             <Image
               src={upenn}
               alt="University 8"
-              className="object-center h-full w-full object-cover rounded-[10px] transition-all duration-300 ease-in-out"/>
+              className="object-center h-full w-full object-cover rounded-[10px] transition-all duration-300 ease-in-out"
+            />
           </motion.div>
           <motion.div
             className="row-span-2 col-span-2 max-[700px]:row-span-1 max-[700px]:col-span-1"
@@ -259,11 +301,14 @@ const Hero: React.FC = () => {
             initial="initial"
             whileHover="hover"
             onClick={() => handleImageClick(8)}
+            data-aos="fade-up"
+            data-aos-delay="600"
           >
             <Image
               src={caltech}
               alt="University 9"
-              className="object-center h-full w-full object-cover rounded-[10px] transition-all duration-300 ease-in-out"/>
+              className="object-center h-full w-full object-cover rounded-[10px] transition-all duration-300 font-medium ease-in-out"
+            />
           </motion.div>
           <motion.div
             className="row-span-2 col-span-3 max-[700px]:row-span-1 max-[700px]:col-span-3"
@@ -271,11 +316,14 @@ const Hero: React.FC = () => {
             initial="initial"
             whileHover="hover"
             onClick={() => handleImageClick(9)}
+            data-aos="fade-up"
+            data-aos-delay="700"
           >
             <Image
               src={duke}
               alt="University 10"
-              className="object-center h-full w-full object-cover rounded-[10px] transition-all duration-300 ease-in-out"/>
+              className="object-center h-full w-full object-cover rounded-[10px] transition-all duration-300 ease-in-out"
+            />
           </motion.div>
         </div>
       </div>
@@ -301,8 +349,9 @@ const Hero: React.FC = () => {
                 fill
                 sizes="100vw"
                 style={{
-                  objectFit: "cover"
-                }} />
+                  objectFit: "cover",
+                }}
+              />
               <div className="absolute inset-0 flex flex-col justify-between">
                 <div className="p-4 self-end">
                   <button

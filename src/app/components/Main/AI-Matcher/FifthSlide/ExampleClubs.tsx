@@ -114,7 +114,7 @@ const ExampleClubs: React.FC<ExampleClubsProps> = ({
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.3, delay: 0.5 }}
-                className="text-2xl p-20 font-bold text-center"
+                className="text-2xl p-20 font-bold text-center scale-100 hover:scale-110 transition-all duration-500 ease-in-out"
               >
                 {convertKeyToDisplayName(section)}
               </motion.div>

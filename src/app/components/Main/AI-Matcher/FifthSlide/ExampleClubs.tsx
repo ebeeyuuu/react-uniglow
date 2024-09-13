@@ -61,6 +61,17 @@ const ExampleClubs: React.FC<ExampleClubsProps> = ({
     );
   }, [clubsList, selectedTypes]);
 
+  const gridColumns = useMemo(() => {
+    const itemCount = Object.keys(filteredClubsList).length;
+    if (itemCount <= 6) {
+      return `grid-cols-1 ${itemCount > 1 ? `sm:grid-cols-2` : ""} ${itemCount > 2 ? `md:grid-cols-3` : ""
+        } ${itemCount > 3 ? `lg:grid-cols-4` : ""} ${itemCount > 4 ? `xl:grid-cols-5` : ""
+        } ${itemCount > 5 ? `2xl:grid-cols-6` : ""}`;
+    } else {
+      return "grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6";
+    }
+  }, [filteredClubsList]);
+
   const handleExpand = (section: string) => {
     setIsTransitioning(true);
     if (expandedSection === section) {
@@ -90,9 +101,9 @@ const ExampleClubs: React.FC<ExampleClubsProps> = ({
   }, [isBounce]);
 
   return (
-    <div className="w-full h-full overflow-hidden flex justify-center items-center p-8 relative">
+    <div className="w-full h-full overflow-y-auto overflow-x-hidden scrollbar-hide flex justify-center items-center p-8 relative">
       <ExamplesNotif isBounce={isBounce} />
-      <div className="grid gap-2 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6">
+      <div className={`grid gap-2 mt-96 sm:mt-0 ${gridColumns}`}>
         {Object.entries(filteredClubsList).map(([section, clubs]) => (
           <motion.div
             key={section}

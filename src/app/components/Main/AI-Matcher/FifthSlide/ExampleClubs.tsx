@@ -2,6 +2,7 @@ import React, { useMemo, useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 import ExamplesNotif from "./ExamplesNotif";
+import ConfirmNotif from "./ConfirmNotif";
 
 interface Club {
   name: string;
@@ -17,6 +18,7 @@ interface ClubExamples {
 interface ExampleClubsProps {
   clubsList: ClubExamples;
   selectedTypes: string[];
+  onNextSlide: () => void;
 }
 
 const convertTypeToKey = (type: string): string => {
@@ -42,10 +44,13 @@ const borderVariants = {
 const ExampleClubs: React.FC<ExampleClubsProps> = ({
   clubsList,
   selectedTypes,
+  onNextSlide,
 }) => {
   const [expandedSection, setExpandedSection] = useState<string | null>(null);
   const [showContent, setShowContent] = useState(false);
   const [isTransitioning, setIsTransitioning] = useState(false);
+
+  const [showConfirmNotif, setShowConfirmNotif] = useState(false);
 
   const [isBounce, setIsBounce] = useState(true);
 
@@ -80,6 +85,7 @@ const ExampleClubs: React.FC<ExampleClubsProps> = ({
         setExpandedSection(null);
         setIsTransitioning(false);
         setIsBounce(true);
+        setShowConfirmNotif(true);
       }, 300);
     } else {
       setShowContent(false);
@@ -103,6 +109,16 @@ const ExampleClubs: React.FC<ExampleClubsProps> = ({
   return (
     <div className="w-full h-full overflow-y-auto overflow-x-hidden scrollbar-hide flex justify-center items-center p-8 relative">
       <ExamplesNotif isBounce={isBounce} />
+      {showConfirmNotif && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duratio: 0.3 }}
+        >
+          <ConfirmNotif onConfirm={onNextSlide} />
+        </motion.div>
+      )}
       <div className={`grid gap-2 mt-96 sm:mt-0 ${gridColumns}`}>
         {Object.entries(filteredClubsList).map(([section, clubs]) => (
           <motion.div
@@ -129,11 +145,14 @@ const ExampleClubs: React.FC<ExampleClubsProps> = ({
             }}
             onLayoutAnimationComplete={() => setIsTransitioning(false)}
             className={`selection flex justify-center items-center rounded-xl p-6 cursor-pointer
-              ${expandedSection === section ? "fixed inset-0 bg-black text-white border-2 border-black" : "hover:scale-105 border-2 border-white"}
+              ${expandedSection === section ? "fixed inset-0 text-white" : "hover:scale-105"}
             `}
             style={{
               width: expandedSection === section ? "100%" : "auto",
               height: expandedSection === section ? "100%" : "auto",
+              backgroundColor:
+                expandedSection === section ? "black" : "#153684",
+              transition: "background-color 0.3s ease-in-out",
             }}
           >
             {expandedSection !== section && !isTransitioning && (
@@ -141,7 +160,7 @@ const ExampleClubs: React.FC<ExampleClubsProps> = ({
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.3, delay: 0.5 }}
-                className="text-2xl p-20 font-bold text-center scale-100 hover:scale-110 transition-all duration-500 ease-in-out"
+                className="text-2xl p-20 font-bold rounded-xl text-center scale-100 hover:scale-110 transition-all duration-500 ease-in-out"
               >
                 {convertKeyToDisplayName(section)}
               </motion.div>
@@ -155,7 +174,7 @@ const ExampleClubs: React.FC<ExampleClubsProps> = ({
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.3 }}
-                    className="w-full h-full overflow-y-auto scrollbar-hide p-12"
+                    className="w-full h-full overflow-y-auto bg-black scrollbar-hide p-12 rounded-xl"
                   >
                     <h2 className="text-4xl font-bold mb-10">
                       {convertKeyToDisplayName(section)}
@@ -166,10 +185,8 @@ const ExampleClubs: React.FC<ExampleClubsProps> = ({
                           className="flex flex-col border border-gray-500 p-10 rounded-xl"
                           key={index}
                         >
-                          {/* Wrapping the club and university sections and applying divide-y here */}
                           <div className="divide-y divide-gray-500">
                             <div className="pb-6">
-                              {/* Club Section */}
                               <div className="text-xl font-semibold">
                                 {club.name}
                               </div>
@@ -179,7 +196,6 @@ const ExampleClubs: React.FC<ExampleClubsProps> = ({
                             </div>
 
                             <div className="pt-6">
-                              {/* University Section */}
                               <div className="text-xl font-semibold">
                                 {club.university}
                               </div>

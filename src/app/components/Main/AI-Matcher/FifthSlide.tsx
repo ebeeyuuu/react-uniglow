@@ -71,6 +71,7 @@ const FifthSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
             <ExampleClubs
               clubsList={clubExamples}
               selectedTypes={selectedClubTypes}
+              onNextSlide={onNextSlide}
             />
           </motion.div>
         </AnimatePresence>

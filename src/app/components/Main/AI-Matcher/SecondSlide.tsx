@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaCheck, FaSearch } from "react-icons/fa";
+import { FaSearch } from "react-icons/fa";
 
 import ConfirmDialog from "./SecondSlide/ConfirmDialog";
 import CollapsibleCounter from "./SecondSlide/CollapsibleCounter";
@@ -22,14 +22,20 @@ const SecondSlide: React.FC<SlideProps> = ({
   setSlideState,
   onNextSlide,
 }) => {
-  const [selectedSubjects, setSelectedSubjects] = useState([]);
+  const [selectedSubjects, setSelectedSubjects] = useState(
+    slideState.selectedSubject || [],
+  );
   const [selectedDetailedSubjects, setSelectedDetailedSubjects] = useState<
     Subject[]
-  >([]);
+  >(slideState.selectedDetailedSubjects || []);
 
-  const [selectedSection, setSelectedSection] = useState(null);
+  const [selectedSection, setSelectedSection] = useState(
+    slideState.selectedSection || null,
+  );
 
-  const [showSelectedOnly, setShowSelectedOnly] = useState(false);
+  const [showSelectedOnly, setShowSelectedOnly] = useState(
+    slideState.showSelectedOnly || false,
+  );
 
   const [sectionCounts, setSectionCounts] = useState<{ [key: string]: number }>(
     {},
@@ -381,11 +387,10 @@ const SecondSlide: React.FC<SlideProps> = ({
                     <div className="flex items-center justify-center">
                       <button
                         onClick={() => setShowSelectedOnly(!showSelectedOnly)}
-                        className={`p-4 rounded-xl smooth-animation text-xs hover:bg-[#003dcc] border-white bg-black hover:border-[#003dcc] ${
-                          showSelectedOnly
-                            ? "bg-[#003dcc] border-[#003dcc] border"
-                            : "bg-black border border-gray-300"
-                        }`}
+                        className={`p-4 rounded-xl smooth-animation text-xs hover:bg-[#003dcc] border-white bg-black hover:border-[#003dcc] ${showSelectedOnly
+                          ? "bg-[#003dcc] border-[#003dcc] border"
+                          : "bg-black border border-gray-300"
+                          }`}
                       >
                         {showSelectedOnly
                           ? "Show All Subjects"
@@ -484,12 +489,12 @@ const SecondSlide: React.FC<SlideProps> = ({
                           )),
                     ),
                 ) && (
-                  <div className="text-2xl font-bold text-center mt-20">
-                    {showSelectedOnly
-                      ? "No selected subjects match your search. Try adjusting your filters."
-                      : "No results found. Try something else."}
-                  </div>
-                )}
+                    <div className="text-2xl font-bold text-center mt-20">
+                      {showSelectedOnly
+                        ? "No selected subjects match your search. Try adjusting your filters."
+                        : "No results found. Try something else."}
+                    </div>
+                  )}
 
                 {animateSpecificSubjects && (
                   <div className="relative w-full h-full">

@@ -144,15 +144,12 @@ const ExampleClubs: React.FC<ExampleClubsProps> = ({
               },
             }}
             onLayoutAnimationComplete={() => setIsTransitioning(false)}
-            className={`selection flex justify-center items-center rounded-xl p-6 cursor-pointer
-              ${expandedSection === section ? "fixed inset-0 text-white" : "hover:scale-105"}
+            className={`selection bg-black border border-white transition-colors duration-500 ease-in-out flex justify-center items-center rounded-xl p-6 cursor-pointer
+              ${expandedSection === section ? "fixed inset-0 text-white hover:bg-black" : "hover:scale-105 hover:bg-[#153684] hover:border-[#153684]"}
             `}
             style={{
               width: expandedSection === section ? "100%" : "auto",
               height: expandedSection === section ? "100%" : "auto",
-              backgroundColor:
-                expandedSection === section ? "black" : "#153684",
-              transition: "background-color 0.3s ease-in-out",
             }}
           >
             {expandedSection !== section && !isTransitioning && (
@@ -207,15 +204,6 @@ const ExampleClubs: React.FC<ExampleClubsProps> = ({
                         </div>
                       ))}
                     </div>
-                    <button
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        handleExpand(section);
-                      }}
-                      className="mt-4 text-blue-400 hover:text-blue-300"
-                    >
-                      Back to all sections
-                    </button>
                   </motion.div>
                 )}
               </AnimatePresence>

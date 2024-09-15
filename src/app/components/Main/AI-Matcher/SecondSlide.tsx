@@ -12,30 +12,18 @@ import SubjectButton from "./SecondSlide/SubjectButton";
 import { Subject, mergeSubjects } from "./SecondSlide/mergeSubjects";
 
 type SlideProps = {
-  slideState: any;
-  setSlideState: (state: any) => void;
   onNextSlide: () => void;
 };
 
-const SecondSlide: React.FC<SlideProps> = ({
-  slideState,
-  setSlideState,
-  onNextSlide,
-}) => {
-  const [selectedSubjects, setSelectedSubjects] = useState(
-    slideState.selectedSubject || [],
-  );
+const SecondSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
+  const [selectedSubjects, setSelectedSubjects] = useState([]);
   const [selectedDetailedSubjects, setSelectedDetailedSubjects] = useState<
     Subject[]
-  >(slideState.selectedDetailedSubjects || []);
+  >([]);
 
-  const [selectedSection, setSelectedSection] = useState(
-    slideState.selectedSection || null,
-  );
+  const [selectedSection, setSelectedSection] = useState(null);
 
-  const [showSelectedOnly, setShowSelectedOnly] = useState(
-    slideState.showSelectedOnly || false,
-  );
+  const [showSelectedOnly, setShowSelectedOnly] = useState(false);
 
   const [sectionCounts, setSectionCounts] = useState<{ [key: string]: number }>(
     {},
@@ -160,7 +148,7 @@ const SecondSlide: React.FC<SlideProps> = ({
             subject.id === subjectToRemove.id &&
             subject.difficulty === subjectToRemove.difficulty &&
             subject.level === subjectToRemove.level &&
-            subject.category === subject.category
+            subject.category === subjectToRemove.category
           ),
       ),
     );
@@ -511,7 +499,10 @@ const SecondSlide: React.FC<SlideProps> = ({
 
                 {isDetailedConfirmVisible && (
                   <ConfirmDetailedSubjects
-                    onConfirm={() => onNextSlide()}
+                    onConfirm={() => {
+                      onNextSlide();
+                      setCanProceed(true);
+                    }}
                     onCancel={() => setIsDetailedConfirmVisible(false)}
                     selectedSubjects={selectedDetailedSubjects}
                     categories={selectedSubjects}

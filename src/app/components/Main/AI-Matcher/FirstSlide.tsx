@@ -34,14 +34,13 @@ const FirstSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
           </button>
           <motion.div
             animate={{
-              x: [0, -10, 0],
+              x: [0, 10, 0],
             }}
             transition={{
               duration: 1,
               repeat: Infinity,
               repeatType: "reverse",
             }}
-            className="ml-2"
           >
             <HiArrowLeft size={24} color="white" />
           </motion.div>

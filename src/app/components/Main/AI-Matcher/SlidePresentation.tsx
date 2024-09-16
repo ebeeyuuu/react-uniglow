@@ -1,17 +1,14 @@
 import React, { useState, useRef, useCallback, ReactElement } from "react";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 
 interface SlidePresentationProps {
   numSlides: number;
   children: ReactElement | ReactElement[];
-  canProceed?: () => boolean;
 }
 
 const SlidePresentation: React.FC<SlidePresentationProps> = ({
   numSlides,
   children,
-  canProceed = () => true,
 }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [direction, setDirection] = useState(0); // Track the direction of the slide transition
@@ -30,21 +27,25 @@ const SlidePresentation: React.FC<SlidePresentationProps> = ({
     slideStates.current[index] = state;
   }, []);
 
+  const goToSlide = (index: number) => {
+    if (index !== currentSlide) {
+      setDirection(index > currentSlide ? 1 : -1);
+      setCurrentSlide(index);
+      if (!loadedSlides.includes(index)) {
+        setLoadedSlides((prev) => [...prev, index]);
+      }
+    }
+  };
+
   const nextSlide = () => {
     if (currentSlide < numSlides - 1) {
-      setDirection(1);
-      const nextIndex = currentSlide + 1;
-      setCurrentSlide(nextIndex);
-      if (!loadedSlides.includes(nextIndex)) {
-        setLoadedSlides((prev) => [...prev, nextIndex]);
-      }
+      goToSlide(currentSlide + 1);
     }
   };
 
   const prevSlide = () => {
     if (currentSlide > 0) {
-      setDirection(-1);
-      setCurrentSlide(currentSlide - 1);
+      goToSlide(currentSlide - 1);
     }
   };
 
@@ -92,6 +93,20 @@ const SlidePresentation: React.FC<SlidePresentationProps> = ({
           )}
         </motion.div>
       </AnimatePresence>
+
+      <div className="absolute bottom-16 left-1/2 -translate-x-1/2 z-10">
+        {Array.from({ length: numSlides }).map((_, index) => (
+          <button
+            key={index}
+            onClick={() => goToSlide(index)}
+            className={`w-4 h-4 rounded-full mx-1 transition-colors duration-200 ${index === currentSlide
+                ? "bg-[#f4b034]"
+                : "bg-white hover:bg-[#f4b034]"
+              }`}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
+      </div>
     </div>
   );
 };

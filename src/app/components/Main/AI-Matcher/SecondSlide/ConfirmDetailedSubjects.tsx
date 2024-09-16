@@ -26,6 +26,7 @@ const ConfirmDetailedSubjects: React.FC<ConfirmDetailedSubjectsProps> = ({
   onRemoveSubject,
 }) => {
   const [removingSubject, setRemovingSubject] = useState<string | null>(null);
+  const [hovered, setHovered] = useState(false);
 
   useEffect(() => {
     if (removingSubject) {
@@ -114,12 +115,44 @@ const ConfirmDetailedSubjects: React.FC<ConfirmDetailedSubjectsProps> = ({
             </div>
           </div>
           <div className="flex justify-center items-center gap-x-4 mb-16 bg-transparent">
-            <button
-              className="border-[#003dcc] border-2 bg-[#003dcc] text-white font-bold py-2 px-4 rounded-lg text-lg"
+            <motion.button
+              className="border-[#003dcc] border-2 bg-[#003dcc] text-white font-bold py-2 px-4 rounded-lg text-lg relative overflow-hidden"
               onClick={onConfirm}
+              onHoverStart={() => setHovered(true)}
+              onHoverEnd={() => setHovered(false)}
+              initial={{ width: "auto" }}
+              animate={{
+                width: hovered ? "200px" : "120px",
+              }}
+              transition={{ duration: 0.3 }}
+              style={{ whiteSpace: "nowrap" }}
             >
-              Confirm
-            </button>
+              <AnimatePresence mode="wait" initial={false}>
+                {!hovered ? (
+                  <motion.div
+                    key="confirm"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{ duration: 0.3 }}
+                    className="flex justify-center items-center"
+                  >
+                    Confirm
+                  </motion.div>
+                ) : (
+                  <motion.div
+                    key="next"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{ duration: 0.3 }}
+                    className="flex justify-center items-center"
+                  >
+                    Go to next slide
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.button>
             <button
               className="border-[#f31722] border-2 bg-[#f31722] text-white font-bold py-2 px-4 rounded-lg text-lg"
               onClick={onCancel}

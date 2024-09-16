@@ -108,13 +108,13 @@ const ThirdSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
         >
           <button
             onClick={handleConfirm}
-            className="bg-[#02ad83]/80 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-[#02ad83]/50 transition-colors duration-300"
+            className="bg-[#063a2f] text-white px-6 py-3 rounded-xl text-lg font-semibold hover:bg-[#02ad83]/50 transition-colors duration-300"
           >
             Confirm Selection
           </button>
           <button
             onClick={handleSeeExamples}
-            className="bg-[#02ad83]/80 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-[#02ad83]/50 transition-colors duration-300"
+            className="bg-[#063a2f] text-white px-6 py-3 rounded-xl text-lg font-semibold hover:bg-[#02ad83]/50 transition-colors duration-300"
           >
             See examples
           </button>

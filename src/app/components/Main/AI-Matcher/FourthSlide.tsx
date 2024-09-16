@@ -15,7 +15,6 @@ const FourthSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
 
   return (
     <div className="w-5/6 h-full flex flex-col justify-center items-center">
-      {/* Animated Content */}
       <motion.div
         initial={{ opacity: 1, y: 0 }}
         animate={{
@@ -33,7 +32,6 @@ const FourthSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
         </div>
       </motion.div>
 
-      {/* Animated Button */}
       {isValueChanged && (
         <motion.button
           initial={{ opacity: 0, y: 20 }}

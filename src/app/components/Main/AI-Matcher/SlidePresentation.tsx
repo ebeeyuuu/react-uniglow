@@ -94,14 +94,14 @@ const SlidePresentation: React.FC<SlidePresentationProps> = ({
         </motion.div>
       </AnimatePresence>
 
-      <div className="absolute bottom-16 left-1/2 -translate-x-1/2 z-10">
+      <div className="absolute bottom-16 left-1/2 bg-black/50 rounded-full py-3 px-5 -translate-x-1/2 z-10">
         {Array.from({ length: numSlides }).map((_, index) => (
           <button
             key={index}
             onClick={() => goToSlide(index)}
-            className={`w-4 h-4 rounded-full mx-1 transition-colors duration-200 ${index === currentSlide
-                ? "bg-[#f4b034]"
-                : "bg-white hover:bg-[#f4b034]"
+            className={`w-4 h-4 rounded-full mx-1 mt-1 transition-colors duration-200 ${index === currentSlide
+              ? "bg-[#f4b034]"
+              : "bg-white hover:bg-[#f4b034]"
               }`}
             aria-label={`Go to slide ${index + 1}`}
           />

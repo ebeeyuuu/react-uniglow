@@ -144,8 +144,8 @@ const ExampleClubs: React.FC<ExampleClubsProps> = ({
               },
             }}
             onLayoutAnimationComplete={() => setIsTransitioning(false)}
-            className={`selection bg-black border border-white transition-colors duration-500 ease-in-out flex justify-center items-center rounded-xl p-6 cursor-pointer
-              ${expandedSection === section ? "fixed inset-0 text-white hover:bg-black" : "hover:scale-105 hover:bg-[#153684] hover:border-[#153684]"}
+            className={`selection bg-[#153684] transition-colors duration-500 ease-in-out flex justify-center items-center rounded-xl p-6 cursor-pointer
+              ${expandedSection === section ? "fixed inset-0 text-white hover:bg-black bg-black" : "hover:scale-105 hover:bg-[#153684] hover:border-[#153684]"}
             `}
             style={{
               width: expandedSection === section ? "100%" : "auto",

@@ -29,7 +29,7 @@ const ExamplesNotif: React.FC<ExamplesNotifProps> = ({ isBounce }) => {
   return (
     <div className="absolute z-10 top-20 left-0 right-0 flex justify-center">
       <motion.div
-        className="inline-block rounded-xl border border-white py-3 px-4"
+        className="px-5 py-3 bg-[#063a2f] rounded-xl"
         animate={controls}
       >
         Click on them to see some examples!

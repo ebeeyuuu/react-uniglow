@@ -16,6 +16,8 @@ const ThirdSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
 
   const [showArrow, setShowArrow] = useState(false);
 
+  const [hovered, setHovered] = useState(false);
+
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
@@ -106,12 +108,44 @@ const ThirdSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
         >
-          <button
-            onClick={handleConfirm}
+          <motion.button
             className="bg-[#063a2f] text-white px-6 py-3 rounded-xl text-lg font-semibold hover:bg-[#02ad83]/50 transition-colors duration-300"
+            onClick={handleConfirm}
+            onHoverStart={() => setHovered(true)}
+            onHoverEnd={() => setHovered(false)}
+            initial={{ width: "auto" }}
+            animate={{
+              width: hovered ? "200px" : "120px",
+            }}
+            transition={{ duration: 0.3 }}
+            style={{ whiteSpace: "nowrap" }}
           >
-            Confirm Selection
-          </button>
+            <AnimatePresence mode="wait" initial={false}>
+              {!hovered ? (
+                <motion.div
+                  key="confirm"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.3 }}
+                  className="flex justify-center items-center"
+                >
+                  Confirm
+                </motion.div>
+              ) : (
+                <motion.div
+                  key="next"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.3 }}
+                  className="flex justify-center items-center"
+                >
+                  Go to next slide
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </motion.button>
           <button
             onClick={handleSeeExamples}
             className="bg-[#063a2f] text-white px-6 py-3 rounded-xl text-lg font-semibold hover:bg-[#02ad83]/50 transition-colors duration-300"

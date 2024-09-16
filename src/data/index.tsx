@@ -2,6 +2,10 @@ import { MdPeople, MdConnectWithoutContact } from "react-icons/md";
 import { BiDonateHeart } from "react-icons/bi";
 import { SiActivitypub } from "react-icons/si";
 
+export const supportServices = [
+
+]
+
 export const clubTypes = [
   {
     type: "Academic Clubs",

@@ -1,9 +1,14 @@
 import React from "react";
 import Home from "@/app/components/Icons/Home";
-import { IoMdReturnLeft } from "react-icons/io";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { HiArrowLeft } from "react-icons/hi";
 
-const FirstSlide = () => {
+interface SlideProps {
+  onNextSlide: () => void;
+}
+
+const FirstSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
   return (
     <div className="w-full h-full flex justify-center items-center">
       <div className="flex flex-col gap-y-[35px] w-[65%]">
@@ -16,18 +21,30 @@ const FirstSlide = () => {
         <div className="flex flex-row gap-x-[20px] justify-center items-center whitespace-nowrap">
           <Link
             href="/pages/main"
-            className="px-5 py-3 flex flex-row items-center gap-x-[10px] bg-[#003dcc] rounded-[10px] border-4 border-[#003dcc]"
+            className="px-5 py-3 flex flex-row items-center gap-x-[10px] bg-[#003dcc] rounded-[10px]"
           >
             <Home className="w-[20px] h-[20px]" />
             <p className="font-medium whitespace-nowrap">Return to home page</p>
           </Link>
-          <Link
-            href="/"
-            className="px-5 py-3 flex flex-row items-center gap-x-[10px] border-4 border-[#003dcc] rounded-[10px]"
+          <button
+            onClick={onNextSlide}
+            className="bg-[#003dcc] rounded-[10px] px-5 py-3 font-medium"
           >
-            <IoMdReturnLeft />
-            <p className="font-medium whitespace-nowrap">Sign out</p>
-          </Link>
+            Go to next slide
+          </button>
+          <motion.div
+            animate={{
+              x: [0, -10, 0],
+            }}
+            transition={{
+              duration: 1,
+              repeat: Infinity,
+              repeatType: "reverse",
+            }}
+            className="ml-2"
+          >
+            <HiArrowLeft size={24} color="white" />
+          </motion.div>
         </div>
       </div>
     </div>

@@ -92,24 +92,6 @@ const SlidePresentation: React.FC<SlidePresentationProps> = ({
           )}
         </motion.div>
       </AnimatePresence>
-      <div className="flex justify-center w-min mx-auto flex-row mt-4 absolute z-10 bottom-8 left-0 right-0 gap-x-4 px-4">
-        <button
-          onClick={prevSlide}
-          disabled={currentSlide === 0}
-          className="text-white flex items-center disabled:opacity-70 disabled:cursor-not-allowed px-5 py-3 h-[50px] rounded-xl bg-black/80 hover:bg-[#f4b034] border-2 border-[#f4b034] hover:text-black smooth-animation"
-        >
-          <FaChevronLeft className="mr-2" />
-          <span>Prev</span>
-        </button>
-        <button
-          onClick={nextSlide}
-          disabled={currentSlide === numSlides - 1 || !canProceed()}
-          className="text-white flex items-center disabled:opacity-70 disabled:cursor-not-allowed px-5 py-3 h-[50px] rounded-xl bg-black/80 hover:bg-[#f4b034] border-2 border-[#f4b034] hover:text-black smooth-animation"
-        >
-          <span>Next</span>
-          <FaChevronRight className="ml-2" />
-        </button>
-      </div>
     </div>
   );
 };

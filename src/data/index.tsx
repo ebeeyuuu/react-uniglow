@@ -3,8 +3,271 @@ import { BiDonateHeart } from "react-icons/bi";
 import { SiActivitypub } from "react-icons/si";
 
 export const supportServices = [
-
-]
+  {
+    name: "Counseling Services",
+    description:
+      "Offers mental health support, including therapy and workshops for stress, anxiety, and personal issues.",
+    university: "University of California, Berkeley",
+    university_description:
+      "UC Berkeley provides free and confidential counseling services to students through the Tang Center.",
+  },
+  {
+    name: "Disability Support Services",
+    description:
+      "Provides accommodations and support for students with disabilities to ensure equal access to education.",
+    university: "University of Michigan",
+    university_description:
+      "The University of Michigan offers the Services for Students with Disabilities (SSD) office, which provides accommodations and resources for students with various disabilities.",
+  },
+  {
+    name: "Academic Advising",
+    description:
+      "Helps students with course selection, degree planning, and academic strategies to achieve success.",
+    university: "Harvard University",
+    university_description:
+      "Harvard's Advising Programs Office offers comprehensive academic advising for all undergraduate students to support them in their educational journey.",
+  },
+  {
+    name: "Career Services",
+    description:
+      "Provides career counseling, resume workshops, job search resources, and internship opportunities.",
+    university: "Stanford University",
+    university_description:
+      "Stanford’s Career Education center helps students explore career paths, develop professional skills, and connect with employers.",
+  },
+  {
+    name: "Health Services",
+    description:
+      "Offers medical care, health education, and wellness programs to support students' physical health.",
+    university: "University of Oxford",
+    university_description:
+      "Oxford University’s Occupational Health Service provides healthcare, vaccinations, and advice on wellbeing and lifestyle.",
+  },
+  {
+    name: "International Student Support",
+    description:
+      "Helps international students with immigration, cultural adaptation, and academic success.",
+    university: "New York University (NYU)",
+    university_description:
+      "NYU offers the Office of Global Services to assist international students with visa issues and adapting to life in the U.S.",
+  },
+  {
+    name: "Financial Aid and Scholarships",
+    description:
+      "Assists students with financial planning, scholarships, and managing student loans.",
+    university: "Yale University",
+    university_description:
+      "Yale’s Office of Undergraduate Financial Aid provides extensive financial aid and scholarships, ensuring that cost does not prevent qualified students from attending.",
+  },
+  {
+    name: "Tutoring and Writing Centers",
+    description:
+      "Provides academic support through tutoring and writing assistance to help students succeed in their studies.",
+    university: "Massachusetts Institute of Technology (MIT)",
+    university_description:
+      "MIT’s Writing and Communication Center offers one-on-one help with writing and presentations for all students.",
+  },
+  {
+    name: "LGBTQ+ Support Services",
+    description:
+      "Provides resources, support groups, and advocacy for LGBTQ+ students to create an inclusive campus environment.",
+    university: "University of Toronto",
+    university_description:
+      "The University of Toronto offers LGBTQ+ resources and support through its Sexual & Gender Diversity Office.",
+  },
+  {
+    name: "Veteran Student Services",
+    description:
+      "Supports veteran students with academic advising, mental health resources, and community engagement.",
+    university: "Texas A&M University",
+    university_description:
+      "Texas A&M offers a Veterans Services Office to help military veterans transition to university life and provide them with academic and personal support.",
+  },
+  {
+    name: "First-Year Experience Program",
+    description:
+      "Helps new students adjust to university life through orientation programs, peer mentoring, and academic workshops.",
+    university: "University of Florida",
+    university_description:
+      "The University of Florida offers a comprehensive First-Year Experience program to help incoming students transition smoothly into university life.",
+  },
+  {
+    name: "Multicultural Student Services",
+    description:
+      "Supports students from diverse cultural backgrounds with resources, events, and peer networks.",
+    university: "University of Washington",
+    university_description:
+      "The University of Washington's Office of Minority Affairs & Diversity provides resources and support for underrepresented students.",
+  },
+  {
+    name: "Student Emergency Fund",
+    description:
+      "Offers financial assistance to students facing unexpected expenses or emergencies.",
+    university: "Indiana University",
+    university_description:
+      "Indiana University’s Student Emergency Assistance Program offers one-time financial aid to help students facing unexpected crises.",
+  },
+  {
+    name: "On-Campus Childcare",
+    description:
+      "Provides childcare services for students who are parents to ensure they can balance their academic responsibilities.",
+    university: "University of British Columbia",
+    university_description:
+      "UBC offers the University Children’s Learning Center for students, faculty, and staff with children.",
+  },
+  {
+    name: "Mental Health Hotlines",
+    description:
+      "24/7 mental health support via phone or chat for students experiencing crises.",
+    university: "University of Sydney",
+    university_description:
+      "The University of Sydney provides a mental health hotline that students can access anytime for immediate support.",
+  },
+  {
+    name: "Study Abroad Advising",
+    description:
+      "Helps students explore, plan, and prepare for study abroad programs.",
+    university: "University of Cambridge",
+    university_description:
+      "Cambridge's Study Abroad Office provides resources and guidance for students interested in international study programs.",
+  },
+  {
+    name: "Food Pantry Services",
+    description:
+      "Provides free food resources for students facing food insecurity.",
+    university: "University of Southern California",
+    university_description:
+      "USC’s Trojan Food Pantry offers free groceries and basic necessities to students in need.",
+  },
+  {
+    name: "Campus Safety Escorts",
+    description:
+      "Provides safe transportation for students traveling across campus late at night.",
+    university: "University of Chicago",
+    university_description:
+      "The University of Chicago’s SafeRide service offers late-night transportation for students.",
+  },
+  {
+    name: "Substance Abuse Counseling",
+    description:
+      "Supports students struggling with alcohol or drug use with counseling and rehabilitation resources.",
+    university: "University of Texas at Austin",
+    university_description:
+      "UT Austin’s Counseling and Mental Health Center provides substance abuse support for students.",
+  },
+  {
+    name: "Peer Mentorship Programs",
+    description:
+      "Connects students with upperclassmen mentors to help them navigate university life.",
+    university: "McGill University",
+    university_description:
+      "McGill’s Peer Mentoring Program helps new students build connections with experienced student mentors.",
+  },
+  {
+    name: "Leadership Development Programs",
+    description:
+      "Offers workshops, seminars, and experiences designed to develop leadership skills.",
+    university: "Princeton University",
+    university_description:
+      "Princeton offers leadership programs through its Office of the Dean of Undergraduate Students to foster leadership potential in students.",
+  },
+  {
+    name: "Recreational Sports and Fitness",
+    description:
+      "Provides access to fitness centers, sports facilities, and wellness programs for physical health.",
+    university: "Ohio State University",
+    university_description:
+      "Ohio State’s Recreational Sports Department offers a variety of fitness classes, sports clubs, and wellness programs.",
+  },
+  {
+    name: "Legal Services",
+    description:
+      "Offers free or low-cost legal advice and support for students.",
+    university: "University of Arizona",
+    university_description:
+      "The University of Arizona offers legal services for students, including consultations on landlord disputes, traffic tickets, and more.",
+  },
+  {
+    name: "Diversity and Inclusion Office",
+    description:
+      "Works to promote inclusivity on campus and ensure equal access and support for all students.",
+    university: "Cornell University",
+    university_description:
+      "Cornell’s Office of Diversity and Inclusion promotes campus-wide inclusivity and offers support for underrepresented students.",
+  },
+  {
+    name: "Housing Assistance Office",
+    description:
+      "Supports students with on-campus and off-campus housing needs, including roommate matching and legal advice.",
+    university: "University of Pennsylvania",
+    university_description:
+      "Penn’s Housing Office offers resources for on-campus housing, off-campus rentals, and housing-related legal advice.",
+  },
+  {
+    name: "Student Clubs and Organizations",
+    description:
+      "Provides a wide range of extracurricular clubs, organizations, and activities to enhance the student experience.",
+    university: "University of Melbourne",
+    university_description:
+      "The University of Melbourne offers a vibrant student life with hundreds of clubs and organizations covering diverse interests.",
+  },
+  {
+    name: "Library Services",
+    description:
+      "Provides access to research materials, study spaces, and academic support from librarians.",
+    university: "Columbia University",
+    university_description:
+      "Columbia’s library system offers extensive resources, research support, and quiet study areas for students.",
+  },
+  {
+    name: "Public Speaking Workshops",
+    description:
+      "Offers workshops to improve public speaking and presentation skills.",
+    university: "Georgetown University",
+    university_description:
+      "Georgetown’s Center for Student Engagement provides public speaking and leadership workshops to help students build confidence.",
+  },
+  {
+    name: "Campus Wellness Center",
+    description:
+      "Offers holistic wellness programs focusing on mental, physical, and emotional health.",
+    university: "University of Queensland",
+    university_description:
+      "The University of Queensland offers a campus wellness center that provides health workshops and wellness programs.",
+  },
+  {
+    name: "Conflict Resolution Services",
+    description:
+      "Assists students with resolving conflicts through mediation and dialogue.",
+    university: "University of North Carolina at Chapel Hill",
+    university_description:
+      "UNC Chapel Hill’s Conflict Resolution Center provides mediation services for students facing disputes with peers, roommates, or faculty.",
+  },
+  {
+    name: "Cultural Centers",
+    description:
+      "Supports cultural identity and awareness through events, resources, and student support.",
+    university: "Brown University",
+    university_description:
+      "Brown’s Cultural Centers provide a safe space for students to explore and express their cultural identities through events and community engagement.",
+  },
+  {
+    name: "Entrepreneurship Programs",
+    description:
+      "Offers resources, mentorship, and funding opportunities for students looking to start their own businesses.",
+    university: "University of Chicago",
+    university_description:
+      "The University of Chicago’s Polsky Center for Entrepreneurship provides resources, networking opportunities, and funding for aspiring student entrepreneurs.",
+  },
+  {
+    name: "Religious and Spiritual Life Support",
+    description:
+      "Supports students in exploring their religious and spiritual beliefs through faith-based groups and counseling.",
+    university: "Duke University",
+    university_description:
+      "Duke University’s Center for Spiritual Life offers support and resources for students of all faiths, including chaplain services.",
+  },
+];
 
 export const clubTypes = [
   {

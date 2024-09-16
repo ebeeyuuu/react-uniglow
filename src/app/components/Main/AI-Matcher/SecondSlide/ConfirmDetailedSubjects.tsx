@@ -25,14 +25,7 @@ const ConfirmDetailedSubjects: React.FC<ConfirmDetailedSubjectsProps> = ({
   categories,
   onRemoveSubject,
 }) => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [removingSubject, setRemovingSubject] = useState<string | null>(null);
-
-  useEffect(() => {
-    const handleResize = () => setWindowWidth(window.innerWidth);
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   useEffect(() => {
     if (removingSubject) {
@@ -61,13 +54,13 @@ const ConfirmDetailedSubjects: React.FC<ConfirmDetailedSubjectsProps> = ({
   return (
     <AnimatePresence>
       <motion.div
-        className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center p-4 scrollbar-hide"
+        className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-70 flex justify-center items-center p-4 scrollbar-hide"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <div className="bg-black/60 backdrop-blur-lg rounded-xl shadow-md w-full max-w-7xl h-[90vh] overflow-hidden flex flex-col">
+        <div className="rounded-xl shadow-md w-full max-w-7xl h-[90vh] overflow-hidden flex flex-col">
           <div className="flex-grow overflow-y-auto p-10 scrollbar-hide">
             <div className="grid max-md:grid-cols-1 grid-cols-2 gap-6">
               {categories.map((category, index) => {
@@ -122,13 +115,13 @@ const ConfirmDetailedSubjects: React.FC<ConfirmDetailedSubjectsProps> = ({
           </div>
           <div className="flex justify-center items-center gap-x-4 mb-16 bg-transparent">
             <button
-              className="border-[#003dcc] border-2 bg-black hover:bg-[#003dcc] text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 ease-in-out text-lg"
+              className="border-[#003dcc] border-2 bg-[#003dcc] text-white font-bold py-2 px-4 rounded-lg text-lg"
               onClick={onConfirm}
             >
               Confirm
             </button>
             <button
-              className="border-[#f31722] border-2 bg-black hover:bg-[#f31722] text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 ease-in-out text-lg"
+              className="border-[#f31722] border-2 bg-[#f31722] text-white font-bold py-2 px-4 rounded-lg text-lg"
               onClick={onCancel}
             >
               Cancel

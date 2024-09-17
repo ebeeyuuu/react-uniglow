@@ -1,6 +1,8 @@
-import Lenis from "@studio-freight/lenis";
+import Lenis from "lenis";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
+import Confirm from "./Confirm";
+import Checkmark from "./Checkmark";
 
 type ServiceItem = {
   name: string;
@@ -26,6 +28,7 @@ const ExpandingServices: React.FC<ExpandingServicesProps> = ({
   const containerRef = useRef<HTMLDivElement>(null);
   const leftColumnRef = useRef<HTMLDivElement>(null);
   const rightColumnRef = useRef<HTMLDivElement>(null);
+  const confirmRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const lenis = new Lenis({
@@ -56,6 +59,9 @@ const ExpandingServices: React.FC<ExpandingServicesProps> = ({
       if (rightColumnRef.current) {
         rightColumnRef.current.style.transform = `translateY(${-scroll * 0.5}px)`;
       }
+      if (confirmRef.current) {
+        confirmRef.current.style.transform = `translateY(${-scroll - 500}px)`;
+      }
     });
 
     return () => {
@@ -63,7 +69,6 @@ const ExpandingServices: React.FC<ExpandingServicesProps> = ({
     };
   }, []);
 
-  // Dynamically split services based on the leftColumnCount prop
   const leftServices = services.slice(0, leftColumnCount);
   const rightServices = services.slice(leftColumnCount);
 
@@ -74,7 +79,7 @@ const ExpandingServices: React.FC<ExpandingServicesProps> = ({
   ) => (
     <div
       key={index}
-      className="border border-white rounded-xl p-10 gap-4 transition-all duration-500 ease-in-out bg-black relative overflow-hidden"
+      className="rounded-xl p-10 gap-4 transition-all duration-500 ease-in-out bg-[#031f66] relative overflow-hidden"
       onMouseEnter={() => {
         isLeft ? setLeftHoveredIndex(index) : setRightHoveredIndex(index);
       }}
@@ -123,7 +128,7 @@ const ExpandingServices: React.FC<ExpandingServicesProps> = ({
       <div className="relative w-full" style={{ height: "300vh" }}>
         <div
           ref={leftColumnRef}
-          className="absolute left-0 top-0 pt-10 pl-10 pr-5 w-1/2 space-y-6"
+          className="absolute left-0 top-0 pt-10 pl-10 pr-3 w-1/2 space-y-6"
           style={{ willChange: "transform" }}
         >
           {leftServices.map((service, index) =>
@@ -132,13 +137,17 @@ const ExpandingServices: React.FC<ExpandingServicesProps> = ({
         </div>
         <div
           ref={rightColumnRef}
-          className="absolute right-0 top-0 pt-10 pr-10 pl-5 w-1/2 space-y-6 z-10"
+          className="absolute right-0 top-0 pt-10 pr-10 pl-3 w-1/2 space-y-6 z-10"
           style={{ willChange: "transform" }}
         >
           {rightServices.map((service, index) =>
             renderService(service, index, false),
           )}
         </div>
+      </div>
+
+      <div ref={confirmRef}>
+        <Confirm />
       </div>
     </div>
   );

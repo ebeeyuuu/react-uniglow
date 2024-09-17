@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 type ServiceItem = {
   name: string;
@@ -13,42 +14,24 @@ interface ExpandingServicesProps {
 
 const ExpandingServices: React.FC<ExpandingServicesProps> = ({ services }) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
-  const leftColumnRef = useRef<HTMLDivElement>(null);
-  const rightColumnRef = useRef<HTMLDivElement>(null);
+
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
+  const leftServicesY = useTransform(scrollYProgress, [0, 1], ["0%", "200%"]); // Move left column down faster
+  const rightServicesY = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]); // Move right column down slower
 
   const leftServices = services.filter((_, index) => index % 2 === 0);
   const rightServices = services.filter((_, index) => index % 2 !== 0);
 
-  useEffect(() => {
-    const container = containerRef.current;
-    const leftColumn = leftColumnRef.current;
-    const rightColumn = rightColumnRef.current;
-
-    if (!container || !leftColumn || !rightColumn) return;
-
-    const handleScroll = () => {
-      const scrollPercentage =
-        container.scrollTop / (container.scrollHeight - container.clientHeight);
-      const maxMove = container.scrollHeight - leftColumn.clientHeight;
-
-      leftColumn.style.transform = `translateY(${scrollPercentage * maxMove * 0.5}px)`;
-      rightColumn.style.transform = `translateY(${scrollPercentage * maxMove}px)`;
-    };
-
-    container.addEventListener("scroll", handleScroll);
-    return () => container.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
-    <div
-      ref={containerRef}
-      className="w-full h-full overflow-y-auto overflow-x-hidden scrollbar-hide"
-    >
-      <div className="relative w-full" style={{ height: "200%" }}>
-        <div
-          ref={leftColumnRef}
-          className="absolute left-0 top-0 w-1/2 p-10 space-y-6"
+    <div className="w-full h-full overflow-y-auto overflow-x-hidden scrollbar-hide">
+      <div className="relative w-full h-screen">
+        <motion.div
+          className="absolute left-0 top-0 w-1/2 inset-0 p-10 space-y-6 transform"
+          style={{ y: leftServicesY }}
         >
           {leftServices.map((service, index) => (
             <div
@@ -69,11 +52,10 @@ const ExpandingServices: React.FC<ExpandingServicesProps> = ({ services }) => {
               )}
             </div>
           ))}
-        </div>
-
-        <div
-          ref={rightColumnRef}
-          className="absolute right-0 top-0 w-1/2 p-10 space-y-6"
+        </motion.div>
+        <motion.div
+          className="absolute right-0 top-0 w-1/2 p-10 space-y-6 z-10 transform"
+          style={{ y: rightServicesY }}
         >
           {rightServices.map((service, index) => (
             <div
@@ -84,7 +66,7 @@ const ExpandingServices: React.FC<ExpandingServicesProps> = ({ services }) => {
               <p className="text-lg font-medium">{service.description}</p>
             </div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </div>
   );

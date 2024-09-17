@@ -1,4 +1,4 @@
-import { motion, useScroll, useTransform } from "framer-motion";
+import React, { useState, useEffect, useRef } from "react";
 
 type ServiceItem = {
   name: string;
@@ -12,42 +12,80 @@ interface ExpandingServicesProps {
 }
 
 const ExpandingServices: React.FC<ExpandingServicesProps> = ({ services }) => {
-  const { scrollY } = useScroll();
-
-  // Separate transforms for left and right columns
-  const y1 = useTransform(scrollY, [0, 2000], [0, -600]); // Left column scrolls faster and lower
-  const y2 = useTransform(scrollY, [0, 2000], [0, -300]); // Right column scrolls slower and higher
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const leftColumnRef = useRef<HTMLDivElement>(null);
+  const rightColumnRef = useRef<HTMLDivElement>(null);
 
   const leftServices = services.filter((_, index) => index % 2 === 0);
   const rightServices = services.filter((_, index) => index % 2 !== 0);
 
-  return (
-    <div className="w-full h-full flex gap-6 p-10 overflow-y-auto overflow-x-hidden scrollbar-hide">
-      {/* Left column with faster scrolling */}
-      <motion.div className="w-1/2 grid grid-cols-1 gap-6" style={{ y: y1 }}>
-        {leftServices.map((service, index) => (
-          <div
-            key={index}
-            className="service-item border border-white rounded-xl p-10 gap-4 min-h-96"
-          >
-            <h2 className="text-xl font-bold">{service.name}</h2>
-            <p className="text-lg font-medium">{service.description}</p>
-          </div>
-        ))}
-      </motion.div>
+  useEffect(() => {
+    const container = containerRef.current;
+    const leftColumn = leftColumnRef.current;
+    const rightColumn = rightColumnRef.current;
 
-      {/* Right column with slower scrolling */}
-      <motion.div className="w-1/2 grid grid-cols-1 gap-6" style={{ y: y2 }}>
-        {rightServices.map((service, index) => (
-          <div
-            key={index}
-            className="service-item border border-white rounded-xl p-10 gap-4 min-h-96"
-          >
-            <h2 className="text-xl font-bold">{service.name}</h2>
-            <p className="text-lg font-medium">{service.description}</p>
-          </div>
-        ))}
-      </motion.div>
+    if (!container || !leftColumn || !rightColumn) return;
+
+    const handleScroll = () => {
+      const scrollPercentage =
+        container.scrollTop / (container.scrollHeight - container.clientHeight);
+      const maxMove = container.scrollHeight - leftColumn.clientHeight;
+
+      leftColumn.style.transform = `translateY(${scrollPercentage * maxMove * 0.5}px)`;
+      rightColumn.style.transform = `translateY(${scrollPercentage * maxMove}px)`;
+    };
+
+    container.addEventListener("scroll", handleScroll);
+    return () => container.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <div
+      ref={containerRef}
+      className="w-full h-full overflow-y-auto overflow-x-hidden scrollbar-hide"
+    >
+      <div className="relative w-full" style={{ height: "200%" }}>
+        <div
+          ref={leftColumnRef}
+          className="absolute left-0 top-0 w-1/2 p-10 space-y-6"
+        >
+          {leftServices.map((service, index) => (
+            <div
+              key={index}
+              className="service-item border border-white rounded-xl p-10 gap-4 min-h-96 hover:min-h-[600px] transition-all duration-500 ease-in-out bg-black"
+              onMouseEnter={() => setHoveredIndex(index)}
+              onMouseLeave={() => setHoveredIndex(null)}
+            >
+              <h2 className="text-xl font-bold">{service.name}</h2>
+              <p className="text-lg font-medium">{service.description}</p>
+              {hoveredIndex === index && (
+                <div className="mt-4">
+                  <h2 className="text-xl font-bold">{service.university}</h2>
+                  <p className="text-lg font-medium">
+                    {service.university_description}
+                  </p>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+
+        <div
+          ref={rightColumnRef}
+          className="absolute right-0 top-0 w-1/2 p-10 space-y-6"
+        >
+          {rightServices.map((service, index) => (
+            <div
+              key={index}
+              className="service-item border border-white rounded-xl p-10 gap-4 min-h-96 bg-black"
+            >
+              <h2 className="text-xl font-bold">{service.name}</h2>
+              <p className="text-lg font-medium">{service.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };

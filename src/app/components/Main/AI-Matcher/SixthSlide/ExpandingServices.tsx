@@ -1,5 +1,6 @@
-import React, { useState, useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import Lenis from "@studio-freight/lenis";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect, useRef } from "react";
 
 type ServiceItem = {
   name: string;
@@ -10,63 +11,134 @@ type ServiceItem = {
 
 interface ExpandingServicesProps {
   services: ServiceItem[];
+  leftColumnCount: number; // New prop to control the number of items in the left column
 }
 
-const ExpandingServices: React.FC<ExpandingServicesProps> = ({ services }) => {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+const ExpandingServices: React.FC<ExpandingServicesProps> = ({
+  services,
+  leftColumnCount,
+}) => {
+  const [leftHoveredIndex, setLeftHoveredIndex] = useState<number | null>(null);
+  const [rightHoveredIndex, setRightHoveredIndex] = useState<number | null>(
+    null,
+  );
 
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "end start"],
-  });
-  const leftServicesY = useTransform(scrollYProgress, [0, 1], ["0%", "200%"]); // Move left column down faster
-  const rightServicesY = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]); // Move right column down slower
+  const containerRef = useRef<HTMLDivElement>(null);
+  const leftColumnRef = useRef<HTMLDivElement>(null);
+  const rightColumnRef = useRef<HTMLDivElement>(null);
 
-  const leftServices = services.filter((_, index) => index % 2 === 0);
-  const rightServices = services.filter((_, index) => index % 2 !== 0);
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      direction: "vertical",
+      gestureDirection: "vertical",
+      smooth: true,
+      mouseMultiplier: 1,
+      smoothTouch: false,
+      touchMultiplier: 2,
+      infinite: false,
+      wrapper: containerRef.current,
+      content: containerRef.current,
+    });
+
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    lenis.on("scroll", ({ scroll }: { scroll: number }) => {
+      if (leftColumnRef.current) {
+        leftColumnRef.current.style.transform = `translateY(${-scroll * 2}px)`;
+      }
+      if (rightColumnRef.current) {
+        rightColumnRef.current.style.transform = `translateY(${-scroll * 0.5}px)`;
+      }
+    });
+
+    return () => {
+      lenis.destroy();
+    };
+  }, []);
+
+  // Dynamically split services based on the leftColumnCount prop
+  const leftServices = services.slice(0, leftColumnCount);
+  const rightServices = services.slice(leftColumnCount);
+
+  const renderService = (
+    service: ServiceItem,
+    index: number,
+    isLeft: boolean,
+  ) => (
+    <div
+      key={index}
+      className="border border-white rounded-xl p-10 gap-4 transition-all duration-500 ease-in-out bg-black relative overflow-hidden"
+      onMouseEnter={() => {
+        isLeft ? setLeftHoveredIndex(index) : setRightHoveredIndex(index);
+      }}
+      onMouseLeave={() => {
+        isLeft ? setLeftHoveredIndex(null) : setRightHoveredIndex(null);
+      }}
+    >
+      <h2 className="text-xl font-bold">{service.name}</h2>
+      <p className="text-lg font-medium">{service.description}</p>
+      <motion.div
+        className="mt-4"
+        initial={{ height: 0 }}
+        animate={{
+          height: isLeft
+            ? leftHoveredIndex === index
+              ? "auto"
+              : 0
+            : rightHoveredIndex === index
+              ? "auto"
+              : 0,
+        }}
+        transition={{ duration: 0.3 }}
+      >
+        <AnimatePresence>
+          {(isLeft && leftHoveredIndex === index) ||
+            (!isLeft && rightHoveredIndex === index) ? (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 20 }}
+              transition={{ duration: 0.3 }}
+            >
+              <h2 className="text-xl font-bold">{service.university}</h2>
+              <p className="text-lg font-medium">
+                {service.university_description}
+              </p>
+            </motion.div>
+          ) : null}
+        </AnimatePresence>
+      </motion.div>
+    </div>
+  );
 
   return (
-    <div className="w-full h-full overflow-y-auto overflow-x-hidden scrollbar-hide">
-      <div className="relative w-full h-screen">
-        <motion.div
-          className="absolute left-0 top-0 w-1/2 inset-0 p-10 space-y-6 transform"
-          style={{ y: leftServicesY }}
+    <div ref={containerRef} className="w-full h-screen overflow-hidden">
+      <div className="relative w-full" style={{ height: "300vh" }}>
+        <div
+          ref={leftColumnRef}
+          className="absolute left-0 top-0 pt-10 pl-10 pr-5 w-1/2 space-y-6"
+          style={{ willChange: "transform" }}
         >
-          {leftServices.map((service, index) => (
-            <div
-              key={index}
-              className="service-item border border-white rounded-xl p-10 gap-4 min-h-96 hover:min-h-[600px] transition-all duration-500 ease-in-out bg-black"
-              onMouseEnter={() => setHoveredIndex(index)}
-              onMouseLeave={() => setHoveredIndex(null)}
-            >
-              <h2 className="text-xl font-bold">{service.name}</h2>
-              <p className="text-lg font-medium">{service.description}</p>
-              {hoveredIndex === index && (
-                <div className="mt-4">
-                  <h2 className="text-xl font-bold">{service.university}</h2>
-                  <p className="text-lg font-medium">
-                    {service.university_description}
-                  </p>
-                </div>
-              )}
-            </div>
-          ))}
-        </motion.div>
-        <motion.div
-          className="absolute right-0 top-0 w-1/2 p-10 space-y-6 z-10 transform"
-          style={{ y: rightServicesY }}
+          {leftServices.map((service, index) =>
+            renderService(service, index, true),
+          )}
+        </div>
+        <div
+          ref={rightColumnRef}
+          className="absolute right-0 top-0 pt-10 pr-10 pl-5 w-1/2 space-y-6 z-10"
+          style={{ willChange: "transform" }}
         >
-          {rightServices.map((service, index) => (
-            <div
-              key={index}
-              className="service-item border border-white rounded-xl p-10 gap-4 min-h-96 bg-black"
-            >
-              <h2 className="text-xl font-bold">{service.name}</h2>
-              <p className="text-lg font-medium">{service.description}</p>
-            </div>
-          ))}
-        </motion.div>
+          {rightServices.map((service, index) =>
+            renderService(service, index, false),
+          )}
+        </div>
       </div>
     </div>
   );

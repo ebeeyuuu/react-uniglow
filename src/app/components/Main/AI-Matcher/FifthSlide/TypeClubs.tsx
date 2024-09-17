@@ -35,8 +35,6 @@ const TypeClubs: React.FC<TypeClubsProps> = ({ clubTypes, onConfirm }) => {
     return 2;
   };
 
-  console.log(clubTypes);
-
   const columnCount = getColumnCount();
 
   const layoutItems = useMemo(() => {

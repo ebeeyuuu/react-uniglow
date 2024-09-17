@@ -301,7 +301,7 @@ export const clubTypes = [
   },
   {
     type: "Entrepreneur Clubs",
-    description: "Support business creation and entrepreneurial skills.",
+    description: "Support business creation and skills development.",
   },
   {
     type: "Environmental Clubs",

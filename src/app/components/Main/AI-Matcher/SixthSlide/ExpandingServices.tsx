@@ -20,9 +20,21 @@ const ExpandingServices: React.FC<ExpandingServicesProps> = ({
   services,
   leftColumnCount,
 }) => {
+  const rightColumnHeightRef = useRef<number>(0);
+  const leftColumnHeightRef = useRef<number>(0);
+  const averageHeightRef = useRef<number>(0);
+  const [confirmPosition, setConfirmPosition] = useState(0);
+
   const [leftHoveredIndex, setLeftHoveredIndex] = useState<number | null>(null);
   const [rightHoveredIndex, setRightHoveredIndex] = useState<number | null>(
     null,
+  );
+
+  const [selectedLeftServices, setSelectedLeftServices] = useState<number[]>(
+    [],
+  );
+  const [selectedRightServices, setSelectedRightServices] = useState<number[]>(
+    [],
   );
 
   const containerRef = useRef<HTMLDivElement>(null);
@@ -69,62 +81,113 @@ const ExpandingServices: React.FC<ExpandingServicesProps> = ({
     };
   }, []);
 
+  useEffect(() => {
+    const updateHeight = () => {
+      if (leftColumnRef.current && rightColumnRef.current) {
+        rightColumnHeightRef.current = rightColumnRef.current.scrollHeight;
+        leftColumnHeightRef.current = leftColumnRef.current.scrollHeight;
+        averageHeightRef.current =
+          (leftColumnHeightRef.current + rightColumnHeightRef.current) / 2;
+        setConfirmPosition(
+          Math.max(0, averageHeightRef.current - window.innerHeight),
+        );
+      }
+    };
+
+    updateHeight();
+    window.addEventListener("resize", updateHeight);
+
+    return () => {
+      window.removeEventListener("resize", updateHeight);
+    };
+  }, [services]);
+
   const leftServices = services.slice(0, leftColumnCount);
   const rightServices = services.slice(leftColumnCount);
+
+  const toggleSelectService = (index: number, isLeft: boolean) => {
+    if (isLeft) {
+      setSelectedLeftServices((prevSelected) =>
+        prevSelected.includes(index)
+          ? prevSelected.filter((i) => i !== index)
+          : [...prevSelected, index],
+      );
+    } else {
+      setSelectedRightServices((prevSelected) =>
+        prevSelected.includes(index)
+          ? prevSelected.filter((i) => i !== index)
+          : [...prevSelected, index],
+      );
+    }
+  };
 
   const renderService = (
     service: ServiceItem,
     index: number,
     isLeft: boolean,
-  ) => (
-    <div
-      key={index}
-      className="rounded-xl p-10 gap-4 transition-all duration-500 ease-in-out bg-[#031f66] relative overflow-hidden"
-      onMouseEnter={() => {
-        isLeft ? setLeftHoveredIndex(index) : setRightHoveredIndex(index);
-      }}
-      onMouseLeave={() => {
-        isLeft ? setLeftHoveredIndex(null) : setRightHoveredIndex(null);
-      }}
-    >
-      <h2 className="text-xl font-bold">{service.name}</h2>
-      <p className="text-lg font-medium">{service.description}</p>
-      <motion.div
-        className="mt-4"
-        initial={{ height: 0 }}
-        animate={{
-          height: isLeft
-            ? leftHoveredIndex === index
-              ? "auto"
-              : 0
-            : rightHoveredIndex === index
-              ? "auto"
-              : 0,
+  ) => {
+    const isSelected = isLeft
+      ? selectedLeftServices.includes(index)
+      : selectedRightServices.includes(index);
+
+    return (
+      <div
+        key={index}
+        className="rounded-xl p-10 gap-4 transition-all duration-500 ease-in-out bg-[#031f66] relative overflow-hidden cursor-pointer"
+        onMouseEnter={() => {
+          isLeft ? setLeftHoveredIndex(index) : setRightHoveredIndex(index);
         }}
-        transition={{ duration: 0.3 }}
+        onMouseLeave={() => {
+          isLeft ? setLeftHoveredIndex(null) : setRightHoveredIndex(null);
+        }}
+        onClick={() => toggleSelectService(index, isLeft)}
       >
-        <AnimatePresence>
-          {(isLeft && leftHoveredIndex === index) ||
-            (!isLeft && rightHoveredIndex === index) ? (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 20 }}
-              transition={{ duration: 0.3 }}
-            >
-              <h2 className="text-xl font-bold">{service.university}</h2>
-              <p className="text-lg font-medium">
-                {service.university_description}
-              </p>
-            </motion.div>
-          ) : null}
-        </AnimatePresence>
-      </motion.div>
-    </div>
-  );
+        <h2 className="text-lg md:text-xl font-bold">{service.name}</h2>
+        <p className="text-sm md:text-base font-light mt-4">
+          {service.description}
+        </p>
+        <motion.div
+          className="mt-4"
+          initial={{ height: 0 }}
+          animate={{
+            height: isLeft
+              ? leftHoveredIndex === index
+                ? "auto"
+                : 0
+              : rightHoveredIndex === index
+                ? "auto"
+                : 0,
+          }}
+          transition={{ duration: 0.3 }}
+        >
+          <AnimatePresence>
+            {(isLeft && leftHoveredIndex === index) ||
+              (!isLeft && rightHoveredIndex === index) ? (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 20 }}
+                transition={{ duration: 0.3 }}
+              >
+                <h2 className="text-xl font-bold">{service.university}</h2>
+                <p className="text-lg font-light mt-4">
+                  {service.university_description}
+                </p>
+              </motion.div>
+            ) : null}
+          </AnimatePresence>
+        </motion.div>
+
+        <Checkmark isSelected={isSelected} />
+      </div>
+    );
+  };
 
   return (
-    <div ref={containerRef} className="w-full h-screen overflow-hidden">
+    <div
+      ref={containerRef}
+      className="w-full h-screen overflow-hidden flex justify-center"
+    >
       <div className="relative w-full" style={{ height: "300vh" }}>
         <div
           ref={leftColumnRef}
@@ -146,8 +209,18 @@ const ExpandingServices: React.FC<ExpandingServicesProps> = ({
         </div>
       </div>
 
-      <div ref={confirmRef}>
-        <Confirm />
+      <div
+        ref={confirmRef}
+        style={{
+          position: "fixed",
+          bottom: `${Math.sqrt(confirmPosition) - confirmPosition * 0.8}px`,
+          transition: "all 0.1s ease-in-out",
+        }}
+      >
+        <Confirm
+          count={selectedLeftServices.length + selectedRightServices.length}
+          maxCount={leftServices.length + rightServices.length}
+        />
       </div>
     </div>
   );

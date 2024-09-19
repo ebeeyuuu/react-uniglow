@@ -1,6 +1,4 @@
-import React, { useState, useCallback, useMemo } from "react";
-import { FixedSizeList as List } from "react-window";
-import AutoSizer from "react-virtualized-auto-sizer";
+import React, { useState, useMemo } from "react";
 import { universityEnvironmentData } from "@/data";
 import UniversityCard from "./UniversityCard";
 import { FaTimes } from "react-icons/fa";
@@ -10,59 +8,79 @@ interface EndlessScrollProps {
   onClose: () => void;
 }
 
-const EndlessScroll = ({ selectedCategory, onClose }: EndlessScrollProps) => {
-  const universities = universityEnvironmentData[selectedCategory] || [];
-  const [scrollOffset, setScrollOffset] = useState(0);
-
-  const Row = useMemo(
-    () =>
-      ({ index, style }) => {
-        const startIndex = index * 4; // 4 columns per row
-        return (
-          <div
-            style={style}
-            className="grid grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1 gap-6 scrollbar-hide"
-          >
-            {[0, 1, 2, 3].map((offset) => {
-              const universityIndex =
-                (startIndex + offset) % universities.length;
-              const university = universities[universityIndex];
-              return (
-                <UniversityCard
-                  key={universityIndex}
-                  university={university}
-                  isActive={false}
-                />
-              );
-            })}
-          </div>
-        );
-      },
-    [universities],
+const EndlessScroll: React.FC<EndlessScrollProps> = ({
+  selectedCategory,
+  onClose,
+}) => {
+  const universities = useMemo(
+    () => universityEnvironmentData[selectedCategory] || [],
+    [selectedCategory],
   );
 
-  const onScroll = useCallback(({ scrollOffset }) => {
-    setScrollOffset(scrollOffset);
-  }, []);
+  const [scrollIndex, setScrollIndex] = useState(0);
+
+  const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
+    const bottom =
+      e.currentTarget.scrollHeight - e.currentTarget.scrollTop ===
+      e.currentTarget.clientHeight;
+
+    if (bottom) {
+      setScrollIndex(
+        (prevIndex: number) => (prevIndex + 1) % universities.length,
+      );
+    }
+  };
+
+  const visibleUniversities = useMemo(() => {
+    const repeatedUniversities = [
+      ...universities.slice(scrollIndex),
+      ...universities.slice(0, scrollIndex),
+    ];
+
+    return repeatedUniversities;
+  }, [scrollIndex, universities]);
+
+  const Row: React.FC<{ index: number; style: React.CSSProperties }> = ({
+    index,
+    style,
+  }) => {
+    const startIndex = index * 4;
+    return (
+      <div
+        style={style}
+        className="grid grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1 gap-6 scrollbar-hide p-6"
+      >
+        {Array.from({ length: 4 }).map((_, offset) => {
+          const universityIndex =
+            (startIndex + offset) % visibleUniversities.length;
+          const university = visibleUniversities[universityIndex];
+          return (
+            <UniversityCard
+              key={universityIndex}
+              university={university}
+              isActive={false}
+            />
+          );
+        })}
+      </div>
+    );
+  };
 
   return (
-    <div className="absolute top-0 left-0 w-full h-full z-10 bg-black/50 backdrop-blur-xl scrollbar-hide">
-      <AutoSizer>
-        {({ height, width }) => (
-          <List
-            className="List scrollbar-hide"
-            height={height}
-            itemCount={Math.ceil((universities.length * 25) / 4)}
-            itemSize={620}
-            width={width}
-            onScroll={onScroll}
-            scrollOffset={scrollOffset}
-            overscanCount={3} // Increase overscan to pre-load rows before they appear
-          >
-            {Row}
-          </List>
+    <div className="absolute top-0 left-0 w-full h-full z-10 bg-black/50 backdrop-blur-xl">
+      <div
+        className="overflow-y-auto scrollbar-hide h-full"
+        onScroll={handleScroll}
+      >
+        {Array.from({ length: Math.ceil(universities.length / 4) }).map(
+          (_, index) => (
+            <div key={index} className="relative h-[620px]">
+              <Row index={index} style={{}} />
+            </div>
+          ),
         )}
-      </AutoSizer>
+      </div>
+
       <button
         onClick={onClose}
         className="fixed z-50 bottom-6 right-6 bg-white text-black hover:bg-black hover:text-white rounded-full p-5 transition-colors duration-300 ease-in-out"
@@ -72,5 +90,7 @@ const EndlessScroll = ({ selectedCategory, onClose }: EndlessScrollProps) => {
     </div>
   );
 };
+
+EndlessScroll.displayName = "EndlessScroll"; // Fix for missing display name
 
 export default EndlessScroll;

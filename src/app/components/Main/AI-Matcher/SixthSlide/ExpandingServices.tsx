@@ -171,8 +171,10 @@ const ExpandingServices: React.FC<ExpandingServicesProps> = ({
                 exit={{ opacity: 0, y: 20 }}
                 transition={{ duration: 0.3 }}
               >
-                <h2 className="text-xl font-bold">{service.university}</h2>
-                <p className="text-lg font-light mt-4">
+                <h2 className="text-lg md:text-xl mt-8 font-bold">
+                  {service.university}
+                </h2>
+                <p className="text-sm md:text-base font-light mt-4">
                   {service.university_description}
                 </p>
               </motion.div>
@@ -215,7 +217,7 @@ const ExpandingServices: React.FC<ExpandingServicesProps> = ({
         ref={confirmRef}
         style={{
           position: "fixed",
-          bottom: `${Math.sqrt(confirmPosition) - confirmPosition * 0.8}px`,
+          bottom: `${Math.sqrt(confirmPosition) - confirmPosition * 0.7}px`,
           transition: "all 0.1s ease-in-out",
         }}
       >

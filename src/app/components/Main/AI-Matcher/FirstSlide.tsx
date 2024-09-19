@@ -18,7 +18,7 @@ const FirstSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
         <div className="text-lg font-medium text-center">
           Here we help you decide on what university is best for you!
         </div>
-        <div className="flex flex-row gap-x-[20px] justify-center items-center whitespace-nowrap">
+        <div className="flex flex-col md:flex-row gap-4 justify-center items-center whitespace-nowrap">
           <Link
             href="/pages/main"
             className="px-5 py-3 flex flex-row items-center gap-x-[10px] bg-[#003dcc] rounded-[10px]"
@@ -26,24 +26,26 @@ const FirstSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
             <Home className="w-[20px] h-[20px]" />
             <p className="font-medium whitespace-nowrap">Return to home page</p>
           </Link>
-          <button
-            onClick={onNextSlide}
-            className="bg-[#003dcc] rounded-[10px] px-5 py-3 font-medium"
-          >
-            Go to next slide
-          </button>
-          <motion.div
-            animate={{
-              x: [0, 10, 0],
-            }}
-            transition={{
-              duration: 1,
-              repeat: Infinity,
-              repeatType: "reverse",
-            }}
-          >
-            <HiArrowLeft size={24} color="white" />
-          </motion.div>
+          <div className="flex flex-row justify-center items-center gap-x-4">
+            <button
+              onClick={onNextSlide}
+              className="bg-[#003dcc] rounded-[10px] px-5 py-3 font-medium"
+            >
+              Go to next slide
+            </button>
+            <motion.div
+              animate={{
+                x: [0, 10, 0],
+              }}
+              transition={{
+                duration: 1,
+                repeat: Infinity,
+                repeatType: "reverse",
+              }}
+            >
+              <HiArrowLeft size={24} color="white" />
+            </motion.div>
+          </div>
         </div>
       </div>
     </div>

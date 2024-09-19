@@ -68,14 +68,6 @@ export const supportServices = [
       "MIT’s Writing and Communication Center offers one-on-one help with writing and presentations for all students.",
   },
   {
-    name: "LGBTQ+ Support Services",
-    description:
-      "Provides resources, support groups, and advocacy for LGBTQ+ students to create an inclusive campus environment.",
-    university: "University of Toronto",
-    university_description:
-      "The University of Toronto offers LGBTQ+ resources and support through its Sexual & Gender Diversity Office.",
-  },
-  {
     name: "Veteran Student Services",
     description:
       "Supports veteran students with academic advising, mental health resources, and community engagement.",
@@ -15041,14 +15033,6 @@ export const clubExamples = {
         "Private Ivy League university with a strong emphasis on law, advocacy, and human rights.",
     },
     {
-      name: "Columbia Justice for All",
-      university: "Columbia University",
-      club_description:
-        "A student-run organization advocating for racial equality, LGBTQ+ rights, and economic justice through activism and education.",
-      university_description:
-        "Private Ivy League university known for its leadership in social justice and activism.",
-    },
-    {
       name: "Princeton Coalition for Social Justice",
       university: "Princeton University",
       club_description:
@@ -15137,14 +15121,6 @@ export const clubExamples = {
         "Public university with a strong focus on civic engagement and justice advocacy.",
     },
     {
-      name: "Duke University Social Justice Advocates",
-      university: "Duke University",
-      club_description:
-        "Encourages students to engage in advocacy for social justice causes, focusing on racial equality, LGBTQ+ rights, and economic justice.",
-      university_description:
-        "Private research university known for its commitment to activism and public service.",
-    },
-    {
       name: "University of North Carolina Chapel Hill Social Justice Collective",
       university: "University of North Carolina at Chapel Hill",
       club_description:
@@ -15159,14 +15135,6 @@ export const clubExamples = {
         "Works on campaigns for racial justice, gender equality, and immigrant rights, promoting activism and community engagement.",
       university_description:
         "Private university known for its focus on global justice and advocacy.",
-    },
-    {
-      name: "New York University Students for Social Justice",
-      university: "New York University",
-      club_description:
-        "Encourages student activism around issues like racial justice, LGBTQ+ rights, and economic equality.",
-      university_description:
-        "Private research university with a focus on social change and advocacy for marginalized communities.",
     },
     {
       name: "University of California Los Angeles Social Justice Coalition",

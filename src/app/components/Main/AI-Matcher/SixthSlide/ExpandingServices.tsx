@@ -14,11 +14,13 @@ type ServiceItem = {
 interface ExpandingServicesProps {
   services: ServiceItem[];
   leftColumnCount: number; // New prop to control the number of items in the left column
+  onConfirm: () => void;
 }
 
 const ExpandingServices: React.FC<ExpandingServicesProps> = ({
   services,
   leftColumnCount,
+  onConfirm,
 }) => {
   const rightColumnHeightRef = useRef<number>(0);
   const leftColumnHeightRef = useRef<number>(0);
@@ -220,6 +222,7 @@ const ExpandingServices: React.FC<ExpandingServicesProps> = ({
         <Confirm
           count={selectedLeftServices.length + selectedRightServices.length}
           maxCount={leftServices.length + rightServices.length}
+          onConfirm={onConfirm}
         />
       </div>
     </div>

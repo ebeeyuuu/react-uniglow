@@ -6,18 +6,20 @@ export const config = {
 
 const MAX_RETRIES = 5;
 
-async function generateStoryWithRetry(retries) {
+async function generateResponseWithRetry(retries: number, prompt: string) {
   try {
     const text = await generateText({
       model: ollama
         .CompletionTextGenerator({
           model: "llama3.1",
-          temperature: 0.7,
+          temperature: 0.2,
           maxGenerationTokens: 120,
         })
         .withTextPrompt(),
-      prompt: "Write a short story about a robot learning to love:\n\n",
+
+      prompt: prompt,
     });
+
     return text;
   } catch (error) {
     if (
@@ -26,19 +28,26 @@ async function generateStoryWithRetry(retries) {
       "unexpected server status: llm server loading model" &&
       retries > 0
     ) {
-      await new Promise((resolve) => setTimeout(resolve, 2000)); // 2 seconds
-      return generateStoryWithRetry(retries - 1);
+      await new Promise((resolve) => setTimeout(resolve, 2000));
+      return generateResponseWithRetry(retries - 1, prompt);
     }
-    throw error; // Rethrow the error if no retries are left
+
+    throw error;
   }
 }
 
 export default async function handler(req) {
+  const { prompt } = await req.json();
+
+  if (!prompt || typeof prompt !== "string") {
+    return new Response("Invalid prompt", { status: 400 });
+  }
+
   const encoder = new TextEncoder();
   const stream = new ReadableStream({
     async start(controller) {
       try {
-        const text = await generateStoryWithRetry(MAX_RETRIES);
+        const text = await generateResponseWithRetry(MAX_RETRIES, prompt);
 
         for (const chunk of text) {
           controller.enqueue(encoder.encode(chunk));
@@ -46,7 +55,7 @@ export default async function handler(req) {
 
         controller.close();
       } catch (error) {
-        console.error("Error while generating story: ", error);
+        console.error("Error while generating response: ", error);
         controller.error(error);
       }
     },

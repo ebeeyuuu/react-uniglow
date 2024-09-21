@@ -229,7 +229,7 @@ const ExpandingServices: React.FC<ExpandingServicesProps> = ({
         ref={confirmRef}
         style={{
           position: "fixed",
-          bottom: `${Math.sqrt(confirmPosition) - confirmPosition * 0.7}px`,
+          bottom: `${Math.sqrt(confirmPosition) - confirmPosition * 0.8}px`,
           transition: "all 0.1s ease-in-out",
         }}
       >

@@ -1,11 +1,24 @@
 import { useState, useEffect } from "react";
+import { useUniversityRecommendations } from "@/context/useUniversityRecommendation";
+
+function formatRecommendationsData(recommendations) {
+  return (
+    `I want you to become an expert university researcher and recommender. I have some information I need you to use to determine the best university possible. Give me only the university name when answering.\n` +
+    `Subjects: ${recommendations.subjects.join(", ")}\n` +
+    `Detailed Subjects: ${recommendations.detailedSubjects.join(", ")}\n` +
+    `Ideal Area Type: ${recommendations.idealArea}\n` +
+    `Ideal Countries: ${recommendations.idealCountries.join(", ")}\n` + // Corrected from ideaCountries to idealCountries
+    `Support Services: ${recommendations.supportServices.join(", ")}`
+  );
+}
 
 const SeventhSlide = () => {
+  const { recommendations } = useUniversityRecommendations();
   const [response, setResponse] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
   const [prompt, setPrompt] = useState<string>("Enter any prompt here");
 
-  const fetchResponse = async () => {
+  const fetchResponse = async (promptToSend) => {
     setLoading(true);
     setResponse("");
 
@@ -15,7 +28,7 @@ const SeventhSlide = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ prompt }),
+        body: JSON.stringify({ prompt: promptToSend }),
       });
 
       if (!response.ok) {
@@ -46,8 +59,21 @@ const SeventhSlide = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    fetchResponse();
+    fetchResponse(prompt);
   };
+
+  // Ensure recommendations are available before formatting
+  const formattedRecommendations = recommendations
+    ? formatRecommendationsData(recommendations)
+    : "Loading recommendations...";
+
+  // Automatically fetch response on component mount
+  useEffect(() => {
+    if (recommendations) {
+      const promptToSend = formatRecommendationsData(recommendations);
+      fetchResponse(promptToSend);
+    }
+  }, [recommendations]);
 
   return (
     <div className="w-full h-full justify-center items-center gap-6 flex flex-col text-xl font-bold">
@@ -67,7 +93,9 @@ const SeventhSlide = () => {
         </button>
       </form>
       <div className="flex justify-center items-center px-20 font-light text-lg">
-        {loading ? "Generating response..." : response || "Seventh Slide"}
+        {loading
+          ? "Generating response..."
+          : response || formattedRecommendations}
       </div>
     </div>
   );

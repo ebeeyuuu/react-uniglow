@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 import Confirm from "./Confirm";
 import Checkmark from "./Checkmark";
+import { useUniversityRecommendations } from "@/context/useUniversityRecommendation";
 
 type ServiceItem = {
   name: string;
@@ -13,8 +14,8 @@ type ServiceItem = {
 
 interface ExpandingServicesProps {
   services: ServiceItem[];
-  leftColumnCount: number; // New prop to control the number of items in the left column
-  onConfirm: () => void;
+  leftColumnCount: number;
+  onConfirm: (selectedServices: string[]) => void;
 }
 
 const ExpandingServices: React.FC<ExpandingServicesProps> = ({
@@ -22,6 +23,8 @@ const ExpandingServices: React.FC<ExpandingServicesProps> = ({
   leftColumnCount,
   onConfirm,
 }) => {
+  const { updateUniversityRecommendations } = useUniversityRecommendations();
+
   const rightColumnHeightRef = useRef<number>(0);
   const leftColumnHeightRef = useRef<number>(0);
   const averageHeightRef = useRef<number>(0);
@@ -181,10 +184,20 @@ const ExpandingServices: React.FC<ExpandingServicesProps> = ({
             ) : null}
           </AnimatePresence>
         </motion.div>
-
         <Checkmark isSelected={isSelected} />
       </div>
     );
+  };
+
+  const handleConfirm = async () => {
+    const selectedServiceNames = [
+      ...selectedLeftServices.map((index) => leftServices[index].name),
+      ...selectedRightServices.map((index) => rightServices[index].name),
+    ];
+    onConfirm(selectedServiceNames);
+    await updateUniversityRecommendations({
+      supportServices: selectedServiceNames,
+    });
   };
 
   return (
@@ -212,7 +225,6 @@ const ExpandingServices: React.FC<ExpandingServicesProps> = ({
           )}
         </div>
       </div>
-
       <div
         ref={confirmRef}
         style={{
@@ -224,7 +236,7 @@ const ExpandingServices: React.FC<ExpandingServicesProps> = ({
         <Confirm
           count={selectedLeftServices.length + selectedRightServices.length}
           maxCount={leftServices.length + rightServices.length}
-          onConfirm={onConfirm}
+          onConfirm={handleConfirm}
         />
       </div>
     </div>

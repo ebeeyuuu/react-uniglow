@@ -3,12 +3,17 @@ import ExpandingServices from "./SixthSlide/ExpandingServices";
 import { supportServices } from "@/data";
 import { motion, AnimatePresence } from "framer-motion";
 
+import { useUniversityRecommendations } from "@/context/useUniversityRecommendation";
+
 interface SlideProps {
   onNextSlide: () => void;
 }
 
 const SixthSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
+  const { updateUniversityRecommendations } = useUniversityRecommendations();
+
   const [showServices, setShowServices] = useState(false);
+  const [selectedServices, setSelectedServices] = useState<string[]>([]);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -17,6 +22,14 @@ const SixthSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
 
     return () => clearTimeout(timer);
   }, []);
+
+  const handleConfirm = async (services: string[]) => {
+    setSelectedServices(services);
+    await updateUniversityRecommendations({
+      supportServices: selectedServices,
+    });
+    onNextSlide();
+  };
 
   return (
     <div className="w-full h-full relative overflow-y-auto overflow-x-hidden scrollbar-hide">
@@ -29,22 +42,26 @@ const SixthSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
             exit={{ opacity: 0, y: -40 }}
             transition={{ duration: 0.5 }}
           >
-            What kind of support services would make you feel comfortable on
-            campus?
+            <p>
+              What kind of support services would make you feel comfortable on
+              campus?
+            </p>
           </motion.div>
         )}
       </AnimatePresence>
       <AnimatePresence>
         {showServices && (
           <motion.div
+            className="w-full h-full flex flex-col items-center justify-center"
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1, transition: { duration: 1.5 } }}
+            animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
           >
             <ExpandingServices
               services={supportServices}
               leftColumnCount={20}
-              onConfirm={onNextSlide}
+              onConfirm={handleConfirm}
             />
           </motion.div>
         )}

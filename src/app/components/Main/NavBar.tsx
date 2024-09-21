@@ -89,7 +89,7 @@ const NavBar = () => {
               height: "auto",
             }}
           />
-          <p className={`max-[1000px]:text-sm mb-2 max-[1000px]:mb-0`}>
+          <p className={`max-[1000px]:text-xs text-sm font-light mb-2 max-[1000px]:mb-0`}>
             {username === "" ? "Guest" : username}
           </p>
           {navItems.map(({ href, label, icon: Icon }) => (

@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import EndlessScroll from "./ThirdSlide/EndlessScroll";
 import Checkmark from "./ThirdSlide/Checkmark";
 import { FaArrowLeft } from "react-icons/fa";
+import UniversitiesEndlessScroll from "./ThirdSlide/UniversitiesEndlessScroll";
 
 type SlideProps = {
   onNextSlide: () => void;
@@ -65,7 +66,7 @@ const ThirdSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
         {!showCountries && (
           <>
             <motion.div
-              className="text-center text-3xl font-bold mb-10 w-11/12"
+              className="text-center text-3xl mb-10 w-11/12"
               initial={{ opacity: 0, y: -50 }}
               animate={{
                 opacity: fadeContent ? 0 : 1,
@@ -185,7 +186,13 @@ const ThirdSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
         )}
       </AnimatePresence>
 
-      {/* Fade-in Countries text */}
+      {showExamples && selectedType && (
+        <UniversitiesEndlessScroll
+          selectedCategory={selectedType}
+          onClose={handleCloseExamples}
+        />
+      )}
+
       <AnimatePresence>
         {showCountries && (
           <motion.div

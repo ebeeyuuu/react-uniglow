@@ -3,12 +3,12 @@ import { universityEnvironmentData } from "@/data";
 import UniversityCard from "./UniversityCard";
 import { FaTimes } from "react-icons/fa";
 
-interface EndlessScrollProps {
+interface UniversityEndlessScrollProps {
   selectedCategory: string;
   onClose: () => void;
 }
 
-const EndlessScroll: React.FC<EndlessScrollProps> = ({
+const UniversitiesEndlessScroll: React.FC<UniversityEndlessScrollProps> = ({
   selectedCategory,
   onClose,
 }) => {
@@ -91,6 +91,6 @@ const EndlessScroll: React.FC<EndlessScrollProps> = ({
   );
 };
 
-EndlessScroll.displayName = "EndlessScroll"; // Fix for missing display name
+UniversitiesEndlessScroll.displayName = "EndlessScroll"; // Fix for missing display name
 
-export default EndlessScroll;
+export default UniversitiesEndlessScroll;

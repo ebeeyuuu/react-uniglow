@@ -2,6 +2,973 @@ import { MdPeople, MdConnectWithoutContact } from "react-icons/md";
 import { BiDonateHeart } from "react-icons/bi";
 import { SiActivitypub } from "react-icons/si";
 
+export const countryEnvironmentData = {
+  bustlingCities: [
+    {
+      country: "Afghanistan",
+      description:
+        "Kabul is a bustling metropolis filled with markets, narrow streets, and a mix of traditional and modern architecture. The streets are often busy with local commerce, while its urban areas contrast with the rural surroundings. Traffic and pedestrian movement create a vibrant yet chaotic energy throughout the day.",
+    },
+    {
+      country: "Albania",
+      description:
+        "Tirana is the heart of Albania's bustling life with modern cafes, vibrant public squares, and rapidly expanding infrastructure. The streets are lined with colorful buildings and open-air markets, giving the city a lively feel. It is a hub of cultural life, where old and new coexist.",
+    },
+    {
+      country: "Algeria",
+      description:
+        "Algiers, perched on the Mediterranean coast, is known for its vibrant energy, mixing colonial architecture with modern skyscrapers. Its bustling streets are filled with lively markets and street vendors, offering a glimpse of local life. The city pulses with movement and activity, especially around its bustling waterfront areas.",
+    },
+    {
+      country: "Andorra",
+      description:
+        "Andorra la Vella, nestled in the Pyrenees, is a unique blend of small-town charm and urban life. Despite its size, the city is bustling with tourists and locals alike, enjoying its shopping streets and vibrant public spaces. The environment is lively but retains an air of tranquility with its stunning mountainous backdrop.",
+    },
+    {
+      country: "Angola",
+      description:
+        "Luanda, a coastal hub, is Angola's economic powerhouse with busy streets filled with vendors and traffic. The city's skyline is rapidly expanding, and its markets and street life are a core part of its bustling atmosphere. There's a constant hum of activity, especially along the waterfront.",
+    },
+    {
+      country: "Antigua and Barbuda",
+      description:
+        "St. John's, the capital of Antigua and Barbuda, is a small yet bustling port city filled with markets and shops. Its colorful buildings and busy streets create an energetic atmosphere, particularly around its cruise ship docks. The environment combines island charm with urban hustle.",
+    },
+    {
+      country: "Argentina",
+      description:
+        "Buenos Aires is a bustling metropolis known for its vibrant culture, wide avenues, and bustling street life. The city's neighborhoods each have their own unique energy, with lively markets and cafes. Its constant hum of traffic and pedestrians gives the city an unending sense of activity.",
+    },
+    {
+      country: "Armenia",
+      description:
+        "Yerevan is Armenia’s bustling capital, known for its cafes, parks, and vibrant street life. The city is alive with activity, from bustling markets to the lively main square. It offers a mix of modern development and Soviet-era architecture, all within a buzzing atmosphere.",
+    },
+    {
+      country: "Australia",
+      description:
+        "Sydney is a bustling harbor city with iconic landmarks, busy streets, and a thriving cultural scene. The city is alive with traffic, pedestrians, and constant waterfront activity. It balances fast-paced urban life with nearby scenic natural attractions.",
+    },
+    {
+      country: "Austria",
+      description:
+        "Vienna is a blend of historical charm and modern urban life, with bustling streets lined by grand architecture. The city is alive with cultural venues, cafes, and public spaces, making it a vibrant place. Its parks and historic centers offer a break from the urban hustle.",
+    },
+    {
+      country: "Azerbaijan",
+      description:
+        "Baku is a bustling city on the Caspian Sea, known for its rapid development and mix of modern and historic architecture. Its streets are full of activity, from busy markets to new developments along the waterfront. The city's energy is palpable, especially in its urban core.",
+    },
+    {
+      country: "Bahamas",
+      description:
+        "Nassau, the Bahamas' capital, is a bustling city known for its busy streets, vibrant markets, and colorful colonial buildings. The waterfront area is full of energy, with cruise ships, vendors, and tourists contributing to the lively atmosphere. The environment combines island charm with urban hustle.",
+    },
+    {
+      country: "Bahrain",
+      description:
+        "Manama is a bustling city known for its towering skyscrapers, busy souks, and waterfront promenades. The streets are filled with a mix of modern developments and traditional markets, creating a lively atmosphere. The city's energy is driven by commerce, especially in its urban districts.",
+    },
+    {
+      country: "Bangladesh",
+      description:
+        "Dhaka is a bustling metropolis with heavy traffic, crowded streets, and non-stop commercial activity. The city pulses with life as street vendors, rickshaws, and pedestrians fill the streets. Its busy atmosphere is a blend of modern development and traditional markets.",
+    },
+    {
+      country: "Barbados",
+      description:
+        "Bridgetown is a lively city with busy streets, colorful buildings, and a bustling port. The markets and public spaces are full of energy, especially when cruise ships arrive. Its urban environment mixes island culture with a thriving commercial scene.",
+    },
+    {
+      country: "Belarus",
+      description:
+        "Minsk is a bustling city known for its wide avenues, Soviet-era architecture, and busy public squares. The streets are alive with activity, from public transport to pedestrians navigating the city’s many parks and cultural venues. Its urban core pulses with modern developments and historical landmarks.",
+    },
+    {
+      country: "Belgium",
+      description:
+        "Brussels is a bustling capital known for its political importance, busy streets, and diverse neighborhoods. The city is full of activity, from the European quarter to its bustling markets and squares. The vibrant urban environment is a blend of modernity and historical charm.",
+    },
+    {
+      country: "Belize",
+      description:
+        "Belize City is a bustling hub, especially around its waterfront areas and markets. The streets are lively with vendors and traffic, offering a glimpse into the everyday life of locals. Despite its small size, the city feels energetic and fast-paced.",
+    },
+    {
+      country: "Benin",
+      description:
+        "Cotonou is the economic heart of Benin, known for its busy markets, traffic, and bustling port area. The streets are full of activity, from street vendors to the constant flow of people and vehicles. It is a vibrant, chaotic city that serves as a major commercial hub.",
+    },
+    {
+      country: "Bhutan",
+      description:
+        "Thimphu is Bhutan's bustling capital, where modern development meets traditional culture. The city's streets are lively with pedestrians, markets, and public squares, all framed by the surrounding mountains. Its urban energy contrasts with Bhutan's otherwise serene landscapes.",
+    },
+    {
+      country: "Bolivia",
+      description:
+        "La Paz is a bustling city set high in the Andes, known for its steep streets, colorful markets, and unique architecture. The city's vibrant street life contrasts with its dramatic natural surroundings. The atmosphere is busy, especially in the city center where commerce thrives.",
+    },
+    {
+      country: "Bosnia and Herzegovina",
+      description:
+        "Sarajevo is a bustling city where East meets West, with busy streets, historical landmarks, and vibrant markets. The old town is always alive with activity, while the newer parts of the city feature modern development. The urban atmosphere is energetic, with a strong cultural presence.",
+    },
+    {
+      country: "Botswana",
+      description:
+        "Gaborone is a bustling city with modern development, busy streets, and a thriving commercial center. The city is alive with activity, from its shopping districts to its public squares. Its urban energy contrasts with the surrounding natural beauty of Botswana’s landscapes.",
+    },
+    {
+      country: "Brazil",
+      description:
+        "São Paulo is a sprawling metropolis known for its skyscrapers, busy streets, and diverse neighborhoods. The city pulses with energy, with constant traffic, street vendors, and a fast-paced lifestyle. Its urban environment is a mix of modernity and culture, making it one of the busiest cities in the world.",
+    },
+    {
+      country: "Brunei",
+      description:
+        "Bandar Seri Begawan is a small yet bustling capital with a mix of modern development and traditional markets. The city’s waterfront area is particularly lively, with shops and vendors adding to the busy atmosphere. Despite its size, it feels vibrant and energetic.",
+    },
+    {
+      country: "Bulgaria",
+      description:
+        "Sofia is a bustling city with a vibrant mix of old and new, combining historic buildings with modern architecture. The city is full of activity, from its lively markets to its busy public squares. Its energy comes from a blend of commerce, culture, and history.",
+    },
+    {
+      country: "Burkina Faso",
+      description:
+        "Ouagadougou is a lively city where busy streets are filled with motorcycles, vendors, and constant movement. The markets are bustling, offering a look into everyday life. Despite its heat, the city remains full of energy and local activity.",
+    },
+    {
+      country: "Burundi",
+      description:
+        "Bujumbura is a bustling city with markets, busy streets, and a vibrant waterfront area along Lake Tanganyika. The streets are alive with activity, from vendors to pedestrians going about their daily lives. The city's energy is palpable despite the surrounding tranquil lake views.",
+    },
+    {
+      country: "Cabo Verde",
+      description:
+        "Praia is a small but bustling capital with narrow streets filled with commerce and local life. The waterfront areas are busy with fishing boats and markets, giving the city a vibrant energy. Its compact size doesn't detract from its lively atmosphere.",
+    },
+    {
+      country: "Cambodia",
+      description:
+        "Phnom Penh is a bustling city with a rich cultural scene, busy markets, and riverside promenades. The streets are alive with motorcycles, pedestrians, and vendors, creating a constant hum of activity. The city's energy reflects its rapid urbanization and historical roots.",
+    },
+    {
+      country: "Cameroon",
+      description:
+        "Douala is a bustling port city, known for its busy markets, traffic-filled streets, and industrial areas. The energy of the city comes from its vibrant commercial life and constant movement of goods and people. Its waterfront area is particularly lively, filled with vendors and local culture.",
+    },
+    {
+      country: "Canada",
+      description:
+        "Toronto is a bustling, multicultural metropolis with busy streets, iconic landmarks, and a constant flow of traffic and pedestrians. The city’s vibrant neighborhoods, public spaces, and cultural hubs make it one of the busiest cities in North America. The urban environment is a mix of commerce, culture, and activity.",
+    },
+    {
+      country: "Central African Republic",
+      description:
+        "Bangui is a small but bustling city, with its busy streets filled with motorcycles, pedestrians, and market activity. The urban energy is concentrated around the central market, where vendors sell everything from fresh produce to clothing. The city's atmosphere is lively, especially in the commercial districts.",
+    },
+    {
+      country: "Chad",
+      description:
+        "N'Djamena is a bustling city with markets, busy streets, and a mix of modern and traditional life. The streets are alive with activity, from motorcycles to vendors selling their goods. Its urban atmosphere is lively, with a constant hum of local commerce.",
+    },
+    {
+      country: "Chile",
+      description:
+        "Santiago is a bustling city nestled between the Andes and the coast, known for its skyscrapers, busy streets, and cultural landmarks. The city pulses with energy, with traffic, street vendors, and pedestrians filling its urban core. Santiago's modern developments contrast with its historical areas, making it a vibrant metropolis.",
+    },
+    {
+      country: "China",
+      description:
+        "Beijing is a bustling capital with wide boulevards, historic landmarks, and non-stop commercial activity. The city is alive with traffic, street vendors, and a thriving cultural scene, making it one of the busiest cities in the world. Its urban core pulses with activity, from business districts to historical sites.",
+    },
+    {
+      country: "Colombia",
+      description:
+        "Bogotá is a bustling city with heavy traffic, crowded streets, and a vibrant cultural scene. The city’s public spaces and busy markets are alive with local life, while its historic center offers a glimpse of Colombia’s past. The energy of the city is fast-paced and full of movement.",
+    },
+    {
+      country: "Comoros",
+      description:
+        "Moroni is a small but bustling city with lively markets, street vendors, and a vibrant waterfront. The streets are filled with the sounds of commerce and daily life, making it feel active and alive. Its atmosphere combines local culture with a busy urban life.",
+    },
+    {
+      country: "Congo, Democratic Republic of the",
+      description:
+        "Kinshasa is one of the largest French-speaking cities in the world, bustling with street vendors and a mix of urban life. The city's streets are always busy, filled with people and traffic, showcasing a vibrant local culture. Kinshasa’s energy is palpable in its markets and public spaces.",
+    },
+    {
+      country: "Congo, Republic of the",
+      description:
+        "Brazzaville is a bustling city with lively markets and a vibrant street life along the Congo River. The city is full of energy, with busy streets filled with commerce and pedestrian activity. Its cultural scene adds to the bustling urban atmosphere.",
+    },
+    {
+      country: "Costa Rica",
+      description:
+        "San José is a bustling city surrounded by mountains, known for its vibrant arts scene and lively street life. The streets are filled with activity from vendors, cafes, and local markets. Its urban environment is a mix of commerce, culture, and community.",
+    },
+    {
+      country: "Croatia",
+      description:
+        "Zagreb is a bustling city with a mix of historic charm and modern development. The streets are alive with cafes, markets, and cultural events, making it a lively urban center. Its public squares and parks are often bustling with both locals and tourists.",
+    },
+    {
+      country: "Cuba",
+      description:
+        "Havana is a bustling city known for its vibrant streets, classic cars, and rich history. The city is filled with music, culture, and street vendors, creating an energetic atmosphere. Its lively urban environment reflects both tradition and modernity.",
+    },
+    {
+      country: "Cyprus",
+      description:
+        "Nicosia, the capital, is a bustling city that combines rich history with modern urban life. The streets are filled with activity, from shops and cafes to vibrant markets. Its unique division adds a distinct dynamic to its bustling environment.",
+    },
+    {
+      country: "Czech Republic",
+      description:
+        "Prague is a bustling city famous for its historic architecture, vibrant nightlife, and lively public squares. The streets are filled with tourists and locals enjoying cafes, shops, and markets. Its urban environment pulses with cultural events and historical charm.",
+    },
+    {
+      country: "Denmark",
+      description:
+        "Copenhagen is a bustling city known for its canals, cycling culture, and vibrant neighborhoods. The city is alive with street life, markets, and a rich cultural scene. Its mix of modern design and historic sites creates an energetic urban atmosphere.",
+    },
+    {
+      country: "Djibouti",
+      description:
+        "Djibouti City is a bustling port city filled with markets, busy streets, and a vibrant waterfront. The energy of the city comes from its trade activities and local commerce, making it a lively urban center. Its location by the Red Sea adds to its dynamic environment.",
+    },
+    {
+      country: "Dominica",
+      description:
+        "Roseau is a small but bustling capital with vibrant markets and a lively atmosphere. The streets are filled with local vendors and colorful buildings, creating a charming urban environment. Its waterfront area adds to the city’s energy.",
+    },
+    {
+      country: "Dominican Republic",
+      description:
+        "Santo Domingo is a bustling city rich in history and culture, filled with lively streets and vibrant public spaces. The city's colonial architecture contrasts with modern developments, creating a dynamic urban environment. Its markets and cultural venues are always filled with activity.",
+    },
+    {
+      country: "Ecuador",
+      description:
+        "Quito is a bustling city set high in the Andes, known for its historic center and vibrant street life. The streets are filled with vendors, tourists, and locals, creating a lively atmosphere. Its unique geography adds to the energy of urban life.",
+    },
+    {
+      country: "Egypt",
+      description:
+        "Cairo is a bustling metropolis known for its rich history, busy streets, and vibrant markets. The city is alive with the sounds of traffic, street vendors, and cultural activities. Its urban environment is a mix of ancient and modern, creating a unique energy.",
+    },
+    {
+      country: "El Salvador",
+      description:
+        "San Salvador is a bustling city with busy streets, vibrant markets, and a mix of modern and traditional life. The atmosphere is lively, with street vendors and local commerce adding to the urban energy. Its parks and public spaces are often filled with activity.",
+    },
+    {
+      country: "Equatorial Guinea",
+      description:
+        "Malabo is a bustling city located on Bioko Island, known for its vibrant markets and lively streets. The urban environment is full of activity, from local vendors to bustling public areas. The city offers a mix of traditional and modern influences.",
+    },
+    {
+      country: "Eritrea",
+      description:
+        "Asmara is a bustling city known for its Italian colonial architecture and vibrant street life. The city’s markets and cafes are lively, offering a taste of local culture. Its unique urban environment blends tradition with modernity.",
+    },
+    {
+      country: "Estonia",
+      description:
+        "Tallinn is a bustling capital with a well-preserved medieval old town and vibrant modern life. The streets are alive with tourists and locals enjoying markets, cafes, and cultural events. Its unique blend of history and modernity creates a lively urban atmosphere.",
+    },
+    {
+      country: "Eswatini",
+      description:
+        "Mbabane is a bustling city with busy markets and a vibrant atmosphere, showcasing a mix of traditional and modern life. The streets are filled with vendors and pedestrians, creating a lively urban environment. Its cultural scene adds to the city's energetic vibe.",
+    },
+    {
+      country: "Ethiopia",
+      description:
+        "Addis Ababa is a bustling city known for its diverse culture, busy streets, and lively markets. The city is a hub of activity, with a mix of traditional and modern influences shaping its urban environment. Its energy is palpable in both commercial and cultural spaces.",
+    },
+    {
+      country: "Fiji",
+      description:
+        "Suva is a bustling capital city with busy streets, markets, and a vibrant waterfront. The atmosphere is lively, with vendors and locals filling public spaces and contributing to the city’s energy. Its blend of local culture and urban life creates a unique environment.",
+    },
+    {
+      country: "Finland",
+      description:
+        "Helsinki is a bustling city known for its design scene, vibrant public spaces, and coastal views. The streets are alive with activity, from bustling markets to cultural events. Its unique blend of nature and urban life creates an energetic atmosphere.",
+    },
+    {
+      country: "France",
+      description:
+        "Paris is a bustling capital famous for its iconic landmarks, busy streets, and vibrant café culture. The city pulses with energy, filled with tourists and locals enjoying its markets and public spaces. Its atmosphere is a blend of history, art, and modern life.",
+    },
+    {
+      country: "Gabon",
+      description:
+        "Libreville is a bustling city with busy markets, a vibrant waterfront, and a mix of modern and traditional life. The streets are alive with activity, from vendors to local commerce. Its urban environment reflects the energy of the coastal region.",
+    },
+    {
+      country: "Gambia",
+      description:
+        "Banjul is a small but bustling capital with lively markets and a vibrant street life. The city’s waterfront area is particularly busy, showcasing local culture and commerce. Its atmosphere is energetic, reflecting the everyday life of its residents.",
+    },
+    {
+      country: "Georgia",
+      description:
+        "Tbilisi is a bustling city with a rich history, vibrant streets, and a mix of modern and traditional architecture. The city's atmosphere is lively, with cafes, markets, and a bustling arts scene. Its urban environment is full of energy, particularly in the historic districts.",
+    },
+    {
+      country: "Germany",
+      description:
+        "Berlin is a bustling city known for its vibrant cultural scene, historical landmarks, and busy streets. The city is alive with activity, from art galleries to markets and festivals. Its urban environment is a mix of modernity and history, creating a dynamic atmosphere.",
+    },
+    {
+      country: "Ghana",
+      description:
+        "Accra is a bustling capital known for its lively markets, street vendors, and vibrant culture. The city’s atmosphere is full of energy, with busy streets filled with commerce and local life. Its urban environment reflects a blend of tradition and modernity.",
+    },
+    {
+      country: "Greece",
+      description:
+        "Athens is a bustling city rich in history, filled with ancient landmarks and modern life. The streets are alive with tourists and locals, showcasing a mix of culture, commerce, and vibrant street life. Its atmosphere is energetic and historically significant.",
+    },
+    {
+      country: "Grenada",
+      description:
+        "St. George's is a small but bustling capital with colorful buildings, lively markets, and a vibrant waterfront. The city's atmosphere is filled with local culture and commerce, creating an energetic environment. Its scenic beauty adds to its charm.",
+    },
+    {
+      country: "Guatemala",
+      description:
+        "Guatemala City is a bustling urban center with a mix of historic landmarks, markets, and cultural activities. The city's atmosphere is lively, filled with street vendors and local commerce. Its rich history is reflected in its vibrant public spaces.",
+    },
+    {
+      country: "Guinea",
+      description:
+        "Conakry is a bustling city known for its lively markets, street life, and vibrant waterfront. The atmosphere is filled with local commerce and cultural activities, creating a lively urban environment. The city's energy is palpable in its public spaces.",
+    },
+    {
+      country: "Guinea-Bissau",
+      description:
+        "Bissau is a small but bustling capital city with lively markets and a vibrant street life. The city is full of energy, with local vendors and busy streets creating a dynamic urban environment. Its atmosphere reflects the daily lives of its residents.",
+    },
+    {
+      country: "Haiti",
+      description:
+        "Port-au-Prince is a bustling capital filled with vibrant markets, street vendors, and a rich cultural scene. The city's atmosphere is lively and dynamic, reflecting the resilience and creativity of its people. Its streets are always filled with activity and energy.",
+    },
+    {
+      country: "Honduras",
+      description:
+        "Tegucigalpa is a bustling city with busy streets, markets, and a mix of modern and traditional life. The urban environment is alive with local commerce and cultural activities, showcasing a vibrant community atmosphere.",
+    },
+    {
+      country: "Hungary",
+      description:
+        "Budapest is a bustling city known for its historic architecture, vibrant nightlife, and lively cultural scene. The streets are filled with locals and tourists enjoying cafes, markets, and public events. Its unique blend of history and modernity creates an energetic urban atmosphere.",
+    },
+    {
+      country: "Iceland",
+      description:
+        "Reykjavik is a bustling city known for its unique landscapes and vibrant culture. The streets are filled with activity from local shops, cafes, and cultural events, creating a lively urban environment. Its atmosphere is a blend of nature and city life.",
+    },
+    {
+      country: "India",
+      description:
+        "Mumbai is a bustling metropolis known for its vibrant street life, busy markets, and diverse culture. The city is alive with activity, from street food vendors to bustling public spaces. Its urban environment reflects the energy of its diverse population.",
+    },
+    {
+      country: "Indonesia",
+      description:
+        "Jakarta is a bustling city filled with traffic, markets, and a mix of cultures. The streets are always alive with activity, showcasing a vibrant urban life filled with local vendors and commerce. Its diverse atmosphere reflects Indonesia's rich cultural tapestry.",
+    },
+    {
+      country: "Iran",
+      description:
+        "Tehran is a bustling capital known for its busy streets, vibrant bazaars, and rich culture. The city is filled with activity, from local vendors to cultural events. Its urban environment reflects a mix of tradition and modernity.",
+    },
+    {
+      country: "Iraq",
+      description:
+        "Baghdad is a bustling city with a rich history, lively markets, and a vibrant street life. The atmosphere is full of energy, with local vendors and cultural activities creating a dynamic urban environment. Its streets are filled with the sounds of commerce and community.",
+    },
+    {
+      country: "Ireland",
+      description:
+        "Dublin is a bustling capital known for its lively pubs, rich history, and vibrant cultural scene. The streets are filled with locals and tourists enjoying markets, events, and nightlife. Its urban environment is a mix of tradition and modernity.",
+    },
+    {
+      country: "Israel",
+      description:
+        "Jerusalem is a bustling city with a rich history and diverse culture. The streets are alive with locals and tourists, showcasing vibrant markets and historical landmarks. Its atmosphere is energetic, reflecting the city's significance to many faiths.",
+    },
+    {
+      country: "Italy",
+      description:
+        "Rome is a bustling city known for its iconic landmarks, rich history, and vibrant street life. The city is filled with tourists and locals enjoying its markets, cafes, and cultural events. Its urban environment reflects the beauty of ancient architecture and modern life.",
+    },
+    {
+      country: "Jamaica",
+      description:
+        "Kingston is a bustling city known for its vibrant music scene, lively markets, and rich culture. The streets are filled with energy, from street performers to local vendors, creating a dynamic urban environment. Its atmosphere reflects the island's spirit.",
+    },
+    {
+      country: "Japan",
+      description:
+        "Tokyo is a bustling metropolis known for its neon lights, busy streets, and diverse culture. The city is alive with activity, from bustling markets to vibrant nightlife. Its urban environment is a mix of modernity and tradition, creating an energetic atmosphere.",
+    },
+    {
+      country: "Jordan",
+      description:
+        "Amman is a bustling capital with a mix of ancient history and modern life. The city is alive with activity, from bustling markets to cafes. Its atmosphere is energetic, reflecting the cultural richness and local commerce.",
+    },
+    {
+      country: "Kazakhstan",
+      description:
+        "Almaty is a bustling city known for its modern skyline, cultural landmarks, and vibrant street life. The streets are filled with locals and tourists enjoying cafes, markets, and public events. Its unique blend of tradition and modernity creates a lively urban atmosphere.",
+    },
+    {
+      country: "Kenya",
+      description:
+        "Nairobi is a bustling city known for its vibrant markets, wildlife, and diverse culture. The streets are alive with activity, from street vendors to busy public spaces. Its urban environment reflects the energy of its rich biodiversity and local communities.",
+    },
+    {
+      country: "Kiribati",
+      description:
+        "Tarawa is a bustling capital with vibrant markets and a lively atmosphere. The streets are filled with local vendors and community activities, creating an energetic urban environment. Its unique island culture adds to its charm.",
+    },
+    {
+      country: "Kuwait",
+      description:
+        "Kuwait City is a bustling capital known for its modern architecture, vibrant markets, and rich culture. The city is filled with activity, from local vendors to cultural events. Its urban environment reflects a mix of tradition and modernity.",
+    },
+    {
+      country: "Kyrgyzstan",
+      description:
+        "Bishkek is a bustling city with a mix of Soviet history and modern life. The streets are filled with markets, cafes, and cultural activities, creating a lively urban atmosphere. Its energy reflects the daily life of its residents.",
+    },
+    {
+      country: "Laos",
+      description:
+        "Vientiane is a bustling capital with a mix of French colonial architecture and local culture. The streets are alive with markets, cafes, and public spaces filled with activity. Its atmosphere is a blend of tradition and modern urban life.",
+    },
+    {
+      country: "Latvia",
+      description:
+        "Riga is a bustling city known for its beautiful architecture, vibrant nightlife, and lively public spaces. The streets are filled with locals and tourists enjoying markets, cafes, and cultural events. Its unique blend of history and modernity creates an energetic urban atmosphere.",
+    },
+    {
+      country: "Lebanon",
+      description:
+        "Beirut is a bustling city known for its vibrant nightlife, rich history, and diverse culture. The streets are alive with energy, filled with local vendors, cafes, and cultural activities. Its urban environment reflects the resilience and spirit of its people.",
+    },
+    {
+      country: "Lesotho",
+      description:
+        "Maseru is a bustling city known for its vibrant markets and lively atmosphere. The streets are filled with local vendors and community activities, creating an energetic urban environment. Its unique culture adds to the city's charm.",
+    },
+    {
+      country: "Liberia",
+      description:
+        "Monrovia is a bustling city with a mix of urban life and local culture. The streets are alive with markets, street vendors, and a vibrant atmosphere. Its urban environment reflects the everyday life of its residents.",
+    },
+    {
+      country: "Libya",
+      description:
+        "Tripoli is a bustling capital known for its rich history, lively markets, and vibrant street life. The city is filled with activity, from local vendors to cultural events. Its atmosphere is dynamic, reflecting the local culture.",
+    },
+    {
+      country: "Liechtenstein",
+      description:
+        "Vaduz is a small but bustling capital with a charming atmosphere. The streets are filled with local shops and cultural venues, creating a lively urban environment. Its picturesque scenery adds to its unique charm.",
+    },
+    {
+      country: "Lithuania",
+      description:
+        "Vilnius is a bustling city known for its beautiful architecture, vibrant arts scene, and lively public spaces. The streets are filled with locals and tourists enjoying markets, cafes, and cultural events. Its unique blend of history and modernity creates an energetic atmosphere.",
+    },
+    {
+      country: "Luxembourg",
+      description:
+        "Luxembourg City is a bustling capital with a mix of historic charm and modern development. The streets are alive with cafes, markets, and cultural events, creating a vibrant urban environment. Its unique geography adds to its appeal.",
+    },
+    {
+      country: "Madagascar",
+      description:
+        "Antananarivo is a bustling city known for its vibrant markets, unique architecture, and rich culture. The streets are filled with activity from local vendors and community events, creating an energetic urban environment. Its atmosphere reflects Madagascar's diversity.",
+    },
+    {
+      country: "Malawi",
+      description:
+        "Lilongwe is a bustling city with a mix of modern developments and local culture. The streets are alive with markets, street vendors, and cultural activities. Its urban environment reflects the energy of its residents.",
+    },
+    {
+      country: "Malaysia",
+      description:
+        "Kuala Lumpur is a bustling metropolis known for its iconic skyline, vibrant markets, and rich cultural diversity. The city is alive with activity, from local street food vendors to bustling public spaces. Its atmosphere reflects Malaysia's dynamic urban life.",
+    },
+    {
+      country: "Maldives",
+      description:
+        "Malé is a bustling capital known for its vibrant markets and rich culture. The streets are filled with local vendors and community activities, creating an energetic urban environment. Its unique island charm adds to its appeal.",
+    },
+    {
+      country: "Mali",
+      description:
+        "Bamako is a bustling city known for its lively markets, rich culture, and vibrant street life. The streets are filled with energy, with local vendors and cultural activities creating a dynamic urban environment. Its atmosphere reflects the local community.",
+    },
+    {
+      country: "Malta",
+      description:
+        "Valletta is a small but bustling capital filled with historic charm, vibrant markets, and a lively cultural scene. The streets are alive with activity from locals and tourists, creating an energetic urban environment. Its rich history adds to its unique appeal.",
+    },
+    {
+      country: "Marshall Islands",
+      description:
+        "Majuro is a bustling capital with a lively atmosphere and vibrant markets. The streets are filled with local vendors and community activities, creating an energetic urban environment. Its unique island culture adds to its charm.",
+    },
+    {
+      country: "Mauritania",
+      description:
+        "Nouakchott is a bustling city with a mix of urban life and local culture. The streets are alive with markets, street vendors, and a vibrant atmosphere. Its urban environment reflects the everyday life of its residents.",
+    },
+    {
+      country: "Mauritius",
+      description:
+        "Port Louis is a bustling capital known for its vibrant markets, rich culture, and lively street life. The streets are filled with activity, from local vendors to cultural events. Its atmosphere reflects the diversity of Mauritius.",
+    },
+    {
+      country: "Mexico",
+      description:
+        "Mexico City is a bustling metropolis known for its rich history, vibrant markets, and diverse culture. The city is alive with activity, from street vendors to cultural festivals. Its urban environment reflects the energy of its diverse population.",
+    },
+    {
+      country: "Micronesia",
+      description:
+        "Palikir is a small but bustling capital with vibrant markets and a lively atmosphere. The streets are filled with local vendors and community activities, creating an energetic urban environment. Its unique island culture adds to its charm.",
+    },
+    {
+      country: "Moldova",
+      description:
+        "Chișinău is a bustling city with a mix of Soviet history and modern life. The streets are alive with markets, cafes, and cultural activities, creating a lively urban atmosphere. Its energy reflects the daily life of its residents.",
+    },
+    {
+      country: "Monaco",
+      description:
+        "Monaco is a small but bustling city-state known for its luxury, vibrant culture, and lively events. The streets are filled with tourists and locals enjoying markets, cafes, and entertainment. Its glamorous atmosphere adds to its unique charm.",
+    },
+    {
+      country: "Mongolia",
+      description:
+        "Ulaanbaatar is a bustling city known for its mix of traditional nomadic culture and modern urban life. The streets are filled with activity from local vendors and cultural events, creating an energetic urban environment. Its unique atmosphere reflects Mongolia's heritage.",
+    },
+    {
+      country: "Montenegro",
+      description:
+        "Podgorica is a bustling capital known for its lively streets, rich culture, and vibrant markets. The city is filled with activity from local vendors and community events, creating an energetic urban environment. Its atmosphere reflects the spirit of Montenegro.",
+    },
+    {
+      country: "Morocco",
+      description:
+        "Rabat is a bustling capital known for its historic architecture, vibrant markets, and rich culture. The streets are alive with activity, from local vendors to cultural events. Its urban environment reflects a mix of tradition and modern life.",
+    },
+    {
+      country: "Mozambique",
+      description:
+        "Maputo is a bustling city known for its lively markets, rich culture, and vibrant street life. The streets are filled with energy, from local vendors to cultural activities, creating a dynamic urban environment. Its atmosphere reflects the local community.",
+    },
+    {
+      country: "Myanmar",
+      description:
+        "Naypyidaw is a bustling city known for its wide boulevards and vibrant culture. The streets are filled with activity from local vendors and cultural events, creating an energetic urban environment. Its unique atmosphere reflects Myanmar's heritage.",
+    },
+    {
+      country: "Namibia",
+      description:
+        "Windhoek is a bustling city known for its mix of urban development and local culture. The streets are alive with markets, cafes, and community activities, creating a vibrant atmosphere. Its energy reflects the daily lives of its residents.",
+    },
+    {
+      country: "Nauru",
+      description:
+        "Yaren is a small but bustling capital known for its vibrant community and lively atmosphere. The streets are filled with local vendors and activities, creating an energetic urban environment. Its unique island culture adds to its charm.",
+    },
+    {
+      country: "Nepal",
+      description:
+        "Kathmandu is a bustling city known for its rich history, vibrant markets, and diverse culture. The streets are alive with activity, from street vendors to cultural events. Its urban environment reflects the energy of its diverse population.",
+    },
+    {
+      country: "Netherlands",
+      description:
+        "Amsterdam is a bustling city known for its beautiful canals, vibrant nightlife, and rich cultural scene. The streets are filled with locals and tourists enjoying markets, cafes, and public events. Its unique atmosphere blends history and modernity.",
+    },
+    {
+      country: "New Zealand",
+      description:
+        "Wellington is a bustling capital known for its vibrant arts scene, beautiful landscapes, and lively atmosphere. The streets are filled with activity from local shops, cafes, and cultural events, creating an energetic urban environment.",
+    },
+    {
+      country: "Nicaragua",
+      description:
+        "Managua is a bustling city known for its vibrant markets, cultural events, and lively atmosphere. The streets are filled with activity, from local vendors to public gatherings, reflecting the energy of its residents.",
+    },
+    {
+      country: "Niger",
+      description:
+        "Niamey is a bustling capital known for its vibrant markets, rich culture, and lively street life. The atmosphere is filled with local commerce and community activities, creating a dynamic urban environment.",
+    },
+    {
+      country: "Nigeria",
+      description:
+        "Lagos is a bustling city known for its vibrant culture, busy markets, and energetic street life. The city is alive with activity, from street vendors to cultural events. Its urban environment reflects the energy of its diverse population.",
+    },
+    {
+      country: "North Macedonia",
+      description:
+        "Skopje is a bustling capital known for its unique architecture, vibrant culture, and lively atmosphere. The streets are filled with locals and tourists enjoying markets, cafes, and cultural events. Its urban environment reflects a mix of history and modern life.",
+    },
+    {
+      country: "Norway",
+      description:
+        "Oslo is a bustling capital known for its rich culture, beautiful landscapes, and lively atmosphere. The streets are filled with activity from local shops, cafes, and cultural events, creating an energetic urban environment.",
+    },
+    {
+      country: "Oman",
+      description:
+        "Muscat is a bustling city known for its vibrant markets, rich culture, and stunning landscapes. The streets are filled with activity, from local vendors to cultural events. Its urban environment reflects a blend of tradition and modernity.",
+    },
+    {
+      country: "Pakistan",
+      description:
+        "Karachi is a bustling metropolis known for its vibrant street life, busy markets, and diverse culture. The city is alive with activity, from street food vendors to bustling public spaces. Its urban environment reflects the energy of its diverse population.",
+    },
+    {
+      country: "Palau",
+      description:
+        "Ngerulmud is a small but bustling capital known for its vibrant community and lively atmosphere. The streets are filled with local vendors and activities, creating an energetic urban environment. Its unique island culture adds to its charm.",
+    },
+    {
+      country: "Panama",
+      description:
+        "Panama City is a bustling metropolis known for its vibrant culture, rich history, and lively atmosphere. The streets are filled with activity, from local vendors to cultural events. Its urban environment reflects a mix of tradition and modernity.",
+    },
+    {
+      country: "Papua New Guinea",
+      description:
+        "Port Moresby is a bustling capital known for its vibrant markets and rich culture. The streets are alive with activity from local vendors and community events, creating an energetic urban environment. Its unique island charm adds to its appeal.",
+    },
+    {
+      country: "Paraguay",
+      description:
+        "Asunción is a bustling city with a mix of modern development and local culture. The streets are alive with markets, cafes, and community activities, creating a vibrant urban atmosphere. Its energy reflects the daily lives of its residents.",
+    },
+    {
+      country: "Peru",
+      description:
+        "Lima is a bustling metropolis known for its rich history, vibrant markets, and diverse culture. The city is alive with activity, from street vendors to cultural festivals. Its urban environment reflects the energy of its diverse population.",
+    },
+    {
+      country: "Philippines",
+      description:
+        "Manila is a bustling city known for its vibrant street life, busy markets, and rich culture. The city is alive with activity, from street food vendors to cultural events. Its urban environment reflects the energy of its diverse population.",
+    },
+    {
+      country: "Poland",
+      description:
+        "Warsaw is a bustling capital known for its rich history, vibrant culture, and lively atmosphere. The streets are filled with locals and tourists enjoying markets, cafes, and cultural events. Its urban environment reflects a blend of tradition and modernity.",
+    },
+    {
+      country: "Portugal",
+      description:
+        "Lisbon is a bustling city known for its colorful neighborhoods, vibrant culture, and lively atmosphere. The streets are filled with activity from local vendors, street performers, and cultural events, creating an energetic urban environment.",
+    },
+    {
+      country: "Qatar",
+      description:
+        "Doha is a bustling city known for its modern skyline, vibrant markets, and rich culture. The streets are alive with activity, from local vendors to cultural events. Its urban environment reflects a blend of tradition and modern life.",
+    },
+    {
+      country: "Romania",
+      description:
+        "Bucharest is a bustling capital known for its rich history, vibrant culture, and lively atmosphere. The streets are filled with locals and tourists enjoying markets, cafes, and cultural events. Its urban environment reflects a mix of tradition and modernity.",
+    },
+    {
+      country: "Russia",
+      description:
+        "Moscow is a bustling metropolis known for its rich history, vibrant culture, and lively atmosphere. The streets are alive with activity, from street vendors to cultural events. Its urban environment reflects the energy of its diverse population.",
+    },
+    {
+      country: "Rwanda",
+      description:
+        "Kigali is a bustling city known for its clean streets, vibrant culture, and rich history. The atmosphere is filled with activity from local vendors and community events, creating an energetic urban environment.",
+    },
+    {
+      country: "Saint Kitts and Nevis",
+      description:
+        "Basseterre is a small but bustling capital with vibrant markets and a lively atmosphere. The streets are filled with local vendors and community activities, creating an energetic urban environment. Its unique island culture adds to its charm.",
+    },
+    {
+      country: "Saint Lucia",
+      description:
+        "Castries is a bustling capital known for its vibrant markets, rich culture, and lively atmosphere. The streets are filled with activity from local vendors and community events, creating an energetic urban environment.",
+    },
+    {
+      country: "Saint Vincent and the Grenadines",
+      description:
+        "Kingstown is a small but bustling capital known for its vibrant markets and lively atmosphere. The streets are filled with local vendors and community activities, creating an energetic urban environment.",
+    },
+    {
+      country: "Samoa",
+      description:
+        "Apia is a small but bustling capital known for its vibrant community and lively atmosphere. The streets are filled with local vendors and activities, creating an energetic urban environment. Its unique island culture adds to its charm.",
+    },
+    {
+      country: "San Marino",
+      description:
+        "San Marino is a small but bustling city known for its historic architecture, vibrant culture, and lively atmosphere. The streets are filled with locals and tourists enjoying markets and cafes, creating an energetic urban environment.",
+    },
+    {
+      country: "Sao Tome and Principe",
+      description:
+        "São Tomé is a small but bustling capital known for its vibrant community and lively atmosphere. The streets are filled with local vendors and activities, creating an energetic urban environment. Its unique island culture adds to its charm.",
+    },
+    {
+      country: "Saudi Arabia",
+      description:
+        "Riyadh is a bustling capital known for its modern development, rich culture, and lively atmosphere. The streets are filled with activity from local vendors, markets, and cultural events, creating an energetic urban environment.",
+    },
+    {
+      country: "Senegal",
+      description:
+        "Dakar is a bustling capital known for its vibrant markets, rich culture, and lively street life. The atmosphere is filled with local commerce and community activities, creating a dynamic urban environment.",
+    },
+    {
+      country: "Serbia",
+      description:
+        "Belgrade is a bustling city known for its vibrant nightlife, rich culture, and lively atmosphere. The streets are filled with locals and tourists enjoying markets, cafes, and cultural events. Its urban environment reflects a mix of tradition and modern life.",
+    },
+    {
+      country: "Seychelles",
+      description:
+        "Victoria is a small but bustling capital known for its vibrant community and lively atmosphere. The streets are filled with local vendors and activities, creating an energetic urban environment. Its unique island culture adds to its charm.",
+    },
+    {
+      country: "Sierra Leone",
+      description:
+        "Freetown is a bustling capital known for its vibrant markets, rich culture, and lively atmosphere. The streets are filled with activity from local vendors and cultural events, creating an energetic urban environment.",
+    },
+    {
+      country: "Singapore",
+      description:
+        "Singapore is a bustling metropolis known for its modern architecture, vibrant culture, and lively atmosphere. The streets are alive with activity from local vendors, shopping centers, and cultural events. Its urban environment reflects a blend of tradition and modern life.",
+    },
+    {
+      country: "Slovakia",
+      description:
+        "Bratislava is a bustling capital known for its rich history, vibrant culture, and lively atmosphere. The streets are filled with locals and tourists enjoying markets, cafes, and cultural events. Its urban environment reflects a mix of tradition and modern life.",
+    },
+    {
+      country: "Slovenia",
+      description:
+        "Ljubljana is a bustling city known for its charming architecture, vibrant culture, and lively atmosphere. The streets are filled with locals and tourists enjoying markets, cafes, and cultural events. Its urban environment reflects a mix of history and modernity.",
+    },
+    {
+      country: "Solomon Islands",
+      description:
+        "Honiara is a bustling capital known for its vibrant community and lively atmosphere. The streets are filled with local vendors and activities, creating an energetic urban environment. Its unique island culture adds to its charm.",
+    },
+    {
+      country: "Somalia",
+      description:
+        "Mogadishu is a bustling city known for its vibrant culture, rich history, and lively atmosphere. The streets are filled with local vendors, markets, and community activities, creating an energetic urban environment.",
+    },
+    {
+      country: "South Africa",
+      description:
+        "Pretoria is a bustling capital known for its rich history, vibrant culture, and lively atmosphere. The streets are filled with activity from local vendors, markets, and cultural events, creating an energetic urban environment.",
+    },
+    {
+      country: "South Korea",
+      description:
+        "Seoul is a bustling metropolis known for its modern development, rich culture, and vibrant atmosphere. The streets are filled with activity from local vendors, markets, and cultural events, creating an energetic urban environment.",
+    },
+    {
+      country: "South Sudan",
+      description:
+        "Juba is a bustling city known for its vibrant culture and lively atmosphere. The streets are filled with local vendors and community activities, creating an energetic urban environment. Its unique charm reflects the resilience of its people.",
+    },
+    {
+      country: "Spain",
+      description:
+        "Madrid is a bustling capital known for its rich culture, vibrant nightlife, and lively atmosphere. The streets are filled with locals and tourists enjoying markets, cafes, and cultural events. Its urban environment reflects a mix of history and modernity.",
+    },
+    {
+      country: "Sri Lanka",
+      description:
+        "Sri Jayawardenepura Kotte is a bustling capital known for its vibrant culture and lively atmosphere. The streets are filled with local vendors and activities, creating an energetic urban environment.",
+    },
+    {
+      country: "Sudan",
+      description:
+        "Khartoum is a bustling capital known for its rich history, vibrant culture, and lively atmosphere. The streets are filled with locals and tourists enjoying markets, cafes, and cultural events. Its urban environment reflects a blend of tradition and modern life.",
+    },
+    {
+      country: "Suriname",
+      description:
+        "Paramaribo is a bustling capital known for its vibrant culture, rich history, and lively atmosphere. The streets are filled with local vendors and activities, creating an energetic urban environment.",
+    },
+    {
+      country: "Sweden",
+      description:
+        "Stockholm is a bustling capital known for its beautiful architecture, vibrant culture, and lively atmosphere. The streets are filled with locals and tourists enjoying markets, cafes, and cultural events. Its urban environment reflects a blend of tradition and modern life.",
+    },
+    {
+      country: "Switzerland",
+      description:
+        "Bern is a bustling capital known for its charming architecture, vibrant culture, and lively atmosphere. The streets are filled with locals and tourists enjoying markets, cafes, and cultural events. Its urban environment reflects a mix of history and modernity.",
+    },
+    {
+      country: "Syria",
+      description:
+        "Damascus is a bustling city known for its rich history, vibrant culture, and lively atmosphere. The streets are filled with local vendors, markets, and cultural events, creating an energetic urban environment.",
+    },
+    {
+      country: "Taiwan",
+      description:
+        "Taipei is a bustling city known for its vibrant culture, rich history, and lively atmosphere. The streets are filled with activity from local vendors, night markets, and cultural events, creating an energetic urban environment.",
+    },
+    {
+      country: "Tajikistan",
+      description:
+        "Dushanbe is a bustling capital known for its vibrant culture, rich history, and lively atmosphere. The streets are filled with local vendors and cultural activities, creating an energetic urban environment.",
+    },
+    {
+      country: "Tanzania",
+      description:
+        "Dodoma is a bustling capital known for its rich culture, vibrant markets, and lively atmosphere. The streets are filled with activity from local vendors and community events, creating an energetic urban environment.",
+    },
+    {
+      country: "Thailand",
+      description:
+        "Bangkok is a bustling metropolis known for its vibrant street life, rich culture, and lively atmosphere. The streets are filled with activity from street vendors, markets, and cultural events, creating an energetic urban environment.",
+    },
+    {
+      country: "Timor-Leste",
+      description:
+        "Dili is a bustling capital known for its vibrant community and lively atmosphere. The streets are filled with local vendors and activities, creating an energetic urban environment. Its unique island culture adds to its charm.",
+    },
+    {
+      country: "Togo",
+      description:
+        "Lomé is a bustling capital known for its vibrant markets, rich culture, and lively atmosphere. The streets are filled with activity from local vendors and cultural events, creating an energetic urban environment.",
+    },
+    {
+      country: "Tonga",
+      description:
+        "Nuku'alofa is a small but bustling capital known for its vibrant community and lively atmosphere. The streets are filled with local vendors and activities, creating an energetic urban environment. Its unique island culture adds to its charm.",
+    },
+    {
+      country: "Trinidad and Tobago",
+      description:
+        "Port of Spain is a bustling capital known for its vibrant culture and lively atmosphere. The streets are filled with activity from local vendors, markets, and cultural events, creating an energetic urban environment.",
+    },
+    {
+      country: "Tunisia",
+      description:
+        "Tunis is a bustling capital known for its rich history, vibrant culture, and lively atmosphere. The streets are filled with locals and tourists enjoying markets, cafes, and cultural events. Its urban environment reflects a mix of tradition and modern life.",
+    },
+    {
+      country: "Turkey",
+      description:
+        "Ankara is a bustling capital known for its modern development, rich culture, and lively atmosphere. The streets are filled with activity from local vendors, markets, and cultural events, creating an energetic urban environment.",
+    },
+    {
+      country: "Turkmenistan",
+      description:
+        "Ashgabat is a bustling capital known for its modern architecture, vibrant culture, and lively atmosphere. The streets are filled with local vendors and cultural events, creating an energetic urban environment.",
+    },
+    {
+      country: "Tuvalu",
+      description:
+        "Funafuti is a small but bustling capital known for its vibrant community and lively atmosphere. The streets are filled with local vendors and activities, creating an energetic urban environment. Its unique island culture adds to its charm.",
+    },
+    {
+      country: "Uganda",
+      description:
+        "Kampala is a bustling capital known for its vibrant culture and lively atmosphere. The streets are filled with activity from local vendors, markets, and cultural events, creating an energetic urban environment.",
+    },
+    {
+      country: "Ukraine",
+      description:
+        "Kyiv is a bustling capital known for its rich history, vibrant culture, and lively atmosphere. The streets are filled with locals and tourists enjoying markets, cafes, and cultural events. Its urban environment reflects a mix of tradition and modern life.",
+    },
+    {
+      country: "United Arab Emirates",
+      description:
+        "Abu Dhabi is a bustling capital known for its modern skyline, vibrant culture, and lively atmosphere. The streets are alive with activity from local vendors, markets, and cultural events. Its urban environment reflects a blend of tradition and modernity.",
+    },
+    {
+      country: "United Kingdom",
+      description:
+        "London is a bustling metropolis known for its rich history, vibrant culture, and lively atmosphere. The streets are filled with locals and tourists enjoying markets, theaters, and cultural events. Its urban environment reflects a mix of tradition and modern life.",
+    },
+    {
+      country: "United States",
+      description:
+        "Washington, D.C. is a bustling capital known for its rich history, vibrant culture, and lively atmosphere. The streets are filled with locals and tourists enjoying monuments, museums, and cultural events. Its urban environment reflects a mix of tradition and modernity.",
+    },
+    {
+      country: "Uruguay",
+      description:
+        "Montevideo is a bustling capital known for its vibrant culture, rich history, and lively atmosphere. The streets are filled with local vendors and activities, creating an energetic urban environment.",
+    },
+    {
+      country: "Uzbekistan",
+      description:
+        "Tashkent is a bustling capital known for its vibrant culture, rich history, and lively atmosphere. The streets are filled with local vendors and cultural events, creating an energetic urban environment.",
+    },
+    {
+      country: "Vanuatu",
+      description:
+        "Port Vila is a bustling capital known for its vibrant community and lively atmosphere. The streets are filled with local vendors and activities, creating an energetic urban environment. Its unique island culture adds to its charm.",
+    },
+    {
+      country: "Vatican City",
+      description:
+        "Vatican City is a small but bustling enclave known for its rich history, vibrant culture, and lively atmosphere. The streets are filled with visitors enjoying landmarks, markets, and cultural events. Its unique status adds to its charm.",
+    },
+    {
+      country: "Venezuela",
+      description:
+        "Caracas is a bustling city known for its vibrant culture, rich history, and lively atmosphere. The streets are filled with local vendors, markets, and community activities, creating an energetic urban environment.",
+    },
+    {
+      country: "Vietnam",
+      description:
+        "Hanoi is a bustling city known for its vibrant street life, rich culture, and lively atmosphere. The streets are filled with activity from street vendors, markets, and cultural events, creating an energetic urban environment.",
+    },
+    {
+      country: "Yemen",
+      description:
+        "Sana'a is a bustling city known for its rich history, vibrant culture, and lively atmosphere. The streets are filled with local vendors, markets, and cultural events, creating an energetic urban environment.",
+    },
+    {
+      country: "Zambia",
+      description:
+        "Lusaka is a bustling capital known for its vibrant culture and lively atmosphere. The streets are filled with activity from local vendors and community events, creating an energetic urban environment.",
+    },
+    {
+      country: "Zimbabwe",
+      description:
+        "Harare is a bustling capital known for its vibrant markets, rich culture, and lively atmosphere. The streets are filled with activity from local vendors and cultural events, creating an energetic urban environment.",
+    },
+  ],
+  suburbanAreas: [],
+  ruralSettings: [],
+};
+
 export const supportServices = [
   {
     name: "Counseling Services",

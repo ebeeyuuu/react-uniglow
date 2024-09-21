@@ -11,15 +11,19 @@ import SubjectButton from "./SecondSlide/SubjectButton";
 
 import { Subject, mergeSubjects } from "./SecondSlide/mergeSubjects";
 
+import { useUniversityRecommendations } from "@/context/useUniversityRecommendation";
+import { Z_FILTERED } from "zlib";
+
 type SlideProps = {
   onNextSlide: () => void;
 };
 
 const SecondSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
+  const { recommendations, updateUniversityRecommendations } =
+    useUniversityRecommendations();
+
   const [selectedSubjects, setSelectedSubjects] = useState([]);
-  const [selectedDetailedSubjects, setSelectedDetailedSubjects] = useState<
-    Subject[]
-  >([]);
+  const [selectedDetailedSubjects, setSelectedDetailedSubjects] = useState([]);
 
   const [selectedSection, setSelectedSection] = useState(null);
 
@@ -130,10 +134,25 @@ const SecondSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
     setIsConfirmVisible(false);
   };
 
-  const handleFinalConfirm = () => {
+  const handleFinalConfirm = async () => {
+    await updateUniversityRecommendations({
+      subjects: selectedSubjects,
+    });
+
     setIsConfirmVisible(false);
     setAnimateGenericSubjects(false);
     setAnimateSpecificSubjects(true);
+  };
+
+  const handleDetailedFinalConfirm = async () => {
+    const filteredDetailedSubjects = selectedDetailedSubjects.map(
+      (item) => item.subject,
+    );
+
+    await updateUniversityRecommendations({
+      detailedSubjects: filteredDetailedSubjects,
+    });
+    onNextSlide();
   };
 
   const handleConfirmClick = () => {
@@ -376,8 +395,8 @@ const SecondSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
                       <button
                         onClick={() => setShowSelectedOnly(!showSelectedOnly)}
                         className={`p-4 rounded-xl smooth-animation text-xs hover:bg-[#003dcc] border-white bg-black hover:border-[#003dcc] ${showSelectedOnly
-                          ? "bg-[#003dcc] border-[#003dcc] border"
-                          : "bg-black border border-gray-300"
+                            ? "bg-[#003dcc] border-[#003dcc] border"
+                            : "bg-black border border-gray-300"
                           }`}
                       >
                         {showSelectedOnly
@@ -499,7 +518,7 @@ const SecondSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
 
                 {isDetailedConfirmVisible && (
                   <ConfirmDetailedSubjects
-                    onConfirm={() => onNextSlide()}
+                    onConfirm={() => handleDetailedFinalConfirm()}
                     onCancel={() => setIsDetailedConfirmVisible(false)}
                     selectedSubjects={selectedDetailedSubjects}
                     categories={selectedSubjects}

@@ -2,16 +2,31 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ProgressSlider from "./FourthSlide/ProgressSlider";
 
+import { useUniversityRecommendations } from "@/context/useUniversityRecommendation";
+
 type SlideProps = {
   onNextSlide: () => void;
 };
 
 const FourthSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
+  const { updateUniversityRecommendations } = useUniversityRecommendations();
+  const [sliderValue, setSliderValue] = useState<number | null>(null);
+
   const [isValueChanged, setIsValueChanged] = useState(false);
   const [hovered, setHovered] = useState(false);
 
   const handleValueChange = (newValue: number) => {
+    setSliderValue(newValue);
     setIsValueChanged(true);
+  };
+
+  const handleConfirm = async () => {
+    if (sliderValue !== null) {
+      await updateUniversityRecommendations({
+        cultureImportance: sliderValue,
+      });
+    }
+    onNextSlide();
   };
 
   return (
@@ -24,7 +39,7 @@ const FourthSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
         transition={{ duration: 0.5, ease: "easeInOut" }}
         className="flex flex-col items-center"
       >
-        <p className="text-center text-3xl w-4/5">
+        <p className="text-center text-lg md:text-xl lg:text-2xl w-4/5 font-medium">
           How important is access to cultural attractions like museums,
           theatres, or music venues in your ideal college town?
         </p>
@@ -36,7 +51,7 @@ const FourthSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
       {isValueChanged && (
         <motion.button
           className="mt-5 px-5 py-2 bg-[#003dcc]/70 text-white rounded-xl hover:bg-[#003dcc] transition duration-300 ease-in-out"
-          onClick={() => onNextSlide()}
+          onClick={() => handleConfirm()}
           onHoverStart={() => setHovered(true)}
           onHoverEnd={() => setHovered(false)}
           initial={{ width: "auto", opacity: 0, y: 20 }}

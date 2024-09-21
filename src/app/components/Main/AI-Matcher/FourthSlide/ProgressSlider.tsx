@@ -60,7 +60,7 @@ const ProgressSlider: React.FC<ProgressSliderProps> = ({ onValueChange }) => {
         onChange={handleSliderChange}
         className="w-[60px] text-center border border-gray-300 rounded-md px-2 py-1 bg-black text-white mt-40"
       />
-      <div className="absolute top-12 w-full flex justify-between px-2 text-xs text-white mt-4">
+      <div className="absolute top-12 w-full flex justify-between px-2 text-white mt-4">
         {marks.map((mark) => (
           <div key={mark.value} className="relative w-full">
             <div
@@ -68,10 +68,12 @@ const ProgressSlider: React.FC<ProgressSliderProps> = ({ onValueChange }) => {
               style={{ left: `calc(${mark.value}% - 1px)` }}
             />
             <div
-              className="absolute top-4 left-1/2 transform -translate-x-1/2"
+              className="absolute top-4 left-1/2 transform -translate-x-1/2 text-[5px]"
               style={{ left: `calc(${mark.value}%)` }}
             >
-              <span className="block text-center text-lg">{mark.label}</span>
+              <span className="block text-center text-xs md:text-sm lg:text-base">
+                {mark.label}
+              </span>
             </div>
           </div>
         ))}

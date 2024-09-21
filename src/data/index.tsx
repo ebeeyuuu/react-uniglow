@@ -965,8 +965,12 @@ export const countryEnvironmentData = {
         "Harare is a bustling capital known for its vibrant markets, rich culture, and lively atmosphere. The streets are filled with activity from local vendors and cultural events, creating an energetic urban environment.",
     },
   ],
-  suburbanAreas: [],
-  ruralSettings: [],
+  suburbanAreas: [
+
+  ],
+  ruralSettings: [
+
+  ],
 };
 
 export const supportServices = [

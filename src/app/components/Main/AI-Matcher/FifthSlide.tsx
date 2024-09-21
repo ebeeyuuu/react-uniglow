@@ -6,11 +6,15 @@ import ExampleClubs from "./FifthSlide/ExampleClubs";
 
 import { clubTypes, clubExamples } from "@/data";
 
+import { useUniversityRecommendations } from "@/context/useUniversityRecommendation";
+
 type SlideProps = {
   onNextSlide: () => void;
 };
 
 const FifthSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
+  const { updateUniversityRecommendations } = useUniversityRecommendations();
+
   const [animateTypeClubs, setAnimateTypeClubs] = useState(false);
   const [animateIntroText, setAnimateIntroText] = useState(true);
   const [showExampleClubs, setShowExampleClubs] = useState(false);
@@ -26,12 +30,19 @@ const FifthSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
     return () => clearTimeout(timer);
   }, []);
 
-  const typeClubsConfirm = useCallback((selectedTypes: string[]) => {
-    setSelectedClubTypes(selectedTypes);
-    setAnimateTypeClubs(false);
-    setAnimateIntroText(false);
-    setShowExampleClubs(true);
-  }, []);
+  const typeClubsConfirm = useCallback(
+    async (selectedTypes: string[]) => {
+      setSelectedClubTypes(selectedTypes);
+      await updateUniversityRecommendations({
+        clubs: selectedTypes,
+      });
+
+      setAnimateTypeClubs(false);
+      setAnimateIntroText(false);
+      setShowExampleClubs(true);
+    },
+    [updateUniversityRecommendations],
+  );
 
   return (
     <div className="w-full h-[100vh] flex justify-center items-center overflow-y-auto scrollbar-hide relative">

@@ -99,7 +99,7 @@ const SlidePresentation: React.FC<SlidePresentationProps> = ({
           <button
             key={index}
             onClick={() => goToSlide(index)}
-            className={`w-4 h-4 rounded-full mx-1 mt-1 transition-colors duration-200 ${index === currentSlide
+            className={`w-3 h-3 mx-px md:w-4 md:h-4 lg:w-5 lg:h-5 xl:w-6 xl:h-6 md:mx-1 xl:mx-1.5 rounded-full mt-1 transition-colors duration-200 ${index === currentSlide
                 ? "bg-[#f4b034]"
                 : "bg-white hover:bg-[#f4b034]"
               }`}

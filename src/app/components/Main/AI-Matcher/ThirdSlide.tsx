@@ -1,15 +1,29 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import EndlessScroll from "./ThirdSlide/EndlessScroll";
 import Checkmark from "./ThirdSlide/Checkmark";
 import { FaArrowLeft } from "react-icons/fa";
 import UniversitiesEndlessScroll from "./ThirdSlide/UniversitiesEndlessScroll";
+
+import { useUniversityRecommendations } from "@/context/useUniversityRecommendation";
 
 type SlideProps = {
   onNextSlide: () => void;
 };
 
+function formatEnvironment(environment: string): string {
+  const words = environment
+    .replace(/([A-Z])/g, " $1")
+    .trim()
+    .split(" ");
+  const formattedWords = words.map(
+    (word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase(),
+  );
+  return formattedWords.join(" ");
+}
+
 const ThirdSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
+  const { updateUniversityRecommendations } = useUniversityRecommendations();
+
   const [selectedType, setSelectedType] = useState<string | null>(null);
   const [hoveredType, setHoveredType] = useState<string | null>(null);
   const [categorySelected, setCategorySelected] = useState(false);
@@ -45,7 +59,11 @@ const ThirdSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
     setShowArrow(true);
   };
 
-  const handleFirstConfirm = () => {
+  const handleFirstConfirm = async () => {
+    const formattedType = formatEnvironment(selectedType?.toString() || "");
+    await updateUniversityRecommendations({
+      idealArea: formattedType,
+    });
     setFadeContent(true);
     setTimeout(() => {
       setShowCountries(true);

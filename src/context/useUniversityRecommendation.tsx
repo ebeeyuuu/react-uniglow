@@ -17,6 +17,7 @@ interface UniversityRecommendation {
   idealArea?: string;
   idealCountries?: string[];
   cultureImportance?: number;
+  clubs?: string[];
   supportServices?: string[];
 }
 
@@ -43,6 +44,7 @@ export const useUniversityRecommendations = () => {
         idealArea: "",
         idealCountries: [],
         cultureImportance: 0,
+        clubs: [],
         supportServices: [],
       };
       setRecommendations(newRecommendation);
@@ -76,6 +78,7 @@ export const useUniversityRecommendations = () => {
         idealArea: "",
         idealCountries: [],
         cultureImportance: 0,
+        clubs: [],
         supportServices: [],
         ...newData,
       } as UniversityRecommendation;

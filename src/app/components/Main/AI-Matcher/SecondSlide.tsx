@@ -12,15 +12,13 @@ import SubjectButton from "./SecondSlide/SubjectButton";
 import { Subject, mergeSubjects } from "./SecondSlide/mergeSubjects";
 
 import { useUniversityRecommendations } from "@/context/useUniversityRecommendation";
-import { Z_FILTERED } from "zlib";
 
 type SlideProps = {
   onNextSlide: () => void;
 };
 
 const SecondSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
-  const { recommendations, updateUniversityRecommendations } =
-    useUniversityRecommendations();
+  const { updateUniversityRecommendations } = useUniversityRecommendations();
 
   const [selectedSubjects, setSelectedSubjects] = useState([]);
   const [selectedDetailedSubjects, setSelectedDetailedSubjects] = useState([]);
@@ -395,8 +393,8 @@ const SecondSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
                       <button
                         onClick={() => setShowSelectedOnly(!showSelectedOnly)}
                         className={`p-4 rounded-xl smooth-animation text-xs hover:bg-[#003dcc] border-white bg-black hover:border-[#003dcc] ${showSelectedOnly
-                            ? "bg-[#003dcc] border-[#003dcc] border"
-                            : "bg-black border border-gray-300"
+                          ? "bg-[#003dcc] border-[#003dcc] border"
+                          : "bg-black border border-gray-300"
                           }`}
                       >
                         {showSelectedOnly

@@ -79,7 +79,7 @@ const TypeClubs: React.FC<TypeClubsProps> = ({ clubTypes, onConfirm }) => {
         <div
           key={index}
           className={`
-            bg-[#153684] shadow-xl shadow-[#003DCC]/50 rounded-lg 
+            bg-[#001f66] shadow-xl shadow-[#003DCC]/50 rounded-lg 
             hover:shadow-[#f4b034]/50 transition-all duration-300 
             flex flex-col w-full h-full hover:border-black gap-2 
             p-6 lg:p-8 xl:p-10 2xl:p-12 scale-100 hover:scale-105 cursor-pointer

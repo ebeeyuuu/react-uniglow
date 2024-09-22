@@ -24,8 +24,12 @@ const TypeClubsCounter: React.FC<TypeClubsCounterProps> = ({
         {count}/{totalCount}
       </span>
       <button
-        className="bg-[#003dcc] hover:bg-transparent border border-[#003dcc] hover:border-white font-bold py-2 px-4 rounded-full transition-colors ease-in-out duration-500"
         onClick={onConfirm}
+        disabled={count < 1} // Disable button when count is less than 1
+        className={`font-bold py-2 px-4 rounded-full transition-colors ease-in-out duration-500 ${count < 1
+            ? "bg-[#003dcc]/40 cursor-not-allowed"
+            : "bg-[#003dcc] cursor-pointer"
+          }`}
       >
         Confirm
       </button>

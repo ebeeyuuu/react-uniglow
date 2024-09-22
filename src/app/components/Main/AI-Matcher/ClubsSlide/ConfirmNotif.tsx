@@ -9,7 +9,7 @@ const ConfirmNotif: React.FC<ConfirmNotifProps> = ({ onConfirm }) => {
   const [hovered, setHovered] = useState(false);
   return (
     <motion.button
-      className="absolute bottom-40 left-0 right-0 rounded-xl font-medium z-10 border border-[#9e7228] hover:bg-[#9e7228] w-min mx-auto px-5 py-3 text-lg smooth-animation"
+      className="absolute bottom-40 left-0 right-0 rounded-xl font-medium z-10 border w-min mx-auto px-5 py-3 text-lg smooth-animation"
       onClick={onConfirm}
       onHoverStart={() => setHovered(true)}
       onHoverEnd={() => setHovered(false)}

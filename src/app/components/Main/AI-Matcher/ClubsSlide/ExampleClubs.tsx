@@ -144,8 +144,8 @@ const ExampleClubs: React.FC<ExampleClubsProps> = ({
               },
             }}
             onLayoutAnimationComplete={() => setIsTransitioning(false)}
-            className={`selection bg-[#153684] transition-colors duration-500 ease-in-out flex justify-center items-center rounded-xl p-6 cursor-pointer
-              ${expandedSection === section ? "fixed inset-0 text-white hover:bg-black bg-black" : "hover:scale-105 hover:bg-[#153684] hover:border-[#153684]"}
+            className={`selection bg-[#001f66] transition-colors duration-500 ease-in-out flex justify-center items-center rounded-xl p-6 cursor-pointer
+              ${expandedSection === section ? "fixed inset-0 text-white" : "hover:scale-105 hover:bg-[#001f66] hover:border-[#001f66]"}
             `}
             style={{
               width: expandedSection === section ? "100%" : "auto",
@@ -171,15 +171,15 @@ const ExampleClubs: React.FC<ExampleClubsProps> = ({
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.3 }}
-                    className="w-full h-full overflow-y-auto bg-black scrollbar-hide p-12 rounded-xl"
+                    className="w-full h-full overflow-y-auto bg-[#001f66] scrollbar-hide p-12 rounded-xl"
                   >
-                    <h2 className="text-4xl font-bold mb-10">
+                    <h2 className="text-4xl font-bold mb-14">
                       {convertKeyToDisplayName(section)}
                     </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6">
+                    <div className="grid grid-cols-1 lg:grid-cols-3 2xl:grid-cols-5 gap-6">
                       {clubs.map((club, index) => (
                         <div
-                          className="flex flex-col border border-gray-500 p-10 rounded-xl"
+                          className="flex flex-col bg-black/50 p-10 rounded-xl"
                           key={index}
                         >
                           <div className="divide-y divide-gray-500">
@@ -187,7 +187,7 @@ const ExampleClubs: React.FC<ExampleClubsProps> = ({
                               <div className="text-xl font-semibold">
                                 {club.name}
                               </div>
-                              <div className="text-lg font-light text-gray-300">
+                              <div className="text-lg font-light text-gray-300 mt-4">
                                 {club.club_description}
                               </div>
                             </div>
@@ -196,7 +196,7 @@ const ExampleClubs: React.FC<ExampleClubsProps> = ({
                               <div className="text-xl font-semibold">
                                 {club.university}
                               </div>
-                              <div className="text-lg font-light text-gray-300">
+                              <div className="text-lg font-light text-gray-300 mt-4">
                                 {club.university_description}
                               </div>
                             </div>

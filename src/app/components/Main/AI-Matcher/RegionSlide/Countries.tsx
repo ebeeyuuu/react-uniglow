@@ -76,8 +76,12 @@ const Countries: React.FC<CountriesProps> = ({
           {selectedCount} / {totalCountries}
         </p>
         <button
-          onClick={() => handleConfirm()}
-          className="px-5 py-3 bg-[#003dcc] text-xl font-medium rounded-xl"
+          onClick={handleConfirm}
+          disabled={selectedCount === 0} // Disable button when no country is selected
+          className={`px-5 py-3 scale-100 hover:scale-110 text-xl font-medium rounded-xl smooth-animation ${selectedCount === 0
+              ? "bg-[#003dcc]/40 cursor-not-allowed" // Style when disabled
+              : "bg-[#003dcc] hover:bg-[#002a99] cursor-pointer" // Style when enabled
+            }`}
         >
           Confirm
         </button>

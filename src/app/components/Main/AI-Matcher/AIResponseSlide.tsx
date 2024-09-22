@@ -8,7 +8,18 @@ function formatRecommendationsData(recommendations) {
     `Detailed Subjects: ${recommendations.detailedSubjects.join(", ")}\n` +
     `Ideal Area Type: ${recommendations.idealArea}\n` +
     `Ideal Countries: ${recommendations.idealCountries.join(", ")}\n` + // Corrected from ideaCountries to idealCountries
-    `Support Services: ${recommendations.supportServices.join(", ")}`
+    `Support Services: ${recommendations.supportServices.join(", ")}\n` +
+    `Format your answer to be like this: Based on your answers, Uniglow recommends you to go to: ... (university only)`
+  );
+}
+
+function areRecommendationsFilled(recommendations) {
+  return (
+    recommendations.subjects?.length > 0 &&
+    recommendations.detailedSubjects?.length > 0 &&
+    recommendations.idealArea !== "" &&
+    recommendations.idealCountries?.length > 0 &&
+    recommendations.supportServices?.length > 0
   );
 }
 
@@ -17,7 +28,7 @@ const AIResponseSlide = () => {
   const [response, setResponse] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
 
-  const fetchResponse = async (promptToSend) => {
+  const fetchResponse = async (promptToSend: string) => {
     setLoading(true);
     setResponse("");
 
@@ -61,7 +72,7 @@ const AIResponseSlide = () => {
     : "Loading recommendations...";
 
   useEffect(() => {
-    if (recommendations) {
+    if (recommendations && areRecommendationsFilled(recommendations)) {
       const promptToSend = formatRecommendationsData(recommendations);
       fetchResponse(promptToSend);
     }

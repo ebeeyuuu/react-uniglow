@@ -65,7 +65,6 @@ const RegionSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
       idealArea: formattedType,
     });
 
-    // Set selected countries based on the selected type
     setSelectedCountries(
       countryEnvironmentData[
       selectedType as keyof typeof countryEnvironmentData
@@ -231,6 +230,7 @@ const RegionSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
             <Countries
               sectionName={selectedType as keyof typeof countryEnvironmentData}
               data={countryEnvironmentData}
+              onConfirm={() => onNextSlide()}
             />
           </motion.div>
         )}

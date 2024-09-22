@@ -8,7 +8,7 @@ interface SlideProps {
   onNextSlide: () => void;
 }
 
-const FirstSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
+const IntroSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
   return (
     <div className="w-full h-full flex justify-center items-center">
       <div className="flex flex-col gap-y-[35px] w-[65%]">
@@ -52,4 +52,4 @@ const FirstSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
   );
 };
 
-export default FirstSlide;
+export default IntroSlide;

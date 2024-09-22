@@ -2,14 +2,14 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaSearch } from "react-icons/fa";
 
-import ConfirmDialog from "./SecondSlide/ConfirmDialog";
-import CollapsibleCounter from "./SecondSlide/CollapsibleCounter";
-import SelectionCounter from "./SecondSlide/SelectionCounter";
-import Checkmark from "./SecondSlide/Checkmark";
-import ConfirmDetailedSubjects from "./SecondSlide/ConfirmDetailedSubjects";
-import SubjectButton from "./SecondSlide/SubjectButton";
+import ConfirmDialog from "./SubjectsSlide/ConfirmDialog";
+import CollapsibleCounter from "./SubjectsSlide/CollapsibleCounter";
+import SelectionCounter from "./SubjectsSlide/SelectionCounter";
+import Checkmark from "./SubjectsSlide/Checkmark";
+import ConfirmDetailedSubjects from "./SubjectsSlide/ConfirmDetailedSubjects";
+import SubjectButton from "./SubjectsSlide/SubjectButton";
 
-import { Subject, mergeSubjects } from "./SecondSlide/mergeSubjects";
+import { Subject, mergeSubjects } from "./SubjectsSlide/mergeSubjects";
 
 import { useUniversityRecommendations } from "@/context/useUniversityRecommendation";
 
@@ -17,7 +17,7 @@ type SlideProps = {
   onNextSlide: () => void;
 };
 
-const SecondSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
+const SubjectsSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
   const { updateUniversityRecommendations } = useUniversityRecommendations();
 
   const [selectedSubjects, setSelectedSubjects] = useState([]);
@@ -532,4 +532,4 @@ const SecondSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
   );
 };
 
-export default SecondSlide;
+export default SubjectsSlide;

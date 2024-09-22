@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import ProgressSlider from "./FourthSlide/ProgressSlider";
+import ProgressSlider from "./CultureSlide/ProgressSlider";
 
 import { useUniversityRecommendations } from "@/context/useUniversityRecommendation";
 
@@ -8,7 +8,7 @@ type SlideProps = {
   onNextSlide: () => void;
 };
 
-const FourthSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
+const CultureSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
   const { updateUniversityRecommendations } = useUniversityRecommendations();
   const [sliderValue, setSliderValue] = useState<number | null>(null);
 
@@ -95,4 +95,4 @@ const FourthSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
   );
 };
 
-export default FourthSlide;
+export default CultureSlide;

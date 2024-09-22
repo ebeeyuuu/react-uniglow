@@ -1,8 +1,8 @@
 import { motion, AnimatePresence } from "framer-motion";
 import React, { useEffect, useState, useCallback } from "react";
 
-import TypeClubs from "./FifthSlide/TypeClubs";
-import ExampleClubs from "./FifthSlide/ExampleClubs";
+import TypeClubs from "./ClubsSlide/TypeClubs";
+import ExampleClubs from "./ClubsSlide/ExampleClubs";
 
 import { clubTypes, clubExamples } from "@/data";
 
@@ -12,7 +12,7 @@ type SlideProps = {
   onNextSlide: () => void;
 };
 
-const FifthSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
+const ClubsSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
   const { updateUniversityRecommendations } = useUniversityRecommendations();
 
   const [animateTypeClubs, setAnimateTypeClubs] = useState(false);
@@ -91,4 +91,4 @@ const FifthSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
   );
 };
 
-export default FifthSlide;
+export default ClubsSlide;

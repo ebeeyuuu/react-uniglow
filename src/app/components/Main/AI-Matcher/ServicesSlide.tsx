@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import ExpandingServices from "./SixthSlide/ExpandingServices";
+import ExpandingServices from "./ServicesSlide/ExpandingServices";
 import { supportServices } from "@/data";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -9,7 +9,7 @@ interface SlideProps {
   onNextSlide: () => void;
 }
 
-const SixthSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
+const ServicesSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
   const { updateUniversityRecommendations } = useUniversityRecommendations();
 
   const [showServices, setShowServices] = useState(false);
@@ -70,4 +70,4 @@ const SixthSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
   );
 };
 
-export default SixthSlide;
+export default ServicesSlide;

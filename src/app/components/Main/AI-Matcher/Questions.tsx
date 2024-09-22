@@ -1,26 +1,22 @@
 import React from "react";
 import SlidePresentation from "./SlidePresentation";
 
-import FirstSlide from "./FirstSlide";
-import SecondSlide from "./SecondSlide";
-import ThirdSlide from "./ThirdSlide";
-import FourthSlide from "./FourthSlide";
-import FifthSlide from "./FifthSlide";
-import SixthSlide from "./SixthSlide";
-import SeventhSlide from "./SeventhSlide";
-import EighthSlide from "./EighthSlide";
+import IntroSlide from "./IntroSlide";
+import SubjectsSlide from "./SubjectsSlide";
+import RegionSlide from "./RegionSlide";
+import CultureSlide from "./CultureSlide";
+import ClubsSlide from "./ClubsSlide";
+import ServicesSlide from "./ServicesSlide";
 
 const Questions = () => {
   return (
     <SlidePresentation numSlides={8}>
-      <FirstSlide />
-      <SecondSlide />
-      <ThirdSlide />
-      <FourthSlide />
-      <FifthSlide />
-      <SixthSlide />
-      <SeventhSlide />
-      <EighthSlide />
+      <IntroSlide />
+      <SubjectsSlide />
+      <RegionSlide />
+      <CultureSlide />
+      <ClubsSlide />
+      <ServicesSlide />
     </SlidePresentation>
   );
 };

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Checkmark from "./ThirdSlide/Checkmark";
+import Checkmark from "./RegionSlide/Checkmark";
 import { FaArrowLeft } from "react-icons/fa";
-import UniversitiesEndlessScroll from "./ThirdSlide/UniversitiesEndlessScroll";
+import UniversitiesEndlessScroll from "./RegionSlide/UniversitiesEndlessScroll";
 
 import { useUniversityRecommendations } from "@/context/useUniversityRecommendation";
 

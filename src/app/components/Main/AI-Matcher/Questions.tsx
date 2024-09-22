@@ -7,6 +7,7 @@ import RegionSlide from "./RegionSlide";
 import CultureSlide from "./CultureSlide";
 import ClubsSlide from "./ClubsSlide";
 import ServicesSlide from "./ServicesSlide";
+import AIResponseSlide from "./AIResponseSlide";
 
 const Questions = () => {
   return (
@@ -17,6 +18,7 @@ const Questions = () => {
       <CultureSlide />
       <ClubsSlide />
       <ServicesSlide />
+      <AIResponseSlide />
     </SlidePresentation>
   );
 };

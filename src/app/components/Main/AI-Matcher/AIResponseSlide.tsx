@@ -12,11 +12,10 @@ function formatRecommendationsData(recommendations) {
   );
 }
 
-const SeventhSlide = () => {
+const AIResponseSlide = () => {
   const { recommendations } = useUniversityRecommendations();
   const [response, setResponse] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
-  const [prompt, setPrompt] = useState<string>("Enter any prompt here");
 
   const fetchResponse = async (promptToSend) => {
     setLoading(true);
@@ -57,17 +56,10 @@ const SeventhSlide = () => {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    fetchResponse(prompt);
-  };
-
-  // Ensure recommendations are available before formatting
   const formattedRecommendations = recommendations
     ? formatRecommendationsData(recommendations)
     : "Loading recommendations...";
 
-  // Automatically fetch response on component mount
   useEffect(() => {
     if (recommendations) {
       const promptToSend = formatRecommendationsData(recommendations);
@@ -77,21 +69,6 @@ const SeventhSlide = () => {
 
   return (
     <div className="w-full h-full justify-center items-center gap-6 flex flex-col text-xl font-bold">
-      <form onSubmit={handleSubmit} className="mb-4 px-20">
-        <input
-          type="text"
-          value={prompt}
-          onChange={(e) => setPrompt(e.target.value)}
-          className="border mb-4 w-full bg-black text-white px-8 py-5 rounded-xl"
-          placeholder="Enter your prompt here"
-        />
-        <button
-          type="submit"
-          className="px-4 py-2 bg-[#003dcc] text-white rounded-xl"
-        >
-          Get Response
-        </button>
-      </form>
       <div className="flex justify-center items-center px-20 font-light text-lg">
         {loading
           ? "Generating response..."
@@ -101,4 +78,4 @@ const SeventhSlide = () => {
   );
 };
 
-export default SeventhSlide;
+export default AIResponseSlide;

@@ -3,7 +3,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import Checkmark from "./RegionSlide/Checkmark";
 import { FaArrowLeft } from "react-icons/fa";
 import UniversitiesEndlessScroll from "./RegionSlide/UniversitiesEndlessScroll";
-
+import Countries from "./RegionSlide/Countries";
+import { countryEnvironmentData } from "@/data";
 import { useUniversityRecommendations } from "@/context/useUniversityRecommendation";
 
 type SlideProps = {
@@ -21,20 +22,19 @@ function formatEnvironment(environment: string): string {
   return formattedWords.join(" ");
 }
 
-const ThirdSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
+const RegionSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
   const { updateUniversityRecommendations } = useUniversityRecommendations();
 
   const [selectedType, setSelectedType] = useState<string | null>(null);
   const [hoveredType, setHoveredType] = useState<string | null>(null);
   const [categorySelected, setCategorySelected] = useState(false);
   const [showExamples, setShowExamples] = useState(false);
-
   const [showCountries, setShowCountries] = useState(false);
   const [fadeContent, setFadeContent] = useState(false);
-
   const [showArrow, setShowArrow] = useState(false);
-
   const [hovered, setHovered] = useState(false);
+
+  const [selectedCountries, setSelectedCountries] = useState<any[]>([]);
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -64,6 +64,14 @@ const ThirdSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
     await updateUniversityRecommendations({
       idealArea: formattedType,
     });
+
+    // Set selected countries based on the selected type
+    setSelectedCountries(
+      countryEnvironmentData[
+      selectedType as keyof typeof countryEnvironmentData
+      ] || [],
+    );
+
     setFadeContent(true);
     setTimeout(() => {
       setShowCountries(true);
@@ -140,7 +148,7 @@ const ThirdSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
             {categorySelected && (
               <motion.div
                 className="flex flex-row gap-x-4 justify-center items-center"
-                initial={{ opacity: 0, y: 100 }} // Slide up from the bottom
+                initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: fadeContent ? 0 : 1, y: 0 }}
                 transition={{ duration: 0.5, ease: "easeInOut" }}
                 exit={{ opacity: 0 }}
@@ -214,15 +222,16 @@ const ThirdSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
       <AnimatePresence>
         {showCountries && (
           <motion.div
-            className="absolute inset-0 flex justify-center items-center"
+            className="absolute top-0 left-0 flex flex-col justify-center items-center overflow-y-auto overflow-x-hidden scrollbar-hide"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <motion.h1 className="text-5xl font-bold text-white">
-              Countries
-            </motion.h1>
+            <Countries
+              sectionName={selectedType as keyof typeof countryEnvironmentData}
+              data={countryEnvironmentData}
+            />
           </motion.div>
         )}
       </AnimatePresence>
@@ -230,4 +239,4 @@ const ThirdSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
   );
 };
 
-export default ThirdSlide;
+export default RegionSlide;

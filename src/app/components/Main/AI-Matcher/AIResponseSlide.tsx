@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import { useUniversityRecommendations } from "@/context/useUniversityRecommendation";
+import Loader from "./AIResponseSlide/Loader";
 
 function formatRecommendationsData(recommendations) {
   return (
@@ -27,6 +29,17 @@ const AIResponseSlide = () => {
   const { recommendations } = useUniversityRecommendations();
   const [response, setResponse] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
+  const [currentTextIndex, setCurrentTextIndex] = useState<number>(0);
+
+  // Removed the hyphen from the declaration of `texts` array
+  const texts = [
+    "Thinking of the best university for you right now...",
+    "Analysing your preferences...",
+    "Comparing universities globally...",
+    "Checking subjects offered...",
+    "Looking at the support services offered...",
+    "Finalising the best university for you...",
+  ];
 
   const fetchResponse = async (promptToSend: string) => {
     setLoading(true);
@@ -72,6 +85,15 @@ const AIResponseSlide = () => {
     : "Loading recommendations...";
 
   useEffect(() => {
+    if (loading && currentTextIndex < texts.length - 1) {
+      const timeout = setTimeout(() => {
+        setCurrentTextIndex((prevIndex) => prevIndex + 1);
+      }, 2500);
+      return () => clearTimeout(timeout);
+    }
+  }, [loading, currentTextIndex, texts.length]); // Added `texts.length` to dependency array
+
+  useEffect(() => {
     if (recommendations && areRecommendationsFilled(recommendations)) {
       const promptToSend = formatRecommendationsData(recommendations);
       fetchResponse(promptToSend);
@@ -81,9 +103,29 @@ const AIResponseSlide = () => {
   return (
     <div className="w-full h-full justify-center items-center gap-6 flex flex-col text-xl font-bold">
       <div className="flex justify-center items-center px-20 font-light text-lg">
-        {loading
-          ? "Generating response..."
-          : response || formattedRecommendations}
+        {loading ? (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+            className="flex flex-col justify-center items-center gap-6"
+          >
+            <Loader />
+            <motion.p
+              key={currentTextIndex}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.5 }}
+              className="text-lg font-medium italic"
+            >
+              {texts[currentTextIndex]}
+            </motion.p>
+          </motion.div>
+        ) : (
+          response || formattedRecommendations
+        )}
       </div>
     </div>
   );

@@ -27,7 +27,7 @@ const ExamplesNotif: React.FC<ExamplesNotifProps> = ({ isBounce }) => {
   }, [isBounce, controls]);
 
   return (
-    <div className="absolute z-10 top-20 left-0 right-0 flex justify-center">
+    <div className="fixed z-10 top-20 left-0 right-0 flex justify-center">
       <motion.div
         className="px-5 py-3 bg-[#063a2f] rounded-xl"
         animate={controls}

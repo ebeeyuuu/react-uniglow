@@ -58,11 +58,19 @@ const ServicesSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <ExpandingServices
-              services={supportServices}
-              leftColumnCount={20}
-              onConfirm={handleConfirm}
-            />
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 2 }}
+              className="w-full"
+            >
+              <ExpandingServices
+                services={supportServices}
+                leftColumnCount={20}
+                onConfirm={handleConfirm}
+              />
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>

@@ -27,11 +27,16 @@ function areRecommendationsFilled(recommendations) {
   );
 }
 
-const AIResponseSlide = () => {
+interface SlideProps {
+  onNextSlide: () => void;
+}
+
+const AIResponseSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
   const { recommendations } = useUniversityRecommendations();
   const [response, setResponse] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
   const [currentTextIndex, setCurrentTextIndex] = useState<number>(0);
+  const [showFinalText, setShowFinalText] = useState<boolean>(false); // New state to control the final text
 
   const texts = [
     "Thinking of the best university for you right now...",
@@ -45,6 +50,7 @@ const AIResponseSlide = () => {
   const fetchResponse = async (promptToSend: string) => {
     setLoading(true);
     setResponse("");
+    setShowFinalText(false); // Hide the final text initially
 
     try {
       const response = await fetch("/api/generateResponse", {
@@ -78,6 +84,7 @@ const AIResponseSlide = () => {
       setResponse("Failed to load response.");
     } finally {
       setLoading(false);
+      setShowFinalText(true); // Show the final text after the response is generated
     }
   };
 
@@ -128,6 +135,18 @@ const AIResponseSlide = () => {
           response || formattedRecommendations
         )}
       </div>
+
+      {showFinalText && (
+        <motion.button
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.5 }} // Delay added for smooth fade in
+          className="mt-6 text-xl font-bold bg-[#003dcc] scale-100 hover:scale-110 px-5 py-3 rounded-xl smooth-animation" // Styling for the final text
+          onClick={() => onNextSlide()}
+        >
+          Finalise university choice?
+        </motion.button>
+      )}
     </div>
   );
 };

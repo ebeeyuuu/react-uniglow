@@ -107,7 +107,7 @@ const ExampleClubs: React.FC<ExampleClubsProps> = ({
   }, [isBounce]);
 
   return (
-    <div className="w-full h-full overflow-y-auto overflow-x-hidden scrollbar-hide flex justify-center items-center p-8 relative">
+    <div className="w-full h-full overflow-y-auto overflow-x-hidden scrollbar-hide flex p-8 relative justify-center items-center">
       <ExamplesNotif isBounce={isBounce} />
       {showConfirmNotif && (
         <motion.div

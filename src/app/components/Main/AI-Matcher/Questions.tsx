@@ -9,6 +9,7 @@ import PrestigeSlide from "./PrestigeSlide";
 import ClubsSlide from "./ClubsSlide";
 import ServicesSlide from "./ServicesSlide";
 import AIResponseSlide from "./AIResponseSlide";
+import FinishedSlide from "./FinishedSlide";
 
 const Questions = () => {
   return (
@@ -21,6 +22,7 @@ const Questions = () => {
       <ClubsSlide />
       <ServicesSlide />
       <AIResponseSlide />
+      <FinishedSlide />
     </SlidePresentation>
   );
 };

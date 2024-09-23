@@ -36,7 +36,7 @@ const ServicesSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
       <AnimatePresence>
         {!showServices && (
           <motion.div
-            className="w-full h-full flex justify-center items-center text-center text-white text-2xl font-bold"
+            className="h-full flex justify-center items-center text-center text-white text-2xl font-bold w-2/3 mx-auto"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -40 }}

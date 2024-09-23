@@ -9,8 +9,10 @@ function formatRecommendationsData(recommendations) {
     `Subjects: ${recommendations.subjects.join(", ")}\n` +
     `Detailed Subjects: ${recommendations.detailedSubjects.join(", ")}\n` +
     `Ideal Area Type: ${recommendations.idealArea}\n` +
-    `Ideal Countries: ${recommendations.idealCountries.join(", ")}\n` + // Corrected from ideaCountries to idealCountries
+    `Ideal Countries: ${recommendations.idealCountries.join(", ")}\n` +
     `Support Services: ${recommendations.supportServices.join(", ")}\n` +
+    `Importance of culture in the surrounding environment: ${recommendations.cultureImportance}/100 \n` +
+    `Importance of the prestige, reputation, and ranking of the university: ${recommendations.prestigeImportance}/100\n` +
     `Format your answer to be like this: Based on your answers, Uniglow recommends you to go to: ... (university only)`
   );
 }
@@ -31,7 +33,6 @@ const AIResponseSlide = () => {
   const [loading, setLoading] = useState<boolean>(false);
   const [currentTextIndex, setCurrentTextIndex] = useState<number>(0);
 
-  // Removed the hyphen from the declaration of `texts` array
   const texts = [
     "Thinking of the best university for you right now...",
     "Analysing your preferences...",
@@ -88,10 +89,10 @@ const AIResponseSlide = () => {
     if (loading && currentTextIndex < texts.length - 1) {
       const timeout = setTimeout(() => {
         setCurrentTextIndex((prevIndex) => prevIndex + 1);
-      }, 2500);
+      }, 7500);
       return () => clearTimeout(timeout);
     }
-  }, [loading, currentTextIndex, texts.length]); // Added `texts.length` to dependency array
+  }, [loading, currentTextIndex, texts.length]);
 
   useEffect(() => {
     if (recommendations && areRecommendationsFilled(recommendations)) {

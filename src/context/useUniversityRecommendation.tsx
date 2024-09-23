@@ -17,9 +17,9 @@ interface UniversityRecommendation {
   idealArea?: string;
   idealCountries?: string[];
   cultureImportance?: number;
+  prestigeImportance?: number;
   clubs?: string[];
   supportServices?: string[];
-  prestigeImportance?: number;
 }
 
 export const useUniversityRecommendations = () => {
@@ -45,9 +45,9 @@ export const useUniversityRecommendations = () => {
         idealArea: "",
         idealCountries: [],
         cultureImportance: 0,
+        prestigeImportance: 0,
         clubs: [],
         supportServices: [],
-        prestigeImportance: 0,
       };
       setRecommendations(newRecommendation);
     }
@@ -80,9 +80,9 @@ export const useUniversityRecommendations = () => {
         idealArea: "",
         idealCountries: [],
         cultureImportance: 0,
+        prestigeImportance: 0,
         clubs: [],
         supportServices: [],
-        prestigeImportance: 0,
         ...newData,
       } as UniversityRecommendation;
       await setDoc(doc(collection(db, "rec_universities")), updatedData);

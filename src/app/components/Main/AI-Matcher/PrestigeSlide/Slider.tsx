@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-type ProgressSliderProps = {
+type SliderProps = {
   onValueChange: (value: number) => void;
 };
 
@@ -12,13 +12,13 @@ const marks = [
   { label: "Important", value: 100 },
 ];
 
-const ProgressSlider: React.FC<ProgressSliderProps> = ({ onValueChange }) => {
+const Slider: React.FC<SliderProps> = ({ onValueChange }) => {
   const [progress, setProgress] = useState(50);
 
   const handleSliderChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newValue = Number(event.target.value);
     setProgress(newValue);
-    onValueChange(newValue); // Call the parent function when the value changes
+    onValueChange(newValue);
   };
 
   return (
@@ -82,4 +82,4 @@ const ProgressSlider: React.FC<ProgressSliderProps> = ({ onValueChange }) => {
   );
 };
 
-export default ProgressSlider;
+export default Slider;

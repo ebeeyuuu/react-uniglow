@@ -60,7 +60,7 @@ const Countries: React.FC<CountriesProps> = ({
         {areas.map((area) => (
           <div
             key={area.country}
-            className="p-12 gap-4 border border-white rounded-xl cursor-pointer flex flex-col justify-center items-center relative"
+            className="p-12 gap-4 bg-[#001f66] rounded-xl cursor-pointer flex flex-col justify-center items-center relative"
             onClick={() => handleCountryClick(area.country)}
           >
             <strong className="text-lg">{area.country}:</strong>

@@ -32,7 +32,7 @@ interface SlideProps {
 }
 
 const AIResponseSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
-  const { recommendations } = useUniversityRecommendations();
+  const { recommendations, updateUniversityRecommendations } = useUniversityRecommendations();
   const [response, setResponse] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
   const [currentTextIndex, setCurrentTextIndex] = useState<number>(0);
@@ -108,6 +108,15 @@ const AIResponseSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
     }
   }, [recommendations]);
 
+  const handleFinalise = async () => {
+    if (!loading) {
+      await updateUniversityRecommendations({
+        aiRecommendation: response,
+      });
+      onNextSlide();
+    }
+  }
+
   return (
     <div className="w-full h-full justify-center items-center gap-6 flex flex-col text-xl font-bold">
       <div className="flex justify-center items-center px-20 font-light text-lg">
@@ -142,7 +151,7 @@ const AIResponseSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.5 }} // Delay added for smooth fade in
           className="mt-6 text-xl font-bold bg-[#003dcc] scale-100 hover:scale-110 px-5 py-3 rounded-xl smooth-animation" // Styling for the final text
-          onClick={() => onNextSlide()}
+          onClick={() => handleFinalise()}
         >
           Finalise university choice?
         </motion.button>

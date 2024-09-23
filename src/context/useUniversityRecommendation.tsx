@@ -20,6 +20,7 @@ interface UniversityRecommendation {
   prestigeImportance?: number;
   clubs?: string[];
   supportServices?: string[];
+  aiRecommendation?: string;
 }
 
 export const useUniversityRecommendations = () => {
@@ -48,6 +49,7 @@ export const useUniversityRecommendations = () => {
         prestigeImportance: 0,
         clubs: [],
         supportServices: [],
+        aiRecommendation: "",
       };
       setRecommendations(newRecommendation);
     }
@@ -83,6 +85,7 @@ export const useUniversityRecommendations = () => {
         prestigeImportance: 0,
         clubs: [],
         supportServices: [],
+        aiRecommendation: "",
         ...newData,
       } as UniversityRecommendation;
       await setDoc(doc(collection(db, "rec_universities")), updatedData);

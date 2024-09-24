@@ -36,7 +36,7 @@ const config: Config = {
       },
     },
   },
-  plugins: [require("tailwind-scrollbar-hide")],
+  plugins: [require("tailwind-scrollbar-hide"), addVariablesForColors],
 };
 
 function addVariablesForColors({ addBase, theme }: any) {

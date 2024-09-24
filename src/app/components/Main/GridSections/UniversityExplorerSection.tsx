@@ -9,6 +9,7 @@ import Explore from "@/app/components/Icons/Explore";
 
 import Image from "next/image";
 import rippleGIF from "@/images/ripple.gif";
+import BackgroundBeams from "./BackgroundBeams";
 
 import slide1 from "@/images/harvard.jpg";
 import slide2 from "@/images/3.jpg";
@@ -51,25 +52,14 @@ const UniversityExplorerSection: React.FC<UniversityExplorerSectionProps> = ({
 
   return (
     <div
-      className="row-span-2 col-span-3 max-[2000px]:col-span-6 max-[2000px]:-order-7 bg-black max-[700px]:text-lg rounded-[10px] flex justify-center items-center text-xl border-[3px] border-[#0037b8] hover:border-[#f4b034] font-bold text-center cursor-pointer transition-all duration-500 ease-in-out relative overflow-hidden"
+      className="row-span-2 col-span-3 max-[2000px]:col-span-6 max-[2000px]:-order-7 bg-gray-850 max-[700px]:text-lg rounded-[10px] flex justify-center items-center text-xl font-bold text-center cursor-pointer transition-all duration-500 ease-in-out relative overflow-hidden"
       onClick={() => router.push("/pages/main/university-explorer")}
       onMouseEnter={() => setHoverState(index, true)}
       onMouseLeave={() => setHoverState(index, false)}
     >
       <div className="relative w-full h-full flex flex-col justify-center items-center">
-        <Image
-          src={rippleGIF}
-          alt=""
-          className={`w-full h-full object-cover transition-opacity ${
-            isHovered
-              ? "filter brightness-[0%] -z-50 hidden"
-              : "filter brightness-[60%]"
-          }`}
-          style={{
-            boxShadow: "inset 0 0 70px 50px #020202",
-          }}
-          fill
-          unoptimized
+        <BackgroundBeams
+          className={`w-full h-full transition-opacity bg-zinc-900/50 ${isHovered ? "-z-50 opacity-0" : "opacity-100"}`}
         />
         <motion.div
           className="absolute z-10 flex items-center justify-center flex-col gap-y-[10px]"
@@ -78,9 +68,8 @@ const UniversityExplorerSection: React.FC<UniversityExplorerSectionProps> = ({
           transition={{ duration: 0.5, ease: "easeInOut" }}
         >
           <Explore
-            className={`max-[1000px]:w-[50px] max-[1000px]:h-[50px] max-[1400px]:w-[60px] max-[1400px]:h-[60px] max-[2000px]:w-[70px] max-[2000px]:h-[70px] max-[3000px]:w-[80px] max-[3000px]:h-[80px] max-[4000px]:w-[90px] max-[4000px]:h-[90px] smooth-animation ${
-              isHovered ? "text-white" : "text-[#02ac81]"
-            }`}
+            className={`max-[1000px]:w-[50px] max-[1000px]:h-[50px] max-[1400px]:w-[60px] max-[1400px]:h-[60px] max-[2000px]:w-[70px] max-[2000px]:h-[70px] max-[3000px]:w-[80px] max-[3000px]:h-[80px] max-[4000px]:w-[90px] max-[4000px]:h-[90px] smooth-animation ${isHovered ? "text-white" : "text-[#02ac81]"
+              }`}
           />
           <motion.p
             className="max-[1150px]:text-base max-[2000px]:text-lg max-[2800px]:text-xl max-[4000px]:text-2xl w-5/12 mx-auto text-wrap font-light"
@@ -106,9 +95,8 @@ const UniversityExplorerSection: React.FC<UniversityExplorerSectionProps> = ({
         {images.map((image, index) => (
           <motion.div
             key={index}
-            className={`absolute text-lg text-center z-10 mt-[90px] ${
-              index === currentIndex ? "opacity-100" : "opacity-0"
-            }`}
+            className={`absolute text-lg text-center z-10 mt-[90px] ${index === currentIndex ? "opacity-100" : "opacity-0"
+              }`}
             initial={{ y: 30, opacity: 0 }}
             animate={
               isHovered && index === currentIndex
@@ -125,9 +113,8 @@ const UniversityExplorerSection: React.FC<UniversityExplorerSectionProps> = ({
           {images.map((image, index) => (
             <motion.div
               key={index}
-              className={`absolute inset-0 rounded-[10px] transition-all duration-700 ease-in-out ${
-                index === currentIndex ? "opacity-100" : "opacity-0"
-              }`}
+              className={`absolute inset-0 rounded-[10px] transition-all duration-700 ease-in-out ${index === currentIndex ? "opacity-100" : "opacity-0"
+                }`}
               data-carousel-item={index}
               initial={{ opacity: 0 }}
               animate={
@@ -140,9 +127,8 @@ const UniversityExplorerSection: React.FC<UniversityExplorerSectionProps> = ({
               <Image
                 src={image.src}
                 alt={image.alt}
-                className={`filter brightness-[60%] ${
-                  isHovered ? "" : "opacity-0 hidden"
-                }`}
+                className={`filter brightness-[60%] ${isHovered ? "" : "opacity-0 hidden"
+                  }`}
                 fill
                 sizes="100vw"
                 style={{
@@ -161,9 +147,8 @@ const UniversityExplorerSection: React.FC<UniversityExplorerSectionProps> = ({
           {images.map((_, index) => (
             <button
               key={index}
-              className={`w-3 h-3 rounded-full ${
-                index === currentIndex ? "bg-white" : "bg-gray-400"
-              }`}
+              className={`w-3 h-3 rounded-full ${index === currentIndex ? "bg-white" : "bg-gray-400"
+                }`}
               onClick={() => setCurrentIndex(index)}
             />
           ))}

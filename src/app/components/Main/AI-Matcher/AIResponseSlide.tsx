@@ -32,11 +32,12 @@ interface SlideProps {
 }
 
 const AIResponseSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
-  const { recommendations, updateUniversityRecommendations } = useUniversityRecommendations();
+  const { recommendations, updateUniversityRecommendations } =
+    useUniversityRecommendations();
   const [response, setResponse] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
   const [currentTextIndex, setCurrentTextIndex] = useState<number>(0);
-  const [showFinalText, setShowFinalText] = useState<boolean>(false); // New state to control the final text
+  const [showFinalText, setShowFinalText] = useState<boolean>(false);
 
   const texts = [
     "Thinking of the best university for you right now...",
@@ -50,7 +51,7 @@ const AIResponseSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
   const fetchResponse = async (promptToSend: string) => {
     setLoading(true);
     setResponse("");
-    setShowFinalText(false); // Hide the final text initially
+    setShowFinalText(false);
 
     try {
       const response = await fetch("/api/generateResponse", {
@@ -67,24 +68,30 @@ const AIResponseSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
 
       const reader = response.body?.getReader();
       const decoder = new TextDecoder();
+      let aiResponse = "";
 
       if (reader) {
         while (true) {
           const { done, value } = await reader.read();
           if (done) break;
-
+          aiResponse += decoder.decode(value, { stream: true });
           setResponse((prev) => prev + decoder.decode(value, { stream: true }));
         }
       } else {
         console.error("Reader is undefined.");
         setResponse("Failed to load response.");
       }
+
+      // Update Firebase with the AI response
+      await updateUniversityRecommendations({
+        aiRecommendation: aiResponse, // Save the complete AI response
+      });
     } catch (error) {
       console.error("Fetch error: ", error);
       setResponse("Failed to load response.");
     } finally {
       setLoading(false);
-      setShowFinalText(true); // Show the final text after the response is generated
+      setShowFinalText(true);
     }
   };
 
@@ -110,12 +117,15 @@ const AIResponseSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
 
   const handleFinalise = async () => {
     if (!loading) {
-      await updateUniversityRecommendations({
-        aiRecommendation: response,
-      });
+      // Ensure the response is updated in Firebase before moving to the next slide
+      if (response) {
+        await updateUniversityRecommendations({
+          aiRecommendation: response,
+        });
+      }
       onNextSlide();
     }
-  }
+  };
 
   return (
     <div className="w-full h-full justify-center items-center gap-6 flex flex-col text-xl font-bold">
@@ -149,8 +159,8 @@ const AIResponseSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
         <motion.button
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.5 }} // Delay added for smooth fade in
-          className="mt-6 text-xl font-bold bg-[#003dcc] scale-100 hover:scale-110 px-5 py-3 rounded-xl smooth-animation" // Styling for the final text
+          transition={{ duration: 0.5, delay: 0.5 }}
+          className="mt-6 text-xl font-bold bg-[#003dcc] scale-100 hover:scale-110 px-5 py-3 rounded-xl smooth-animation"
           onClick={() => handleFinalise()}
         >
           Finalise university choice?

@@ -136,6 +136,11 @@ const NavBar = () => {
               height: "auto",
             }}
           />
+          <p
+            className={`max-[1000px]:flex hidden text-sm font-light mb-2 max-[1000px]:mb-0`}
+          >
+            {username === "" ? "Guest" : username}
+          </p>
           <Link href="/">
             <Exit className="max-[1000px]:w-[25px] max-[1000px]:h-[25px]" />
           </Link>
@@ -166,7 +171,7 @@ const NavBar = () => {
                   <Link
                     key={href}
                     href={href}
-                    className="flex items-center my-2 text-lg hover:text-white transition-all duration-300 ease-in-out w-full px-4 py-2 gap-x-[20px]"
+                    className="flex items-center my-2 text-lg scale-100 hover:scale-110 transition-all duration-300 ease-in-out w-full px-4 py-2 gap-x-[20px]"
                   >
                     <Icon className="" />
                     <div>{label}</div>

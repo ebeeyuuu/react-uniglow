@@ -7,9 +7,10 @@ import { RiArrowGoBackLine } from "react-icons/ri";
 import { FaCheckCircle } from "react-icons/fa";
 import RegisterLayout from "../../components/RegisterLayout";
 import Loading from "../../components/Loading";
-import { addDoc, collection, query, where, getDocs } from "firebase/firestore"; // Updated imports
+import { addDoc, collection, query, where, getDocs } from "firebase/firestore";
 import { db } from "@/firebaseConfig";
-import { useUser } from "@/context/userContext"; // Import the useUser hook
+import { useUser } from "@/context/userContext";
+import { motion, AnimatePresence } from "framer-motion";
 
 interface PasswordCondition {
   description: string;
@@ -90,14 +91,14 @@ const Page = () => {
 
     if (!validateUsername(username)) {
       setUsernameError(
-        "Usernames can only have uppercase and lowercase letters, numbers, and underscores."
+        "Usernames can only have uppercase and lowercase letters, numbers, and underscores.",
       );
       hasError = true;
     } else {
       const usernameExists = await checkExistingUsername(username);
       if (usernameExists) {
         setUsernameError(
-          "An account already exists with this username. Please choose a different one."
+          "An account already exists with this username. Please choose a different one.",
         );
         hasError = true;
       } else {
@@ -112,7 +113,7 @@ const Page = () => {
       const emailExists = await checkExistingEmail(email);
       if (emailExists) {
         setEmailError(
-          "An account already exists with this email. Please use a different one."
+          "An account already exists with this email. Please use a different one.",
         );
         hasError = true;
       } else {
@@ -190,11 +191,13 @@ const Page = () => {
   return (
     <Suspense fallback={<Loading />}>
       <RegisterLayout>
-        <div className="flex flex-col mx-auto justify-center items-center gap-y-7 w-full md:w-1/2 h-full p-4">
-          <div className="text-4xl">Sign Up</div>
+        <div className="flex flex-col mx-auto justify-center items-center gap-y-7 w-full md:w-1/2 h-full p-10">
+          <div className="text-4xl w-full flex justify-center text-center whitespace-nowrap">
+            Sign Up
+          </div>
           <form
             onSubmit={handleSubmit}
-            className="w-[45vw] max-w-[400px] min-w-[300px] mb-10 flex flex-col gap-y-4"
+            className="w-[35vw] max-w-[400px] min-w-[300px] mb-10 flex flex-col gap-y-4"
           >
             <div className="relative">
               <input
@@ -202,9 +205,8 @@ const Page = () => {
                 placeholder="Username"
                 value={username}
                 onChange={handleUsernameChange}
-                className={`input-field px-4 py-2 border-white border-2 rounded-[10px] h-[45px] mt-[20px] w-full font-medium bg-black ${
-                  usernameError ? "mb-0" : "mb-[-16px]"
-                }`}
+                className={`input-field px-4 py-2 border-white border-2 rounded-[10px] h-[45px] mt-[20px] w-full font-medium bg-black ${usernameError ? "mb-0" : "mb-[-16px]"
+                  }`}
                 required
               />
               <div className="text-[#ff850a] text-base text-center mt-4">
@@ -235,9 +237,8 @@ const Page = () => {
                 value={email}
                 onChange={handleEmailChange}
                 placeholder="Email: name@example.com"
-                className={`input-field px-4 py-2 border-white border-2 rounded-[10px] h-[45px] w-full font-medium bg-black ${
-                  emailError ? "border-[#ff850a]" : ""
-                }`}
+                className={`input-field px-4 py-2 border-white border-2 rounded-[10px] h-[45px] w-full font-medium bg-black ${emailError ? "border-[#ff850a]" : ""
+                  }`}
                 required
               />
               {emailError && (
@@ -254,35 +255,56 @@ const Page = () => {
                 onFocus={() => setShowConditions(true)}
                 onBlur={() => setShowConditions(false)}
                 placeholder="Password"
-                className={`input-field px-4 py-2 border-white border-2 rounded-[10px] h-[45px] w-full font-medium bg-black ${
-                  isPasswordTouched && passwordError ? "border-[#ff850a]" : ""
-                }`}
+                className={`input-field px-4 py-2 border-white border-2 rounded-[10px] h-[45px] w-full font-medium bg-black ${isPasswordTouched && passwordError ? "border-[#ff850a]" : ""
+                  }`}
                 required
               />
-              {showConditions && (
-                <div className="absolute top-full left-0 mt-2 p-2 bg-gray-700 rounded-md shadow-lg z-10 w-full">
+              <AnimatePresence>
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={showConditions ? { opacity: 1 } : { opacity: 0 }}
+                  transition={{ duration: 0.5 }}
+                  className="absolute top-full left-0 mt-2 p-2 bg-gray-500/50 backdrop-blur-lg rounded-md shadow-lg z-10 w-full"
+                >
                   <ul className="list-none">
                     {passwordConditions.map((condition, index) => (
                       <li key={index} className="flex items-center space-x-2">
-                        {satisfiedConditions[index] ? (
-                          <FaCheckCircle className="text-green-500" />
-                        ) : (
-                          <div className="w-4 h-4 border border-white rounded-full" />
-                        )}
+                        <AnimatePresence>
+                          {satisfiedConditions[index] ? (
+                            <motion.div
+                              key="check"
+                              initial={{ opacity: 0 }}
+                              animate={{ opacity: 1 }}
+                              exit={{ opacity: 0 }}
+                              className="text-emerald-400"
+                            >
+                              <FaCheckCircle />
+                            </motion.div>
+                          ) : (
+                            <motion.div
+                              key="circle"
+                              initial={{ opacity: 0 }}
+                              animate={{ opacity: 1 }}
+                              exit={{ opacity: 0 }}
+                              className="w-4 h-4 border border-white rounded-full"
+                            />
+                          )}
+                        </AnimatePresence>
                         <span
-                          className={
-                            satisfiedConditions[index]
-                              ? "text-green-400"
+                          className={`transition-all duration-500 ease-in-out
+                            ${satisfiedConditions[index]
+                              ? "text-emerald-400"
                               : "text-white"
-                          }
+                            }
+                          `}
                         >
                           {condition.description}
                         </span>
                       </li>
                     ))}
                   </ul>
-                </div>
-              )}
+                </motion.div>
+              </AnimatePresence>
             </div>
             {isPasswordTouched && passwordError && (
               <div className="text-[#ff850a] text-sm text-center">
@@ -297,7 +319,7 @@ const Page = () => {
             <div className="flex justify-center gap-x-4 mt-4">
               <Link
                 href="/"
-                className="text-lg font-medium flex flex-row gap-x-3 bg-[#00257a] rounded-[10px] px-4 py-2 h-[45px]"
+                className="text-lg font-medium flex flex-row gap-x-3 bg-[#00257a] rounded-[10px] px-4 py-2 h-[45px] cursor-pointer"
               >
                 <div>Return</div>
                 <RiArrowGoBackLine className="mt-[6px]" />

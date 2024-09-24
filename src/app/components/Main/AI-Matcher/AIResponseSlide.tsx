@@ -113,7 +113,7 @@ const AIResponseSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
       const promptToSend = formatRecommendationsData(recommendations);
       fetchResponse(promptToSend);
     }
-  }, [recommendations]);
+  }, [recommendations, fetchResponse]);
 
   const handleFinalise = async () => {
     if (!loading) {

@@ -89,7 +89,9 @@ const NavBar = () => {
               height: "auto",
             }}
           />
-          <p className={`max-[1000px]:text-xs text-sm font-light mb-2 max-[1000px]:mb-0`}>
+          <p
+            className={`max-[1000px]:text-xs text-sm font-light mb-2 max-[1000px]:mb-0`}
+          >
             {username === "" ? "Guest" : username}
           </p>
           {navItems.map(({ href, label, icon: Icon }) => (
@@ -158,7 +160,7 @@ const NavBar = () => {
                 initial={{ opacity: 0, x: 30 }}
                 animate={{ opacity: 1, x: 0, transition: { duration: 0.5 } }}
                 exit={{ opacity: 0, x: 30 }}
-                className="absolute top-0 right-0 rounded-md shadow-lg bg-[#e3980c] ring-1 ring-black ring-opacity-5 focus:outline-none bg-[#002347bc] flex flex-col text-black px-[40px] py-[45px] max-[1000px]:mt-[100px] z-50"
+                className="absolute top-0 right-0 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none bg-[#002347bc] flex flex-col text-black px-[40px] py-[45px] max-[1000px]:mt-[100px] z-50"
               >
                 {navItems.map(({ href, label, icon: Icon }) => (
                   <Link
@@ -172,11 +174,11 @@ const NavBar = () => {
                 ))}
                 <button
                   onClick={() => setIsOpen(false)}
-                  className="absolute bottom-2 right-2 p-3 rounded-full hover:bg-white transition-all duration-500 ease-in-out"
+                  className="absolute bottom-2 right-2 p-3 rounded-full scale-100 hover:scale-110 hover:bg-[#f5ba4c] transition-all duration-500 ease-in-out"
                   aria-label="Close menu"
                 >
                   <FaTimes
-                    size={15}
+                    size={8}
                     className="max-[1000px]:w-[25px] max-[1000px]:h-[25px] text-black"
                   />
                 </button>

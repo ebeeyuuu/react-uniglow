@@ -11,7 +11,7 @@ async function generateResponseWithRetry(retries: number, prompt: string) {
     const text = await generateText({
       model: ollama
         .CompletionTextGenerator({
-          model: "llama3.1",
+          model: "moondream",
           temperature: 0.2,
           maxGenerationTokens: 120,
         })

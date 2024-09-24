@@ -1,10 +1,8 @@
 "use client";
 
-import React, { Suspense, lazy, useEffect } from "react";
+import React, { Suspense, lazy } from "react";
 import NavBar from "./components/NavBar";
 import Loading from "./components/Loading";
-import { useRouter } from "next/navigation";
-import { auth } from "@/firebaseConfig";
 import { AnimatePresence } from "framer-motion";
 
 const components = {
@@ -17,14 +15,6 @@ const components = {
 };
 
 const Home = () => {
-  const router = useRouter();
-
-  useEffect(() => {
-    if (auth.currentUser) {
-      router.push("/pages/main");
-    }
-  });
-
   return (
     <Suspense fallback={<Loading />}>
       <AnimatePresence>

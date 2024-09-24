@@ -1,7 +1,6 @@
-// Page.js
-import React from 'react';
-import MainLayout from '@/app/MainLayout';
-import BentoBox from '@/app/components/Main/BentoBox';
+import React from "react";
+import MainLayout from "@/app/MainLayout";
+import BentoBox from "@/app/components/Main/BentoBox";
 
 const Page = () => {
   return (

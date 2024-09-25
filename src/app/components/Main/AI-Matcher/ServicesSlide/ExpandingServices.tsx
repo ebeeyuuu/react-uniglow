@@ -48,42 +48,40 @@ const ExpandingServices: React.FC<ExpandingServicesProps> = ({
   const confirmRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      direction: "vertical",
-      gestureDirection: "vertical",
-      smooth: true,
-      mouseMultiplier: 1,
-      smoothTouch: false,
-      touchMultiplier: 2,
-      infinite: false,
-      wrapper: containerRef.current,
-      content: containerRef.current,
-    });
+    if (containerRef.current) {
+      const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        gestureOrientation: "vertical",
+        touchMultiplier: 2,
+        infinite: false,
+        wrapper: containerRef.current,
+        content: containerRef.current,
+      });
 
-    function raf(time: number) {
-      lenis.raf(time);
+      const raf = (time: number) => {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      };
+
       requestAnimationFrame(raf);
+
+      lenis.on("scroll", ({ scroll }: { scroll: number }) => {
+        if (leftColumnRef.current) {
+          leftColumnRef.current.style.transform = `translateY(${-scroll * 2}px)`;
+        }
+        if (rightColumnRef.current) {
+          rightColumnRef.current.style.transform = `translateY(${-scroll * 0.5}px)`;
+        }
+        if (confirmRef.current) {
+          confirmRef.current.style.transform = `translateY(${-scroll - 500}px)`;
+        }
+      });
+
+      return () => {
+        lenis.destroy();
+      };
     }
-
-    requestAnimationFrame(raf);
-
-    lenis.on("scroll", ({ scroll }: { scroll: number }) => {
-      if (leftColumnRef.current) {
-        leftColumnRef.current.style.transform = `translateY(${-scroll * 2}px)`;
-      }
-      if (rightColumnRef.current) {
-        rightColumnRef.current.style.transform = `translateY(${-scroll * 0.5}px)`;
-      }
-      if (confirmRef.current) {
-        confirmRef.current.style.transform = `translateY(${-scroll - 500}px)`;
-      }
-    });
-
-    return () => {
-      lenis.destroy();
-    };
   }, []);
 
   useEffect(() => {

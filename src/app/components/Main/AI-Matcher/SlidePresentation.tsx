@@ -3,14 +3,17 @@ import React, { ReactElement, useCallback, useRef, useState } from "react";
 
 interface SlidePresentationProps {
   numSlides: number;
+  currentIndex: number;
+  setCurrentIndex: (index: number) => void; // Add this line
   children: ReactElement | ReactElement[];
 }
 
 const SlidePresentation: React.FC<SlidePresentationProps> = ({
   numSlides,
+  currentIndex,
+  setCurrentIndex,
   children,
 }) => {
-  const [currentSlide, setCurrentSlide] = useState(0);
   const [direction, setDirection] = useState(0); // Track the direction of the slide transition
   const [loadedSlides, setLoadedSlides] = useState<number[]>([0]);
   const slideStates = useRef<Record<number, any>>({});
@@ -28,9 +31,9 @@ const SlidePresentation: React.FC<SlidePresentationProps> = ({
   }, []);
 
   const goToSlide = (index: number) => {
-    if (index !== currentSlide) {
-      setDirection(index > currentSlide ? 1 : -1);
-      setCurrentSlide(index);
+    if (index !== currentIndex) {
+      setDirection(index > currentIndex ? 1 : -1);
+      setCurrentIndex(index); // Use the passed setCurrentIndex function
       if (!loadedSlides.includes(index)) {
         setLoadedSlides((prev) => [...prev, index]);
       }
@@ -38,14 +41,14 @@ const SlidePresentation: React.FC<SlidePresentationProps> = ({
   };
 
   const nextSlide = () => {
-    if (currentSlide < numSlides - 1) {
-      goToSlide(currentSlide + 1);
+    if (currentIndex < numSlides - 1) {
+      goToSlide(currentIndex + 1);
     }
   };
 
   const prevSlide = () => {
-    if (currentSlide > 0) {
-      goToSlide(currentSlide - 1);
+    if (currentIndex > 0) {
+      goToSlide(currentIndex - 1);
     }
   };
 
@@ -70,7 +73,7 @@ const SlidePresentation: React.FC<SlidePresentationProps> = ({
     <div className="overflow-hidden w-full h-full flex flex-col justify-center items-center max-[1000px]:ml-0 px-[15px] max-[700px]:px-[10px] max-[700px]:py-[15px] relative">
       <AnimatePresence initial={false} custom={direction}>
         <motion.div
-          key={currentSlide}
+          key={currentIndex}
           custom={direction}
           variants={variants}
           initial="enter"
@@ -82,11 +85,12 @@ const SlidePresentation: React.FC<SlidePresentationProps> = ({
           }}
           className="absolute justify-center items-center flex w-full h-full"
         >
-          {React.isValidElement(getSlideContent(currentSlide)) ? (
-            React.cloneElement(getSlideContent(currentSlide) as ReactElement, {
-              slideState: slideStates.current[currentSlide] || {},
-              setSlideState: (state: any) => setSlideState(currentSlide, state),
-              onNextSlide: nextSlide,
+          {React.isValidElement(getSlideContent(currentIndex)) ? (
+            React.cloneElement(getSlideContent(currentIndex) as ReactElement, {
+              slideState: slideStates.current[currentIndex] || {},
+              setSlideState: (state: any) => setSlideState(currentIndex, state),
+              onNextSlide: nextSlide, // Pass onNextSlide to children
+              onPrevSlide: prevSlide, // If you want to allow previous slide action
             })
           ) : (
             <div>Blank Slide</div>
@@ -99,7 +103,7 @@ const SlidePresentation: React.FC<SlidePresentationProps> = ({
           <button
             key={index}
             onClick={() => goToSlide(index)}
-            className={`w-3 h-3 mx-px md:w-4 md:h-4 lg:w-5 lg:h-5 xl:w-6 xl:h-6 md:mx-1 xl:mx-1.5 rounded-full mt-1 transition-colors duration-200 ${index === currentSlide
+            className={`w-3 h-3 mx-px md:w-4 md:h-4 lg:w-5 lg:h-5 xl:w-6 xl:h-6 md:mx-1 xl:mx-1.5 rounded-full mt-1 transition-colors duration-200 ${index === currentIndex
                 ? "bg-[#f4b034]"
                 : "bg-white hover:bg-[#f4b034]"
               }`}

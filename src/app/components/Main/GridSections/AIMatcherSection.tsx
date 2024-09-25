@@ -16,7 +16,7 @@ const AIMatcherSection: React.FC<AIMatcherSectionProps> = ({ index }) => {
 
   return (
     <div
-      className={`relative row-span-1 col-span-2 max-[2000px]:col-span-4 max-[2000px]:-order-9 max-[700px]:text-lg rounded-[10px] flex justify-center items-center text-xl font-bold text-center cursor-pointer smooth-animation overflow-hidden bg-zinc-900/30`}
+      className={`relative row-span-1 col-span-2 max-[2000px]:col-span-4 max-[2000px]:-order-9 max-[700px]:text-lg rounded-[10px] flex justify-center items-center text-xl font-bold text-center cursor-pointer smooth-animation overflow-hidden bg-[#181818]`}
       onClick={() => router.push("/pages/main/ai-matching")}
       onMouseEnter={() => setHoverState(index, true)}
       onMouseLeave={() => setHoverState(index, false)}

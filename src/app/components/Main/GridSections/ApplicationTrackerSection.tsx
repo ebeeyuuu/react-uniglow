@@ -33,7 +33,7 @@ const ApplicationTrackerSection: React.FC<ApplicationTrackerSectionProps> = ({
 
   return (
     <div
-      className="row-span-1 col-span-1 max-[2000px]:col-span-2 max-[1200px]:col-span-4 border-[3px] border-[#0037b8] hover:border-[#f4b034] max-[700px]:text-lg rounded-[10px] flex justify-center items-center text-xl font-bold text-center cursor-pointer transition-all duration-300 ease-in-out relative overflow-hidden bg-black"
+      className="row-span-1 col-span-1 max-[2000px]:col-span-2 max-[1200px]:col-span-4 max-[700px]:text-lg rounded-[10px] flex justify-center items-center text-xl font-bold text-center cursor-pointer transition-all duration-300 ease-in-out relative overflow-hidden bg-gradient-to-b from-[#272727] to-[#181818]"
       onClick={() => router.push("/pages/main/application-tracker")}
       onMouseEnter={() => setHoverState(index, true)}
       onMouseLeave={() => setHoverState(index, false)}
@@ -42,11 +42,10 @@ const ApplicationTrackerSection: React.FC<ApplicationTrackerSectionProps> = ({
         <div className="relative flex items-center justify-center w-full h-full">
           <div className="flex flex-col max-[4000px]:gap-[10px] max-[2000px]:gap-[10px] max-[1000px]:gap-[5px] justify-center items-center">
             <div
-              className={`flex justify-center items-center smooth-animation ${
-                isHovered
-                  ? "mt-[10px] scale-[90%]"
-                  : "mt-[-55px] max-[1400px]:scale-[40%] max-[2000px]:scale-[50%] max-[2400px]:scale-[60%] max-[2800px]:scale-[70%] max-[3200px]:scale-[80%] max-[4000px]:scale-[90%]"
-              }`}
+              className={`flex justify-center items-center smooth-animation ${isHovered
+                ? "mt-[10px] scale-[90%]"
+                : "mt-[-55px] max-[1400px]:scale-[40%] max-[2000px]:scale-[50%] max-[2400px]:scale-[60%] max-[2800px]:scale-[70%] max-[3200px]:scale-[80%] max-[4000px]:scale-[90%]"
+                }`}
             >
               <div className="flex items-center justify-center">
                 <CircleProgressBar

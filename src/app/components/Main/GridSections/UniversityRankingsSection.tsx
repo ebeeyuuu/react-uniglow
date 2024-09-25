@@ -17,7 +17,7 @@ const UniversityRankingsSection: React.FC<UniversityRankingsSectionProps> = ({
 
   return (
     <div
-      className="row-span-1 col-span-1 max-[2000px]:col-span-2 border-[3px] border-[#0037b8] hover:border-[#f4b034] max-[700px]:text-lg rounded-[10px] flex justify-center items-center text-xl font-bold text-center cursor-pointer transition-all duration-300 ease-in-out relative overflow-hidden bg-black"
+      className="row-span-1 col-span-1 max-[2000px]:col-span-2 max-[700px]:text-lg rounded-[10px] flex justify-center items-center text-xl font-bold text-center cursor-pointer transition-all duration-300 ease-in-out relative overflow-hidden bg-gradient-to-b from-[#272727] to-[#181818]"
       onClick={() => router.push("/pages/main/university-rankings")}
       onMouseEnter={() => setHoverState(index, true)}
       onMouseLeave={() => setHoverState(index, false)}
@@ -39,9 +39,8 @@ const UniversityRankingsSection: React.FC<UniversityRankingsSectionProps> = ({
                 }
               >
                 <Rankings
-                  className={`transition-all duration-700 ease-in-out max-[1000px]:w-[30px] max-[1000px]:h-[30px] max-[1400px]:w-[40px] max-[1400px]:h-[40px] max-[2000px]:w-[50px] max-[2000px]:h-[50px] max-[3000px]:w-[60px] max-[3000px]:h-[60px] max-[4000px]:w-[70px] max-[4000px]:h-[70px] mt-[20px] ${
-                    isHovered ? "text-white" : "text-[#02ac81]"
-                  }`}
+                  className={`transition-all duration-700 ease-in-out max-[1000px]:w-[30px] max-[1000px]:h-[30px] max-[1400px]:w-[40px] max-[1400px]:h-[40px] max-[2000px]:w-[50px] max-[2000px]:h-[50px] max-[3000px]:w-[60px] max-[3000px]:h-[60px] max-[4000px]:w-[70px] max-[4000px]:h-[70px] mt-[20px] ${isHovered ? "text-white" : "text-[#02ac81]"
+                    }`}
                 />
               </motion.div>
             </div>
@@ -85,11 +84,10 @@ const UniversityRankingsSection: React.FC<UniversityRankingsSectionProps> = ({
           return (
             <div
               key={rank}
-              className={`h-1/5 border-b border-t border-white/10 relative text-center text-sm transition-all duration-700 ease-in-out ${
-                isHovered
-                  ? `${widthClasses} text-white/40 border-l`
-                  : "w-full text-transparent"
-              }`}
+              className={`h-1/5 border-b border-t border-white/10 relative text-center text-sm transition-all duration-700 ease-in-out ${isHovered
+                ? `${widthClasses} text-white/40 border-l`
+                : "w-full text-transparent"
+                }`}
             >
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
                 {rank}

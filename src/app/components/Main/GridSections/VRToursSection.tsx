@@ -17,7 +17,7 @@ const VRToursSection: React.FC<VRToursSectionProps> = ({ index }) => {
 
   return (
     <div
-      className="row-span-1 col-span-1 max-[2000px]:col-span-2 max-[2000px]:-order-8  max-[700px]:text-lg rounded-[10px] flex justify-center items-center text-xl font-bold text-center cursor-pointer smooth-animation overflow-hidden bg-zinc-900/30"
+      className="row-span-1 col-span-1 max-[2000px]:col-span-2 max-[2000px]:-order-8  max-[700px]:text-lg rounded-[10px] flex justify-center items-center text-xl font-bold text-center cursor-pointer smooth-animation overflow-hidden bg-gradient-to-b from-[#272727] to-[#181818]"
       onClick={() => router.push("/pages/main/vr-tours")}
       onMouseEnter={() => setHoverState(index, true)}
       onMouseLeave={() => setHoverState(index, false)}

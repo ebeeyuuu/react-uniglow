@@ -52,14 +52,14 @@ const UniversityExplorerSection: React.FC<UniversityExplorerSectionProps> = ({
 
   return (
     <div
-      className="row-span-2 col-span-3 max-[2000px]:col-span-6 max-[2000px]:-order-7 bg-gray-850 max-[700px]:text-lg rounded-[10px] flex justify-center items-center text-xl font-bold text-center cursor-pointer transition-all duration-500 ease-in-out relative overflow-hidden"
+      className="row-span-2 col-span-3 max-[2000px]:col-span-6 max-[2000px]:-order-7 bg-gradient-to-b from-[#272727] to-[#181818] max-[700px]:text-lg rounded-[10px] flex justify-center items-center text-xl font-bold text-center cursor-pointer transition-all duration-500 ease-in-out relative overflow-hidden"
       onClick={() => router.push("/pages/main/university-explorer")}
       onMouseEnter={() => setHoverState(index, true)}
       onMouseLeave={() => setHoverState(index, false)}
     >
       <div className="relative w-full h-full flex flex-col justify-center items-center">
         <BackgroundBeams
-          className={`w-full h-full transition-opacity bg-zinc-900/50 ${isHovered ? "-z-50 opacity-0" : "opacity-100"}`}
+          className={`w-full h-full transition-opacity bg-gradient-to-b from-[#272727] to-[#181818] ${isHovered ? "-z-50 opacity-0" : "opacity-100"}`}
         />
         <motion.div
           className="absolute z-10 flex items-center justify-center flex-col gap-y-[10px]"

@@ -1,10 +1,20 @@
-import React, { useRef } from "react";
+import React, { useRef, MutableRefObject } from "react";
 import { motion } from "framer-motion";
 import { useHover } from "@/context/hoverContext";
 import { useRouter } from "next/navigation";
 import Mentoring from "../../Icons/Mentoring";
 import { GoPersonFill } from "react-icons/go";
 import MentorConnectionBeams from "./MentorConnectionBeams";
+
+function useMultipleRefs<T>(count: number): MutableRefObject<(T | null)[]> {
+  const refsObject = useRef<(T | null)[]>([]);
+
+  if (refsObject.current.length !== count) {
+    refsObject.current = Array(count).fill(null);
+  }
+
+  return refsObject;
+}
 
 interface MentorsSectionProps {
   index: number;
@@ -15,16 +25,16 @@ const MentorsSection: React.FC<MentorsSectionProps> = ({ index }) => {
   const { hoverStates, setHoverState } = useHover();
   const isHovered = hoverStates[index];
 
-  const containerRef = useRef(null);
-  const nodeRefs = Array.from({ length: 6 }, () => useRef(null));
+  const containerRef = useRef<HTMLDivElement>(null);
+  const nodeRefs = useMultipleRefs<HTMLDivElement>(6);
 
   return (
     <div
-      className="row-span-2 col-span-1 max-[2000px]:col-span-2 max-[1200px]:row-span-1 max-[700px]:text-lg rounded-[10px] flex justify-center items-center text-xl font-bold text-center cursor-pointer transition-all duration-300 ease-in-out relative overflow-hidden bg-zinc-900/30"
+      className="row-span-2 col-span-1 max-[2000px]:col-span-2 max-[1200px]:row-span-1 max-[700px]:text-lg rounded-[10px] flex justify-center items-center text-xl font-bold text-center cursor-pointer transition-all duration-300 ease-in-out relative overflow-hidden bg-gradient-to-b from-[#272727] to-[#181818]"
       onClick={() => router.push("/pages/main/mentors")}
       onMouseEnter={() => setHoverState(index, true)}
       onMouseLeave={() => setHoverState(index, false)}
-      ref={containerRef} // Ref for container
+      ref={containerRef}
     >
       <div className="relative p-5 max-[700px]:text-base max-[1000px]:text-lg max-[1300px]:text-2xl text-3xl transition-all duration-200 ease-in-out">
         <motion.div
@@ -38,7 +48,7 @@ const MentorsSection: React.FC<MentorsSectionProps> = ({ index }) => {
               }`}
           />
           <p className="max-[1150px]:text-xs max-[2000px]:text-sm max-[2800px]:text-base max-[4000px]:text-lg max-[1000px]:w-[90%] max-[2000px]:w-[75%] max-[3000px]:w-[65%] max-[4000px]:w-[55%] mx-auto font-light w-full">
-            Need advice on univeristies?
+            Need advice on universities?
             <span className="ml-[5px]" style={{ fontWeight: 700 }}>
               Check our:
             </span>
@@ -55,19 +65,23 @@ const MentorsSection: React.FC<MentorsSectionProps> = ({ index }) => {
       </motion.div>
 
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] flex flex-wrap justify-center items-center">
-        {nodeRefs.map((ref, index) => (
+        {[0, 1, 2, 3, 4, 5].map((nodeIndex) => (
           <div
-            key={index}
-            ref={ref}
-            className={`absolute flex justify-center items-center text-white w-[70px] h-[70px] rounded-full transform ${index === 0
+            key={nodeIndex}
+            ref={(el: HTMLDivElement | null) => {
+              if (nodeRefs.current) {
+                nodeRefs.current[nodeIndex] = el;
+              }
+            }}
+            className={`absolute flex justify-center items-center text-white w-[70px] h-[70px] rounded-full transform ${nodeIndex === 0
               ? "translate-x-[calc(115%-20px)] translate-y-[-110px]"
-              : index === 1
+              : nodeIndex === 1
                 ? "translate-x-[calc(210%-20px)] translate-y-[0]"
-                : index === 2
+                : nodeIndex === 2
                   ? "translate-x-[calc(115%-20px)] translate-y-[110px]"
-                  : index === 3
+                  : nodeIndex === 3
                     ? "translate-x-[calc(-115%+20px)] translate-y-[110px]"
-                    : index === 4
+                    : nodeIndex === 4
                       ? "translate-x-[calc(-210%+20px)] translate-y-[0]"
                       : "translate-x-[calc(-115%+20px)] translate-y-[-110px]"
               } ${isHovered ? "opacity-100" : "opacity-0"
@@ -78,15 +92,15 @@ const MentorsSection: React.FC<MentorsSectionProps> = ({ index }) => {
         ))}
       </div>
 
-      {nodeRefs.map((fromRef, fromIndex) =>
-        nodeRefs.map((toRef, toIndex) => {
+      {[0, 1, 2, 3, 4, 5].map((fromIndex) =>
+        [0, 1, 2, 3, 4, 5].map((toIndex) => {
           if (fromIndex < toIndex) {
             return (
               <MentorConnectionBeams
                 key={`${fromIndex}-${toIndex}`}
                 containerRef={containerRef}
-                fromRef={fromRef}
-                toRef={toRef}
+                fromRef={{ current: nodeRefs.current[fromIndex] }}
+                toRef={{ current: nodeRefs.current[toIndex] }}
                 pathColor="white"
                 pathWidth={1}
                 gradientStartColor="#ff5f6d"
@@ -98,6 +112,7 @@ const MentorsSection: React.FC<MentorsSectionProps> = ({ index }) => {
               />
             );
           }
+          return null;
         }),
       )}
     </div>

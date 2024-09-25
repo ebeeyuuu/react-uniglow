@@ -10,6 +10,7 @@ import {
   language_subjects,
   technology_subjects,
 } from "@/data";
+
 export type Subject = {
   id: string;
   subject: string;
@@ -19,7 +20,7 @@ export type Subject = {
 };
 
 export function mergeSubjects(subjectFilter: string[]) {
-  const categorizedSubjects: { [key: string]: Subject[] } = {};
+  const categorizedSubjects: { [key: string]: any[] } = {};
 
   subjectFilter.forEach((subject) => {
     switch (subject) {

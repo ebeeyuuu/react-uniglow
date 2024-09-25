@@ -393,8 +393,8 @@ const SubjectsSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
                       <button
                         onClick={() => setShowSelectedOnly(!showSelectedOnly)}
                         className={`p-4 rounded-xl smooth-animation text-xs hover:bg-[#003dcc] border-white bg-black hover:border-[#003dcc] ${showSelectedOnly
-                          ? "bg-[#003dcc] border-[#003dcc] border"
-                          : "bg-black border border-gray-300"
+                            ? "bg-[#003dcc] border-[#003dcc] border"
+                            : "bg-black border border-gray-300"
                           }`}
                       >
                         {showSelectedOnly

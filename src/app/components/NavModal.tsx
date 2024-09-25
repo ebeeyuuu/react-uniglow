@@ -52,7 +52,9 @@ const NavModal: React.FC<NavModalProps> = ({ isOpen, setIsOpen }) => {
   }, [isOpen]);
 
   useEffect(() => {
-    setActiveLink(pathname);
+    if (pathname) {
+      setActiveLink(pathname);
+    }
   }, [pathname]);
 
   useEffect(() => {
@@ -220,7 +222,7 @@ const NavModal: React.FC<NavModalProps> = ({ isOpen, setIsOpen }) => {
   ];
 
   const handleMenuOpen = (
-    menu: "explore" | "programs" | "about" | "contact" | "donate"
+    menu: "explore" | "programs" | "about" | "contact" | "donate",
   ) => {
     if (menu === "explore") {
       setExploreOpen(true);
@@ -257,9 +259,8 @@ const NavModal: React.FC<NavModalProps> = ({ isOpen, setIsOpen }) => {
 
   return (
     <nav
-      className={`fixed top-0 right-0 h-[100vh] bg-[#00478f] backdrop-blur-md pl-20 pr-4 pt-12 flex flex-col justify-start items-end gap-y-5 transition-transform duration-300 ${
-        isOpen ? "translate-x-0" : "translate-x-full"
-      } ${visible ? "opacity-100" : "opacity-0"} z-50`}
+      className={`fixed top-0 right-0 h-[100vh] bg-[#00478f] backdrop-blur-md pl-20 pr-4 pt-12 flex flex-col justify-start items-end gap-y-5 transition-transform duration-300 ${isOpen ? "translate-x-0" : "translate-x-full"
+        } ${visible ? "opacity-100" : "opacity-0"} z-50`}
       onTransitionEnd={handleTransitionEnd}
     >
       <button
@@ -271,9 +272,9 @@ const NavModal: React.FC<NavModalProps> = ({ isOpen, setIsOpen }) => {
       {navItems.map((item, index) => (
         <div key={index} className="relative">
           {item.text === "Programs" ||
-          item.text === "About Us" ||
-          item.text === "Contact" ||
-          item.text === "Donate" ? (
+            item.text === "About Us" ||
+            item.text === "Contact" ||
+            item.text === "Donate" ? (
             <button
               onClick={() =>
                 handleMenuOpen(
@@ -283,17 +284,16 @@ const NavModal: React.FC<NavModalProps> = ({ isOpen, setIsOpen }) => {
                       ? "about"
                       : item.text === "Contact"
                         ? "contact"
-                        : "donate"
+                        : "donate",
                 )
               }
               className={`
                     flex flex-row gap-x-3 items-center px-3 py-2 rounded-[10px] 
                     transition-all duration-300 ease-in-out 
-                    ${
-                      activeLink === item.href
-                        ? "bg-white text-black"
-                        : "gradient-hover"
-                    }
+                    ${activeLink === item.href
+                  ? "bg-white text-black"
+                  : "gradient-hover"
+                }
                   `}
             >
               {item.text}

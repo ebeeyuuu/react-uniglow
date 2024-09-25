@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
 import { useUniversityRecommendations } from "@/context/useUniversityRecommendation";
 import Loader from "./AIResponseSlide/Loader";
@@ -48,52 +48,56 @@ const AIResponseSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
     "Finalising the best university for you...",
   ];
 
-  const fetchResponse = async (promptToSend: string) => {
-    setLoading(true);
-    setResponse("");
-    setShowFinalText(false);
+  const fetchResponse = useCallback(
+    async (promptToSend: string) => {
+      setLoading(true);
+      setResponse("");
+      setShowFinalText(false);
 
-    try {
-      const response = await fetch("/api/generateResponse", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ prompt: promptToSend }),
-      });
+      try {
+        const response = await fetch("/api/generateResponse", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ prompt: promptToSend }),
+        });
 
-      if (!response.ok) {
-        throw new Error("Network response was not ok.");
-      }
-
-      const reader = response.body?.getReader();
-      const decoder = new TextDecoder();
-      let aiResponse = "";
-
-      if (reader) {
-        while (true) {
-          const { done, value } = await reader.read();
-          if (done) break;
-          aiResponse += decoder.decode(value, { stream: true });
-          setResponse((prev) => prev + decoder.decode(value, { stream: true }));
+        if (!response.ok) {
+          throw new Error("Network response was not ok.");
         }
-      } else {
-        console.error("Reader is undefined.");
-        setResponse("Failed to load response.");
-      }
 
-      // Update Firebase with the AI response
-      await updateUniversityRecommendations({
-        aiRecommendation: aiResponse, // Save the complete AI response
-      });
-    } catch (error) {
-      console.error("Fetch error: ", error);
-      setResponse("Failed to load response.");
-    } finally {
-      setLoading(false);
-      setShowFinalText(true);
-    }
-  };
+        const reader = response.body?.getReader();
+        const decoder = new TextDecoder();
+        let aiResponse = "";
+
+        if (reader) {
+          while (true) {
+            const { done, value } = await reader.read();
+            if (done) break;
+            aiResponse += decoder.decode(value, { stream: true });
+            setResponse(
+              (prev) => prev + decoder.decode(value, { stream: true }),
+            );
+          }
+        } else {
+          console.error("Reader is undefined.");
+          setResponse("Failed to load response.");
+        }
+
+        await updateUniversityRecommendations({
+          aiRecommendation: aiResponse, // Save the complete AI response
+        });
+      } catch (error) {
+        console.error("Fetch error: ", error);
+        setResponse("Failed to load response.");
+      } finally {
+        setLoading(false);
+        setShowFinalText(true);
+      }
+    },
+    [updateUniversityRecommendations],
+  );
 
   const formattedRecommendations = recommendations
     ? formatRecommendationsData(recommendations)

@@ -2,20 +2,12 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaTimes } from "react-icons/fa";
 
-interface DetailedSubject {
-  id: string;
-  subject: string;
-  difficulty: number;
-  level: string;
-  category: string;
-}
-
 interface ConfirmDetailedSubjectsProps {
   onConfirm: () => void;
   onCancel: () => void;
-  selectedSubjects: DetailedSubject[];
+  selectedSubjects: any[];
   categories: string[];
-  onRemoveSubject: (subject: DetailedSubject) => void;
+  onRemoveSubject: (subjectToRemove: any) => void; // Updated to Subject
 }
 
 const ConfirmDetailedSubjects: React.FC<ConfirmDetailedSubjectsProps> = ({
@@ -44,10 +36,10 @@ const ConfirmDetailedSubjects: React.FC<ConfirmDetailedSubjectsProps> = ({
       );
       return acc;
     },
-    {} as Record<string, DetailedSubject[]>,
+    {} as Record<string, any[]>, // Updated to Subject[]
   );
 
-  const handleRemoveSubject = (subject: DetailedSubject) => {
+  const handleRemoveSubject = (subject: any) => {
     setRemovingSubject(subject.id);
     onRemoveSubject(subject);
   };

@@ -1,21 +1,22 @@
 import {
-  math_subjects, 
-  art_subjects, 
-  science_subjects, 
-  english_subjects, 
-  history_subjects, 
-  geography_subjects, 
+  math_subjects,
+  art_subjects,
+  science_subjects,
+  english_subjects,
+  history_subjects,
+  geography_subjects,
   physical_education_subjects,
   music_subjects,
   language_subjects,
-  technology_subjects 
-} from "@/data"
+  technology_subjects,
+} from "@/data";
 export type Subject = {
   id: string;
   subject: string;
   level: string;
   difficulty: string;
-}
+  category: string;
+};
 
 export function mergeSubjects(subjectFilter: string[]) {
   const categorizedSubjects: { [key: string]: Subject[] } = {};

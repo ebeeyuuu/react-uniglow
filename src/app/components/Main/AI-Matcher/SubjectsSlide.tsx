@@ -20,10 +20,11 @@ type SlideProps = {
 const SubjectsSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
   const { updateUniversityRecommendations } = useUniversityRecommendations();
 
-  const [selectedSubjects, setSelectedSubjects] = useState([]);
-  const [selectedDetailedSubjects, setSelectedDetailedSubjects] = useState([]);
-
-  const [selectedSection, setSelectedSection] = useState(null);
+  const [selectedSubjects, setSelectedSubjects] = useState<string[]>([]);
+  const [selectedDetailedSubjects, setSelectedDetailedSubjects] = useState<
+    Subject[]
+  >([]);
+  const [selectedSection, setSelectedSection] = useState<string | null>(null);
 
   const [showSelectedOnly, setShowSelectedOnly] = useState(false);
 
@@ -74,7 +75,7 @@ const SubjectsSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
 
   const [scrollEnabled, setScrollEnabled] = useState(false);
 
-  const handleSubjectClick = (subject) => {
+  const handleSubjectClick = (subject: string) => {
     setSelectedSubjects((prev) =>
       prev.includes(subject)
         ? prev.filter((s) => s !== subject)
@@ -198,10 +199,9 @@ const SubjectsSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
   };
 
   const sortSubjects = (subjects) => {
-    const safeCompare = (a, b, property) => {
+    const safeCompare = (a: Subject, b: Subject, property: keyof Subject) => {
       const valueA = a[property] || "";
       const valueB = b[property] || "";
-
       return valueA.toString().localeCompare(valueB.toString());
     };
 
@@ -212,9 +212,13 @@ const SubjectsSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
       if (level.includes("Postgraduate")) return 3;
     };
 
-    const compareLevels = (a, b, isAscending) => {
+    const compareLevels = (a: Subject, b: Subject, isAscending: boolean) => {
       const indexA = getLevelIndex(a.level);
       const indexB = getLevelIndex(b.level);
+
+      if (indexA === undefined && indexB === undefined) return 0;
+      if (indexA === undefined) return isAscending ? 1 : -1;
+      if (indexB === undefined) return isAscending ? -1 : 1;
 
       return isAscending ? indexA - indexB : indexB - indexA;
     };
@@ -317,7 +321,7 @@ const SubjectsSlide: React.FC<SlideProps> = ({ onNextSlide }) => {
                 <SubjectButton
                   key={subject.name}
                   subject={subject.name}
-                  onClick={handleSubjectClick}
+                  onClick={() => handleSubjectClick(subject.name)}
                   isSelected={selectedSubjects.includes(subject.name)}
                   className={subject.className}
                 />

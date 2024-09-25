@@ -41,7 +41,6 @@ const Page = () => {
   } = useUser();
 
   useEffect(() => {
-    // Example password conditions
     const conditions: PasswordCondition[] = [
       { description: "At least 8 characters", isSatisfied: false },
       { description: "Contains a number", isSatisfied: false },
@@ -170,7 +169,6 @@ const Page = () => {
 
     setIsPasswordTouched(true);
 
-    // Check password conditions
     const updatedConditions = passwordConditions.map((condition) => {
       if (condition.description === "At least 8 characters") {
         condition.isSatisfied = value.length >= 8;
@@ -199,7 +197,7 @@ const Page = () => {
             onSubmit={handleSubmit}
             className="w-[35vw] max-w-[400px] min-w-[300px] mb-10 flex flex-col gap-y-4"
           >
-            <div className="relative">
+            <div>
               <input
                 type="text"
                 placeholder="Username"
@@ -252,58 +250,63 @@ const Page = () => {
                 type="password"
                 value={password}
                 onChange={handlePasswordChange}
-                onFocus={() => setShowConditions(true)}
-                onBlur={() => setShowConditions(false)}
+                onFocus={() => setShowConditions(true)} // Shows conditions when focused
+                onBlur={() => setShowConditions(true)} // Keeps conditions visible when focus is lost
                 placeholder="Password"
                 className={`input-field px-4 py-2 border-white border-2 rounded-[10px] h-[45px] w-full font-medium bg-black ${isPasswordTouched && passwordError ? "border-[#ff850a]" : ""
                   }`}
                 required
               />
               <AnimatePresence>
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={showConditions ? { opacity: 1 } : { opacity: 0 }}
-                  transition={{ duration: 0.5 }}
-                  className="absolute top-full left-0 mt-2 p-2 bg-gray-500/50 backdrop-blur-lg rounded-md shadow-lg z-10 w-full"
-                >
-                  <ul className="list-none">
-                    {passwordConditions.map((condition, index) => (
-                      <li key={index} className="flex items-center space-x-2">
-                        <AnimatePresence>
-                          {satisfiedConditions[index] ? (
-                            <motion.div
-                              key="check"
-                              initial={{ opacity: 0 }}
-                              animate={{ opacity: 1 }}
-                              exit={{ opacity: 0 }}
-                              className="text-emerald-400"
-                            >
-                              <FaCheckCircle />
-                            </motion.div>
-                          ) : (
-                            <motion.div
-                              key="circle"
-                              initial={{ opacity: 0 }}
-                              animate={{ opacity: 1 }}
-                              exit={{ opacity: 0 }}
-                              className="w-4 h-4 border border-white rounded-full"
-                            />
-                          )}
-                        </AnimatePresence>
-                        <span
-                          className={`transition-all duration-500 ease-in-out
-                            ${satisfiedConditions[index]
+                {showConditions && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.5 }}
+                    className="overflow-hidden p-6 mt-4 bg-zinc-800 backdrop-blur-lg rounded-xl shadow-lg w-full"
+                  >
+                    <ul className="list-none">
+                      {passwordConditions.map((condition, index) => (
+                        <li key={index} className="flex items-center space-x-2">
+                          <AnimatePresence>
+                            {satisfiedConditions[index] ? (
+                              <motion.div
+                                key="check"
+                                initial={{ opacity: 0, x: -10 }} // Starts from the left to avoid darting
+                                animate={{ opacity: 1, x: 0 }} // Moves to the correct position
+                                exit={{ opacity: 0, x: -10 }} // Animates out to the left
+                                className="text-emerald-400"
+                              >
+                                <FaCheckCircle />
+                              </motion.div>
+                            ) : (
+                              <motion.div
+                                key="circle"
+                                initial={{ opacity: 0, x: -10 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                exit={{ opacity: 0, x: -10 }}
+                                className="w-4 h-4 border border-white rounded-full"
+                              />
+                            )}
+                          </AnimatePresence>
+                          <motion.span
+                            key={condition.description}
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            className={`transition-all duration-500 ease-in-out ${satisfiedConditions[index]
                               ? "text-emerald-400"
                               : "text-white"
-                            }
-                          `}
-                        >
-                          {condition.description}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                </motion.div>
+                              }`}
+                          >
+                            {condition.description}
+                          </motion.span>
+                        </li>
+                      ))}
+                    </ul>
+                  </motion.div>
+                )}
               </AnimatePresence>
             </div>
             {isPasswordTouched && passwordError && (
@@ -311,25 +314,25 @@ const Page = () => {
                 {passwordError}
               </div>
             )}
-            <div className="flex justify-center items-center italic mt-[10px]">
-              <Link href="/pages/signin">
+            <div className="flex flex-col gap-4 justify-center items-center cursor-pointer mt-[10px]">
+              <Link href="/pages/signin" className="hover:underline italic">
                 Already have an account? Sign in here
               </Link>
-            </div>
-            <div className="flex justify-center gap-x-4 mt-4">
-              <Link
-                href="/"
-                className="text-lg font-medium flex flex-row gap-x-3 bg-[#00257a] rounded-[10px] px-4 py-2 h-[45px] cursor-pointer"
-              >
-                <div>Return</div>
-                <RiArrowGoBackLine className="mt-[6px]" />
-              </Link>
-              <button
-                type="submit"
-                className="text-lg font-medium flex flex-row gap-x-3 bg-[#003dcc] rounded-[10px] px-4 py-2 items-center justify-center text-white w-[100px]"
-              >
-                Submit
-              </button>
+              <div className="flex justify-center gap-x-4 mt-4">
+                <Link
+                  href="/"
+                  className="text-lg font-medium flex flex-row scale-100 hover:scale-110 transition-all duration-300 ease-in-out gap-x-3 bg-[#00257a] rounded-[10px] px-4 py-2 h-[45px] cursor-pointer"
+                >
+                  <div>Return</div>
+                  <RiArrowGoBackLine className="mt-[6px]" />
+                </Link>
+                <button
+                  type="submit"
+                  className="text-lg font-medium flex flex-row gap-x-3 scale-100 hover:scale-110 transition-all duration-300 ease-in-out bg-[#003dcc] rounded-[10px] px-4 py-2 items-center justify-center text-white w-[100px]"
+                >
+                  Submit
+                </button>
+              </div>
             </div>
           </form>
         </div>

@@ -2,10 +2,12 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
+import preview from "@/images/preview.png";
 
 const Hero = () => {
   return (
-    <div className="w-full h-full flex flex-col gap-7 max-md:gap-1 smooth-animation mt-72 justify-center items-center">
+    <div className="w-full h-full flex flex-col gap-9 max-md:gap-1 smooth-animation mt-72 justify-center items-center">
       <div className="relative flex flex-row justify-center scale-100 max-md:scale-[80%] smooth-animation items-center gap-x-0 bg-white rounded-full">
         <div className="absolute left-0 top-0 text-base bg-white text-black px-4 py-2 rounded-full z-10">
           New
@@ -34,6 +36,12 @@ const Hero = () => {
           </button>
         </Link>
       </div>
+      <Image
+        src={preview}
+        alt="Preview"
+        className="w-3/4 h-auto max-w-[1800px] min-w-[500px] p-10 rounded-2xl max-md:mt-8"
+        quality={100}
+      />
     </div>
   );
 };

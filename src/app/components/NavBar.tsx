@@ -43,7 +43,9 @@ const NavBar = () => {
   const pathname = usePathname();
 
   useEffect(() => {
-    setActiveLink(pathname === "/about" ? "" : pathname);
+    if (pathname) {
+      setActiveLink(pathname === "/about" ? "" : pathname);
+    }
   }, [pathname]);
 
   useEffect(() => {

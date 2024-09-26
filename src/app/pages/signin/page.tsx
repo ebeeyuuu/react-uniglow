@@ -34,7 +34,6 @@ const Page = () => {
     setError(null); // Reset error state
 
     try {
-      // Query Firestore for the user with the provided username
       const q = query(
         collection(db, "users"),
         where("username", "==", username),
@@ -45,7 +44,6 @@ const Page = () => {
         throw new Error("No user found with this username.");
       }
 
-      // Check if the provided password matches the password in the database
       const userDoc = querySnapshot.docs[0];
       const userData = userDoc.data() as DocumentData;
 
@@ -53,18 +51,16 @@ const Page = () => {
         throw new Error("Incorrect password. Please try again.");
       }
 
-      // Destructure the userData object
       const { username: dbUsername, email, grade, age } = userData;
-      // Set user data in context
 
       setContextUsername(dbUsername);
       setContextAge(parseInt(age));
       setContextGrade(parseInt(grade));
       setContextEmail(email);
 
-      // Redirect to the main page
       router.push("/pages/main");
     } catch (error: unknown) {
+      console.log(error);
       if (error instanceof Error) {
         let errorMessage = "An unknown error occurred.";
         if (error.message.includes("No user found with this username.")) {

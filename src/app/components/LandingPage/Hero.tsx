@@ -7,7 +7,7 @@ import preview from "@/images/preview.png";
 
 const Hero = () => {
   return (
-    <div className="w-full h-full flex flex-col gap-9 max-md:gap-1 smooth-animation mt-72 justify-center items-center">
+    <div className="w-full h-full flex flex-col gap-9 max-md:gap-1 smooth-animation mt-52 justify-center items-center">
       <div className="relative flex flex-row justify-center scale-100 max-md:scale-[80%] smooth-animation items-center gap-x-0 bg-white rounded-full">
         <div className="absolute left-0 top-0 text-base bg-white text-black px-4 py-2 rounded-full z-10">
           New

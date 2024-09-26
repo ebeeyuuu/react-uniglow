@@ -1,19 +1,8 @@
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
-    match /users/{userId} {
-      allow create: if request.auth != null && request.auth.uid == userId;
-      allow read, write: if request.auth != null && request.auth.uid == userId;
-    }
-
-    match /rec_universities/{docId} {
-      allow read: if request.auth != null;
-      allow write: if request.auth != null && request.auth.token.admin == true;
-    }
-
     match /{document=**} {
-      allow read, write: if false;
+      allow read, write, update, create, delete: if true;
     }
   }
 }
-

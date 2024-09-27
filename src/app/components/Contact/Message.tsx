@@ -63,7 +63,7 @@ const Message: React.FC = () => {
   const renderField = useCallback(
     ({ name, label, type = "text", placeholder }: FieldProps) => (
       <div className="flex flex-col gap-y-[10px]" key={name}>
-        <div className="font-bold text-lg">{label}</div>
+        <div className="font-bold text-sm md:text-base lg:text-lg">{label}</div>
         {type === "textarea" ? (
           <textarea
             name={name}
@@ -93,7 +93,7 @@ const Message: React.FC = () => {
   );
 
   return (
-    <div className="ml-[40px] mt-[40px] max-[700px]:w-full">
+    <div className="mt-[40px] max-[700px]:w-full">
       <div className="flex flex-col gap-y-[20px] w-[100%]">
         {renderField({
           name: "fullName",

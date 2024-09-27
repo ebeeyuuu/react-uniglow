@@ -6,10 +6,9 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { FaArrowLeft } from "react-icons/fa";
 
-// Lazy load components
 const NavBar = lazy(() => import("@/app/components/NavBar"));
 const TypewriterEffect = lazy(
-  () => import("@/app/components/TypewriterEffect")
+  () => import("@/app/components/TypewriterEffect"),
 );
 const Message = lazy(() => import("@/app/components/Contact/Message"));
 const Newsletter = lazy(() => import("@/app/components/Contact/Newsletter"));
@@ -20,12 +19,12 @@ const Home: React.FC = () => {
     <Suspense fallback={<Loading />}>
       <div>
         <NavBar />
-        <div className="flex justify-center items-center h-[100vh] w-full">
-          <div className="mt-[-300px]">
-            <div className="mt-[80px] ml-[40px] w-[95px]">
+        <div className="flex relative p-20 h-full w-full">
+          <div className="flex flex-col">
+            <div>
               <motion.div
                 className="flex flex-row gap-x-[10px] items-center cursor-pointer"
-                whileHover={{ x: -5 }}
+                whileHover={{ x: 5 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
               >
                 <motion.div>
@@ -34,13 +33,13 @@ const Home: React.FC = () => {
                 <Link href="/">Go back</Link>
               </motion.div>
             </div>
-            <div className="ml-[40px] mt-[20px]">
+            <div>
               <TypewriterEffect
                 text="Here to help"
-                className="text-8xl font-bold max-[900px]:text-6xl smooth-animation"
+                className="text-5xl font-bold max-[900px]:text-6xl smooth-animation mt-2"
               />
             </div>
-            <div className="flex flex-row w-full max-[900px]:flex-col gap-x-[100px]">
+            <div className="flex flex-row gap-6 w-full max-[900px]:flex-col">
               <Message />
               <div className="flex flex-col gap-y-[30px] max-[900px]:justify-center smooth-animation">
                 <Newsletter />

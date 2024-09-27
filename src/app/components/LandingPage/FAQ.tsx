@@ -85,7 +85,7 @@ const FAQ: React.FC = () => {
       </button>
       <p className="font-medium text-sm mt-[10px]">
         Contact us at
-        <span className="underline decoration-offset-[5px] italic">
+        <span className="underline mx-1 decoration-offset-[5px] italic">
           uniglow@gmail.com
         </span>
         for more information

@@ -44,7 +44,11 @@ const NavBar = () => {
 
   useEffect(() => {
     if (pathname) {
-      setActiveLink(pathname === "/about" ? "" : pathname);
+      if (pathname === "/about") {
+        setActiveLink(""); // Reset to neutral state
+      } else {
+        setActiveLink(pathname); // Set active link based on current pathname
+      }
     }
   }, [pathname]);
 
@@ -248,7 +252,7 @@ const NavBar = () => {
         <Link href="/" className="text-xl font-semibold">
           Uniglow
         </Link>
-        <div className="hidden md:flex flex-row gap-x-2 items-center">
+        <div className="hidden md:flex flex-row gap-x-1 items-center">
           {navItems.map(({ href, label, icon: Icon, size }) => (
             <div key={href} className="relative">
               {label === "Programs" ||

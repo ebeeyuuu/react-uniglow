@@ -25,7 +25,7 @@ import {
 } from "react-icons/fa";
 import { FaBookOpen } from "react-icons/fa6";
 import { RiTeamFill } from "react-icons/ri";
-import { MdCorporateFare, MdCalendarMonth } from "react-icons/md";
+import { MdExplore, MdCorporateFare, MdCalendarMonth } from "react-icons/md";
 import { GrAchievement } from "react-icons/gr";
 import { SiGithubsponsors } from "react-icons/si";
 import { HiBookOpen } from "react-icons/hi2";
@@ -259,13 +259,13 @@ const NavModal: React.FC<NavModalProps> = ({ isOpen, setIsOpen }) => {
 
   return (
     <nav
-      className={`fixed top-0 right-0 h-[100vh] bg-[#00478f] backdrop-blur-md pl-20 pr-4 pt-12 flex flex-col justify-start items-end gap-y-5 transition-transform duration-300 ${isOpen ? "translate-x-0" : "translate-x-full"
+      className={`fixed top-0 right-0 h-[100vh] bg-[#00478f]/50 backdrop-blur-xl pl-20 pr-4 pt-12 flex flex-col justify-start items-end gap-y-5 transition-transform duration-300 ${isOpen ? "translate-x-0" : "translate-x-full"
         } ${visible ? "opacity-100" : "opacity-0"} z-50`}
       onTransitionEnd={handleTransitionEnd}
     >
       <button
         onClick={() => setIsOpen(false)}
-        className="mb-10 font-semibold text-[25px]"
+        className="mb-10 font-semibold text-[25px] scale-100 hover:scale-110 transition-all duration-300 ease-in-out"
       >
         Close
       </button>
@@ -289,7 +289,8 @@ const NavModal: React.FC<NavModalProps> = ({ isOpen, setIsOpen }) => {
               }
               className={`
                     flex flex-row gap-x-3 items-center px-3 py-2 rounded-[10px] 
-                    transition-all duration-300 ease-in-out 
+                    transition-all duration-300 ease-in-out bg-transparent hover:bg-white
+                    hover:text-black
                     ${activeLink === item.href
                   ? "bg-white text-black"
                   : "gradient-hover"
@@ -468,9 +469,10 @@ const NavModal: React.FC<NavModalProps> = ({ isOpen, setIsOpen }) => {
       <div className="relative z-40">
         <button
           onClick={() => handleMenuOpen("explore")}
-          className="px-4 py-3 border-2 border-[#ff7f00] z-40"
+          className="p-0 mr-3 hover:px-5 hover:py-3 gap-x-3 rounded-xl hover:bg-white bg-transparent hover:text-black smooth-animation flex justify-center items-center flex-row z-40"
         >
-          Explore
+          <p>Explore</p>
+          <MdExplore size={23} />
         </button>
         <AnimatePresence>
           {exploreOpen && (

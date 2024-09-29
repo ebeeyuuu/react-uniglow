@@ -32,6 +32,65 @@ import { GrAchievement } from "react-icons/gr";
 import { SiGithubsponsors } from "react-icons/si";
 import { HiBookOpen } from "react-icons/hi2";
 
+const menuVariants = {
+  hidden: {
+    opacity: 0,
+    y: -20,
+    transition: {
+      type: "spring",
+      stiffness: 300,
+      damping: 30,
+    },
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 300,
+      damping: 30,
+    },
+  },
+};
+
+const DropdownMenu = ({ open, items, onClose }) => {
+  return (
+    <AnimatePresence>
+      {open && (
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          exit="hidden"
+          variants={menuVariants}
+          className="absolute z-10 right-0 mt-2 w-72 origin-top-right rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none py-7 px-3"
+        >
+          <div className="py-1">
+            {items.map(({ href, label, icon: Icon }) => (
+              <Link
+                key={href}
+                href={href}
+                className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+              >
+                <div className="mr-3 p-1 rounded-[10px]">
+                  <Icon size={20} />
+                </div>
+                {label}
+              </Link>
+            ))}
+          </div>
+          <button
+            onClick={() => onClose()}
+            className="absolute bottom-2 right-2 p-1 rounded-full hover:bg-gray-200"
+            aria-label="Close menu"
+          >
+            <FaTimes size={20} className="text-gray-600" />
+          </button>
+        </motion.div>
+      )}
+    </AnimatePresence>
+  );
+};
+
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeLink, setActiveLink] = useState("");
@@ -68,27 +127,6 @@ const NavBar = () => {
       window.removeEventListener("keydown", handleEsc);
     };
   }, []);
-
-  const menuVariants = {
-    hidden: {
-      opacity: 0,
-      y: -20,
-      transition: {
-        type: "spring",
-        stiffness: 300,
-        damping: 30,
-      },
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        type: "spring",
-        stiffness: 300,
-        damping: 30,
-      },
-    },
-  };
 
   const aboutItems = [
     { href: "/pages/about", label: "Our Story", icon: FaBookOpen },
@@ -301,111 +339,27 @@ const NavBar = () => {
               )}
 
               {label === "About Us" && (
-                <AnimatePresence>
-                  {aboutOpen && (
-                    <motion.div
-                      initial="hidden"
-                      animate="visible"
-                      exit="hidden"
-                      variants={menuVariants}
-                      className="absolute z-10 right-0 mt-2 w-72 origin-top-right rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none py-7 px-3"
-                    >
-                      <div className="py-1">
-                        {aboutItems.map(({ href, label, icon: Icon }) => (
-                          <Link
-                            key={href}
-                            href={href}
-                            className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                          >
-                            <div className="mr-3 p-1 rounded-[10px]">
-                              <Icon size={20} />
-                            </div>
-                            {label}
-                          </Link>
-                        ))}
-                      </div>
-                      <button
-                        onClick={() => setAboutOpen(false)}
-                        className="absolute bottom-2 right-2 p-1 rounded-full hover:bg-gray-200"
-                        aria-label="Close menu"
-                      >
-                        <FaTimes size={20} className="text-gray-600" />
-                      </button>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
+                <DropdownMenu
+                  open={aboutOpen}
+                  items={aboutItems}
+                  onClose={() => setAboutOpen(false)}
+                />
               )}
 
               {label === "Contact" && (
-                <AnimatePresence>
-                  {contactOpen && (
-                    <motion.div
-                      initial="hidden"
-                      animate="visible"
-                      exit="hidden"
-                      variants={menuVariants}
-                      className="absolute z-10 right-0 mt-2 w-72 origin-top-right rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none py-7 px-3"
-                    >
-                      <div className="py-1">
-                        {contactUsItems.map(({ href, label, icon: Icon }) => (
-                          <Link
-                            key={href}
-                            href={href}
-                            className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                          >
-                            <div className="mr-3 p-1 rounded-[10px]">
-                              <Icon size={20} />
-                            </div>
-                            {label}
-                          </Link>
-                        ))}
-                      </div>
-                      <button
-                        onClick={() => setContactOpen(false)}
-                        className="absolute bottom-2 right-2 rounded-full hover:bg-gray-200"
-                        aria-label="Close menu"
-                      >
-                        <FaTimes size={20} className="text-gray-600" />
-                      </button>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
+                <DropdownMenu
+                  open={contactOpen}
+                  items={contactUsItems}
+                  onClose={() => setContactOpen(false)}
+                />
               )}
 
               {label === "Donate" && (
-                <AnimatePresence>
-                  {donateOpen && (
-                    <motion.div
-                      initial="hidden"
-                      animate="visible"
-                      exit="hidden"
-                      variants={menuVariants}
-                      className="absolute z-10 right-0 mt-2 w-72 origin-top-right rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none py-7 px-3"
-                    >
-                      <div className="py-1">
-                        {donateItems.map(({ href, label, icon: Icon }) => (
-                          <Link
-                            key={href}
-                            href={href}
-                            className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                          >
-                            <div className="mr-3 p-1 rounded-[10px]">
-                              <Icon size={20} />
-                            </div>
-                            {label}
-                          </Link>
-                        ))}
-                      </div>
-                      <button
-                        onClick={() => setDonateOpen(false)}
-                        className="absolute bottom-2 right-2 rounded-full hover:bg-gray-200"
-                        aria-label="Close menu"
-                      >
-                        <FaTimes size={20} className="text-gray-600" />
-                      </button>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
+                <DropdownMenu
+                  open={donateOpen}
+                  items={donateItems}
+                  onClose={() => setDonateOpen(false)}
+                />
               )}
 
               {label === "Programs" && (

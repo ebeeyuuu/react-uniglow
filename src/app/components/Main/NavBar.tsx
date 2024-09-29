@@ -141,9 +141,12 @@ const NavBar = () => {
           >
             {username === "" ? "Guest" : username}
           </p>
-          <Link href="/">
+          <div
+            className="cursor-pointer scale-100 relative z-50 hover:scale-110 duration-300 transition-all ease-in-out"
+            onClick={() => router.push("/")}
+          >
             <Exit className="max-[1000px]:w-[25px] max-[1000px]:h-[25px]" />
-          </Link>
+          </div>
         </div>
         <div className="hidden max-[1000px]:flex max-[600px]:items-center max-[600px]:justify-between">
           <button

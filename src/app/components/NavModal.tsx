@@ -25,7 +25,7 @@ import {
 } from "react-icons/fa";
 import { FaBookOpen } from "react-icons/fa6";
 import { RiTeamFill } from "react-icons/ri";
-import { MdExplore, MdCorporateFare, MdCalendarMonth } from "react-icons/md";
+import { MdCorporateFare, MdCalendarMonth } from "react-icons/md";
 import { GrAchievement } from "react-icons/gr";
 import { SiGithubsponsors } from "react-icons/si";
 import { HiBookOpen } from "react-icons/hi2";
@@ -259,18 +259,18 @@ const NavModal: React.FC<NavModalProps> = ({ isOpen, setIsOpen }) => {
 
   return (
     <nav
-      className={`fixed inset-0 top-0 right-0 h-[100vh] bg-[#00478f]/50 backdrop-blur-xl pl-20 pr-4 pt-12 flex flex-col justify-start items-end gap-y-5 transition-transform duration-300 ${isOpen ? "translate-x-0" : "translate-x-full"
+      className={`fixed inset-0 top-0 right-0 h-[100vh] bg-[#00478f]/50 backdrop-blur-xl flex flex-col justify-center items-center  transition-transform duration-300 ${isOpen ? "translate-x-0" : "translate-x-full"
         } ${visible ? "opacity-100" : "opacity-0"} z-50`}
       onTransitionEnd={handleTransitionEnd}
     >
       <button
         onClick={() => setIsOpen(false)}
-        className="mb-10 font-semibold text-[25px] scale-100 hover:scale-110 transition-all duration-300 ease-in-out"
+        className="mb-10 font-semibold text-[25px] scale-100 px-5 py-3 hover:scale-110 transition-all duration-300 ease-in-out"
       >
         Close
       </button>
       {navItems.map((item, index) => (
-        <div key={index} className="relative">
+        <div key={index} className="relative flex justify-center items-center">
           {item.text === "Programs" ||
             item.text === "About Us" ||
             item.text === "Contact" ||
@@ -288,7 +288,7 @@ const NavModal: React.FC<NavModalProps> = ({ isOpen, setIsOpen }) => {
                 )
               }
               className={`
-                    flex flex-row gap-x-3 items-center px-3 py-2 rounded-[10px] 
+                    flex flex-row gap-x-3 items-center px-5 py-3 rounded-[10px] 
                     transition-all duration-300 ease-in-out bg-transparent hover:bg-white
                     hover:text-black
                     ${activeLink === item.href
@@ -298,7 +298,6 @@ const NavModal: React.FC<NavModalProps> = ({ isOpen, setIsOpen }) => {
                   `}
             >
               {item.text}
-              <item.icon size={item.size} />
             </button>
           ) : (
             <Link
@@ -306,7 +305,6 @@ const NavModal: React.FC<NavModalProps> = ({ isOpen, setIsOpen }) => {
               href={item.href}
             >
               {item.text}
-              <item.icon size={item.size} />
             </Link>
           )}
 
@@ -318,7 +316,7 @@ const NavModal: React.FC<NavModalProps> = ({ isOpen, setIsOpen }) => {
                   animate="visible"
                   exit="hidden"
                   variants={menuVariants}
-                  className="absolute right-0 mt-2 w-72 origin-top-right rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-50 py-7 px-3"
+                  className="absolute top-0 origin-top mt-14 w-72 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-50 py-7 px-3"
                 >
                   <div className="py-1">
                     {aboutItems.map(({ href, label, icon: Icon }) => (
@@ -354,7 +352,7 @@ const NavModal: React.FC<NavModalProps> = ({ isOpen, setIsOpen }) => {
                   animate="visible"
                   exit="hidden"
                   variants={menuVariants}
-                  className="absolute right-0 mt-2 w-72 origin-top-right rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-50 py-7 px-3"
+                  className="absolute top-0 origin-top mt-14 w-72 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-50 py-7 px-3"
                 >
                   <div className="py-1">
                     {contactUsItems.map(({ href, label, icon: Icon }) => (
@@ -390,7 +388,7 @@ const NavModal: React.FC<NavModalProps> = ({ isOpen, setIsOpen }) => {
                   animate="visible"
                   exit="hidden"
                   variants={menuVariants}
-                  className="absolute right-0 mt-2 w-72 origin-top-right rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-50 py-7 px-3"
+                  className="absolute top-0 origin-top mt-14 w-72 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-50 py-7 px-3"
                 >
                   <div className="py-1">
                     {donateItems.map(({ href, label, icon: Icon }) => (
@@ -426,7 +424,7 @@ const NavModal: React.FC<NavModalProps> = ({ isOpen, setIsOpen }) => {
                   animate="visible"
                   exit="hidden"
                   variants={menuVariants}
-                  className="absolute right-0 mt-2 w-72 origin-top-right rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-50 py-7 px-3"
+                  className="absolute top-0 origin-top mt-14 w-72 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-50 py-7 px-3"
                 >
                   <div className="py-1">
                     {programItems.map(({ href, label, icon: Icon }) => (
@@ -469,10 +467,9 @@ const NavModal: React.FC<NavModalProps> = ({ isOpen, setIsOpen }) => {
       <div className="relative z-40">
         <button
           onClick={() => handleMenuOpen("explore")}
-          className="p-0 mr-3 hover:px-5 hover:py-3 gap-x-3 rounded-xl hover:bg-white bg-transparent hover:text-black smooth-animation flex justify-center items-center flex-row z-40"
+          className="px-5 py-3 rounded-xl hover:bg-white bg-transparent hover:text-black transition-all duration-300 ease-in-out flex justify-center items-center flex-row z-40"
         >
           <p>Explore</p>
-          <MdExplore size={23} />
         </button>
         <AnimatePresence>
           {exploreOpen && (
@@ -481,7 +478,7 @@ const NavModal: React.FC<NavModalProps> = ({ isOpen, setIsOpen }) => {
               animate="visible"
               exit="hidden"
               variants={menuVariants}
-              className="absolute right-0 mt-2 w-72 origin-top-right rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-50 py-7 px-3"
+              className="absolute top-0 origin-top mt-14 w-72 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-50 py-7 px-3"
             >
               <div className="py-1">
                 {exploreItems.map(({ href, label, icon: Icon }) => (

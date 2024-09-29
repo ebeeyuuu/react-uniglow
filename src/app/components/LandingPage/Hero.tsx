@@ -3,31 +3,25 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import preview from "@/images/preview.png";
-import ButtonLoad from "@/app/components/ButtonLoad";
-import { motion } from "framer-motion";
+import LoadingButton from "@/app/components/LoadingButton";
 import { useRouter } from "next/navigation";
 
-const buttonVariants = {
-  hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { duration: 0.5 } },
-  exit: { opacity: 0, transition: { duration: 0.5 } },
-};
-
 const Hero = () => {
-  const [loading, setLoading] = useState(true);
-  const [loadingText, setLoadingText] = useState("");
+  const [loading, setLoading] = useState(false);
   const router = useRouter();
 
   const handleImageLoad = () => {
     setLoading(false);
   };
 
-  const handleButtonClick = (text: string, path: string) => {
-    setLoadingText(text);
-    setTimeout(() => {
-      setLoadingText(""); // Reset the loading text
-    }, 2000); // Duration for loading animation
-    router.push(path);
+  const handleGetStarted = async () => {
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+    router.push("/pages/signup");
+  };
+
+  const handleContactUs = async () => {
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+    router.push("/pages/contact");
   };
 
   return (
@@ -50,24 +44,20 @@ const Hero = () => {
         and the one for you!
       </div>
       <div className="flex flex-row gap-4 justify-center mt-0 max-md:mt-7 max-md:flex-col">
-        <motion.button
+        <LoadingButton
+          onClick={handleGetStarted}
           className="bg-[#003dcc] rounded-xl px-5 py-3 scale-100 hover:scale-110 smooth-animation max-md:px-14 font-medium text-base"
-          onClick={() => handleButtonClick("Get started", "/pages/signup")}
-          variants={buttonVariants}
-          initial="hidden"
-          animate={loadingText === "Get started" ? "exit" : "visible"}
+          loadingColorHex="#FFF"
         >
-          {loadingText === "Get started" ? <ButtonLoad /> : "Get started"}
-        </motion.button>
-        <motion.button
-          className="border-white rounded-xl px-5 py-3 bg-gray-300 scale-100 hover:scale-110 smooth-animation text-black max-md:px-14 font-medium text-base"
-          onClick={() => handleButtonClick("Contact us", "/pages/contact")}
-          variants={buttonVariants}
-          initial="hidden"
-          animate={loadingText === "Contact us" ? "exit" : "visible"}
+          Get started
+        </LoadingButton>
+        <LoadingButton
+          onClick={handleContactUs}
+          className="border-white rounded-xl px-5 py-3 bg-gray-300 scale-100 hover:scale-110 smooth-animation max-md:px-14 font-medium text-base text-black"
+          loadingColorHex="#000"
         >
-          {loadingText === "Contact us" ? <ButtonLoad /> : "Contact us"}
-        </motion.button>
+          Contact us
+        </LoadingButton>
       </div>
 
       <div

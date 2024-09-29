@@ -1,5 +1,3 @@
-import "dotenv/config";
-
 import { initializeApp } from "firebase/app";
 import { getAnalytics, isSupported } from "firebase/analytics";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
@@ -15,6 +13,8 @@ const firebaseConfig = {
   appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
   measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
 };
+
+console.log(firebaseConfig);
 
 const app = initializeApp(firebaseConfig);
 

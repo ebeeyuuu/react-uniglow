@@ -8,7 +8,8 @@ import { FaCheckCircle } from "react-icons/fa";
 import RegisterLayout from "../../components/RegisterLayout";
 import Loading from "../../components/Loading";
 import { addDoc, collection, query, where, getDocs } from "firebase/firestore";
-import { db } from "@/firebaseConfig";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth, db } from "@/firebaseConfig";
 import { useUser } from "@/context/userContext";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -90,14 +91,14 @@ const Page = () => {
 
     if (!validateUsername(username)) {
       setUsernameError(
-        "Usernames can only have uppercase and lowercase letters, numbers, and underscores.",
+        "Usernames can only have letters, numbers, and underscores.",
       );
       hasError = true;
     } else {
       const usernameExists = await checkExistingUsername(username);
       if (usernameExists) {
         setUsernameError(
-          "An account already exists with this username. Please choose a different one.",
+          "Username already exists. Please choose a different one.",
         );
         hasError = true;
       } else {
@@ -132,12 +133,19 @@ const Page = () => {
     }
 
     try {
-      const docRef = await addDoc(collection(db, "users"), {
-        username,
-        age,
-        grade,
+      const userCredential = await createUserWithEmailAndPassword(
+        auth,
         email,
         password,
+      );
+      const user = userCredential.user;
+
+      await addDoc(collection(db, "users"), {
+        uid: user.uid,
+        username,
+        age: parseInt(age),
+        grade: parseInt(grade),
+        email,
       });
 
       setContextUsername(username);
@@ -146,8 +154,8 @@ const Page = () => {
       setContextEmail(email);
 
       router.push("/pages/main");
-    } catch (error) {
-      return;
+    } catch (error: any) {
+      console.error("Error during signup: ", error);
     }
   };
 
@@ -296,8 +304,8 @@ const Page = () => {
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                             className={`transition-all duration-500 ease-in-out ${satisfiedConditions[index]
-                              ? "text-emerald-400"
-                              : "text-white"
+                                ? "text-emerald-400"
+                                : "text-white"
                               }`}
                           >
                             {condition.description}

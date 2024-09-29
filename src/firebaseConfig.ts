@@ -14,17 +14,14 @@ const firebaseConfig = {
   measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
 };
 
-console.log(firebaseConfig);
+let app, auth, googleProvider, db, analytics;
 
-const app = initializeApp(firebaseConfig);
-
-const auth = getAuth(app);
-const googleProvider = new GoogleAuthProvider();
-
-const db = getFirestore(app);
-
-let analytics;
 if (typeof window !== "undefined") {
+  app = initializeApp(firebaseConfig);
+  auth = getAuth(app);
+  googleProvider = new GoogleAuthProvider();
+  db = getFirestore(app);
+
   isSupported().then((supported) => {
     if (supported) {
       analytics = getAnalytics(app);

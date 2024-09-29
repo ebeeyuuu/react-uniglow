@@ -61,7 +61,7 @@ const Hero = () => {
       </div>
 
       <div
-        className={`relative w-3/4 h-auto max-w-[1800px] min-w-[500px] p-10 rounded-2xl max-md:mt-8 transition duration-300 ${loading ? "blur-lg" : ""}`}
+        className={`relative w-3/4 h-auto max-w-[1800px] p-10 rounded-2xl max-md:mt-8 transition duration-300 ${loading ? "blur-lg" : ""}`}
       >
         <Image
           src={preview}

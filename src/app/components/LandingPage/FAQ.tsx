@@ -72,10 +72,10 @@ const FAQ: React.FC = () => {
               aria-controls={`panel${index + 1}-content`}
               id={`panel${index + 1}-header`}
             >
-              <span className="font-semibold">{item.question}</span>
+              <span className="font-semibold text-sm sm:text-base md:text-lg">{item.question}</span>
             </AccordionSummary>
             <AccordionDetails>
-              <p className="font-normal">{item.answer}</p>
+              <p className="font-normal tetx-xs sm:text-sm md:text-base">{item.answer}</p>
             </AccordionDetails>
           </Accordion>
         ))}

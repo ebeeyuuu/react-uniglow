@@ -80,7 +80,7 @@ const LoadingButton: React.FC<LoadingButtonProps> = ({
       disabled={isLoading}
     >
       <span
-        className="transition-opacity duration-300"
+        className="w-full h-full flex justify-center items-center transition-opacity duration-300"
         style={{ opacity: isLoading ? 0 : 1 }}
       >
         {children}

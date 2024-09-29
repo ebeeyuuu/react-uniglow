@@ -14,6 +14,7 @@ import {
   DocumentData,
 } from "firebase/firestore";
 import { useUser } from "@/context/userContext"; // Import the useUser hook
+import LoadingButton from "@/app/components/LoadingButton";
 
 const RegisterLayout = lazy(() => import("@/app/components/RegisterLayout"));
 
@@ -29,8 +30,14 @@ const Page = () => {
   } = useUser();
   const router = useRouter();
 
-  const handleSignIn = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleReturn = async () => {
+    await new Promise((resolve) => setTimeout(resolve, 1500));
+    router.push("/");
+  };
+
+  const handleSignIn = async (e?: React.FormEvent) => {
+    await new Promise((resolve) => setTimeout(resolve, 1500));
+    if (e) e.preventDefault();
     setError(null); // Reset error state
 
     try {
@@ -116,19 +123,22 @@ const Page = () => {
               Don&apos;t have an account? Sign up here!
             </Link>
             <div className="flex flex-row gap-x-4 mt-4 justify-center">
-              <Link
-                href="/"
-                className="text-lg font-medium flex flex-row gap-x-3 bg-[#00257a] rounded-[10px] px-4 py-2 h-[45px]"
+              <LoadingButton
+                onClick={handleReturn}
+                className="text-lg font-medium hover:scale-110 scale-100 transition-all duration-300 ease-in-out flex flex-row gap-3 bg-[#00257a] rounded-[10px] px-4 py-2 h-[45px]"
               >
-                <div>Return</div>
-                <RiArrowGoBackLine className="mt-[6px]" />
-              </Link>
-              <button
-                type="submit"
-                className="text-lg font-medium flex flex-row bg-[#003dcc] text-white rounded-[10px] px-4 py-2 h-[45px]"
+                <div className="flex flex-row gap-x-3">
+                  <div>Return</div>
+                  <RiArrowGoBackLine className="mt-[6px]" />
+                </div>
+              </LoadingButton>
+              <LoadingButton
+                className="text-lg font-medium hover:scale-110 scale-100 transition-all duration-300 ease-in-out flex flex-row bg-[#003dcc] text-white rounded-[10px] px-4 py-2 h-[45px]"
+                loadingColorHex="#FFF"
+                onClick={() => handleSignIn(undefined)}
               >
                 Submit
-              </button>
+              </LoadingButton>
             </div>
           </form>
         </div>

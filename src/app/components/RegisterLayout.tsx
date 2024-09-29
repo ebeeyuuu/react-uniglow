@@ -1,5 +1,5 @@
-import React, { ReactNode } from 'react';
-import image1 from '@/images/1.jpg'
+import React, { ReactNode } from "react";
+import image1 from "@/images/1.jpg";
 import Image from "next/image";
 
 interface RegisterLayoutProps {
@@ -14,8 +14,7 @@ const RegisterLayout: React.FC<RegisterLayoutProps> = ({ children }) => {
           src={image1}
           alt="Image"
           className="w-full h-full object-cover -z-100"
-          layout="fill" // Use layout="fill" for background images
-          priority={false} // Set priority to false for lazy loading
+          fill
         />
       </div>
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#020202] py-[40px] px-[40px] rounded-[20px] z-100">
@@ -23,6 +22,6 @@ const RegisterLayout: React.FC<RegisterLayoutProps> = ({ children }) => {
       </div>
     </div>
   );
-}
+};
 
 export default RegisterLayout;

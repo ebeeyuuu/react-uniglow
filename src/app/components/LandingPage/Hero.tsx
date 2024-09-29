@@ -15,12 +15,12 @@ const Hero = () => {
   };
 
   const handleGetStarted = async () => {
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    await new Promise((resolve) => setTimeout(resolve, 1500));
     router.push("/pages/signup");
   };
 
   const handleContactUs = async () => {
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    await new Promise((resolve) => setTimeout(resolve, 1500));
     router.push("/pages/contact");
   };
 

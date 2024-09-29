@@ -1,17 +1,18 @@
-"use client"
+"use client";
 
-import React, { Suspense, lazy } from 'react';
-import Loading from '@/app/components/Loading';
-import NavBar from '@/app/components/NavBar';
+import React, { Suspense, lazy } from "react";
+import Loading from "@/app/components/Loading";
+import NavBar from "@/app/components/NavBar";
+import Footer from "@/app/components/LandingPage/Footer";
 
-// Lazy load the Hero component
-const Hero = lazy(() => import('@/app/components/About/Hero'));
+const Hero = lazy(() => import("@/app/components/About/Hero"));
 
 const Home = () => {
   return (
     <Suspense fallback={<Loading />}>
       <NavBar />
       <Hero />
+      <Footer />
     </Suspense>
   );
 };

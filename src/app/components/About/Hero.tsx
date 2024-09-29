@@ -1,48 +1,82 @@
-import React from 'react';
+import React from "react";
 import Image from "next/image";
-import image2 from '@/images/15.jpg';
-import { FaCopyright } from 'react-icons/fa';
+import work1 from "@/images/work1.jpg";
+import work2 from "@/images/work2.jpg";
+import work3 from "@/images/work3.jpg";
+import work4 from "@/images/work4.jpg";
 
 const Hero = () => {
   return (
-    <div className="w-full flex flex-col">
-      <div className="text-center text-white font-bold text-4xl px-5 py-5 rounded-[10px] bg-[#020202] max-[900px]:text-2xl border border-white mt-[100px] mx-auto">
-        About Us: Our Story
-      </div>
-      <hr className="w-[70%] border border-white/30 mx-auto mt-[60px]" />
-      <div className="w-[90%] mx-auto mt-[90px] flex flex-col-reverse lg:flex-row justify-center items-center gap-x-[100px]">
-        <div className="w-full lg:w-1/3 flex flex-col gap-[40px]">
-          <h2 className="font-medium text-3xl">
-            Uniglow helps students around the world{' '}
-            <span className="italic font-bold">unearth their dream university</span>
-          </h2>
-          <p className="font-normal text-xs">
-            Founded on 26 July 2024 by myself, Ean Yu, I started out by developing the frontend of this website in my room in Hongkong in my grandparents&apos; apartment. My ultimate goal was to help people around the world, whether it would be students, teachers, or even parents decide on the best university that suited them the best.
-          </p>
-          <p className="font-normal text-xs">
-            I didn&apos;t want anyone else in the world to have the same struggles as I did when I had to decide on the university I wanted to study at, so I decided to create Uniglow and show the world all the opportunities the world has to offer, and thats why most of the features of Uniglow are free to use!
-          </p>
-          <p className="font-normal text-xs">
-            Each and every single part of this website has a little part of myself infused into it; an easy to use, effortless, and resourceful feature and service in every direction. I call it the heaven of a senior, so enjoy every part of it.
-          </p>
+    <div className="w-full h-full flex flex-col justify-center items-center">
+      <div className="w-full flex justify-center items-center mt-52 flex-col gap-9">
+        <div className="bg-white rounded-full text-black font-medium text-base px-4 py-2">
+          Join our team
         </div>
-        <Image
-          src={image2}
-          alt=""
-          className="w-[90%] lg:w-[35%] h-[500px] object-cover mb-[40px] lg:mb-0 filter brightness-[70%]"
-          style={{
-            maxWidth: "100%",
-            height: "auto"
-          }} />
+        <div className="text-center scale-100 max-md:scale-[70%] smooth-animation text-6xl font-extrabold flex justify-center flex-col">
+          Rediscover your dream.
+        </div>
+        <div className="w-[60%] mx-auto flex justify-center max-w-[800px] text-center text-lg max-md:text-base font-light">
+          We&apos;re looking for the best and brightest to join our team to help
+          us build the future for students and bring a revolutionary new
+          software product to the market.
+        </div>
       </div>
-      <hr className="w-[70%] border border-white/30 mx-auto mt-[90px]" />
-      <div className="flex justify-center items-center mt-[60px] flex-col mx-auto gap-y-[10px]">
-        <h2 className="text-3xl font-bold">Contact us</h2>
-        <p>Phone us: +62 8113330106</p>
-        <p>Email us: uniglow@gmail.com</p>
-        <p className="opacity-30 font-light text-lg flex flex-row gap-[10px] items-center mt-[30px] mb-[100px]">
-          <FaCopyright /> 2024 Uniglow, Inc. All rights reserved.
+      <div className="border-t-2 border-gray-700 w-2/3 max-w-[860px] mx-auto h-min mt-12 rounded-full">
+        {" "}
+      </div>
+      <div className="flex flex-col gap-3 text-left w-[55%] max-w-[800px] mt-12 mx-auto">
+        <p className="font-bold text-base">
+          At Uniglow, we&apos;re building the tool of the future
         </p>
+        <p className="font-medium text-gray-200">
+          Students are the future of the world, and we&apos;re here to help
+          them. Universities are on of the many journeys that students take to
+          discover their passion and achieve their dreams. We&apos;re here to
+          help students find the right university for them, and to make their
+          journey easier and more enjoyable.
+        </p>
+      </div>
+      <div className="flex flex-col w-[55%] max-w-[800px] mx-auto items-center justify-center mt-20 bg-[#003dcc] rounded-xl">
+        <div className="text-center w-full py-10 scale-100 max-md:scale-[70%] smooth-animation text-2xl font-bold flex justify-center">
+          Join our team
+        </div>
+      </div>
+      <div className="w-full h-auto flex-col mt-40 p-20 flex justify-center items-center bg-[#161616]">
+        <div className="w-full h-full grid grid-cols-3 grid-rows-2 gap-5 max-w-[800px]">
+          <div className="rounded-xl col-span-2">
+            <Image
+              src={work1}
+              alt="Work 1"
+              className="w-full h-full object-cover rounded-xl"
+            />
+          </div>
+          <div className="rounded-xl col-span-1">
+            <Image
+              src={work2}
+              alt="Work 2"
+              className="w-full h-full object-cover filter brightness-[65%] rounded-xl"
+            />
+          </div>
+          <div className="rounded-xl col-span-1">
+            <Image
+              src={work3}
+              alt="Work 3"
+              className="w-full h-full object-cover filter brightness-75 rounded-xl"
+            />
+          </div>
+          <div className="rounded-xl col-span-2">
+            <Image
+              src={work4}
+              alt="Work 4"
+              className="w-full h-full object-cover filter brightness-75 rounded-xl"
+            />
+          </div>
+        </div>
+        <div className="text-4xl max-md:text-3xl font-bold max-w-[800px] text-gray-300 mt-12">
+          <span className="text-white font-extrabold">Our mission</span> is to
+          make the lives of student&apos;s around the world as enjoyable and
+          easy as possible.
+        </div>
       </div>
     </div>
   );

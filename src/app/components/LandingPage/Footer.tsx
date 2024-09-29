@@ -42,7 +42,7 @@ const footerLinks = [
 
 const Footer: React.FC = () => {
   return (
-    <footer className="mt-[300px] w-full py-[80px] bg-[#012446]">
+    <footer className="mt-[300px] w-full py-[80px] bg-[#003266]">
       <div className="flex flex-col items-center w-[80%] mx-auto gap-y-[50px] max-[1000px]:gap-y-[50px]">
         <div className="flex flex-col gap-y-[20px] w-full">
           <FaPuzzlePiece size={25} />

@@ -62,14 +62,14 @@ const DropdownMenu = ({ open, items, onClose }) => {
           animate="visible"
           exit="hidden"
           variants={menuVariants}
-          className="absolute z-10 right-0 mt-2 w-72 origin-top-right rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none py-7 px-3"
+          className="absolute top-0 origin-top mt-14 w-72 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-50 py-7 px-3"
         >
           <div className="py-1">
             {items.map(({ href, label, icon: Icon }) => (
               <Link
                 key={href}
                 href={href}
-                className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-all duration-300 ease-in-out rounded-full"
               >
                 <div className="mr-3 p-1 rounded-[10px]">
                   <Icon size={20} />
@@ -119,7 +119,7 @@ const NavBar = () => {
   const aboutItems = [
     { href: "/pages/about", label: "Our Story", icon: FaBookOpen },
     {
-      href: "/about/mission-and-values",
+      href: "/pages/about/missionandvalues",
       label: "Mission and Values",
       icon: FaHandshake,
     },
@@ -280,7 +280,7 @@ const NavBar = () => {
         </Link>
         <div className="hidden md:flex flex-row gap-x-1 items-center">
           {navItems.map(({ href, label, icon: Icon, size }) => (
-            <div key={href} className="relative">
+            <div key={href} className="relative flex justify-center">
               {label === "Programs" ||
                 label === "About Us" ||
                 label === "Contact" ||
@@ -350,14 +350,14 @@ const NavBar = () => {
                       animate="visible"
                       exit="hidden"
                       variants={menuVariants}
-                      className="absolute z-10 right-0 mt-2 w-72 origin-top-right rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none py-7 px-3"
+                      className="absolute top-0 origin-top mt-14 w-72 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-50 py-7 px-3 flex flex-col justify-center items-center"
                     >
-                      <div className="py-1">
+                      <div className="py-1 mr-2">
                         {programItems.map(({ href, label, icon: Icon }) => (
                           <Link
                             key={href}
                             href={href}
-                            className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                            className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-all duration-300 ease-in-out rounded-full"
                           >
                             <div className="mr-3 p-1 rounded-[10px]">
                               <Icon size={20} />
@@ -369,7 +369,7 @@ const NavBar = () => {
                       <div className="py-1 border-t border-gray-200">
                         <Link
                           href="/programs"
-                          className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                          className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-all duration-300 ease-in-out rounded-full"
                         >
                           <div className="mr-3 p-1 rounded-[10px]">
                             <FaThList size={20} />

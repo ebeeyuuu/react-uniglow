@@ -174,3 +174,21 @@ html.lenis body {
 .lenis.lenis-smooth iframe {
   pointer-events: none;
 }
+
+.radial-bg {
+  background: radial-gradient(
+      circle at 30% 25%,
+      rgba(61, 119, 255, 0.2),
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0),
+      transparent 1000px
+    ),
+    radial-gradient(
+      circle at 70% 45%,
+      rgba(61, 119, 255, 0.2),
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0),
+      transparent 1000px
+    );
+  background-size: cover;
+}

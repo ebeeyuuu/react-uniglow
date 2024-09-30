@@ -104,18 +104,20 @@ const Hero = () => {
             />
           </div>
         </div>
-        <div className="text-4xl max-md:text-3xl font-bold max-w-[800px] text-gray-300 mt-12">
-          <span className="text-white font-extrabold">Our mission</span> is to
-          make the lives of students around the world as enjoyable and easy as
-          possible.
+        <div className="max-w-[800px] h-auto flex flex-col">
+          <div className="text-4xl max-md:text-3xl font-bold text-gray-300 mt-12">
+            <span className="text-white font-extrabold">Our mission</span> is to
+            make the lives of students around the world as enjoyable and easy as
+            possible.
+          </div>
+          <LoadingButton
+            onClick={handleRedirectMission}
+            className="flex mt-8 px-5 py-3 bg-[#003dcc] rounded-xl scale-100 hover:scale-105 transition-all duration-300 ease-in-out"
+            loadingColorHex="#FFF"
+          >
+            Read more
+          </LoadingButton>
         </div>
-        <LoadingButton
-          onClick={handleRedirectMission}
-          className="flex justify-center items-center mt-8 ml-auto px-5 py-3 bg-[#003dcc] rounded-xl scale-100 hover:scale-110 transition-all duration-300 ease-in-out"
-          loadingColorHex="#FFF"
-        >
-          Read more
-        </LoadingButton>
       </div>
     </div>
   );

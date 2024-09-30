@@ -104,7 +104,7 @@ const NavModal: React.FC<NavModalProps> = ({ isOpen, setIsOpen }) => {
   const aboutItems = [
     { href: "/pages/about", label: "Our Story", icon: FaBookOpen },
     {
-      href: "/about/mission-and-values",
+      href: "/pages/about/missionandvalues",
       label: "Mission and Values",
       icon: FaHandshake,
     },

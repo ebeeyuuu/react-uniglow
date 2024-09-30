@@ -334,6 +334,7 @@ const Page = () => {
               </Link>
               <div className="flex justify-center gap-x-4 mt-4">
                 <LoadingButton
+                  type="button"
                   onClick={handleReturn}
                   className="text-lg font-medium flex flex-row scale-100 hover:scale-110 transition-all duration-300 ease-in-out gap-x-3 bg-[#00257a] rounded-[10px] px-4 py-2 h-[45px] cursor-pointer"
                 >
@@ -343,6 +344,7 @@ const Page = () => {
                   </div>
                 </LoadingButton>
                 <LoadingButton
+                  type="submit"
                   onClick={() => handleSubmit(undefined)}
                   className="text-lg font-medium flex flex-row gap-x-3 scale-100 hover:scale-110 transition-all duration-300 ease-in-out bg-[#003dcc] rounded-[10px] px-4 py-2 items-center justify-center text-white w-[100px]"
                 >

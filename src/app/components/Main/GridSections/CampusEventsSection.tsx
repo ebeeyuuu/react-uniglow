@@ -49,11 +49,8 @@ const CampusEventsSection: React.FC<CampusEventsSectionProps> = ({ index }) => {
                 isHovered ? { opacity: 0, x: 100 } : { opacity: 1, x: 0 }
               }
             >
-              <p className="max-[1150px]:text-xs max-[2000px]:text-sm max-[2800px]:text-base max-[4000px]:text-lg mx-auto text-wrap font-light max-[1000px]:w-[90%] max-[2000px]:w-[75%] max-[3000px]:w-[65%] max-[4000px]:w-[55%]">
-                What events are going on?
-                <span className="ml-[5px]" style={{ fontWeight: 700 }}>
-                  See our library of:
-                </span>
+              <p className="text-base mx-auto text-wrap font-light max-[1000px]:w-[90%] max-[2000px]:w-[75%] max-[3000px]:w-[65%] max-[4000px]:w-[55%]">
+                Check out each campus through our:
               </p>
             </motion.div>
             <motion.div

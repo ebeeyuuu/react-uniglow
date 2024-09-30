@@ -43,7 +43,8 @@ const LoadingIcon: React.FC<LoadingIconProps> = ({
   );
 };
 
-interface LoadingButtonProps {
+interface LoadingButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   onClick: () => Promise<void> | void;
   className?: string;
   children: React.ReactNode;
@@ -61,6 +62,7 @@ const LoadingButton: React.FC<LoadingButtonProps> = ({
   loadingSizePx = 20,
   loadingThicknessPx = 3,
   loadingDurationSeconds = 1,
+  ...props // Spread operator to accept additional props
 }) => {
   const [isLoading, setIsLoading] = useState(false);
 
@@ -78,6 +80,7 @@ const LoadingButton: React.FC<LoadingButtonProps> = ({
       className={`relative ${className}`}
       onClick={handleClick}
       disabled={isLoading}
+      {...props} // Passing the additional props to the button element
     >
       <span
         className="w-full h-full flex justify-center items-center transition-opacity duration-300"

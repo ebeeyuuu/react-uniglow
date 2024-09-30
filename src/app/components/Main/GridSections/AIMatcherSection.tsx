@@ -32,12 +32,8 @@ const AIMatcherSection: React.FC<AIMatcherSectionProps> = ({ index }) => {
             className={`transition-all duration-700 ease-in-out max-[1000px]:w-[30px] max-[1000px]:h-[30px] max-[1400px]:w-[40px] max-[1400px]:h-[40px] max-[2000px]:w-[50px] max-[2000px]:h-[50px] max-[3000px]:w-[60px] max-[3000px]:h-[60px] max-[4000px]:w-[70px] max-[4000px]:h-[70px] ${isHovered ? "text-white" : "text-[#02ac81]"
               }`}
           />
-          <p className="max-[1150px]:text-xs max-[2000px]:text-sm max-[2800px]:text-base max-[4000px]:text-lg max-[1000px]:w-[90%] max-[2000px]:w-[75%] max-[3000px]:w-[65%] max-[4000px]:w-[55%] mx-auto text-wrap font-light">
-            Need a way to find your perfect university that fits based on your
-            profile and preferences?
-            <span className="ml-[5px]" style={{ fontWeight: 700 }}>
-              Hover me to meet our:
-            </span>
+          <p className="text-base max-[1000px]:w-[90%] max-[2000px]:w-[75%] max-[3000px]:w-[65%] max-[4000px]:w-[55%] mx-auto text-wrap font-light">
+            Find your university with:
           </p>
         </motion.div>
         <motion.div

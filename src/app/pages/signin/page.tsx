@@ -124,6 +124,7 @@ const Page = () => {
             </Link>
             <div className="flex flex-row gap-x-4 mt-4 justify-center">
               <LoadingButton
+                type="button"
                 onClick={handleReturn}
                 className="text-lg font-medium hover:scale-110 scale-100 transition-all duration-300 ease-in-out flex flex-row gap-3 bg-[#00257a] rounded-[10px] px-4 py-2 h-[45px]"
               >
@@ -133,6 +134,7 @@ const Page = () => {
                 </div>
               </LoadingButton>
               <LoadingButton
+                type="submit"
                 className="text-lg font-medium hover:scale-110 scale-100 transition-all duration-300 ease-in-out flex flex-row bg-[#003dcc] text-white rounded-[10px] px-4 py-2 h-[45px]"
                 loadingColorHex="#FFF"
                 onClick={() => handleSignIn(undefined)}

@@ -33,11 +33,8 @@ const VRToursSection: React.FC<VRToursSectionProps> = ({ index }) => {
             className={`transition-all duration-700 ease-in-out max-[1000px]:w-[30px] max-[1000px]:h-[30px] max-[1400px]:w-[40px] max-[1400px]:h-[40px] max-[2000px]:w-[50px] max-[2000px]:h-[50px] max-[3000px]:w-[60px] max-[3000px]:h-[60px] max-[4000px]:w-[70px] max-[4000px]:h-[70px] ${isHovered ? "text-white" : "text-[#02ac81]"
               }`}
           />
-          <p className="max-[1150px]:text-xs max-[2000px]:text-sm max-[2800px]:text-base max-[4000px]:text-lg max-[1000px]:w-[90%] max-[2000px]:w-[75%] max-[3000px]:w-[65%] max-[4000px]:w-[55%] mx-auto text-wrap font-light">
-            Don&apos;t know what campuses look like? Experience
-            <span className="ml-[5px]" style={{ fontWeight: 700 }}>
-              it with our:
-            </span>
+          <p className="text-base max-[1000px]:w-[90%] max-[2000px]:w-[75%] max-[3000px]:w-[65%] max-[4000px]:w-[55%] mx-auto text-wrap font-light">
+            Explore universities remotely with:
           </p>
         </motion.div>
         <motion.div
@@ -51,8 +48,8 @@ const VRToursSection: React.FC<VRToursSectionProps> = ({ index }) => {
         </motion.div>
         <AnimatedGrid
           numSquares={60}
-          maxOpacity={isHovered ? 0.4 : 0}
-          duration={2.5}
+          maxOpacity={isHovered ? 1 : 0}
+          duration={1}
           repeatDelay={0.3}
           className={cn(
             "[mask-image:radial-gradient(500px_circle_at_center,white,transparent)]",

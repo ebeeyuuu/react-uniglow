@@ -76,11 +76,7 @@ const UniversityExplorerSection: React.FC<UniversityExplorerSectionProps> = ({
             initial={{ opacity: 1, x: 0 }}
             animate={isHovered ? { opacity: 0, x: -100 } : { opacity: 1, x: 0 }}
           >
-            Struggling to access comprehensive database of global universities
-            that easily filterable to match your criteria.
-            <span className="ml-[5px]" style={{ fontWeight: 700 }}>
-              Then try use our...
-            </span>
+            Look at universities from around the world with:
           </motion.p>
         </motion.div>
         <motion.div

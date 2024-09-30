@@ -51,11 +51,8 @@ const UniversityRankingsSection: React.FC<UniversityRankingsSectionProps> = ({
                 isHovered ? { opacity: 0, x: -100 } : { opacity: 1, x: 0 }
               }
             >
-              <p className="max-[1150px]:text-xs max-[2000px]:text-sm max-[2800px]:text-base max-[4000px]:text-lg mx-auto text-wrap font-light">
-                Want some rankings?
-                <span className="ml-[5px]" style={{ fontWeight: 700 }}>
-                  Then use our:
-                </span>
+              <p className="text-base mx-auto text-wrap font-light">
+                See some rankings with our own:
               </p>
             </motion.div>
             <motion.div

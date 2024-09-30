@@ -42,11 +42,8 @@ const ProgramsSection: React.FC<ProgramsSectionProps> = ({ index }) => {
             className={`transition-all duration-700 ease-in-out max-[1000px]:w-[30px] max-[1000px]:h-[30px] max-[1400px]:w-[40px] max-[1400px]:h-[40px] max-[2000px]:w-[50px] max-[2000px]:h-[50px] max-[3000px]:w-[60px] max-[3000px]:h-[60px] max-[4000px]:w-[70px] max-[4000px]:h-[70px] ${isHovered ? "text-white" : "text-[#02ad83]"
               }`}
           />
-          <p className="max-[1150px]:text-xs max-[2000px]:text-sm max-[2800px]:text-base max-[4000px]:text-lg max-[1000px]:w-[90%] max-[2000px]:w-[75%] max-[3000px]:w-[65%] max-[4000px]:w-[55%] mx-auto text-wrap font-light">
-            Curious to learn about what activities univerities offer?
-            <span className="ml-[5px]" style={{ fontWeight: 700 }}>
-              Then check out our library of:
-            </span>
+          <p className="text-base max-[1000px]:w-[90%] max-[2000px]:w-[75%] max-[3000px]:w-[65%] max-[4000px]:w-[55%] mx-auto text-wrap font-light">
+            Check out university activities with our:
           </p>
         </motion.div>
       </div>

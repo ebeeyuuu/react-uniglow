@@ -5,6 +5,8 @@ import Link from "next/link";
 import { GiArtificialIntelligence } from "react-icons/gi";
 import { GiVirtualMarker } from "react-icons/gi";
 import { FaConnectdevelop, FaNewspaper } from "react-icons/fa";
+import { useRouter } from "next/navigation";
+import LoadingButton from "@/app/components/LoadingButton";
 
 interface Feature {
   id: string;
@@ -38,6 +40,12 @@ const features: Feature[] = [
 const Features: React.FC = () => {
   const [activeBox, setActiveBox] = useState<string>("");
   const [animatedBox, setAnimatedBox] = useState<string>("");
+  const router = useRouter();
+
+  const handleClick = async () => {
+    await new Promise((resolve) => setTimeout(resolve, 2500));
+    router.push("/pages/signup");
+  };
 
   const handleBoxClick = useCallback((boxId: string) => {
     setAnimatedBox(boxId);
@@ -94,9 +102,13 @@ const Features: React.FC = () => {
           The features of Uniglow that allows us to easily help you find the
           university that you so desire.
         </div>
-        <button className="bg-[#003dcc] text-white py-5 rounded-[20px] w-[200px] max-[900px]:mx-auto hover:py-6 transition-all duration-300 ease-in-out">
-          <Link href="/pages/signup">Get started</Link>
-        </button>
+        <LoadingButton
+          className="bg-[#003dcc] text-white py-3 rounded-[20px] w-[130px] max-[900px]:mx-auto hover:py-4 transition-all duration-300 ease-in-out"
+          onClick={handleClick}
+          loadingColorHex="#FFF"
+        >
+          Get started
+        </LoadingButton>
       </div>
     </div>
   );

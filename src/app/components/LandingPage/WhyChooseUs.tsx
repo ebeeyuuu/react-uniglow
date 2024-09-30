@@ -87,10 +87,10 @@ const WhyChooseUs: React.FC = () => {
           <AccordionDetails>
             <div className="font-semibold text-lg">{feature.title}</div>
             <div className="text-xs mt-[30px]">{feature.description}</div>
-            <div className="mt-4 flex justify-end">
+            <div className="mt-8 flex justify-end">
               <button
                 onClick={() => handleLearnMore(feature)}
-                className="border-2 border-black px-3 py-1 rounded-[10px] text-xs hover:bg-black hover:text-white transition-colors duration-300"
+                className="border-2 border-black px-3 py-1 rounded-[10px] text-xs scale-100 hover:scale-110 transition-all ease-in-out duration-300"
               >
                 Overview
               </button>
@@ -126,12 +126,12 @@ const WhyChooseUs: React.FC = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}
-            className="fixed inset-0 flex items-center justify-center z-50"
+            className="fixed inset-0 w-full h-full flex items-center justify-center z-50"
           >
-            <div className="bg-black/50 " onClick={handleClose}>
-              <div className="bg-white rounded-lg shadow-lg z-50 p-10 w-[40vw] max-w-[90vw] max-h-[80vh] overflow-auto flex flex-col gap-y-[20px] relative">
+            <div className="bg-black/50" onClick={handleClose}>
+              <div className="bg-white rounded-lg shadow-xl z-50 p-16 w-[80vw] max-h-[100vh] overflow-y-auto scrollbar-hide flex flex-col gap-y-[20px] relative">
                 <div className="flex items-center">
-                  <h2 className="text-2xl font-bold text-black ml-4">
+                  <h2 className="text-2xl font-bold text-black">
                     {selectedFeature.title}
                   </h2>
                 </div>
@@ -141,11 +141,11 @@ const WhyChooseUs: React.FC = () => {
                 <div className="flex justify-end gap-x-4">
                   <button
                     onClick={handleClose}
-                    className="text-black border-black border rounded-full px-3 py-2 hover:bg-black hover:text-white transition-colors duration-300"
+                    className="text-black rounded-full px-5 py-3 transition-all duration-300 ease-in-out border-2 border-black scale-100 hover:scale-110"
                   >
                     Close
                   </button>
-                  <button className="bg-blue-500 text-white rounded-full px-3 py-2 hover:bg-blue-600 transition-colors duration-300">
+                  <button className="bg-blue-600 text-white font-medium rounded-full px-5 py-3 border-2 border-blue-600 transition-all duration-300 ease-in-out scale-100 hover:scale-110">
                     Try it out
                   </button>
                 </div>

@@ -31,7 +31,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="w-full h-full flex flex-col gap-9 max-md:gap-1 smooth-animation mt-52 justify-center items-center">
+    <div className="w-full h-full flex flex-col gap-9 smooth-animation mt-52 justify-center items-center">
       <div
         className="relative flex flex-row justify-center scale-100 max-md:scale-[80%] smooth-animation items-center gap-x-0 bg-white rounded-full"
         data-aos="fade-up"
@@ -62,7 +62,7 @@ const Hero = () => {
         and the one for you!
       </div>
       <div
-        className="flex flex-row gap-4 justify-center mt-0 max-md:mt-7 max-md:flex-col"
+        className="flex flex-row gap-4 justify-center mt-0 max-md:flex-col"
         data-aos="fade-up"
         data-aos-delay="400"
       >

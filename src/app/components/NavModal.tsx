@@ -259,13 +259,13 @@ const NavModal: React.FC<NavModalProps> = ({ isOpen, setIsOpen }) => {
 
   return (
     <nav
-      className={`fixed inset-0 top-0 right-0 h-[100vh] bg-[#00478f]/50 backdrop-blur-xl flex flex-col justify-center items-center  transition-transform duration-300 ${isOpen ? "translate-x-0" : "translate-x-full"
+      className={`fixed inset-0 top-0 right-0 h-[100vh] bg-[#00478f]/50 backdrop-blur-xl flex flex-col justify-center items-center transition-transform duration-300 ${isOpen ? "translate-x-0" : "translate-x-full"
         } ${visible ? "opacity-100" : "opacity-0"} z-50`}
       onTransitionEnd={handleTransitionEnd}
     >
       <button
         onClick={() => setIsOpen(false)}
-        className="mb-10 font-semibold text-[25px] scale-100 px-5 py-3 hover:scale-110 transition-all duration-300 ease-in-out"
+        className="mt-[-450px] mb-10 font-semibold text-[25px] scale-100 px-5 py-3 hover:scale-110 transition-all duration-300 ease-in-out"
       >
         Close
       </button>
@@ -464,7 +464,7 @@ const NavModal: React.FC<NavModalProps> = ({ isOpen, setIsOpen }) => {
           )}
         </div>
       ))}
-      <div className="relative z-40">
+      <div className="relative z-40 flex justify-center items-center">
         <button
           onClick={() => handleMenuOpen("explore")}
           className="px-5 py-3 rounded-xl hover:bg-white bg-transparent hover:text-black transition-all duration-300 ease-in-out flex justify-center items-center flex-row z-40"
@@ -493,26 +493,6 @@ const NavModal: React.FC<NavModalProps> = ({ isOpen, setIsOpen }) => {
                     {label}
                   </a>
                 ))}
-              </div>
-              <div className="py-1 border-t border-gray-200">
-                <a
-                  href="/explore"
-                  className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                >
-                  <div className="mr-3 p-1 rounded-[10px]">
-                    <FaListUl size={20} />
-                  </div>
-                  See all features
-                </a>
-                <a
-                  href="/contact-support"
-                  className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                >
-                  <div className="mr-3 p-1 rounded-[10px]">
-                    <FaHeadset size={20} />
-                  </div>
-                  Contact support
-                </a>
               </div>
               <button
                 onClick={() => setExploreOpen(false)}

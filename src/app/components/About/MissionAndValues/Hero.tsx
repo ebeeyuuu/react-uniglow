@@ -6,8 +6,8 @@ const Hero = () => {
   const router = useRouter();
 
   return (
-    <div className="radial-bg w-full h-[150vh] flex justify-center items-center flex-col gap-9">
-      <div className="bg-white rounded-full mt-[-1000px] text-black font-medium text-base px-4 py-2">
+    <div className="radial-bg w-full flex justify-center items-center flex-col gap-9">
+      <div className="bg-white rounded-full mt-52 text-black font-medium text-base px-4 py-2">
         What we work for
       </div>
       <div className="text-center scale-100 max-md:scale-[70%] smooth-animation text-6xl font-extrabold flex justify-center flex-col">
@@ -18,7 +18,7 @@ const Hero = () => {
         believe that education is the key to unlocking the full potential of
         each individual.
       </div>
-      <div className="h-[100px] border-2 rounded-full border-zinc-600"> </div>
+      <div className="min-h-[100px] border rounded-full border-zinc-400"> </div>
       <div className="w-full h-auto flex justify-center items-center flex-col gap-9">
         <div className="scale-[85%] rounded-full px-[38px] py-7 text-lg border-2 flex justify-center items-center border-gray-400 text-gray-400 font-medium">
           1
@@ -32,7 +32,7 @@ const Hero = () => {
           them up with the best univeristy for them.
         </div>
       </div>
-      <div className="h-[100px] border-2 rounded-full border-zinc-600"> </div>
+      <div className="min-h-[100px] border rounded-full border-zinc-400"> </div>
       <div className="w-full h-auto flex justify-center items-center flex-col gap-9">
         <div className="scale-[85%] rounded-full px-[38px] py-7 text-lg border-2 flex justify-center items-center border-gray-400 text-gray-400 font-medium">
           2
@@ -46,7 +46,7 @@ const Hero = () => {
           be as minimal as possible.
         </div>
       </div>
-      <div className="h-[100px] border-2 rounded-full border-zinc-600"> </div>
+      <div className="min-h-[100px] border rounded-full border-zinc-400"> </div>
       <div className="w-full h-auto flex justify-center items-center flex-col gap-9">
         <div className="scale-[85%] rounded-full px-[38px] py-7 text-lg border-2 flex justify-center items-center border-gray-400 text-gray-400 font-medium">
           3
@@ -60,13 +60,37 @@ const Hero = () => {
           be as minimal as possible.
         </div>
       </div>
-      <div className="max-w-[1000px] mx-auto flex justify-center items-center mt-40 flex-col gap-9">
+      <div className="max-w-[1000px] mx-auto flex justify-center items-center mt-40 flex-col gap-9 p-10">
         <p className="text-3xl font-bold text-center">
           We&apos;re here to revolutionise how students discover their dreams.{" "}
           <span className="text-gray-300">
             Here&apos;s how we&apos;re doing it.
           </span>
         </p>
+        <div className="w-full h-full grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+          <div className="border rounded-xl flex justify-center p-10 flex-col gap-4">
+            <div className="text-2xl font-bold">One team, one dream</div>
+            <div className="text-base font-light">
+              We will grow and build the future of students together, going
+              through wins to setbacks, and everything in between.
+            </div>
+          </div>
+          <div className="border rounded-xl flex justify-center p-10 flex-col gap-4">
+            <div className="text-2xl font-bold">Quality over quantity</div>
+            <div className="text-base font-light">
+              Rather than solving multiple issues at once, we prefer to focus on
+              solving a few problems exceptionally well one at a time.
+            </div>
+          </div>
+          <div className="border rounded-xl flex justify-center p-10 flex-col gap-4">
+            <div className="text-2xl font-bold">Kindness and respect</div>
+            <div className="text-base font-light">
+              We always treat each other, our customers, and the outside world
+              with respect, kindness, and compassion, as it&apos;s the right
+              thing to do.
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

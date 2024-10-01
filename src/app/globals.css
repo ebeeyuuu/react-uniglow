@@ -177,15 +177,22 @@ html.lenis body {
 
 .radial-bg {
   background: radial-gradient(
-      circle at 30% 25%,
-      rgba(61, 119, 255, 0.2),
+      circle at 30% 20%,
+      rgba(61, 119, 255, 0.5),
       rgba(0, 0, 0, 0.2),
       rgba(0, 0, 0, 0),
       transparent 1000px
     ),
     radial-gradient(
-      circle at 70% 45%,
-      rgba(61, 119, 255, 0.2),
+      circle at 70% 40%,
+      rgba(61, 119, 255, 0.5),
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0),
+      transparent 1000px
+    ),
+    radial-gradient(
+      circle at 30% 60%,
+      rgba(61, 119, 255, 0.5),
       rgba(0, 0, 0, 0.2),
       rgba(0, 0, 0, 0),
       transparent 1000px

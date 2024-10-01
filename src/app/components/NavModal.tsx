@@ -265,7 +265,7 @@ const NavModal: React.FC<NavModalProps> = ({ isOpen, setIsOpen }) => {
     >
       <button
         onClick={() => setIsOpen(false)}
-        className="mt-[-450px] mb-10 font-semibold text-[25px] scale-100 px-5 py-3 hover:scale-110 transition-all duration-300 ease-in-out"
+        className="b-10 font-semibold text-[25px] scale-100 px-5 py-3 hover:scale-110 transition-all duration-300 ease-in-out"
       >
         Close
       </button>

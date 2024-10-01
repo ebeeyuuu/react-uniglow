@@ -24,7 +24,7 @@ const Hero = () => {
 
   const handleRedirectMission = async () => {
     await new Promise((resolve) => setTimeout(resolve, 2500));
-    router.push("/pages/mission");
+    router.push("/pages/about/missionandvalues");
   };
 
   return (

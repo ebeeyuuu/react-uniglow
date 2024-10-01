@@ -5,6 +5,8 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { motion, AnimatePresence } from "framer-motion";
 import image1 from "@/images/17.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 interface FeatureDetails {
   title: string;
@@ -40,6 +42,10 @@ const WhyChooseUs: React.FC = () => {
   const [selectedFeature, setSelectedFeature] = useState<FeatureDetails | null>(
     null,
   );
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
   const handleLearnMore = useCallback((feature: FeatureDetails) => {
     setSelectedFeature(feature);
@@ -113,10 +119,18 @@ const WhyChooseUs: React.FC = () => {
     >
       <div className="absolute inset-0 bg-pattern bg-opacity-20"></div>
       <div className="flex flex-col justify-center items-center gap-y-[50px] relative z-10">
-        <h1 className="text-6xl font-bold max-[700px]:text-4xl relative smooth-animation text-white">
+        <h1
+          className="text-6xl font-bold max-[700px]:text-4xl relative smooth-animation text-white"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
           <span className="underline-container">Why Choose Us?</span>
         </h1>
-        <div className="flex flex-row w-2/3 font-semibold max-[900px]:flex-col justify-center">
+        <div
+          className="flex flex-row w-2/3 font-semibold max-[900px]:flex-col justify-center"
+          data-aos="fade-up"
+          data-aos-delay="350"
+        >
           {features.map(renderFeature)}
         </div>
       </div>

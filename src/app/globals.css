@@ -19,12 +19,10 @@
     left: -100%;
     width: 200%;
     height: 100%;
-    background: linear-gradient(
-      to right,
-      rgba(0, 123, 255, 0) 0,
-      rgba(0, 128, 255, 0.5) 50%,
-      rgba(0, 123, 255, 0) 100%
-    );
+    background: linear-gradient(to right,
+        rgba(0, 123, 255, 0) 0,
+        rgba(0, 128, 255, 0.5) 50%,
+        rgba(0, 123, 255, 0) 100%);
     transition: 0.5s;
     opacity: 0;
   }
@@ -57,6 +55,7 @@
   }
 
   @keyframes blink {
+
     from,
     to {
       opacity: 1;
@@ -124,6 +123,7 @@ body::-webkit-scrollbar {
 }
 
 @keyframes pulse {
+
   0%,
   100% {
     transform: scale(1);
@@ -152,6 +152,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 input[type="number"] {
   -moz-appearance: textfield;
+  appearance: textfield;
 }
 
 html.lenis,
@@ -176,26 +177,28 @@ html.lenis body {
 }
 
 .radial-bg {
-  background: radial-gradient(
-      circle at 30% 20%,
-      rgba(61, 119, 255, 0.5),
+  background: radial-gradient(circle at 30% 20%,
+      rgba(61, 119, 255, 0.35),
       rgba(0, 0, 0, 0.2),
       rgba(0, 0, 0, 0),
-      transparent 1000px
-    ),
-    radial-gradient(
-      circle at 70% 40%,
-      rgba(61, 119, 255, 0.5),
+      transparent 1000px),
+    radial-gradient(circle at 70% 40%,
+      rgba(61, 119, 255, 0.35),
       rgba(0, 0, 0, 0.2),
       rgba(0, 0, 0, 0),
-      transparent 1000px
-    ),
-    radial-gradient(
-      circle at 30% 60%,
-      rgba(61, 119, 255, 0.5),
+      transparent 1000px),
+    radial-gradient(circle at 30% 60%,
+      rgba(61, 119, 255, 0.35),
       rgba(0, 0, 0, 0.2),
       rgba(0, 0, 0, 0),
-      transparent 1000px
-    );
+      transparent 1000px);
+  background-size: cover;
+}
+
+.large-radial-bg {
+  background: radial-gradient(circle at 30% 55%,
+      rgba(61, 119, 255, 0.35),
+      rgba(0, 0, 0, 0.2),
+      transparent 1500px);
   background-size: cover;
 }

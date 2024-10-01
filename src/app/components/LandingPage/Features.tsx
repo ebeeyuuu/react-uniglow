@@ -49,7 +49,9 @@ const Features: React.FC = () => {
   };
 
   useEffect(() => {
-    AOS.init();
+    AOS.init({
+      once: true,
+    });
   }, []);
 
   const handleBoxClick = useCallback((boxId: string) => {
@@ -78,7 +80,6 @@ const Features: React.FC = () => {
       <div
         className="grid grid-rows-2 grid-cols-2 max-[500px]:grid-rows-4 max-[500px]:grid-cols-1 w-1/2 h-[550px] gap-[20px] max-[900px]:w-[80%]"
         data-aos="fade-up"
-        data-aos-delay="300"
       >
         {features.map(({ id, icon, text }) => (
           <div
@@ -95,7 +96,6 @@ const Features: React.FC = () => {
       <div
         className="flex flex-col gap-y-[30px] w-1/3 max-[900px]:text-center max-[900px]:w-[80%] max-[900px]:mx-auto"
         data-aos="fade-up"
-        data-aos-delay="350"
       >
         <div className="text-5xl font-medium">
           <div>
@@ -111,14 +111,13 @@ const Features: React.FC = () => {
             from <span className="italic font-semibold">the rest</span>
           </div>
         </div>
-        <div data-aos="fade-up" data-aos-delay="400">
+        <div data-aos="fade-up">
           The features of Uniglow that allows us to easily help you find the
           university that you so desire.
         </div>
         <LoadingButton
           className="bg-[#003dcc] text-white py-3 rounded-[20px] w-[130px] max-[900px]:mx-auto hover:py-4 transition-all duration-300 ease-in-out"
           data-aos="fade-up"
-          data-aos-delay="450"
           onClick={handleClick}
           loadingColorHex="#FFF"
         >

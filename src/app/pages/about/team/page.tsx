@@ -12,8 +12,10 @@ const Home = () => {
   return (
     <Suspense fallback={<Loading />}>
       <NavBar />
-      <Hero />
-      <Hiring />
+      <div className="w-full h-full large-radial-bg">
+        <Hero />
+        <Hiring />
+      </div>
       <Footer />
     </Suspense>
   );

@@ -1,17 +1,56 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import LoadingButton from "@/app/components/LoadingButton";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const Hero = () => {
   const router = useRouter();
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const controls = useAnimation();
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 1,
+  });
+
+  useEffect(() => {
+    AOS.init({
+      once: true,
+    });
+  }, []);
+
+  useEffect(() => {
+    if (inView && !hasAnimated) {
+      controls.start({
+        y: [0, -20, 0],
+        transition: {
+          duration: 1,
+          repeat: 3,
+          ease: [0.42, 0, 0.58, 1],
+        },
+      });
+      setHasAnimated(true);
+    }
+  }, [inView, hasAnimated, controls]);
+
+  const handleRedirect = async () => {
+    await new Promise((resolve) => setTimeout(resolve, 2500));
+    router.push("/pages/signup");
+  };
 
   return (
-    <div className="radial-bg w-full flex justify-center items-center flex-col gap-9">
+    <div
+      className="radial-bg w-full flex justify-center items-center flex-col gap-9"
+      data-aos="fade-up"
+    >
       <div className="bg-white rounded-full mt-52 text-black font-medium text-base px-4 py-2">
         What we work for
       </div>
       <div className="text-center scale-100 max-md:scale-[70%] smooth-animation text-6xl font-extrabold flex justify-center flex-col">
-        Our mission and values
+        <span className="block">Our mission</span>
+        <span className="block">and values</span>
       </div>
       <div className="w-[60%] mx-auto flex justify-center max-w-[800px] text-center text-lg max-md:text-base font-light">
         We value the importance of education and the pursuit of knowledge, as we
@@ -91,6 +130,17 @@ const Hero = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="w-full h-full flex justify-center items-center mt-12">
+        <motion.div ref={ref} animate={controls}>
+          <LoadingButton
+            onClick={handleRedirect}
+            className="px-5 py-3 rounded-xl text-white flex justify-center items-center bg-[#003dcc] scale-100 hover:scale-105 transition-all duration-300 ease-in-out text-lg font-bold"
+            loadingColorHex="#FFF"
+          >
+            Get started
+          </LoadingButton>
+        </motion.div>
       </div>
     </div>
   );

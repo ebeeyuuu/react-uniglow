@@ -44,7 +44,9 @@ const WhyChooseUs: React.FC = () => {
   );
 
   useEffect(() => {
-    AOS.init();
+    AOS.init({
+      once: true,
+    });
   }, []);
 
   const handleLearnMore = useCallback((feature: FeatureDetails) => {
@@ -122,14 +124,12 @@ const WhyChooseUs: React.FC = () => {
         <h1
           className="text-6xl font-bold max-[700px]:text-4xl relative smooth-animation text-white"
           data-aos="fade-up"
-          data-aos-delay="300"
         >
           <span className="underline-container">Why Choose Us?</span>
         </h1>
         <div
           className="flex flex-row w-2/3 font-semibold max-[900px]:flex-col justify-center"
           data-aos="fade-up"
-          data-aos-delay="350"
         >
           {features.map(renderFeature)}
         </div>

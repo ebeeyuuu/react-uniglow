@@ -108,7 +108,7 @@ const NavModal: React.FC<NavModalProps> = ({ isOpen, setIsOpen }) => {
       label: "Mission and Values",
       icon: FaHandshake,
     },
-    { href: "/about/team", label: "Team", icon: RiTeamFill },
+    { href: "/pages/about/team", label: "Team", icon: RiTeamFill },
     {
       href: "/about/corporate-responsibility",
       label: "Corporate Responsibility",

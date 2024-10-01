@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import work1 from "@/images/work1.jpg";
 import work2 from "@/images/work2.jpg";
@@ -8,6 +8,8 @@ import work3 from "@/images/work3.jpg";
 import work4 from "@/images/work4.jpg";
 import { useRouter } from "next/navigation";
 import LoadingButton from "@/app/components/LoadingButton";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Hero = () => {
   const [loading, setLoading] = useState({
@@ -17,6 +19,10 @@ const Hero = () => {
     work4: true,
   });
   const router = useRouter();
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
   const handleImageLoad = (imageKey: string) => {
     setLoading((prevLoading) => ({ ...prevLoading, [imageKey]: false }));
@@ -30,30 +36,42 @@ const Hero = () => {
   return (
     <div className="w-full h-full flex flex-col justify-center items-center">
       <div className="w-full flex justify-center items-center mt-52 flex-col gap-9">
-        <div className="bg-white rounded-full text-black font-medium text-base px-4 py-2">
+        <div
+          className="bg-white rounded-full text-black font-medium text-base px-4 py-2"
+          data-aos="fade-up"
+        >
           Who we are
         </div>
-        <div className="text-center scale-100 max-md:scale-[70%] smooth-animation text-6xl font-extrabold flex justify-center flex-col">
+        <div
+          className="text-center scale-100 max-md:scale-[70%] smooth-animation text-6xl font-extrabold flex justify-center flex-col"
+          data-aos="fade-up"
+        >
           Our story
         </div>
-        <div className="w-[60%] mx-auto flex justify-center max-w-[800px] text-center text-lg max-md:text-base font-light">
+        <div
+          className="w-[60%] mx-auto flex justify-center max-w-[800px] text-center text-lg max-md:text-base font-light"
+          data-aos="fade-up"
+        >
           We are a company that helps students around the world to find the best
           university for them and make their lives as easy as possible.
         </div>
       </div>
-      <div className="border-t-2 border-gray-700 w-2/3 max-w-[860px] mx-auto h-min mt-12 rounded-full"></div>
+      <div
+        className="border-t-2 border-gray-700 w-2/3 max-w-[860px] mx-auto h-min mt-12 rounded-full"
+        data-aos="fade-up"
+      ></div>
       <div className="flex flex-col gap-3 text-left w-[55%] max-w-[800px] mt-12 mx-auto">
-        <p className="font-bold text-base">
+        <p className="font-bold text-base" data-aos="fade-up">
           At Uniglow, we&apos;re building the tool of the future
         </p>
-        <p className="font-medium text-gray-200">
+        <p className="font-medium text-gray-200" data-aos="fade-up">
           My name is Ean, and I&apos;m the founder of Uniglow. I&apos;m a
           software engineer with a passion for technology and a desire to make
           the world a better place. I believe that technology has the power to
           change the world, and I&apos;m dedicated to using that power to help
           people.
         </p>
-        <p className="font-medium text-gray-200">
+        <p className="font-medium text-gray-200" data-aos="fade-up">
           I&apos;m passionate about helping people find the right university for
           them, and I&apos;m committed to making the process as easy and
           accessible as possible. I believe that technology can play a big role
@@ -71,6 +89,9 @@ const Hero = () => {
               alt="Work 1"
               className="w-full h-full object-cover rounded-xl"
               onLoad={() => handleImageLoad("work1")}
+              quality={75}
+              layout="responive"
+              loading="lazy"
             />
           </div>
           <div
@@ -81,6 +102,9 @@ const Hero = () => {
               alt="Work 2"
               className="w-full h-full object-cover filter brightness-[65%] rounded-xl"
               onLoad={() => handleImageLoad("work2")}
+              quality={75}
+              layout="responive"
+              loading="lazy"
             />
           </div>
           <div
@@ -91,6 +115,9 @@ const Hero = () => {
               alt="Work 3"
               className="w-full h-full object-cover filter brightness-75 rounded-xl"
               onLoad={() => handleImageLoad("work3")}
+              quality={75}
+              layout="responive"
+              loading="lazy"
             />
           </div>
           <div
@@ -101,6 +128,9 @@ const Hero = () => {
               alt="Work 4"
               className="w-full h-full object-cover filter brightness-75 rounded-xl"
               onLoad={() => handleImageLoad("work4")}
+              quality={75}
+              layout="responive"
+              loading="lazy"
             />
           </div>
         </div>

@@ -71,7 +71,7 @@ const NavBar = () => {
           flex flex-col h-[calc(100vh-70px)] justify-between items-center
           left-[20px] opacity-100 transition-colors duration-500 ease-in-out
           lg:flex-col
-          max-lg:flex-row max-lg:w-[calc(100vw-45px)] max-lg:h-[100px] max-lg:top-[20px]
+          max-lg:flex-row max-lg:w-[calc(100vw-40px)] max-lg:h-[100px] max-lg:top-[20px]
         `}
         onMouseEnter={() => setIsHover(true)}
         onMouseLeave={() => setIsHover(false)}

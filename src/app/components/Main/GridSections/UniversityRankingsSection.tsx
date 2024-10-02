@@ -39,7 +39,7 @@ const UniversityRankingsSection: React.FC<UniversityRankingsSectionProps> = ({
                 }
               >
                 <Rankings
-                  className={`transition-all duration-700 ease-in-out max-[1000px]:w-[30px] max-[1000px]:h-[30px] max-[1400px]:w-[40px] max-[1400px]:h-[40px] max-[2000px]:w-[50px] max-[2000px]:h-[50px] max-[3000px]:w-[60px] max-[3000px]:h-[60px] max-[4000px]:w-[70px] max-[4000px]:h-[70px] mt-[20px] ${isHovered ? "text-white" : "text-[#02ac81]"
+                  className={`transition-all duration-700 ease-in-out max-[1000px]:w-[30px] max-[1000px]:h-[30px] max-[1400px]:w-[40px] max-[1400px]:h-[40px] max-[2000px]:w-[50px] max-[2000px]:h-[50px] max-[3000px]:w-[60px] max-[3000px]:h-[60px] max-[4000px]:w-[70px] max-[4000px]:h-[70px] ${isHovered ? "text-white" : "text-[#02ac81]"
                     }`}
                 />
               </motion.div>
@@ -51,7 +51,7 @@ const UniversityRankingsSection: React.FC<UniversityRankingsSectionProps> = ({
                 isHovered ? { opacity: 0, x: -100 } : { opacity: 1, x: 0 }
               }
             >
-              <p className="text-base mx-auto text-wrap font-light">
+              <p className="max-md:text-sm max-sm:text-xs text-base mx-auto text-wrap font-light">
                 See some rankings with our own:
               </p>
             </motion.div>
@@ -67,32 +67,6 @@ const UniversityRankingsSection: React.FC<UniversityRankingsSectionProps> = ({
             </motion.div>
           </div>
         </div>
-      </div>
-      <div className="absolute inset-0 flex flex-col justify-between items-end">
-        {[1, 2, 3, 4, 5].map((rank, index) => {
-          const widthClasses = ["w-1/6", "w-1/3", "w-1/2", "w-2/3", "w-5/6"][
-            index
-          ];
-
-          // Determine the correct suffix
-          const suffix =
-            rank === 1 ? "st" : rank === 2 ? "nd" : rank === 3 ? "rd" : "th";
-
-          return (
-            <div
-              key={rank}
-              className={`h-1/5 border-b border-t border-white/10 relative text-center text-sm transition-all duration-700 ease-in-out ${isHovered
-                ? `${widthClasses} text-white/40 border-l`
-                : "w-full text-transparent"
-                }`}
-            >
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                {rank}
-                {suffix}
-              </div>
-            </div>
-          );
-        })}
       </div>
     </div>
   );

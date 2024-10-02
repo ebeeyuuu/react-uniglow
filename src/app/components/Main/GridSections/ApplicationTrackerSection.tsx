@@ -66,7 +66,7 @@ const ApplicationTrackerSection: React.FC<ApplicationTrackerSectionProps> = ({
                 isHovered ? { opacity: 0, x: -100 } : { opacity: 1, x: 0 }
               }
             >
-              <p className="text-base mx-auto text-wrap font-light">
+              <p className="max-md:text-sm max-sm:text-xs text-base mt-4 mx-auto text-wrap font-light">
                 Track your applications with our:
               </p>
             </motion.div>

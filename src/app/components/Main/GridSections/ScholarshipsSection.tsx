@@ -35,7 +35,7 @@ const ScholarshipsSection: React.FC<ScholarshipsSectionProps> = ({ index }) => {
                 }
               >
                 <Graduation
-                  className={`transition-all duration-700 ease-in-out max-[1000px]:w-[30px] max-[1000px]:h-[30px] max-[1400px]:w-[40px] max-[1400px]:h-[40px] max-[2000px]:w-[50px] max-[2000px]:h-[50px] max-[3000px]:w-[60px] max-[3000px]:h-[60px] max-[4000px]:w-[70px] max-[4000px]:h-[70px] mt-[20px] ${isHovered ? "text-white" : "text-[#02ac81]"
+                  className={`transition-all duration-700 ease-in-out max-[1000px]:w-[30px] max-[1000px]:h-[30px] max-[1400px]:w-[40px] max-[1400px]:h-[40px] max-[2000px]:w-[50px] max-[2000px]:h-[50px] max-[3000px]:w-[60px] max-[3000px]:h-[60px] max-[4000px]:w-[70px] max-[4000px]:h-[70px] mt-[30px] ${isHovered ? "text-white" : "text-[#02ac81]"
                     }`}
                 />
               </motion.div>
@@ -47,7 +47,7 @@ const ScholarshipsSection: React.FC<ScholarshipsSectionProps> = ({ index }) => {
                 isHovered ? { opacity: 0, x: -100 } : { opacity: 1, x: 0 }
               }
             >
-              <p className="text-base mx-auto text-wrap font-light max-[1000px]:w-[90%] max-[2000px]:w-[75%] max-[3000px]:w-[65%] max-[4000px]:w-[55%]">
+              <p className="max-md:text-sm max-sm:text-xs text-base mx-auto text-wrap font-light max-[1000px]:w-[90%] max-[2000px]:w-[75%] max-[3000px]:w-[65%] max-[4000px]:w-[55%]">
                 Get scholarships with our course of:
               </p>
             </motion.div>

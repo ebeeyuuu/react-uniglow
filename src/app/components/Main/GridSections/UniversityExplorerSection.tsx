@@ -68,11 +68,11 @@ const UniversityExplorerSection: React.FC<UniversityExplorerSectionProps> = ({
           transition={{ duration: 0.5, ease: "easeInOut" }}
         >
           <Explore
-            className={`max-[1000px]:w-[50px] max-[1000px]:h-[50px] max-[1400px]:w-[60px] max-[1400px]:h-[60px] max-[2000px]:w-[70px] max-[2000px]:h-[70px] max-[3000px]:w-[80px] max-[3000px]:h-[80px] max-[4000px]:w-[90px] max-[4000px]:h-[90px] smooth-animation ${isHovered ? "text-white" : "text-[#02ac81]"
+            className={`max-[1000px]:w-[50px] max-[1000px]:h-[50px] max-[1400px]:w-[60px] max-[1400px]:h-[60px] max-[2000px]:w-[70px] max-[2000px]:h-[70px] max-[3000px]:w-[80px] max-[3000px]:h-[80px] max-[4000px]:w-[90px] max-[4000px]:h-[90px] smooth-animation ${isHovered ? "text-white mb-5" : "text-[#02ac81]"
               }`}
           />
           <motion.p
-            className="max-[1150px]:text-base max-[2000px]:text-lg max-[2800px]:text-xl max-[4000px]:text-2xl w-5/12 mx-auto text-wrap font-light"
+            className="max-md:text-base max-sm:text-sm text-lg max-[1000px]:w-[90%] max-[2000px]:w-[75%] max-[3000px]:w-[65%] max-[4000px]:w-[55%] mx-auto text-wrap font-light"
             initial={{ opacity: 1, x: 0 }}
             animate={isHovered ? { opacity: 0, x: -100 } : { opacity: 1, x: 0 }}
           >

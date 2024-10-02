@@ -3,8 +3,6 @@ import { motion } from "framer-motion";
 import { useHover } from "@/context/hoverContext";
 import { useRouter } from "next/navigation";
 import VROutline from "../../Icons/VROutline";
-import AnimatedGrid from "./AnimatedGrid";
-import { cn } from "@/lib/utils";
 
 interface VRToursSectionProps {
   index: number;
@@ -33,7 +31,7 @@ const VRToursSection: React.FC<VRToursSectionProps> = ({ index }) => {
             className={`transition-all duration-700 ease-in-out max-[1000px]:w-[30px] max-[1000px]:h-[30px] max-[1400px]:w-[40px] max-[1400px]:h-[40px] max-[2000px]:w-[50px] max-[2000px]:h-[50px] max-[3000px]:w-[60px] max-[3000px]:h-[60px] max-[4000px]:w-[70px] max-[4000px]:h-[70px] ${isHovered ? "text-white" : "text-[#02ac81]"
               }`}
           />
-          <p className="text-base max-[1000px]:w-[90%] max-[2000px]:w-[75%] max-[3000px]:w-[65%] max-[4000px]:w-[55%] mx-auto text-wrap font-light">
+          <p className="max-md:text-sm max-sm:text-xs text-base max-[1000px]:w-[90%] max-[2000px]:w-[75%] max-[3000px]:w-[65%] max-[4000px]:w-[55%] mx-auto text-wrap font-light">
             Explore universities remotely with:
           </p>
         </motion.div>
@@ -46,18 +44,6 @@ const VRToursSection: React.FC<VRToursSectionProps> = ({ index }) => {
         >
           VR Tours
         </motion.div>
-        <AnimatedGrid
-          numSquares={60}
-          maxOpacity={isHovered ? 1 : 0}
-          duration={1}
-          repeatDelay={0.3}
-          className={cn(
-            "[mask-image:radial-gradient(500px_circle_at_center,white,transparent)]",
-            "absolute inset-x-0 inset-y-[-30%] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2",
-            `transition-all duration-700 ease-in-out z-10 ${isHovered ? "opacity-100 skew-y-12" : "opacity-100 skew-y-0"
-            }`,
-          )}
-        />
       </div>
     </div>
   );

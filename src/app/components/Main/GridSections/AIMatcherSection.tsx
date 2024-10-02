@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { useHover } from "@/context/hoverContext";
 import { useRouter } from "next/navigation";
 import BrainAI from "@/app/components/Icons/BrainAI";
-import WaveAnimation from "./WaveAnimation";
 
 interface AIMatcherSectionProps {
   index: number;
@@ -16,7 +15,7 @@ const AIMatcherSection: React.FC<AIMatcherSectionProps> = ({ index }) => {
 
   return (
     <div
-      className={`relative row-span-1 col-span-2 max-[2000px]:col-span-4 max-[2000px]:-order-9 max-[700px]:text-lg rounded-[10px] flex justify-center items-center text-xl font-bold text-center cursor-pointer smooth-animation overflow-hidden bg-[#181818]`}
+      className={`relative row-span-1 col-span-2 max-[2000px]:col-span-4 max-[2000px]:-order-9 max-[700px]:text-lg rounded-[10px] flex justify-center items-center text-xl font-bold text-center cursor-pointer smooth-animation overflow-hidden bg-gradient-to-b from-[#272727] to-[#181818]`}
       onClick={() => router.push("/pages/main/ai-matching")}
       onMouseEnter={() => setHoverState(index, true)}
       onMouseLeave={() => setHoverState(index, false)}
@@ -32,7 +31,7 @@ const AIMatcherSection: React.FC<AIMatcherSectionProps> = ({ index }) => {
             className={`transition-all duration-700 ease-in-out max-[1000px]:w-[30px] max-[1000px]:h-[30px] max-[1400px]:w-[40px] max-[1400px]:h-[40px] max-[2000px]:w-[50px] max-[2000px]:h-[50px] max-[3000px]:w-[60px] max-[3000px]:h-[60px] max-[4000px]:w-[70px] max-[4000px]:h-[70px] ${isHovered ? "text-white" : "text-[#02ac81]"
               }`}
           />
-          <p className="text-base max-[1000px]:w-[90%] max-[2000px]:w-[75%] max-[3000px]:w-[65%] max-[4000px]:w-[55%] mx-auto text-wrap font-light">
+          <p className="max-md:text-sm max-sm:text-xs text-base max-[1000px]:w-[90%] max-[2000px]:w-[75%] max-[3000px]:w-[65%] max-[4000px]:w-[55%] mx-auto text-wrap font-light">
             Find your university with:
           </p>
         </motion.div>
@@ -45,7 +44,6 @@ const AIMatcherSection: React.FC<AIMatcherSectionProps> = ({ index }) => {
         >
           AI Matcher
         </motion.div>
-        <WaveAnimation />
       </div>
     </div>
   );

@@ -116,7 +116,7 @@ const Features: React.FC = () => {
           university that you so desire.
         </div>
         <LoadingButton
-          className="bg-[#003dcc] text-white py-3 rounded-[20px] w-[130px] max-[900px]:mx-auto hover:py-4 transition-all duration-300 ease-in-out"
+          className="bg-[#003dcc] text-white py-3 rounded-[20px] w-[130px] max-[900px]:mx-auto scale-100 hover:scale-110 transition-all duration-300 ease-in-out"
           data-aos="fade-up"
           onClick={handleClick}
           loadingColorHex="#FFF"

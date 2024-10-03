@@ -114,7 +114,11 @@ const NavModal: React.FC<NavModalProps> = ({ isOpen, setIsOpen }) => {
       label: "Corporate Responsibility",
       icon: MdCorporateFare,
     },
-    { href: "/about/achievements", label: "Achievements", icon: GrAchievement },
+    {
+      href: "/pages/about/achievements",
+      label: "Achievements",
+      icon: GrAchievement,
+    },
   ];
 
   const contactUsItems = [

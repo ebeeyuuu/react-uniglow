@@ -1,13 +1,35 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Hiring = () => {
+  useEffect(() => {
+    AOS.init({
+      once: true,
+    });
+  }, []);
+
   return (
     <div className="w-full h-full flex flex-col gap-9 justify-center items-center">
-      <div className="min-h-[100px] border rounded-full border-zinc-400"> </div>
-      <div className="text-5xl font-extrabold max-md:scale-[70%] scale-100 transition-all duration-300 ease-in-out">
+      <div
+        className="min-h-[100px] border rounded-full border-zinc-400"
+        data-aos="fade-up"
+        data-aos-delay="450"
+      >
+        {" "}
+      </div>
+      <div
+        className="text-5xl font-extrabold max-md:scale-[70%] scale-100 transition-all duration-300 ease-in-out"
+        data-aos="fade-up"
+        data-aos-delay="500"
+      >
         Open positions
       </div>
-      <div className="flex flex-col gap-6 justify-center mt-12 items-center w-full h-full px-10">
+      <div
+        className="flex flex-col gap-6 justify-center mt-12 items-center w-full h-full px-10"
+        data-aos="fade-up"
+        data-aos-delay="500"
+      >
         <div className="border-2 border-blue-500 rounded-full px-5 py-3 uppercase text-sm">
           1. Engineering
         </div>
@@ -45,7 +67,10 @@ const Hiring = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col gap-6 justify-center mt-20 items-center w-full h-full px-10">
+      <div
+        className="flex flex-col gap-6 justify-center mt-20 items-center w-full h-full px-10"
+        data-aos="fade-up"
+      >
         <div className="border-2 border-green-500 rounded-full px-5 py-3 uppercase text-sm">
           2. Product
         </div>

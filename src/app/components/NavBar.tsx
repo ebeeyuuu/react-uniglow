@@ -125,7 +125,7 @@ const NavBar = () => {
     },
     { href: "/pages/about/team", label: "Team", icon: RiTeamFill },
     {
-      href: "/about/corporate-responsibility",
+      href: "/pages/about/corporateresponsibility",
       label: "Corporate Responsibility",
       icon: MdCorporateFare,
     },

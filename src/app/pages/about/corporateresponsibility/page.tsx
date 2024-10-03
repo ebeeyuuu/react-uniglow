@@ -8,12 +8,18 @@ import Footer from "@/app/components/LandingPage/Footer";
 const Hero = lazy(
   () => import("@/app/components/About/CorporateResponsibility/Hero"),
 );
+const WorkEthics = lazy(
+  () => import("@/app/components/About/CorporateResponsibility/WorkEthics"),
+);
 
 const Home = () => {
   return (
     <Suspense fallback={<Loading />}>
       <NavBar />
-      <Hero />
+      <div className="w-full h-full multiple-large-radial-bg">
+        <Hero />
+        <WorkEthics />
+      </div>
       <Footer />
     </Suspense>
   );

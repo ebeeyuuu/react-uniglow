@@ -8,4 +8,4 @@ service cloud.firestore {
       allow create: if request.auth != null;
     }
   }
-}
+} 

@@ -1,9 +1,20 @@
-import React from "react";
+"use client";
 
-const Page = () => {
+import React, { Suspense, lazy } from "react";
+import Loading from "@/app/components/Loading";
+import NavBar from "@/app/components/NavBar";
+import Footer from "@/app/components/LandingPage/Footer";
+
+const Hero = lazy(() => import("@/app/components/Donate/OneTimeDonation/Hero"));
+
+const Home = () => {
   return (
-    <div className="w-full h-full flex justify-center">One-time donation</div>
+    <Suspense fallback={<Loading />}>
+      <NavBar />
+      <Hero />
+      <Footer />
+    </Suspense>
   );
 };
 
-export default Page;
+export default Home;

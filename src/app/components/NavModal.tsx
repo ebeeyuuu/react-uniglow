@@ -175,27 +175,27 @@ const NavModal: React.FC<NavModalProps> = ({ isOpen, setIsOpen }) => {
 
   const donateItems = [
     {
-      href: "/donate/one-time-donation",
+      href: "/pages/donate/one-time-donation",
       label: "One-Time Donation",
       icon: FaDonate,
     },
     {
-      href: "/donate/monthly-donation",
+      href: "/pages/donate/monthly-donation",
       label: "Monthly Donation",
       icon: MdCalendarMonth,
     },
     {
-      href: "/donate/sponsor-a-student",
+      href: "/pages/donate/sponsor-a-student",
       label: "Sponsor a Student",
       icon: SiGithubsponsors,
     },
     {
-      href: "/donate/impact-stories",
+      href: "/pages/donate/impact-stories",
       label: "Impact Stories",
       icon: HiBookOpen,
     },
     {
-      href: "/donate/where-your-money-goes",
+      href: "/pages/donate/where-your-money-goes",
       label: "Where Your Money Goes",
       icon: FaQuestionCircle,
     },

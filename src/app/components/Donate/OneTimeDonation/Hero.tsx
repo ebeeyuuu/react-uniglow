@@ -1,6 +1,4 @@
 import React, { useState, useRef, useEffect } from "react";
-import universityPlaceholder from "@/images/university-placeholder.jpg";
-import Image from "next/image";
 import { collection, query, where, getDocs } from "firebase/firestore";
 import { db } from "@/firebaseConfig";
 import AOS from "aos";
@@ -57,8 +55,8 @@ const DonationBox = ({
     return val - bounds.x - bounds.width / 2;
   });
 
-  const sizeTransform = useTransform(distance, [-150, 0, 150], [100, 140, 100]);
-  const size = useSpring(isSelected ? 150 : sizeTransform, {
+  const sizeTransform = useTransform(distance, [-130, 0, 130], [80, 120, 80]);
+  const size = useSpring(isSelected ? 130 : sizeTransform, {
     mass: 0.1,
     stiffness: 150,
     damping: 12,
@@ -68,7 +66,7 @@ const DonationBox = ({
     <motion.div
       ref={ref}
       style={{ width: size, height: size }}
-      className="rounded-2xl border-2 border-[#003dcc] flex items-center justify-center text-xl font-extrabold cursor-pointer"
+      className="rounded-2xl border-2 border-[#003dcc] flex items-center justify-center text-base font-light cursor-pointer"
       onClick={onClick}
     >
       {amount !== null ? `$${amount}` : "..."}
@@ -111,7 +109,7 @@ const Hero = () => {
 
   return (
     <div className="w-full h-full flex justify-center">
-      <div className="mt-52 w-full flex items-center flex-row max-xl:flex-col-reverse max-w-[1400px] gap-12 p-10 justify-center">
+      <div className="mt-52 w-full flex items-center flex-row max-xl:flex-col-reverse max-w-[1400px] gap-12 p-10 m-10 justify-center">
         <div className="flex justify-center flex-col ">
           <div className="text-6xl max-lg:text-5xl max-md:text-4xl font-extrabold text-left mr-auto">
             <span className="block">Help students</span>
@@ -135,11 +133,6 @@ const Hero = () => {
             Donate
           </button>
         </div>
-        <Image
-          src={universityPlaceholder}
-          alt="university placeholder"
-          className="w-[1000px] h-[50vh] rounded-2xl max-xl:w-[100vw] max-xl:h-[25vh] object-cover object-center"
-        />
       </div>
     </div>
   );

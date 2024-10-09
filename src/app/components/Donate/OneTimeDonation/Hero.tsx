@@ -132,6 +132,7 @@ const DonationForm = ({
               .
             </span>
           </p>
+          {/* User Info */}
           <input
             type="text"
             placeholder="Your Name"
@@ -144,6 +145,27 @@ const DonationForm = ({
             className="w-full mb-4 p-2 border border-gray-300 rounded-md"
             required
           />
+          {/* Payment Info */}
+          <input
+            type="text"
+            placeholder="Credit Card Number"
+            className="w-full mb-4 p-2 border border-gray-300 rounded-md"
+            required
+          />
+          <div className="flex gap-4 mb-4">
+            <input
+              type="text"
+              placeholder="Expiry Date (MM/YY)"
+              className="w-full p-2 border border-gray-300 rounded-md"
+              required
+            />
+            <input
+              type="text"
+              placeholder="CVV"
+              className="w-full p-2 border border-gray-300 rounded-md"
+              required
+            />
+          </div>
           <div className="flex flex-row gap-4 justify-center items-center">
             <button
               className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-2xl"

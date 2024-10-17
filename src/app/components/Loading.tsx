@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const Loading = () => {
   return (
@@ -14,11 +14,11 @@ const Loading = () => {
           }
         }
 
-       .loader {
+        .loader {
           position: relative;
         }
 
-       .square {
+        .square {
           background: #ddd;
           width: 30px; /* multiplied by 2 */
           height: 30px; /* multiplied by 2 */

@@ -4,8 +4,9 @@ import { useState } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { motion } from "framer-motion";
 
-const Calendar = () => {
+const Calendar = ({ onDateSelect, selectedDate }) => {
   const [currentDate, setCurrentDate] = useState(new Date());
+  const [localSelectedDate, setLocalSelectedDate] = useState<Date | null>(null); // Local selected date state
 
   const daysInMonth = new Date(
     currentDate.getFullYear(),
@@ -37,22 +38,32 @@ const Calendar = () => {
 
   const prevMonth = () => {
     setCurrentDate(
-      new Date(
-        currentDate.getFullYear(),
-        currentDate.getMonth() - 1,
-        currentDate.getDate(),
-      ),
+      new Date(currentDate.getFullYear(), currentDate.getMonth() - 1, 1),
     );
   };
 
   const nextMonth = () => {
     setCurrentDate(
-      new Date(
-        currentDate.getFullYear(),
-        currentDate.getMonth() + 1,
-        currentDate.getDate(),
-      ),
+      new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 1),
     );
+  };
+
+  const handleDateSelect = (day: number) => {
+    const selected = new Date(
+      currentDate.getFullYear(),
+      currentDate.getMonth(),
+      day,
+    );
+
+    if (
+      localSelectedDate &&
+      localSelectedDate.getTime() === selected.getTime()
+    ) {
+      setLocalSelectedDate(null); // Reset local selection
+    } else {
+      setLocalSelectedDate(selected); // Select new date
+      onDateSelect(selected); // Notify parent component of the selection
+    }
   };
 
   return (
@@ -105,15 +116,23 @@ const Calendar = () => {
         ))}
         {Array.from({ length: daysInMonth }).map((_, index) => {
           const day = index + 1;
+          const isSelected =
+            localSelectedDate &&
+            localSelectedDate.getDate() === day &&
+            localSelectedDate.getMonth() === currentDate.getMonth() &&
+            localSelectedDate.getFullYear() === currentDate.getFullYear();
           const isToday =
             day === new Date().getDate() &&
             currentDate.getMonth() === new Date().getMonth() &&
             currentDate.getFullYear() === new Date().getFullYear();
+
           return (
             <div
               key={day}
-              className={`h-10 flex items-center justify-center aspect-square rounded-full text-sm ml-1.5
+              className={`h-10 flex items-center justify-center aspect-square rounded-full text-sm ml-1.5 cursor-pointer transition-colors duration-300
+                          ${isSelected ? "bg-blue-500 text-white font-bold" : ""}
                           ${isToday ? "bg-white text-black font-bold" : "hover:bg-gray-800"}`}
+              onClick={() => handleDateSelect(day)}
             >
               {day}
             </div>

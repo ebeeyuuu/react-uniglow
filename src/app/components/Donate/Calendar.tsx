@@ -6,7 +6,6 @@ import { motion } from "framer-motion";
 
 const Calendar = ({ onDateSelect, selectedDate }) => {
   const [currentDate, setCurrentDate] = useState(new Date());
-  const [localSelectedDate, setLocalSelectedDate] = useState<Date | null>(null); // Local selected date state
 
   const daysInMonth = new Date(
     currentDate.getFullYear(),
@@ -55,14 +54,10 @@ const Calendar = ({ onDateSelect, selectedDate }) => {
       day,
     );
 
-    if (
-      localSelectedDate &&
-      localSelectedDate.getTime() === selected.getTime()
-    ) {
-      setLocalSelectedDate(null); // Reset local selection
+    if (selectedDate && selectedDate.getTime() === selected.getTime()) {
+      onDateSelect(null);
     } else {
-      setLocalSelectedDate(selected); // Select new date
-      onDateSelect(selected); // Notify parent component of the selection
+      onDateSelect(selected);
     }
   };
 
@@ -117,10 +112,10 @@ const Calendar = ({ onDateSelect, selectedDate }) => {
         {Array.from({ length: daysInMonth }).map((_, index) => {
           const day = index + 1;
           const isSelected =
-            localSelectedDate &&
-            localSelectedDate.getDate() === day &&
-            localSelectedDate.getMonth() === currentDate.getMonth() &&
-            localSelectedDate.getFullYear() === currentDate.getFullYear();
+            selectedDate &&
+            selectedDate.getDate() === day &&
+            selectedDate.getMonth() === currentDate.getMonth() &&
+            selectedDate.getFullYear() === currentDate.getFullYear();
           const isToday =
             day === new Date().getDate() &&
             currentDate.getMonth() === new Date().getMonth() &&

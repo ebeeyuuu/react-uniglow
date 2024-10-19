@@ -4,13 +4,15 @@ import Calendar from "@/app/components/Donate/Calendar";
 const Hero: React.FC = () => {
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
 
-  const handleDateSelect = (date: Date) => {
+  const handleDateSelect = (date: Date | null) => {
     if (
       selectedDate &&
+      date &&
+      selectedDate.getDate() === date.getDate() &&
       selectedDate.getMonth() === date.getMonth() &&
       selectedDate.getFullYear() === date.getFullYear()
     ) {
-      setSelectedDate(null); // Deselect if the same date is clicked again
+      setSelectedDate(null);
     } else {
       setSelectedDate(date);
     }

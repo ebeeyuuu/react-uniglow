@@ -125,8 +125,9 @@ const Calendar = ({ onDateSelect, selectedDate }) => {
             <div
               key={day}
               className={`h-10 flex items-center justify-center aspect-square rounded-full text-sm ml-1.5 cursor-pointer transition-colors duration-300
-                          ${isSelected ? "bg-blue-500 text-white font-bold" : ""}
-                          ${isToday ? "bg-white text-black font-bold" : "hover:bg-gray-800"}`}
+                  ${isSelected ? "bg-blue-500 text-white font-bold" :
+                  isToday && !isSelected ? "bg-white text-black font-bold" :
+                    "hover:bg-gray-800"}`}
               onClick={() => handleDateSelect(day)}
             >
               {day}

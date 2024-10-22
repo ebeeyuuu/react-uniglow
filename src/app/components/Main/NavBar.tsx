@@ -24,6 +24,7 @@ const textVariants = {
 };
 
 const NavBar = () => {
+  // TODO: Rework the navbar to go on the bottom and have a grow hover animation + description pop up.
   const [isOpen, setIsOpen] = useState(false);
   const [isHover, setIsHover] = useState(false);
   const { username } = useUser(); // Use the username from context
@@ -67,11 +68,11 @@ const NavBar = () => {
     <div className="flex items-center h-screen max-[1000px] scrollbar-hide absolute z-50">
       <nav
         className={`
-          bg-[#001c5c] text-white p-4 rounded-[20px] absolute
-          flex flex-col h-[calc(100vh-70px)] justify-between items-center
-          left-[20px] opacity-100 transition-colors duration-500 ease-in-out
+          bg-[#000000]/50 text-white absolute
+          flex flex-col h-[100vh] justify-between items-center
+          opacity-100 transition-colors duration-500 ease-in-out
           lg:flex-col
-          max-lg:flex-row max-lg:w-[calc(100vw-40px)] max-lg:h-[100px] max-lg:top-[20px]
+          max-lg:flex-row max-lg:w-[calc(100vw-40px)] max-lg:h-[100px]
         `}
         onMouseEnter={() => setIsHover(true)}
         onMouseLeave={() => setIsHover(false)}

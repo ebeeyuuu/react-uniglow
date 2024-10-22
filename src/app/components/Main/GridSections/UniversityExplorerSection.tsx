@@ -8,8 +8,6 @@ import { useRouter } from "next/navigation";
 import Explore from "@/app/components/Icons/Explore";
 
 import Image from "next/image";
-import rippleGIF from "@/images/ripple.gif";
-import BackgroundBeams from "./BackgroundBeams";
 
 import slide1 from "@/images/harvard.jpg";
 import slide2 from "@/images/3.jpg";
@@ -58,9 +56,6 @@ const UniversityExplorerSection: React.FC<UniversityExplorerSectionProps> = ({
       onMouseLeave={() => setHoverState(index, false)}
     >
       <div className="relative w-full h-full flex flex-col justify-center items-center">
-        <BackgroundBeams
-          className={`w-full h-full transition-opacity bg-gradient-to-b from-[#272727] to-[#181818] ${isHovered ? "-z-50 opacity-0" : "opacity-100"}`}
-        />
         <motion.div
           className="absolute z-10 flex items-center justify-center flex-col gap-y-[10px]"
           initial={{ opacity: 1, y: 0 }}

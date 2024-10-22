@@ -4,7 +4,7 @@ import BentoBox from "@/app/components/Main/BentoBox";
 
 const Page = () => {
   return (
-    <MainLayout>
+    <MainLayout className="bg-[#0d0d0d]">
       <div className="flex justify-center items-center w-full h-full">
         <BentoBox />
       </div>

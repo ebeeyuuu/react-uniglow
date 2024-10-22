@@ -1,5 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { collection, query, where, getDocs } from "firebase/firestore";
+import { db } from "@/firebaseConfig";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { AnimatePresence } from "framer-motion";
+import ProgressBar from "../ProgressBar";
+import DonationForm from "../DonationForm";
+import DonationOptions from "../DonationOptions";
 import Calendar from "@/app/components/Donate/Calendar";
+// TODO: Add a donation amount input and connect the input to the calendar and firebase
 
 const Hero: React.FC = () => {
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);

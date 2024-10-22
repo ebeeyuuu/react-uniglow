@@ -47,12 +47,12 @@ const ScholarshipsSection: React.FC<ScholarshipsSectionProps> = ({ index }) => {
                 isHovered ? { opacity: 0, x: -100 } : { opacity: 1, x: 0 }
               }
             >
-              <p className="max-md:text-sm max-sm:text-xs text-base mx-auto text-wrap font-light max-[1000px]:w-[90%] max-[2000px]:w-[75%] max-[3000px]:w-[65%] max-[4000px]:w-[55%]">
+              <p className="max-sm:text-xs max-md:text-sm text-base mx-auto text-wrap font-light max-[1000px]:w-[90%] max-[2000px]:w-[75%] max-[3000px]:w-[65%] max-[4000px]:w-[55%]">
                 Get scholarships with our course of:
               </p>
             </motion.div>
             <motion.div
-              className={`absolute max-[700px]:text-base max-[1000px]:text-lg max-[1300px]:text-2xl text-3xl z-50 flex items-center justify-center rounded-[10px]`}
+              className={`absolute max-sm:text-base max-md:text-lg text-xl z-50 flex items-center justify-center rounded-[10px]`}
               initial={{ x: 100, opacity: 0 }}
               animate={
                 isHovered ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }

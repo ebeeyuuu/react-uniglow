@@ -15,7 +15,7 @@ const CampusEventsSection: React.FC<CampusEventsSectionProps> = ({ index }) => {
 
   return (
     <div
-      className="row-span-1 col-span-1 max-[2000px]:col-span-2 max-[700px]:text-lg rounded-[10px] flex justify-center items-center text-xl font-bold text-center cursor-pointer transition-all duration-300 ease-in-out relative overflow-hidden bg-gradient-to-b from-[#272727] to-[#181818]"
+      className="row-span-1 col-span-1 max-[2000px]:col-span-2 max-[700px]:text-lg rounded-[10px] flex justify-center items-center font-bold text-center cursor-pointer transition-all duration-300 ease-in-out relative overflow-hidden bg-gradient-to-b from-[#272727] to-[#181818]"
       onClick={() => router.push("/pages/main/campus-events")}
       onMouseEnter={() => setHoverState(index, true)}
       onMouseLeave={() => setHoverState(index, false)}
@@ -49,12 +49,12 @@ const CampusEventsSection: React.FC<CampusEventsSectionProps> = ({ index }) => {
                 isHovered ? { opacity: 0, x: 100 } : { opacity: 1, x: 0 }
               }
             >
-              <p className="max-md:text-sm max-sm:text-xs text-base mx-auto text-wrap font-light max-[1000px]:w-[90%] max-[2000px]:w-[75%] max-[3000px]:w-[65%] max-[4000px]:w-[55%]">
+              <p className="max-sm:text-xs max-md:text-sm text-base mx-auto text-wrap font-light max-[1000px]:w-[90%] max-[2000px]:w-[75%] max-[3000px]:w-[65%] max-[4000px]:w-[55%]">
                 Check out each campus through our:
               </p>
             </motion.div>
             <motion.div
-              className={`absolute max-[700px]:text-base max-[1000px]:text-lg max-[1300px]:text-2xl text-3xl z-50 flex items-center justify-center rounded-[10px]`}
+              className={`absolute max-sm:text-base max-md:text-lg text-xl z-50 flex items-center justify-center rounded-[10px]`}
               initial={{ x: 100, opacity: 0 }}
               animate={
                 isHovered ? { x: 0, opacity: 1 } : { x: -100, opacity: 0 }

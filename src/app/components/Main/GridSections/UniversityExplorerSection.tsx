@@ -52,7 +52,7 @@ const UniversityExplorerSection: React.FC<UniversityExplorerSectionProps> = ({
 
   return (
     <div
-      className="row-span-2 col-span-3 max-[2000px]:col-span-6 max-[2000px]:-order-7 bg-gradient-to-b from-[#272727] to-[#181818] max-[700px]:text-lg rounded-[10px] flex justify-center items-center text-xl font-bold text-center cursor-pointer transition-all duration-500 ease-in-out relative overflow-hidden"
+      className="row-span-2 col-span-3 max-[2000px]:col-span-6 max-[2000px]:-order-7 bg-gradient-to-b from-[#272727] to-[#181818] max-[700px]:text-lg rounded-[10px] flex justify-center items-center font-bold text-center cursor-pointer transition-all duration-500 ease-in-out relative overflow-hidden"
       onClick={() => router.push("/pages/main/university-explorer")}
       onMouseEnter={() => setHoverState(index, true)}
       onMouseLeave={() => setHoverState(index, false)}
@@ -72,7 +72,7 @@ const UniversityExplorerSection: React.FC<UniversityExplorerSectionProps> = ({
               }`}
           />
           <motion.p
-            className="max-md:text-base max-sm:text-sm text-lg max-[1000px]:w-[90%] max-[2000px]:w-[75%] max-[3000px]:w-[65%] max-[4000px]:w-[55%] mx-auto text-wrap font-light"
+            className="max-sm:text-xs max-md:text-sm text-xl max-[1000px]:w-[90%] max-[2000px]:w-[75%] max-[3000px]:w-[65%] max-[4000px]:w-[55%] mx-auto text-wrap font-light"
             initial={{ opacity: 1, x: 0 }}
             animate={isHovered ? { opacity: 0, x: -100 } : { opacity: 1, x: 0 }}
           >
@@ -80,7 +80,7 @@ const UniversityExplorerSection: React.FC<UniversityExplorerSectionProps> = ({
           </motion.p>
         </motion.div>
         <motion.div
-          className="absolute text-4xl z-10 max-[1300px]:text-3xl flex items-center justify-center"
+          className="absolute z-10 max-sm:text-base max-md:text-lg text-xl flex items-center justify-center"
           initial={{ y: 30, opacity: 0 }}
           animate={isHovered ? { y: 0, opacity: 1 } : { y: 30, opacity: 0 }}
           transition={{ duration: 0.5, ease: "easeInOut" }}

@@ -15,7 +15,7 @@ const VRToursSection: React.FC<VRToursSectionProps> = ({ index }) => {
 
   return (
     <div
-      className="row-span-1 col-span-1 max-[2000px]:col-span-2 max-[2000px]:-order-8  max-[700px]:text-lg rounded-[10px] flex justify-center items-center text-xl font-bold text-center cursor-pointer smooth-animation overflow-hidden bg-gradient-to-b from-[#272727] to-[#181818]"
+      className="row-span-1 col-span-1 max-[2000px]:col-span-2 max-[2000px]:-order-8 rounded-[10px] flex justify-center items-center text-xl font-bold text-center cursor-pointer smooth-animation overflow-hidden bg-gradient-to-b from-[#272727] to-[#181818]"
       onClick={() => router.push("/pages/main/vr-tours")}
       onMouseEnter={() => setHoverState(index, true)}
       onMouseLeave={() => setHoverState(index, false)}
@@ -31,12 +31,12 @@ const VRToursSection: React.FC<VRToursSectionProps> = ({ index }) => {
             className={`transition-all duration-700 ease-in-out max-[1000px]:w-[30px] max-[1000px]:h-[30px] max-[1400px]:w-[40px] max-[1400px]:h-[40px] max-[2000px]:w-[50px] max-[2000px]:h-[50px] max-[3000px]:w-[60px] max-[3000px]:h-[60px] max-[4000px]:w-[70px] max-[4000px]:h-[70px] ${isHovered ? "text-white" : "text-[#02ac81]"
               }`}
           />
-          <p className="max-md:text-sm max-sm:text-xs text-base max-[1000px]:w-[90%] max-[2000px]:w-[75%] max-[3000px]:w-[65%] max-[4000px]:w-[55%] mx-auto text-wrap font-light">
+          <p className="max-sm:text-xs max-md:text-sm text-base max-[1000px]:w-[90%] max-[2000px]:w-[75%] max-[3000px]:w-[65%] max-[4000px]:w-[55%] mx-auto text-wrap font-light">
             Explore universities remotely with:
           </p>
         </motion.div>
         <motion.div
-          className={`absolute flex items-center justify-center z-10 max-[700px]:text-base max-[1000px]:text-lg max-[1300px]:text-2xl text-3xl transition-all duration-700 delay-200 ease-in-out ${isHovered ? "opacity-100" : "opacity-0"
+          className={`absolute flex items-center justify-center z-10 max-sm:text-base max-md:text-lg text-xl transition-all duration-700 delay-200 ease-in-out ${isHovered ? "opacity-100" : "opacity-0"
             }`}
           initial={{ x: 30 }}
           animate={isHovered ? { x: 0 } : { x: 30 }}

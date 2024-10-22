@@ -15,7 +15,7 @@ const AIMatcherSection: React.FC<AIMatcherSectionProps> = ({ index }) => {
 
   return (
     <div
-      className={`relative row-span-1 col-span-2 max-[2000px]:col-span-4 max-[2000px]:-order-9 max-[700px]:text-lg rounded-[10px] flex justify-center items-center text-xl font-bold text-center cursor-pointer smooth-animation overflow-hidden bg-gradient-to-b from-[#272727] to-[#181818]`}
+      className={`relative row-span-1 col-span-2 max-[2000px]:col-span-4 max-[2000px]:-order-9 rounded-[10px] flex justify-center items-center font-bold text-center cursor-pointer smooth-animation overflow-hidden bg-gradient-to-b from-[#272727] to-[#181818]`}
       onClick={() => router.push("/pages/main/ai-matching")}
       onMouseEnter={() => setHoverState(index, true)}
       onMouseLeave={() => setHoverState(index, false)}
@@ -36,7 +36,7 @@ const AIMatcherSection: React.FC<AIMatcherSectionProps> = ({ index }) => {
           </p>
         </motion.div>
         <motion.div
-          className={`absolute flex items-center justify-center max-[700px]:text-base max-[1000px]:text-lg max-[1300px]:text-2xl text-3xl smooth-animation ${isHovered ? "opacity-100" : "opacity-0"
+          className={`absolute flex items-center justify-center max-sm:text-base max-md:text-lg text-xl smooth-animation ${isHovered ? "opacity-100" : "opacity-0"
             }`}
           initial={{ x: 30 }}
           animate={isHovered ? { x: 0 } : { x: 30 }}

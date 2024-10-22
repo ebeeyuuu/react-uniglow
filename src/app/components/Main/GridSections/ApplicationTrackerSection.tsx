@@ -33,7 +33,7 @@ const ApplicationTrackerSection: React.FC<ApplicationTrackerSectionProps> = ({
 
   return (
     <div
-      className="row-span-1 col-span-1 max-[2000px]:col-span-2 max-[1200px]:col-span-4 max-[700px]:text-lg rounded-[10px] flex justify-center items-center text-xl font-bold text-center cursor-pointer transition-all duration-300 ease-in-out relative overflow-hidden bg-gradient-to-b from-[#272727] to-[#181818]"
+      className="row-span-1 col-span-1 max-[2000px]:col-span-2 max-[1200px]:col-span-4 rounded-[10px] flex justify-center items-center font-bold text-center cursor-pointer transition-all duration-300 ease-in-out relative overflow-hidden bg-gradient-to-b from-[#272727] to-[#181818]"
       onClick={() => router.push("/pages/main/application-tracker")}
       onMouseEnter={() => setHoverState(index, true)}
       onMouseLeave={() => setHoverState(index, false)}
@@ -60,13 +60,13 @@ const ApplicationTrackerSection: React.FC<ApplicationTrackerSectionProps> = ({
               </div>
             </div>
             <motion.div
-              className="max-[1150px]:text-xs max-[2000px]:text-sm max-[2800px]:text-base max-[4000px]:text-lg max-[1000px]:w-[90%] max-[2000px]:w-[75%] max-[3000px]:w-[65%] max-[4000px]:w-[55%] mx-auto text-wrap font-light max-[4000px]:mt-[-20px] max-[3000px]:mt-[-30px] max-[2000px]:mt-[-40px] max-[1000px]:mt-[-50px]"
+              className="max-sm:text-xs max-md:text-sm text-base max-[1000px]:w-[90%] max-[2000px]:w-[75%] max-[3000px]:w-[65%] max-[4000px]:w-[55%] mx-auto text-wrap font-light max-[4000px]:mt-[-20px] max-[3000px]:mt-[-30px] max-[2000px]:mt-[-40px] max-[1000px]:mt-[-50px]"
               initial={{ opacity: 1, x: 0 }}
               animate={
                 isHovered ? { opacity: 0, x: -100 } : { opacity: 1, x: 0 }
               }
             >
-              <p className="max-md:text-sm max-sm:text-xs text-base mt-4 mx-auto text-wrap font-light">
+              <p className="max-sm:text-base max-md:text-lg text-xl mt-4 mx-auto text-wrap font-light">
                 Track your applications with our:
               </p>
             </motion.div>

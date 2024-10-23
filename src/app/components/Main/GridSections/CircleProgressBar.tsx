@@ -19,13 +19,16 @@ export default function AnimatedCircularProgressBar({
   className,
   hideValue,
 }: Props) {
-  const circumference = 2 * Math.PI * 45;
+  const circumference = 2 * Math.PI * 35;
   const percentPx = circumference / 100;
   const currentPercent = ((value - min) / (max - min)) * 100;
 
   return (
     <div
-      className={cn("relative size-40 text-2xl font-semibold", className)}
+      className={cn(
+        "relative size-40 max-sm:text-xs max-md:text-sm text-base font-semibold",
+        className,
+      )}
       style={
         {
           "--circle-size": "100px",
@@ -51,7 +54,7 @@ export default function AnimatedCircularProgressBar({
           <circle
             cx="50"
             cy="50"
-            r="45"
+            r="35"
             strokeWidth="10"
             strokeDashoffset="0"
             strokeLinecap="round"
@@ -76,7 +79,7 @@ export default function AnimatedCircularProgressBar({
         <circle
           cx="50"
           cy="50"
-          r="45"
+          r="35"
           strokeWidth="10"
           strokeDashoffset="0"
           strokeLinecap="round"
@@ -101,9 +104,16 @@ export default function AnimatedCircularProgressBar({
       </svg>
       <span
         data-current-value={currentPercent}
-        className={`duration-[var(--transition-length)] delay-[var(--delay)] absolute inset-0 m-auto size-fit ease-linear animate-in fade-in p-5 transition-all text-2xl`}
+        className={`duration-[var(--transition-length)] delay-[var(--delay)] absolute inset-0 m-auto size-fit ease-linear animate-in fade-in p-5 transition-all`}
       >
-        { hideValue ? "App Tracker" : currentPercent }
+        {hideValue ? (
+          <div className="flex flex-col justify-center items-center">
+            <span className="block">App</span>
+            <span className="block">Tracker</span>
+          </div>
+        ) : (
+          currentPercent
+        )}
       </span>
     </div>
   );

@@ -32,7 +32,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
       href: "/pages/main/ai-matching",
     },
     {
-      title: "VR",
+      title: "VR Tours",
       icon: <VR />,
       href: "/pages/main/vr-tours",
     },
@@ -47,12 +47,12 @@ const MainLayout: React.FC<MainLayoutProps> = ({
       href: "/pages/main/explore",
     },
     {
-      title: "Program",
+      title: "Programs",
       icon: <Program />,
-      href: "/pages/main/program",
+      href: "/pages/main/programs",
     },
   ];
-
+  // TODO: Add a feature where the FloatingDock can collapse into a hamburger menu
   return (
     <div
       className={`flex h-screen w-full relative overflow-hidden scrollbar-hide ${className}`}

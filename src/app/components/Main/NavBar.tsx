@@ -24,7 +24,6 @@ const textVariants = {
 };
 
 const NavBar = () => {
-  // TODO: Rework the navbar to go on the bottom and have a grow hover animation + description pop up.
   const [isOpen, setIsOpen] = useState(false);
   const [isHover, setIsHover] = useState(false);
   const { username } = useUser(); // Use the username from context

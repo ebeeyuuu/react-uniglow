@@ -214,3 +214,16 @@ html.lenis body {
       transparent 2000px);
   background-size: cover;
 }
+
+.vignette::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle,
+      rgba(0, 0, 0, 0) 40%,
+      rgba(0, 0, 0, 0.5) 100%);
+  z-index: 20;
+}

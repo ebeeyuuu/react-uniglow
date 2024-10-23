@@ -1,16 +1,18 @@
 import React, { ReactNode } from "react";
-import NavBar from "@/app/components/Main/NavBar";
 import FloatingDock from "@/app/components/Main/FloatingDock";
-import Home from "./components/Icons/Home";
-import AI from "./components/Icons/AI";
-import VR from "./components/Icons/VR";
-import Mentorship from "./components/Icons/Mentorship";
-import Explore from "./components/Icons/Explore";
-import Program from "./components/Icons/Program";
+import {
+  FaHome,
+  FaUser,
+  FaCog,
+  FaBell,
+  FaBookmark,
+  FaQuestionCircle,
+} from "react-icons/fa";
+import { MdExplore, MdLibraryBooks } from "react-icons/md";
 
 interface MainLayoutProps {
   children: ReactNode;
-  includeNavBar?: boolean; // Optional prop with a default value of true
+  includeNavBar?: boolean;
   className?: string;
 }
 
@@ -19,40 +21,34 @@ const MainLayout: React.FC<MainLayoutProps> = ({
   includeNavBar = true,
   className = "",
 }) => {
-  // TODO: Revamp the main page to remove hover states
   const links = [
     {
       title: "Home",
-      icon: <Home />,
-      href: "/",
-    },
-    {
-      title: "AI",
-      icon: <AI />,
-      href: "/pages/main/ai-matching",
-    },
-    {
-      title: "VR Tours",
-      icon: <VR />,
-      href: "/pages/main/vr-tours",
-    },
-    {
-      title: "Mentorship",
-      icon: <Mentorship />,
-      href: "/pages/main/mentorship",
+      icon: <FaHome />,
+      href: "/pages/main",
     },
     {
       title: "Explore",
-      icon: <Explore />,
-      href: "/pages/main/explore",
+      icon: <MdExplore />,
+      href: "/pages/explore",
     },
     {
-      title: "Programs",
-      icon: <Program />,
-      href: "/pages/main/programs",
+      title: "Notifications",
+      icon: <FaBell />,
+      href: "/pages/notifications",
+    },
+    {
+      title: "Profile",
+      icon: <FaUser />,
+      href: "/pages/profile",
+    },
+    {
+      title: "Settings",
+      icon: <FaCog />,
+      href: "/pages/settings",
     },
   ];
-  // TODO: Add a feature where the FloatingDock can collapse into a hamburger menu
+
   return (
     <div
       className={`flex h-screen w-full relative overflow-hidden scrollbar-hide ${className}`}

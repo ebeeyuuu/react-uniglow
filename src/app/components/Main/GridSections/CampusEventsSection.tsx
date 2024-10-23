@@ -13,7 +13,7 @@ const CampusEventsSection = () => {
       <div className="relative flex items-center justify-center w-full h-full">
         <div className="flex items-center justify-center flex-col gap-y-[10px]">
           <Calendar className="transition-all duration-700 ease-in-out text-[#02ac81]" />
-          <div className="flex flex-col items-center justify-center max-sm:text-sm max-md:text-md text-base smooth-animation">
+          <div className="flex flex-col items-center justify-center max-sm:text-xs max-md:text-sm text-base smooth-animation">
             <span className="block">Campus</span>
             <span className="block">Events</span>
           </div>

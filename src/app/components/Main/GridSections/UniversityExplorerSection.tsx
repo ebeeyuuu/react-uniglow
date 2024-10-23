@@ -44,18 +44,17 @@ const UniversityExplorerSection = () => {
     >
       <div className="relative w-full h-full flex flex-col justify-center items-center">
         <motion.div
-          className="absolute z-10 max-sm:text-lg max-md:text-xl text-2xl flex flex-col items-center justify-center"
+          className="absolute z-10 max-sm:text-xs max-md:text-sm text-base flex flex-col items-center justify-center"
           style={{ fontWeight: 750 }}
         >
-          <Explore className="transition-all duration-700 ease-in-out text-[#02ac81] w-12 h-12" />
+          <Explore className="transition-all duration-700 ease-in-out text-[#02ac81] w-12 h-12 mb-2" />
           University Explorer
         </motion.div>
         {images.map((image, imgIndex) => (
           <motion.div
             key={imgIndex}
-            className={`absolute max-sm:text-xs max-md:text-sm text-base text-center z-10 mt-28 ${
-              imgIndex === currentIndex ? "opacity-100" : "opacity-0"
-            }`}
+            className={`absolute max-sm:text-[8px] max-md:text-xs text-sm text-center z-10 mt-28 ${imgIndex === currentIndex ? "opacity-100" : "opacity-0"
+              }`}
             initial={{ y: 30, opacity: 0 }}
             animate={
               imgIndex === currentIndex
@@ -72,9 +71,8 @@ const UniversityExplorerSection = () => {
           {images.map((image, imgIndex) => (
             <motion.div
               key={imgIndex}
-              className={`absolute inset-0 rounded-[10px] transition-all duration-700 ease-in-out ${
-                imgIndex === currentIndex ? "opacity-100" : "opacity-0"
-              }`}
+              className={`absolute inset-0 rounded-[10px] transition-all duration-700 ease-in-out ${imgIndex === currentIndex ? "opacity-100" : "opacity-0"
+                }`}
               initial={{ opacity: 0 }}
               animate={
                 imgIndex === currentIndex ? { opacity: 1 } : { opacity: 0 }

@@ -13,7 +13,7 @@ const ProgramsSection = () => {
       <div className="relative flex items-center justify-center w-full h-full">
         <div className="flex items-center justify-center flex-col gap-y-[10px]">
           <Grid className="transition-all duration-700 ease-in-out text-[#02ac81]" />
-          <div className="flex flex-row items-center justify-center max-sm:text-base max-md:text-lg text-xl smooth-animation">
+          <div className="flex flex-row items-center justify-center max-sm:text-sm max-md:text-md text-base smooth-animation">
             Programs
           </div>
         </div>

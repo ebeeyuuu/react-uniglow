@@ -11,10 +11,31 @@ const FloatingDock = ({
   className?: string;
 }) => {
   let mouseX = useMotionValue(Infinity);
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    mouseX.set(e.pageX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
+    // Extract the touch position from the first touch point
+    mouseX.set(e.touches[0].pageX);
+  };
+
+  const handleMouseLeave = () => {
+    mouseX.set(Infinity);
+  };
+
+  const handleTouchEnd = () => {
+    mouseX.set(Infinity);
+  };
+
   return (
     <motion.div
-      onMouseMove={(e) => mouseX.set(e.pageX)}
-      onMouseLeave={() => mouseX.set(Infinity)}
+      // Handle both mouse and touch events
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
       className={cn(
         "mx-auto flex h-16 gap-4 items-end rounded-2xl bg-black px-4 max-md:px-3 max-sm:px-2 pb-3",
         className,

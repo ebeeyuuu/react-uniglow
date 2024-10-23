@@ -1,25 +1,11 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useRouter } from "next/navigation";
-import CircleProgressBar from "./CircleProgressBar";
+import Application from "@/app/components/Icons/Application";
 
 const ApplicationTrackerSection = () => {
   const router = useRouter();
-
-  const [value, setValue] = useState(0);
-
-  useEffect(() => {
-    const handleIncrement = (prev: number) => {
-      if (prev === 100) {
-        return 0;
-      }
-      return prev + 10;
-    };
-    setValue(handleIncrement);
-    const interval = setInterval(() => setValue(handleIncrement), 2500);
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <div
@@ -27,16 +13,12 @@ const ApplicationTrackerSection = () => {
       onClick={() => router.push("/pages/main/application-tracker")}
     >
       <div className="relative flex items-center justify-center w-full h-full">
-        <div className="flex items-center justify-center">
-          <CircleProgressBar
-            min={0}
-            max={100}
-            value={value}
-            gaugePrimaryColor="rgb(2 173 131)"
-            gaugeSecondaryColor="rgb(31, 41, 55)"
-            className=""
-            hideValue={true}
-          />
+        <div className="flex items-center justify-center flex-col gap-y-[10px]">
+          <Application className="transition-all duration-700 ease-in-out text-[#02ac81] w-8 h-8" />
+          <div className="flex flex-col items-center justify-center max-sm:text-sm max-md:text-md text-base smooth-animation">
+            <span className="block">Application</span>
+            <span className="block">Tracker</span>
+          </div>
         </div>
       </div>
     </div>

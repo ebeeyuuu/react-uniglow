@@ -39,7 +39,7 @@ const UniversityExplorerSection = () => {
 
   return (
     <div
-      className="row-span-2 col-span-3 max-[2000px]:col-span-6 max-[2000px]:-order-7 bg-gradient-to-b from-[#272727] to-[#181818] max-[700px]:text-lg rounded-[10px] flex justify-center items-center font-bold text-center cursor-pointer transition-all duration-500 ease-in-out relative overflow-hidden"
+      className="row-span-4 max-[2000px]:row-span-6 col-span-3 max-[2000px]:col-span-6 max-[2000px]:-order-9 bg-gradient-to-b from-[#212121] to-[#111111] max-[700px]:text-lg rounded-[10px] flex justify-center items-center font-bold text-center cursor-pointer transition-all duration-500 ease-in-out relative overflow-hidden"
       onClick={() => router.push("/pages/main/university-explorer")}
     >
       <div className="relative w-full h-full flex flex-col justify-center items-center">
@@ -53,8 +53,9 @@ const UniversityExplorerSection = () => {
         {images.map((image, imgIndex) => (
           <motion.div
             key={imgIndex}
-            className={`absolute max-sm:text-xs max-md:text-sm text-base text-center z-10 mt-28 ${imgIndex === currentIndex ? "opacity-100" : "opacity-0"
-              }`}
+            className={`absolute max-sm:text-xs max-md:text-sm text-base text-center z-10 mt-28 ${
+              imgIndex === currentIndex ? "opacity-100" : "opacity-0"
+            }`}
             initial={{ y: 30, opacity: 0 }}
             animate={
               imgIndex === currentIndex
@@ -71,8 +72,9 @@ const UniversityExplorerSection = () => {
           {images.map((image, imgIndex) => (
             <motion.div
               key={imgIndex}
-              className={`absolute inset-0 rounded-[10px] transition-all duration-700 ease-in-out ${imgIndex === currentIndex ? "opacity-100" : "opacity-0"
-                }`}
+              className={`absolute inset-0 rounded-[10px] transition-all duration-700 ease-in-out ${
+                imgIndex === currentIndex ? "opacity-100" : "opacity-0"
+              }`}
               initial={{ opacity: 0 }}
               animate={
                 imgIndex === currentIndex ? { opacity: 1 } : { opacity: 0 }
@@ -92,19 +94,6 @@ const UniversityExplorerSection = () => {
             </motion.div>
           ))}
         </div>
-        <motion.div
-          className="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex space-x-3 z-50"
-          transition={{ duration: 0.5, ease: "easeInOut" }}
-        >
-          {images.map((_, dotIndex) => (
-            <button
-              key={dotIndex}
-              className={`w-3 h-3 rounded-full ${dotIndex === currentIndex ? "bg-white" : "bg-gray-400"
-                }`}
-              onClick={() => setCurrentIndex(dotIndex)}
-            />
-          ))}
-        </motion.div>
       </div>
     </div>
   );

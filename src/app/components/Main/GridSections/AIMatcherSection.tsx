@@ -18,7 +18,7 @@ const AIMatcherSection = () => {
           alt="Neural Network object-cover"
           fill
           objectFit="cover"
-          className="z-0 filter brightness-[50%]"
+          className="z-0 filter brightness-[70%]"
         />
       </div>
 

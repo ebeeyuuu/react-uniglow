@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "concurrently \"npm run next-dev\" \"npm run ollama-serve\"",
+    "dev": "npm run next-dev",
     "build": "next build",
     "next-dev": "next dev",
     "ollama-serve": "ollama serve",

@@ -17,7 +17,6 @@ const FloatingDock = ({
   };
 
   const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
-    // Extract the touch position from the first touch point
     mouseX.set(e.touches[0].pageX);
   };
 

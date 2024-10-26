@@ -6,7 +6,7 @@ import Cross from "../../Icons/Cross";
 const VRToursSection = () => {
   const router = useRouter();
 
-  const crosses = Array.from({ length: 100 }, (_, index) => (
+  const crosses = Array.from({ length: 121 }, (_, index) => (
     <div key={index} className="relative w-full h-full">
       <Cross className="w-4 h-4 text-zinc-400" />
     </div>

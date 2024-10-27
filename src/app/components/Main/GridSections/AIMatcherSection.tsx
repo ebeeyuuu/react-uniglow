@@ -1,7 +1,7 @@
 import React from "react";
 import { useRouter } from "next/navigation";
 import BrainAI from "@/app/components/Icons/BrainAI";
-import neuralNetwork from "@/images/neuralnetwork.jpg";
+import neuralNetwork from "@/images/neuralnetwork.png";
 import Image from "next/image";
 
 const AIMatcherSection = () => {
@@ -9,10 +9,10 @@ const AIMatcherSection = () => {
 
   return (
     <div
-      className={`relative row-span-1 col-span-2 max-[2000px]:col-span-4 max-[2000px]:-order-8 rounded-[10px] flex justify-center items-center text-center cursor-pointer smooth-animation overflow-hidden bg-gradient-to-b from-[#212121] to-[#111111]`}
+      className={`relative row-span-1 col-span-2 max-[2000px]:col-span-4 max-[2000px]:-order-8 rounded-[10px] flex justify-center items-center text-center cursor-pointer smooth-animation overflow-hidden bg-gradient-to-b from-[#212121] to-[#111111] reverse-vignette`}
       onClick={() => router.push("/pages/main/ai-matching")}
     >
-      <div className="absolute inset-0 z-0 reverse-vignette">
+      <div className="absolute inset-0 z-0">
         <Image
           src={neuralNetwork}
           alt="Neural Network object-cover"

@@ -9,9 +9,10 @@ const ApplicationTrackerSection = () => {
 
   return (
     <div
-      className="row-span-1 col-span-1 max-[2000px]:col-span-2 max-[1200px]:col-span-4 rounded-[10px] flex justify-center items-center font-bold text-center cursor-pointer transition-all duration-300 ease-in-out relative overflow-hidden bg-gradient-to-b from-[#212121] to-[#111111]"
+      className="row-span-1 col-span-1 max-[2000px]:col-span-2 max-[1200px]:col-span-4 rounded-[10px] flex justify-center items-center font-bold text-center cursor-pointer transition-all duration-300 ease-in-out relative overflow-hidden dark-radial"
       onClick={() => router.push("/pages/main/application-tracker")}
     >
+      <div className="absolute inset-0 z-0"></div>
       <div className="relative flex items-center justify-center w-full h-full">
         <div className="flex items-center justify-center flex-col gap-y-[10px]">
           <Application className="transition-all duration-700 ease-in-out text-[#02ac81] w-8 h-8" />

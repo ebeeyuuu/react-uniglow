@@ -256,3 +256,11 @@ html.lenis body {
   );
   z-index: 21;
 }
+
+.dark-radial {
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(18, 18, 18, 1),
+    rgba(37, 37, 37, 0.5)
+  );
+}

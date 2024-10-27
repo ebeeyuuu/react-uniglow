@@ -15,10 +15,8 @@ const ProgramsSection = () => {
         return [1, 2, 1, 2, 1, 2, 2, 2, 1, 1];
       } else if (width >= 1024) {
         return [2, 1, 2, 1, 2, 2, 1, 1];
-      } else if (width >= 768) {
-        return [1, 2, 1, 2, 2, 1];
       } else {
-        return Array(4).fill(1);
+        return [1, 2, 1, 2, 2, 1];
       }
     };
 
@@ -37,7 +35,7 @@ const ProgramsSection = () => {
   const gridItems = rowSpans.map((rowSpan, index) => (
     <div
       key={index}
-      className={`bg-black/20 rounded-lg overflow-hidden col-span-1 row-span-${rowSpan}`}
+      className={`border-double border-2 border-neutral-700 rounded-lg overflow-hidden col-span-1 row-span-${rowSpan}`}
     />
   ));
 
@@ -47,7 +45,7 @@ const ProgramsSection = () => {
       onClick={() => router.push("/pages/main/programs")}
     >
       <div className="absolute inset-0 z-0">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-1 p-4 w-full h-full">
+        <div className="grid grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-1 p-4 w-full h-full">
           {gridItems}
         </div>
       </div>

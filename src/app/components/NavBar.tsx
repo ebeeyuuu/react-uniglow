@@ -139,22 +139,22 @@ const NavBar = () => {
   const contactUsItems = [
     { href: "/pages/contact", label: "Message Us", icon: FaBookOpen },
     {
-      href: "/contact/university-partnerships",
+      href: "/pages/contact/university-partnerships",
       label: "University Partnerships",
       icon: FaHandshake,
     },
     {
-      href: "/contact/career-counselors",
+      href: "/pages/contact/career-counselors",
       label: "Career Counselors",
       icon: RiTeamFill,
     },
     {
-      href: "/contact/parents-and-guardians",
+      href: "/pages/contact/parents-and-guardians",
       label: "Parents & Guardians",
       icon: MdCorporateFare,
     },
     {
-      href: "/contact/technical-support",
+      href: "/pages/contact/technical-support",
       label: "Technical Support",
       icon: GrAchievement,
     },

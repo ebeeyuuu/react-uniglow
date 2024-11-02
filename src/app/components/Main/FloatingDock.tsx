@@ -30,7 +30,6 @@ const FloatingDock = ({
 
   return (
     <motion.div
-      // Handle both mouse and touch events
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       onTouchMove={handleTouchMove}

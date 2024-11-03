@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
 
 interface LoadingIconProps {
   widthPx: number;
@@ -76,7 +77,7 @@ const LoadingButton: React.FC<LoadingButtonProps> = ({
   };
 
   return (
-    <button
+    <Button
       className={`relative ${className}`}
       onClick={handleClick}
       disabled={isLoading}
@@ -99,7 +100,7 @@ const LoadingButton: React.FC<LoadingButtonProps> = ({
           />
         </span>
       )}
-    </button>
+    </Button>
   );
 };
 

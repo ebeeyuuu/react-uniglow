@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import preview from "@/images/preview.png";
 import LoadingButton from "@/app/components/LoadingButton";
+import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -81,7 +82,6 @@ const Hero = () => {
           Contact us
         </LoadingButton>
       </div>
-
       <div
         className={`relative w-3/4 h-auto max-w-[1800px] min-[200px] p-10 rounded-2xl max-md:mt-8 max-md:w-[90%] max-md:p-0 transition duration-300 ${loading ? "blur-lg" : ""}`}
         data-aos="fade-up"

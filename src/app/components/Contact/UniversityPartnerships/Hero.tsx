@@ -12,7 +12,7 @@ const Hero = () => {
             Join our network of leading institutions
           </span>
         </div>
-        <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-white to-white/50 bg-clip-text text-transparent">
+        <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-white via-white to-white/10 bg-clip-text text-transparent">
           <span className="block">Global</span>
           <span className="block">Partnerships</span>
         </h1>

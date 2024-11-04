@@ -1,6 +1,9 @@
 import React from "react";
 import { FaRegQuestionCircle } from "react-icons/fa";
-import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
+import Accordion from "@mui/material/Accordion";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 interface FAQItem {
   question: string;
@@ -50,21 +53,38 @@ const FAQ: React.FC = () => {
         Find related questions and answers related to how our app works, and how
         you can maximise every feature we offer.
       </p>
-      <div className="w-full px-6 max-w-[600px] flex flex-col gap-y-[10px] mt-[30px]">
-        <Accordion type="single" collapsible>
-          {faqItems.map((item, index) => (
-            <AccordionItem key={index} value={`item-${index}`}>
-              <AccordionTrigger className="text-sm sm:text-base md:text-lg text-white rounded-md px-4 py-2">
+      <div className="w-full px-6 flex flex-col items-center gap-y-[10px] mt-[30px]">
+        {faqItems.map((item, index) => (
+          <Accordion
+            key={index}
+            sx={{
+              width: "100%",
+              backgroundColor: "#00356a",
+              color: "white",
+              "&:before": {
+                display: "none",
+              },
+              rounded: "10px",
+            }}
+          >
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon className="text-white" />}
+              aria-controls={`panel${index + 1}-content`}
+              id={`panel${index + 1}-header`}
+            >
+              <span className="font-semibold text-sm sm:text-base md:text-lg">
                 {item.question}
-              </AccordionTrigger>
-              <AccordionContent className="text-xs sm:text-sm md:text-base px-4 py-2 text-white">
+              </span>
+            </AccordionSummary>
+            <AccordionDetails>
+              <p className="font-normal text-xs sm:text-sm md:text-base">
                 {item.answer}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
+              </p>
+            </AccordionDetails>
+          </Accordion>
+        ))}
       </div>
-      <button className="bg-[#003dcc] px-5 py-2 rounded-[10px] font-medium mt-[20px]">
+      <button className="bg-[#0066CC] px-5 py-2 rounded-[10px] font-medium mt-[20px]">
         See all FAQs
       </button>
       <p className="font-medium text-sm mt-[10px]">

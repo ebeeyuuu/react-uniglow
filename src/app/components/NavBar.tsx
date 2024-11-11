@@ -278,8 +278,8 @@ const NavBar = () => {
 
   return (
     <div className="flex justify-center items-center w-full">
-      <nav className="w-full h-[100px] flex justify-between items-center px-8 py-4 bg-[#003366] shadow-lg">
-        <Link href="/" className="text-xl font-semibold">
+      <nav className="w-full py-7 px-5 flex justify-between items-center px-8 py-4 bg-[#091235] shadow-lg">
+        <Link href="/" className="text-sm lg:text-lg font-semibold">
           Uniglow
         </Link>
         <div className="hidden md:flex flex-row gap-x-1 items-center">
@@ -303,7 +303,7 @@ const NavBar = () => {
                   }
                   className={`
                     flex flex-row gap-x-3 items-center px-3 py-2 rounded-[10px] 
-                    transition-all duration-300 ease-in-out 
+                    transition-all duration-300 ease-in-out text-xs lg:text-sm
                   `}
                 >
                   <div style={{ fontWeight: "550" }}>{label}</div>
@@ -398,7 +398,7 @@ const NavBar = () => {
             <button
               onClick={() => handleMenuOpen("explore")}
               className={`
-                px-4 py-2 border-2 border-white 
+                px-4 py-2 border-2 border-white text-xs lg:text-sm 
                 hover:bg-white rounded-full hover:text-black smooth-animation font-semibold 
               `}
             >

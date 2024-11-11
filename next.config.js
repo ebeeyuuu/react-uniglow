@@ -1,5 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+        pathname: "/**", // This allows any image path from this domain
+      },
+    ],
+  },
   webpack: (config, { isServer }) => {
     if (isServer) {
       return config;
@@ -13,3 +22,5 @@ const nextConfig = {
     return config;
   },
 };
+
+module.exports = nextConfig;

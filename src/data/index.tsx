@@ -26240,26 +26240,26 @@ export const generic_subjects = [
 ];
 
 export const navItems = [
-  { href: "", label: "About Us", icon: MdPeople, size: 23, text: "About Us" },
+  { href: "", label: "About Us", icon: MdPeople, size: 18, text: "About Us" },
   {
     href: "/pages/contact",
     label: "Contact",
     icon: MdConnectWithoutContact,
-    size: 23,
+    size: 18,
     text: "Contact",
   },
   {
     href: "/pages/programs",
     label: "Programs",
     icon: SiActivitypub,
-    size: 23,
+    size: 18,
     text: "Programs",
   },
   {
     href: "/pages/donate",
     label: "Donate",
     icon: BiDonateHeart,
-    size: 23,
+    size: 18,
     text: "Donate",
   },
 ];

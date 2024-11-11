@@ -263,7 +263,7 @@ const NavModal: React.FC<NavModalProps> = ({ isOpen, setIsOpen }) => {
 
   return (
     <nav
-      className={`fixed inset-0 top-0 right-0 h-[100vh] bg-[#00478f]/50 backdrop-blur-xl flex flex-col justify-center items-center transition-transform duration-300 ${isOpen ? "translate-x-0" : "translate-x-full"
+      className={`fixed inset-0 top-0 right-0 h-[100vh] bg-[#1F2B8F]/50 backdrop-blur-xl flex flex-col justify-center items-center transition-transform duration-300 ${isOpen ? "translate-x-0" : "translate-x-full"
         } ${visible ? "opacity-100" : "opacity-0"} z-50`}
       onTransitionEnd={handleTransitionEnd}
     >

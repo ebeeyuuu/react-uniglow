@@ -33,8 +33,8 @@ const Partners = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {partners.map((partner, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="group relative bg-white/[0.02] border-white/10 backdrop-blur-sm hover:border-white/20 transition-all duration-300"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-xl"></div>
@@ -46,8 +46,7 @@ const Partners = () => {
                   {partner.type}
                 </span>
                 <p className="text-white/40 mb-6">{partner.description}</p>
-                <button 
-                  variant="outline" 
+                <button
                   className="border-white/10 text-white/80 hover:bg-white/5 hover:border-white/20"
                 >
                   Learn More

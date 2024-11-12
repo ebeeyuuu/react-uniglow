@@ -53,7 +53,7 @@ const FAQ: React.FC = () => {
         Find related questions and answers related to how our app works, and how
         you can maximise every feature we offer.
       </p>
-      <div className="w-full px-6 flex flex-col items-center gap-y-[10px] mt-[30px]">
+      <div className="w-full px-6 flex flex-col items-center gap-y-[10px] mt-[30px] max-w-3xl">
         {faqItems.map((item, index) => (
           <Accordion
             key={index}

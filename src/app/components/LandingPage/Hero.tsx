@@ -5,6 +5,7 @@ import Image from "next/image";
 import preview from "@/images/preview.png";
 import LoadingButton from "@/app/components/LoadingButton";
 import { useRouter } from "next/navigation";
+import { GiPartyPopper } from "react-icons/gi";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -31,36 +32,30 @@ const Hero = () => {
   };
 
   return (
-    <div className="w-full h-full flex flex-col gap-9 smooth-animation mt-52 max-md:mt-32 justify-center items-center">
+    <div className="w-full h-full flex flex-col smooth-animation mt-52 max-md:mt-32 justify-center items-center">
       <div
-        className="relative flex flex-row justify-center scale-100 max-md:scale-[80%] smooth-animation items-center gap-x-0 bg-white rounded-full"
+        className="inline-flex items-center gap-2 bg-white/5 rounded-full px-4 py-1.5 mb-10 border border-white/10"
         data-aos="fade-up"
         data-aos-delay="300"
       >
-        <div className="absolute left-0 top-0 text-base bg-white text-black px-4 py-2 rounded-full z-10">
-          New
-        </div>
-        <div className="ml-8 pl-12 text-base bg-gray-300 text-black px-3 py-2 rounded-full relative">
-          AI University Matcher 🎉
-        </div>
+        <GiPartyPopper className="w-4 h-4 text-purple-400" />
+        <span className="text-xs lg:text-sm font-medium bg-gradient-to-r from-purple-400 to-purple-200 bg-clip-text text-transparent">
+          Your Career Journey Starts Here
+        </span>
       </div>
 
-      <div
-        className="text-center smooth-animation text-6xl max-[1000px]:text-5xl max-[800px]:text-4xl font-extrabold flex justify-center flex-col"
+      <h1
+        className="text-4xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-white to-purple-200 bg-clip-text text-transparent text-center"
         data-aos="fade-up"
         data-aos-delay="350"
       >
-        <span className="block">Find Your</span>
-        <span className="block">Dream University</span>
-      </div>
-      <div
-        className="w-5/12 mx-auto flex justify-center text-center font-light max-[1000px]:text-sm"
-        data-aos="fade-up"
-        data-aos-delay="400"
-      >
+        Find Your <br />
+        Dream University <br />
+      </h1>
+      <p className="text-sm lg:text-lg text-white/60 max-w-2xl mb-8 text-center">
         Easy, powerful, and data-driven. Explore the world&apos;s universities
         and the one for you!
-      </div>
+      </p>
       <div
         className="flex flex-row gap-4 justify-center mt-0 max-md:flex-col"
         data-aos="fade-up"
@@ -68,15 +63,15 @@ const Hero = () => {
       >
         <LoadingButton
           onClick={handleGetStarted}
-          className="bg-[#003dcc] rounded-xl px-5 py-3 scale-100 hover:scale-110 smooth-animation max-md:px-14 font-medium text-base"
-          loadingColorHex="#FFF"
+          className="text-xs lg:text-base bg-white rounded-xl bg-white hover:bg-white/90 flex-row flex justify-center items-center text-black smooth-animation px-5 py-3"
+          loadingColorHex="#000"
         >
           Get started
         </LoadingButton>
         <LoadingButton
           onClick={handleContactUs}
-          className="border-white rounded-xl px-5 py-3 bg-gray-300 scale-100 hover:scale-110 smooth-animation max-md:px-14 font-medium text-base text-black"
-          loadingColorHex="#000"
+          className="text-xs lg:text-base border-2 border-white/10 hover:bg-white/5 px-5 py-3 rounded-xl smooth-animation"
+          loadingColorHex="#FFF"
         >
           Contact us
         </LoadingButton>

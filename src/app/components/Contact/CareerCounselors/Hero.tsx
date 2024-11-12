@@ -30,7 +30,7 @@ const Hero = () => {
               Book a Session
               <BsArrowRight className="ml-2 h-4 w-4" />
             </button>
-            <button className="text-xs lg:text-base border border-white/10 hover:bg-white/5 px-5 py-3 rounded-xl smooth-animation">
+            <button className="text-xs lg:text-base border-2 border-white/10 hover:bg-white/5 px-5 py-3 rounded-xl smooth-animation">
               View Services
             </button>
           </div>

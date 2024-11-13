@@ -1,46 +1,56 @@
 "use client";
 
 import React, { useState, useCallback, useEffect } from "react";
-import { GiArtificialIntelligence } from "react-icons/gi";
-import { GiVirtualMarker } from "react-icons/gi";
-import { FaConnectdevelop, FaNewspaper } from "react-icons/fa";
 import { useRouter } from "next/navigation";
 import LoadingButton from "@/app/components/LoadingButton";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { BsRobot, BsChat, BsCalendar, BsFileEarmark } from "react-icons/bs";
 
-interface Feature {
-  id: string;
-  icon: React.ReactElement;
-  text: string;
-}
-
-const features: Feature[] = [
+const features = [
   {
-    id: "box1",
-    icon: <GiArtificialIntelligence size={80} />,
-    text: "AI Personality Matching: Matches students to universities based on personality and campus culture.",
+    icon: BsRobot,
+    title: "AI University Matcher",
+    description: "Our advanced AI analyzes your interests and goals to find your perfect university matches",
+    benefits: [
+      "Personalized recommendations",
+      "Real-time acceptance chances",
+      "Program compatibility scoring",
+    ]
   },
   {
-    id: "box2",
-    icon: <GiVirtualMarker size={80} />,
-    text: "VR Campus Tours: Offers 360° virtual tours of partner universities.",
+    icon: BsChat,
+    title: "24/7 Support Assistant",
+    description: "Get instant answers to your questions with our AI-powered chat assistant and expert counselors",
+    benefits: [
+      "Instant response time",
+      "Multi-language support",
+      "Expert escalation",
+    ]
   },
   {
-    id: "box3",
-    icon: <FaConnectdevelop size={80} />,
-    text: "Peer Mentor Connection: Links prospective students with current students for personalized advice.",
+    icon: BsCalendar,
+    title: "Smart Application Tracker",
+    description: "Stay on top of your applications with our intelligent tracking and reminder system",
+    benefits: [
+      "Deadline management",
+      "Document checklist",
+      "Timeline visualization"
+    ]
   },
   {
-    id: "box4",
-    icon: <FaNewspaper size={80} />,
-    text: "Interactive Curriculum Explorer: Visualizes degree paths and their career impacts.",
-  },
+    icon: BsFileEarmark,
+    title: "One-Click Applications",
+    description: "Apply to multiple universities with a single application form and automated document submission",
+    benefits: [
+      "Time-saving automation",
+      "Error prevention",
+      "Progress tracking",
+    ]
+  }
 ];
 
 const Features: React.FC = () => {
-  const [activeBox, setActiveBox] = useState<string>("");
-  const [animatedBox, setAnimatedBox] = useState<string>("");
   const router = useRouter();
 
   const handleClick = async () => {
@@ -54,77 +64,46 @@ const Features: React.FC = () => {
     });
   }, []);
 
-  const handleBoxClick = useCallback((boxId: string) => {
-    setAnimatedBox(boxId);
-    setTimeout(() => {
-      setActiveBox((prevState) => (prevState === boxId ? "" : boxId));
-      setAnimatedBox("");
-    }, 500);
-  }, []);
-
-  const getBoxContent = useCallback(
-    (boxId: string, icon: React.ReactElement, text: string) => (
-      <div className="w-full h-full flex items-center justify-center cursor-pointer transition-opacity duration-500 ease-in-out">
-        {activeBox === boxId ? (
-          <div className="text-center">{text}</div>
-        ) : (
-          <div className="text-white">{icon}</div>
-        )}
-      </div>
-    ),
-    [activeBox],
-  );
-
   return (
-    <div className="w-full mt-[300px] flex justify-center items-center flex-row gap-x-[80px] max-[900px]:flex-col-reverse max-[900px]:gap-y-[80px]">
-      <div
-        className="grid grid-rows-2 grid-cols-2 max-[500px]:grid-rows-4 max-[500px]:grid-cols-1 w-1/2 h-[550px] gap-[20px] max-[900px]:w-[80%]"
-        data-aos="fade-up"
-      >
-        {features.map(({ id, icon, text }) => (
-          <div
-            key={id}
-            className={`bg-[#003061] rounded-[20px] flex justify-center items-center p-5 text-center font-semibold overflow-hidden relative gradient-hover ${animatedBox === id ? "animate-pulse" : ""
-              }`}
-            onClick={() => handleBoxClick(id)}
-          >
-            {getBoxContent(id, icon, text)}
-          </div>
-        ))}
-      </div>
+    <section className="py-24 relative">
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/5 to-transparent" />
+      
+      <div className="max-w-7xl mx-auto px-4 relative">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-white to-purple-200 bg-clip-text text-transparent">
+            Revolutionary Features
+          </h2>
+          <p className="text-xs lg:text-base text-white/60 max-w-lg mx-auto">
+            Cutting-edge technology meets expert guidance to transform your university application journey
+          </p>
+        </div>
 
-      <div
-        className="flex flex-col gap-y-[30px] w-1/3 max-[900px]:text-center max-[900px]:w-[80%] max-[900px]:mx-auto"
-        data-aos="fade-up"
-      >
-        <div className="text-5xl font-medium">
-          <div>
-            What separates
-            <span
-              className="text-[#f4b034] italic mr-[20px] ml-[10px]"
-              style={{ fontWeight: 900 }}
-            >
-              us
-            </span>
-          </div>
-          <div>
-            from <span className="italic font-semibold">the rest</span>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+          {features.map((feature, index) => (
+            <div key={index} className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl smooth-animation" />
+              <div className="relative p-8 bg-white/[0.02] rounded-2xl border-2 border-white/5 backdrop-blur-sm">
+                <div className="flex items-center mb-6">
+                  <div className="flex items-center justify-center w-12 h-12 rounded-2xl bg-gradient-to-r from-purple-500/10 to-purple-500/10">
+                    <feature.icon className="h-4 lg:h-6 w-4 lg:w-6 text-purple-400" />
+                  </div>
+                  <h3 className="text-base lg:text-xl font-semibold ml-4">{feature.title}</h3>
+                </div>
+                <p className="text-xs lg:text-base text-white/60 mb-6">{feature.description}</p>
+                <ul className="space-y-3">
+                  {feature.benefits.map((benefit, i) => (
+                    <li key={i} className="flex items-center text-xs lg:text-sm text-white/60">
+                      <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-purple-400 to-purple-400 mr-2" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
         </div>
-        <div data-aos="fade-up">
-          The features of Uniglow that allows us to easily help you find the
-          university that you so desire.
-        </div>
-        <LoadingButton
-          className="bg-[#003dcc] text-white py-3 rounded-[20px] w-[130px] max-[900px]:mx-auto scale-100 hover:scale-110 transition-all duration-300 ease-in-out"
-          data-aos="fade-up"
-          onClick={handleClick}
-          loadingColorHex="#FFF"
-        >
-          Get started
-        </LoadingButton>
       </div>
-    </div>
+    </section>
   );
 };
 

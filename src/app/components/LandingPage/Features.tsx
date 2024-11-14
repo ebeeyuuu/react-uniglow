@@ -61,7 +61,7 @@ const Features: React.FC = () => {
 
   return (
     <section className="py-24 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/5 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-purple-500/15 via-transparent to-transparent" />
 
       <div className="max-w-7xl mx-auto px-4 relative">
         <div className="text-center mb-16">

@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BsArrowRight, BsStars, BsBullseye, BsCompass } from "react-icons/bs";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Hero = () => {
+  useEffect(() => {
+    AOS.init({
+      once: true,
+    });
+  });
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-purple-500/5 via-transparent to-transparent" />
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1497864149936-d3163f0c0f4b')] bg-cover bg-center opacity-5" />
+    <section
+      data-aos="fade-up"
+      data-aos-delay="300"
+      className="relative min-h-[90vh] flex items-center justify-center overflow-hidden"
+    >
+      <div className="absolute inset-0 bg-gradient-to-b from-purple-500/15 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1497864149936-d3163f0c0f4b')] bg-cover bg-center opacity-10" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center, rgba(255, 255, 255, 0.1)_0%,transparent_100%)]" />
       <div className="relative z-10 max-w-6xl mx-auto px-4 py-20">
         <div className="flex flex-col items-center itext-center mb-12">
@@ -26,7 +37,7 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="text-xs lg:text-base bg-white rounded-xl bg-white hover:bg-white/90 flex-row flex justify-center items-center text-black smooth-animation px-5 py-3">
+            <button className="text-xs lg:text-base bg-white rounded-xl hover:bg-white/90 flex-row flex justify-center items-center text-black smooth-animation px-5 py-3">
               Book a Session
               <BsArrowRight className="ml-2 h-4 w-4" />
             </button>
@@ -56,7 +67,7 @@ const Hero = () => {
             },
           ].map((feature, index) => (
             <div key={index} className="group relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-xl" />
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-xl smooth-animation" />
               <div className="relative p-6 bg-white/[0.03] rounded-xl border border-white/10 backdrop-blur-sm">
                 <feature.icon className="h-8 w-8 text-purple-400 mb-4" />
                 <h3 className="text-base lg:text-xl font-semibold mb-2">

@@ -37,14 +37,22 @@ const WhyChooseUs: React.FC = () => {
 
   return (
     <section className="py-24 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-purple-500/5 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-purple-500/15 via-transparent to-transparent" />
 
       <div className="max-w-7xl mx-auto px-4 relative">
         <div className="text-center mb-16">
-          <h2 data-aos="fade-up" data-aos-delay="300" className="text-3xl lg:text-5xl font-bold pb-6 bg-gradient-to-r from-white via-white to-purple-200 bg-clip-text text-transparent">
+          <h2
+            data-aos="fade-up"
+            data-aos-delay="300"
+            className="text-3xl lg:text-5xl font-bold pb-6 bg-gradient-to-r from-white via-white to-purple-200 bg-clip-text text-transparent"
+          >
             Why Choose Uniglow?
           </h2>
-          <p data-aos="fade-up" data-aos-delay="350" className="text-xs lg:text-base text-white/60 max-w-lg mx-auto">
+          <p
+            data-aos="fade-up"
+            data-aos-delay="350"
+            className="text-xs lg:text-base text-white/60 max-w-lg mx-auto"
+          >
             We&apos;re revolutionizing the university application process with
             cutting-edge technology and expert support
           </p>
@@ -54,7 +62,7 @@ const WhyChooseUs: React.FC = () => {
           {reasons.map((reason, index) => (
             <div key={index} className="group relative" data-aos="fade-up">
               <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity smooth-animation rounded-2xl" />
-              <div className="relative p-8 bg-white/[0.02] rounded-2xl border-2 border-white/5 backdrop-blur-sm h-full">
+              <div className="relative p-8 bg-white/[0.02] rounded-2xl border-2 border-white/15 backdrop-blur-sm h-full">
                 <div className="flex items-center justify-center w-12 h-12 mb-4 rounded-2xl bg-gradient-to-r from-purple-500/10 to-purple-500/10">
                   <reason.icon className="h-6 w-6 text-purple-400" />
                 </div>

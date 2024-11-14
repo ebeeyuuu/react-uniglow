@@ -13,7 +13,9 @@ const Hero = () => {
   const router = useRouter();
 
   useEffect(() => {
-    AOS.init();
+    AOS.init({
+      once: true,
+    });
   }, []);
 
   const handleGetStarted = async () => {
@@ -31,7 +33,7 @@ const Hero = () => {
       data-aos="fade-up"
       className="relative min-h-[90vh] flex items-center justify-center"
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-purple-500/5 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-purple-500/15 via-transparent to-transparent" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.1)_0%,transparent_100%)]" />
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 py-20 flex flex-col items-center text-center">

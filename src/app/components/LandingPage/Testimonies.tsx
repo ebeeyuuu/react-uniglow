@@ -212,9 +212,11 @@ const TestimonialCard: React.FC<{ testimonial: Testimonial }> = ({
 const Testimonies: React.FC = () => {
   return (
     <div className="w-full py-24 relative flex justify-center items-center flex-col mx-auto gap-y-[30px]">
-      <div className="font-bold text-5xl mb-8 underline decoration-[#0070e0] decoration-8 underline-offset-[10px]">
-        Testimonials
-      </div>
+      <h2
+        className="text-3xl lg:text-5xl font-bold pb-6 bg-gradient-to-r from-white via-white to-purple-200 bg-clip-text text-transparent"
+      >
+        Why Choose Uniglow?
+      </h2>
       <div className="flex flex-col gap-y-[40px] mx-auto w-full">
         <div>
           <Marquee

@@ -1,155 +1,37 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
-import Image from "next/image";
-import work1 from "@/images/work1.jpg";
-import work2 from "@/images/work2.jpg";
-import work3 from "@/images/work3.jpg";
-import work4 from "@/images/work4.jpg";
-import { useRouter } from "next/navigation";
-import LoadingButton from "@/app/components/LoadingButton";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import { BsStars } from "react-icons/bs";
 
 const Hero = () => {
-  const [loading, setLoading] = useState({
-    work1: true,
-    work2: true,
-    work3: true,
-    work4: true,
-  });
-  const router = useRouter();
-
-  useEffect(() => {
-    AOS.init();
-  }, []);
-
-  const handleImageLoad = (imageKey: string) => {
-    setLoading((prevLoading) => ({ ...prevLoading, [imageKey]: false }));
-  };
-
-  const handleRedirectMission = async () => {
-    await new Promise((resolve) => setTimeout(resolve, 2500));
-    router.push("/pages/about/missionandvalues");
-  };
-
   return (
-    <div className="w-full h-full flex flex-col justify-center items-center">
-      <div className="w-full flex justify-center items-center mt-52 flex-col gap-9">
-        <div
-          className="bg-white rounded-full text-black font-medium text-base px-4 py-2"
-          data-aos="fade-up"
-        >
-          Who we are
-        </div>
-        <div
-          className="text-center scale-100 max-md:scale-[70%] smooth-animation text-6xl font-extrabold flex justify-center flex-col"
-          data-aos="fade-up"
-        >
-          Our story
-        </div>
-        <div
-          className="w-[60%] mx-auto flex justify-center max-w-[800px] text-center text-lg max-md:text-base font-light"
-          data-aos="fade-up"
-        >
-          We are a company that helps students around the world to find the best
-          university for them and make their lives as easy as possible.
-        </div>
-      </div>
-      <div
-        className="border-t-2 border-gray-700 w-2/3 max-w-[860px] mx-auto h-min mt-12 rounded-full"
-        data-aos="fade-up"
-      ></div>
-      <div className="flex flex-col gap-3 text-left w-[55%] max-w-[800px] mt-12 mx-auto">
-        <p className="font-bold text-base" data-aos="fade-up">
-          At Uniglow, we&apos;re building the tool of the future
-        </p>
-        <p className="font-medium text-gray-200" data-aos="fade-up">
-          My name is Ean, and I&apos;m the founder of Uniglow. I&apos;m a
-          software engineer with a passion for technology and a desire to make
-          the world a better place. I believe that technology has the power to
-          change the world, and I&apos;m dedicated to using that power to help
-          people.
-        </p>
-        <p className="font-medium text-gray-200" data-aos="fade-up">
-          I&apos;m passionate about helping people find the right university for
-          them, and I&apos;m committed to making the process as easy and
-          accessible as possible. I believe that technology can play a big role
-          in making university search more accessible and user-friendly, and I
-          want to be a part of that journey.
-        </p>
-      </div>
-      <div className="w-full h-auto flex-col mt-40 p-20 flex justify-center items-center bg-[#191919]">
-        <div className="w-full h-full grid grid-cols-3 grid-rows-2 gap-5 max-w-[800px]">
-          <div
-            className={`relative col-span-2 rounded-xl ${loading.work1 ? "blur-lg" : ""}`}
-          >
-            <Image
-              src={work1}
-              alt="Work 1"
-              className="w-full h-full object-cover rounded-xl"
-              onLoad={() => handleImageLoad("work1")}
-              quality={75}
-              layout="responive"
-              loading="lazy"
-            />
+    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-purple-500/5 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f')] bg-cover bg-center opacity-20" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.1)_0%,transparent_100%)]" />
+      <div className="relative z-10 max-w-7xl mx-auto px-4 py-20">
+        <div className="flex flex-col items-center text-center">
+          <div className="inline-flex items-center gap-2 bg-white/5 rounded-full px-6 py-2 mb-6 border border-white/5">
+            <BsStars className="w-4 h-4 text-purple-400" />
+            <span className="text-sm font-medium bg-gradient-to-r from-purple-400 to-purple-200 bg-clip-text text-transparent">
+              Transforming Education Since 2020
+            </span>
           </div>
-          <div
-            className={`relative col-span-1 rounded-xl ${loading.work2 ? "blur-lg" : ""}`}
-          >
-            <Image
-              src={work2}
-              alt="Work 2"
-              className="w-full h-full object-cover filter brightness-[65%] rounded-xl"
-              onLoad={() => handleImageLoad("work2")}
-              quality={75}
-              layout="responive"
-              loading="lazy"
-            />
-          </div>
-          <div
-            className={`relative col-span-1 rounded-xl ${loading.work3 ? "blur-lg" : ""}`}
-          >
-            <Image
-              src={work3}
-              alt="Work 3"
-              className="w-full h-full object-cover filter brightness-75 rounded-xl"
-              onLoad={() => handleImageLoad("work3")}
-              quality={75}
-              layout="responive"
-              loading="lazy"
-            />
-          </div>
-          <div
-            className={`relative col-span-2 rounded-xl ${loading.work4 ? "blur-lg" : ""}`}
-          >
-            <Image
-              src={work4}
-              alt="Work 4"
-              className="w-full h-full object-cover filter brightness-75 rounded-xl"
-              onLoad={() => handleImageLoad("work4")}
-              quality={75}
-              layout="responive"
-              loading="lazy"
-            />
-          </div>
-        </div>
-        <div className="max-w-[800px] h-auto flex flex-col">
-          <div className="text-4xl max-md:text-3xl font-bold text-gray-300 mt-12">
-            <span className="text-white font-extrabold">Our mission</span> is to
-            make the lives of students around the world as enjoyable and easy as
-            possible.
-          </div>
-          <LoadingButton
-            onClick={handleRedirectMission}
-            className="flex mt-8 px-5 py-3 bg-[#003dcc] rounded-xl scale-100 hover:scale-105 transition-all duration-300 ease-in-out"
-            loadingColorHex="#FFF"
-          >
-            Read more
-          </LoadingButton>
+
+          <h1 className="text-5xl lg:text-7xl font-bold pb-10 bg-gradient-to-r from-white via-white to-purple-200 bg-clip-text text-transparent">
+            Our Journey
+            <br /> to Revolutionize
+            <br />
+            University Admissions
+          </h1>
+
+          <p className="text-lg text-white/60 max-w-2xl mb-8">
+            From a simple idea to a global platform helping thousands of
+            students achieve their academic dreams. This is our story of
+            innovation, dedication, and transformation.
+          </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

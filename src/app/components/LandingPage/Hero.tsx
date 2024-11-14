@@ -33,8 +33,7 @@ const Hero = () => {
       data-aos="fade-up"
       className="relative min-h-[90vh] flex items-center justify-center"
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-purple-500/15 via-transparent to-transparent" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.1)_0%,transparent_100%)]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-purple-500/10 via-transparent to-transparent" />
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 py-20 flex flex-col items-center text-center">
         <div className="inline-flex items-center gap-2 bg-white/5 rounded-full mt-24 px-6 py-2 mb-10 border border-white/5">
@@ -73,8 +72,7 @@ const Hero = () => {
         </div>
 
         <div className="relative w-full max-w-6xl">
-          <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-purple-600 rounded-[2rem] blur-2xl opacity-20"></div>
-          <div className="relative rounded-[2rem] bg-white/[0.02] border border-white/5 backdrop-blur-sm overflow-hidden">
+          <div className="relative rounded-[2rem] backdrop-blur-sm overflow-hidden">
             <Image
               src={preview}
               alt="Students at university"

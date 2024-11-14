@@ -88,7 +88,7 @@ const Features: React.FC = () => {
           className="grid grid-cols-1 md:grid-cols-2 gap-3"
         >
           {features.map((feature, index) => (
-            <div key={index} className="group relative">
+            <div key={index} className="group relative" data-aos="fade-up" data-aos-delay={`${300 + 50 * index}`}>
               <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl smooth-animation" />
               <div className="relative p-8 bg-white/[0.02] rounded-2xl border-2 border-white/5 backdrop-blur-sm">
                 <div className="flex items-center mb-6">

@@ -32,7 +32,9 @@ const reasons = [
 
 const WhyChooseUs: React.FC = () => {
   useEffect(() => {
-    AOS.init();
+    AOS.init({
+      once: true,
+    });
   }, []);
 
   return (
@@ -60,7 +62,12 @@ const WhyChooseUs: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
           {reasons.map((reason, index) => (
-            <div key={index} className="group relative" data-aos="fade-up">
+            <div
+              key={index}
+              className="group relative"
+              data-aos="fade-up"
+              data-aos-delay={`${300 + 50 * index}`}
+            >
               <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity smooth-animation rounded-2xl" />
               <div className="relative p-8 bg-white/[0.02] rounded-2xl border-2 border-white/15 backdrop-blur-sm h-full">
                 <div className="flex items-center justify-center w-12 h-12 mb-4 rounded-2xl bg-gradient-to-r from-purple-500/10 to-purple-500/10">

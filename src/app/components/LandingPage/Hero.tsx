@@ -27,7 +27,10 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center">
+    <section
+      data-aos="fade-up"
+      className="relative min-h-[90vh] flex items-center justify-center"
+    >
       <div className="absolute inset-0 bg-gradient-to-b from-purple-500/5 via-transparent to-transparent" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.1)_0%,transparent_100%)]" />
 

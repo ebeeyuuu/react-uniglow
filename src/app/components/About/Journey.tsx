@@ -1,7 +1,10 @@
 "use client";
 
+import { useEffect } from "react";
 import { BsLightbulb, BsRocket, BsGlobe } from "react-icons/bs";
 import { FaUniversity, FaMapMarkedAlt, FaHandshake } from "react-icons/fa";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const milestones = [
   {
@@ -37,20 +40,38 @@ const milestones = [
     extraInfo: {
       icon: FaHandshake,
       title: "Global Outreach",
-      points: ["Partnered with 100+ universities", "Localized resources", "Global community building"],
+      points: [
+        "Partnered with 100+ universities",
+        "Localized resources",
+        "Global community building",
+      ],
     },
   },
 ];
 
 const Journey = () => {
+  useEffect(() => {
+    AOS.init({
+      once: true,
+    });
+  });
+
   return (
     <section className="py-24 relative">
       <div className="max-w-7xl mx-auto px-4 relative">
         <div className="text-center mb-16">
-          <h2 className="text-2xl lg:text-4xl font-bold mb-4 bg-gradient-to-r from-white via-white to-purple-200 bg-clip-text text-transparent">
+          <h2
+            data-aos="fade-up"
+            data-aos-delay="300"
+            className="text-2xl lg:text-4xl font-bold mb-4 bg-gradient-to-r from-white via-white to-purple-200 bg-clip-text text-transparent"
+          >
             Our Journey
           </h2>
-          <p className="text-xs lg:text-base text-white/60 max-w-lg mx-auto">
+          <p
+            data-aos="fade-up"
+            data-aos-delay="350"
+            className="text-xs lg:text-base text-white/60 max-w-lg mx-auto"
+          >
             From inception to innovation, follow our path of transforming the
             education landscape.
           </p>
@@ -62,6 +83,8 @@ const Journey = () => {
           <div className="space-y-24">
             {milestones.map((milestone, index) => (
               <div
+                data-aos="fade-up"
+                data-aos-delay={`${400 + 50 * index}`}
                 key={index}
                 className={`relative flex flex-col md:flex-row items-center gap-8 ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
                   }`}
@@ -78,7 +101,9 @@ const Journey = () => {
                     <h3 className="text-lg lg:text-2xl font-semibold mb-2">
                       {milestone.title}
                     </h3>
-                    <p className="text-xs lg:text-base text-white/60">{milestone.description}</p>
+                    <p className="text-xs lg:text-base text-white/60">
+                      {milestone.description}
+                    </p>
                   </div>
                 </div>
 
@@ -86,7 +111,11 @@ const Journey = () => {
                   <div className="w-4 h-4 rounded-full bg-purple-400" />
                 </div>
 
-                <div className="flex-1 hidden md:flex items-center justify-center text-purple-400/80 text-sm font-medium">
+                <div
+                  data-aos="fade-up"
+                  data-aos-delay={`${400 + 75 * index}`}
+                  className="flex-1 hidden md:flex items-center justify-center text-purple-400/80 text-sm font-medium"
+                >
                   <div className="bg-white/[0.03] p-6 rounded-lg border border-white/10 backdrop-blur-sm">
                     <milestone.extraInfo.icon className="h-3 lg:h-6 w-3 lg:w-6 text-purple-400 mb-2" />
                     <h4 className="text-xs lg:text-base font-semibold mb-2">

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from 'react'
+import React, { useEffect } from "react";
 import { BsStars } from "react-icons/bs";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -9,11 +9,11 @@ const Hero = () => {
   useEffect(() => {
     AOS.init({
       once: true,
-    })
-  })
+    });
+  });
 
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+    <section className="relative pt-32 pb-24 flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-purple-500/10 via-transparent to-transparent" />
       <div className="relative z-10 max-w-7xl mx-auto px-4 py-20">
         <div className="flex flex-col items-center text-center">
@@ -33,7 +33,7 @@ const Hero = () => {
             data-aos-delay="350"
             className="text-5xl lg:text-7xl font-bold pb-10 bg-gradient-to-r from-white via-white to-purple-200 bg-clip-text text-transparent"
           >
-            Empowering 
+            Empowering
             <br /> Student Success
           </h1>
 
@@ -42,12 +42,13 @@ const Hero = () => {
             data-aos-delay="400"
             className="text-lg text-white/60 max-w-lg mb-8"
           >
-            Uniglow is dedicarted to providing resources, guidance, and tools to help students make informed decisions for a brighter future.
+            Uniglow is dedicarted to providing resources, guidance, and tools to
+            help students make informed decisions for a brighter future.
           </p>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

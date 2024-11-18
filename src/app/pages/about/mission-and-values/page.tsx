@@ -6,8 +6,18 @@ import NavBar from "@/app/components/NavBar";
 import Footer from "@/app/components/LandingPage/Footer";
 
 const Hero = lazy(() => import("@/app/components/About/MissionAndValues/Hero"));
-const Mission = lazy(() => import("@/app/components/About/MissionAndValues/Mission"));
-const Values = lazy(() => import("@/app/components/About/MissionAndValues/Values"));
+const Mission = lazy(
+  () => import("@/app/components/About/MissionAndValues/Mission"),
+);
+const Values = lazy(
+  () => import("@/app/components/About/MissionAndValues/Values"),
+);
+const IlluminatedPath = lazy(
+  () => import("@/app/components/About/MissionAndValues/IlluminatedPath"),
+);
+const CommitmentTracker = lazy(
+  () => import("@/app/components/About/MissionAndValues/CommitmentTracker"),
+);
 
 const Home = () => {
   return (
@@ -16,6 +26,8 @@ const Home = () => {
       <Hero />
       <Mission />
       <Values />
+      <IlluminatedPath />
+      <CommitmentTracker />
       <Footer />
     </Suspense>
   );

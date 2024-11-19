@@ -19,7 +19,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1497864149936-d3163f0c0f4b')] bg-cover bg-center opacity-10" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center, rgba(255, 255, 255, 0.1)_0%,transparent_100%)]" />
       <div className="relative z-10 max-w-6xl mx-auto px-4 py-20">
-        <div className="flex flex-col items-center itext-center mb-12">
+        <div className="flex flex-col items-center text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-white/5 rounded-full px-4 py-1.5 mb-6 border border-white/10">
             <BsStars className="w-4 h-4 text-purple-400" />
             <span className="text-xs lg:text-sm font-medium bg-gradient-to-r from-purple-400 to-purple-200 bg-clip-text text-transparent">

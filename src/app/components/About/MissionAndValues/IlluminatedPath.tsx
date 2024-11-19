@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { BsLightbulb, BsRocket, BsGlobe } from "react-icons/bs";
 import { FaUniversity, FaMapMarkedAlt, FaHandshake } from "react-icons/fa";
 import AOS from "aos";
@@ -56,14 +56,17 @@ const milestones = [
 ];
 
 const IlluminatedPath = () => {
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+
   useEffect(() => {
     AOS.init({
       once: true,
     });
-  });
+  }, []);
 
   return (
     <section className="py-24 relative">
+      <div className="absolute inset-0 bg-gradient-to-t from-purple-500/10 via-transparent to-transparent" />
       <div className="max-w-7xl mx-auto px-4 relative">
         <div className="text-center mb-16">
           <h2
@@ -92,15 +95,15 @@ const IlluminatedPath = () => {
                 data-aos="fade-up"
                 data-aos-delay={`${400 + 50 * index}`}
                 key={index}
-                className={`relative flex flex-col md:flex-row items-center gap-8 ${
-                  index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                }`}
+                className={`relative flex flex-col md:flex-row items-center gap-8 ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+                  }`}
               >
-                <div className="flex-1">
+                <div
+                  className={`flex-1 scale-100 hover:scale-105 transition-all duration-300 ease-in-out shadow-2xl ${hoveredIndex === index ? "shadow-purple-950 scale-105 filter brightness-105" : "shadow-none"}`}
+                >
                   <div
-                    className={`p-8 bg-white/[0.02] rounded-2xl border border-white/5 backdrop-blur-sm ${
-                      index % 2 === 0 ? "md:text-right" : "md:text-left"
-                    }`}
+                    className={`p-8 bg-white/[0.02] rounded-2xl border-2 border-white/5 backdrop-blur-sm ${index % 2 === 0 ? "md:text-right" : "md:text-left"
+                      }`}
                   >
                     <milestone.icon className="inline-block h-5 lg:h-8 w-5 lg:w-8 text-purple-400 mb-4" />
                     <div className="text-xs lg:text-sm font-medium text-purple-400 mb-2">
@@ -115,16 +118,25 @@ const IlluminatedPath = () => {
                   </div>
                 </div>
 
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full bg-purple-500/10 border border-purple-500/20 flex items-center justify-center">
+                <div
+                  className={`absolute left-1/2 border-2 transform -translate-x-1/2 w-12 h-12 rounded-full ${hoveredIndex === index
+                      ? "bg-purple-400/30 border-purple-500"
+                      : "bg-purple-500/10 border-purple-500/20"
+                    } flex items-center justify-center cursor-pointer`}
+                  onMouseEnter={() => setHoveredIndex(index)}
+                  onMouseLeave={() => setHoveredIndex(null)}
+                >
                   <div className="w-4 h-4 rounded-full bg-purple-400" />
                 </div>
 
                 <div
                   data-aos="fade-up"
                   data-aos-delay={`${400 + 75 * index}`}
-                  className="flex-1 hidden md:flex items-center justify-center text-purple-400/80 text-sm font-medium"
+                  className="flex-1 hidden md:flex items-center justify-center text-purple-400/80 text-sm font-medium group"
                 >
-                  <div className="bg-white/[0.03] p-6 rounded-lg border border-white/10 backdrop-blur-sm">
+                  <div
+                    className={`bg-white/[0.03] p-6 rounded-lg border border-white/10 backdrop-blur-sm group-hover:shadow-2xl group-hover:scale-105 transition-all duration-300 ease-in-out shadow-2xl ${hoveredIndex === index ? "shadow-purple-950 scale-105 filter brightness-105" : "shadow-none"}`}
+                  >
                     <milestone.extraInfo.icon className="h-3 lg:h-6 w-3 lg:w-6 text-purple-400 mb-2" />
                     <h4 className="text-xs lg:text-base font-semibold mb-2">
                       {milestone.extraInfo.title}

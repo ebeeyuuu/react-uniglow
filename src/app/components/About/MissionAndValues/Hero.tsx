@@ -14,7 +14,7 @@ const Hero = () => {
 
   return (
     <section className="relative pt-32 pb-24 flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-purple-500/10 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-purple-500/20 via-transparent to-transparent" />
       <div className="relative z-10 max-w-7xl mx-auto px-4 py-20">
         <div className="flex flex-col items-center text-center">
           <div

@@ -3,7 +3,7 @@ import { BsEnvelope, BsMap, BsTelephone } from "react-icons/bs";
 
 const ContactUs = () => {
   return (
-    <section className="py-24 relative flex justify-center items-center">
+    <section className="pt-24 relative flex justify-center items-center">
       <div className="absolute inset-0 bg-gradient-to-t from-purple-500/15 via-transparent to-transparent" />
       <div className="max-w-4xl mx-auto px-4 relative flex flex-col md:flex-row items-center justify-center space-y-12 md:space-y-0 md:space-x-12">
         <div className="text-left md:w-1/2">

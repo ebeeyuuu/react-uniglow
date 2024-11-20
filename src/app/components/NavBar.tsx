@@ -278,7 +278,7 @@ const NavBar = () => {
 
   return (
     <div className="flex justify-center items-center w-full">
-      <nav className="w-full py-7 px-5 flex justify-between items-center bg-[#0f1e5b] shadow-2xl">
+      <nav className="w-full py-8 px-7 flex justify-between items-center bg-black border-b-2 border-white/[0.1]">
         <Link href="/" className="text-sm lg:text-lg font-semibold">
           Uniglow
         </Link>
@@ -398,8 +398,8 @@ const NavBar = () => {
             <button
               onClick={() => handleMenuOpen("explore")}
               className={`
-                px-4 py-2 border border-white text-xs lg:text-sm 
-                hover:bg-white rounded-full hover:text-black smooth-animation font-semibold 
+                px-4 py-2 text-xs lg:text-sm 
+                rounded-full smooth-animation font-semibold 
               `}
             >
               Explore

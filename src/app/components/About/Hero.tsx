@@ -16,7 +16,7 @@ const Hero = () => {
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f')] bg-cover bg-center opacity-20" />
       <div className="absolute inset-0 bg-gradient-to-b from-purple-500/5 via-transparent to-transparent" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0, 0, 0)_0%,transparent_100%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(2, 2, 2)_0%,transparent_100%)]" />
 
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_30%,black_70%)] pointer-events-none" />
 

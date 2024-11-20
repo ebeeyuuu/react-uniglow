@@ -52,7 +52,7 @@ const Values = () => {
             THe principles that guide us in our mission to transform education
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {values.map((value, index) => (
             <div
               data-aos="fade-up"

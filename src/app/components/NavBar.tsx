@@ -3,7 +3,6 @@
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { Sling as Hamburger } from "hamburger-react";
-import { usePathname } from "next/navigation";
 import { navItems } from "@/data";
 import NavModal from "./NavModal";
 import { motion, AnimatePresence } from "framer-motion";
@@ -62,28 +61,28 @@ const DropdownMenu = ({ open, items, onClose }) => {
           animate="visible"
           exit="hidden"
           variants={menuVariants}
-          className="absolute top-0 origin-top mt-14 w-72 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-50 py-7 px-3"
+          className="absolute top-0 origin-top mt-14 w-72 rounded-md shadow-lg border border-white/[0.05] bg-gradient-to-b from-black via-black/50 to-purple-950/50 ring-1 ring-black ring-opacity-5 focus:outline-none z-50 py-7 px-3"
         >
           <div className="py-1">
             {items.map(({ href, label, icon: Icon }) => (
               <Link
                 key={href}
                 href={href}
-                className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-all duration-300 ease-in-out rounded-full"
+                className="flex items-center px-4 py-2 text-sm text-gray-700 scale-100 hover:scale-105 transition-all duration-300 ease-in-out rounded-full"
               >
                 <div className="mr-3 p-1 rounded-[10px]">
-                  <Icon size={20} />
+                  <Icon className="w-3 h-3 lg:w-6 lg:h-6 text-purple-400" />
                 </div>
-                {label}
+                <p className="text-xs lg:text-base text-white">{label}</p>
               </Link>
             ))}
           </div>
           <button
             onClick={() => onClose()}
-            className="absolute bottom-2 right-2 p-1 rounded-full hover:bg-gray-200"
+            className="absolute bottom-2 right-2 p-1 rounded-full scale-100 hover:scale-105 smooth-animation"
             aria-label="Close menu"
           >
-            <FaTimes size={20} className="text-gray-600" />
+            <FaTimes size={20} className="text-gray-300" />
           </button>
         </motion.div>
       )}
@@ -354,39 +353,43 @@ const NavBar = () => {
                       animate="visible"
                       exit="hidden"
                       variants={menuVariants}
-                      className="absolute top-0 origin-top mt-14 w-72 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-50 py-7 px-3 flex flex-col justify-center items-center"
+                      className="absolute top-0 origin-top mt-14 w-72 rounded-md shadow-lg border border-white/[0.05] bg-gradient-to-b from-black via-black/50 to-purple-950/50 ring-1 ring-black ring-opacity-5 focus:outline-none z-50 py-7 px-3"
                     >
                       <div className="py-1 mr-2">
                         {programItems.map(({ href, label, icon: Icon }) => (
                           <Link
                             key={href}
                             href={href}
-                            className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-all duration-300 ease-in-out rounded-full"
+                            className="flex items-center px-4 py-2 text-sm text-gray-700 scale-100 hover:scale-105 transition-all duration-300 ease-in-out rounded-full"
                           >
                             <div className="mr-3 p-1 rounded-[10px]">
-                              <Icon size={20} />
+                              <Icon className="w-3 h-3 lg:w-6 lg:h-6 text-purple-400" />
                             </div>
-                            {label}
+                            <p className="text-xs lg:text-base text-white">
+                              {label}
+                            </p>
                           </Link>
                         ))}
                       </div>
-                      <div className="py-1 border-t border-gray-200">
+                      <div className="py-1 border-t-[1px] border-zinc-600">
                         <Link
                           href="/programs"
-                          className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-all duration-300 ease-in-out rounded-full"
+                          className="flex items-center px-4 py-2 text-sm text-gray-700 scale-100 hover:scale-105 transition-all duration-300 ease-in-out rounded-full"
                         >
                           <div className="mr-3 p-1 rounded-[10px]">
-                            <FaThList size={20} />
+                            <FaThList className="w-3 h-3 lg:w-6 lg:h-6 text-purple-400" />
                           </div>
-                          See all programs
+                          <p className="text-xs lg:text-base text-white">
+                            See all programs
+                          </p>
                         </Link>
                       </div>
                       <button
                         onClick={() => setProgramsOpen(false)}
-                        className="absolute bottom-2 right-2 p-1 rounded-full hover:bg-gray-200"
+                        className="absolute bottom-2 right-2 p-1 rounded-full scale-100 hover:scale-105 smooth-animation"
                         aria-label="Close menu"
                       >
-                        <FaTimes size={20} className="text-gray-600" />
+                        <FaTimes size={20} className="text-gray-300" />
                       </button>
                     </motion.div>
                   )}
@@ -411,48 +414,54 @@ const NavBar = () => {
                   animate="visible"
                   exit="hidden"
                   variants={menuVariants}
-                  className="absolute z-10 right-0 mt-2 w-72 origin-top-right rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none py-7 px-3"
+                  className="absolute top-0 right-0 origin-top-right mt-14 w-72 rounded-md shadow-lg border border-white/[0.05] bg-gradient-to-b from-black via-black/50 to-purple-950/50 ring-1 ring-black ring-opacity-5 focus:outline-none z-50 py-7 px-3"
                 >
                   <div className="py-1">
                     {exploreItems.map(({ href, label, icon: Icon }) => (
                       <Link
                         key={href}
                         href={href}
-                        className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                        className="flex items-center px-4 py-2 text-sm text-gray-700 scale-100 hover:scale-105 transition-all duration-300 ease-in-out rounded-full"
                       >
                         <div className="mr-3 p-1 rounded-[10px]">
-                          <Icon size={20} />
+                          <Icon className="w-3 h-3 lg:w-6 lg:h-6 text-purple-400" />
                         </div>
-                        {label}
+                        <p className="text-xs lg:text-base text-white">
+                          {label}
+                        </p>
                       </Link>
                     ))}
                   </div>
-                  <div className="py-1 border-t border-gray-200">
+                  <div className="py-1 border-t-[1px] border-zinc-600">
                     <Link
                       href="/explore"
-                      className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                      className="flex items-center px-4 py-2 text-sm text-white scale-100 hover:scale-105 smooth-animation"
                     >
                       <div className="mr-3 p-1 rounded-[10px]">
-                        <FaListUl size={20} />
+                        <FaListUl className="w-3 h-3 lg:w-6 lg:h-6 text-purple-400" />
                       </div>
-                      See all features
+                      <p className="text-xs lg:text-base text-white">
+                        See all features
+                      </p>
                     </Link>
                     <Link
                       href="/contact-support"
-                      className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                      className="flex items-center px-4 py-2 text-sm text-white scale-100 hover:scale-105 smooth-animation"
                     >
                       <div className="mr-3 p-1 rounded-[10px]">
-                        <FaHeadset size={20} />
+                        <FaHeadset className="w-3 h-3 lg:w-6 lg:h-6 text-purple-400" />
                       </div>
-                      Contact support
+                      <p className="text-xs lg:text-base text-white">
+                        Contact support
+                      </p>
                     </Link>
                   </div>
                   <button
                     onClick={() => setExploreOpen(false)}
-                    className="absolute bottom-2 right-2 p-1 rounded-full hover:bg-gray-200"
+                    className="absolute bottom-2 right-2 p-1 rounded-full scale-100 hover:scale-105 smooth-animation"
                     aria-label="Close menu"
                   >
-                    <FaTimes size={20} className="text-gray-600" />
+                    <FaTimes size={20} className="text-gray-300" />
                   </button>
                 </motion.div>
               )}

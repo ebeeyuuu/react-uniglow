@@ -7,7 +7,6 @@ import Image from "next/image";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-
 const team = [
   {
     name: "Ean James Yu",
@@ -107,33 +106,16 @@ const Team = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/5 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-4 relative">
-        <div className="text-center mb-16">
-          <h2
-            data-aos="fade-up"
-            data-aos-delay="300"
-            className="text-4xl font-bold mb-4 bg-gradient-to-r from-white via-white to-purple-200 bg-clip-text text-transparent"
-          >
-            Meet Our Team
-          </h2>
-          <p
-            data-aos="fade-up"
-            data-aos-delay="350"
-            className="text-white/60 max-w-2xl mx-auto"
-          >
-            The passionate individuals behind our mission to transform education
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 max-w-md md:max-w-none mx-auto md:grid-cols-3 xl:grid-cols-5 gap-6">
           {team.map((member, index) => (
             <div
               data-aos="fade-up"
               data-aos-delay={`${400 + 50 * index}`}
               key={index}
-              className="group relative"
+              className="group relative h-full"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl" />
-              <div className="relative bg-white/[0.02] rounded-2xl border border-white/5 backdrop-blur-sm overflow-hidden">
+              <div className="relative bg-white/[0.02] rounded-2xl h-full border border-white/5 backdrop-blur-sm overflow-hidden flex flex-col">
                 <div className="relative aspect-square">
                   <Image
                     src={member.image}
@@ -142,26 +124,30 @@ const Team = () => {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="p-6">
-                  <h3 className="text-base md:text-lg lg:text-xl font-semibold mb-1">{member.name}</h3>
+                <div className="p-6 flex-grow">
+                  <h3 className="text-base md:text-lg lg:text-xl font-semibold mb-1">
+                    {member.name}
+                  </h3>
                   <div className="text-purple-400 text-sm mb-3">
                     {member.role}
                   </div>
-                  <p className="text-xs md:text-sm lg:text-base text-white/60 mb-4">{member.bio}</p>
-                  <div className="flex gap-3">
-                    <a
-                      href="#"
-                      className="text-white/40 hover:text-purple-400 transition-colors"
-                    >
-                      <BsLinkedin className="w-5 h-5" />
-                    </a>
-                    <a
-                      href="#"
-                      className="text-white/40 hover:text-purple-400 transition-colors"
-                    >
-                      <BsTwitter className="w-5 h-5" />
-                    </a>
-                  </div>
+                  <p className="text-xs md:text-sm lg:text-base text-white/60 mb-6">
+                    {member.bio}
+                  </p>
+                </div>
+                <div className="absolute bottom-4 left-6 flex gap-3">
+                  <a
+                    href="#"
+                    className="text-white/40 hover:text-purple-400 transition-colors"
+                  >
+                    <BsLinkedin className="w-5 h-5" />
+                  </a>
+                  <a
+                    href="#"
+                    className="text-white/40 hover:text-purple-400 transition-colors"
+                  >
+                    <BsTwitter className="w-5 h-5" />
+                  </a>
                 </div>
               </div>
             </div>

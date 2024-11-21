@@ -20,6 +20,8 @@ import {
   FaHandshake,
   FaDonate,
   FaQuestionCircle,
+  FaHeadset,
+  FaListUl,
 } from "react-icons/fa";
 import { FaBookOpen } from "react-icons/fa6";
 import { RiTeamFill } from "react-icons/ri";
@@ -32,6 +34,65 @@ interface NavModalProps {
   isOpen: boolean;
   setIsOpen: Function;
 }
+
+const menuVariants = {
+  hidden: {
+    opacity: 0,
+    y: -20,
+    transition: {
+      type: "spring",
+      stiffness: 300,
+      damping: 30,
+    },
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 300,
+      damping: 30,
+    },
+  },
+};
+
+const DropdownMenu = ({ open, items, onClose }) => {
+  return (
+    <AnimatePresence>
+      {open && (
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          exit="hidden"
+          variants={menuVariants}
+          className="absolute top-0 origin-top mt-14 w-72 rounded-md shadow-lg border border-white/[0.05] bg-gradient-to-b from-black via-black/50 to-purple-950/50 ring-1 ring-black ring-opacity-5 focus:outline-none z-50 py-7 px-3"
+        >
+          <div className="py-1">
+            {items.map(({ href, label, icon: Icon }) => (
+              <Link
+                key={href}
+                href={href}
+                className="flex items-center px-4 py-2 text-sm text-gray-700 scale-100 hover:scale-105 transition-all duration-300 ease-in-out rounded-full"
+              >
+                <div className="mr-3 p-1 rounded-[10px]">
+                  <Icon className="w-3 h-3 lg:w-6 lg:h-6 text-purple-400" />
+                </div>
+                <p className="text-xs lg:text-base text-white">{label}</p>
+              </Link>
+            ))}
+          </div>
+          <button
+            onClick={() => onClose()}
+            className="absolute bottom-2 right-2 p-1 rounded-full scale-100 hover:scale-105 smooth-animation"
+            aria-label="Close menu"
+          >
+            <FaTimes size={20} className="text-gray-300" />
+          </button>
+        </motion.div>
+      )}
+    </AnimatePresence>
+  );
+};
 
 const NavModal: React.FC<NavModalProps> = ({ isOpen, setIsOpen }) => {
   const [visible, setVisible] = useState(isOpen);
@@ -261,22 +322,23 @@ const NavModal: React.FC<NavModalProps> = ({ isOpen, setIsOpen }) => {
 
   return (
     <nav
-      className={`fixed inset-0 top-0 right-0 h-[100vh] bg-black/50 backdrop-blur-xl flex flex-col justify-center items-center transition-transform duration-300 ${isOpen ? "translate-x-0" : "translate-x-full"
-        } ${visible ? "opacity-100" : "opacity-0"} z-50`}
+      className={`fixed inset-0 top-0 right-0 h-[100vh] bg-black/50 backdrop-blur-xl flex flex-col justify-center items-center transition-transform duration-300 ${
+        isOpen ? "translate-x-0" : "translate-x-full"
+      } ${visible ? "opacity-100" : "opacity-0"} z-50`}
       onTransitionEnd={handleTransitionEnd}
     >
       <button
         onClick={() => setIsOpen(false)}
-        className="b-10 font-semibold text-[25px] scale-100 px-5 py-3 hover:scale-110 transition-all duration-300 ease-in-out"
+        className="b-10 font-semibold text-[25px] scale-100 px-5 py-3 hover:scale-110 transition-all duration-300 ease-in-out -mt-24"
       >
         Close
       </button>
       {navItems.map((item, index) => (
         <div key={index} className="relative flex justify-center items-center">
           {item.text === "Programs" ||
-            item.text === "About Us" ||
-            item.text === "Contact" ||
-            item.text === "Donate" ? (
+          item.text === "About Us" ||
+          item.text === "Contact" ||
+          item.text === "Donate" ? (
             <button
               onClick={() =>
                 handleMenuOpen(
@@ -293,10 +355,11 @@ const NavModal: React.FC<NavModalProps> = ({ isOpen, setIsOpen }) => {
                     flex flex-row gap-x-3 items-center px-5 py-3 rounded-[10px] 
                     transition-all duration-300 ease-in-out bg-transparent hover:bg-white
                     hover:text-black
-                    ${activeLink === item.href
-                  ? "bg-white text-black"
-                  : "gradient-hover"
-                }
+                    ${
+                      activeLink === item.href
+                        ? "bg-white text-black"
+                        : "gradient-hover"
+                    }
                   `}
             >
               {item.text}
@@ -312,109 +375,31 @@ const NavModal: React.FC<NavModalProps> = ({ isOpen, setIsOpen }) => {
 
           {item.text === "About Us" && (
             <AnimatePresence>
-              {aboutOpen && (
-                <motion.div
-                  initial="hidden"
-                  animate="visible"
-                  exit="hidden"
-                  variants={menuVariants}
-                  className="absolute top-0 origin-top mt-14 w-72 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-50 py-7 px-3"
-                >
-                  <div className="py-1">
-                    {aboutItems.map(({ href, label, icon: Icon }) => (
-                      <a
-                        key={href}
-                        href={href}
-                        className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                      >
-                        <div className="mr-3 p-1 rounded-[10px]">
-                          <Icon size={20} />
-                        </div>
-                        {label}
-                      </a>
-                    ))}
-                  </div>
-                  <button
-                    onClick={() => setAboutOpen(false)}
-                    className="absolute bottom-2 right-2 p-1 rounded-full hover:bg-gray-200"
-                    aria-label="Close menu"
-                  >
-                    <FaTimes size={20} className="text-gray-600" />
-                  </button>
-                </motion.div>
-              )}
+              <DropdownMenu
+                open={aboutOpen}
+                items={aboutItems}
+                onClose={() => setAboutOpen(false)}
+              />
             </AnimatePresence>
           )}
 
           {item.text === "Contact" && (
             <AnimatePresence>
-              {contactOpen && (
-                <motion.div
-                  initial="hidden"
-                  animate="visible"
-                  exit="hidden"
-                  variants={menuVariants}
-                  className="absolute top-0 origin-top mt-14 w-72 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-50 py-7 px-3"
-                >
-                  <div className="py-1">
-                    {contactUsItems.map(({ href, label, icon: Icon }) => (
-                      <a
-                        key={href}
-                        href={href}
-                        className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                      >
-                        <div className="mr-3 p-1 rounded-[10px]">
-                          <Icon size={20} />
-                        </div>
-                        {label}
-                      </a>
-                    ))}
-                  </div>
-                  <button
-                    onClick={() => setContactOpen(false)}
-                    className="absolute bottom-2 right-2 p-1 rounded-full hover:bg-gray-200"
-                    aria-label="Close menu"
-                  >
-                    <FaTimes size={20} className="text-gray-600" />
-                  </button>
-                </motion.div>
-              )}
+              <DropdownMenu
+                open={contactOpen}
+                items={contactUsItems}
+                onClose={() => setContactOpen(false)}
+              />
             </AnimatePresence>
           )}
 
           {item.text === "Donate" && (
             <AnimatePresence>
-              {donateOpen && (
-                <motion.div
-                  initial="hidden"
-                  animate="visible"
-                  exit="hidden"
-                  variants={menuVariants}
-                  className="absolute top-0 origin-top mt-14 w-72 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-50 py-7 px-3"
-                >
-                  <div className="py-1">
-                    {donateItems.map(({ href, label, icon: Icon }) => (
-                      <a
-                        key={href}
-                        href={href}
-                        className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                      >
-                        <div className="mr-3 p-1 rounded-[10px]">
-                          <Icon size={20} />
-                        </div>
-                        {label}
-                      </a>
-                    ))}
-                  </div>
-                  <button
-                    onClick={() => setDonateOpen(false)}
-                    className="absolute bottom-2 right-2 p-1 rounded-full hover:bg-gray-200"
-                    aria-label="Close menu"
-                  >
-                    <FaTimes size={20} className="text-gray-600" />
-                  </button>
-                </motion.div>
-              )}
+              <DropdownMenu
+                open={donateOpen}
+                items={donateItems}
+                onClose={() => setDonateOpen(false)}
+              />
             </AnimatePresence>
           )}
 
@@ -426,39 +411,43 @@ const NavModal: React.FC<NavModalProps> = ({ isOpen, setIsOpen }) => {
                   animate="visible"
                   exit="hidden"
                   variants={menuVariants}
-                  className="absolute top-0 origin-top mt-14 w-72 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-50 py-7 px-3"
+                  className="absolute top-0 origin-top mt-14 w-72 rounded-md shadow-lg border border-white/[0.05] bg-gradient-to-b from-black via-black/50 to-purple-950/50 ring-1 ring-black ring-opacity-5 focus:outline-none z-50 py-7 px-3"
                 >
-                  <div className="py-1">
+                  <div className="py-1 mr-2">
                     {programItems.map(({ href, label, icon: Icon }) => (
-                      <a
+                      <Link
                         key={href}
                         href={href}
-                        className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                        className="flex items-center px-4 py-2 text-sm text-gray-700 scale-100 hover:scale-105 transition-all duration-300 ease-in-out rounded-full"
                       >
                         <div className="mr-3 p-1 rounded-[10px]">
-                          <Icon size={20} />
+                          <Icon className="w-3 h-3 lg:w-6 lg:h-6 text-purple-400" />
                         </div>
-                        {label}
-                      </a>
+                        <p className="text-xs lg:text-base text-white">
+                          {label}
+                        </p>
+                      </Link>
                     ))}
                   </div>
-                  <div className="py-1 border-t border-gray-200">
-                    <a
+                  <div className="py-1 border-t-[1px] border-zinc-600">
+                    <Link
                       href="/programs"
-                      className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                      className="flex items-center px-4 py-2 text-sm text-gray-700 scale-100 hover:scale-105 transition-all duration-300 ease-in-out rounded-full"
                     >
                       <div className="mr-3 p-1 rounded-[10px]">
-                        <FaThList size={20} />
+                        <FaThList className="w-3 h-3 lg:w-6 lg:h-6 text-purple-400" />
                       </div>
-                      See all programs
-                    </a>
+                      <p className="text-xs lg:text-base text-white">
+                        See all programs
+                      </p>
+                    </Link>
                   </div>
                   <button
                     onClick={() => setProgramsOpen(false)}
-                    className="absolute bottom-2 right-2 p-1 rounded-full hover:bg-gray-200"
+                    className="absolute bottom-2 right-2 p-1 rounded-full scale-100 hover:scale-105 smooth-animation"
                     aria-label="Close menu"
                   >
-                    <FaTimes size={20} className="text-gray-600" />
+                    <FaTimes size={20} className="text-gray-300" />
                   </button>
                 </motion.div>
               )}
@@ -480,28 +469,52 @@ const NavModal: React.FC<NavModalProps> = ({ isOpen, setIsOpen }) => {
               animate="visible"
               exit="hidden"
               variants={menuVariants}
-              className="absolute top-0 origin-top mt-14 w-72 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-50 py-7 px-3"
+              className="absolute top-0 origin-top mt-14 w-72 rounded-md shadow-lg border border-white/[0.05] bg-gradient-to-b from-black via-black/50 to-purple-950/50 ring-1 ring-black ring-opacity-5 focus:outline-none z-50 py-7 px-3"
             >
               <div className="py-1">
                 {exploreItems.map(({ href, label, icon: Icon }) => (
-                  <a
+                  <Link
                     key={href}
                     href={href}
-                    className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    className="flex items-center px-4 py-2 text-sm text-gray-700 scale-100 hover:scale-105 transition-all duration-300 ease-in-out rounded-full"
                   >
                     <div className="mr-3 p-1 rounded-[10px]">
-                      <Icon size={20} />
+                      <Icon className="w-3 h-3 lg:w-6 lg:h-6 text-purple-400" />
                     </div>
-                    {label}
-                  </a>
+                    <p className="text-xs lg:text-base text-white">{label}</p>
+                  </Link>
                 ))}
+              </div>
+              <div className="py-1 border-t-[1px] border-zinc-600">
+                <Link
+                  href="/explore"
+                  className="flex items-center px-4 py-2 text-sm text-white scale-100 hover:scale-105 smooth-animation"
+                >
+                  <div className="mr-3 p-1 rounded-[10px]">
+                    <FaListUl className="w-3 h-3 lg:w-6 lg:h-6 text-purple-400" />
+                  </div>
+                  <p className="text-xs lg:text-base text-white">
+                    See all features
+                  </p>
+                </Link>
+                <Link
+                  href="/contact-support"
+                  className="flex items-center px-4 py-2 text-sm text-white scale-100 hover:scale-105 smooth-animation"
+                >
+                  <div className="mr-3 p-1 rounded-[10px]">
+                    <FaHeadset className="w-3 h-3 lg:w-6 lg:h-6 text-purple-400" />
+                  </div>
+                  <p className="text-xs lg:text-base text-white">
+                    Contact support
+                  </p>
+                </Link>
               </div>
               <button
                 onClick={() => setExploreOpen(false)}
-                className="absolute bottom-2 right-2 p-1 rounded-full hover:bg-gray-200"
+                className="absolute bottom-2 right-2 p-1 rounded-full scale-100 hover:scale-105 smooth-animation"
                 aria-label="Close menu"
               >
-                <FaTimes size={20} className="text-gray-600" />
+                <FaTimes size={20} className="text-gray-300" />
               </button>
             </motion.div>
           )}

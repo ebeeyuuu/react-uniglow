@@ -65,7 +65,7 @@ const DropdownMenu = ({ open, items, onClose }) => {
           animate="visible"
           exit="hidden"
           variants={menuVariants}
-          className="absolute top-0 origin-top mt-14 w-72 rounded-md shadow-lg border border-white/[0.05] bg-gradient-to-b from-black via-black/50 to-purple-950/50 ring-1 ring-black ring-opacity-5 focus:outline-none z-50 py-7 px-3"
+          className="absolute top-0 origin-top mt-14 w-72 rounded-md shadow-lg border border-white/[0.05] bg-gradient-to-b from-black via-65% via-black/50 to-purple-950/50 backdrop-blur-3xl ring-1 ring-black ring-opacity-5 focus:outline-none z-50 py-7 px-3"
         >
           <div className="py-1">
             {items.map(({ href, label, icon: Icon }) => (
@@ -322,9 +322,8 @@ const NavModal: React.FC<NavModalProps> = ({ isOpen, setIsOpen }) => {
 
   return (
     <nav
-      className={`fixed inset-0 top-0 right-0 h-[100vh] bg-black/50 backdrop-blur-xl flex flex-col justify-center items-center transition-transform duration-300 ${
-        isOpen ? "translate-x-0" : "translate-x-full"
-      } ${visible ? "opacity-100" : "opacity-0"} z-50`}
+      className={`fixed inset-0 top-0 right-0 h-[100vh] bg-black/50 backdrop-blur-xl flex flex-col justify-center items-center transition-transform duration-300 ${isOpen ? "translate-x-0" : "translate-x-full"
+        } ${visible ? "opacity-100" : "opacity-0"} z-50`}
       onTransitionEnd={handleTransitionEnd}
     >
       <button
@@ -336,9 +335,9 @@ const NavModal: React.FC<NavModalProps> = ({ isOpen, setIsOpen }) => {
       {navItems.map((item, index) => (
         <div key={index} className="relative flex justify-center items-center">
           {item.text === "Programs" ||
-          item.text === "About Us" ||
-          item.text === "Contact" ||
-          item.text === "Donate" ? (
+            item.text === "About Us" ||
+            item.text === "Contact" ||
+            item.text === "Donate" ? (
             <button
               onClick={() =>
                 handleMenuOpen(
@@ -355,11 +354,10 @@ const NavModal: React.FC<NavModalProps> = ({ isOpen, setIsOpen }) => {
                     flex flex-row gap-x-3 items-center px-5 py-3 rounded-[10px] 
                     transition-all duration-300 ease-in-out bg-transparent hover:bg-white
                     hover:text-black
-                    ${
-                      activeLink === item.href
-                        ? "bg-white text-black"
-                        : "gradient-hover"
-                    }
+                    ${activeLink === item.href
+                  ? "bg-white text-black"
+                  : "gradient-hover"
+                }
                   `}
             >
               {item.text}
@@ -411,7 +409,7 @@ const NavModal: React.FC<NavModalProps> = ({ isOpen, setIsOpen }) => {
                   animate="visible"
                   exit="hidden"
                   variants={menuVariants}
-                  className="absolute top-0 origin-top mt-14 w-72 rounded-md shadow-lg border border-white/[0.05] bg-gradient-to-b from-black via-black/50 to-purple-950/50 ring-1 ring-black ring-opacity-5 focus:outline-none z-50 py-7 px-3"
+                  className="absolute top-0 origin-top mt-14 w-72 rounded-md shadow-lg border border-white/[0.05] bg-gradient-to-b from-black via-65% via-black/50 to-purple-950/50 backdrop-blur-3xl ring-1 ring-black ring-opacity-5 focus:outline-none z-50 py-7 px-3"
                 >
                   <div className="py-1 mr-2">
                     {programItems.map(({ href, label, icon: Icon }) => (
@@ -469,7 +467,7 @@ const NavModal: React.FC<NavModalProps> = ({ isOpen, setIsOpen }) => {
               animate="visible"
               exit="hidden"
               variants={menuVariants}
-              className="absolute top-0 origin-top mt-14 w-72 rounded-md shadow-lg border border-white/[0.05] bg-gradient-to-b from-black via-black/50 to-purple-950/50 ring-1 ring-black ring-opacity-5 focus:outline-none z-50 py-7 px-3"
+              className="absolute top-0 origin-top mt-14 w-72 rounded-md shadow-lg border border-white/[0.05] bg-gradient-to-b from-black via-65% via-black/50 to-purple-950/50 backdrop-blur-3xl ring-1 ring-black ring-opacity-5 focus:outline-none z-50 py-7 px-3"
             >
               <div className="py-1">
                 {exploreItems.map(({ href, label, icon: Icon }) => (

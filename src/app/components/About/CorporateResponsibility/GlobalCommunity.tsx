@@ -15,21 +15,18 @@ const features = [
     icon: BsPeople,
     title: "Students Forums",
     description: "Engage with a supportive network of students globally.",
-    position: { x: "10%", y: "40%" },
   },
   {
     icon: BsGlobe,
     title: "Collaborative Projects",
     description:
       "Work on real-world challenges with peers from diverse backgrounds.",
-    position: { x: "50%", y: "30%" },
   },
   {
     icon: FaHandshake,
     title: "Cultural Exchange",
     description:
       "Experience the perspectives of students from around the world.",
-    position: { x: "80%", y: "60%" },
   },
 ];
 
@@ -419,14 +416,37 @@ const GlobalCommunity = () => {
       color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
   ];
- 
+
   return (
-    <div className="flex flex-row items-center justify-center py-20 h-screen md:h-auto bg-black relative w-full">
+    <div className="flex flex-col items-center justify-center bg-black relative w-full">
       <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-full md:h-[40rem] px-4">
         <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent to-black z-40" />
         <div className="absolute w-full -bottom-20 h-72 md:h-full z-10">
           <World data={sampleArcs} globeConfig={globeConfig} />
         </div>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {features.map((feature, index) => (
+          <div
+            key={index}
+            data-aos="fade-up"
+            data-aos-delay={`${400 + 50 * index}`}
+            className="group relative"
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-oopacity rounded-2xl smooth-animation" />
+            <div className="relative p-8 bg-white[0.02] rounded-2xl border border-white/10 backdrop-blur-sm h-full">
+              <div className="flex items-center justify-center w-12 h-12 mb-6 rounded-2xl bg-gradient-to-r from-purple-500/20 to-purple-500/10">
+                <feature.icon className="h-6 w-6 text-purple-400" />
+              </div>
+              <h3 className="text-base lg:text-xl font-semibold mb-4">
+                {feature.title}
+              </h3>
+              <p className="text-xs lg:text-base text-white/60">
+                {feature.description}
+              </p>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

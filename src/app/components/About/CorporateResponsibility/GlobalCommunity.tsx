@@ -15,21 +15,21 @@ const features = [
     icon: BsPeople,
     title: "Students Forums",
     description: "Engage with a supportive network of students globally.",
-    className: "top-[20%] left-[20%]",
+    className: "top-[0%] left-[5%]",
   },
   {
     icon: BsGlobe,
     title: "Collaborative Projects",
     description:
       "Work on real-world challenges with peers from diverse backgrounds.",
-    className: "top-[30%] right-[20%]",
+    className: "top-[10%] right-[10%]",
   },
   {
     icon: FaHandshake,
     title: "Cultural Exchange",
     description:
       "Experience the perspectives of students from around the world.",
-    className: "bottom-[10%] left-[40%]",
+    className: "bottom-[0%] left-[30%]",
   },
 ];
 
@@ -424,12 +424,14 @@ const GlobalCommunity = () => {
     <div className="flex flex-col items-center justify-center bg-black relative w-full">
       <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-full md:h-[40rem] px-4">
         <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent to-black z-40" />
-        <div className="absolute aspect-square w-full -bottom-20 h-72 md:h-full z-10">
-          <World data={sampleArcs} globeConfig={globeConfig} />
+        <div className="absolute inset-0 flex items-center justify-center -bottom-20 z-10">
+          <div className="w-full max-w-4xl aspect-square">
+            <World data={sampleArcs} globeConfig={globeConfig} />
+          </div>
         </div>
       </div>
       <div className="absolute top-0 left-0 w-full h-full z-40 pointer-events-none">
-        <div className="relative w-full h-full">
+        <div className="relative w-full h-full max-w-7xl mx-auto px-4">
           {features.map((feature, index) => (
             <div
               key={index}

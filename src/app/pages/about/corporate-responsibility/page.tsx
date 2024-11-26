@@ -5,24 +5,12 @@ import Loading from "@/app/components/Loading";
 import NavBar from "@/app/components/NavBar";
 import Footer from "@/app/components/LandingPage/Footer";
 
-const Hero = lazy(
-  () => import("@/app/components/About/CorporateResponsibility/Hero"),
-);
-const EmpoweringStudents = lazy(
-  () => import("@/app/components/About/CorporateResponsibility/EmpoweringStudents"),
-);
-const GlobalCommunity = lazy(
-  () => import("@/app/components/About/CorporateResponsibility/GlobalCommunity"),
-);
-const EthicalPartnerships = lazy(
-  () => import("@/app/components/About/CorporateResponsibility/EthicalPartnerships"),
-);
-const ReducingBarriers = lazy(
-  () => import("@/app/components/About/CorporateResponsibility/ReducingBarriers"),
-);
-const StudentWellness = lazy(
-  () => import("@/app/components/About/CorporateResponsibility/StudentWellness"),
-);
+import Hero from "@/app/components/About/CorporateResponsibility/Hero";
+import EmpoweringStudents from "@/app/components/About/CorporateResponsibility/EmpoweringStudents";
+import GlobalCommunity from "@/app/components/About/CorporateResponsibility/GlobalCommunity";
+import EthicalPartnerships from "@/app/components/About/CorporateResponsibility/EthicalPartnerships";
+import ReducingBarriers from "@/app/components/About/CorporateResponsibility/ReducingBarriers";
+import StudentWellness from "@/app/components/About/CorporateResponsibility/StudentWellness";
 
 const Home = () => {
   return (

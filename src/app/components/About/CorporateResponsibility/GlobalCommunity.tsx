@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import dynamic from "next/dynamic"
+import dynamic from "next/dynamic";
 import { BsGlobe, BsPeople } from "react-icons/bs";
 import { FaHandshake } from "react-icons/fa";
 import AOS from "aos";
@@ -8,25 +8,28 @@ import "aos/dist/aos.css";
 
 const World = dynamic(() => import("./Globe").then((m) => m.World), {
   ssr: false,
-})
+});
 
 const features = [
   {
     icon: BsPeople,
     title: "Students Forums",
     description: "Engage with a supportive network of students globally.",
+    className: "top-[20%] left-[20%]",
   },
   {
     icon: BsGlobe,
     title: "Collaborative Projects",
     description:
       "Work on real-world challenges with peers from diverse backgrounds.",
+    className: "top-[30%] right-[20%]",
   },
   {
     icon: FaHandshake,
     title: "Cultural Exchange",
     description:
       "Experience the perspectives of students from around the world.",
+    className: "bottom-[10%] left-[40%]",
   },
 ];
 
@@ -421,32 +424,34 @@ const GlobalCommunity = () => {
     <div className="flex flex-col items-center justify-center bg-black relative w-full">
       <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-full md:h-[40rem] px-4">
         <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent to-black z-40" />
-        <div className="absolute w-full -bottom-20 h-72 md:h-full z-10">
+        <div className="absolute aspect-square w-full -bottom-20 h-72 md:h-full z-10">
           <World data={sampleArcs} globeConfig={globeConfig} />
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {features.map((feature, index) => (
-          <div
-            key={index}
-            data-aos="fade-up"
-            data-aos-delay={`${400 + 50 * index}`}
-            className="group relative"
-          >
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-oopacity rounded-2xl smooth-animation" />
-            <div className="relative p-8 bg-white[0.02] rounded-2xl border border-white/10 backdrop-blur-sm h-full">
-              <div className="flex items-center justify-center w-12 h-12 mb-6 rounded-2xl bg-gradient-to-r from-purple-500/20 to-purple-500/10">
-                <feature.icon className="h-6 w-6 text-purple-400" />
+      <div className="absolute top-0 left-0 w-full h-full z-40 pointer-events-none">
+        <div className="relative w-full h-full">
+          {features.map((feature, index) => (
+            <div
+              key={index}
+              data-aos="fade-up"
+              data-aos-delay={`${400 + 50 * index}`}
+              className={`absolute group z-50 w-64 pointer-events-none ${feature.className}`}
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl smooth-animation" />
+              <div className="relative p-6 bg-white/[0.02] rounded-2xl border border-white/10 backdrop-blur-sm">
+                <div className="flex items-center justify-center w-12 h-12 mb-6 rounded-2xl bg-gradient-to-r from-purple-500/20 to-purple-500/10">
+                  <feature.icon className="h-6 w-6 text-purple-400" />
+                </div>
+                <h3 className="text-base lg:text-xl font-semibold mb-4">
+                  {feature.title}
+                </h3>
+                <p className="text-xs lg:text-base text-white/60">
+                  {feature.description}
+                </p>
               </div>
-              <h3 className="text-base lg:text-xl font-semibold mb-4">
-                {feature.title}
-              </h3>
-              <p className="text-xs lg:text-base text-white/60">
-                {feature.description}
-              </p>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

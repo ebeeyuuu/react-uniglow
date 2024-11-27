@@ -1,62 +1,98 @@
 import React, { useRef, useState } from "react";
-import { useFrame } from "@react-three/fiber";
-import { animated } from "react-spring";
-import { Mesh } from "three";
+import { useFrame, ThreeEvent } from "@react-three/fiber";
+import { Mesh, Vector3 } from "three";
 import { Text } from "@react-three/drei";
+import { useSpring, animated, config } from "@react-spring/three";
 
 interface BarrierProps {
   name: string;
   solution: string;
+  color?: string | [string, string];
   onRemove: (name: string) => void;
 }
 
-const Barrier: React.FC<BarrierProps> = ({ name, solution, onRemove }) => {
+const Barrier: React.FC<BarrierProps> = ({ 
+  name, 
+  solution, 
+  color = "orange", 
+  onRemove 
+}) => {
   const meshRef = useRef<Mesh>(null);
-  const [hovered, setHovered] = useState(false);
-  const [removed, setRemoved] = useState(false);
-  const [position] = useState<[number, number, number]>([
-    Math.random() * 5,
-    Math.random() * 5,
-    Math.random() * 5,
-  ]);
+  const [isDragging, setIsDragging] = useState(false);
+  const [isRemoved, setIsRemoved] = useState(false);
 
-  const handlePointerDown = (e: React.MouseEvent) => {
+  const [{ position }, positionApi] = useSpring(() => ({
+    position: [0, 0, 0] as Vector3,
+    config: { mass: 1, tension: 170, friction: 26 }
+  }));
+
+  const handlePointerDown = (e: ThreeEvent<PointerEvent>) => {
     e.stopPropagation();
-    setRemoved(true);
-    onRemove(name);
+    setIsDragging(true);
   };
 
-  useFrame(() => {
-    if (meshRef.current && !removed) {
-      meshRef.current.rotation.y += 0.01;
+  const handlePointerUp = () => {
+    if (isDragging) {
+      setIsRemoved(true);
+      onRemove(name);
+      positionApi.start({
+        position: [
+          Math.random() * 20 - 10, 
+          -10, 
+          Math.random() * 20 - 10
+        ]
+      });
+    }
+    setIsDragging(false);
+  };
+
+  useFrame((state) => {
+    if (isDragging && meshRef.current) {
+      const [x, y] = state.mouse;
+      positionApi.start({
+        position: [x * 5, y * 5, 0]
+      });
     }
   });
 
-  if (removed) {
-    return (
-      <animated.mesh position={position}>
-        <boxGeometry args={[1, 1, 1]} />
-        <meshStandardMaterial color="transparent" />
-        <Text position={[0, 1.2, 0]} fontSize={0.2} color="green">
-          {solution}
-        </Text>
-      </animated.mesh>
-    );
-  }
+  const materialProps = Array.isArray(color) 
+    ? { 
+        color: color[0], 
+        emissive: color[1], 
+        emissiveIntensity: 0.2 
+      }
+    : { color };
 
-  return (
+  return !isRemoved ? (
     <animated.mesh
       ref={meshRef}
       position={position}
-      onPointerOver={() => setHovered(true)}
-      onPointerOut={() => setHovered(false)}
       onPointerDown={handlePointerDown}
-      scale={hovered ? 1.1 : 1}
+      onPointerUp={handlePointerUp}
+      scale={isDragging ? 1.05 : 1}
     >
-      <boxGeometry args={[1, 1, 1]} />
-      <meshStandardMaterial color={hovered ? "hotpink" : "orange"} />
-      <Text position={[0, 1.2, 0]} fontSize={0.2} color="white">
+      <boxGeometry args={[2, 2, 0.2]} />
+      <meshStandardMaterial {...materialProps} />
+      <Text 
+        position={[0, 0, 0.11]} 
+        fontSize={0.3} 
+        color="white"
+        anchorX="center"
+        anchorY="middle"
+      >
         {name}
+      </Text>
+    </animated.mesh>
+  ) : (
+    <animated.mesh position={position}>
+      <Text 
+        position={[0, 0, 0]} 
+        fontSize={0.3} 
+        color="green"
+        anchorX="center"
+        anchorY="middle"
+      >
+        {solution}
       </Text>
     </animated.mesh>
   );

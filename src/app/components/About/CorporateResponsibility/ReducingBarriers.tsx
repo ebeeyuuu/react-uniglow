@@ -8,17 +8,47 @@ const barriersData = [
   { name: "Lack of Mentors", solution: "Access to expert mentors." },
   { name: "Time Constraints", solution: "Flexible scheduling options." },
   { name: "Limited Resources", solution: "Comprehensive resources provided." },
-  { name: "Accessibility Issues", solution: "User-friendly design for everyone." },
-  { name: "Knowledge Gaps", solution: "Customized learning paths to fill gaps." },
-  { name: "Complex Processes", solution: "Simplified workflows to ease complexity." },
-  { name: "Lack of Guidance", solution: "Step-by-step guidance at every stage." },
-  { name: "Inconsistent Tools", solution: "Integrated tools for a seamless experience." },
-  { name: "Fear of Failure", solution: "Encouragement and a fail-safe environment." },
-  { name: "Language Barriers", solution: "Localized support and multilingual options." },
-  { name: "Overwhelming Choices", solution: "Curated options to match your needs." },
-  { name: "Technology Limitations", solution: "Accessible solutions for all devices." },
+  {
+    name: "Accessibility Issues",
+    solution: "User-friendly design for everyone.",
+  },
+  {
+    name: "Knowledge Gaps",
+    solution: "Customized learning paths to fill gaps.",
+  },
+  {
+    name: "Complex Processes",
+    solution: "Simplified workflows to ease complexity.",
+  },
+  {
+    name: "Lack of Guidance",
+    solution: "Step-by-step guidance at every stage.",
+  },
+  {
+    name: "Inconsistent Tools",
+    solution: "Integrated tools for a seamless experience.",
+  },
+  {
+    name: "Fear of Failure",
+    solution: "Encouragement and a fail-safe environment.",
+  },
+  {
+    name: "Language Barriers",
+    solution: "Localized support and multilingual options.",
+  },
+  {
+    name: "Overwhelming Choices",
+    solution: "Curated options to match your needs.",
+  },
+  {
+    name: "Technology Limitations",
+    solution: "Accessible solutions for all devices.",
+  },
   { name: "Unclear Goals", solution: "Goal-setting tools and clarity." },
-  { name: "Social Isolation", solution: "Community-focused features for collaboration." },
+  {
+    name: "Social Isolation",
+    solution: "Community-focused features for collaboration.",
+  },
 ];
 
 const ReducingBarriers = () => {
@@ -33,28 +63,44 @@ const ReducingBarriers = () => {
 
   useEffect(() => {
     if (allCleared) {
-      setTimeout(() => setShowSolutions(true), 1000);
+      const timer = setTimeout(() => setShowSolutions(true), 1000);
+      return () => clearTimeout(timer);
     }
-  }, [allCleared]);
+  }, [removedBarriers, allCleared]);
+
+  const getGridPosition = (index: number): [number, number, number] => {
+    const gridColumns = 3; // Default to 3 columns
+    const row = Math.floor(index / gridColumns);
+    const col = index % gridColumns;
+    return [
+      (col - (gridColumns - 1) / 2) * 2.5,
+      -(row - Math.floor(barriersData.length / gridColumns) / 2) * 2.5,
+      0,
+    ];
+  };
 
   return (
-    <div>
-      <Canvas>
+    <div className="w-full h-screen grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-7 gap-4">
+      <Canvas camera={{ position: [0, 0, 20], fov: 75 }}>
         <ambientLight intensity={0.5} />
         <pointLight position={[10, 10, 10]} />
+
         {barriersData.map(({ name, solution }, index) => (
           <Barrier
-            key={index}
+            key={name}
             name={name}
             solution={solution}
             onRemove={handleRemove}
+            position={getGridPosition(index)}
           />
         ))}
-        {showSolutions && allCleared && (
+
+        {showSolutions && (
           <Text position={[0, 2, 0]} fontSize={0.5} color="green">
             All barriers cleared! Solutions are here.
           </Text>
         )}
+
         <OrbitControls />
       </Canvas>
     </div>
@@ -62,4 +108,3 @@ const ReducingBarriers = () => {
 };
 
 export default ReducingBarriers;
-

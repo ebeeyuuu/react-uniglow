@@ -68,30 +68,17 @@ const ReducingBarriers = () => {
     }
   }, [removedBarriers, allCleared]);
 
-  const getGridPosition = (index: number): [number, number, number] => {
-    const gridColumns = 3; // Default to 3 columns
-    const row = Math.floor(index / gridColumns);
-    const col = index % gridColumns;
-    return [
-      (col - (gridColumns - 1) / 2) * 2.5,
-      -(row - Math.floor(barriersData.length / gridColumns) / 2) * 2.5,
-      0,
-    ];
-  };
-
   return (
-    <div className="w-full h-screen grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-7 gap-4">
+    <div className="w-[100vw] h-[100vh] grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-7 gap-4">
       <Canvas camera={{ position: [0, 0, 20], fov: 75 }}>
         <ambientLight intensity={0.5} />
         <pointLight position={[10, 10, 10]} />
 
         {barriersData.map(({ name, solution }, index) => (
           <Barrier
-            key={name}
+            key={index}
             name={name}
             solution={solution}
-            onRemove={handleRemove}
-            position={getGridPosition(index)}
           />
         ))}
 

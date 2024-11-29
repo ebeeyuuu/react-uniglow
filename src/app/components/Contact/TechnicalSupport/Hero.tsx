@@ -1,32 +1,47 @@
 'use client'
 
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { BsArrowRight, BsHeadset, BsLightning, BsChatDots, BsTools, BsTerminal } from 'react-icons/bs'
 import { FaServer } from 'react-icons/fa'
+import DropdownMenu from "@/app/components/UI/DropdownMenu";
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
 const Hero = () => {
+  const [issueType, setIssueType] = useState('');
+  const [priorityLevel, setPriorityLevel] = useState('');
+
   useEffect(() => {
     AOS.init({
       once: true,
     })
   }, [])
 
+  const issueTypes = [
+    { value: 'technical', label: 'Technical Issue' },
+    { value: 'account', label: 'Account Access' },
+    { value: 'billing', label: 'Billing Support' },
+    { value: 'other', label: 'Other' },
+  ]
+
+  const priorityLevels = [
+    { value: 'low', label: 'Low - General Question' },
+    { value: 'medium', label: 'Medium - Minor Issue' },
+    { value: 'high', label: 'High - System Critical' },
+  ]
+
   return (
     <section
       data-aos="fade-up"
       data-aos-delay="300"
       className="relative min-h-screen py-20"
-      style={{ background: '#020202' }}
     >
       <div className="absolute inset-0 bg-gradient-to-b from-purple-500/15 via-transparent to-transparent" />
       <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa')] bg-cover bg-center opacity-10" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0)_0%,rgba(0,0,0,0.8)_100%)]" />
-      
+
       <div className="relative z-10 max-w-7xl mx-auto px-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Column - Hero Content */}
           <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
             <div className="inline-flex items-center gap-2 bg-white/5 rounded-full px-4 py-1.5 mb-6 border border-white/10">
               <BsHeadset className="w-4 h-4 text-purple-400" />
@@ -47,7 +62,7 @@ const Hero = () => {
             <div className="grid grid-cols-2 gap-6 w-full max-w-lg mb-8">
               {[
                 { value: "99.9%", label: "Resolution Rate" },
-                { value: "<5min", label: "Response Time" },
+                { value: "< 5 min", label: "Response Time" },
               ].map((stat, index) => (
                 <div key={index} className="bg-white/5 rounded-xl p-4 border border-white/10">
                   <div className="text-xl lg:text-2xl font-bold bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
@@ -81,11 +96,9 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right Column - Contact Form */}
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-purple-500/5 to-transparent rounded-3xl" />
             <div className="relative p-12 rounded-3xl border border-white/10 backdrop-blur-sm">
-              <h3 className="text-xl lg:text-3xl font-semibold mb-6">Get Instant Support</h3>
               <div className="space-y-4">
                 <div>
                   <label className="block text-sm font-medium text-white/60 mb-2">
@@ -103,21 +116,19 @@ const Hero = () => {
                   </label>
                   <input
                     type="email"
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl focus:outline-none focus:border-purple-500 transition-colors"
+                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl focus:outline-none focus:border-purple-500 transition-colors text-xs"
                     placeholder="you@company.com"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-white/60 mb-2">
+                  <label className="block font-medium text-white/60 mb-2 text-xs">
                     Issue Type
                   </label>
-                  <select className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl focus:outline-none focus:border-purple-500 transition-colors text-white">
-                    <option value="" className="bg-[#020202]">Select issue type</option>
-                    <option value="technical" className="bg-[#020202]">Technical Issue</option>
-                    <option value="account" className="bg-[#020202]">Account Access</option>
-                    <option value="billing" className="bg-[#020202]">Billing Support</option>
-                    <option value="other" className="bg-[#020202]">Other</option>
-                  </select>
+                  <DropdownMenu
+                    options={issueTypes}
+                    placeholder="Select issue type"
+                    onSelect={(value: string) => setIssueType(value)}
+                  />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-white/60 mb-2">
@@ -125,7 +136,7 @@ const Hero = () => {
                   </label>
                   <textarea
                     rows={4}
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl focus:outline-none focus:border-purple-500 transition-colors"
+                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl focus:outline-none focus:border-purple-500 transition-colors text-xs"
                     placeholder="Describe your issue..."
                   />
                 </div>

@@ -18,7 +18,7 @@ const Resources = lazy(
   () => import("@/app/components/Contact/ParentsAndGuardians/Resources"),
 );
 const CommonConcerns = lazy(
-  () => import("@/app/components/Contact/ParentsAndGuardians/ParentTestimonials"),
+  () => import("@/app/components/Contact/ParentsAndGuardians/CommonConcerns"),
 );
 const NextSteps = lazy(
   () => import("@/app/components/Contact/ParentsAndGuardians/NextSteps"),

@@ -8,12 +8,32 @@ import Footer from "@/app/components/LandingPage/Footer";
 const Hero = lazy(
   () => import("@/app/components/Contact/ParentsAndGuardians/Hero"),
 );
+const WhyGetInvolved = lazy(
+  () => import("@/app/components/Contact/ParentsAndGuardians/WhyGetInvolved"),
+);
+const HowUniglowHelps = lazy(
+  () => import("@/app/components/Contact/ParentsAndGuardians/HowUniglowHelps"),
+);
+const Resources = lazy(
+  () => import("@/app/components/Contact/ParentsAndGuardians/Resources"),
+);
+const CommonConcerns = lazy(
+  () => import("@/app/components/Contact/ParentsAndGuardians/ParentTestimonials"),
+);
+const NextSteps = lazy(
+  () => import("@/app/components/Contact/ParentsAndGuardians/NextSteps"),
+);
 
 const Home = () => {
   return (
     <Suspense fallback={<Loading />}>
       <NavBar />
       <Hero />
+      <WhyGetInvolved />
+      <HowUniglowHelps />
+      <Resources />
+      <CommonConcerns />
+      <NextSteps />
       <Footer />
     </Suspense>
   );

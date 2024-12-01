@@ -14,9 +14,6 @@ const Process = lazy(
 const Categories = lazy(
   () => import("@/app/components/Contact/TechnicalSupport/Categories"),
 );
-const TechnicalHelp = lazy(
-  () => import("@/app/components/Contact/TechnicalSupport/TechnicalHelp"),
-);
 
 const Home = () => {
   return (
@@ -25,7 +22,6 @@ const Home = () => {
       <Hero />
       <Process />
       <Categories />
-      <TechnicalHelp />
       <Footer />
     </Suspense>
   );

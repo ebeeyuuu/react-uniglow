@@ -246,3 +246,7 @@ html.lenis body {
       rgba(18, 18, 18, 1),
       rgba(37, 37, 37, 0.5));
 }
+
+.hexagon {
+  clip-path: polygon(50% 5%, 92% 25%, 92% 75%, 50% 95%, 8% 75%, 8% 25%);
+}

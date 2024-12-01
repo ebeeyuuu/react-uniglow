@@ -1,40 +1,41 @@
-'use client'
+"use client";
 
-import React, { useEffect, useState } from 'react'
-import { BsArrowRight, BsHeadset, BsLightning, BsChatDots, BsTools, BsTerminal } from 'react-icons/bs'
-import { FaServer } from 'react-icons/fa'
+import React, { useEffect, useState } from "react";
+import {
+  BsArrowRight,
+  BsHeadset,
+  BsLightning,
+  BsChatDots,
+  BsTools,
+  BsTerminal,
+} from "react-icons/bs";
+import { FaServer } from "react-icons/fa";
 import DropdownMenu from "@/app/components/UI/DropdownMenu";
-import AOS from 'aos'
-import 'aos/dist/aos.css'
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Hero = () => {
-  const [issueType, setIssueType] = useState('');
-  const [priorityLevel, setPriorityLevel] = useState('');
+  const [issueType, setIssueType] = useState("");
+  const [priorityLevel, setPriorityLevel] = useState("");
 
   useEffect(() => {
     AOS.init({
       once: true,
-    })
-  }, [])
+    });
+  }, []);
 
   const issueTypes = [
-    { value: 'technical', label: 'Technical Issue' },
-    { value: 'account', label: 'Account Access' },
-    { value: 'billing', label: 'Billing Support' },
-    { value: 'other', label: 'Other' },
-  ]
-
-  const priorityLevels = [
-    { value: 'low', label: 'Low - General Question' },
-    { value: 'medium', label: 'Medium - Minor Issue' },
-    { value: 'high', label: 'High - System Critical' },
-  ]
+    { value: "technical", label: "Technical Issue" },
+    { value: "account", label: "Account Access" },
+    { value: "billing", label: "Billing Support" },
+    { value: "other", label: "Other" },
+  ];
 
   return (
     <section
       data-aos="fade-up"
       data-aos-delay="300"
-      className="relative min-h-screen py-20"
+      className="relative min-h-screen flex justify-center items-center py-20"
     >
       <div className="absolute inset-0 bg-gradient-to-b from-purple-500/15 via-transparent to-transparent" />
       <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa')] bg-cover bg-center opacity-10" />
@@ -55,8 +56,8 @@ const Hero = () => {
               It Most
             </h1>
             <p className="text-sm lg:text-lg text-white/60 max-w-xl mb-8">
-              Get instant access to our technical support team and comprehensive resources
-              to resolve any issues quickly and efficiently
+              Get instant access to our technical support team and comprehensive
+              resources to resolve any issues quickly and efficiently
             </p>
 
             <div className="grid grid-cols-2 gap-6 w-full max-w-lg mb-8">
@@ -64,7 +65,10 @@ const Hero = () => {
                 { value: "99.9%", label: "Resolution Rate" },
                 { value: "< 5 min", label: "Response Time" },
               ].map((stat, index) => (
-                <div key={index} className="bg-white/5 rounded-xl p-4 border border-white/10">
+                <div
+                  key={index}
+                  className="bg-white/5 rounded-xl p-4 border border-white/10"
+                >
                   <div className="text-xl lg:text-2xl font-bold bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
                     {stat.value}
                   </div>
@@ -88,7 +92,10 @@ const Hero = () => {
                   title: "Quick Fixes",
                 },
               ].map((feature, index) => (
-                <div key={index} className="flex items-center gap-3 bg-white/[0.03] rounded-xl p-4 border border-white/10">
+                <div
+                  key={index}
+                  className="flex items-center gap-3 bg-white/[0.03] rounded-xl p-4 border border-white/10"
+                >
                   <feature.icon className="h-5 w-5 text-purple-400" />
                   <span className="text-sm font-medium">{feature.title}</span>
                 </div>
@@ -153,9 +160,7 @@ const Hero = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Hero
-
-
+export default Hero;

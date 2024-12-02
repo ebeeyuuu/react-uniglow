@@ -8,14 +8,21 @@ import Footer from "@/app/components/LandingPage/Footer";
 const Hero = lazy(
   () => import("@/app/components/Contact/UniversityPartnerships/Hero"),
 );
-const Stats = lazy(
-  () => import("@/app/components/Contact/UniversityPartnerships/Stats"),
+const WhyPartner = lazy(
+  () => import("@/app/components/Contact/UniversityPartnerships/WhyPartner"),
 );
-const CTA = lazy(
-  () => import("@/app/components/Contact/UniversityPartnerships/CTA"),
+const Benefits = lazy(
+  () => import("@/app/components/Contact/UniversityPartnerships/Benefits"),
 );
-const Partners = lazy(
-  () => import("@/app/components/Contact/UniversityPartnerships/Partners"),
+const PartnershipTiers = lazy(
+  () =>
+    import("@/app/components/Contact/UniversityPartnerships/PartnershipTiers"),
+);
+const HowItWorks = lazy(
+  () => import("@/app/components/Contact/UniversityPartnerships/HowItWorks"),
+);
+const Contact = lazy(
+  () => import("@/app/components/Contact/UniversityPartnerships/Contact"),
 );
 
 const Home = () => {
@@ -23,9 +30,11 @@ const Home = () => {
     <Suspense fallback={<Loading />}>
       <NavBar />
       <Hero />
-      <Stats />
-      <Partners />
-      <CTA />
+      <WhyPartner />
+      <Benefits />
+      <PartnershipTiers />
+      <HowItWorks />
+      <Contact />
       <Footer />
     </Suspense>
   );

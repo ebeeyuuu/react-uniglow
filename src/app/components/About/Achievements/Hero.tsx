@@ -30,7 +30,7 @@ const Hero = () => {
     <section ref={ref} className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-purple-900/20 to-[#020202]" />
       <div className="relative z-10 text-center">
-        <motion.h1 
+        <motion.h1
           className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}

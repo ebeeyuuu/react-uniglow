@@ -54,7 +54,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
       className={`flex h-screen w-full relative overflow-hidden scrollbar-hide ${className}`}
     >
       <div
-        className={`flex-grow scrollbar-hide flex items-center justify-center overflow-auto`}
+        className={`grow scrollbar-hide flex items-center justify-center overflow-auto`}
       >
         {children}
       </div>

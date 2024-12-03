@@ -103,7 +103,7 @@ const team = [
 const Team = () => {
   return (
     <section className="py-24 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/5 to-transparent" />
+      <div className="absolute inset-0 bg-linear-to-b from-transparent via-purple-500/5 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-4 relative">
         <div className="grid grid-cols-1 max-w-md md:max-w-none mx-auto md:grid-cols-3 xl:grid-cols-5 gap-6">
@@ -114,8 +114,8 @@ const Team = () => {
               key={index}
               className="group relative h-full"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl" />
-              <div className="relative bg-white/[0.02] rounded-2xl h-full border border-white/5 backdrop-blur-sm overflow-hidden flex flex-col">
+              <div className="absolute inset-0 bg-linear-to-r from-purple-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl" />
+              <div className="relative bg-white/[0.02] rounded-2xl h-full border border-white/5 backdrop-blur-xs overflow-hidden flex flex-col">
                 <div className="relative aspect-square">
                   <Image
                     src={member.image}
@@ -124,7 +124,7 @@ const Team = () => {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="p-6 flex-grow">
+                <div className="p-6 grow">
                   <h3 className="text-base md:text-lg lg:text-xl font-semibold mb-1">
                     {member.name}
                   </h3>

@@ -54,11 +54,11 @@ const resources = [
 const Resources = () => {
   return (
     <section className="py-24 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/5 to-transparent" />
+      <div className="absolute inset-0 bg-linear-to-b from-transparent via-purple-500/5 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-4 relative">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-white via-white to-purple-200 bg-clip-text text-transparent">
+          <h2 className="text-4xl font-bold mb-4 bg-linear-to-r from-white via-white to-purple-200 bg-clip-text text-transparent">
             Resources & Tools
           </h2>
           <p className="text-white/60 max-w-2xl mx-auto">
@@ -70,7 +70,7 @@ const Resources = () => {
           {resources.map((resource, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden rounded-3xl aspect-[4/3] cursor-pointer"
+              className="group relative overflow-hidden rounded-3xl aspect-4/3 cursor-pointer"
             >
               <div className="absolute inset-0">
                 <Image
@@ -79,7 +79,7 @@ const Resources = () => {
                   fill
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" />
+                <div className="absolute inset-0 bg-black/50 backdrop-blur-xs" />
               </div>
 
               <div className="absolute inset-0 p-9 flex flex-col justify-center items-center">

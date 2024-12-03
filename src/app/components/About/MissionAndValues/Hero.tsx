@@ -14,7 +14,7 @@ const Hero = () => {
 
   return (
     <section className="relative pt-32 pb-24 flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-purple-500/20 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-linear-to-b from-purple-500/20 via-transparent to-transparent" />
       <div className="relative z-10 max-w-7xl mx-auto px-4 py-20">
         <div className="flex flex-col items-center text-center">
           <div
@@ -23,7 +23,7 @@ const Hero = () => {
             className="inline-flex items-center gap-2 bg-white/5 rounded-full px-6 py-2 mb-6 border border-white/5"
           >
             <BsStars className="w-4 h-4 text-purple-400" />
-            <span className="text-sm font-medium bg-gradient-to-r from-purple-400 to-purple-200 bg-clip-text text-transparent">
+            <span className="text-sm font-medium bg-linear-to-r from-purple-400 to-purple-200 bg-clip-text text-transparent">
               Our Purpose & Values
             </span>
           </div>
@@ -31,7 +31,7 @@ const Hero = () => {
           <h1
             data-aos="fade-up"
             data-aos-delay="350"
-            className="text-5xl lg:text-7xl font-bold pb-10 bg-gradient-to-r from-white via-white to-purple-200 bg-clip-text text-transparent"
+            className="text-5xl lg:text-7xl font-bold pb-10 bg-linear-to-r from-white via-white to-purple-200 bg-clip-text text-transparent"
           >
             Empowering
             <br /> Student Success

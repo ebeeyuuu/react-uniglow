@@ -31,10 +31,10 @@ const services = [
 const Services = () => {
   return (
     <section className="py-24 relative">
-      <div className="absolute inset-0 bg-gradient-to-t from-purple-500/15 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-linear-to-t from-purple-500/15 via-transparent to-transparent" />
       <div className="max-w-6xl mx-auto px-4 relative">
         <div className="text-center mb-16">
-          <h2 className="text-2xl lg:text-4xl font-bold mb-4 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
+          <h2 className="text-2xl lg:text-4xl font-bold mb-4 bg-linear-to-r from-white to-purple-200 bg-clip-text text-transparent">
             Tailored Services <br /> for Your Success
           </h2>
           <p className="text-xs lg:text-base text-white/60 max-w-2xl mx-auto text-center">
@@ -46,9 +46,9 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="group relative bg-white/[0.02] border-white/10 backdrop-blur-sm hover:border-purple-500/20 transition-all duration-300 p-10 rounded-xl"
+              className="group relative bg-white/[0.02] border-white/10 backdrop-blur-xs hover:border-purple-500/20 transition-all duration-300 p-10 rounded-xl"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-xl smooth-animation" />
+              <div className="absolute inset-0 bg-linear-to-r from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-xl smooth-animation" />
               <div className="relative p-6">
                 <service.icon className="h-8 w-8 text-purple-400 mb-4" />
                 <h3 className="text-base lg:text-xl font-semibold mb-2">
@@ -57,7 +57,7 @@ const Services = () => {
                 <p className="text-white/60 mb-4 text-xs lg:text-sm">
                   {service.description}
                 </p>
-                <div className="text-lg lg:text-2xl font-bold mb-4 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
+                <div className="text-lg lg:text-2xl font-bold mb-4 bg-linear-to-r from-white to-purple-200 bg-clip-text text-transparent">
                   {service.price}
                 </div>
                 <ul className="space-y-2 mb-6">

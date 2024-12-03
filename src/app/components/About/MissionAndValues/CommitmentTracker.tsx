@@ -46,12 +46,12 @@ const CommitmentTracker = () => {
 
   return (
     <section className="py-24 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-purple-500/10 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-linear-to-b from-purple-500/10 via-transparent to-transparent" />
       <div className="relative z-10 max-w-6xl text-center mx-auto px-4 py-20">
         <h2
           data-aos="fade-up"
           data-aos-delay="300"
-          className="text-2xl lg:text-4xl font-bold mb-4 bg-gradient-to-r from-white via-white to-purple-200 bg-clip-text text-transparent"
+          className="text-2xl lg:text-4xl font-bold mb-4 bg-linear-to-r from-white via-white to-purple-200 bg-clip-text text-transparent"
         >
           Our Commitments
         </h2>
@@ -60,9 +60,9 @@ const CommitmentTracker = () => {
         {goals.map((goal, index) => (
           <div
             key={index}
-            className="group relative bg-white/[0.02] border-2 border-white/10 backdrop-blur-sm hover:border-purple-500/20 transition-all duration-300 p-10 rounded-xl"
+            className="group relative bg-white/[0.02] border-2 border-white/10 backdrop-blur-xs hover:border-purple-500/20 transition-all duration-300 p-10 rounded-xl"
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-xl smooth-animation" />
+            <div className="absolute inset-0 bg-linear-to-r from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-xl smooth-animation" />
             <div className="flex items-center gap-4 mb-4">
               <goal.icon className="text-purple-400" />
               <div className="flex-1">

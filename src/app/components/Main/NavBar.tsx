@@ -168,7 +168,7 @@ const NavBar = () => {
                 initial={{ opacity: 0, x: 30 }}
                 animate={{ opacity: 1, x: 0, transition: { duration: 0.5 } }}
                 exit={{ opacity: 0, x: 30 }}
-                className="absolute top-0 right-0 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none bg-[#002347bc] flex flex-col text-black px-[40px] py-[45px] max-[1000px]:mt-[100px] z-50"
+                className="absolute top-0 right-0 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-hidden bg-[#002347bc] flex flex-col text-black px-[40px] py-[45px] max-[1000px]:mt-[100px] z-50"
               >
                 {navItems.map(({ href, label, icon: Icon }) => (
                   <Link

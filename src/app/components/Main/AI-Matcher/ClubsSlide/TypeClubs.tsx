@@ -93,7 +93,7 @@ const TypeClubs: React.FC<TypeClubsProps> = ({ clubTypes, onConfirm }) => {
               <h3 className="text-sm sm:text-base md:text-lg xl:text-xl font-extrabold mb-1 sm:mb-2">
                 {club.type}
               </h3>
-              <p className="text-xs text-gray-300 sm:text-sm md:text-base xl:text-lg flex-grow overflow-auto">
+              <p className="text-xs text-gray-300 sm:text-sm md:text-base xl:text-lg grow overflow-auto">
                 {club.description}
               </p>
             </>

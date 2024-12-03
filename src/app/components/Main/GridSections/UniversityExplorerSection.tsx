@@ -39,7 +39,7 @@ const UniversityExplorerSection = () => {
 
   return (
     <div
-      className="row-span-4 max-[2000px]:row-span-6 col-span-3 max-[2000px]:col-span-6 max-[2000px]:-order-9 bg-gradient-to-b from-[#212121] to-[#111111] max-[700px]:text-lg rounded-[10px] flex justify-center items-center font-bold text-center cursor-pointer transition-all duration-500 ease-in-out relative overflow-hidden"
+      className="row-span-4 max-[2000px]:row-span-6 col-span-3 max-[2000px]:col-span-6 max-[2000px]:-order-9 bg-linear-to-b from-[#212121] to-[#111111] max-[700px]:text-lg rounded-[10px] flex justify-center items-center font-bold text-center cursor-pointer transition-all duration-500 ease-in-out relative overflow-hidden"
       onClick={() => router.push("/pages/main/university-explorer")}
     >
       <div className="relative w-full h-full flex flex-col justify-center items-center">

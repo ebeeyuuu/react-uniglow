@@ -7,7 +7,7 @@ const CampusEventsSection = () => {
 
   return (
     <div
-      className="row-span-1 col-span-1 max-[2000px]:col-span-2 max-[700px]:text-lg rounded-[10px] flex justify-center items-center font-bold text-center cursor-pointer transition-all duration-300 ease-in-out relative overflow-hidden bg-gradient-to-b from-[#212121] to-[#111111]"
+      className="row-span-1 col-span-1 max-[2000px]:col-span-2 max-[700px]:text-lg rounded-[10px] flex justify-center items-center font-bold text-center cursor-pointer transition-all duration-300 ease-in-out relative overflow-hidden bg-linear-to-b from-[#212121] to-[#111111]"
       onClick={() => router.push("/pages/main/campus-events")}
     >
       <div className="relative flex items-center justify-center w-full h-full">

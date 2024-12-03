@@ -76,11 +76,11 @@ const concerns = [
 const CommonConcerns = () => {
   return (
     <section className="py-24 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/5 to-transparent" />
+      <div className="absolute inset-0 bg-linear-to-b from-transparent via-purple-500/5 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-4 relative">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-white via-white to-purple-200 bg-clip-text text-transparent">
+          <h2 className="text-4xl font-bold mb-4 bg-linear-to-r from-white via-white to-purple-200 bg-clip-text text-transparent">
             Common Concerns Addressed
           </h2>
           <p className="text-white/60 max-w-2xl mx-auto">
@@ -93,8 +93,8 @@ const CommonConcerns = () => {
           <Accordion items={concerns} />
 
           <div className="relative hidden lg:block">
-            <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-purple-600 rounded-[2rem] blur-2xl opacity-20" />
-            <div className="relative aspect-[3/4] rounded-[2rem] bg-white/[0.02] border border-white/5 backdrop-blur-sm overflow-hidden">
+            <div className="absolute -inset-1 bg-linear-to-r from-purple-600 to-purple-600 rounded-[2rem] blur-2xl opacity-20" />
+            <div className="relative aspect-3/4 rounded-[2rem] bg-white/[0.02] border border-white/5 backdrop-blur-xs overflow-hidden">
               <Image
                 src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&q=80"
                 alt="Parent and student"

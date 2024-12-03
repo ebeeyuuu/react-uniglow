@@ -65,7 +65,7 @@ const Journey = () => {
           <h2
             data-aos="fade-up"
             data-aos-delay="300"
-            className="text-2xl lg:text-4xl font-bold mb-4 bg-gradient-to-r from-white via-white to-purple-200 bg-clip-text text-transparent"
+            className="text-2xl lg:text-4xl font-bold mb-4 bg-linear-to-r from-white via-white to-purple-200 bg-clip-text text-transparent"
           >
             Our Journey
           </h2>
@@ -80,7 +80,7 @@ const Journey = () => {
         </div>
 
         <div className="relative max-w-2xl mx-auto flex flex-col items-center">
-          <div className="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-purple-500/20 via-purple-500/20 to-transparent" />
+          <div className="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-px bg-linear-to-b from-purple-500/20 via-purple-500/20 to-transparent" />
 
           <div className="space-y-24">
             {milestones.map((milestone, index) => (
@@ -95,7 +95,7 @@ const Journey = () => {
                   className={`flex-1 scale-100 hover:scale-105 transition-all duration-300 ease-in-out shadow-2xl ${hoveredIndex === index ? "shadow-purple-950 scale-105 filter brightness-105" : "shadow-none"}`}
                 >
                   <div
-                    className={`p-8 bg-white/[0.02] rounded-2xl border-2 border-white/5 backdrop-blur-sm ${index % 2 === 0 ? "md:text-right" : "md:text-left"
+                    className={`p-8 bg-white/[0.02] rounded-2xl border-2 border-white/5 backdrop-blur-xs ${index % 2 === 0 ? "md:text-right" : "md:text-left"
                       }`}
                   >
                     <milestone.icon className="inline-block h-5 lg:h-8 w-5 lg:w-8 text-purple-400 mb-4" />
@@ -128,7 +128,7 @@ const Journey = () => {
                   className="flex-1 hidden md:flex items-center justify-center text-purple-400/80 text-sm font-medium group"
                 >
                   <div
-                    className={`bg-white/[0.03] p-6 rounded-lg border border-white/10 backdrop-blur-sm group-hover:shadow-2xl group-hover:scale-105 transition-all duration-300 ease-in-out shadow-2xl ${hoveredIndex === index ? "shadow-purple-950 scale-105 filter brightness-105" : "shadow-none"}`}
+                    className={`bg-white/[0.03] p-6 rounded-lg border border-white/10 backdrop-blur-xs group-hover:shadow-2xl group-hover:scale-105 transition-all duration-300 ease-in-out shadow-2xl ${hoveredIndex === index ? "shadow-purple-950 scale-105 filter brightness-105" : "shadow-none"}`}
                   >
                     <milestone.extraInfo.icon className="h-3 lg:h-6 w-3 lg:w-6 text-purple-400 mb-2" />
                     <h4 className="text-xs lg:text-base font-semibold mb-2">

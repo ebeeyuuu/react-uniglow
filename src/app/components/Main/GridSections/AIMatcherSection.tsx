@@ -7,7 +7,7 @@ const AIMatcherSection = () => {
 
   return (
     <div
-      className={`relative row-span-1 col-span-2 max-[2000px]:col-span-4 max-[2000px]:-order-8 rounded-[10px] flex justify-center items-center text-center cursor-pointer smooth-animation overflow-hidden bg-gradient-to-b from-[#212121] to-[#111111]`}
+      className={`relative row-span-1 col-span-2 max-[2000px]:col-span-4 max-[2000px]:-order-8 rounded-[10px] flex justify-center items-center text-center cursor-pointer smooth-animation overflow-hidden bg-linear-to-b from-[#212121] to-[#111111]`}
       onClick={() => router.push("/pages/main/ai-matching")}
     >
       <div className="relative flex items-center justify-center w-full h-full z-10">

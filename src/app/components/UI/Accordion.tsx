@@ -20,7 +20,7 @@ const Accordion = ({ items }: AccordionProps) => {
         <div
           key={index}
           className={`group cursor-pointer transition-all duration-300 ${activeIndex === index ? "bg-white/[0.05]" : "bg-white/[0.01]"
-            } rounded-2xl border border-white/5 backdrop-blur-sm overflow-hidden`}
+            } rounded-2xl border border-white/5 backdrop-blur-xs overflow-hidden`}
           onClick={() => setActiveIndex(activeIndex === index ? null : index)}
         >
           <div className="p-6 flex items-center justify-between">

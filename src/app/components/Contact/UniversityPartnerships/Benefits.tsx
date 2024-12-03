@@ -34,9 +34,9 @@ const Benefits = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-[#020202] to-purple-900/20">
+    <section className="py-20 bg-linear-to-b from-[#020202] to-purple-900/20">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent text-center">
+        <h2 className="text-4xl font-bold mb-4 bg-linear-to-r from-white to-purple-200 bg-clip-text text-transparent text-center">
           Partnership Benefits
         </h2>
         <p className="text-lg text-gray-300 mb-12 text-center max-w-lg mx-auto">

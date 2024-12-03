@@ -423,7 +423,7 @@ const GlobalCommunity = () => {
   return (
     <div className="flex flex-col items-center justify-center bg-black relative w-full">
       <div className="max-w-7xl mx-auto w-full relative overflow-hidden min-h-[300px] md:h-[40rem] px-4">
-        <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent to-black z-40" />
+        <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-linear-to-b pointer-events-none select-none from-transparent to-black z-40" />
         <div className="w-full max-w-4xl mx-auto aspect-square">
           <World data={sampleArcs} globeConfig={globeConfig} />
         </div>
@@ -437,9 +437,9 @@ const GlobalCommunity = () => {
               data-aos-delay={`${400 + 50 * index}`}
               className={`absolute group z-50 w-64 pointer-events-none ${feature.className}`}
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl smooth-animation" />
-              <div className="relative p-6 bg-white/[0.02] rounded-2xl border border-white/10 backdrop-blur-sm">
-                <div className="flex items-center justify-center w-12 h-12 mb-6 rounded-2xl bg-gradient-to-r from-purple-500/20 to-purple-500/10">
+              <div className="absolute inset-0 bg-linear-to-r from-purple-500/20 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl smooth-animation" />
+              <div className="relative p-6 bg-white/[0.02] rounded-2xl border border-white/10 backdrop-blur-xs">
+                <div className="flex items-center justify-center w-12 h-12 mb-6 rounded-2xl bg-linear-to-r from-purple-500/20 to-purple-500/10">
                   <feature.icon className="h-6 w-6 text-purple-400" />
                 </div>
                 <h3 className="text-base lg:text-xl font-semibold mb-4">

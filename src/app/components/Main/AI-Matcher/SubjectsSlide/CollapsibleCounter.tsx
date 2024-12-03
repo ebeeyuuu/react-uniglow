@@ -25,7 +25,7 @@ const CollapsibleCounter: React.FC<CollapsibleCounterProps> = ({
 
   return (
     <motion.div
-      className="fixed top-0 right-0 bg-black/50 p-4 rounded-xl backdrop-blur-sm shadow-lg z-50"
+      className="fixed top-0 right-0 bg-black/50 p-4 rounded-xl backdrop-blur-xs shadow-lg z-50"
       initial={{ y: "100%" }}
       animate={{ y: 0 }}
       transition={{ type: "spring", stiffness: 260, damping: 20 }}
@@ -34,7 +34,7 @@ const CollapsibleCounter: React.FC<CollapsibleCounterProps> = ({
         <div className="flex items-center gap-x-4">
           <button
             onClick={toggleOpen}
-            className="text-white focus:outline-none"
+            className="text-white focus:outline-hidden"
           >
             {isOpen ? <FaChevronDown /> : <FaChevronUp />}
           </button>

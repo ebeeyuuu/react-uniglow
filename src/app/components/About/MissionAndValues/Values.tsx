@@ -26,19 +26,19 @@ const valuesStats = [
 const Values = () => {
   return (
     <section className="py-24 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-purple-500/10 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-linear-to-b from-purple-500/10 via-transparent to-transparent" />
       <div className="max-w-6xl mx-auto px-4 relative">
         <div className="text-center mb-16">
-          <h2 className="text-2xl lg:text-4xl font-bold mb-4 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
+          <h2 className="text-2xl lg:text-4xl font-bold mb-4 bg-linear-to-r from-white to-purple-200 bg-clip-text text-transparent">
             Our Values
           </h2>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {valuesStats.map((value, index) => (
             <div key={index} className="relative group">
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-xl smooth-animation" />
-              <div className="relative p-8 bg-white/[0.02] rounded-2xl border-2 border-white/15 backdrop-blur-sm h-full">
-                <div className="flex items-center justify-center w-12 h-12 mb-6 rounded-2xl bg-gradient-to-r from-purple-500/10 to-purple-500/10">
+              <div className="absolute inset-0 bg-linear-to-r from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-xl smooth-animation" />
+              <div className="relative p-8 bg-white/[0.02] rounded-2xl border-2 border-white/15 backdrop-blur-xs h-full">
+                <div className="flex items-center justify-center w-12 h-12 mb-6 rounded-2xl bg-linear-to-r from-purple-500/10 to-purple-500/10">
                   <value.icon className="h-6 w-6 text-purple-500" />
                 </div>
                 <h3 className="text-base lg:text-xl font-semibold mb-2">

@@ -34,9 +34,9 @@ const HowItWorks = () => {
   const [activeStep, setActiveStep] = useState(0)
 
   return (
-    <section className="py-20 bg-gradient-to-b from-[#020202] to-purple-900/20">
+    <section className="py-20 bg-linear-to-b from-[#020202] to-purple-900/20">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">How It Works</h2>
+        <h2 className="text-4xl font-bold mb-12 text-center bg-linear-to-r from-white to-purple-200 bg-clip-text text-transparent">How It Works</h2>
         <div className="relative">
           <div className="flex justify-between mb-8">
             {steps.map((step, index) => (

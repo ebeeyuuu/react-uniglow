@@ -37,7 +37,7 @@ const Hero = () => {
       data-aos-delay="300"
       className="relative min-h-screen flex justify-center items-center py-20"
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-purple-500/15 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-linear-to-b from-purple-500/15 via-transparent to-transparent" />
       <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa')] bg-cover bg-center opacity-10" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0)_0%,rgba(0,0,0,0.8)_100%)]" />
 
@@ -46,11 +46,11 @@ const Hero = () => {
           <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
             <div className="inline-flex items-center gap-2 bg-white/5 rounded-full px-4 py-1.5 mb-6 border border-white/10">
               <BsHeadset className="w-4 h-4 text-purple-400" />
-              <span className="text-xs lg:text-sm font-medium bg-gradient-to-r from-purple-400 to-purple-200 bg-clip-text text-transparent">
+              <span className="text-xs lg:text-sm font-medium bg-linear-to-r from-purple-400 to-purple-200 bg-clip-text text-transparent">
                 24/7 Technical Support
               </span>
             </div>
-            <h1 className="text-3xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-white via-white to-purple-200 bg-clip-text text-transparent">
+            <h1 className="text-3xl lg:text-5xl font-bold mb-6 bg-linear-to-r from-white via-white to-purple-200 bg-clip-text text-transparent">
               Expert Support <br />
               When You Need <br />
               It Most
@@ -69,7 +69,7 @@ const Hero = () => {
                   key={index}
                   className="bg-white/5 rounded-xl p-4 border border-white/10"
                 >
-                  <div className="text-xl lg:text-2xl font-bold bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
+                  <div className="text-xl lg:text-2xl font-bold bg-linear-to-r from-white to-purple-200 bg-clip-text text-transparent">
                     {stat.value}
                   </div>
                   <div className="text-sm text-white/60">{stat.label}</div>
@@ -104,8 +104,8 @@ const Hero = () => {
           </div>
 
           <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-purple-500/5 to-transparent rounded-3xl" />
-            <div className="relative p-12 rounded-3xl border border-white/10 backdrop-blur-sm">
+            <div className="absolute inset-0 bg-linear-to-r from-purple-500/10 via-purple-500/5 to-transparent rounded-3xl" />
+            <div className="relative p-12 rounded-3xl border border-white/10 backdrop-blur-xs">
               <div className="space-y-4">
                 <div>
                   <label className="block text-sm font-medium text-white/60 mb-2">
@@ -113,7 +113,7 @@ const Hero = () => {
                   </label>
                   <input
                     type="text"
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl focus:outline-none focus:border-purple-500 transition-colors text-xs"
+                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl focus:outline-hidden focus:border-purple-500 transition-colors text-xs"
                     placeholder="Enter your name"
                   />
                 </div>
@@ -123,7 +123,7 @@ const Hero = () => {
                   </label>
                   <input
                     type="email"
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl focus:outline-none focus:border-purple-500 transition-colors text-xs"
+                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl focus:outline-hidden focus:border-purple-500 transition-colors text-xs"
                     placeholder="you@company.com"
                   />
                 </div>
@@ -143,7 +143,7 @@ const Hero = () => {
                   </label>
                   <textarea
                     rows={4}
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl focus:outline-none focus:border-purple-500 transition-colors text-xs"
+                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl focus:outline-hidden focus:border-purple-500 transition-colors text-xs"
                     placeholder="Describe your issue..."
                   />
                 </div>

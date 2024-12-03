@@ -36,11 +36,11 @@ const reasons = [
 const WhyGetInvolved = () => {
   return (
     <section className="py-24 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/5 to-transparent" />
+      <div className="absolute inset-0 bg-linear-to-b from-transparent via-purple-500/5 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-4 relative">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-white via-white to-purple-200 bg-clip-text text-transparent">
+          <h2 className="text-4xl font-bold mb-4 bg-linear-to-r from-white via-white to-purple-200 bg-clip-text text-transparent">
             Why Get Involved?
           </h2>
           <p className="text-white/60 max-w-2xl mx-auto">
@@ -52,9 +52,9 @@ const WhyGetInvolved = () => {
           {reasons.map((reason, index) => (
             <div
               key={index}
-              className="group relative bg-white/[0.02] rounded-3xl border border-white/5 backdrop-blur-sm p-8 hover:bg-white/[0.04] transition-all duration-300"
+              className="group relative bg-white/[0.02] rounded-3xl border border-white/5 backdrop-blur-xs p-8 hover:bg-white/[0.04] transition-all duration-300"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-3xl" />
+              <div className="absolute inset-0 bg-linear-to-r from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-3xl" />
               <div className="relative">
                 <div className="flex items-center mb-6">
                   <div className="p-3 bg-purple-500/10 rounded-2xl mr-4">
@@ -64,7 +64,7 @@ const WhyGetInvolved = () => {
                 </div>
                 <p className="text-white/60 mb-6">{reason.description}</p>
                 <div className="flex items-center">
-                  <span className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-purple-200 bg-clip-text text-transparent mr-3">
+                  <span className="text-3xl font-bold bg-linear-to-r from-purple-400 to-purple-200 bg-clip-text text-transparent mr-3">
                     {reason.stat}
                   </span>
                   <span className="text-sm text-white/60">{reason.statText}</span>

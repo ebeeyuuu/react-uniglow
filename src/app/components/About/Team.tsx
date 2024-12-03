@@ -31,11 +31,11 @@ const team = [
 const Team = () => {
   return (
     <section className="py-24 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/5 to-transparent" />
+      <div className="absolute inset-0 bg-linear-to-b from-transparent via-purple-500/5 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-4 relative">
         <div className="text-center mb-16">
-          <h2 data-aos="fade-up" data-aos-delay="300" className="text-4xl font-bold mb-4 bg-gradient-to-r from-white via-white to-purple-200 bg-clip-text text-transparent">
+          <h2 data-aos="fade-up" data-aos-delay="300" className="text-4xl font-bold mb-4 bg-linear-to-r from-white via-white to-purple-200 bg-clip-text text-transparent">
             Meet Our Team
           </h2>
           <p data-aos="fade-up" data-aos-delay="350" className="text-white/60 max-w-2xl mx-auto">
@@ -46,8 +46,8 @@ const Team = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {team.map((member, index) => (
             <div data-aos="fade-up" data-aos-delay={`${400 + 50 * index}`} key={index} className="group relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl" />
-              <div className="relative bg-white/[0.02] rounded-2xl border border-white/5 backdrop-blur-sm overflow-hidden">
+              <div className="absolute inset-0 bg-linear-to-r from-purple-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl" />
+              <div className="relative bg-white/[0.02] rounded-2xl border border-white/5 backdrop-blur-xs overflow-hidden">
                 <div className="relative aspect-square">
                   <Image
                     src={member.image}

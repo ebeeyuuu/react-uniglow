@@ -1,78 +1,92 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
-@layer utilities {
-  .smooth-animation {
-    transition: 0.5s ease-in-out;
+@config '../../tailwind.config.ts';
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
   }
+}
 
-  .gradient-hover {
-    position: relative;
-    overflow: hidden;
-  }
+@utility smooth-animation {
+  transition: 0.5s ease-in-out;
+}
 
-  .gradient-hover::before {
-    content: "";
+@utility gradient-hover {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
     position: absolute;
     top: 0;
     left: -100%;
     width: 200%;
     height: 100%;
-    background: linear-gradient(to right,
-        rgba(0, 123, 255, 0) 0,
-        rgba(0, 128, 255, 0.5) 50%,
-        rgba(0, 123, 255, 0) 100%);
+    background: linear-gradient(
+      to right,
+      rgba(0, 123, 255, 0) 0,
+      rgba(0, 128, 255, 0.5) 50%,
+      rgba(0, 123, 255, 0) 100%
+    );
     transition: 0.5s;
     opacity: 0;
   }
 
-  .gradient-hover:hover::before {
+  &:hover::before {
     left: 100%;
     opacity: 1;
   }
+}
 
-  .placeholder-white::placeholder {
+@utility placeholder-white {
+  &::placeholder {
     color: #fff;
     opacity: 0.9;
   }
 
-  .placeholder-white::-ms-input-placeholder {
+  &::-ms-input-placeholder {
     color: #fff;
     opacity: 0.9;
   }
+}
 
-  .typing-cursor {
-    display: inline-block;
-    width: 2px;
-    height: 1em;
-    color: #ff890a;
-    margin-left: 10px;
-  }
+@utility typing-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  color: #ff890a;
+  margin-left: 10px;
 
-  .typing-cursor.blinking {
+  &.blinking {
     animation: 0.7s step-end 5 blink;
   }
+}
 
-  @keyframes blink {
-
-    from,
-    to {
-      opacity: 1;
-    }
-
-    50% {
-      opacity: 0;
-    }
+@utility blinking {
+  &.typing-cursor {
+    animation: 0.7s step-end 5 blink;
   }
+}
 
-  .underline-animation {
-    position: relative;
-    display: inline-block;
-  }
+@utility underline-animation {
+  position: relative;
+  display: inline-block;
 
-  .underline-animation::after {
-    content: "";
+  &::after {
+    content: '';
     position: absolute;
     width: 100%;
     transform: scaleX(0);
@@ -84,9 +98,24 @@
     transition: transform 0.5s ease-out;
   }
 
-  .underline-animation:hover::after {
+  &:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
+  }
+}
+
+@layer utilities {
+
+  @keyframes blink {
+
+    from,
+    to {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0;
+    }
   }
 }
 

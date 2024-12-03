@@ -142,34 +142,34 @@ const roles = {
 const Hiring = () => {
   return (
     <section className="py-24 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/5 to-transparent" />
+      <div className="absolute inset-0 bg-linear-to-b from-transparent via-purple-500/5 to-transparent" />
       <div className="max-w-7xl mx-auto px-4 relative">
         <div className="text-center mb-16">
-          <h2 className="text-2xl lg:text-4xl font-bold bg-gradient-to-r from-white mb-4 via-white to-purple-200 bg-clip-text text-transparent">
+          <h2 className="text-2xl lg:text-4xl font-bold bg-linear-to-r from-white mb-4 via-white to-purple-200 bg-clip-text text-transparent">
             Join Our Team
           </h2>
         </div>
 
         {Object.entries(roles).map(([section, { description, items }]) => (
           <div key={section} className="mb-16">
-            <h3 className="text-lg lg:text-2xl text-center flex justify-center items-center font-semibold bg-gradient-to-r from-white mb-4 via-purple-200 to-purple-300 bg-clip-text text-transparent">{section}</h3>
+            <h3 className="text-lg lg:text-2xl text-center flex justify-center items-center font-semibold bg-linear-to-r from-white mb-4 via-purple-200 to-purple-300 bg-clip-text text-transparent">{section}</h3>
             <p className="text-xs lg:text-base text-center flex justify-center items-center text-white/60 mb-6">{description}</p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {items.map((role, index) => (
                 <div
                   key={index}
-                  className="group relative bg-white/[0.02] border-white/10 backdrop-blur-sm hover:border-purple-500/20 transition-all duration-300 p-10 rounded-xl"
+                  className="group relative bg-white/[0.02] border-white/10 backdrop-blur-xs hover:border-purple-500/20 transition-all duration-300 p-10 rounded-xl"
                 >
-                  <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-xl smooth-animation" />
+                  <div className="absolute inset-0 bg-linear-to-r from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-xl smooth-animation" />
                   <div className="relative p-6">
                     <role.icon className="h-8 w-8 text-purple-400 mb-4" />
-                    <h4 className="text-lg lg:text-2xl font-bold bg-gradient-to-r from-white via-purple-100 to-purple-200 bg-clip-text text-transparent mb-2">
+                    <h4 className="text-lg lg:text-2xl font-bold bg-linear-to-r from-white via-purple-100 to-purple-200 bg-clip-text text-transparent mb-2">
                       {role.title}
                     </h4>
                     <p className="text-white/60 mb-4 text-xs lg:text-base">
                       {role.description}
                     </p>
-                    <div className="text-sm lg:text-lg font-bold mb-4 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
+                    <div className="text-sm lg:text-lg font-bold mb-4 bg-linear-to-r from-white to-purple-200 bg-clip-text text-transparent">
                       {role.price}
                     </div>
                     <ul className="space-y-2 mb-6">

@@ -42,7 +42,7 @@ const Process = () => {
     <section className="py-24 relative">
       <div className="max-w-6xl mx-auto px-4 relative">
         <div className="text-center mb-16">
-          <h2 className="text-2xl lg:text-4xl font-bold mb-4 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
+          <h2 className="text-2xl lg:text-4xl font-bold mb-4 bg-linear-to-r from-white to-purple-200 bg-clip-text text-transparent">
             Our Support Process
           </h2>
           <p className="text-white/60 max-w-2xl mx-auto">
@@ -57,8 +57,8 @@ const Process = () => {
               onMouseEnter={() => setActiveStep(index)}
               onMouseLeave={() => setActiveStep(null)}
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-xl smooth-animation" />
-              <div className="relative p-6 bg-white/[0.02] rounded-xl border border-white/10 backdrop-blur-sm transition-all duration-300 group-hover:transform group-hover:scale-105">
+              <div className="absolute inset-0 bg-linear-to-r from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-xl smooth-animation" />
+              <div className="relative p-6 bg-white/[0.02] rounded-xl border border-white/10 backdrop-blur-xs transition-all duration-300 group-hover:transform group-hover:scale-105">
                 <div className="flex items-center mb-4">
                   <step.icon className="h-8 w-8 text-purple-400" />
                   <div className="ml-4 text-sm font-medium text-white/40">

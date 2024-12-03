@@ -63,7 +63,7 @@ const PartnershipTiers = () => {
   return (
     <section className="py-20 bg-[#020202]">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
+        <h2 className="text-4xl font-bold mb-12 text-center bg-linear-to-r from-white to-purple-200 bg-clip-text text-transparent">
           Partnership Tiers
         </h2>
         <div className="flex flex-col md:flex-row gap-8 justify-center items-stretch max-w-7xl mx-auto">

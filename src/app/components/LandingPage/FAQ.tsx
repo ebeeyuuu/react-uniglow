@@ -33,7 +33,7 @@ const AccordionItem = ({ question, answer, isOpen, onClick }: {
   onClick: () => void;
 }) => {
   return (
-    <div className="bg-white/[0.02] rounded-2xl border border-white/5 backdrop-blur-sm overflow-hidden">
+    <div className="bg-white/[0.02] rounded-2xl border border-white/5 backdrop-blur-xs overflow-hidden">
       <button
         className="w-full px-6 py-6 flex items-center justify-between text-left"
         onClick={onClick}
@@ -55,11 +55,11 @@ const FAQ = () => {
 
   return (
     <section className="py-24 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/5 to-transparent" />
+      <div className="absolute inset-0 bg-linear-to-b from-transparent via-purple-500/5 to-transparent" />
       
       <div className="max-w-3xl mx-auto px-4 relative">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-white via-white to-purple-200 bg-clip-text text-transparent">
+          <h2 className="text-4xl font-bold mb-4 bg-linear-to-r from-white via-white to-purple-200 bg-clip-text text-transparent">
             Frequently Asked Questions
           </h2>
           <p className="text-white/60 max-w-2xl mx-auto">

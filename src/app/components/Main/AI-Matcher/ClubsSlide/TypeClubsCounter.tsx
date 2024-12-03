@@ -14,7 +14,7 @@ const TypeClubsCounter: React.FC<TypeClubsCounterProps> = ({
 }) => {
   return (
     <motion.div
-      className="flex justify-center items-center px-5 py-3 gap-x-2 z-[1000] rounded-xl shadow-xl bg-black/50 backdrop-blur-sm"
+      className="flex justify-center items-center px-5 py-3 gap-x-2 z-1000 rounded-xl shadow-xl bg-black/50 backdrop-blur-xs"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}

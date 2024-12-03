@@ -54,14 +54,14 @@ const ConfirmDetailedSubjects: React.FC<ConfirmDetailedSubjectsProps> = ({
         transition={{ duration: 0.5 }}
       >
         <div className="rounded-xl shadow-md w-full max-w-7xl h-[90vh] overflow-hidden flex flex-col">
-          <div className="flex-grow overflow-y-auto p-10 scrollbar-hide">
+          <div className="grow overflow-y-auto p-10 scrollbar-hide">
             <div className="grid max-md:grid-cols-1 grid-cols-2 gap-6">
               {categories.map((category, index) => {
                 const subjects = groupedSubjects[category] || [];
                 return (
                   <div
                     key={index}
-                    className="bg-[#02ad83]/40 backdrop-blur-sm p-10 rounded-lg"
+                    className="bg-[#02ad83]/40 backdrop-blur-xs p-10 rounded-lg"
                   >
                     <div className="text-xl font-medium mb-3 text-[#f4b034]">
                       Section No.{index + 1}

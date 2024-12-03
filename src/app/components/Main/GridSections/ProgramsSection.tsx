@@ -7,7 +7,7 @@ const ProgramsSection = () => {
 
   return (
     <div
-      className="row-span-2 col-span-1 max-[2000px]:col-span-2 max-[1200px]:row-span-1 max-[1200px]:col-span-4 hover:border-[#f4b034] max-[700px]:text-lg rounded-[10px] flex justify-center items-center text-xl font-bold text-center cursor-pointer transition-all duration-300 ease-in-out relative bg-gradient-to-b from-[#212121] to-[#111111]"
+      className="row-span-2 col-span-1 max-[2000px]:col-span-2 max-[1200px]:row-span-1 max-[1200px]:col-span-4 hover:border-[#f4b034] max-[700px]:text-lg rounded-[10px] flex justify-center items-center text-xl font-bold text-center cursor-pointer transition-all duration-300 ease-in-out relative bg-linear-to-b from-[#212121] to-[#111111]"
       onClick={() => router.push("/pages/main/programs")}
     >
       <div className="relative flex items-center justify-center w-full h-full">

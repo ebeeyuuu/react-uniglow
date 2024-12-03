@@ -212,7 +212,7 @@ const TestimonialCard: React.FC<{ testimonial: Testimonial }> = ({
 const Testimonies: React.FC = () => {
   return (
     <div className="w-full py-24 relative flex justify-center items-center flex-col mx-auto gap-y-[30px]">
-      <h2 className="text-3xl lg:text-5xl font-bold pb-6 bg-gradient-to-r from-white via-white to-purple-200 bg-clip-text text-transparent">
+      <h2 className="text-3xl lg:text-5xl font-bold pb-6 bg-linear-to-r from-white via-white to-purple-200 bg-clip-text text-transparent">
         Testimonials
       </h2>
       <div className="flex flex-col gap-y-[40px] mx-auto w-full">

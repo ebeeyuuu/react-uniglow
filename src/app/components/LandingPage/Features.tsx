@@ -61,14 +61,14 @@ const Features: React.FC = () => {
 
   return (
     <section className="py-24 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-purple-500/10 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-linear-to-b from-purple-500/10 via-transparent to-transparent" />
 
       <div className="max-w-7xl mx-auto px-4 relative">
         <div className="text-center mb-16">
           <h2
             data-aos="fade-up"
             data-aos-delay="300"
-            className="text-3xl lg:text-5xl font-bold pb-6 bg-gradient-to-r from-white via-white to-purple-200 bg-clip-text text-transparent"
+            className="text-3xl lg:text-5xl font-bold pb-6 bg-linear-to-r from-white via-white to-purple-200 bg-clip-text text-transparent"
           >
             Revolutionary Features
           </h2>
@@ -87,10 +87,10 @@ const Features: React.FC = () => {
         >
           {features.map((feature, index) => (
             <div key={index} className="group relative" data-aos="fade-up" data-aos-delay={`${300 + 50 * index}`}>
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl smooth-animation" />
-              <div className="relative p-8 bg-white/[0.02] rounded-2xl border-2 border-white/5 backdrop-blur-sm">
+              <div className="absolute inset-0 bg-linear-to-r from-purple-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl smooth-animation" />
+              <div className="relative p-8 bg-white/[0.02] rounded-2xl border-2 border-white/5 backdrop-blur-xs">
                 <div className="flex items-center mb-6">
-                  <div className="flex items-center justify-center w-12 h-12 rounded-2xl bg-gradient-to-r from-purple-500/10 to-purple-500/10">
+                  <div className="flex items-center justify-center w-12 h-12 rounded-2xl bg-linear-to-r from-purple-500/10 to-purple-500/10">
                     <feature.icon className="h-4 lg:h-6 w-4 lg:w-6 text-purple-400" />
                   </div>
                   <h3 className="text-base lg:text-xl font-semibold ml-4">
@@ -106,7 +106,7 @@ const Features: React.FC = () => {
                       key={i}
                       className="flex items-center text-xs lg:text-sm text-white/60"
                     >
-                      <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-purple-400 to-purple-400 mr-2" />
+                      <div className="w-1.5 h-1.5 rounded-full bg-linear-to-r from-purple-400 to-purple-400 mr-2" />
                       {benefit}
                     </li>
                   ))}

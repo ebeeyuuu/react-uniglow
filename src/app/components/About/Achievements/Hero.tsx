@@ -1,101 +1,91 @@
-import React, { useState, useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { FaLightbulb, FaMoneyBill, FaGlobe } from "react-icons/fa";
-import { motion, AnimatePresence } from "framer-motion";
-import LoadingButton from "../../LoadingButton";
-import { useRouter } from "next/navigation";
+import React, { useEffect, useRef } from 'react'
+import { motion, useAnimation, useInView } from 'framer-motion'
+import { FaGraduationCap } from 'react-icons/fa'
 
 const Hero = () => {
-  const phrases = [
-    "Need a scholarship?",
-    "Want to realise your dreams?",
-    "Want to match with the best universities?",
-  ];
-  const [index, setIndex] = useState(0);
-  const router = useRouter();
+  const ref = useRef(null)
+  const isInView = useInView(ref)
+  const controls = useAnimation()
+  const [count, setCount] = React.useState(0)
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prevIndex) => (prevIndex + 1) % phrases.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [phrases.length]);
+    if (isInView) {
+      controls.start('visible')
+      const interval = setInterval(() => {
+        setCount((prevCount) => {
+          const newCount = prevCount + 1000
+          return newCount >= 100000 ? 100000 : newCount
+        })
+      }, 20)
+      return () => clearInterval(interval)
+    }
+  }, [isInView, controls])
 
-  useEffect(() => {
-    AOS.init({
-      once: true,
-    });
-  }, []);
-
-  const handleRedirect = async () => {
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    router.push("/pages/signup");
-  };
+  const particleVariants = {
+    hidden: { opacity: 0, scale: 0 },
+    visible: { opacity: 1, scale: 1 }
+  }
 
   return (
-    <div className="w-full min-h-screen flex flex-col justify-center items-center">
-      <div
-        className="bg-white rounded-full mt-10 text-black font-medium text-base px-4 py-2"
-        data-aos="fade-up"
-        data-aos-delay="300"
-      >
-        How we&apos;re doing
-      </div>
-      <div
-        className="text-center scale-100 max-md:scale-[70%] smooth-animation mt-6 text-6xl font-extrabold mr-3"
-        data-aos="fade-up"
-        data-aos-delay="350"
-      >
-        <span className="block">Our</span>
-        <span className="block">achievements</span>
-      </div>
-      <div className="flex flex-row w-full px-10 gap-4 max-md:scale-[70%] scale-100 smooth-animation justify-center items-center mx-auto mt-12 max-md:mt-0">
-        <div className="flex flex-col justify-center items-center rounded-xl bg-[#003dcc] p-10 aspect-square gap-4">
-          <FaLightbulb className="text-white" size={25} />
-          <div className="text-white text-xl font-bold text-center">
-            <span className="block">1,000,000+</span>
-            <span className="block">dreams</span>
-            <span className="block">realised</span>
-          </div>
-        </div>
-        <div className="flex flex-col justify-center items-center rounded-xl bg-[#003dcc] p-10 aspect-square gap-4">
-          <FaGlobe className="text-white" size={25} />
-          <div className="text-white text-xl font-bold text-center">
-            <span className="block">95% of students</span>
-            <span className="block">matched with 100% compatibility</span>
-            <span className="block">with their university</span>
-          </div>
-        </div>
-        <div className="flex flex-col justify-center items-center rounded-xl bg-[#003dcc] p-10 aspect-square gap-4">
-          <FaMoneyBill className="text-white" size={25} />
-          <div className="text-white text-xl font-bold text-center">
-            <span className="block">$50M+ in</span>
-            <span className="block">scholarships</span>
-            <span className="block">secured</span>
-          </div>
-        </div>
-      </div>
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={phrases[index]}
-          initial={{ opacity: 0, y: 20 }}
+    <section ref={ref} className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-purple-900/20 to-[#020202]" />
+      <div className="relative z-10 text-center">
+        <motion.h1 
+          className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent"
+          initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.5 }}
-          className="text-xl font-medium w-2/3 justify-center items-center flex mx-auto mt-10"
         >
-          {phrases[index]}
+          Our Impact in Numbers
+        </motion.h1>
+        <motion.div
+          className="text-6xl md:text-8xl font-bold mb-8"
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
+          {count.toLocaleString()}
         </motion.div>
-      </AnimatePresence>
-      <LoadingButton
-        onClick={handleRedirect}
-        className="bg-[#003dcc] px-5 py-3 rounded-xl font-medium text-base mt-8 scale-100 hover:scale-110 text-center smooth-animation"
+        <motion.p
+          className="text-xl md:text-2xl text-white/80"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+        >
+          Students Helped and Counting
+        </motion.p>
+      </div>
+      {[...Array(20)].map((_, index) => (
+        <motion.div
+          key={index}
+          className="absolute w-2 h-2 bg-purple-400 rounded-full"
+          variants={particleVariants}
+          initial="hidden"
+          animate={controls}
+          transition={{
+            duration: Math.random() * 2 + 1,
+            delay: Math.random() * 0.5,
+            repeat: Infinity,
+            repeatType: 'reverse'
+          }}
+          style={{
+            top: `${Math.random() * 100}%`,
+            left: `${Math.random() * 100}%`,
+          }}
+        />
+      ))}
+      <motion.div
+        className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.6 }}
       >
-        Get started
-      </LoadingButton>
-    </div>
-  );
-};
+        <FaGraduationCap className="text-4xl text-purple-400" />
+      </motion.div>
+    </section>
+  )
+}
 
-export default Hero;
+export default Hero
+
+

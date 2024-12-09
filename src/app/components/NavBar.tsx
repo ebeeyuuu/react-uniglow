@@ -353,7 +353,7 @@ const NavBar = () => {
                       animate="visible"
                       exit="hidden"
                       variants={menuVariants}
-                      className="absolute top-0 origin-top mt-14 w-72 rounded-md shadow-lg border border-white/[0.05] bg-linear-to-b from-black via-65% via-black/50 to-purple-950/50 blackdrop-blur-3xl ring-1 ring-black ring-opacity-5 focus:outline-hidden z-50 py-7 px-3"
+                      className="absolute top-0 origin-top mt-14 w-72 rounded-md shadow-lg border border-white/[0.05] bg-linear-to-b from-black via-65% via-black/50 to-purple-950/50 backdrop-blur-3xl ring-1 ring-black ring-opacity-5 focus:outline-hidden z-50 py-7 px-3"
                     >
                       <div className="py-1 mr-2">
                         {programItems.map(({ href, label, icon: Icon }) => (

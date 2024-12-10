@@ -19,6 +19,7 @@
     "@react-three/cannon": "^6.6.0",
     "@react-three/drei": "^9.117.3",
     "@react-three/fiber": "^8.17.10",
+    "@tailwindcss/postcss": "^0.0.0-development.1",
     "@types/bcryptjs": "^2.4.6",
     "@types/express": "^4.17.21",
     "ai": "^3.3.42",

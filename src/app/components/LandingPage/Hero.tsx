@@ -6,6 +6,7 @@ import preview from "@/images/preview.png";
 import LoadingButton from "@/app/components/LoadingButton";
 import { useRouter } from "next/navigation";
 import { BsArrowRight, BsStars } from "react-icons/bs";
+import MovingGradient from "./MovingGradient";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -33,8 +34,9 @@ const Hero = () => {
       data-aos="fade-up"
       className="relative min-h-[90vh] flex items-center justify-center"
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-purple-500/10 via-transparent to-transparent" />
-
+      <div className="absolute inset-0 z-0">
+        <MovingGradient />
+      </div>
       <div className="relative z-10 max-w-4xl mx-auto px-4 py-20 flex flex-col items-center text-center">
         <div className="inline-flex items-center gap-2 bg-white/5 rounded-full mt-24 px-6 py-2 mb-10 border border-white/5">
           <BsStars className="w-4 h-4 text-purple-400" />
@@ -43,7 +45,7 @@ const Hero = () => {
           </span>
         </div>
 
-        <h1 className="text-5xl lg:text-7xl font-bold pb-10 bg-gradient-to-r from-white via-white to-purple-200 bg-clip-text text-transparent">
+        <h1 className="text-5xl font-bold pb-10 bg-gradient-to-r from-white via-white to-purple-200 bg-clip-text text-transparent">
           Find Your
           <br /> Dream University
         </h1>
@@ -69,16 +71,6 @@ const Hero = () => {
           >
             Contact Us
           </LoadingButton>
-        </div>
-
-        <div className="relative w-full max-w-6xl">
-          <div className="relative rounded-[2rem] backdrop-blur-sm overflow-hidden">
-            <Image
-              src={preview}
-              alt="Students at university"
-              className="w-full h-full object-cover opacity-80"
-            />
-          </div>
         </div>
       </div>
     </section>

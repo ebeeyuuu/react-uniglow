@@ -1,8 +1,6 @@
 "use client";
 
 import React, { useEffect } from "react";
-import Image from "next/image";
-import preview from "@/images/preview.png";
 import LoadingButton from "@/app/components/LoadingButton";
 import { useRouter } from "next/navigation";
 import { BsArrowRight, BsStars } from "react-icons/bs";
@@ -38,14 +36,14 @@ const Hero = () => {
         <MovingGradient />
       </div>
       <div className="relative z-10 max-w-4xl mx-auto px-4 py-20 flex flex-col items-center text-center">
-        <div className="inline-flex items-center gap-2 bg-white/5 rounded-full mt-24 px-6 py-2 mb-10 border border-white/5">
+        <div className="inline-flex items-center gap-2 border border-white/20 bg-white/5 rounded-full mt-24 px-6 py-2 mb-10">
           <BsStars className="w-4 h-4 text-purple-400" />
           <span className="text-sm font-medium bg-gradient-to-r from-purple-400 to-purple-200 bg-clip-text text-transparent">
             Your Academic Journey Starts Here
           </span>
         </div>
 
-        <h1 className="text-5xl font-bold pb-10 bg-gradient-to-r from-white via-white to-purple-200 bg-clip-text text-transparent">
+        <h1 className="text-6xl font-bold pb-10 bg-gradient-to-r from-white via-white to-purple-200 bg-clip-text text-transparent">
           Find Your
           <br /> Dream University
         </h1>

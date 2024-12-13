@@ -61,6 +61,7 @@
     "react-responsive": "^10.0.0",
     "react-select": "^5.8.0",
     "react-spring": "^9.7.4",
+    "react-svg-worldmap": "^2.0.0-alpha.16",
     "react-virtualized-auto-sizer": "^1.0.24",
     "react-window": "^1.8.10",
     "router": "^2.0.0",

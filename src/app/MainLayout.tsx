@@ -1,14 +1,16 @@
 import React, { ReactNode } from "react";
 import FloatingDock from "@/app/components/Main/FloatingDock";
 import {
-  FaHome,
-  FaUser,
-  FaCog,
-  FaBell,
-  FaBookmark,
-  FaQuestionCircle,
-} from "react-icons/fa";
-import { MdExplore, MdLibraryBooks } from "react-icons/md";
+  BsCompass,
+  BsRobot,
+  BsVr,
+  BsPeople,
+  BsBook,
+  BsClipboardCheck,
+  BsTrophy,
+  BsCalendarEvent,
+  BsCash,
+} from "react-icons/bs";
 
 interface MainLayoutProps {
   children: ReactNode;
@@ -16,39 +18,59 @@ interface MainLayoutProps {
   className?: string;
 }
 
+const navigationItems = [
+  {
+    title: "University Explorer",
+    icon: <BsCompass className="w-full h-full text-white" />,
+    href: "/explorer",
+  },
+  {
+    title: "AI Matcher",
+    icon: <BsRobot className="w-full h-full text-white" />,
+    href: "/matcher",
+  },
+  {
+    title: "VR Tours",
+    icon: <BsVr className="w-full h-full text-white" />,
+    href: "/tours",
+  },
+  {
+    title: "Mentors",
+    icon: <BsPeople className="w-full h-full text-white" />,
+    href: "/mentors",
+  },
+  {
+    title: "Programs",
+    icon: <BsBook className="w-full h-full text-white" />,
+    href: "/programs",
+  },
+  {
+    title: "Application Tracker",
+    icon: <BsClipboardCheck className="w-full h-full text-white" />,
+    href: "/tracker",
+  },
+  {
+    title: "Rankings",
+    icon: <BsTrophy className="w-full h-full text-white" />,
+    href: "/rankings",
+  },
+  {
+    title: "Events",
+    icon: <BsCalendarEvent className="w-full h-full text-white" />,
+    href: "/events",
+  },
+  {
+    title: "Scholarships",
+    icon: <BsCash className="w-full h-full text-white" />,
+    href: "/scholarships",
+  },
+];
+
 const MainLayout: React.FC<MainLayoutProps> = ({
   children,
   includeNavBar = true,
   className = "",
 }) => {
-  const links = [
-    {
-      title: "Home",
-      icon: <FaHome />,
-      href: "/pages/main",
-    },
-    {
-      title: "Explore",
-      icon: <MdExplore />,
-      href: "/pages/explore",
-    },
-    {
-      title: "Notifications",
-      icon: <FaBell />,
-      href: "/pages/notifications",
-    },
-    {
-      title: "Profile",
-      icon: <FaUser />,
-      href: "/pages/profile",
-    },
-    {
-      title: "Settings",
-      icon: <FaCog />,
-      href: "/pages/settings",
-    },
-  ];
-
   return (
     <div
       className={`flex h-screen w-full relative overflow-hidden scrollbar-hide ${className}`}
@@ -60,7 +82,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
       </div>
       {includeNavBar && (
         <div className="absolute z-50 bottom-5 left-1/2 -translate-x-1/2 flex items-center justify-center w-full">
-          <FloatingDock items={links} />
+          <FloatingDock items={navigationItems} />
         </div>
       )}
     </div>

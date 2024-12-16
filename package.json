@@ -64,6 +64,7 @@
     "react-svg-worldmap": "^2.0.0-alpha.16",
     "react-virtualized-auto-sizer": "^1.0.24",
     "react-window": "^1.8.10",
+    "recharts": "^2.15.0",
     "router": "^2.0.0",
     "sharp": "^0.33.5",
     "superstatic": "^9.0.3",

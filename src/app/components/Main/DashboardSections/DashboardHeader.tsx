@@ -6,10 +6,10 @@ const DashboardHeader = () => {
   return (
     <div className="py-8 gap-6 flex items-center justify-between">
       <div>
-        <h1 className="text-3xl lg:text-5xl font-bold mb-2">
+        <h1 className="max-[640px]:text-lg sm:text-xl md:text-3xl lg:text-5xl font-bold mb-2">
           Welcome back, Alex!
         </h1>
-        <p className="text-white/60">
+        <p className="max-[640px]:text-xs sm:text-sm md:text-lg lg:text-2xl text-white/60">
           Track your university application progress
         </p>
       </div>

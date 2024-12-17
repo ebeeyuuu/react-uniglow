@@ -68,6 +68,7 @@
     "router": "^2.0.0",
     "sharp": "^0.33.5",
     "superstatic": "^9.0.3",
+    "swapy": "^1.0.2",
     "tailwind-merge": "^2.5.4",
     "tailwind-scrollbar-hide": "^1.1.7",
     "tailwindcss-animate": "^1.0.7",

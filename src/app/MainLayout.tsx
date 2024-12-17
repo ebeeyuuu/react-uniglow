@@ -73,15 +73,15 @@ const MainLayout: React.FC<MainLayoutProps> = ({
 }) => {
   return (
     <div
-      className={`flex h-screen w-full relative overflow-hidden scrollbar-hide ${className}`}
+      className={`flex h-screen w-full relative overflow-auto scrollbar-hide ${className}`}
     >
       <div
-        className={`flex-grow scrollbar-hide flex items-center justify-center overflow-auto`}
+        className={`flex-grow scrollbar-hide flex items-center justify-center`}
       >
         {children}
       </div>
       {includeNavBar && (
-        <div className="absolute z-50 bottom-5 left-1/2 -translate-x-1/2 flex items-center justify-center w-full">
+        <div className="fixed z-50 bottom-2 left-1/2 -translate-x-1/2 flex items-center justify-center w-full">
           <FloatingDock items={navigationItems} />
         </div>
       )}

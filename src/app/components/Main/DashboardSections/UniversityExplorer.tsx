@@ -61,7 +61,7 @@ const UniversityExplorer: React.FC<React.HTMLProps<HTMLDivElement>> = ({
             <Progress
               value={uni.match}
               className="h-1 bg-zinc-700"
-              progressColor="bg-gradient-to-r from-purple-500/70 to-blue-500/70"
+              progressColor="bg-gradient-to-r from-purple-500 to-blue-500"
             />
           </div>
         ))}

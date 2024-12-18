@@ -8,6 +8,8 @@ import AIMatcher from "./DashboardSections/AIMatcher";
 import Mentors from "./DashboardSections/Mentors";
 import VRTours from "./DashboardSections/VRTours";
 import UniversityRankings from "./DashboardSections/UniversityRankings";
+import Programs from "./DashboardSections/Programs";
+import CampusEvents from "./DashboardSections/CampusEvents";
 
 const BentoBox = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -21,8 +23,8 @@ const BentoBox = () => {
 
       swapy.onBeforeSwap((event) => {
         console.log(event);
-        return true
-      })
+        return true;
+      });
 
       return () => {
         swapy.destroy();
@@ -38,7 +40,7 @@ const BentoBox = () => {
 
       <div
         ref={containerRef}
-        className="w-[90dvw] mx-auto mt-8 grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-7 gap-3"
+        className="w-[95dvw] mx-auto mt-8 grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-7 gap-3"
       >
         <div
           className="col-span-3 max-[640px]:row-span-3 row-span-4"
@@ -68,20 +70,10 @@ const BentoBox = () => {
           <UniversityRankings data-swapy-item="e" />
         </div>
         <div className="col-span-1 row-span-1" data-swapy-slot="f">
-          <div
-            data-swapy-item="f"
-            className="w-full h-full rounded-2xl p-6 border border-white/5 bg-white/[0.01]"
-          >
-            Box 6
-          </div>
+          <Programs data-swapy-item="f" />
         </div>
         <div className="col-span-1 row-span-1" data-swapy-slot="g">
-          <div
-            data-swapy-item="g"
-            className="w-full h-full rounded-2xl p-6 border border-white/5 bg-white/[0.01]"
-          >
-            Box 7
-          </div>
+          <CampusEvents data-swapy-item="g" />
         </div>
         <div className="col-span-1 row-span-1" data-swapy-slot="h">
           <div

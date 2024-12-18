@@ -23,7 +23,7 @@ const Mentors: React.FC<React.HTMLProps<HTMLDivElement>> = ({
   return (
     <div
       {...divProps}
-      className="space-y-4 w-full h-full rounded-2xl p-6 border border-white/5 bg-white/[0.01] overflow-scroll scrollbar-hide flex flex-col justify-center items-center"
+      className="space-y-4 w-full h-full rounded-2xl p-6 border border-white/5 bg-white/[0.01] overflow-scroll scrollbar-hide flex justify-center flex-col"
     >
       <div className="flex items-start justify-start w-full">
         <div className="flex items-center gap-2">
@@ -41,10 +41,10 @@ const Mentors: React.FC<React.HTMLProps<HTMLDivElement>> = ({
             className="flex items-center w-full gap-3 p-3 bg-white/5 rounded-xl hover:bg-white/10 transition-colors cursor-pointer"
           >
             <div className="flex-1 min-w-0">
-              <div className="font-medium mb-1 text-xs md:text-sm lg:text-base">
+              <div className="truncate font-medium mb-1 text-xs md:text-sm lg:text-base">
                 {mentor.name}
               </div>
-              <div className="text-xs lg:text-sm text-white/60">
+              <div className="truncate text-xs lg:text-sm text-white/60">
                 {mentor.role}
               </div>
             </div>

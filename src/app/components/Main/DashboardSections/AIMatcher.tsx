@@ -1,4 +1,5 @@
 "use client";
+"use client";
 
 import { BsArrowRight } from "react-icons/bs";
 import { Progress } from "../../UI/Progress";
@@ -19,15 +20,21 @@ const AIMatcher: React.FC<React.HTMLProps<HTMLDivElement>> = ({
       className="space-y-4 w-full h-full rounded-2xl p-6 border border-white/5 bg-white/[0.01] overflow-scroll scrollbar-hide flex flex-col justify-center items-center"
     >
       <div className="flex w-full justify-start items-start">
-        <h2 className="text-sm md:text-base lg:text-lg font-semibold">AI Matcher</h2>
+        <h2 className="text-sm md:text-base lg:text-lg font-semibold">
+          AI Matcher
+        </h2>
       </div>
 
       <div className="space-y-5 w-full">
         {matchCriteria.map((criteria, index) => (
           <div key={index} className="space-y-2 w-full">
             <div className="flex justify-between items-center text-sm">
-              <span className="text-xs md:text-sm lg:text-base text-white/60">{criteria.label}</span>
-              <span className="text-xs md:text-sm lg:text-base text-purple-400">{criteria.progress}%</span>
+              <span className="truncate text-xs md:text-sm lg:text-base text-white/60">
+                {criteria.label}
+              </span>
+              <span className="text-xs md:text-sm lg:text-base text-purple-400">
+                {criteria.progress}%
+              </span>
             </div>
             <Progress
               value={criteria.progress}

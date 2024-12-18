@@ -6,6 +6,8 @@ import DashboardHeader from "./DashboardSections/DashboardHeader";
 import UniversityExplorer from "./DashboardSections/UniversityExplorer";
 import AIMatcher from "./DashboardSections/AIMatcher";
 import Mentors from "./DashboardSections/Mentors";
+import VRTours from "./DashboardSections/VRTours";
+import UniversityRankings from "./DashboardSections/UniversityRankings";
 
 const BentoBox = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -60,20 +62,10 @@ const BentoBox = () => {
           className="col-span-1 max-[640px]:col-span-2 row-span-1"
           data-swapy-slot="d"
         >
-          <div
-            data-swapy-item="d"
-            className="w-full h-full rounded-2xl p-6 border border-white/5 bg-white/[0.01]"
-          >
-            Box 4
-          </div>
+          <VRTours data-swapy-item="d" />
         </div>
         <div className="col-span-1 row-span-1" data-swapy-slot="e">
-          <div
-            data-swapy-item="e"
-            className="w-full h-full rounded-2xl p-6 border border-white/5 bg-white/[0.01]"
-          >
-            Box 5
-          </div>
+          <UniversityRankings data-swapy-item="e" />
         </div>
         <div className="col-span-1 row-span-1" data-swapy-slot="f">
           <div

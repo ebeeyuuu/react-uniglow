@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import WorldMap from "react-svg-worldmap";
 
 const data = [
   { country: "US", value: 1000 },
@@ -25,14 +24,6 @@ const GlobalReach = () => {
           Global Reach
         </h2>
         <div className="relative">
-          <WorldMap
-            color="purple"
-            backgroundColor="#020202"
-            value-suffix="students"
-            size="lg"
-            data={data}
-            onClickFunction={(_, label) => setSelectedCountry(label)}
-          />
           {selectedCountry && (
             <motion.div
               initial={{ opacity: 0, y: 20 }}

@@ -1,15 +1,11 @@
 import React, { ReactNode } from "react";
 import FloatingDock from "@/app/components/Main/FloatingDock";
 import {
-  BsCompass,
-  BsRobot,
-  BsVr,
-  BsPeople,
-  BsBook,
-  BsClipboardCheck,
-  BsTrophy,
-  BsCalendarEvent,
-  BsCash,
+  BsBell,
+  BsGear,
+  BsHouse,
+  BsPerson,
+  BsQuestionCircle,
 } from "react-icons/bs";
 
 interface MainLayoutProps {
@@ -20,49 +16,29 @@ interface MainLayoutProps {
 
 const navigationItems = [
   {
-    title: "University Explorer",
-    icon: <BsCompass className="w-full h-full text-white" />,
-    href: "/explorer",
+    title: "Home",
+    icon: <BsHouse className="w-full h-full text-white" />,
+    href: "/home",
   },
   {
-    title: "AI Matcher",
-    icon: <BsRobot className="w-full h-full text-white" />,
-    href: "/matcher",
+    title: "Profile",
+    icon: <BsPerson className="w-full h-full text-white" />,
+    href: "/profile",
   },
   {
-    title: "VR Tours",
-    icon: <BsVr className="w-full h-full text-white" />,
-    href: "/tours",
+    title: "Settings",
+    icon: <BsGear className="w-full h-full text-white" />,
+    href: "/settings",
   },
   {
-    title: "Mentors",
-    icon: <BsPeople className="w-full h-full text-white" />,
-    href: "/mentors",
+    title: "Notifications",
+    icon: <BsBell className="w-full h-full text-white" />,
+    href: "/notifications",
   },
   {
-    title: "Programs",
-    icon: <BsBook className="w-full h-full text-white" />,
-    href: "/programs",
-  },
-  {
-    title: "Application Tracker",
-    icon: <BsClipboardCheck className="w-full h-full text-white" />,
-    href: "/tracker",
-  },
-  {
-    title: "Rankings",
-    icon: <BsTrophy className="w-full h-full text-white" />,
-    href: "/rankings",
-  },
-  {
-    title: "Events",
-    icon: <BsCalendarEvent className="w-full h-full text-white" />,
-    href: "/events",
-  },
-  {
-    title: "Scholarships",
-    icon: <BsCash className="w-full h-full text-white" />,
-    href: "/scholarships",
+    title: "Help",
+    icon: <BsQuestionCircle className="w-full h-full text-white" />,
+    href: "/help",
   },
 ];
 

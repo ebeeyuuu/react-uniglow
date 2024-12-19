@@ -1,7 +1,7 @@
 "use client";
 
 import { FaSlidersH } from "react-icons/fa";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 
 const events = [
   {
@@ -23,20 +23,6 @@ const CampusEvents: React.FC<React.HTMLProps<HTMLDivElement>> = ({
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isGrid, setIsGrid] = useState(false);
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new ResizeObserver(([entry]) => {
-      const height = entry.contentRect.height;
-      setIsGrid(height > 300); // Switch to grid if height is larger than 300px
-    });
-
-    if (containerRef.current) {
-      observer.observe(containerRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
 
   useEffect(() => {
     if (!isGrid) {
@@ -50,20 +36,12 @@ const CampusEvents: React.FC<React.HTMLProps<HTMLDivElement>> = ({
   return (
     <div
       {...divProps}
-      ref={containerRef}
-      className="space-y-4 w-full h-full rounded-2xl p-6 border border-white/5 bg-white/[0.01] overflow-scroll scrollbar-hide flex justify-center flex-col"
+      className="space-y-4 w-full h-full rounded-2xl p-6 border border-white/5 bg-white/[0.01] overflow-scroll scrollbar-hide flex justify-center flex-col relative"
     >
       <div className="flex items-start justify-between w-full">
         <h2 className="text-sm md:text-base lg:text-lg font-semibold">
           Events
         </h2>
-        {/* Collapse Button */}
-        <button
-          onClick={() => setIsGrid((prev) => !prev)}
-          className="p-2 rounded-full bg-white/10 text-white hover:bg-white/20 transition-all"
-        >
-          <FaSlidersH className="w-5 h-5" />
-        </button>
       </div>
 
       {isGrid ? (
@@ -73,11 +51,17 @@ const CampusEvents: React.FC<React.HTMLProps<HTMLDivElement>> = ({
               key={index}
               className="p-3 bg-white/5 rounded-xl hover:bg-white/10 transition-colors cursor-pointer"
             >
-              <div className="font-medium mb-1">{event.name}</div>
+              <div className="font-medium text-xs lg:text-sm mb-1">
+                {event.name}
+              </div>
               <div className="text-xs text-white/60">{event.university}</div>
               <div className="flex flex-col items-start justify-start w-full text-xs text-purple-400 mt-2">
-                <div className="flex items-center gap-1">{event.date}</div>
-                <div className="flex items-center gap-1">{event.location}</div>
+                <div className="flex text-xs items-center gap-1">
+                  {event.date}
+                </div>
+                <div className="flex text-xs items-center gap-1">
+                  {event.location}
+                </div>
               </div>
             </div>
           ))}
@@ -98,7 +82,9 @@ const CampusEvents: React.FC<React.HTMLProps<HTMLDivElement>> = ({
                 }}
               />
               <div className="relative z-10 p-4">
-                <h3 className="text-sm font-medium mb-1">{event.name}</h3>
+                <h3 className="text-xs lg:text-sm font-medium mb-1">
+                  {event.name}
+                </h3>
                 <p className="text-xs text-white/60">{event.university}</p>
                 <div className="flex flex-col gap-1 text-xs text-purple-400 mt-2">
                   <div className="text-xs flex items-center gap-1">
@@ -127,6 +113,17 @@ const CampusEvents: React.FC<React.HTMLProps<HTMLDivElement>> = ({
           ))}
         </div>
       )}
+
+      <button
+        onClick={() => setIsGrid((prev) => !prev)}
+        className="absolute bottom-2 right-2 p-2 rounded-full bg-white/10 text-white hover:bg-white/20 transition-all"
+      >
+        {isGrid ? (
+          <FaSlidersH className="w-3 h-3" />
+        ) : (
+          <FaSlidersH className="w-3 h-3" />
+        )}
+      </button>
     </div>
   );
 };

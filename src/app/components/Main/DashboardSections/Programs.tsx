@@ -16,7 +16,6 @@ const Programs: React.FC<React.HTMLProps<HTMLDivElement>> = ({
   ...divProps
 }) => {
   const [isCarousel, setIsCarousel] = useState(true);
-  const containerRef = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -28,23 +27,9 @@ const Programs: React.FC<React.HTMLProps<HTMLDivElement>> = ({
     }
   }, [isCarousel]);
 
-  useEffect(() => {
-    const observer = new ResizeObserver(([entry]) => {
-      const height = entry.contentRect.height;
-      setIsCarousel(height < 200);
-    });
-
-    if (containerRef.current) {
-      observer.observe(containerRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <div
       {...divProps}
-      ref={containerRef}
       className="space-y-4 w-full h-full rounded-2xl p-6 border border-white/5 bg-white/[0.01] flex flex-col overflow-hidden relative"
     >
       <div className="flex items-start justify-start w-full">
@@ -58,9 +43,8 @@ const Programs: React.FC<React.HTMLProps<HTMLDivElement>> = ({
           {programs.map((program, index) => (
             <div
               key={index}
-              className={`absolute inset-0 flex py-6 flex-col justify-center items-start transition-opacity duration-700 ${
-                index === currentIndex ? "opacity-100" : "opacity-0"
-              }`}
+              className={`absolute inset-0 flex py-6 flex-col justify-center items-start transition-opacity duration-700 ${index === currentIndex ? "opacity-100" : "opacity-0"
+                }`}
             >
               <div
                 className="absolute inset-0 rounded-xl"
@@ -70,8 +54,8 @@ const Programs: React.FC<React.HTMLProps<HTMLDivElement>> = ({
                 }}
               />
               <div className="relative z-10 p-4">
-                <h3 className="font-medium">{program.name}</h3>
-                <p className="text-sm text-white/60">
+                <h3 className="font-medium text-xs lg:text-sm mb-1">{program.name}</h3>
+                <p className="text-xs text-white/60">
                   {program.universities} universities
                 </p>
               </div>
@@ -93,8 +77,8 @@ const Programs: React.FC<React.HTMLProps<HTMLDivElement>> = ({
                 }}
               />
               <div className="relative z-10">
-                <h3 className="font-medium">{program.name}</h3>
-                <p className="text-sm text-white/60">
+                <h3 className="font-medium text-xs lg:text-sm mb-1">{program.name}</h3>
+                <p className="text-xs text-white/60">
                   {program.universities} universities
                 </p>
               </div>
@@ -108,11 +92,10 @@ const Programs: React.FC<React.HTMLProps<HTMLDivElement>> = ({
           {programs.map((_, index) => (
             <div
               key={index}
-              className={`w-2 h-2 rounded-full ${
-                index === currentIndex
-                  ? "bg-purple-400"
-                  : "bg-white/20 hover:bg-white/40"
-              }`}
+              className={`w-2 h-2 rounded-full ${index === currentIndex
+                ? "bg-purple-400"
+                : "bg-white/20 hover:bg-white/40"
+                }`}
             />
           ))}
         </div>
@@ -125,7 +108,7 @@ const Programs: React.FC<React.HTMLProps<HTMLDivElement>> = ({
         {isCarousel ? (
           <BsFillGrid3X3GapFill className="w-3 h-3" />
         ) : (
-          <FaSlidersH className="w-3 h-3" /> // Replace BsFillSliders with FaSlidersH
+          <FaSlidersH className="w-3 h-3" />
         )}
       </button>
     </div>

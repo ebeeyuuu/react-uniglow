@@ -10,6 +10,7 @@ import VRTours from "./DashboardSections/VRTours";
 import UniversityRankings from "./DashboardSections/UniversityRankings";
 import Programs from "./DashboardSections/Programs";
 import CampusEvents from "./DashboardSections/CampusEvents";
+import Scholarships from "./DashboardSections/Scholarships";
 
 const BentoBox = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -33,23 +34,23 @@ const BentoBox = () => {
   });
 
   return (
-    <div className="text-white pb-20 overflow-auto scrollbar-hide">
-      <div>
+    <div className="pb-20 text-white overflow-y-scroll scrollbar-hide">
+      <div >
         <DashboardHeader />
       </div>
 
       <div
         ref={containerRef}
-        className="w-[95dvw] mx-auto mt-8 grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-7 gap-3"
+        className="w-[95dvw] h-min mx-auto mt-8 grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-7 gap-3"
       >
         <div
-          className="col-span-3 max-[640px]:row-span-3 row-span-4"
+          className="col-span-2 max-[640px]:row-span-3 row-span-4"
           data-swapy-slot="a"
         >
           <UniversityExplorer data-swapy-item="a" />
         </div>
         <div
-          className="col-span-1 max-[640px]:row-span-1 row-span-4"
+          className="col-span-2 max-[640px]:row-span-1 row-span-4"
           data-swapy-slot="b"
         >
           <AIMatcher data-swapy-item="b" />
@@ -76,23 +77,7 @@ const BentoBox = () => {
           <CampusEvents data-swapy-item="g" />
         </div>
         <div className="col-span-1 row-span-1" data-swapy-slot="h">
-          <div
-            data-swapy-item="h"
-            className="w-full h-full rounded-2xl p-6 border border-white/5 bg-white/[0.01]"
-          >
-            Box 8
-          </div>
-        </div>
-        <div
-          className="max-[640px]:col-span-3 col-span-2 xl:col-span-3 row-span-1"
-          data-swapy-slot="i"
-        >
-          <div
-            data-swapy-item="i"
-            className="w-full h-full rounded-2xl p-6 border border-white/5 bg-white/[0.01]"
-          >
-            Box 9
-          </div>
+          <Scholarships data-swapy-item="h" />
         </div>
       </div>
     </div>

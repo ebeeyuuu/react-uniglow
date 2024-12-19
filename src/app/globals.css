@@ -250,3 +250,26 @@ html.lenis body {
 .hexagon {
   clip-path: polygon(50% 5%, 92% 25%, 92% 75%, 50% 95%, 8% 75%, 8% 25%);
 }
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0b0b0b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: grey;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a9a9a9;
+}
+
+html {
+  scrollbar-color: grey #0b0b0b;
+  scrollbar-width: thin;
+}

@@ -34,14 +34,14 @@ const BentoBox = () => {
   });
 
   return (
-    <div className="pb-20 text-white overflow-y-scroll scrollbar-hide">
-      <div >
+    <div className="pb-24 text-white overflow-y-scroll scrollbar-hide">
+      <div>
         <DashboardHeader />
       </div>
 
       <div
         ref={containerRef}
-        className="w-[95dvw] h-min mx-auto mt-8 grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-7 gap-3"
+        className="w-[95dvw] max-h-[65dvh] mx-auto mt-8 grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-7 gap-3"
       >
         <div
           className="col-span-2 max-[640px]:row-span-3 row-span-3"
@@ -56,7 +56,7 @@ const BentoBox = () => {
           <AIMatcher data-swapy-item="b" />
         </div>
         <div
-          className="col-span-2 max-[640px]:row-span-1 row-span-2"
+          className="col-span-2 max-[640px]:row-span-1 lg:row-span-1 xl:row-span-2"
           data-swapy-slot="c"
         >
           <Mentors data-swapy-item="c" />
@@ -76,7 +76,10 @@ const BentoBox = () => {
         <div className="col-span-1 row-span-1" data-swapy-slot="g">
           <CampusEvents data-swapy-item="g" />
         </div>
-        <div className="col-span-1 row-span-1" data-swapy-slot="h">
+        <div
+          className="col-span-2 lg:col-span-2 xl:col-span-1"
+          data-swapy-slot="h"
+        >
           <Scholarships data-swapy-item="h" />
         </div>
       </div>

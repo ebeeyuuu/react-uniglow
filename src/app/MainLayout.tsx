@@ -49,11 +49,9 @@ const MainLayout: React.FC<MainLayoutProps> = ({
 }) => {
   return (
     <div
-      className={`flex h-screen w-full relative overflow-auto scrollbar-hide ${className}`}
+      className={`flex h-screen w-full relative overflow-auto ${className}`}
     >
-      <div
-        className={`flex-grow scrollbar-hide flex items-center justify-center`}
-      >
+      <div className={`flex-grow flex items-center justify-center`}>
         {children}
       </div>
       {includeNavBar && (

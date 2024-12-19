@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { motion, useAnimation, useInView } from 'framer-motion';
+import React, { useEffect, useState } from 'react';
+import { motion, useAnimation } from 'framer-motion';
 
 const statistics = [
   { label: 'Students Placed', value: 100000, color: '#8B5CF6' },
@@ -10,34 +10,26 @@ const statistics = [
 
 const ImpactStatistics = () => {
   const controls = useAnimation();
-  const ref = useRef(null);
-
-  const isInView = useInView({ threshold: 1 });
 
   const [counts, setCounts] = useState(statistics.map(() => 0));
 
   useEffect(() => {
-    if (isInView) {
-      controls.start('visible');
-      const intervals = statistics.map((stat, index) => {
-        return setInterval(() => {
-          setCounts(prevCounts => {
-            const newCounts = [...prevCounts];
-            newCounts[index] = Math.min(newCounts[index] + Math.ceil(stat.value / 100), stat.value);
-            return newCounts;
-          });
-        }, 20);
-      });
+    controls.start('visible');
+    const intervals = statistics.map((stat, index) => {
+      return setInterval(() => {
+        setCounts(prevCounts => {
+          const newCounts = [...prevCounts];
+          newCounts[index] = Math.min(newCounts[index] + Math.ceil(stat.value / 100), stat.value);
+          return newCounts;
+        });
+      }, 20);
+    });
 
-      return () => intervals.forEach(clearInterval);
-    } else {
-      controls.start('hidden');
-      setCounts(statistics.map(() => 0));
-    }
-  }, [isInView, controls]);
+    return () => intervals.forEach(clearInterval);
+  }, [controls]);
 
   return (
-    <section ref={ref} className="py-20 bg-gradient-to-b from-[#020202] to-purple-900/20">
+    <section className="py-20 bg-gradient-to-b from-[#020202] to-purple-900/20">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
           Impact Statistics

@@ -1,6 +1,6 @@
 "use client";
-"use client";
 
+import React from "react";
 import { BsArrowRight } from "react-icons/bs";
 import { Progress } from "../../UI/Progress";
 
@@ -14,6 +14,18 @@ const matchCriteria = [
 const AIMatcher: React.FC<React.HTMLProps<HTMLDivElement>> = ({
   ...divProps
 }) => {
+  const overallMatch = Math.round(
+    matchCriteria.reduce((sum, item) => sum + item.progress, 0) /
+    matchCriteria.length,
+  );
+
+  const strongestMatch = matchCriteria.reduce((a, b) =>
+    a.progress > b.progress ? a : b,
+  );
+  const weakestMatch = matchCriteria.reduce((a, b) =>
+    a.progress < b.progress ? a : b,
+  );
+
   return (
     <div
       {...divProps}
@@ -43,6 +55,33 @@ const AIMatcher: React.FC<React.HTMLProps<HTMLDivElement>> = ({
             />
           </div>
         ))}
+      </div>
+
+      <div className="space-y-3 w-full border-t border-white/10 pt-4">
+        <div className="flex justify-between items-center text-sm">
+          <span className="text-xs md:text-sm lg:text-base text-white/60">
+            Overall Match
+          </span>
+          <span className="text-xs md:text-sm lg:text-base text-purple-400">
+            {overallMatch}%
+          </span>
+        </div>
+        <div className="flex justify-between items-center text-sm">
+          <span className="text-xs md:text-sm lg:text-base text-white/60">
+            Strongest Match
+          </span>
+          <span className="text-xs md:text-sm lg:text-base text-green-400">
+            {strongestMatch.label} ({strongestMatch.progress}%)
+          </span>
+        </div>
+        <div className="flex justify-between items-center text-sm">
+          <span className="text-xs md:text-sm lg:text-base text-white/60">
+            Weakest Match
+          </span>
+          <span className="text-xs md:text-sm lg:text-base text-red-400">
+            {weakestMatch.label} ({weakestMatch.progress}%)
+          </span>
+        </div>
       </div>
 
       <button className="w-full py-5 px-3 bg-white/5 hover:bg-white/10 rounded-xl flex items-center justify-center gap-2 group">

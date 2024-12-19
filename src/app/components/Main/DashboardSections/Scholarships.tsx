@@ -1,6 +1,6 @@
 "use client";
 
-import { BsCash, BsClock, BsFillGrid3X3GapFill } from "react-icons/bs";
+import { BsFillGrid3X3GapFill } from "react-icons/bs";
 import { FaSlidersH } from "react-icons/fa";
 import { useState, useEffect } from "react";
 
@@ -58,16 +58,21 @@ const Scholarships: React.FC<React.HTMLProps<HTMLDivElement>> = ({
               key={index}
               className="p-3 bg-white/5 rounded-xl hover:bg-white/10 transition-colors cursor-pointer"
             >
-              <div className="flex items-center justify-between mb-2">
-                <div className="font-medium">{scholarship.name}</div>
-                <div className="text-green-400">{scholarship.amount}</div>
+              <div className="flex flex-col gap-2">
+                <div className="text-xs lg:text-sm font-medium">
+                  {scholarship.name}
+                </div>
+                <div className="text-xs lg:text-sm text-green-400">
+                  {scholarship.amount}
+                </div>
               </div>
-              <div className="flex items-center justify-between text-sm">
-                <div className="flex items-center gap-1 text-white/60">
-                  <BsClock className="w-3 h-3" />
+              <div className="flex flex-col gap-0.5">
+                <div className="text-xs flex items-center gap-1 text-white/60">
                   {scholarship.deadline}
                 </div>
-                <div className="text-purple-400">{scholarship.status}</div>
+                <div className="text-xs text-purple-400">
+                  {scholarship.status}
+                </div>
               </div>
             </div>
           ))}
@@ -77,9 +82,8 @@ const Scholarships: React.FC<React.HTMLProps<HTMLDivElement>> = ({
           {scholarships.map((scholarship, index) => (
             <div
               key={index}
-              className={`absolute inset-0 flex py-6 flex-col justify-center items-start transition-opacity duration-700 ${
-                index === currentIndex ? "opacity-100" : "opacity-0"
-              }`}
+              className={`absolute inset-0 flex py-6 flex-col justify-center items-start transition-opacity duration-700 ${index === currentIndex ? "opacity-100" : "opacity-0"
+                }`}
             >
               <div
                 className="absolute inset-0 rounded-xl"
@@ -89,7 +93,9 @@ const Scholarships: React.FC<React.HTMLProps<HTMLDivElement>> = ({
                 }}
               />
               <div className="relative z-10 p-4">
-                <h3 className="text-xs lg:text-sm font-medium mb-1">{scholarship.name}</h3>
+                <h3 className="text-xs lg:text-sm font-medium mb-1">
+                  {scholarship.name}
+                </h3>
                 <p className="text-xs text-green-400">{scholarship.amount}</p>
                 <div className="flex items-center gap-1 text-white/60 text-xs mt-2">
                   {scholarship.deadline}
@@ -108,11 +114,10 @@ const Scholarships: React.FC<React.HTMLProps<HTMLDivElement>> = ({
           {scholarships.map((_, index) => (
             <div
               key={index}
-              className={`w-2 h-2 rounded-full ${
-                index === currentIndex
-                  ? "bg-purple-400"
-                  : "bg-white/20 hover:bg-white/40"
-              }`}
+              className={`w-2 h-2 rounded-full ${index === currentIndex
+                ? "bg-purple-400"
+                : "bg-white/20 hover:bg-white/40"
+                }`}
             />
           ))}
         </div>

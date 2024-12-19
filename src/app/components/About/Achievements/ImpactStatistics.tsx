@@ -1,38 +1,40 @@
-import React, { useEffect, useRef, useState } from 'react'
-import { motion, useAnimation, useInView } from 'framer-motion'
+import React, { useEffect, useRef, useState } from 'react';
+import { motion, useAnimation, useInView } from 'framer-motion';
 
 const statistics = [
   { label: 'Students Placed', value: 100000, color: '#8B5CF6' },
   { label: 'University Partners', value: 500, color: '#EC4899' },
   { label: 'Countries Reached', value: 50, color: '#10B981' },
   { label: 'Satisfaction Rate', value: 98, color: '#F59E0B' },
-]
+];
 
 const ImpactStatistics = () => {
-  const controls = useAnimation()
-  const ref = useRef(null)
-  const isInView = useInView(ref, { threshold: 1 })
-  const [counts, setCounts] = useState(statistics.map(() => 0))
+  const controls = useAnimation();
+  const ref = useRef(null);
+
+  const isInView = useInView({ threshold: 1 });
+
+  const [counts, setCounts] = useState(statistics.map(() => 0));
 
   useEffect(() => {
     if (isInView) {
-      controls.start('visible')
+      controls.start('visible');
       const intervals = statistics.map((stat, index) => {
         return setInterval(() => {
           setCounts(prevCounts => {
-            const newCounts = [...prevCounts]
-            newCounts[index] = Math.min(newCounts[index] + Math.ceil(stat.value / 100), stat.value)
-            return newCounts
-          })
-        }, 20)
-      })
+            const newCounts = [...prevCounts];
+            newCounts[index] = Math.min(newCounts[index] + Math.ceil(stat.value / 100), stat.value);
+            return newCounts;
+          });
+        }, 20);
+      });
 
-      return () => intervals.forEach(clearInterval)
+      return () => intervals.forEach(clearInterval);
     } else {
-      controls.start('hidden')
-      setCounts(statistics.map(() => 0))
+      controls.start('hidden');
+      setCounts(statistics.map(() => 0));
     }
-  }, [isInView, controls])
+  }, [isInView, controls]);
 
   return (
     <section ref={ref} className="py-20 bg-gradient-to-b from-[#020202] to-purple-900/20">
@@ -97,8 +99,7 @@ const ImpactStatistics = () => {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default ImpactStatistics
-
+export default ImpactStatistics;

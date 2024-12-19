@@ -44,13 +44,13 @@ const BentoBox = () => {
         className="w-[95dvw] h-min mx-auto mt-8 grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-7 gap-3"
       >
         <div
-          className="col-span-2 max-[640px]:row-span-3 row-span-4"
+          className="col-span-2 max-[640px]:row-span-3 row-span-3"
           data-swapy-slot="a"
         >
           <UniversityExplorer data-swapy-item="a" />
         </div>
         <div
-          className="col-span-2 max-[640px]:row-span-1 row-span-4"
+          className="col-span-2 max-[640px]:row-span-1 row-span-3"
           data-swapy-slot="b"
         >
           <AIMatcher data-swapy-item="b" />

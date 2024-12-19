@@ -45,16 +45,16 @@ const UniversityExplorer: React.FC<React.HTMLProps<HTMLDivElement>> = ({
           >
             <div className="flex justify-between items-center mb-2">
               <h3
-                className="font-medium truncate text-xs sm:text-sm lg:text-base group-hover:whitespace-normal group-hover:overflow-visible group-hover:opacity-100 transition-all duration-300"
+                className="font-medium truncate text-xs sm:text-sm lg:text-base transition-all duration-300"
               >
                 {uni.name}
               </h3>
-              <span className="text-xs lg:text-sm text-purple-400 mb-2 group-hover:opacity-0 transition-opacity duration-300">
+              <span className="text-xs lg:text-sm text-purple-400 mb-2 duration-300">
                 {uni.match}%
               </span>
             </div>
             <div
-              className="text-xs lg:text-sm truncate text-white/60 mb-2 group-hover:whitespace-normal group-hover:overflow-visible group-hover:opacity-100 transition-all duration-300"
+              className="text-xs lg:text-sm truncate text-white/60 mb-2 transition-all duration-300"
             >
               {uni.location}
             </div>

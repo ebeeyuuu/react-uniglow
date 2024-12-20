@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
-import { BsFillGrid3X3GapFill } from "react-icons/bs";
-import { FaSlidersH } from "react-icons/fa";
+import React, { useState, useEffect } from "react";
+import { FaExpand } from "react-icons/fa";
+import { RiCollapseDiagonalFill } from "react-icons/ri";
 
 const programs = [
   { name: "Computer Science", universities: 45 },
@@ -43,8 +43,9 @@ const Programs: React.FC<React.HTMLProps<HTMLDivElement>> = ({
           {programs.map((program, index) => (
             <div
               key={index}
-              className={`absolute inset-0 flex py-6 flex-col justify-center items-start transition-opacity duration-700 ${index === currentIndex ? "opacity-100" : "opacity-0"
-                }`}
+              className={`absolute inset-0 flex py-6 flex-col justify-center items-start transition-opacity duration-700 ${
+                index === currentIndex ? "opacity-100" : "opacity-0"
+              }`}
             >
               <div
                 className="absolute inset-0 rounded-xl"
@@ -54,7 +55,9 @@ const Programs: React.FC<React.HTMLProps<HTMLDivElement>> = ({
                 }}
               />
               <div className="relative z-10 p-4">
-                <h3 className="font-medium text-xs lg:text-sm mb-1">{program.name}</h3>
+                <h3 className="font-medium text-xs lg:text-sm mb-1">
+                  {program.name}
+                </h3>
                 <p className="text-xs text-white/60">
                   {program.universities} universities
                 </p>
@@ -77,7 +80,9 @@ const Programs: React.FC<React.HTMLProps<HTMLDivElement>> = ({
                 }}
               />
               <div className="relative z-10">
-                <h3 className="font-medium text-xs lg:text-sm mb-1">{program.name}</h3>
+                <h3 className="font-medium text-xs lg:text-sm mb-1">
+                  {program.name}
+                </h3>
                 <p className="text-xs text-white/60">
                   {program.universities} universities
                 </p>
@@ -92,10 +97,11 @@ const Programs: React.FC<React.HTMLProps<HTMLDivElement>> = ({
           {programs.map((_, index) => (
             <div
               key={index}
-              className={`w-2 h-2 rounded-full ${index === currentIndex
-                ? "bg-purple-400"
-                : "bg-white/20 hover:bg-white/40"
-                }`}
+              className={`w-2 h-2 rounded-full ${
+                index === currentIndex
+                  ? "bg-purple-400"
+                  : "bg-white/20 hover:bg-white/40"
+              }`}
             />
           ))}
         </div>
@@ -106,9 +112,9 @@ const Programs: React.FC<React.HTMLProps<HTMLDivElement>> = ({
         className="absolute bottom-2 right-2 p-2 rounded-full bg-white/10 text-white hover:bg-white/20 transition-all"
       >
         {isCarousel ? (
-          <BsFillGrid3X3GapFill className="w-3 h-3" />
+          <FaExpand className="w-3 h-3" />
         ) : (
-          <FaSlidersH className="w-3 h-3" />
+          <RiCollapseDiagonalFill className="w-3 h-3" />
         )}
       </button>
     </div>

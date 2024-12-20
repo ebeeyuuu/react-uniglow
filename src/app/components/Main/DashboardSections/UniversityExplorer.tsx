@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { BsSearch, BsBookmark, BsBookmarkFill } from "react-icons/bs";
 import { Progress } from "../../UI/Progress";
+import DropdownMenu from "../../UI/DropdownMenu";
 
 const topUniversities = [
   {
@@ -24,6 +25,12 @@ const topUniversities = [
     tags: ["Tech-Focused", "Innovation"],
   },
 ];
+
+const filterOptions = [
+  { value: "name", label: "Sort by Name" },
+  { value: "match", label: "Sort by Match %" },
+  { value: "location", label: "Sort by Location" },
+]
 
 const UniversityExplorer: React.FC<React.HTMLProps<HTMLDivElement>> = ({
   ...divProps
@@ -73,15 +80,11 @@ const UniversityExplorer: React.FC<React.HTMLProps<HTMLDivElement>> = ({
             <span className="text-xs text-white/60">{bookmarked.length}</span>
           </div>
         </div>
-        <select
-          value={sortBy}
-          onChange={(e) => setSortBy(e.target.value)}
-          className="bg-white/5 border border-white/10 rounded-lg px-2 py-1 text-xs"
-        >
-          <option value="name">Sort by Name</option>
-          <option value="match">Sort by Match %</option>
-          <option value="location">Sort by Location</option>
-        </select>
+        <DropdownMenu
+          options={filterOptions}
+          placeholder="Filter by"
+          onSelect={(value) => setSortBy(value)}
+        />
       </div>
 
       <div className="relative mb-4">

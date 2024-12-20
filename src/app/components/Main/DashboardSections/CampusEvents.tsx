@@ -1,8 +1,8 @@
 "use client";
 
-import { FaSlidersH } from "react-icons/fa";
 import { useState, useEffect } from "react";
-import { BsFillGrid3X3GapFill } from "react-icons/bs";
+import { FaExpand } from "react-icons/fa6";
+import { RiCollapseDiagonalFill } from "react-icons/ri";
 
 const events = [
   {
@@ -72,9 +72,8 @@ const CampusEvents: React.FC<React.HTMLProps<HTMLDivElement>> = ({
           {events.map((event, index) => (
             <div
               key={index}
-              className={`absolute inset-0 flex py-6 flex-col justify-center items-start transition-opacity duration-700 ${
-                index === currentIndex ? "opacity-100" : "opacity-0"
-              }`}
+              className={`absolute inset-0 flex py-6 flex-col justify-center items-start transition-opacity duration-700 ${index === currentIndex ? "opacity-100" : "opacity-0"
+                }`}
             >
               <div
                 className="absolute inset-0 rounded-xl"
@@ -107,11 +106,10 @@ const CampusEvents: React.FC<React.HTMLProps<HTMLDivElement>> = ({
           {events.map((_, index) => (
             <div
               key={index}
-              className={`w-2 h-2 rounded-full ${
-                index === currentIndex
-                  ? "bg-purple-400"
-                  : "bg-white/20 hover:bg-white/40"
-              }`}
+              className={`w-2 h-2 rounded-full ${index === currentIndex
+                ? "bg-purple-400"
+                : "bg-white/20 hover:bg-white/40"
+                }`}
             />
           ))}
         </div>
@@ -122,9 +120,9 @@ const CampusEvents: React.FC<React.HTMLProps<HTMLDivElement>> = ({
         className="absolute bottom-2 right-2 p-2 rounded-full bg-white/10 text-white hover:bg-white/20 transition-all"
       >
         {isGrid ? (
-          <FaSlidersH className="w-3 h-3" />
+          <RiCollapseDiagonalFill className="w-3 h-3" />
         ) : (
-          <BsFillGrid3X3GapFill className="w-3 h-3" />
+          <FaExpand className="w-3 h-3" />
         )}
       </button>
     </div>

@@ -59,8 +59,8 @@ const Mentors: React.FC<React.HTMLProps<HTMLDivElement>> = ({
             key={index}
             className="flex flex-col items-center w-full gap-3 p-6 bg-white/5 rounded-xl hover:bg-white/10 transition-colors cursor-pointer"
           >
-            <div className="flex flex-row items-center justify-between w-full">
-              <div className="flex-1 min-w-0">
+            <div className="flex flex-wrap items-center justify-between w-full">
+              <div className="min-w-0">
                 <div className="truncate font-medium mb-1 text-xs md:text-sm lg:text-base">
                   {mentor.name}
                 </div>
@@ -68,7 +68,7 @@ const Mentors: React.FC<React.HTMLProps<HTMLDivElement>> = ({
                   {mentor.role}
                 </div>
               </div>
-              <div className="text-xs flex flex-col truncate items-end gap-1 text-purple-400">
+              <div className="text-xs flex flex-col truncate gap-1 text-purple-400">
                 <span>{mentor.day}</span>
                 <span>{mentor.time}</span>
               </div>

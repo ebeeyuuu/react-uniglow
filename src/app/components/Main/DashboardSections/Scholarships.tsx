@@ -1,8 +1,8 @@
 "use client";
 
-import { BsFillGrid3X3GapFill } from "react-icons/bs";
-import { FaSlidersH } from "react-icons/fa";
+import { FaExpand } from "react-icons/fa";
 import { useState, useEffect } from "react";
+import { RiCollapseDiagonalFill } from "react-icons/ri";
 
 const scholarships = [
   {
@@ -128,9 +128,9 @@ const Scholarships: React.FC<React.HTMLProps<HTMLDivElement>> = ({
         className="absolute bottom-2 right-2 p-2 rounded-full bg-white/10 text-white hover:bg-white/20 transition-all"
       >
         {isGrid ? (
-          <BsFillGrid3X3GapFill className="w-3 h-3" />
+          <RiCollapseDiagonalFill className="w-3 h-3" />
         ) : (
-          <FaSlidersH className="w-3 h-3" />
+          <FaExpand className="w-3 h-3" />
         )}
       </button>
     </div>

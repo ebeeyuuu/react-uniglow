@@ -43,11 +43,11 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({
   return (
     <div className={`relative ${className}`} ref={dropdownRef}>
       <div
-        className="flex items-center justify-between w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl cursor-pointer transition-colors hover:border-purple-500/50"
+        className="flex items-center justify-between w-full px-4 py-2 bg-white/5 border border-white/10 rounded-xl cursor-pointer transition-colors hover:border-purple-500/50 gap-4"
         onClick={() => setIsOpen(!isOpen)}
       >
         <span
-          className={`text-sm ${selectedOption ? "text-white" : "text-white/60"}`}
+          className={`text-xs lg:text-sm ${selectedOption ? "text-white" : "text-white/60"}`}
         >
           {selectedOption || placeholder}
         </span>

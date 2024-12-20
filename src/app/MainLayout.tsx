@@ -9,6 +9,7 @@ import {
   BsPerson,
   BsQuestionCircle,
 } from "react-icons/bs";
+import { FaBackward, FaForward } from "react-icons/fa6";
 import { ContextMenu } from "./components/UI/ContextMenu";
 import { ContextMenuItem } from "./components/UI/context-menu-types";
 
@@ -49,15 +50,53 @@ const navigationItems = [
 const contextMenuItems: ContextMenuItem[] = [
   {
     type: "item",
+    label: "Back",
+    icon: <FaBackward className="w-4 h-4" />,
+    onClick: () => window.history.back(),
+    shortcut: "Alt+Left",
+  },
+  {
+    type: "item",
+    label: "Forward",
+    icon: <FaForward className="w-4 h-4" />,
+    onClick: () => window.history.forward(),
+    shortcut: "Alt+Right",
+  },
+  { type: "separator" },
+  {
+    type: "item",
+    label: "View Page Source",
+    icon: <BsHouse className="w-4 h-4" />,
+    onClick: () => {
+      window.open("view-source:" + window.location.href, "_blank");
+    },
+    shortcut: "Super+U",
+  },
+  {
+    type: "item",
+    label: "Inspect",
+    icon: <BsGear className="w-4 h-4" />,
+    onClick: () => {
+      console.warn(
+        "The 'Inspect' option cannot be implemented programmatically due to browser security restrictions."
+      );
+    },
+    shortcut: "Super+Shift+I",
+  },
+  { type: "separator" },
+  {
+    type: "item",
     label: "Refresh Page",
     icon: <BsHouse className="w-4 h-4" />,
     onClick: () => window.location.reload(),
+    shortcut: "Super+R",
   },
   {
     type: "item",
     label: "Toggle Navigation Bar",
     icon: <BsGear className="w-4 h-4" />,
     onClick: () => console.log("Toggle Navigation Bar"),
+    shortcut: "Super+Shift+N",
   },
   { type: "separator" },
   {
@@ -69,6 +108,7 @@ const contextMenuItems: ContextMenuItem[] = [
       label: item.title,
       icon: React.cloneElement(item.icon, { className: "w-4 h-4" }),
       onClick: () => (window.location.href = item.href),
+      shortcut: `Super+${item.title.charAt(0)}`,
     })),
   },
   { type: "separator" },
@@ -77,6 +117,7 @@ const contextMenuItems: ContextMenuItem[] = [
     label: "Report an Issue",
     icon: <BsQuestionCircle className="w-4 h-4" />,
     onClick: () => console.log("Report an Issue"),
+    shortcut: "Super+Shift+?",
   },
 ];
 

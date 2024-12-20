@@ -1,6 +1,23 @@
-import { ReactNode } from 'react';
+import { ReactNode } from "react";
 
-export type ContextMenuItemType = 'item' | 'checkbox' | 'radio' | 'sub' | 'separator' | 'label';
+export type ContextMenuItemType =
+  | "item"
+  | "checkbox"
+  | "radio"
+  | "sub"
+  | "separator"
+  | "label";
+export type ShortcutKey =
+  | "Cmd"
+  | "Ctrl"
+  | "Shift"
+  | "Alt"
+  | "Super"
+  | "Option"
+  | "Tab"
+  | "Space"
+  | "Enter"
+  | "Return";
 
 export interface BaseContextMenuItem {
   type: ContextMenuItemType;
@@ -11,36 +28,42 @@ export interface BaseContextMenuItem {
 }
 
 export interface ContextMenuActionItem extends BaseContextMenuItem {
-  type: 'item';
+  type: "item";
   onClick: () => void;
 }
 
 export interface ContextMenuCheckboxItem extends BaseContextMenuItem {
-  type: 'checkbox';
+  type: "checkbox";
   checked: boolean;
   onChange: (checked: boolean) => void;
 }
 
 export interface ContextMenuRadioItem extends BaseContextMenuItem {
-  type: 'radio';
+  type: "radio";
   value: string;
   name: string;
 }
 
 export interface ContextMenuSubItem extends BaseContextMenuItem {
-  type: 'sub';
+  type: "sub";
   items: ContextMenuItem[];
 }
 
 export interface ContextMenuSeparatorItem extends BaseContextMenuItem {
-  type: 'separator';
+  type: "separator";
 }
 
 export interface ContextMenuLabelItem extends BaseContextMenuItem {
-  type: 'label';
+  type: "label";
 }
 
-export type ContextMenuItem = ContextMenuActionItem | ContextMenuCheckboxItem | ContextMenuRadioItem | ContextMenuSubItem | ContextMenuSeparatorItem | ContextMenuLabelItem;
+export type ContextMenuItem =
+  | ContextMenuActionItem
+  | ContextMenuCheckboxItem
+  | ContextMenuRadioItem
+  | ContextMenuSubItem
+  | ContextMenuSeparatorItem
+  | ContextMenuLabelItem;
 
 export interface ContextMenuProps {
   children: ReactNode;
@@ -54,4 +77,3 @@ export interface ContextMenuContentProps {
 export interface ContextMenuItemProps {
   item: ContextMenuItem;
 }
-

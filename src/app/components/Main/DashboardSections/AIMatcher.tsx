@@ -16,7 +16,7 @@ const AIMatcher: React.FC<React.HTMLProps<HTMLDivElement>> = ({
 }) => {
   const overallMatch = Math.round(
     matchCriteria.reduce((sum, item) => sum + item.progress, 0) /
-    matchCriteria.length,
+      matchCriteria.length,
   );
 
   const strongestMatch = matchCriteria.reduce((a, b) =>
@@ -70,16 +70,16 @@ const AIMatcher: React.FC<React.HTMLProps<HTMLDivElement>> = ({
           <span className="text-xs md:text-sm lg:text-base text-white/60">
             Strongest Match
           </span>
-          <span className="text-xs md:text-sm lg:text-base text-green-400">
-            {strongestMatch.label} ({strongestMatch.progress}%)
+          <span className="truncate text-xs md:text-sm lg:text-base text-green-400">
+            {strongestMatch.label}
           </span>
         </div>
         <div className="flex justify-between items-center text-sm">
           <span className="text-xs md:text-sm lg:text-base text-white/60">
             Weakest Match
           </span>
-          <span className="text-xs md:text-sm lg:text-base text-red-400">
-            {weakestMatch.label} ({weakestMatch.progress}%)
+          <span className="truncate text-xs md:text-sm lg:text-base text-red-400">
+            {weakestMatch.label}
           </span>
         </div>
       </div>

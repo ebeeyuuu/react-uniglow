@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { BsSearch, BsFilter, BsBookmark, BsBookmarkFill } from "react-icons/bs";
+import { BsSearch, BsBookmark, BsBookmarkFill } from "react-icons/bs";
 import { Progress } from "../../UI/Progress";
 
 const topUniversities = [

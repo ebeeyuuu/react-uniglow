@@ -21,8 +21,36 @@ const getSuperKeyLabel = (): string => {
   return "Super";
 };
 
+const useKeyboardShortcut = (item: ContextMenuItemProps['item']) => {
+  const handleKeyPress = useCallback(
+    (e: KeyboardEvent) => {
+      const isSuper = e.metaKey || e.ctrlKey || e.key === "Meta";
+      if (!isSuper) return;
+
+      const shortcut = item.shortcut?.toLowerCase().split("+").map(k => k.trim());
+      if (!shortcut) return;
+
+      const keyPressed = e.key.toLowerCase();
+      if (shortcut.includes(keyPressed)) {
+        e.preventDefault();
+        item.onClick?.();
+      }
+    },
+    [item]
+  );
+
+  useEffect(() => {
+    window.addEventListener("keydown", handleKeyPress);
+    return () => {
+      window.removeEventListener("keydown", handleKeyPress);
+    };
+  }, [handleKeyPress]);
+};
+
 export const ContextMenuItem: React.FC<ContextMenuItemProps> = ({ item }) => {
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
+  
+  useKeyboardShortcut(item);
 
   const baseClasses =
     "w-full text-left px-4 py-2 text-sm text-gray-300 hover:bg-zinc-800 focus:outline-none focus:bg-gray-700 flex items-center";
@@ -32,7 +60,7 @@ export const ContextMenuItem: React.FC<ContextMenuItemProps> = ({ item }) => {
     Ctrl: <span className="font-semibold text-[1em]">Ctrl</span>,
     Shift: <span className="font-semibold text-[1em]">⇧</span>,
     Alt: <span className="font-semibold text-[1em]">⎇</span>,
-    Super: <span className="font-semibold text-[1em]">{getSuperKeyLabel()}</span>, // Adjust for platform
+    Super: <span className="font-semibold text-[1em]">{getSuperKeyLabel()}</span>,
     Option: <span className="font-semibold text-[1em]">⌥</span>,
     Tab: <span className="font-semibold text-[1em]">⇥</span>,
     Space: <span className="font-semibold text-[1em]">␣</span>,
@@ -58,27 +86,6 @@ export const ContextMenuItem: React.FC<ContextMenuItemProps> = ({ item }) => {
       );
     });
   };
-
-  const handleKeyPress = useCallback((e: KeyboardEvent) => {
-    const isSuper = e.metaKey || e.ctrlKey || e.key === "Meta";
-    if (!isSuper) return;
-
-    const shortcut = item.shortcut?.toLowerCase().split("+").map(k => k.trim());
-    if (!shortcut) return;
-
-    const keyPressed = e.key.toLowerCase();
-    if (shortcut.includes(keyPressed)) {
-      e.preventDefault();
-      item.onClick?.();
-    }
-  }, [item]);
-
-  useEffect(() => {
-    window.addEventListener("keydown", handleKeyPress);
-    return () => {
-      window.removeEventListener("keydown", handleKeyPress);
-    };
-  }, [item.shortcut, handleKeyPress]);
 
   if (item.type === "separator") {
     return <hr className="my-1 border-gray-700" />;

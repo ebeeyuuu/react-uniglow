@@ -49,66 +49,6 @@ const navigationItems = [
 const Page = () => {
   const { isTabsMode, toggleTabsMode } = useTabsMode();
 
-  useEffect(() => {
-    const handleKeyPress = (e: KeyboardEvent) => {
-      const isSuper = e.metaKey || e.ctrlKey;
-
-      if (!isSuper) return;
-
-      if (e.altKey && e.key.toLowerCase() === "t") {
-        e.preventDefault();
-        toggleTabsMode();
-        return;
-      }
-
-      if (e.altKey && e.key.toLowerCase() === "b") {
-        e.preventDefault();
-        console.log("Toggle Navigation Bar");
-        return;
-      }
-
-      if (e.altKey && e.key.toLowerCase() === "i") {
-        e.preventDefault();
-        console.log("Report an Issue");
-        return;
-      }
-
-      if (!e.shiftKey && !e.altKey) {
-        if (e.key === "ArrowLeft") {
-          e.preventDefault();
-          window.history.back();
-          return;
-        }
-
-        if (e.key === "ArrowRight") {
-          e.preventDefault();
-          window.history.forward();
-          return;
-        }
-
-        if (e.key.toLowerCase() === "r") {
-          e.preventDefault();
-          window.location.reload();
-          return;
-        }
-
-        navigationItems.forEach((item) => {
-          if (e.key.toLowerCase() === item.title.charAt(0).toLowerCase()) {
-            e.preventDefault();
-            window.location.href = item.href;
-            return;
-          }
-        });
-      }
-    };
-
-    window.addEventListener("keydown", handleKeyPress);
-
-    return () => {
-      window.removeEventListener("keydown", handleKeyPress);
-    };
-  }, [toggleTabsMode]);
-
   const contextMenuItems: ContextMenuItem[] = [
     {
       type: "item",

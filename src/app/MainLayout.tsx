@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, ReactNode } from "react";
+import React, { ReactNode } from "react";
 import FloatingDock from "@/app/components/Main/FloatingDock";
 import {
   BsBell,
@@ -14,6 +14,7 @@ import {
 import { FaBackward, FaForward } from "react-icons/fa6";
 import { ContextMenu } from "./components/UI/ContextMenu";
 import { ContextMenuItem } from "./components/UI/context-menu-types";
+import { useTabsMode } from "@/context/useTabsMode";
 
 interface MainLayoutProps {
   children: ReactNode;
@@ -54,9 +55,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
   includeNavBar = true,
   className = "",
 }) => {
-  const [isTabsMode, setIsTabsMode] = useState(false);
-
-  const toggleMode = () => setIsTabsMode((prev) => !prev);
+  const { isTabsMode, toggleTabsMode } = useTabsMode();
 
   const contextMenuItems: ContextMenuItem[] = [
     {
@@ -130,7 +129,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
       ) : (
         <BsColumns className="w-4 h-4" />
       ),
-      onClick: toggleMode,
+      onClick: toggleTabsMode,
       shortcut: "Super+Shift+S",
     },
     { type: "separator" },

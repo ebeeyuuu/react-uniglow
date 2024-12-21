@@ -22,11 +22,6 @@ const BentoBox = () => {
         autoScrollOnDrag: true,
       });
 
-      swapy.onBeforeSwap((event) => {
-        console.log(event);
-        return true;
-      });
-
       return () => {
         swapy.destroy();
       };

@@ -75,27 +75,6 @@ const MainLayout: React.FC<MainLayoutProps> = ({
     { type: "separator" },
     {
       type: "item",
-      label: "View Page Source",
-      icon: <BsHouse className="w-4 h-4" />,
-      onClick: () => {
-        window.open("view-source:" + window.location.href, "_blank");
-      },
-      shortcut: "Super+U",
-    },
-    {
-      type: "item",
-      label: "Inspect",
-      icon: <BsGear className="w-4 h-4" />,
-      onClick: () => {
-        console.warn(
-          "The 'Inspect' option cannot be implemented programmatically due to browser security restrictions."
-        );
-      },
-      shortcut: "Super+Shift+I",
-    },
-    { type: "separator" },
-    {
-      type: "item",
       label: "Refresh Page",
       icon: <BsHouse className="w-4 h-4" />,
       onClick: () => window.location.reload(),

@@ -42,6 +42,8 @@ export interface ContextMenuRadioItem extends BaseContextMenuItem {
   type: "radio";
   value: string;
   name: string;
+  checked: boolean;
+  onChange?: (value: string) => void;
 }
 
 export interface ContextMenuSubItem extends BaseContextMenuItem {

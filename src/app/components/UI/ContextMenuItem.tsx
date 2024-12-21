@@ -103,7 +103,11 @@ export const ContextMenuItem: React.FC<ContextMenuItemProps> = ({ item }) => {
   if (item.type === "radio") {
     const radioItem = item as Extract<ContextMenuItemProps['item'], { type: 'radio' }>;
     return (
-      <button className={baseClasses} disabled={radioItem.disabled}>
+      <button
+        className={baseClasses}
+        disabled={radioItem.disabled}
+        onClick={() => radioItem.onChange?.(radioItem.value)}
+      >
         <span className="w-4 h-4 mr-2 inline-flex items-center justify-center">
           <span
             className={`w-2 h-2 rounded-full ${

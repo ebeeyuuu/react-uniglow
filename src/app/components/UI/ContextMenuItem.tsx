@@ -1,15 +1,25 @@
-import React, { useState } from 'react';
-import { ContextMenuItemProps, ContextMenuSubItem } from './context-menu-types';
-import { HiChevronRight } from 'react-icons/hi';
-import { FiCheck } from 'react-icons/fi';
-import { FaApple, FaWindows, FaKeyboard } from 'react-icons/fa';
-import { ContextMenuContent } from './ContextMenuContent';
+import React, { useState, useEffect, useCallback } from "react";
+import { ContextMenuItemProps, ShortcutKey } from "./context-menu-types";
+import { HiChevronRight } from "react-icons/hi";
+import { FiCheck } from "react-icons/fi";
+import {
+  MdOutlineKeyboardCommandKey,
+  MdOutlineKeyboardArrowUp,
+  MdOutlineKeyboardArrowDown,
+  MdOutlineKeyboardArrowLeft,
+  MdOutlineKeyboardArrowRight,
+} from "react-icons/md";
+import { ContextMenuContent } from "./ContextMenuContent";
 
-interface NavigatorUAData {
-  platform: string;
-  brands: Array<{ brand: string; version: string }>;
-  mobile: boolean;
-}
+const getSuperKeyLabel = (): string => {
+  const userAgent = navigator?.userAgent || "";
+  if (userAgent.includes("Mac")) {
+    return "Cmd";
+  } else if (userAgent.includes("Win") || userAgent.includes("Linux")) {
+    return "Win";
+  }
+  return "Super";
+};
 
 export const ContextMenuItem: React.FC<ContextMenuItemProps> = ({ item }) => {
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
@@ -17,39 +27,21 @@ export const ContextMenuItem: React.FC<ContextMenuItemProps> = ({ item }) => {
   const baseClasses =
     "w-full text-left px-4 py-2 text-sm text-gray-300 hover:bg-zinc-800 focus:outline-none focus:bg-gray-700 flex items-center";
 
-  const isMac = (() => {
-    try {
-      if ('userAgentData' in navigator && 
-          (navigator.userAgentData as NavigatorUAData)) {
-        return (navigator.userAgentData as NavigatorUAData)
-          .platform.toLowerCase().includes('mac');
-      }
-      
-      return /Mac|iPhone|iPad/i.test(navigator.userAgent);
-    } catch (error) {
-      console.warn('Error detecting Mac device:', error);
-      return false;
-    }
-  })();
-
-  const keyMapping: { [key: string]: string } = {
-    Super: isMac ? 'Cmd' : 'Ctrl',
-    Meta: isMac ? 'Cmd' : 'Ctrl',
-    Option: 'Alt',
-  };
-
-  const shortcutIcons: { [key: string]: JSX.Element } = {
-    Ctrl: <FaKeyboard className="h-[1em]" />,
-    Cmd: isMac ? <FaApple className="h-[1em]" /> : <FaWindows className="h-[1em]" />,
-    Alt: <span className="font-semibold text-[1em]">⌥</span>,
+  const keyIcons: { [key in ShortcutKey]?: React.ReactNode } = {
+    Cmd: <MdOutlineKeyboardCommandKey className="h-[1em] w-[1em]" />,
+    Ctrl: <span className="font-semibold text-[1em]">Ctrl</span>,
     Shift: <span className="font-semibold text-[1em]">⇧</span>,
-    Left: <span className="font-semibold text-[1em]">←</span>,
-    Right: <span className="font-semibold text-[1em]">→</span>,
-    Up: <span className="font-semibold text-[1em]">↑</span>,
-    Down: <span className="font-semibold text-[1em]">↓</span>,
-    Return: <span className="font-semibold text-[1em]">↵</span>,
-    Enter: <span className="font-semibold text-[1em]">↵</span>,
+    Alt: <span className="font-semibold text-[1em]">⎇</span>,
+    Super: <span className="font-semibold text-[1em]">{getSuperKeyLabel()}</span>, // Adjust for platform
+    Option: <span className="font-semibold text-[1em]">⌥</span>,
+    Tab: <span className="font-semibold text-[1em]">⇥</span>,
     Space: <span className="font-semibold text-[1em]">␣</span>,
+    Enter: <span className="font-semibold text-[1em]">↵</span>,
+    Return: <span className="font-semibold text-[1em]">↩</span>,
+    Up: <MdOutlineKeyboardArrowUp className="h-[1em] w-[1em]" />,
+    Down: <MdOutlineKeyboardArrowDown className="h-[1em] w-[1em]" />,
+    Left: <MdOutlineKeyboardArrowLeft className="h-[1em] w-[1em]" />,
+    Right: <MdOutlineKeyboardArrowRight className="h-[1em] w-[1em]" />,
   };
 
   const getShortcut = (shortcut: string | undefined) => {
@@ -57,15 +49,36 @@ export const ContextMenuItem: React.FC<ContextMenuItemProps> = ({ item }) => {
 
     const keys = shortcut.split("+");
     return keys.map((key, idx) => {
-      const mappedKey = keyMapping[key.trim()] || key.trim();
+      const trimmedKey = key.trim() as ShortcutKey;
       return (
         <React.Fragment key={idx}>
-          {shortcutIcons[mappedKey] || <span>{mappedKey}</span>}
-          {idx < keys.length - 1 && <span className="mx-0.5" />}
+          {keyIcons[trimmedKey] || <span>{trimmedKey}</span>}
+          {idx < keys.length - 1 && <span className="mx-0.5">+</span>}
         </React.Fragment>
       );
     });
   };
+
+  const handleKeyPress = useCallback((e: KeyboardEvent) => {
+    const isSuper = e.metaKey || e.ctrlKey || e.key === "Meta";
+    if (!isSuper) return;
+
+    const shortcut = item.shortcut?.toLowerCase().split("+").map(k => k.trim());
+    if (!shortcut) return;
+
+    const keyPressed = e.key.toLowerCase();
+    if (shortcut.includes(keyPressed)) {
+      e.preventDefault();
+      item.onClick?.();
+    }
+  }, [item]);
+
+  useEffect(() => {
+    window.addEventListener("keydown", handleKeyPress);
+    return () => {
+      window.removeEventListener("keydown", handleKeyPress);
+    };
+  }, [item.shortcut, handleKeyPress]);
 
   if (item.type === "separator") {
     return <hr className="my-1 border-gray-700" />;
@@ -101,22 +114,21 @@ export const ContextMenuItem: React.FC<ContextMenuItemProps> = ({ item }) => {
   }
 
   if (item.type === "radio") {
-    const radioItem = item as Extract<ContextMenuItemProps['item'], { type: 'radio' }>;
     return (
       <button
         className={baseClasses}
-        disabled={radioItem.disabled}
-        onClick={() => radioItem.onChange?.(radioItem.value)}
+        disabled={item.disabled}
+        onClick={() => item.onChange?.(item.value)}
       >
         <span className="w-4 h-4 mr-2 inline-flex items-center justify-center">
           <span
             className={`w-2 h-2 rounded-full ${
-              radioItem.checked ? "bg-blue-500" : "bg-gray-600"
+              item.checked ? "bg-blue-500" : "bg-gray-600"
             }`}
           />
         </span>
-        {radioItem.icon && <span className="mr-2">{radioItem.icon}</span>}
-        {radioItem.label}
+        {item.icon && <span className="mr-2">{item.icon}</span>}
+        {item.label}
       </button>
     );
   }
@@ -140,7 +152,7 @@ export const ContextMenuItem: React.FC<ContextMenuItemProps> = ({ item }) => {
         </button>
         {isSubMenuOpen && (
           <div className="absolute left-full top-0 ml-1">
-            <ContextMenuContent items={(item as ContextMenuSubItem).items} />
+            <ContextMenuContent items={item.items} />
           </div>
         )}
       </div>

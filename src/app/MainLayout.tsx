@@ -2,140 +2,38 @@
 
 import React, { ReactNode } from "react";
 import FloatingDock from "@/app/components/Main/FloatingDock";
-import {
-  BsBell,
-  BsColumns,
-  BsGear,
-  BsHouse,
-  BsPerson,
-  BsQuestionCircle,
-  BsTable,
-} from "react-icons/bs";
-import { FaBackward, FaForward } from "react-icons/fa6";
-import { ContextMenu } from "./components/UI/ContextMenu";
-import { ContextMenuItem } from "./components/UI/context-menu-types";
-import { useTabsMode } from "@/context/useTabsMode";
+import { BsHouse } from "react-icons/bs";
 
 interface MainLayoutProps {
   children: ReactNode;
   includeNavBar?: boolean;
   className?: string;
+  navItems?: NavigationItem[];
 }
 
-const navigationItems = [
-  {
-    title: "Home",
-    icon: <BsHouse className="w-full h-full text-white" />,
-    href: "/home",
-  },
-  {
-    title: "Profile",
-    icon: <BsPerson className="w-full h-full text-white" />,
-    href: "/profile",
-  },
-  {
-    title: "Settings",
-    icon: <BsGear className="w-full h-full text-white" />,
-    href: "/settings",
-  },
-  {
-    title: "Notifications",
-    icon: <BsBell className="w-full h-full text-white" />,
-    href: "/notifications",
-  },
-  {
-    title: "Help",
-    icon: <BsQuestionCircle className="w-full h-full text-white" />,
-    href: "/help",
-  },
-];
+type NavigationItem = {
+  title: string;
+  icon: ReactNode;
+  href: string;
+};
 
 const MainLayout: React.FC<MainLayoutProps> = ({
   children,
   includeNavBar = true,
   className = "",
+  navItems = [{ title: "Home", icon: <BsHouse />, href: "/" }],
 }) => {
-  const { isTabsMode, toggleTabsMode } = useTabsMode();
-
-  const contextMenuItems: ContextMenuItem[] = [
-    {
-      type: "item",
-      label: "Back",
-      icon: <FaBackward className="w-4 h-4" />,
-      onClick: () => window.history.back(),
-      shortcut: "Super+Left",
-    },
-    {
-      type: "item",
-      label: "Forward",
-      icon: <FaForward className="w-4 h-4" />,
-      onClick: () => window.history.forward(),
-      shortcut: "Super+Right",
-    },
-    { type: "separator" },
-    {
-      type: "item",
-      label: "Refresh Page",
-      icon: <BsHouse className="w-4 h-4" />,
-      onClick: () => window.location.reload(),
-      shortcut: "Super+R",
-    },
-    {
-      type: "item",
-      label: "Toggle Navigation Bar",
-      icon: <BsGear className="w-4 h-4" />,
-      onClick: () => console.log("Toggle Navigation Bar"),
-      shortcut: "Super+Shift+N",
-    },
-    { type: "separator" },
-    {
-      type: "sub",
-      label: "Quick Navigation",
-      icon: <BsPerson className="w-4 h-4" />,
-      items: navigationItems.map((item) => ({
-        type: "item" as const,
-        label: item.title,
-        icon: React.cloneElement(item.icon, { className: "w-4 h-4" }),
-        onClick: () => (window.location.href = item.href),
-        shortcut: `Super+${item.title.charAt(0)}`,
-      })),
-    },
-    {
-      type: "item",
-      label: isTabsMode ? "Switch to Concise mode" : "Switch to Tabs Mode",
-      icon: isTabsMode ? (
-        <BsTable className="w-4 h-4" />
-      ) : (
-        <BsColumns className="w-4 h-4" />
-      ),
-      onClick: toggleTabsMode,
-      shortcut: "Super+Shift+S",
-    },
-    { type: "separator" },
-    {
-      type: "item",
-      label: "Report an Issue",
-      icon: <BsQuestionCircle className="w-4 h-4" />,
-      onClick: () => console.log("Report an Issue"),
-      shortcut: "Super+Shift+?",
-    },
-  ];
-
   return (
-    <ContextMenu items={contextMenuItems}>
-      <div
-        className={`flex h-screen w-full relative overflow-auto ${className}`}
-      >
-        <div className={`flex-grow flex items-center justify-center`}>
-          {children}
-        </div>
-        {includeNavBar && (
-          <div className="fixed z-50 bottom-2 left-1/2 -translate-x-1/2 flex items-center justify-center w-full">
-            <FloatingDock items={navigationItems} />
-          </div>
-        )}
+    <div className={`flex h-screen w-full relative overflow-auto ${className}`}>
+      <div className={`flex-grow flex items-center justify-center`}>
+        {children}
       </div>
-    </ContextMenu>
+      {includeNavBar && (
+        <div className="fixed z-50 bottom-2 left-1/2 -translate-x-1/2 flex items-center justify-center w-full">
+          <FloatingDock items={navItems} />
+        </div>
+      )}
+    </div>
   );
 };
 

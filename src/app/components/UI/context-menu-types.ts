@@ -17,7 +17,11 @@ export type ShortcutKey =
   | "Tab"
   | "Space"
   | "Enter"
-  | "Return";
+  | "Return"
+  | "Up"
+  | "Down"
+  | "Left"
+  | "Right";
 
 export interface BaseContextMenuItem {
   type: ContextMenuItemType;
@@ -25,6 +29,7 @@ export interface BaseContextMenuItem {
   icon?: ReactNode;
   shortcut?: string;
   disabled?: boolean;
+  onClick?: () => void;
 }
 
 export interface ContextMenuActionItem extends BaseContextMenuItem {

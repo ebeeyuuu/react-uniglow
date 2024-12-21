@@ -1,27 +1,13 @@
-import { useState, useEffect } from "react";
+"use client";
 
-const TABS_MODE_KEY = "isTabsMode";
+import { useState, useEffect } from "react";
 
 export const useTabsMode = () => {
   const [isTabsMode, setIsTabsMode] = useState(false);
 
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const storedValue = localStorage.getItem(TABS_MODE_KEY);
-      if (storedValue !== null) {
-        setIsTabsMode(JSON.parse(storedValue));
-      }
-    }
-  }, []);
-
   const toggleTabsMode = () => {
-    setIsTabsMode((prev) => {
-      const newValue = !prev;
-      if (typeof window !== "undefined") {
-        localStorage.setItem(TABS_MODE_KEY, JSON.stringify(newValue));
-      }
-      return newValue;
-    });
+    setIsTabsMode((prev) => !prev);
+    console.log(isTabsMode);
   };
 
   return { isTabsMode, toggleTabsMode };

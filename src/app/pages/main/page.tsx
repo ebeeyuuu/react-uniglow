@@ -3,7 +3,7 @@
 import React, { useEffect } from "react";
 import MainLayout from "@/app/MainLayout";
 import BentoBox from "@/app/components/Main/BentoBox";
-import Tabs from "@/app/components/Main/Tabs";
+import TabsMode from "@/app/components/Main/TabsMode";
 import { useTabsMode } from "@/context/useTabsMode";
 import { ContextMenuItem } from "@/app/components/UI/context-menu-types";
 import {
@@ -116,7 +116,7 @@ const Page = () => {
   return (
     <ContextMenu items={contextMenuItems}>
       <MainLayout className="bg-[#0a0a0a]" navItems={navigationItems}>
-        {isTabsMode ? <Tabs /> : <BentoBox />}
+        {isTabsMode ? <TabsMode /> : <BentoBox />}
       </MainLayout>
     </ContextMenu>
   );

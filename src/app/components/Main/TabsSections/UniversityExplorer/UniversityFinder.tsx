@@ -91,7 +91,7 @@ const UniversityFinder: React.FC<React.HTMLProps<HTMLDivElement>> = ({
           placeholder="Search universities..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="truncate text-xs sm:text-sm lg:text-base w-full bg-white/5 border border-white/10 rounded-xl px-4 py-2 pl-10 focus:outline-none focus:border-purple-500"
+          className="truncate text-xs lg:text-sm w-full bg-white/5 border border-white/10 rounded-xl px-4 py-2 pl-10 focus:outline-none focus:border-purple-500"
         />
         <BsSearch className="absolute left-3 top-1/2 -translate-y-1/2 text-white/40" />
       </div>

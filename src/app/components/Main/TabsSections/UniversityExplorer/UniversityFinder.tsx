@@ -2,43 +2,43 @@
 
 import { useState } from "react";
 import { BsSearch, BsBookmark, BsBookmarkFill } from "react-icons/bs";
-import { Progress } from "../../UI/Progress";
-import DropdownMenu from "../../UI/DropdownMenu";
+import { Progress } from "@/app/components/UI/Progress";
+import DropdownMenu from "@/app/components/UI/DropdownMenu";
 
-const topUniversities = [
+const universities = [
   {
-    name: "Harvard University",
-    match: 95,
-    location: "Cambridge, MA",
-    tags: ["Ivy League", "Research"],
+    name: "Univeristy of Oxford",
+    match: 97,
+    location: "Oxford, UK",
+    tags: ["Historical", "Research"],
   },
   {
-    name: "Stanford University",
-    match: 92,
-    location: "Stanford, CA",
-    tags: ["Tech-Focused", "Research"],
-  },
-  {
-    name: "MIT",
-    match: 88,
-    location: "Cambridge, MA",
+    name: "Massachusetts Institute of Technology",
+    match: 94,
+    location: "Cambridge, MA, USA",
     tags: ["Tech-Focused", "Innovation"],
+  },
+  {
+    name: "University of Cambridge",
+    match: 91,
+    location: "Cambridge, UK",
+    tags: ["Ivy League", "Research"],
   },
 ];
 
-const filterOptions = [
+const sortOptions = [
   { value: "name", label: "Sort by Name" },
-  { value: "match", label: "Sort by Match %" },
+  { value: "match", label: "Sort by Match" },
   { value: "location", label: "Sort by Location" },
 ];
 
-const UniversityExplorer: React.FC<React.HTMLProps<HTMLDivElement>> = ({
+const UniversityFinder: React.FC<React.HTMLProps<HTMLDivElement>> = ({
   ...divProps
 }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [bookmarked, setBookmarked] = useState<string[]>([]);
   const [expanded, setExpanded] = useState<number | null>(null);
-  const [sortBy, setSortBy] = useState("name");
+  const [sortBy, setSortBy] = useState("match");
 
   const toggleBookmark = (name: string) => {
     setBookmarked((prev) =>
@@ -47,7 +47,6 @@ const UniversityExplorer: React.FC<React.HTMLProps<HTMLDivElement>> = ({
         : [...prev, name],
     );
   };
-
   const handleSort = (a: any, b: any) => {
     if (sortBy === "name") return a.name.localeCompare(b.name);
     if (sortBy === "match") return b.match - a.match;
@@ -55,7 +54,7 @@ const UniversityExplorer: React.FC<React.HTMLProps<HTMLDivElement>> = ({
     return 0;
   };
 
-  const filteredUniversities = topUniversities
+  const filteredUniversities = universities
     .filter((uni) => {
       return (
         uni.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -73,20 +72,19 @@ const UniversityExplorer: React.FC<React.HTMLProps<HTMLDivElement>> = ({
       <div className="flex flex-col items-start justify-start gap-2 mb-0">
         <div className="flex flex-row gap-2 items-center mb-2">
           <h2 className="text-sm md:text-base lg:text-lg font-semibold">
-            University Explorer
+            Univeristy Finder
           </h2>
           <div className="flex flex-row gap-1 items-center">
-            <BsBookmark className="text-white/60" />
+            <BsBookmark className="text-white/50" />
             <span className="text-xs text-white/60">{bookmarked.length}</span>
           </div>
         </div>
         <DropdownMenu
-          options={filterOptions}
-          placeholder="Filter by"
+          options={sortOptions}
+          placeholder="Sort by"
           onSelect={(value) => setSortBy(value)}
         />
       </div>
-
       <div className="relative mb-4">
         <input
           type="text"
@@ -97,7 +95,6 @@ const UniversityExplorer: React.FC<React.HTMLProps<HTMLDivElement>> = ({
         />
         <BsSearch className="absolute left-3 top-1/2 -translate-y-1/2 text-white/40" />
       </div>
-
       <div className="space-y-4">
         {filteredUniversities.map((uni, index) => (
           <div
@@ -142,9 +139,9 @@ const UniversityExplorer: React.FC<React.HTMLProps<HTMLDivElement>> = ({
             </button>
             {expanded === index && (
               <div className="mt-2 text-xs text-white/60">
-                <p>Average Tuition Fee: $50,000</p>
-                <p>Acceptance Rate: 5%</p>
-                <p>Programs: Engineering, Arts, Business</p>
+                <p>Average Tuition Fee: $60,000</p>
+                <p>Acceptance Rate: 10%</p>
+                <p>Popular Programs: Science, Technology, Engineering</p>
               </div>
             )}
           </div>
@@ -154,4 +151,4 @@ const UniversityExplorer: React.FC<React.HTMLProps<HTMLDivElement>> = ({
   );
 };
 
-export default UniversityExplorer;
+export default UniversityFinder;

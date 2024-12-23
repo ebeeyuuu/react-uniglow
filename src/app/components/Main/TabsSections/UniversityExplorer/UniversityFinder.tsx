@@ -4,6 +4,7 @@ import { useState } from "react";
 import { BsSearch, BsBookmark, BsBookmarkFill } from "react-icons/bs";
 import { Progress } from "@/app/components/UI/Progress";
 import DropdownMenu from "@/app/components/UI/DropdownMenu";
+import Modal from "@/app/components/UI/Modal";
 
 const universities = [
   {
@@ -102,7 +103,7 @@ const UniversityFinder: React.FC<React.HTMLProps<HTMLDivElement>> = ({
             className="p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-colors cursor-pointer group"
           >
             <div className="flex justify-between items-center mb-2">
-              <h3 className="font-medium truncate text-xs sm:text-sm lg:text-base transition-all duration-300">
+              <h3 className="font-medium truncate text-sm lg:text-base transition-all duration-300">
                 {uni.name}
               </h3>
               <button onClick={() => toggleBookmark(uni.name)}>

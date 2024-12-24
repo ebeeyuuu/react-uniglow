@@ -41,18 +41,20 @@ const AlumniSnapshot: React.FC<React.HTMLProps<HTMLDivElement>> = ({
       className="w-full h-full rounded-2xl p-4 border border-white/5 bg-white/[0.01] overflow-hidden"
     >
       <div className="flex flex-col items-start justify-start mb-2 gap-2">
-        <h2 className="text-sm md:text-base font-semibold">Alumni Success</h2>
+        <h2 className="text-xs md:text-sm lg:text-base font-semibold">
+          Alumni Success
+        </h2>
       </div>
       <div className="space-y-4">
-        <div className="gap-2 grid grid-cols-2">
-          <div className="bg-white/5 rounded-lg p-2">
-            <div className="text-xs text-white/60">Employed Percentage</div>
+        <div className="gap-2 grid grid-cols-1">
+          <div className="flex flex-wrap flex-row items-center justify-between">
+            <div className="text-xs text-white/60">Employed Percentage:</div>
             <div className="text-sm font-medium text-green-400">
               {alumniData.employmentRate}%
             </div>
           </div>
-          <div className="bg-white/5 rounded-lg p-2">
-            <div className="text-xs text-white/60">Further Education</div>
+          <div className="flex flex-wrap flex-row items-center justify-between">
+            <div className="text-xs text-white/60">Further Education:</div>
             <div className="text-sm font-medium">
               {alumniData.graduateStudies.continuingEdu}%
             </div>

@@ -5,6 +5,9 @@ import CareerPathways from "./UniversityExplorer/CareerPathways";
 import AdmissionTracker from "./UniversityExplorer/AdmissionTracker";
 import ResearchImpactMeter from "./UniversityExplorer/ResearchImpactMeter";
 import AlumniSnapshot from "./UniversityExplorer/AlumniSnapshot";
+import CampusSafetyStats from "./UniversityExplorer/CampusSafetyStats";
+import LibraryResources from "./UniversityExplorer/LibraryResources";
+import InternationalStudentHub from "./UniversityExplorer/InternationalStudentHub";
 
 const UniversityExplorer = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -62,34 +65,19 @@ const UniversityExplorer = () => {
           className="col-span-1 max-[640px]:col-span-2 row-span-1"
           data-swapy-slot="f"
         >
-          <div
-            data-swapy-item="f"
-            className="w-full h-full rounded-2xl p-6 border border-white/5 bg-white/[0.01] overflow-scroll scrollbar-hide"
-          >
-            06
-          </div>
+          <CampusSafetyStats data-swapy-item="f" />
         </div>
         <div
           className="col-span-1 max-[640px]:col-span-2 row-span-1"
           data-swapy-slot="g"
         >
-          <div
-            data-swapy-item="g"
-            className="w-full h-full rounded-2xl p-6 border border-white/5 bg-white/[0.01] overflow-scroll scrollbar-hide"
-          >
-            07
-          </div>
+          <LibraryResources data-swapy-item="g" />
         </div>
         <div
           className="col-span-2 lg:col-span-2 xl:col-span-1"
           data-swapy-slot="h"
         >
-          <div
-            data-swapy-item="h"
-            className="w-full h-full rounded-2xl p-6 border border-white/5 bg-white/[0.01] overflow-scroll scrollbar-hide"
-          >
-            08
-          </div>
+          <InternationalStudentHub data-swapy-item="h" />
         </div>
       </div>
     </div>

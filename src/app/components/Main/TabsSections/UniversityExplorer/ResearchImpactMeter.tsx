@@ -84,16 +84,20 @@ const ResearchImpactMeter: React.FC<React.HTMLProps<HTMLDivElement>> = ({
       {...divProps}
       className="w-full h-full rounded-2xl p-4 border border-white/5 bg-white/[0.01] overflow-hidden"
     >
-      <h2 className="mb-4 text-sm font-semibold">Research Impact</h2>
+      <div className="flex flex-col items-start justify-start mb-2 gap-2">
+        <h2 className="text-xs md:text-sm lg:text-base font-semibold">
+          Research Impact
+        </h2>
+      </div>
       <div className="space-y-4">
-        <div className="grid grid-cols-2 gap-3">
-          <div className="bg-white/5 rounded-lg p-3">
+        <div className="flex flex-row flex-wrap gap-3">
+          <div>
             <div className="text-xs text-white/60">Citations</div>
             <div className="text-sm font-medium">
               {researchData.citations.toLocaleString()}
             </div>
           </div>
-          <div className="bg-white/5 rounded-lg p-3">
+          <div>
             <div className="text-xs text-white/60">Annual Funding</div>
             <div className="text-sm font-medium">
               ${(researchData.fundingAmount / 1000000).toFixed(0)}M

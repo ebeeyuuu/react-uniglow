@@ -1,11 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { 
-  BsFileText, 
-  BsPeople, 
-  BsFolder, 
-  BsPencil, 
+import {
+  BsFileText,
+  BsPeople,
+  BsFolder,
+  BsPencil,
   BsCalculator,
   BsCode,
   BsMusicNoteBeamed,
@@ -13,21 +13,18 @@ import {
   BsTrophy,
   BsGlobe,
   BsBook,
-  BsCheck,
   BsChevronLeft,
   BsChevronRight,
-  BsPlus
 } from "react-icons/bs";
-import { Progress } from "@/app/components/UI/Progress";
 import RequirementCard from "./RequirementCard";
 
 interface RequirementDetails {
   description: string;
   dueDate?: string;
-  status: 'not-started' | 'in-progress' | 'completed';
+  status: "not-started" | "in-progress" | "completed";
   completedItems?: string[];
   totalItems?: number;
-  links?: { label: string; url: string; }[];
+  links?: { label: string; url: string }[];
   icon: React.ComponentType;
 }
 
@@ -61,9 +58,9 @@ const universities: University[] = [
           totalItems: 7,
           links: [
             { label: "Common App Portal", url: "https://commonapp.org" },
-            { label: "Stanford Supplement", url: "https://stanford.edu/apply" }
+            { label: "Stanford Supplement", url: "https://stanford.edu/apply" },
           ],
-          icon: BsFileText
+          icon: BsFileText,
         },
       },
       {
@@ -76,9 +73,9 @@ const universities: University[] = [
           completedItems: [],
           totalItems: 3,
           links: [
-            { label: "Essay Prompts", url: "https://stanford.edu/essays" }
+            { label: "Essay Prompts", url: "https://stanford.edu/essays" },
           ],
-          icon: BsPencil
+          icon: BsPencil,
         },
       },
       {
@@ -89,7 +86,7 @@ const universities: University[] = [
           status: "completed",
           completedItems: ["Math Teacher", "English Teacher"],
           totalItems: 2,
-          icon: BsPeople
+          icon: BsPeople,
         },
       },
       {
@@ -100,9 +97,12 @@ const universities: University[] = [
           dueDate: "Dec 15, 2024",
           status: "not-started",
           links: [
-            { label: "Portfolio Guidelines", url: "https://stanford.edu/portfolio" }
+            {
+              label: "Portfolio Guidelines",
+              url: "https://stanford.edu/portfolio",
+            },
           ],
-          icon: BsFolder
+          icon: BsFolder,
         },
       },
     ],
@@ -124,10 +124,8 @@ const universities: University[] = [
           status: "in-progress",
           completedItems: ["Basic Info", "Academics"],
           totalItems: 6,
-          links: [
-            { label: "MIT Portal", url: "https://mit.edu/apply" }
-          ],
-          icon: BsFileText
+          links: [{ label: "MIT Portal", url: "https://mit.edu/apply" }],
+          icon: BsFileText,
         },
       },
       {
@@ -140,9 +138,9 @@ const universities: University[] = [
           completedItems: ["Essay 1", "Essay 2"],
           totalItems: 5,
           links: [
-            { label: "Writing Guidelines", url: "https://mit.edu/essays" }
+            { label: "Writing Guidelines", url: "https://mit.edu/essays" },
           ],
-          icon: BsPencil
+          icon: BsPencil,
         },
       },
       {
@@ -152,10 +150,8 @@ const universities: University[] = [
           description: "Document technical projects and innovations",
           dueDate: "Dec 20, 2024",
           status: "not-started",
-          links: [
-            { label: "Maker Guidelines", url: "https://mit.edu/maker" }
-          ],
-          icon: BsCode
+          links: [{ label: "Maker Guidelines", url: "https://mit.edu/maker" }],
+          icon: BsCode,
         },
       },
       {
@@ -166,7 +162,7 @@ const universities: University[] = [
           status: "completed",
           completedItems: ["Test Taken", "Scores Sent"],
           totalItems: 2,
-          icon: BsCalculator
+          icon: BsCalculator,
         },
       },
     ],
@@ -189,20 +185,24 @@ const universities: University[] = [
           completedItems: ["Profile", "Family", "Education"],
           totalItems: 8,
           links: [
-            { label: "Harvard Portal", url: "https://college.harvard.edu/admissions" }
+            {
+              label: "Harvard Portal",
+              url: "https://college.harvard.edu/admissions",
+            },
           ],
-          icon: BsFileText
+          icon: BsFileText,
         },
       },
       {
         item: "School Report",
         required: true,
         details: {
-          description: "Submit official transcript and counselor recommendation",
+          description:
+            "Submit official transcript and counselor recommendation",
           status: "not-started",
           completedItems: [],
           totalItems: 2,
-          icon: BsBook
+          icon: BsBook,
         },
       },
       {
@@ -213,9 +213,9 @@ const universities: University[] = [
           dueDate: "Dec 15, 2024",
           status: "not-started",
           links: [
-            { label: "Arts Guidelines", url: "https://harvard.edu/arts" }
+            { label: "Arts Guidelines", url: "https://harvard.edu/arts" },
           ],
-          icon: BsMusicNoteBeamed
+          icon: BsMusicNoteBeamed,
         },
       },
       {
@@ -224,7 +224,7 @@ const universities: University[] = [
         details: {
           description: "Alumni interview if available in your area",
           status: "not-started",
-          icon: BsPeople
+          icon: BsPeople,
         },
       },
     ],
@@ -246,10 +246,8 @@ const universities: University[] = [
           status: "in-progress",
           completedItems: ["Personal Info", "Activities"],
           totalItems: 6,
-          links: [
-            { label: "Yale Portal", url: "https://admissions.yale.edu" }
-          ],
-          icon: BsFileText
+          links: [{ label: "Yale Portal", url: "https://admissions.yale.edu" }],
+          icon: BsFileText,
         },
       },
       {
@@ -261,7 +259,7 @@ const universities: University[] = [
           status: "not-started",
           completedItems: [],
           totalItems: 4,
-          icon: BsPencil
+          icon: BsPencil,
         },
       },
       {
@@ -272,20 +270,24 @@ const universities: University[] = [
           dueDate: "Dec 15, 2024",
           status: "not-started",
           links: [
-            { label: "Portfolio Guidelines", url: "https://yale.edu/portfolio" }
+            {
+              label: "Portfolio Guidelines",
+              url: "https://yale.edu/portfolio",
+            },
           ],
-          icon: BsFolder
+          icon: BsFolder,
         },
       },
       {
         item: "Extracurricular Updates",
         required: false,
         details: {
-          description: "Additional information about activities and achievements",
+          description:
+            "Additional information about activities and achievements",
           status: "in-progress",
           completedItems: ["Awards", "Leadership"],
           totalItems: 4,
-          icon: BsTrophy
+          icon: BsTrophy,
         },
       },
     ],
@@ -308,9 +310,12 @@ const universities: University[] = [
           completedItems: [],
           totalItems: 7,
           links: [
-            { label: "Princeton Portal", url: "https://admission.princeton.edu" }
+            {
+              label: "Princeton Portal",
+              url: "https://admission.princeton.edu",
+            },
           ],
-          icon: BsFileText
+          icon: BsFileText,
         },
       },
       {
@@ -320,7 +325,7 @@ const universities: University[] = [
           description: "Submit graded written paper from high school",
           dueDate: "Dec 20, 2024",
           status: "not-started",
-          icon: BsBook
+          icon: BsBook,
         },
       },
       {
@@ -331,9 +336,9 @@ const universities: University[] = [
           dueDate: "Dec 15, 2024",
           status: "not-started",
           links: [
-            { label: "Arts Guidelines", url: "https://princeton.edu/arts" }
+            { label: "Arts Guidelines", url: "https://princeton.edu/arts" },
           ],
-          icon: BsCamera
+          icon: BsCamera,
         },
       },
       {
@@ -343,9 +348,12 @@ const universities: University[] = [
           description: "Additional documents for international students",
           status: "not-started",
           links: [
-            { label: "International Requirements", url: "https://princeton.edu/international" }
+            {
+              label: "International Requirements",
+              url: "https://princeton.edu/international",
+            },
           ],
-          icon: BsGlobe
+          icon: BsGlobe,
         },
       },
     ],
@@ -354,30 +362,14 @@ const universities: University[] = [
       sat: { min: 1440, max: 1570 },
       testOptional: true,
     },
-  }
+  },
 ];
 
 const AdmissionTracker: React.FC<React.HTMLProps<HTMLDivElement>> = ({
   ...divProps
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [checkedItems, setCheckedItems] = useState<string[]>([]);
   const [expandedBox, setExpandedBox] = useState<string | null>("Tests");
-
-  const toggleItem = (uni: string, item: string) => {
-    const key = `${uni}-${item}`;
-    setCheckedItems((prev) =>
-      prev.includes(key) ? prev.filter((i) => i !== key) : [...prev, key]
-    );
-  };
-
-  const calculateProgress = (university: University) => {
-    const total = university.requirements.length;
-    const completed = university.requirements.filter((req) =>
-      checkedItems.includes(`${university.name}-${req.item}`)
-    ).length;
-    return (completed / total) * 100;
-  };
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % universities.length);
@@ -385,7 +377,7 @@ const AdmissionTracker: React.FC<React.HTMLProps<HTMLDivElement>> = ({
 
   const prevSlide = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? universities.length - 1 : prevIndex - 1
+      prevIndex === 0 ? universities.length - 1 : prevIndex - 1,
     );
   };
 
@@ -398,23 +390,27 @@ const AdmissionTracker: React.FC<React.HTMLProps<HTMLDivElement>> = ({
   return (
     <div
       {...divProps}
-      className="w-full h-full rounded-2xl p-4 sm:p-6 border border-white/5 bg-white/[0.01] overflow-hidden"
+      className="space-y-4 w-full h-full rounded-2xl p-6 border border-white/5 bg-white/[0.01] overflow-scroll scrollbar-hide flex justify-center flex-col"
     >
-      <h2 className="mb-4 text-sm md:text-base lg:text-lg font-semibold">
-        Admissions Tracker
-      </h2>
+      <div className="flex flex-col items-start justify-start gap-2 mb-0">
+        <h2 className="text-sm md:text-base lg:text-lg font-semibold">
+          Admissions Tracker
+        </h2>
+      </div>
 
-      <div className="w-full h-full">
-        <div className="w-full bg-white/5 rounded-xl p-4 space-y-2">
+      <div className="relative">
+        <div className="w-full space-y-2">
           <div className="justify-between w-full flex flex-row items-center">
-            <h3 className="font-medium text-sm mb-1">{currentUniversity.name}</h3>
+            <h3 className="font-medium text-sm mb-1">
+              {currentUniversity.name}
+            </h3>
             <span className="text-xs text-white/60">
               Due: {currentUniversity.deadline}
             </span>
           </div>
 
           <div
-            className={`bg-white/10 p-3 rounded-xl space-y-2 transition-all duration-300 cursor-pointer hover:outline hover:outline-purple-500 hover:outline-1 ${expandedBox === "Tests" ? "max-h-60" : "max-h-10"
+            className={`bg-white/5 p-3 rounded-xl space-y-2 transition-all duration-300 cursor-pointer hover:outline hover:outline-purple-500 hover:outline-1 ${expandedBox === "Tests" ? "max-h-60" : "max-h-10"
               }`}
             onClick={() => handleExpand("Tests")}
           >
@@ -443,10 +439,12 @@ const AdmissionTracker: React.FC<React.HTMLProps<HTMLDivElement>> = ({
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mt-4">
             {currentUniversity.requirements.map((requirement) => (
-              <RequirementCard key={requirement.item} requirement={requirement} />
+              <RequirementCard
+                key={requirement.item}
+                requirement={requirement}
+              />
             ))}
           </div>
-
         </div>
 
         <div className="w-full flex justify-center items-center flex-row gap-2 mt-5">

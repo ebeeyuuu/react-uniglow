@@ -1,8 +1,10 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef } from "react";
 import { createSwapy } from "swapy";
-import UniversityFinder from './UniversityExplorer/UniversityFinder';
-import CareerPathways from './UniversityExplorer/CareerPathways';
-import AdmissionTracker from './UniversityExplorer/AdmissionTracker';
+import UniversityFinder from "./UniversityExplorer/UniversityFinder";
+import CareerPathways from "./UniversityExplorer/CareerPathways";
+import AdmissionTracker from "./UniversityExplorer/AdmissionTracker";
+import ResearchImpactMeter from "./UniversityExplorer/ResearchImpactMeter";
+import AlumniSnapshot from "./UniversityExplorer/AlumniSnapshot";
 
 const UniversityExplorer = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -18,7 +20,7 @@ const UniversityExplorer = () => {
         swapy.destroy();
       };
     }
-  })
+  });
 
   return (
     <div className="pb-24 text-white overflow-y-scroll scrollbar-hide">
@@ -30,41 +32,40 @@ const UniversityExplorer = () => {
           className="col-span-2 max-[640px]:row-span-3 row-span-3"
           data-swapy-slot="a"
         >
-          <UniversityFinder data-swapy-item="a"/>
+          <UniversityFinder data-swapy-item="a" />
         </div>
         <div
           className="col-span-2 max-[640px]:row-span-1 row-span-3"
           data-swapy-slot="b"
         >
-          <CareerPathways data-swapy-item="b" />
+          <AdmissionTracker data-swapy-item="b" />
         </div>
         <div
           className="col-span-2 max-[640px]:row-span-1 lg:row-span-1 xl:row-span-2"
           data-swapy-slot="c"
         >
-          <AdmissionTracker data-swapy-item="c" />
+          <CareerPathways data-swapy-item="c" />
         </div>
         <div
           className="col-span-1 max-[640px]:col-span-2 row-span-1"
           data-swapy-slot="d"
         >
-          <div data-swapy-item="d" className="w-full h-full rounded-2xl p-6 border border-white/5 bg-white/[0.01] overflow-scroll scrollbar-hide">
-            04
-          </div>
+          <ResearchImpactMeter data-swapy-item="d" />
         </div>
         <div
           className="col-span-1 max-[640px]:col-span-2 row-span-1"
           data-swapy-slot="e"
         >
-          <div data-swapy-item="e" className="w-full h-full rounded-2xl p-6 border border-white/5 bg-white/[0.01] overflow-scroll scrollbar-hide">
-            05
-          </div>
+          <AlumniSnapshot data-swapy-item="e" />
         </div>
         <div
           className="col-span-1 max-[640px]:col-span-2 row-span-1"
           data-swapy-slot="f"
         >
-          <div data-swapy-item="f" className="w-full h-full rounded-2xl p-6 border border-white/5 bg-white/[0.01] overflow-scroll scrollbar-hide">
+          <div
+            data-swapy-item="f"
+            className="w-full h-full rounded-2xl p-6 border border-white/5 bg-white/[0.01] overflow-scroll scrollbar-hide"
+          >
             06
           </div>
         </div>
@@ -72,7 +73,10 @@ const UniversityExplorer = () => {
           className="col-span-1 max-[640px]:col-span-2 row-span-1"
           data-swapy-slot="g"
         >
-          <div data-swapy-item="g" className="w-full h-full rounded-2xl p-6 border border-white/5 bg-white/[0.01] overflow-scroll scrollbar-hide">
+          <div
+            data-swapy-item="g"
+            className="w-full h-full rounded-2xl p-6 border border-white/5 bg-white/[0.01] overflow-scroll scrollbar-hide"
+          >
             07
           </div>
         </div>
@@ -80,13 +84,16 @@ const UniversityExplorer = () => {
           className="col-span-2 lg:col-span-2 xl:col-span-1"
           data-swapy-slot="h"
         >
-          <div data-swapy-item="h" className="w-full h-full rounded-2xl p-6 border border-white/5 bg-white/[0.01] overflow-scroll scrollbar-hide">
+          <div
+            data-swapy-item="h"
+            className="w-full h-full rounded-2xl p-6 border border-white/5 bg-white/[0.01] overflow-scroll scrollbar-hide"
+          >
             08
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default UniversityExplorer
+export default UniversityExplorer;

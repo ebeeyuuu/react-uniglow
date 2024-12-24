@@ -43,11 +43,11 @@ const RequirementCard: React.FC<{
                     hover:outline hover:outline-purple-500/50 hover:outline-1
                     hover:shadow-lg hover:shadow-purple-500/10"
     >
-      <div className="flex items-start gap-3">
+      <div className="relative flex flex-col items-start gap-3">
         <div className="p-2 rounded-lg bg-purple-500/20 text-purple-400">
           <Icon size={20} />
         </div>
-        <div className="flex-1">
+        <div className="flex flex-wrap">
           <div className="flex items-center gap-2">
             <h4 className="text-sm font-medium">{item}</h4>
             {!required && (
@@ -101,7 +101,7 @@ const RequirementCard: React.FC<{
           )}
         </div>
 
-        <div className="text-lg">
+        <div className="absolute top-2 right-2 text-lg">
           {details.status === "completed" && (
             <BsCheckCircle className="text-green-400" />
           )}

@@ -112,10 +112,11 @@ const ResearchImpactMeter: React.FC<React.HTMLProps<HTMLDivElement>> = ({
               {researchData.strengths.map((strength, index) => (
                 <div
                   key={strength.field}
-                  className={`absolute w-full transition-all duration-500 ${index === currentStrength
-                    ? "opacity-100 translate-y-0"
-                    : "opacity-0 translate-y-4"
-                    }`}
+                  className={`absolute w-full transition-all duration-500 ${
+                    index === currentStrength
+                      ? "opacity-100 translate-y-0"
+                      : "opacity-0 translate-y-4"
+                  }`}
                 >
                   <div className="flex flex-col mb-1">
                     <span className="text-xs">{strength.field}</span>
@@ -142,10 +143,11 @@ const ResearchImpactMeter: React.FC<React.HTMLProps<HTMLDivElement>> = ({
               {researchData.recentDiscoveries.map((discovery, index) => (
                 <div
                   key={discovery.title}
-                  className={`absolute w-full transition-all duration-500 ${index === currentDiscovery
-                    ? "opacity-100 translate-x-0"
-                    : "opacity-0 translate-y-4"
-                    }`}
+                  className={`absolute w-full transition-all duration-500 ${
+                    index === currentDiscovery
+                      ? "opacity-100 translate-x-0"
+                      : "opacity-0 translate-y-4"
+                  }`}
                 >
                   <div className="text-xs mb-1">{discovery.title}</div>
                   <div className="flex flex-col">

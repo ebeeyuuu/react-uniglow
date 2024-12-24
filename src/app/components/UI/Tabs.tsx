@@ -41,7 +41,7 @@ export const TabsList = React.forwardRef<HTMLDivElement, TabsListProps>(
       ref={ref}
       role="tablist"
       className={cn(
-        "inline-flex h-10 items-center justify-center bg-[#202020] px-5 py-6 rounded-2xl text-zinc-400",
+        "box-border flex flex-row flex-wrap justify-start items-center bg-[#202020] px-5 py-3 rounded-2xl text-zinc-400",
         className,
       )}
       {...props}

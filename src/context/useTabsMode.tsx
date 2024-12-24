@@ -7,7 +7,6 @@ export const useTabsMode = () => {
 
   const toggleTabsMode = () => {
     setIsTabsMode((prev) => !prev);
-    console.log(isTabsMode);
   };
 
   return { isTabsMode, toggleTabsMode };

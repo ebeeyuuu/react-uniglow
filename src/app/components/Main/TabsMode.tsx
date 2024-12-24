@@ -14,7 +14,7 @@ const TabsMode = () => {
   return (
     <div>
       <TabsHeader />
-      <Tabs defaultValue="universityexplorer" className="w-full h-full">
+      <Tabs defaultValue="universityexplorer" className="px-2">
         <TabsList>
           <TabsTrigger value="universityexplorer">University Explorer</TabsTrigger>
           <TabsTrigger value="aimatcher">AI Matcher</TabsTrigger>

@@ -1,10 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { BsSearch, BsBookmark, BsBookmarkFill } from "react-icons/bs";
 import { Progress } from "@/app/components/UI/Progress";
 import DropdownMenu from "@/app/components/UI/DropdownMenu";
-import Modal from "@/app/components/UI/Modal";
 
 const universities = [
   {
@@ -36,18 +35,40 @@ const sortOptions = [
 const UniversityFinder: React.FC<React.HTMLProps<HTMLDivElement>> = ({
   ...divProps
 }) => {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [visibleCount, setVisibleCount] = useState(3);
   const [searchTerm, setSearchTerm] = useState("");
   const [bookmarked, setBookmarked] = useState<string[]>([]);
   const [expanded, setExpanded] = useState<number | null>(null);
   const [sortBy, setSortBy] = useState("match");
 
+  useEffect(() => {
+    const updateSize = () => {
+      if (!containerRef.current) return;
+
+      const height = containerRef.current.offsetHeight;
+
+      setVisibleCount(Math.floor(height / 150));
+    };
+
+    const resizeObserver = new ResizeObserver(updateSize);
+    const container = containerRef.current;
+    if (container) {
+      resizeObserver.observe(container);
+      updateSize();
+    }
+
+    return () => resizeObserver.disconnect();
+  }, []);
+
   const toggleBookmark = (name: string) => {
     setBookmarked((prev) =>
       prev.includes(name)
         ? prev.filter((uni) => uni !== name)
-        : [...prev, name],
+        : [...prev, name]
     );
   };
+
   const handleSort = (a: any, b: any) => {
     if (sortBy === "name") return a.name.localeCompare(b.name);
     if (sortBy === "match") return b.match - a.match;
@@ -56,24 +77,25 @@ const UniversityFinder: React.FC<React.HTMLProps<HTMLDivElement>> = ({
   };
 
   const filteredUniversities = universities
-    .filter((uni) => {
-      return (
-        uni.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  .filter((uni) => {
+    return (
+      uni.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         uni.location.toLowerCase().includes(searchTerm.toLowerCase()) ||
         String(uni.match).includes(searchTerm)
-      );
-    })
-    .sort(handleSort);
+    );
+  })
+  .sort(handleSort)
 
   return (
     <div
       {...divProps}
-      className="space-y-4 w-full h-full rounded-2xl p-6 border border-white/5 bg-white/[0.01] overflow-scroll scrollbar-hide flex justify-center flex-col"
+      ref={containerRef}
+      className="space-y-4 w-full h-full rounded-2xl p-6 border border-white/5 bg-white/[0.01] overflow-hidden flex flex-col"
     >
       <div className="flex flex-col items-start justify-start gap-2 mb-0">
         <div className="flex flex-row gap-2 items-center mb-2">
           <h2 className="text-sm md:text-base lg:text-lg font-semibold">
-            Univeristy Finder
+            University Finder
           </h2>
           <div className="flex flex-row gap-1 items-center">
             <BsBookmark className="text-white/50" />
@@ -97,7 +119,7 @@ const UniversityFinder: React.FC<React.HTMLProps<HTMLDivElement>> = ({
         <BsSearch className="absolute left-3 top-1/2 -translate-y-1/2 text-white/40" />
       </div>
       <div className="space-y-4">
-        {filteredUniversities.map((uni, index) => (
+        {filteredUniversities.slice(0, visibleCount).map((uni, index) => (
           <div
             key={index}
             className="p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-colors cursor-pointer group"

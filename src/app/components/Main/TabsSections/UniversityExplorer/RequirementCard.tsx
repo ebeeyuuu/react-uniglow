@@ -47,7 +47,8 @@ const RequirementCard: React.FC<{
         <div className="p-2 rounded-lg bg-purple-500/20 text-purple-400">
           <Icon size={20} />
         </div>
-        <div className="flex flex-wrap">
+
+        <div className="flex flex-col gap-1">
           <div className="flex items-center gap-2">
             <h4 className="text-sm font-medium">{item}</h4>
             {!required && (
@@ -56,59 +57,56 @@ const RequirementCard: React.FC<{
               </span>
             )}
           </div>
-
-          <p className="text-xs text-white/60 mt-1">{details.description}</p>
-
-          {details.status === "in-progress" && details.completedItems && (
-            <div className="mt-2">
-              <div className="flex items-center gap-2 text-xs">
-                <Progress
-                  value={
-                    (details.completedItems.length /
-                      (details.totalItems || 1)) *
-                    100
-                  }
-                  className="h-1.5 bg-white/10 flex-1"
-                  progressColor="bg-gradient-to-r from-purple-500 to-blue-500"
-                />
-                <span className="text-white/60">
-                  {details.completedItems.length}/{details.totalItems}
-                </span>
-              </div>
-            </div>
-          )}
-
-          {details.dueDate && (
-            <div className="flex items-center gap-1 mt-2 text-xs text-white/60">
-              <BsCalendar size={12} />
-              <span>Due: {details.dueDate}</span>
-            </div>
-          )}
-
-          {details.links && (
-            <div className="mt-2 flex flex-wrap gap-2">
-              {details.links.map((link) => (
-                <a
-                  key={link.url}
-                  href={link.url}
-                  className="inline-flex items-center gap-1 text-xs text-purple-400 hover:text-purple-300 transition-colors"
-                >
-                  <BsLink45Deg size={14} />
-                  {link.label}
-                </a>
-              ))}
-            </div>
-          )}
+          <p className="text-xs text-white/60">{details.description}</p>
         </div>
 
-        <div className="absolute top-2 right-2 text-lg">
-          {details.status === "completed" && (
-            <BsCheckCircle className="text-green-400" />
-          )}
-          {details.status === "not-started" && (
-            <BsExclamationCircle className="text-white/40" />
-          )}
-        </div>
+        {details.status === "in-progress" && details.completedItems && (
+          <div className="w-full">
+            <div className="flex flex-col gap-1 w-full text-xs">
+              <Progress
+                value={
+                  (details.completedItems.length / (details.totalItems || 1)) * 100
+                }
+                className="h-1 bg-white/10"
+                progressColor="bg-gradient-to-r from-purple-500 to-blue-500"
+              />
+              <span className="text-white/60">
+                {details.completedItems.length}/{details.totalItems}
+              </span>
+            </div>
+          </div>
+        )}
+
+        {details.dueDate && (
+          <div className="flex items-center gap-1 text-xs text-white/60">
+            <BsCalendar size={12} />
+            <span>Due: {details.dueDate}</span>
+          </div>
+        )}
+
+        {details.links && (
+          <div className="flex flex-col gap-2">
+            {details.links.map((link) => (
+              <a
+                key={link.url}
+                href={link.url}
+                className="inline-flex items-center gap-1 text-xs text-purple-400 hover:text-purple-300 transition-colors"
+              >
+                <BsLink45Deg size={14} />
+                {link.label}
+              </a>
+            ))}
+          </div>
+        )}
+      </div>
+
+      <div className="absolute top-2 right-2 text-lg">
+        {details.status === "completed" && (
+          <BsCheckCircle className="text-green-400" />
+        )}
+        {details.status === "not-started" && (
+          <BsExclamationCircle className="text-white/40" />
+        )}
       </div>
     </div>
   );

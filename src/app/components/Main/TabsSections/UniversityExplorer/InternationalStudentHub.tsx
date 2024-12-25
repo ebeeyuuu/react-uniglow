@@ -1,5 +1,7 @@
 "use client";
 
+import { Progress } from "@/app/components/UI/Progress";
+
 interface InternationalStats {
   percentage: number;
   countries: number;
@@ -42,8 +44,9 @@ const InternationalStudentHub: React.FC<React.HTMLProps<HTMLDivElement>> = ({
           ))}
         </div>
         <div className="h-1 bg-white/5 rounded-full overflow-hidden">
-          <div
-            className="h-full bg-green-500"
+          <Progress
+            className="h-full bg-zinc-700"
+            progressColor="bg-gradient-to-r from-purple-500 to-blue-500"
             style={{ width: `${internationalData.visaSupport}%` }}
           />
         </div>

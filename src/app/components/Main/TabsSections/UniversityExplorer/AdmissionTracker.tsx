@@ -401,7 +401,7 @@ const AdmissionTracker: React.FC<React.HTMLProps<HTMLDivElement>> = ({
       <div className="relative">
         <div className="w-full space-y-2">
           <div className="justify-between w-full flex flex-row items-center">
-            <h3 className="font-medium text-sm mb-1">
+            <h3 className="font-normal text-white/85 text-sm mb-1">
               {currentUniversity.name}
             </h3>
             <span className="text-xs text-white/60">

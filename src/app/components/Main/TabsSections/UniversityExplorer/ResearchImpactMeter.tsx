@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 interface ResearchStats {
   citations: number;
@@ -57,27 +57,27 @@ const researchData: ResearchStats = {
 const ResearchImpactMeter: React.FC<React.HTMLProps<HTMLDivElement>> = ({
   ...divProps
 }) => {
-  const [currentStrength, setCurrentStrength] = useState(0);
-  const [currentDiscovery, setCurrentDiscovery] = useState(0);
+  const [currentStrengthIndex, setCurrentStrengthIndex] = useState(0);
+  const [currentDiscoveryIndex, setCurrentDiscoveryIndex] = useState(0);
 
   useEffect(() => {
-    const strengthTimer = setInterval(() => {
-      setCurrentStrength((prev) =>
-        prev === researchData.strengths.length - 1 ? 0 : prev + 1,
+    const strengthInterval = setInterval(() => {
+      setCurrentStrengthIndex((prevIndex) =>
+        (prevIndex + 1) % researchData.strengths.length
       );
     }, 3000);
 
-    const discoveryTimer = setInterval(() => {
-      setCurrentDiscovery((prev) =>
-        prev === researchData.recentDiscoveries.length - 1 ? 0 : prev + 1,
+    const discoveryInterval = setInterval(() => {
+      setCurrentDiscoveryIndex((prevIndex) =>
+        (prevIndex + 1) % researchData.recentDiscoveries.length
       );
     }, 4000);
 
     return () => {
-      clearInterval(strengthTimer);
-      clearInterval(discoveryTimer);
+      clearInterval(strengthInterval);
+      clearInterval(discoveryInterval);
     };
-  }, []);
+  });
 
   return (
     <div
@@ -89,78 +89,71 @@ const ResearchImpactMeter: React.FC<React.HTMLProps<HTMLDivElement>> = ({
           Research Impact
         </h2>
       </div>
+
       <div className="space-y-4">
         <div className="flex flex-row flex-wrap gap-3">
           <div>
             <div className="text-xs text-white/60">Citations</div>
-            <div className="text-sm font-medium">
+            <div className="text-sm font-normal text-white/75">
               {researchData.citations.toLocaleString()}
             </div>
           </div>
           <div>
             <div className="text-xs text-white/60">Annual Funding</div>
-            <div className="text-sm font-medium">
+            <div className="text-sm font-normal text-white/75">
               ${(researchData.fundingAmount / 1000000).toFixed(0)}M
             </div>
           </div>
         </div>
 
         <div className="space-y-2">
-          <div className="text-xs font-medium">Research Strengths</div>
-          <div className="bg-white/5 rounded-lg p-3 h-16">
-            <div className="relative h-full">
-              {researchData.strengths.map((strength, index) => (
-                <div
-                  key={strength.field}
-                  className={`absolute w-full transition-all duration-500 ${
-                    index === currentStrength
-                      ? "opacity-100 translate-y-0"
-                      : "opacity-0 translate-y-4"
+          <div className="text-xs font-normal text-white/90">Research Strengths</div>
+          <div className="relative flex-1 max-h-16 min-h-16">
+            {researchData.strengths.map((strength, index) => (
+              <div
+                key={index}
+                className={`bg-white/5 absolute inset-0 flex flex-col p-4 rounded-lg justify-center items-start transition-opacity duration-700 ${index === currentStrengthIndex ? "opacity-100" : "opacity-0"
                   }`}
-                >
-                  <div className="flex flex-col mb-1">
-                    <span className="text-xs">{strength.field}</span>
-                    <span className="text-xs text-white/60">
-                      #{strength.rank} Globally
-                    </span>
-                  </div>
-                  <div className="h-1 bg-white/5 rounded-full overflow-hidden">
-                    <div
-                      className="h-full bg-gradient-to-r from-purple-500 to-blue-500 transition-all duration-1000"
-                      style={{ width: `${strength.impact}%` }}
-                    />
-                  </div>
+              >
+                <span className="text-xs font-medium mb-1 text-white/85">
+                  {strength.field}
+                </span>
+                <span className="text-xs text-white/60 mb-1">
+                  #{strength.rank} Globally
+                </span>
+                <div className="h-1 bg-white/10 rounded-full overflow-hidden">
+                  <div
+                    className="h-full bg-gradient-to-r from-purple-500 to-blue-500"
+                    style={{ width: `${strength.impact}%` }}
+                  />
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
 
         <div className="space-y-2">
-          <div className="text-xs font-medium">Recent Breakthroughs</div>
-          <div className="bg-white/5 rounded-lg p-3 h-24">
-            <div className="relative h-full">
-              {researchData.recentDiscoveries.map((discovery, index) => (
-                <div
-                  key={discovery.title}
-                  className={`absolute w-full transition-all duration-500 ${
-                    index === currentDiscovery
-                      ? "opacity-100 translate-x-0"
-                      : "opacity-0 translate-y-4"
+          <div className="text-xs font-normal text-white/90">Recent Breakthroughs</div>
+          <div className="relative flex-1 max-h-24 min-h-24">
+            {researchData.recentDiscoveries.map((discovery, index) => (
+              <div
+                key={index}
+                className={`bg-white/5 p-4 rounded-lg absolute inset-0 flex flex-col justify-center items-start transition-opacity duration-700 ${index === currentDiscoveryIndex
+                  ? "opacity-100"
+                  : "opacity-0"
                   }`}
-                >
-                  <div className="text-xs mb-1">{discovery.title}</div>
-                  <div className="flex flex-col">
-                    <span className="text-xs text-purple-400">
-                      {discovery.field}
-                    </span>
-                    <span className="text-xs text-white/60">
-                      {discovery.date}
-                    </span>
-                  </div>
+              >
+                <div className="text-xs font-medium mb-1 text-white/85">
+                  {discovery.title}
                 </div>
-              ))}
-            </div>
+                <span className="text-xs text-purple-400">
+                  {discovery.field}
+                </span>
+                <span className="text-xs text-white/60">
+                  {discovery.date}
+                </span>
+              </div>
+            ))}
           </div>
         </div>
       </div>

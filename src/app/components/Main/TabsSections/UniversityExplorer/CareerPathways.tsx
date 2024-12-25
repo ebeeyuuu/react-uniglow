@@ -163,12 +163,14 @@ const CareerPathways: React.FC<React.HTMLProps<HTMLDivElement>> = ({
               }
             >
               <div className="flex flex-col gap-1">
-                <h3 className="font-medium text-xs sm:text-sm lg:text-base">
+                <h3 className="font-normal truncate text-white/85 text-sm lg:text-base transition-all duration-300">
                   {path.title}
                 </h3>
                 <div className="flex flex-row gap-1">
-                  <p className="text-xs text-white/60">Avg. Salary</p>
-                  <p className="text-xs font-medium">
+                  <p className="text-xs font-light text-white/60">
+                    Avg. Salary
+                  </p>
+                  <p className="text-xs font-normal text-white/75">
                     ${path.averageSalary.toLocaleString()}
                   </p>
                 </div>
@@ -197,7 +199,9 @@ const CareerPathways: React.FC<React.HTMLProps<HTMLDivElement>> = ({
               <div className="mt-4 space-y-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-2">
-                    <h4 className="text-sm font-medium">Required Skills</h4>
+                    <h4 className="text-sm font-normal text-white/80">
+                      Required Skills
+                    </h4>
                     <div className="flex flex-wrap gap-2">
                       {path.requiredSkills.map((skill) => (
                         <span
@@ -210,7 +214,9 @@ const CareerPathways: React.FC<React.HTMLProps<HTMLDivElement>> = ({
                     </div>
                   </div>
                   <div className="space-y-2">
-                    <h4 className="text-sm font-medium">Top Employers</h4>
+                    <h4 className="text-sm font-normal text-white/80">
+                      Top Employers
+                    </h4>
                     <div className="flex flex-wrap gap-2">
                       {path.topEmployers.map((employer) => (
                         <span
@@ -225,15 +231,19 @@ const CareerPathways: React.FC<React.HTMLProps<HTMLDivElement>> = ({
                 </div>
 
                 <div className="space-y-2">
-                  <h4 className="text-sm font-medium">Top Universities</h4>
+                  <h4 className="text-sm font-normal text-white/80">
+                    Top Universities
+                  </h4>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {path.universities.map((uni) => (
                       <div
                         key={uni.name}
                         className="bg-white/5 p-3 rounded-lg space-y-2"
                       >
-                        <div className="flex justify-between items-center">
-                          <h5 className="font-medium text-sm">{uni.name}</h5>
+                        <div className="flex flex-col">
+                          <h5 className="font-light text-white/75 text-sm">
+                            {uni.name}
+                          </h5>
                           <span className="text-purple-400 text-sm">
                             {uni.programStrength}% Match
                           </span>

@@ -65,7 +65,7 @@ const UniversityFinder: React.FC<React.HTMLProps<HTMLDivElement>> = ({
     setBookmarked((prev) =>
       prev.includes(name)
         ? prev.filter((uni) => uni !== name)
-        : [...prev, name]
+        : [...prev, name],
     );
   };
 
@@ -77,14 +77,14 @@ const UniversityFinder: React.FC<React.HTMLProps<HTMLDivElement>> = ({
   };
 
   const filteredUniversities = universities
-  .filter((uni) => {
-    return (
-      uni.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    .filter((uni) => {
+      return (
+        uni.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         uni.location.toLowerCase().includes(searchTerm.toLowerCase()) ||
         String(uni.match).includes(searchTerm)
-    );
-  })
-  .sort(handleSort)
+      );
+    })
+    .sort(handleSort);
 
   return (
     <div
@@ -125,7 +125,7 @@ const UniversityFinder: React.FC<React.HTMLProps<HTMLDivElement>> = ({
             className="p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-colors cursor-pointer group"
           >
             <div className="flex justify-between items-center mb-2">
-              <h3 className="font-medium truncate text-sm lg:text-base transition-all duration-300">
+              <h3 className="font-normal truncate text-white/90 text-sm lg:text-base transition-all duration-300">
                 {uni.name}
               </h3>
               <button onClick={() => toggleBookmark(uni.name)}>

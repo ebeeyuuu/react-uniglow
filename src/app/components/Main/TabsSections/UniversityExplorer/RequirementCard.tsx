@@ -50,7 +50,7 @@ const RequirementCard: React.FC<{
 
         <div className="flex flex-col gap-1">
           <div className="flex items-center gap-2">
-            <h4 className="text-sm font-medium">{item}</h4>
+            <h4 className="text-sm text-white/90 font-normal">{item}</h4>
             {!required && (
               <span className="text-xs px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-400">
                 Optional
@@ -65,7 +65,8 @@ const RequirementCard: React.FC<{
             <div className="flex flex-col gap-1 w-full text-xs">
               <Progress
                 value={
-                  (details.completedItems.length / (details.totalItems || 1)) * 100
+                  (details.completedItems.length / (details.totalItems || 1)) *
+                  100
                 }
                 className="h-1 bg-white/10"
                 progressColor="bg-gradient-to-r from-purple-500 to-blue-500"
@@ -90,7 +91,7 @@ const RequirementCard: React.FC<{
               <a
                 key={link.url}
                 href={link.url}
-                className="inline-flex items-center gap-1 text-xs text-purple-400 hover:text-purple-300 transition-colors"
+                className="inline-flex items-center gap-1 text-xs text-purple-400/95 hover:text-purple-400 transition-colors"
               >
                 <BsLink45Deg size={14} />
                 {link.label}
@@ -100,7 +101,7 @@ const RequirementCard: React.FC<{
         )}
       </div>
 
-      <div className="absolute top-2 right-2 text-lg">
+      <div className="absolute top-5 right-5 text-lg">
         {details.status === "completed" && (
           <BsCheckCircle className="text-green-400" />
         )}

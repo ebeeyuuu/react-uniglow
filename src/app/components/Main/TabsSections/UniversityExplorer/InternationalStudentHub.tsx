@@ -45,9 +45,9 @@ const InternationalStudentHub: React.FC<React.HTMLProps<HTMLDivElement>> = ({
         </div>
         <div className="h-1 bg-white/5 rounded-full overflow-hidden">
           <Progress
-            className="h-full bg-zinc-700"
+            className="h-1 bg-zinc-700"
             progressColor="bg-gradient-to-r from-purple-500 to-blue-500"
-            style={{ width: `${internationalData.visaSupport}%` }}
+            value={internationalData.visaSupport} 
           />
         </div>
         <div className="text-xs text-white/60">

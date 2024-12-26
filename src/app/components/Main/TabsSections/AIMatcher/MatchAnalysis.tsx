@@ -1,193 +1,265 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { BsSearch, BsPlus, BsX, BsCheckCircle, BsXCircle, BsCircle } from "react-icons/bs";
+import {
+  RadarChart,
+  PolarGrid,
+  PolarAngleAxis,
+  PolarRadiusAxis,
+  Radar,
+  ResponsiveContainer,
+  Legend
+} from "recharts";
 
-interface UniversityMatch {
+interface MatchFactor {
   name: string;
-  academics: number;
-  culture: number;
-  location: number;
-  totalMatch: number;
-  exceeds: string[];
-  meets: string[];
-  fallsBelow: string[];
+  weight: number;
+  description: string;
 }
 
-const universities: UniversityMatch[] = [
+interface University {
+  id: string;
+  name: string;
+  location: string;
+  overallMatch: number;
+  factors: {
+    [key: string]: number;
+  };
+  studentProfile: {
+    avgGPA: number;
+    avgSAT: number;
+    acceptanceRate: string;
+  };
+}
+
+const matchFactors: MatchFactor[] = [
+  { name: "Academic", weight: 35, description: "Match with academic requirements and programs" },
+  { name: "Cultural", weight: 20, description: "Campus culture and student life alignment" },
+  { name: "Location", weight: 15, description: "Geographic and environmental preferences" },
+  { name: "Financial", weight: 15, description: "Cost and financial aid compatibility" },
+  { name: "Career", weight: 15, description: "Career outcomes and opportunities" },
+];
+
+const universities: University[] = [
   {
-    name: "University of Oxford",
-    academics: 95,
-    culture: 85,
-    location: 80,
-    totalMatch: 87,
-    exceeds: ["GPA", "Extracurriculars"],
-    meets: ["SAT Scores"],
-    fallsBelow: ["Community Service"],
-  },
-  {
-    name: "MIT",
-    academics: 98,
-    culture: 75,
-    location: 70,
-    totalMatch: 81,
-    exceeds: ["Math Skills", "Programming Experience"],
-    meets: ["Science Projects"],
-    fallsBelow: ["Leadership Experience"],
-  },
-  {
+    id: "1",
     name: "Stanford University",
-    academics: 90,
-    culture: 88,
-    location: 85,
-    totalMatch: 86,
-    exceeds: ["Entrepreneurial Spirit"],
-    meets: ["Public Speaking"],
-    fallsBelow: ["Volunteer Work"],
+    location: "Stanford, CA",
+    overallMatch: 92,
+    factors: {
+      Academic: 95,
+      Cultural: 88,
+      Location: 90,
+      Financial: 85,
+      Career: 98
+    },
+    studentProfile: {
+      avgGPA: 3.96,
+      avgSAT: 1440,
+      acceptanceRate: "4%"
+    }
   },
+  {
+    id: "2",
+    name: "MIT",
+    location: "Cambridge, MA",
+    overallMatch: 89,
+    factors: {
+      Academic: 92,
+      Cultural: 85,
+      Location: 82,
+      Financial: 88,
+      Career: 96
+    },
+    studentProfile: {
+      avgGPA: 4.0,
+      avgSAT: 1500,
+      acceptanceRate: "7%"
+    }
+  },
+  {
+    id: "3",
+    name: "UC Berkeley",
+    location: "Berkeley, CA",
+    overallMatch: 87,
+    factors: {
+      Academic: 88,
+      Cultural: 92,
+      Location: 85,
+      Financial: 90,
+      Career: 89
+    },
+    studentProfile: {
+      avgGPA: 3.89,
+      avgSAT: 1415,
+      acceptanceRate: "14%"
+    }
+  }
 ];
 
 const MatchAnalysis: React.FC<React.HTMLProps<HTMLDivElement>> = ({
   ...divProps
 }) => {
-  const [selectedUniversities, setSelectedUniversities] = useState<string[]>(
-    [],
-  );
-  const [importance, setImportance] = useState({
-    academics: 1,
-    culture: 1,
-    location: 1,
-  });
+  const [selectedUniversities, setSelectedUniversities] = useState<University[]>([universities[0]]);
+  const [searchTerm, setSearchTerm] = useState("");
 
-  const toggleSelection = (name: string) => {
-    setSelectedUniversities((prev) => {
-      if (prev.includes(name)) {
-        return prev.filter((uni) => uni !== name);
-      }
-      if (prev.length < 3) {
-        return [...prev, name];
-      }
-      return prev;
-    });
+  const addUniversity = (university: University) => {
+    if (selectedUniversities.length < 3 && !selectedUniversities.find(u => u.id === university.id)) {
+      setSelectedUniversities([...selectedUniversities, university]);
+    }
   };
 
-  const calculateAdjustedMatch = (uni: UniversityMatch) => {
-    const totalWeight = Object.values(importance).reduce(
-      (sum, weight) => sum + weight,
-      0,
-    );
-    const weightedMatch =
-      (uni.academics * importance.academics +
-        uni.culture * importance.culture +
-        uni.location * importance.location) /
-      totalWeight;
-    return Math.round(weightedMatch);
+  const removeUniversity = (universityId: string) => {
+    setSelectedUniversities(selectedUniversities.filter(u => u.id !== universityId));
+  };
+
+  const getChartData = () => {
+    return matchFactors.map(factor => ({
+      factor: factor.name,
+      ...selectedUniversities.reduce((acc, uni) => ({
+        ...acc,
+        [uni.name]: uni.factors[factor.name]
+      }), {})
+    }));
+  };
+
+  const getMatchColor = (score: number) => {
+    if (score >= 90) return "text-green-400";
+    if (score >= 80) return "text-blue-400";
+    return "text-purple-400";
   };
 
   return (
     <div
       {...divProps}
-      className="space-y-2 w-full h-full max-w-3xl mx-auto rounded-2xl p-6 border border-white/5 bg-white/[0.01]"
+      className="space-y-6 w-full rounded-2xl p-6 border border-white/5 bg-white/[0.01]"
     >
-      <div className="flex justify-between items-start mb-2">
-        <h2 className="text-sm md:text-base lg:text-lg font-semibold">
-          Side-by-Side University Match Analysis
+      <div className="flex items-center justify-between">
+        <h2 className="text-lg font-semibold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+          Match Analysis
         </h2>
+        <div className="relative w-64">
+          <input
+            type="text"
+            placeholder="Search universities..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-2 pl-10 focus:outline-none focus:border-purple-500 text-xs"
+          />
+          <BsSearch className="absolute left-3 top-1/2 -translate-y-1/2 text-white/40" />
+        </div>
       </div>
 
-      <div className="grid grid-cols-3 gap-4">
-        {universities.map((uni) => (
-          <div
-            key={uni.name}
-            className={`p-4 border rounded-xl transition-all cursor-pointer ${selectedUniversities.includes(uni.name)
-                ? "bg-purple-500/20 border-purple-500"
-                : "bg-white/[0.05] border-white/10"
-              }`}
-            onClick={() => toggleSelection(uni.name)}
-          >
-            <h3 className="text-base font-medium text-white/90">{uni.name}</h3>
-            <p className="text-sm text-white/60">
-              Total Match: {calculateAdjustedMatch(uni)}%
-            </p>
-            <motion.div
-              className="mt-2 w-full bg-white/10 rounded-full h-2 overflow-hidden"
-              animate={{ width: `${uni.totalMatch}%` }}
-            >
-              <div
-                className="h-full bg-gradient-to-r from-purple-500 to-blue-500"
-                style={{ width: `${calculateAdjustedMatch(uni)}%` }}
-              />
-            </motion.div>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="space-y-4">
+          <div className="flex items-center justify-between">
+            <h3 className="text-sm font-medium text-white/80">Selected Universities</h3>
+            <span className="text-xs text-white/60">
+              {selectedUniversities.length}/3 Selected
+            </span>
           </div>
-        ))}
-      </div>
 
-      {selectedUniversities.length > 0 && (
-        <div className="p-4 bg-white/[0.05] border border-white/10 rounded-xl">
-          <h3 className="text-base font-medium mb-4 text-white/90">
-            Selected Universities
-          </h3>
-          <div className="grid grid-cols-3 gap-4">
-            {selectedUniversities.map((name) => {
-              const uni = universities.find((u) => u.name === name)!;
-              return (
-                <div key={uni.name} className="space-y-4">
-                  <h4 className="text-sm font-semibold text-white/80">
-                    {uni.name}
-                  </h4>
-                  <p className="text-sm text-white/70">
-                    Academics: {uni.academics}%
-                  </p>
-                  <p className="text-sm text-white/70">
-                    Culture: {uni.culture}%
-                  </p>
-                  <p className="text-sm text-white/70">
-                    Location: {uni.location}%
-                  </p>
-                  <p className="text-sm text-white/70">
-                    Exceeds: {uni.exceeds.join(", ")}
-                  </p>
-                  <p className="text-sm text-white/70">
-                    Meets: {uni.meets.join(", ")}
-                  </p>
-                  <p className="text-sm text-white/70">
-                    Falls Below: {uni.fallsBelow.join(", ")}
-                  </p>
+          <div className="space-y-3">
+            {selectedUniversities.map((uni) => (
+              <div
+                key={uni.id}
+                className="bg-white/5 p-4 rounded-xl border border-white/10 hover:border-purple-500/50 transition-colors"
+              >
+                <div className="flex justify-between items-start">
+                  <div>
+                    <h4 className="text-sm text-white/90">{uni.name}</h4>
+                    <p className="text-xs text-white/60">{uni.location}</p>
+                  </div>
+                  <div className="flex gap-2 items-center">
+                    <span className={`text-lg font-medium ${getMatchColor(uni.overallMatch)}`}>
+                      {uni.overallMatch}%
+                    </span>
+                    <button
+                      onClick={() => removeUniversity(uni.id)}
+                      className="p-1 hover:bg-white/10 rounded-full transition-colors"
+                    >
+                      <BsX className="text-white/60" />
+                    </button>
+                  </div>
                 </div>
-              );
-            })}
+
+                <div className="mt-3 grid grid-cols-3 gap-2 text-xs">
+                  <div className="bg-white/5 p-2 rounded-lg">
+                    <div className="text-white/60">Avg GPA</div>
+                    <div className="text-white/90">{uni.studentProfile.avgGPA}</div>
+                  </div>
+                  <div className="bg-white/5 p-2 rounded-lg">
+                    <div className="text-white/60">Avg SAT</div>
+                    <div className="text-white/90">{uni.studentProfile.avgSAT}</div>
+                  </div>
+                  <div className="bg-white/5 p-2 rounded-lg">
+                    <div className="text-white/60">Accept Rate</div>
+                    <div className="text-white/90">{uni.studentProfile.acceptanceRate}</div>
+                  </div>
+                </div>
+              </div>
+            ))}
+
+            {selectedUniversities.length < 3 && (
+              <button
+                className="w-full p-4 rounded-xl border border-dashed border-white/20 hover:border-purple-500/50 
+                          text-white/40 hover:text-purple-400 transition-colors flex items-center justify-center gap-2"
+                onClick={() => {
+                  const unselectedUni = universities.find(u => !selectedUniversities.find(su => su.id === u.id));
+                  if (unselectedUni) addUniversity(unselectedUni);
+                }}
+              >
+                <BsPlus className="text-lg" />
+                Add University
+              </button>
+            )}
           </div>
         </div>
-      )}
 
-      <div className="p-4 bg-white/[0.05] border border-white/10 rounded-xl">
-        <h3 className="text-base font-medium mb-4 text-white/90">
-          Adjust Match Criteria
-        </h3>
-        <div className="grid grid-cols-3 gap-4">
-          {Object.entries(importance).map(([key, value]) => (
-            <div key={key} className="space-y-2">
-              <label
-                className="text-sm font-medium text-white/80 capitalize"
-                htmlFor={key}
-              >
-                {key}
-              </label>
-              <input
-                id={key}
-                type="range"
-                min="1"
-                max="5"
-                value={value}
-                onChange={(e) =>
-                  setImportance({
-                    ...importance,
-                    [key]: parseInt(e.target.value, 10),
-                  })
-                }
-                className="w-full"
-              />
-              <p className="text-sm text-white/70">Weight: {value}</p>
+        <div className="bg-white/5 p-4 rounded-xl border border-white/10">
+          <h3 className="text-sm font-medium text-white/80 mb-4">Match Comparison</h3>
+          <div className="h-[400px]">
+            <ResponsiveContainer width="100%" height="100%">
+              <RadarChart data={getChartData()}>
+                <PolarGrid stroke="rgba(255,255,255,0.1)" />
+                <PolarAngleAxis
+                  dataKey="factor"
+                  tick={{ fill: "rgba(255,255,255,0.6)", fontSize: 12 }}
+                />
+                <PolarRadiusAxis stroke="rgba(255,255,255,0.1)" tick={{ fill: "rgba(255,255,255,0.6)" }} />
+                {selectedUniversities.map((uni, index) => (
+                  <Radar
+                    key={uni.id}
+                    name={uni.name}
+                    dataKey={uni.name}
+                    stroke={index === 0 ? "#818cf8" : index === 1 ? "#34d399" : "#f472b6"}
+                    fill={index === 0 ? "#818cf8" : index === 1 ? "#34d399" : "#f472b6"}
+                    fillOpacity={0.1}
+                  />
+                ))}
+                <Legend />
+              </RadarChart>
+            </ResponsiveContainer>
+          </div>
+        </div>
+      </div>
+
+      <div className="space-y-4">
+        <h3 className="text-sm font-medium text-white/80">Match Factors</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {matchFactors.map((factor) => (
+            <div
+              key={factor.name}
+              className="bg-white/5 p-4 rounded-xl border border-white/10"
+            >
+              <div className="flex justify-between items-start mb-2">
+                <span className="text-sm text-white/90">{factor.name}</span>
+                <span className="text-xs px-2 py-1 rounded-lg bg-purple-500/20 text-purple-400">
+                  {factor.weight}%
+                </span>
+              </div>
+              <p className="text-xs text-white/60">{factor.description}</p>
             </div>
           ))}
         </div>

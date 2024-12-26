@@ -12,6 +12,46 @@ import {
   ResponsiveContainer
 } from "recharts";
 
+interface AcademicMetric {
+  subject: string;
+  grade: string;
+  level: string;
+  strength: number;
+  history: {
+    term: string;
+    grade: number;
+  }[];
+}
+
+interface Activity {
+  name: string;
+  role: string;
+  duration: string;
+  hours: number;
+  impact: string;
+}
+
+interface Interest {
+  field: string;
+  projects: string[];
+  relatedCourses: string[];
+}
+
+interface StudentData {
+  name: string;
+  grade: number;
+  gpa: number;
+  academicMetrics: AcademicMetric[];
+  activities: Activity[];
+  interests: Interest[];
+  achievements: {
+    title: string;
+    type: string;
+    description: string;
+    date: string;
+  }[];
+}
+
 const studentData: StudentData = {
   name: "Alex Thompson",
   grade: 11,
@@ -161,11 +201,10 @@ const StudentProfileOverview: React.FC<React.HTMLProps<HTMLDivElement>> = ({
             <button
               key={metric.subject}
               onClick={() => setSelectedSubject(metric)}
-              className={`px-3 py-1.5 rounded-lg text-xs whitespace-nowrap ${
-                selectedSubject.subject === metric.subject
-                  ? "bg-purple-500/20 text-purple-400 border border-purple-500/50"
-                  : "bg-white/5 text-white/60 hover:bg-white/10 border border-white/10"
-              }`}
+              className={`px-3 py-1.5 rounded-lg text-xs whitespace-nowrap ${selectedSubject.subject === metric.subject
+                ? "bg-purple-500/20 text-purple-400 border border-purple-500/50"
+                : "bg-white/5 text-white/60 hover:bg-white/10 border border-white/10"
+                }`}
             >
               {metric.subject}
             </button>

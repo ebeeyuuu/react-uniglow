@@ -116,7 +116,13 @@ const Page = () => {
   return (
     <ContextMenu items={contextMenuItems}>
       <MainLayout className="bg-[#0a0a0a]" navItems={navigationItems}>
-        {isTabsMode ? <TabsMode /> : <BentoBox />}
+        {isTabsMode ? (
+          <TabsMode />
+        ) : (
+          <div className="w-full h-full flex justify-center items-center">
+            <BentoBox />
+          </div>
+        )}
       </MainLayout>
     </ContextMenu>
   );

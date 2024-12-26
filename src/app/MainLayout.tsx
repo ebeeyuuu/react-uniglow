@@ -25,7 +25,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
 }) => {
   return (
     <div className={`flex h-screen w-full relative overflow-auto ${className}`}>
-      <div className={`flex-grow flex items-center justify-center`}>
+      <div className={`flex-grow flex justify-center w-full h-full`}>
         {children}
       </div>
       {includeNavBar && (

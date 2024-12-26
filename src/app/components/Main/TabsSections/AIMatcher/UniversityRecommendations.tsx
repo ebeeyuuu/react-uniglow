@@ -27,7 +27,10 @@ const universities: University[] = [
       popularPrograms: ["Law", "Medicine", "Philosophy"],
       tags: ["Historical", "Prestigious", "Research-Driven"],
       notableAlumni: ["Stephen Hawking", "Oscar Wilde"],
-      uniqueFeatures: ["Oldest university in the English-speaking world", "Renowned tutorial system"],
+      uniqueFeatures: [
+        "Oldest university in the English-speaking world",
+        "Renowned tutorial system",
+      ],
     },
   },
   {
@@ -40,7 +43,10 @@ const universities: University[] = [
       popularPrograms: ["Computer Science", "Engineering", "Mathematics"],
       tags: ["Innovative", "Tech-Focused", "Elite"],
       notableAlumni: ["Kofi Annan", "Buzz Aldrin"],
-      uniqueFeatures: ["Strong entrepreneurial culture", "Cutting-edge research labs"],
+      uniqueFeatures: [
+        "Strong entrepreneurial culture",
+        "Cutting-edge research labs",
+      ],
     },
   },
   {
@@ -63,22 +69,29 @@ const UniversityRecommendations: React.FC<React.HTMLProps<HTMLDivElement>> = ({
 }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [expanded, setExpanded] = useState<string | null>(universities[0].name);
-  const [selectedUniversities, setSelectedUniversities] = useState<string[]>([]);
+  const [selectedUniversities, setSelectedUniversities] = useState<string[]>(
+    [],
+  );
 
   const filteredUniversities = universities.filter(
     (uni) =>
       uni.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      uni.location.toLowerCase().includes(searchTerm.toLowerCase())
+      uni.location.toLowerCase().includes(searchTerm.toLowerCase()),
   );
 
   const toggleSelection = (name: string) => {
     setSelectedUniversities((prev) =>
-      prev.includes(name) ? prev.filter((uni) => uni !== name) : [...prev, name]
+      prev.includes(name)
+        ? prev.filter((uni) => uni !== name)
+        : [...prev, name],
     );
   };
 
   useEffect(() => {
-    if (filteredUniversities.length > 0 && !filteredUniversities.some(u => u.name === expanded)) {
+    if (
+      filteredUniversities.length > 0 &&
+      !filteredUniversities.some((u) => u.name === expanded)
+    ) {
       setExpanded(filteredUniversities[0].name);
     }
   }, [filteredUniversities, expanded]);
@@ -115,19 +128,17 @@ const UniversityRecommendations: React.FC<React.HTMLProps<HTMLDivElement>> = ({
                 <h3 className="text-base font-medium text-white/90 flex items-center gap-2">
                   {uni.name}
                   <button
-                    className={`p-0.5 rounded-full border transition-all mb-0.5 ${
-                      selectedUniversities.includes(uni.name)
-                        ? "bg-purple-500 border-purple-600"
-                        : "bg-white/5 border-white/10 hover:bg-white/10"
-                    }`}
+                    className={`p-0.5 rounded-full border transition-all mb-0.5 ${selectedUniversities.includes(uni.name)
+                      ? "bg-purple-500 border-purple-600"
+                      : "bg-white/5 border-white/10 hover:bg-white/10"
+                      }`}
                     onClick={() => toggleSelection(uni.name)}
                   >
                     <BsCheck
-                      className={`text-sm transition-all ${
-                        selectedUniversities.includes(uni.name)
-                          ? "text-white"
-                          : "text-white/60"
-                      }`}
+                      className={`text-sm transition-all ${selectedUniversities.includes(uni.name)
+                        ? "text-white"
+                        : "text-white/60"
+                        }`}
                     />
                   </button>
                 </h3>
@@ -155,7 +166,9 @@ const UniversityRecommendations: React.FC<React.HTMLProps<HTMLDivElement>> = ({
               <div className="mt-4 space-y-4">
                 <div className="space-y-2">
                   <h4 className="text-sm font-normal text-white/80">Details</h4>
-                  <p className="text-xs text-white/70">Tuition: {uni.stats.tuition}</p>
+                  <p className="text-xs text-white/70">
+                    Tuition: {uni.stats.tuition}
+                  </p>
                   <p className="text-xs text-white/70">
                     Acceptance Rate: {uni.stats.acceptanceRate}
                   </p>
@@ -179,7 +192,9 @@ const UniversityRecommendations: React.FC<React.HTMLProps<HTMLDivElement>> = ({
                 </div>
 
                 <div className="space-y-2">
-                  <h4 className="text-sm font-normal text-white/80">Unique Features</h4>
+                  <h4 className="text-sm font-normal text-white/80">
+                    Unique Features
+                  </h4>
                   <ul className="list-disc list-inside text-xs text-white/70">
                     {uni.stats.uniqueFeatures.map((feature, idx) => (
                       <li key={idx}>{feature}</li>
@@ -188,7 +203,9 @@ const UniversityRecommendations: React.FC<React.HTMLProps<HTMLDivElement>> = ({
                 </div>
 
                 <div className="space-y-2">
-                  <h4 className="text-sm font-normal text-white/80">Notable Alumni</h4>
+                  <h4 className="text-sm font-normal text-white/80">
+                    Notable Alumni
+                  </h4>
                   <ul className="list-disc list-inside text-xs text-white/70">
                     {uni.stats.notableAlumni.map((alumnus, idx) => (
                       <li key={idx}>{alumnus}</li>

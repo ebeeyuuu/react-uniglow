@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { BsSearch, BsPlus, BsX, BsCheckCircle, BsXCircle, BsCircle } from "react-icons/bs";
+import { BsSearch, BsPlus, BsX } from "react-icons/bs";
 import {
   RadarChart,
   PolarGrid,
@@ -135,23 +135,23 @@ const MatchAnalysis: React.FC<React.HTMLProps<HTMLDivElement>> = ({
       {...divProps}
       className="space-y-6 w-full rounded-2xl p-6 border border-white/5 bg-white/[0.01]"
     >
-      <div className="flex items-center justify-between">
-        <h2 className="text-lg font-semibold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+      <div className="flex flex-col gap-2">
+        <h2 className="text-sm md:text-base lg:text-lg font-semibold">
           Match Analysis
         </h2>
-        <div className="relative w-64">
+        <div className="relative">
           <input
             type="text"
             placeholder="Search universities..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-2 pl-10 focus:outline-none focus:border-purple-500 text-xs"
+            className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-2 pl-10 text-sm focus:outline-none focus:border-purple-500"
           />
           <BsSearch className="absolute left-3 top-1/2 -translate-y-1/2 text-white/40" />
         </div>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 gap-6">
         <div className="space-y-4">
           <div className="flex items-center justify-between">
             <h3 className="text-sm font-medium text-white/80">Selected Universities</h3>
@@ -242,26 +242,6 @@ const MatchAnalysis: React.FC<React.HTMLProps<HTMLDivElement>> = ({
               </RadarChart>
             </ResponsiveContainer>
           </div>
-        </div>
-      </div>
-
-      <div className="space-y-4">
-        <h3 className="text-sm font-medium text-white/80">Match Factors</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {matchFactors.map((factor) => (
-            <div
-              key={factor.name}
-              className="bg-white/5 p-4 rounded-xl border border-white/10"
-            >
-              <div className="flex justify-between items-start mb-2">
-                <span className="text-sm text-white/90">{factor.name}</span>
-                <span className="text-xs px-2 py-1 rounded-lg bg-purple-500/20 text-purple-400">
-                  {factor.weight}%
-                </span>
-              </div>
-              <p className="text-xs text-white/60">{factor.description}</p>
-            </div>
-          ))}
         </div>
       </div>
     </div>

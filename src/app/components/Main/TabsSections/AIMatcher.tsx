@@ -3,7 +3,8 @@ import { createSwapy } from "swapy";
 import StudentProfileOverview from "./AIMatcher/StudentProfileOverview";
 import UniversityRecommendations from "./AIMatcher/UniversityRecommendations";
 import MatchAnalysis from "./AIMatcher/MatchAnalysis";
-import FinancialAidCalculator from "./AIMatcher/FinancialAidCalculator";
+import AdmissionFitScore from "./AIMatcher/AdmissionFitScore";
+import CampusPreferences from "./AIMatcher/CampusPreferences";
 
 const UniversityExplorer = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -49,18 +50,13 @@ const UniversityExplorer = () => {
           className="col-span-1 max-[640px]:col-span-2 row-span-2"
           data-swapy-slot="d"
         >
-          <FinancialAidCalculator data-swapy-item="d" />
+          <AdmissionFitScore data-swapy-item="d" />
         </div>
         <div
           className="col-span-1 max-[640px]:col-span-2 row-span-2"
           data-swapy-slot="e"
         >
-          <div
-            data-swapy-item="e"
-            className="w-full h-full rounded-2xl p-6 border border-white/5 bg-white/[0.01] overflow-scroll scrollbar-hide"
-          >
-            05
-          </div>
+          <CampusPreferences data-swapy-item="e" />
         </div>
       </div>
     </div>

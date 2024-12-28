@@ -133,7 +133,7 @@ const MatchAnalysis: React.FC<React.HTMLProps<HTMLDivElement>> = ({
   return (
     <div
       {...divProps}
-      className="space-y-6 w-full rounded-2xl p-6 border border-white/5 bg-white/[0.01]"
+      className="space-y-6 w-full h-full rounded-2xl p-6 border border-white/5 bg-white/[0.01]"
     >
       <div className="flex flex-col gap-2">
         <h2 className="text-sm md:text-base lg:text-lg font-semibold">

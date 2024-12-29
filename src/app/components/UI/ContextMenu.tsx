@@ -20,13 +20,28 @@ export const ContextMenu: React.FC<ContextMenuProps> = ({ children, items }) => 
   };
 
   const handleKeyDown = useCallback((e: KeyboardEvent) => {
+    const isSuper = e.metaKey || e.ctrlKey;
+
     items.forEach((item) => {
-      const shortcut = item.shortcut?.toLowerCase().split('+').map((key) => key.trim());
-      if (shortcut) {
-        if (shortcut.includes(e.key.toLowerCase())) {
-          e.preventDefault();
-          item.onClick?.();
-        }
+      if (!item.shortcut) return;
+
+      const parts = item.shortcut.toLowerCase().split('+').map(k => k.trim());
+
+      const requiresSuper = parts.includes('super');
+      if (requiresSuper !== isSuper) return;
+
+      const requiresAlt = parts.includes('alt');
+      if (requiresAlt !== e.altKey) return;
+
+      const requiresShift = parts.includes('shift');
+      if (requiresShift !== e.shiftKey) return;
+
+      const targetKey = parts[parts.length - 1];
+      const pressedKey = e.key.toLowerCase();
+
+      if (targetKey === pressedKey) {
+        e.preventDefault();
+        item.onClick?.();
       }
     });
   }, [items]);
@@ -39,6 +54,7 @@ export const ContextMenu: React.FC<ContextMenuProps> = ({ children, items }) => 
       document.removeEventListener('keydown', handleKeyDown);
     };
   }, [isOpen, items, handleKeyDown]);
+
   return (
     <div onContextMenu={handleContextMenu} className="min-h-screen bg-black">
       {children}

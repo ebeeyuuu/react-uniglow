@@ -24,14 +24,26 @@ const getSuperKeyLabel = (): string => {
 const useKeyboardShortcut = (item: ContextMenuItemProps['item']) => {
   const handleKeyPress = useCallback(
     (e: KeyboardEvent) => {
-      const isSuper = e.metaKey || e.ctrlKey || e.key === "Meta";
-      if (!isSuper) return;
+      if (!item.shortcut) return;
 
-      const shortcut = item.shortcut?.toLowerCase().split("+").map(k => k.trim());
-      if (!shortcut) return;
+      const parts = item.shortcut.toLowerCase().split("+").map(k => k.trim());
+      
+      const requiresSuper = parts.includes("super");
+      const superPressed = e.metaKey || e.ctrlKey;
+      if (requiresSuper !== superPressed) return;
 
-      const keyPressed = e.key.toLowerCase();
-      if (shortcut.includes(keyPressed)) {
+      const requiresAlt = parts.includes("alt");
+      const altPressed = e.altKey;
+      if (requiresAlt !== altPressed) return;
+
+      const requiresShift = parts.includes("shift");
+      const shiftPressed = e.shiftKey;
+      if (requiresShift !== shiftPressed) return;
+
+      const targetKey = parts[parts.length - 1];
+      const pressedKey = e.key.toLowerCase();
+
+      if (targetKey === pressedKey) {
         e.preventDefault();
         item.onClick?.();
       }
@@ -63,7 +75,6 @@ export const ContextMenuItem: React.FC<ContextMenuItemProps> = ({ item }) => {
     Super: <span className="font-semibold text-[1em]">{getSuperKeyLabel()}</span>,
     Option: <span className="font-semibold text-[1em]">⌥</span>,
     Tab: <span className="font-semibold text-[1em]">⇥</span>,
-    Space: <span className="font-semibold text-[1em]">␣</span>,
     Enter: <span className="font-semibold text-[1em]">↵</span>,
     Return: <span className="font-semibold text-[1em]">↩</span>,
     Up: <MdOutlineKeyboardArrowUp className="h-[1em] w-[1em]" />,

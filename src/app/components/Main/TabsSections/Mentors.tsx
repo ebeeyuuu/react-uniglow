@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { createSwapy } from "swapy";
 import PersonaDevelopmentHub from "./Mentors/PersonaDevelopmentHub";
 import MentorConnectionHub from "./Mentors/MentorConnectionHub";
+import MentorGuidanceCenter from "./Mentors/MentorGuidanceCenter";
 
 const UniversityExplorer = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -41,12 +42,7 @@ const UniversityExplorer = () => {
           className="col-span-2 max-[640px]:row-span-1 lg:row-span-1 xl:row-span-2"
           data-swapy-slot="c"
         >
-          <div
-            data-swapy-item="c"
-            className="w-full h-full rounded-2xl p-6 border border-white/5 bg-white/[0.01] overflow-scroll scrollbar-hide"
-          >
-            03
-          </div>
+          <MentorGuidanceCenter data-swapy-item="c" />
         </div>
         <div
           className="col-span-1 max-[640px]:col-span-2 row-span-1"

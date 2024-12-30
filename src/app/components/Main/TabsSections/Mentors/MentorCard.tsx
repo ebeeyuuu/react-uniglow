@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
 
 interface Mentor {
   id: string;
@@ -9,7 +9,6 @@ interface Mentor {
   expertise: string[];
   status: "online" | "offline" | "in-session";
   lastActive?: string;
-  avatarUrl: string;
 }
 
 const formatLastActive = (timestamp: string): string => {
@@ -26,8 +25,10 @@ const formatLastActive = (timestamp: string): string => {
 const MentorCard: React.FC<{
   mentor: Mentor;
   isSelected: boolean;
+  isExpanded: boolean;
   onClick: () => void;
-}> = ({ mentor, isSelected, onClick }) => {
+  onHover: () => void;
+}> = ({ mentor, isSelected, isExpanded, onClick, onHover }) => {
   const getStatusColor = (status: Mentor["status"]) => {
     switch (status) {
       case "online":
@@ -40,52 +41,84 @@ const MentorCard: React.FC<{
   };
 
   return (
-    <button
+    <motion.button
       onClick={onClick}
-      className={`w-full p-3 rounded-lg text-left transition-colors ${isSelected
-          ? "bg-purple-600/20 border border-purple-500/50"
-          : "hover:bg-white/5"
-        }`}
+      onMouseEnter={onHover}
+      layout
+      className={`w-full rounded-lg text-left transition-colors ${
+        isSelected
+          ? "bg-purple-600/10 border border-purple-500/20"
+          : "bg-white/[0.01] border border-white/[0.1] hover:bg-white/5"
+      }`}
     >
-      <div className="flex items-center gap-3">
-        <div className="relative">
-          <Image
-            src={mentor.avatarUrl}
-            alt={mentor.name}
-            fill
-            className="w-10 h-10 rounded-full object-cover"
-          />
-          <div
-            className={`absolute bottom-0 right-0 w-3 h-3 rounded-full border-2 border-zinc-900 ${getStatusColor(
-              mentor.status,
-            )}`}
-          />
-        </div>
-
-        <div className="flex-1 min-w-0">
-          <div className="flex items-center justify-between">
-            <h3 className="font-medium truncate">{mentor.name}</h3>
-            {mentor.lastActive && mentor.status === "offline" && (
-              <span className="text-xs text-white/40">
-                {formatLastActive(mentor.lastActive)}
-              </span>
-            )}
+      <motion.div
+        className={`${isExpanded ? "px-7 py-5" : "px-7 py-1.5"} smooth-animation`}
+        layout
+      >
+        <motion.div className="flex items-center gap-3" layout>
+          <div className="flex-1 min-w-0">
+            <div className="flex items-center justify-between">
+              <h3 className="font-medium text-white/90 truncate">
+                {mentor.name}
+              </h3>
+              <div className="relative">
+                <div
+                  className={`w-3 h-3 rounded-full border-2 border-zinc-900 ${getStatusColor(
+                    mentor.status,
+                  )}`}
+                />
+              </div>
+              {mentor.lastActive &&
+                mentor.status === "offline" &&
+                isExpanded && (
+                  <motion.span
+                    className="text-xs text-white/40"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                  >
+                    {formatLastActive(mentor.lastActive)}
+                  </motion.span>
+                )}
+            </div>
+            <AnimatePresence>
+              {isExpanded && (
+                <motion.p
+                  className="text-sm text-white/60 truncate"
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: "auto", opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  {mentor.role}
+                </motion.p>
+              )}
+            </AnimatePresence>
           </div>
-          <p className="text-sm text-white/60 truncate">{mentor.role}</p>
-        </div>
-      </div>
+        </motion.div>
 
-      <div className="mt-2 flex flex-wrap gap-1">
-        {mentor.expertise.map((skill) => (
-          <span
-            key={skill}
-            className="text-xs px-2 py-0.5 rounded-full bg-white/5 text-white/60"
-          >
-            {skill}
-          </span>
-        ))}
-      </div>
-    </button>
+        <AnimatePresence>
+          {isExpanded && (
+            <motion.div
+              className="mt-2 flex flex-wrap gap-1"
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "auto", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.2 }}
+            >
+              {mentor.expertise.map((skill) => (
+                <span
+                  key={skill}
+                  className="text-xs px-2 py-0.5 rounded-full bg-white/5 text-white/60"
+                >
+                  {skill}
+                </span>
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </motion.div>
+    </motion.button>
   );
 };
 

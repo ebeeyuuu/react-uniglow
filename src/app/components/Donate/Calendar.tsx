@@ -63,12 +63,12 @@ const Calendar = ({ onDateSelect, selectedDate }) => {
 
   return (
     <motion.div
-      className="w-full max-w-md mx-auto bg-black text-white p-6 rounded-lg shadow-lg border-2 border-white"
+      className="w-full max-w-md mx-auto flex flex-col justify-center items-center bg-black text-white p-6 rounded-lg shadow-lg"
       initial={{ width: "50%", opacity: 0 }}
       animate={{ width: "100%", opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="flex justify-between px-16 items-center mb-6">
+      <div className="flex w-full justify-between px-16 items-center mb-6">
         <button
           className="text-white scale-100 hover:scale-110"
           onClick={prevMonth}
@@ -86,7 +86,7 @@ const Calendar = ({ onDateSelect, selectedDate }) => {
         </button>
       </div>
       <motion.div
-        className="grid grid-cols-7 gap-2 mb-4"
+        className="grid grid-cols-7 gap-2 mb-4 w-full"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.3 }}
@@ -94,14 +94,14 @@ const Calendar = ({ onDateSelect, selectedDate }) => {
         {days.map((day) => (
           <div
             key={day}
-            className="text-center text-sm font-medium text-gray-400"
+            className="text-center text-xs font-medium text-gray-400"
           >
             {day}
           </div>
         ))}
       </motion.div>
       <motion.div
-        className="grid grid-cols-7 gap-2"
+        className="grid grid-cols-7 gap-2 w-full"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.3 }}
@@ -125,9 +125,12 @@ const Calendar = ({ onDateSelect, selectedDate }) => {
             <div
               key={day}
               className={`h-10 flex items-center justify-center aspect-square rounded-full text-sm ml-1.5 cursor-pointer transition-colors duration-300
-                  ${isSelected ? "bg-blue-500 text-white font-bold" :
-                  isToday && !isSelected ? "bg-white text-black font-bold" :
-                    "hover:bg-gray-800"}`}
+                  ${isSelected
+                  ? "bg-blue-500 text-white font-bold"
+                  : isToday && !isSelected
+                    ? "bg-white text-black font-bold"
+                    : "hover:bg-gray-800"
+                }`}
               onClick={() => handleDateSelect(day)}
             >
               {day}

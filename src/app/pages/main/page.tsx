@@ -101,7 +101,7 @@ const Page = () => {
         <BsColumns className="w-4 h-4" />
       ),
       onClick: toggleTabsMode,
-      shortcut: "Super+Alt+T",
+      shortcut: "Super+Ctrl+T",
     },
     { type: "separator" },
     {
@@ -109,7 +109,7 @@ const Page = () => {
       label: "Report an Issue",
       icon: <BsQuestionCircle className="w-4 h-4" />,
       onClick: () => console.log("Report an Issue"),
-      shortcut: "Super+Alt+I",
+      shortcut: "Super+Ctrl+I",
     },
   ];
 

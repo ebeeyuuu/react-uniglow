@@ -3,6 +3,7 @@ import { createSwapy } from "swapy";
 import PersonaDevelopmentHub from "./Mentors/PersonaDevelopmentHub";
 import MentorConnectionHub from "./Mentors/MentorConnectionHub";
 import MentorGuidanceCenter from "./Mentors/MentorGuidanceCenter";
+import FindAMentor from "./Mentors/FindAMentor";
 
 const UniversityExplorer = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -48,12 +49,7 @@ const UniversityExplorer = () => {
           className="col-span-1 max-[640px]:col-span-2 row-span-1"
           data-swapy-slot="d"
         >
-          <div
-            data-swapy-item="d"
-            className="w-full h-full rounded-2xl p-6 border border-white/5 bg-white/[0.01] overflow-scroll scrollbar-hide"
-          >
-            04
-          </div>
+          <FindAMentor data-swapy-item="d" />
         </div>
         <div
           className="col-span-1 max-[640px]:col-span-2 row-span-1"

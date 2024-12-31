@@ -22,7 +22,7 @@ const Modal: React.FC<ModalProps> = ({
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
       <div
         className={cn(
-          "bg-neutral-900 p-6 rounded-lg shadow-lg w-full max-w-lg text-white",
+          "relative bg-neutral-900 p-6 rounded-lg shadow-lg w-full max-w-lg text-white",
           className,
         )}
       >

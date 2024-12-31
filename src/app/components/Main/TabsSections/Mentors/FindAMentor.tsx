@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { BsSearch, BsChevronDown } from "react-icons/bs";
+import Modal, { useModal } from "@/app/components/UI/Modal";
 
 interface Mentor {
   name: string;
@@ -30,14 +31,6 @@ const mentors: Mentor[] = [
     availability: "Wed-Fri, 1pm-5pm",
     bio: "John has extensive experience in biomedical innovation and mentoring students in research-oriented fields.",
   },
-  {
-    name: "Sarah Lee",
-    expertise: ["Business Management", "Finance"],
-    university: "Harvard University",
-    experience: 12,
-    availability: "Tue-Thu, 9am-3pm",
-    bio: "Sarah has a strong background in business and finance, helping students secure spots at Ivy League schools.",
-  },
 ];
 
 const FindAMentor: React.FC<React.HTMLProps<HTMLDivElement>> = ({
@@ -45,6 +38,7 @@ const FindAMentor: React.FC<React.HTMLProps<HTMLDivElement>> = ({
 }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedMentor, setSelectedMentor] = useState<Mentor | null>(null);
+  const { isOpen, openModal, closeModal } = useModal();
 
   const filteredMentors = mentors.filter(
     (mentor) =>
@@ -53,6 +47,11 @@ const FindAMentor: React.FC<React.HTMLProps<HTMLDivElement>> = ({
         field.toLowerCase().includes(searchTerm.toLowerCase()),
       ),
   );
+
+  const handleMentorClick = (mentor: Mentor) => {
+    setSelectedMentor(mentor);
+    openModal();
+  };
 
   return (
     <div
@@ -78,7 +77,7 @@ const FindAMentor: React.FC<React.HTMLProps<HTMLDivElement>> = ({
           <motion.div
             key={mentor.name}
             className="bg-white/5 rounded-xl p-4 hover:bg-white/10 transition-colors cursor-pointer"
-            onClick={() => setSelectedMentor(mentor)}
+            onClick={() => handleMentorClick(mentor)}
             whileHover={{ scale: 1.02 }}
           >
             <div className="flex justify-between items-start">
@@ -106,15 +105,9 @@ const FindAMentor: React.FC<React.HTMLProps<HTMLDivElement>> = ({
         ))}
       </div>
 
-      {selectedMentor && (
-        <motion.div
-          className="absolute inset-0 bg-black/70 flex items-center justify-center z-50"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-        >
-          <div className="bg-white/10 rounded-xl p-6 w-3/4 max-w-lg text-white space-y-4">
-            <h3 className="text-lg font-semibold">{selectedMentor.name}</h3>
+      <Modal isOpen={isOpen} onClose={closeModal} title={selectedMentor?.name}>
+        {selectedMentor && (
+          <div className="space-y-4">
             <p className="text-sm">
               <strong>University:</strong> {selectedMentor.university}
             </p>
@@ -125,15 +118,9 @@ const FindAMentor: React.FC<React.HTMLProps<HTMLDivElement>> = ({
               <strong>Availability:</strong> {selectedMentor.availability}
             </p>
             <p className="text-sm">{selectedMentor.bio}</p>
-            <button
-              className="bg-purple-500 text-white px-4 py-2 rounded-lg mt-4"
-              onClick={() => setSelectedMentor(null)}
-            >
-              Close
-            </button>
           </div>
-        </motion.div>
-      )}
+        )}
+      </Modal>
     </div>
   );
 };

@@ -1,138 +1,110 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 interface GridBackgroundProps {
   className?: string;
   lineColor?: string;
   gridColor?: string;
   vignetteIntensity?: number;
+  gridSize?: number;
 }
 
 const GridBackground: React.FC<GridBackgroundProps> = ({
   className = '',
-  lineColor = 'rgba(255, 255, 255, 0.1)',
-  gridColor = 'rgba(255, 255, 255, 0.05)',
-  vignetteIntensity = 0.8
+  lineColor = 'rgba(99, 102, 241, 0.8)',
+  gridColor = 'rgba(255, 255, 255, 0.25)',
+  vignetteIntensity = 0.8,
+  gridSize = 32,
 }) => {
-  const paths = [
-    "M0,100 Q25,75 50,100 T100,100",
-    "M20,0 C60,40 40,60 20,100",
-    "M80,0 C40,40 60,60 80,100",
-  ];
+  const [path, setPath] = useState('');
+  const [pathLength, setPathLength] = useState(0);
+
+  useEffect(() => {
+    const generatePath = () => {
+      const steps = Math.ceil(window.innerWidth / gridSize) * 1.5;
+      const pathPoints: string[] = [];
+      let x = -gridSize * 2;
+      let y = window.innerHeight / 2;
+
+      for (let i = 0; i < steps; i++) {
+        const direction = Math.random() > 0.5 ? 1 : -1;
+        const newX = x + gridSize;
+        const newY = y + (direction * gridSize);
+        pathPoints.push(`L${newX},${newY}`);
+        x = newX;
+        y = newY;
+      }
+
+      return `M${-gridSize * 2},${window.innerHeight / 2} ${pathPoints.join(' ')}`;
+    };
+
+    const newPath = generatePath();
+    setPath(newPath);
+
+    const pathElement = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    pathElement.setAttribute('d', newPath);
+    setPathLength(pathElement.getTotalLength());
+  }, []);
 
   return (
-    <div
-      className={`absolute inset-0 overflow-hidden ${className}`}
-      aria-hidden="true"
-    >
-      <div 
+    <div className={`absolute inset-0 overflow-hidden ${className}`} aria-hidden="true">
+      <div
         className="absolute inset-0 z-10 pointer-events-none"
         style={{
-          background: `radial-gradient(
-            circle at center,
-            transparent 0%,
-            rgba(0, 0, 0, ${vignetteIntensity}) 100%
-          )`
+          background: `radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, ${vignetteIntensity}) 100%)`
         }}
       />
-
-      <svg
-        className="absolute inset-0 w-full h-full"
-        xmlns="http://www.w3.org/2000/svg"
-        preserveAspectRatio="xMidYMid slice"
-      >
+      <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
         <defs>
-          <pattern
-            id="grid"
-            width="32"
-            height="32"
-            patternUnits="userSpaceOnUse"
-          >
-            <path
-              d="M0 32 L32 0 Z"
-              strokeWidth="1"
-              stroke={gridColor}
-              fill="transparent"
-            />
-            <path
-              d="M32 32 L0 0 Z"
-              strokeWidth="1"
-              stroke={gridColor}
-              fill="transparent"
-            />
+          <pattern id="grid" width={gridSize} height={gridSize} patternUnits="userSpaceOnUse">
+            <path d={`M0 ${gridSize} L${gridSize} 0 Z`} strokeWidth="1" stroke={gridColor} fill="transparent" />
+            <path d={`M${gridSize} ${gridSize} L0 0 Z`} strokeWidth="1" stroke={gridColor} fill="transparent" />
           </pattern>
-
-          {paths.map((_, index) => (
-            <linearGradient
-              key={`gradient-${index}`}
-              id={`gradient-${index}`}
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop
-                offset="0%"
-                stopColor={lineColor}
-                stopOpacity="0"
-              />
-              <stop
-                offset="50%"
-                stopColor={lineColor}
-                stopOpacity="1"
-              />
-              <stop
-                offset="100%"
-                stopColor={lineColor}
-                stopOpacity="0"
-              />
-            </linearGradient>
-          ))}
-
-          {paths.map((path, index) => (
-            <path
-              key={`path-${index}`}
-              id={`motionPath-${index}`}
-              d={path}
-              stroke="none"
-              fill="none"
-            />
-          ))}
+          <linearGradient id="bluePurple" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stopColor="rgba(59, 130, 246, 0.7)" /> {/* blue-500 at 70% opacity */}
+            <stop offset="50%" stopColor="rgba(147, 51, 234, 0.7)" /> {/* purple-600 at 70% opacity */}
+            <stop offset="100%" stopColor="rgba(59, 130, 246, 0.7)" /> {/* blue-500 at 70% opacity */}
+          </linearGradient>
+          <filter id="glow">
+            <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+            <feMerge>
+              <feMergeNode in="coloredBlur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
         </defs>
-
-        <rect
-          width="100%"
-          height="100%"
-          fill="url(#grid)"
+        <rect width="100%" height="100%" fill="url(#grid)" />
+        <path
+          d={path}
+          stroke="url(#bluePurple)"
+          strokeWidth="3"
+          fill="none"
+          filter="url(#glow)"
+          className="moving-line"
+          style={{ 
+            strokeDasharray: `${pathLength}px`,
+            strokeDashoffset: `${pathLength}px`
+          }}
         />
-
-        <g>
-          {paths.map((_, index) => (
-            <g key={index} className="animate-[move_8s_ease-in-out_infinite]">
-              <circle
-                r="3"
-                fill={`url(#gradient-${index})`}
-                style={{
-                  filter: 'blur(3px)',
-                }}>
-                <animateMotion
-                  dur={`${6 + index * 2}s`}
-                  repeatCount="indefinite"
-                  path={paths[index]}
-                />
-              </circle>
-              <path
-                d={paths[index]}
-                stroke={`url(#gradient-${index})`}
-                strokeWidth="2"
-                fill="none"
-                strokeDasharray="5,5"
-                style={{
-                  filter: 'blur(1px)',
-                }}>
-              </path>
-            </g>
-          ))}
-        </g>
       </svg>
+      <style jsx>{`
+        .moving-line {
+          animation: drawLine 30s linear infinite;
+        }
+
+        @keyframes drawLine {
+          0% {
+            stroke-dashoffset: ${pathLength}px;
+          }
+          50% {
+            stroke-dashoffset: 0;
+          }
+          100% {
+            stroke-dashoffset: -${pathLength}px;
+          }
+        }
+      `}</style>
     </div>
   );
 };

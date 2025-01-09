@@ -33,14 +33,18 @@ const Hero = () => {
       className="relative min-h-[90vh] flex items-center justify-center"
     >
       <div className="absolute inset-0 z-0">
-<GridBackground 
-  lineColor="rgba(64, 164, 255, 0.2)"
-  gridColor="rgba(64, 164, 255, 0.1)"
-  vignetteIntensity={0.7}
-/>
+        <GridBackground
+          vignetteIntensity={0.7}
+        />
       </div>
+      <div
+        className="absolute inset-0 z-5 pointer-events-none"
+        style={{
+          background: `linear-gradient(to bottom, rgba(2, 2, 2, 0) 60%, #020202 100%)`,
+        }}
+      />
       <div className="relative z-10 max-w-4xl mx-auto px-4 py-20 flex flex-col items-center text-center">
-        <div className="inline-flex items-center gap-2 border border-white/20 bg-white/5 rounded-full mt-24 px-6 py-2 mb-10">
+        <div className="inline-flex items-center gap-2 border border-white/20 bg-zinc-900 rounded-full mt-24 px-6 py-2 mb-10">
           <BsStars className="w-4 h-4 text-purple-400" />
           <span className="text-sm font-medium bg-gradient-to-r from-purple-400 to-purple-200 bg-clip-text text-transparent">
             Your Academic Journey Starts Here

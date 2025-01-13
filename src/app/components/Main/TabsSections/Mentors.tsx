@@ -4,6 +4,7 @@ import PersonaDevelopmentHub from "./Mentors/PersonaDevelopmentHub";
 import MentorConnectionHub from "./Mentors/MentorConnectionHub";
 import MentorGuidanceCenter from "./Mentors/MentorGuidanceCenter";
 import FindAMentor from "./Mentors/FindAMentor";
+import ResourceLibrary from "./Mentors/ResourceLibrary";
 
 const UniversityExplorer = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -55,45 +56,7 @@ const UniversityExplorer = () => {
           className="col-span-1 max-[640px]:col-span-2 row-span-1"
           data-swapy-slot="e"
         >
-          <div
-            data-swapy-item="e"
-            className="w-full h-full rounded-2xl p-6 border border-white/5 bg-white/[0.01] overflow-scroll scrollbar-hide"
-          >
-            05
-          </div>
-        </div>
-        <div
-          className="col-span-1 max-[640px]:col-span-2 row-span-1"
-          data-swapy-slot="f"
-        >
-          <div
-            data-swapy-item="f"
-            className="w-full h-full rounded-2xl p-6 border border-white/5 bg-white/[0.01] overflow-scroll scrollbar-hide"
-          >
-            06
-          </div>
-        </div>
-        <div
-          className="col-span-1 max-[640px]:col-span-2 row-span-1"
-          data-swapy-slot="g"
-        >
-          <div
-            data-swapy-item="g"
-            className="w-full h-full rounded-2xl p-6 border border-white/5 bg-white/[0.01] overflow-scroll scrollbar-hide"
-          >
-            07
-          </div>
-        </div>
-        <div
-          className="col-span-2 lg:col-span-2 xl:col-span-1"
-          data-swapy-slot="h"
-        >
-          <div
-            data-swapy-item="h"
-            className="w-full h-full rounded-2xl p-6 border border-white/5 bg-white/[0.01] overflow-scroll scrollbar-hide"
-          >
-            08
-          </div>
+          <ResourceLibrary data-swapy-item="e" />
         </div>
       </div>
     </div>

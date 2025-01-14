@@ -45,7 +45,7 @@ const GridBackground: React.FC<GridBackgroundProps> = ({
     const pathElement = document.createElementNS('http://www.w3.org/2000/svg', 'path');
     pathElement.setAttribute('d', newPath);
     setPathLength(pathElement.getTotalLength());
-  }, []);
+  }, [gridSize]);
 
   return (
     <div className={`absolute inset-0 overflow-hidden ${className}`} aria-hidden="true">
@@ -67,10 +67,10 @@ const GridBackground: React.FC<GridBackgroundProps> = ({
             <stop offset="100%" stopColor="rgba(59, 130, 246, 0.7)" /> {/* blue-500 at 70% opacity */}
           </linearGradient>
           <filter id="glow">
-            <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+            <feGaussianBlur stdDeviation="2" result="coloredBlur" />
             <feMerge>
-              <feMergeNode in="coloredBlur"/>
-              <feMergeNode in="SourceGraphic"/>
+              <feMergeNode in="coloredBlur" />
+              <feMergeNode in="SourceGraphic" />
             </feMerge>
           </filter>
         </defs>
@@ -82,7 +82,7 @@ const GridBackground: React.FC<GridBackgroundProps> = ({
           fill="none"
           filter="url(#glow)"
           className="moving-line"
-          style={{ 
+          style={{
             strokeDasharray: `${pathLength}px`,
             strokeDashoffset: `${pathLength}px`
           }}

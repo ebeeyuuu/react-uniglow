@@ -4,7 +4,8 @@ import { BsChevronDown } from "react-icons/bs";
 interface DropdownMenuProps {
   options: { value: string; label: string }[];
   placeholder: string;
-  onSelect: (value: string) => void;
+  onSelect: (value: any) => void;
+  hideIcon?: boolean;
   className?: string;
 }
 
@@ -12,6 +13,7 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({
   options,
   placeholder,
   onSelect,
+  hideIcon = false,
   className = "",
 }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -51,9 +53,13 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({
         >
           {selectedOption || placeholder}
         </span>
-        <BsChevronDown
-          className={`w-4 h-4 text-white/60 transition-transform ${isOpen ? "rotate-180" : ""}`}
-        />
+        {hideIcon ? (
+          <div />
+        ) : (
+          <BsChevronDown
+            className={`w-4 h-4 text-white/60 transition-transform ${isOpen ? "rotate-180" : ""}`}
+          />
+        )}
       </div>
       {isOpen && (
         <div className="absolute z-10 w-full mt-2 bg-[#1c1c1c] border border-white/10 rounded-xl shadow-lg overflow-hidden">

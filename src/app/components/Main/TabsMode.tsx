@@ -1,6 +1,12 @@
-import React from "react";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "../UI/Tabs";
-import TabsHeader from "./TabsSections/TabsHeader";
+import React, { useState } from "react";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbList,
+  BreadcrumbSeparator,
+} from "@/app/components/UI/Breadcrumb";
+  
+import DropdownMenu from "@/app/components/UI/DropdownMenu";
 import UniversityExplorer from "./TabsSections/UniversityExplorer";
 import AIMatcher from "./TabsSections/AIMatcher";
 import Mentors from "./TabsSections/Mentors";
@@ -10,48 +16,70 @@ import Programs from "./TabsSections/Programs";
 import CampusEvents from "./TabsSections/CampusEvents";
 import Scholarships from "./TabsSections/Scholarships";
 
-const TabsMode = () => {
+type NavigationItem = {
+  name: string;
+  component: React.ComponentType;
+  children?: NavigationItem[];
+};
+
+const navigationItems: NavigationItem[] = [
+  { name: "University Explorer", component: UniversityExplorer },
+  { name: "AI Matcher", component: AIMatcher },
+  { name: "Mentors", component: Mentors },
+  { name: "VR Tours", component: VRTours },
+  { name: "University Rankings", component: UniversityRankings },
+  { name: "Programs", component: Programs },
+  { name: "Campus Events", component: CampusEvents },
+  { name: "Scholarships", component: Scholarships },
+];
+
+const TabsMode: React.FC = () => {
+  const [currentPath, setCurrentPath] = useState<NavigationItem[]>([]);
+
+  const renderContent = () => {
+    const CurrentComponent = currentPath.length > 0 
+      ? currentPath[currentPath.length - 1].component 
+      : () => <div>Welcome to the University Explorer</div>;
+    return <CurrentComponent />;
+  };
+
+  const handleNavigation = (item: NavigationItem) => {
+    setCurrentPath([item]);
+  };
+
+  const BreadcrumbDropdown: React.FC<{ items: NavigationItem[], current: NavigationItem }> = ({ items, current }) => (
+    <DropdownMenu
+      options={items.map(item => ({ value: item.name, label: item.name }))}
+      placeholder={current.name}
+      onSelect={handleNavigation}
+    />
+  );
+
   return (
-    <div>
-      <TabsHeader />
-      <Tabs defaultValue="universityexplorer" className="px-2">
-        <TabsList>
-          <TabsTrigger value="universityexplorer">University Explorer</TabsTrigger>
-          <TabsTrigger value="aimatcher">AI Matcher</TabsTrigger>
-          <TabsTrigger value="mentors">Mentors</TabsTrigger>
-          <TabsTrigger value="vrtours">VR Tours</TabsTrigger>
-          <TabsTrigger value="universityrankings">University Rankings</TabsTrigger>
-          <TabsTrigger value="programs">Programs</TabsTrigger>
-          <TabsTrigger value="campusevents">Campus Events</TabsTrigger>
-          <TabsTrigger value="scholarships">Scholarships</TabsTrigger>
-        </TabsList>
-        <TabsContent value="universityexplorer">
-          <UniversityExplorer />
-        </TabsContent>
-        <TabsContent value="aimatcher">
-          <AIMatcher />
-        </TabsContent>
-        <TabsContent value="mentors">
-          <Mentors />
-        </TabsContent>
-        <TabsContent value="vrtours">
-          <VRTours />
-        </TabsContent>
-        <TabsContent value="universityrankings">
-          <UniversityRankings />
-        </TabsContent>
-        <TabsContent value="programs">
-          <Programs />
-        </TabsContent>
-        <TabsContent value="campusevents">
-          <CampusEvents />
-        </TabsContent>
-        <TabsContent value="scholarships">
-          <Scholarships />
-        </TabsContent>
-      </Tabs>
+    <div className="p-4">
+      <Breadcrumb>
+        <BreadcrumbList>
+          <BreadcrumbItem>
+            <BreadcrumbDropdown items={navigationItems} current={{ name: "Home", component: () => null }} />
+          </BreadcrumbItem>
+          {currentPath.map((item, index) => (
+            <React.Fragment key={item.name}>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbDropdown 
+                  items={index === 0 ? navigationItems : (currentPath[index - 1].children || [])}
+                  current={item}
+                />
+              </BreadcrumbItem>
+            </React.Fragment>
+          ))}
+        </BreadcrumbList>
+      </Breadcrumb>
+      <div className="mt-6">
+        {renderContent()}
+      </div>
     </div>
-  )
+  );
 };
 
 export default TabsMode;

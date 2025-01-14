@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { createSwapy } from "swapy";
+import FeaturedTours from "./VRTours/FeaturedTours";
 
 const VRTours = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -27,12 +28,7 @@ const VRTours = () => {
           className="col-span-2 max-[640px]:row-span-3 row-span-3"
           data-swapy-slot="a"
         >
-          <div
-            data-swapy-item="a"
-            className="w-full h-full rounded-2xl p-6 border border-white/5 bg-white/[0.01] overflow-scroll scrollbar-hide"
-          >
-            03
-          </div>
+          <FeaturedTours data-swapy-item="a" />
         </div>
         <div
           className="col-span-2 max-[640px]:row-span-1 row-span-3"

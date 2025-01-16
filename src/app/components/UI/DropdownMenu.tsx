@@ -62,11 +62,11 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({
         )}
       </div>
       {isOpen && (
-        <div className="absolute z-10 w-full mt-2 bg-[#1c1c1c] border border-white/10 rounded-xl shadow-lg overflow-hidden">
+        <div className="absolute z-10 min-w-max mt-2 bg-[#1c1c1c] border border-white/10 rounded-xl shadow-lg overflow-hidden">
           {options.map((option) => (
             <div
               key={option.value}
-              className="px-4 py-2 cursor-pointer text-sm text-white/60 hover:bg-white/5 transition-colors"
+              className="px-4 py-2 cursor-pointer text-sm text-white/60 hover:bg-white/5 transition-colors whitespace-nowrap"
               onClick={() => handleSelect(option.value, option.label)}
             >
               {option.label}

@@ -1,9 +1,13 @@
-"use client";
-
 import { useState } from "react";
 import { BsSearch, BsBookmark, BsBookmarkFill } from "react-icons/bs";
 import { Progress } from "../../UI/Progress";
-import DropdownMenu from "../../UI/DropdownMenu";
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+} from "../../UI/DropdownMenu";
 
 const topUniversities = [
   {
@@ -80,11 +84,48 @@ const UniversityExplorer: React.FC<React.HTMLProps<HTMLDivElement>> = ({
             <span className="text-xs text-white/60">{bookmarked.length}</span>
           </div>
         </div>
-        <DropdownMenu
-          options={filterOptions}
-          placeholder="Filter by"
-          onSelect={(value) => setSortBy(value)}
-        />
+        <DropdownMenu>
+          <DropdownMenuTrigger onClick={() => {}}>
+            <span className="text-white/60">Sort by</span>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent>
+            {filterOptions.map((option) => (
+              <DropdownMenuItem
+                key={option.value}
+                onClick={() => setSortBy(option.value)}
+                selected={sortBy === option.value}
+                className={`${
+                  sortBy === option.value
+                    ? "bg-purple-500 text-white"
+                    : "text-white/60"
+                }`}
+              >
+                {option.label}
+              </DropdownMenuItem>
+            ))}
+            <DropdownMenuSeparator />
+            <DropdownMenuItem
+              onClick={() => setSortBy("match")}
+              selected={sortBy === "match"}
+              className={`${
+                sortBy === "match" ? "bg-purple-500 text-white" : "text-white/60"
+              }`}
+            >
+              Sort by Match
+            </DropdownMenuItem>
+            <DropdownMenuItem
+              onClick={() => setSortBy("location")}
+              selected={sortBy === "location"}
+              className={`${
+                sortBy === "location"
+                  ? "bg-purple-500 text-white"
+                  : "text-white/60"
+              }`}
+            >
+              Sort by Location
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
       </div>
 
       <div className="relative mb-4">

@@ -3,11 +3,17 @@
 import React, { useEffect, useRef, useState } from "react";
 import { BsSearch, BsBookmark, BsBookmarkFill } from "react-icons/bs";
 import { Progress } from "@/app/components/UI/Progress";
-import DropdownMenu from "@/app/components/UI/DropdownMenu";
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+} from "@/app/components/UI/DropdownMenu";
 
 const universities = [
   {
-    name: "Univeristy of Oxford",
+    name: "University of Oxford",
     match: 97,
     location: "Oxford, UK",
     tags: ["Historical", "Research"],
@@ -102,12 +108,51 @@ const UniversityFinder: React.FC<React.HTMLProps<HTMLDivElement>> = ({
             <span className="text-xs text-white/60">{bookmarked.length}</span>
           </div>
         </div>
-        <DropdownMenu
-          options={sortOptions}
-          placeholder="Sort by"
-          onSelect={(value) => setSortBy(value)}
-        />
+
+        <DropdownMenu>
+          <DropdownMenuTrigger onClick={() => {}}>
+            <span>Sort by</span>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent>
+            {sortOptions.map((option) => (
+              <DropdownMenuItem
+                key={option.value}
+                onClick={() => setSortBy(option.value)}
+                selected={sortBy === option.value}
+                className={`${
+                  sortBy === option.value
+                    ? "bg-purple-500 text-white"
+                    : "text-white/60"
+                }`}
+              >
+                {option.label}
+              </DropdownMenuItem>
+            ))}
+            <DropdownMenuSeparator />
+            <DropdownMenuItem
+              onClick={() => setSortBy("match")}
+              selected={sortBy === "match"}
+              className={`${
+                sortBy === "match" ? "bg-purple-500 text-white" : "text-white/60"
+              }`}
+            >
+              Sort by Match
+            </DropdownMenuItem>
+            <DropdownMenuItem
+              onClick={() => setSortBy("location")}
+              selected={sortBy === "location"}
+              className={`${
+                sortBy === "location"
+                  ? "bg-purple-500 text-white"
+                  : "text-white/60"
+              }`}
+            >
+              Sort by Location
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
       </div>
+
       <div className="relative mb-4">
         <input
           type="text"
@@ -118,6 +163,7 @@ const UniversityFinder: React.FC<React.HTMLProps<HTMLDivElement>> = ({
         />
         <BsSearch className="absolute left-3 top-1/2 -translate-y-1/2 text-white/40" />
       </div>
+
       <div className="space-y-4">
         {filteredUniversities.slice(0, visibleCount).map((uni, index) => (
           <div

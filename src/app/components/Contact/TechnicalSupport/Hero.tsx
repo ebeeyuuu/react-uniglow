@@ -4,20 +4,14 @@ import React, { useEffect, useState } from "react";
 import {
   BsArrowRight,
   BsHeadset,
-  BsLightning,
-  BsChatDots,
   BsTools,
   BsTerminal,
 } from "react-icons/bs";
 import { FaServer } from "react-icons/fa";
-import DropdownMenu from "@/app/components/UI/DropdownMenu";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 const Hero = () => {
-  const [issueType, setIssueType] = useState("");
-  const [priorityLevel, setPriorityLevel] = useState("");
-
   useEffect(() => {
     AOS.init({
       once: true,
@@ -131,11 +125,6 @@ const Hero = () => {
                   <label className="block font-medium text-white/60 mb-2 text-xs">
                     Issue Type
                   </label>
-                  <DropdownMenu
-                    options={issueTypes}
-                    placeholder="Select issue type"
-                    onSelect={(value: string) => setIssueType(value)}
-                  />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-white/60 mb-2">

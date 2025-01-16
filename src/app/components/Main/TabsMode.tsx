@@ -6,7 +6,14 @@ import {
   BreadcrumbSeparator,
 } from "@/app/components/UI/Breadcrumb";
 
-import DropdownMenu from "@/app/components/UI/DropdownMenu";
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+} from "@/app/components/UI/DropdownMenu";
+
 import UniversityExplorer from "./TabsSections/UniversityExplorer";
 import AIMatcher from "./TabsSections/AIMatcher";
 import Mentors from "./TabsSections/Mentors";
@@ -22,31 +29,17 @@ type NavigationItem = {
   children?: NavigationItem[];
 };
 
-const onNavigate = (selectedName: string, level: number, currentPath: NavigationItem[], setPath: (prev) => void) => {
-  const currentItem = currentPath[level];
-
-  if (currentItem?.children) {
-    const selectedItem = currentItem.children.find(
-      (item) => item.name === selectedName
-    );
-
-    if (selectedItem) {
-      setPath((prev) => [...prev.slice(0, level + 1), selectedItem]);
-    }
-  }
-}
-
 const navigationItems: NavigationItem[] = [
   {
     name: "Home",
     children: [
       {
         name: "University Explorer",
-        component: <UniversityExplorer onNavigate={onNavigate}/>,
+        component: <UniversityExplorer />,
         children: [
-          { name: "Popular Universities", component: <UniversityExplorer onNavigate={onNavigate} /> },
-          { name: "Search by Country", component: <UniversityExplorer onNavigate={onNavigate}/> },
-          { name: "Compare Universities", component: <UniversityExplorer onNavigate={onNavigate}/> },
+          { name: "Popular Universities", component: <UniversityExplorer /> },
+          { name: "Search by Country", component: <UniversityExplorer /> },
+          { name: "Compare Universities", component: <UniversityExplorer /> },
         ],
       },
       {
@@ -147,16 +140,23 @@ const TabsMode: React.FC = () => {
     const options = current?.children || [];
 
     return (
-      <DropdownMenu
-        options={options.map((item) => ({
-          value: item.name,
-          label: item.name,
-        }))}
-        placeholder={current.name}
-        onSelect={(value) => handleNavigation(value, level)}
-        hideIcon={true}
-        className="w-full"
-      />
+      <DropdownMenu>
+        <DropdownMenuTrigger onClick={() => {}}>
+          <button className="w-full text-left">{current.name}</button>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent>
+          {options.map((item) => (
+            <DropdownMenuItem
+              key={item.name}
+              onClick={() => handleNavigation(item.name, level)}
+              selected={currentPath[level]?.name === item.name}
+            >
+              {item.name}
+            </DropdownMenuItem>
+          ))}
+          {options.length > 0 && <DropdownMenuSeparator />}
+        </DropdownMenuContent>
+      </DropdownMenu>
     );
   };
 

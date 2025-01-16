@@ -2,11 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { createSwapy } from "swapy";
 import TestComponent from "./UniversityExplorer/TestComponent";
 
-interface UniversityExplorerProps {
-  onNavigate: (...params) => void;
-}
-
-const UniversityExplorer: React.FC<UniversityExplorerProps> = ({ onNavigate }) => {
+const UniversityExplorer = () => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -22,10 +18,6 @@ const UniversityExplorer: React.FC<UniversityExplorerProps> = ({ onNavigate }) =
     }
   });
 
-  const handleItemClick = (name: string) => {
-    onNavigate(name);
-  }
-
   return (
     <div className="pb-24 text-white overflow-y-scroll scrollbar-hide">
       <div
@@ -36,7 +28,7 @@ const UniversityExplorer: React.FC<UniversityExplorerProps> = ({ onNavigate }) =
           className="col-span-2 max-[640px]:row-span-3 row-span-3"
           data-swapy-slot="a"
         >
-          <TestComponent data-swapy-item="a" onClick={() => handleItemClick("Search by Country")} />
+          <TestComponent data-swapy-item="a" />
         </div>
         <div
           className="col-span-2 max-[640px]:row-span-1 row-span-3"

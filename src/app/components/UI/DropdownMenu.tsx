@@ -20,7 +20,7 @@ const DropdownMenuTrigger = ({
     <button
       type="button"
       onClick={onClick}
-      className={`flex items-center justify-between w-full px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 ${className}`}
+      className={`flex items-center justify-between w-full px-4 py-2 text-sm font-medium text-gray-700 bg-zinc-900 border border-zinc-800 rounded-md shadow-sm hover:bg-zinc-900${className}`}
     >
       {children}
       <FaChevronDown className="w-5 h-5 ml-2" />
@@ -30,7 +30,7 @@ const DropdownMenuTrigger = ({
 
 const DropdownMenuContent = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="absolute right-0 z-10 w-56 mt-2 origin-top-right bg-white border border-gray-300 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+    <div className="absolute left-0 z-10 w-56 mt-2 origin-top-right bg-zinc-900 border border-zinc-800 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
       <div className="py-1">{children}</div>
     </div>
   );
@@ -50,11 +50,10 @@ const DropdownMenuItem = ({
   return (
     <button
       onClick={onClick}
-      className={`group flex items-center w-full px-4 py-2 text-sm text-gray-700 ${
-        selected ? "bg-indigo-100" : "hover:bg-indigo-100"
-      } ${className}`}
+      className={`group flex items-center w-full px-4 py-2 text-sm text-gray-700 ${selected ? "bg-purple-600" : "hover:bg-zinc-900"
+        } ${className}`}
     >
-      {selected && <FaCheck className="mr-2 h-4 w-4 text-indigo-600" />}
+      {selected && <FaCheck className="mr-2 h-4 w-4 text-white-600" />}
       {children}
     </button>
   );
@@ -152,7 +151,7 @@ const DropdownMenuSubTrigger = ({
   return (
     <button
       onClick={onClick}
-      className={`flex items-center w-full px-4 py-2 text-sm text-gray-700 hover:bg-indigo-100 ${className}`}
+      className={`flex items-center w-full px-4 py-2 text-sm text-gray-700 hover:bg-zinc-900 ${className}`}
     >
       {children}
       <FaChevronDown className="ml-auto w-5 h-5" />
@@ -166,7 +165,7 @@ const DropdownMenuSubContent = ({
   children: React.ReactNode;
 }) => {
   return (
-    <div className="absolute left-0 mt-1 origin-top-left bg-white border border-gray-300 rounded-md shadow-lg ring-1 ring-black ring-opacity-5">
+    <div className="absolute left-0 mt-1 origin-top-right bg-zinc-900 border border-zinc-800 rounded-md shadow-lg ring-1 ring-black ring-opacity-5">
       <div className="py-1">{children}</div>
     </div>
   );

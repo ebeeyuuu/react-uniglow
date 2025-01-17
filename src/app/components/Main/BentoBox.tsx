@@ -2,7 +2,6 @@
 
 import React, { useEffect, useRef } from "react";
 import { createSwapy } from "swapy";
-import DashboardHeader from "./DashboardSections/DashboardHeader";
 import UniversityExplorer from "./DashboardSections/UniversityExplorer";
 import AIMatcher from "./DashboardSections/AIMatcher";
 import Mentors from "./DashboardSections/Mentors";
@@ -30,10 +29,6 @@ const BentoBox = () => {
 
   return (
     <div className="pb-24 text-white overflow-y-scroll scrollbar-hide">
-      <div>
-        <DashboardHeader />
-      </div>
-
       <div
         ref={containerRef}
         className="w-[95dvw] max-h-[65dvh] mx-auto mt-8 grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-7 gap-3"

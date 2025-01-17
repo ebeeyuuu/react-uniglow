@@ -6,7 +6,6 @@ import {
   DropdownMenuTrigger,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuSeparator,
 } from "../../UI/DropdownMenu";
 
 const topUniversities = [
@@ -43,6 +42,7 @@ const UniversityExplorer: React.FC<React.HTMLProps<HTMLDivElement>> = ({
   const [bookmarked, setBookmarked] = useState<string[]>([]);
   const [expanded, setExpanded] = useState<number | null>(null);
   const [sortBy, setSortBy] = useState("name");
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const toggleBookmark = (name: string) => {
     setBookmarked((prev) =>
@@ -85,7 +85,7 @@ const UniversityExplorer: React.FC<React.HTMLProps<HTMLDivElement>> = ({
           </div>
         </div>
         <DropdownMenu>
-          <DropdownMenuTrigger onClick={() => {}}>
+          <DropdownMenuTrigger onClick={() => setDropdownOpen(!dropdownOpen)}>
             <span className="text-white/60">Sort by</span>
           </DropdownMenuTrigger>
           <DropdownMenuContent>
@@ -94,36 +94,14 @@ const UniversityExplorer: React.FC<React.HTMLProps<HTMLDivElement>> = ({
                 key={option.value}
                 onClick={() => setSortBy(option.value)}
                 selected={sortBy === option.value}
-                className={`${
-                  sortBy === option.value
-                    ? "bg-purple-500 text-white"
-                    : "text-white/60"
-                }`}
+                className={`${sortBy === option.value
+                  ? "bg-purple-500 text-white"
+                  : "text-white/60"
+                  }`}
               >
                 {option.label}
               </DropdownMenuItem>
             ))}
-            <DropdownMenuSeparator />
-            <DropdownMenuItem
-              onClick={() => setSortBy("match")}
-              selected={sortBy === "match"}
-              className={`${
-                sortBy === "match" ? "bg-purple-500 text-white" : "text-white/60"
-              }`}
-            >
-              Sort by Match
-            </DropdownMenuItem>
-            <DropdownMenuItem
-              onClick={() => setSortBy("location")}
-              selected={sortBy === "location"}
-              className={`${
-                sortBy === "location"
-                  ? "bg-purple-500 text-white"
-                  : "text-white/60"
-              }`}
-            >
-              Sort by Location
-            </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
       </div>

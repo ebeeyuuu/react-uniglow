@@ -143,7 +143,7 @@ const personaData = {
   ],
 };
 
-const CarouselButton = ({ direction, onClick }: { direction: 'left' | 'right', onClick: () => void }) => (
+const CarouselButton = ({ direction, onClick }: { direction: 'left' | 'right', onClick: (e: any) => void }) => (
   <button
     onClick={onClick}
     className={`absolute top-1/2 -translate-y-1/2 ${direction === 'left' ? '-left-5' : '-right-5'}`}

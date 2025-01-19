@@ -42,7 +42,6 @@ const UniversityExplorer: React.FC<React.HTMLProps<HTMLDivElement>> = ({
   const [bookmarked, setBookmarked] = useState<string[]>([]);
   const [expanded, setExpanded] = useState<number | null>(null);
   const [sortBy, setSortBy] = useState("name");
-  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const toggleBookmark = (name: string) => {
     setBookmarked((prev) =>
@@ -85,7 +84,7 @@ const UniversityExplorer: React.FC<React.HTMLProps<HTMLDivElement>> = ({
           </div>
         </div>
         <DropdownMenu>
-          <DropdownMenuTrigger onClick={() => setDropdownOpen(!dropdownOpen)}>
+          <DropdownMenuTrigger onClick={() => { }}>
             <span className="text-white/60">Sort by</span>
           </DropdownMenuTrigger>
           <DropdownMenuContent>
@@ -95,8 +94,8 @@ const UniversityExplorer: React.FC<React.HTMLProps<HTMLDivElement>> = ({
                 onClick={() => setSortBy(option.value)}
                 selected={sortBy === option.value}
                 className={`${sortBy === option.value
-                  ? "bg-purple-500 text-white"
-                  : "text-white/60"
+                    ? "bg-purple-500 text-white"
+                    : "text-white/60"
                   }`}
               >
                 {option.label}

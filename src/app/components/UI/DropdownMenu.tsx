@@ -4,7 +4,28 @@ import * as React from "react";
 import { FaChevronDown, FaCheck } from "react-icons/fa";
 
 const DropdownMenu = ({ children }: { children: React.ReactNode }) => {
-  return <div className="relative inline-block text-left">{children}</div>;
+  const [isOpen, setIsOpen] = React.useState(false);
+  return (
+    <div className="relative inline-block text-left">
+      {React.Children.map(children, (child) => {
+        if (React.isValidElement(child)) {
+          if (child.type === DropdownMenuTrigger) {
+            return React.cloneElement(child, {
+              ...child.props,
+              onClick: () => setIsOpen(!isOpen)
+            });
+          }
+          if (child.type === DropdownMenuContent) {
+            return React.cloneElement(child, {
+              ...child.props,
+              isOpen
+            });
+          }
+        }
+        return child;
+      })}
+    </div>
+  );
 };
 
 const DropdownMenuTrigger = ({
@@ -28,7 +49,14 @@ const DropdownMenuTrigger = ({
   );
 };
 
-const DropdownMenuContent = ({ children }: { children: React.ReactNode }) => {
+const DropdownMenuContent = ({ 
+  children, 
+  isOpen 
+}: { 
+  children: React.ReactNode;
+  isOpen?: boolean;
+}) => {
+  if (!isOpen) return null;
   return (
     <div className="absolute left-0 z-10 w-56 mt-2 origin-top-right bg-zinc-900 border border-zinc-800 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
       <div className="py-1">{children}</div>

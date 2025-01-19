@@ -1,8 +1,6 @@
 "use client";
 
 import React, { ReactNode, useState } from "react";
-import FloatingDock from "@/app/components/Main/FloatingDock";
-import { BsHouse } from "react-icons/bs";
 import AIMatcher from "./components/Main/DashboardSections/AIMatcher";
 import CampusEvents from "./components/Main/DashboardSections/CampusEvents";
 import Mentors from "./components/Main/DashboardSections/Mentors";
@@ -18,9 +16,7 @@ import { cn } from "@/lib/utils";
 
 interface MainLayoutProps {
   children: ReactNode;
-  includeNavBar?: boolean;
   className?: string;
-  navItems?: NavigationItem[];
 }
 
 type NavigationItem = {
@@ -117,21 +113,19 @@ const navigationItems: NavigationItems[] = [
 
 const MainLayout: React.FC<MainLayoutProps> = ({
   children,
-  includeNavBar = true,
   className = "",
-  navItems = [{ title: "Home", icon: <BsHouse />, href: "/" }],
 }) => {
-  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false)
+  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
 
   return (
-    <div className={cn("flex min-h-screen bg-zinc-950", className)}>
+    <div className={cn("flex h-screen bg-zinc-950 overflow-hidden", className)}>
       <Sidebar
         items={navigationItems}
         username="shadcn"
         email="m@example.com"
         avatarUrl="https://images.unsplash.com/photo-1576158114254-3ba81558b87d"
       />
-      <main className="flex-1">
+      <main className="flex-1 flex flex-col min-w-0">
         <header className="flex items-center p-4 bg-zinc-900">
           <button
             onClick={() => setIsSidebarCollapsed(!isSidebarCollapsed)}
@@ -141,7 +135,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
           </button>
           <h1 className="text-xl font-bold text-zinc-100">{title}</h1>
         </header>
-        <div className="p-8">{children}</div>
+        <div className="flex-1 p-8 min-h-0">{children}</div>
       </main>
     </div>
   );

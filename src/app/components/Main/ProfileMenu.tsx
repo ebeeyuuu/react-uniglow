@@ -31,13 +31,11 @@ export default function ProfileMenu({
   email,
   avatarUrl,
 }: ProfileMenuProps) {
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
     <div className="sticky bottom-0 p-4 mt-auto bg-zinc-900 border-t border-zinc-800">
       <DropdownMenu>
         <DropdownMenuTrigger
-          onClick={() => setIsOpen(!isOpen)}
+          onClick={() => {}}
           className="flex items-center w-full gap-3 p-2 rounded-lg hover:bg-zinc-800/50 transition-colors"
         >
           <Avatar src={avatarUrl} fallback={username[0]} />
@@ -48,62 +46,60 @@ export default function ProfileMenu({
             <span className="text-[10px] text-zinc-400">{email}</span>
           </div>
         </DropdownMenuTrigger>
-        {isOpen && (
-          <DropdownMenuContent>
-            <DropdownMenuItem
-              onClick={() => console.log("Upgrade to Pro")}
-              selected={false}
-            >
-              <FaStar className="mr-2 h-4 w-4 text-indigo-500" />
-              <span>Upgrade to Pro</span>
-            </DropdownMenuItem>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem
-              onClick={() => console.log("Account")}
-              selected={false}
-            >
-              <FaUser className="mr-2 h-4 w-4" />
-              <span>Account</span>
-            </DropdownMenuItem>
-            <DropdownMenuItem
-              onClick={() => console.log("Billing")}
-              selected={false}
-            >
-              <FaCreditCard className="mr-2 h-4 w-4" />
-              <span>Billing</span>
-            </DropdownMenuItem>
-            <DropdownMenuItem
-              onClick={() => console.log("Settings")}
-              selected={false}
-            >
-              <FaCog className="mr-2 h-4 w-4" />
-              <span>Settings</span>
-            </DropdownMenuItem>
-            <DropdownMenuItem
-              onClick={() => console.log("Notifications")}
-              selected={false}
-            >
-              <FaBell className="mr-2 h-4 w-4" />
-              <span>Notifications</span>
-            </DropdownMenuItem>
-            <DropdownMenuItem
-              onClick={() => console.log("Help")}
-              selected={false}
-            >
-              <FaQuestionCircle className="mr-2 h-4 w-4" />
-              <span>Help</span>
-            </DropdownMenuItem>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem
-              onClick={() => console.log("Log out")}
-              selected={false}
-              className="text-red-500"
-            >
-              <FaSignOutAlt className="mr-2 h-4 w-4" />
-              <span>Log out</span>
-            </DropdownMenuItem>
-          </DropdownMenuContent>
-        )}
+        <DropdownMenuContent>
+          <DropdownMenuItem
+            onClick={() => console.log("Upgrade to Pro")}
+            selected={false}
+          >
+            <FaStar className="mr-2 h-4 w-4 text-indigo-500" />
+            <span>Upgrade to Pro</span>
+          </DropdownMenuItem>
+          <DropdownMenuSeparator />
+          <DropdownMenuItem
+            onClick={() => console.log("Account")}
+            selected={false}
+          >
+            <FaUser className="mr-2 h-4 w-4" />
+            <span>Account</span>
+          </DropdownMenuItem>
+          <DropdownMenuItem
+            onClick={() => console.log("Billing")}
+            selected={false}
+          >
+            <FaCreditCard className="mr-2 h-4 w-4" />
+            <span>Billing</span>
+          </DropdownMenuItem>
+          <DropdownMenuItem
+            onClick={() => console.log("Settings")}
+            selected={false}
+          >
+            <FaCog className="mr-2 h-4 w-4" />
+            <span>Settings</span>
+          </DropdownMenuItem>
+          <DropdownMenuItem
+            onClick={() => console.log("Notifications")}
+            selected={false}
+          >
+            <FaBell className="mr-2 h-4 w-4" />
+            <span>Notifications</span>
+          </DropdownMenuItem>
+          <DropdownMenuItem
+            onClick={() => console.log("Help")}
+            selected={false}
+          >
+            <FaQuestionCircle className="mr-2 h-4 w-4" />
+            <span>Help</span>
+          </DropdownMenuItem>
+          <DropdownMenuSeparator />
+          <DropdownMenuItem
+            onClick={() => console.log("Log out")}
+            selected={false}
+            className="text-red-500"
+          >
+            <FaSignOutAlt className="mr-2 h-4 w-4" />
+            <span>Log out</span>
+          </DropdownMenuItem>
+        </DropdownMenuContent>
       </DropdownMenu>
     </div>
   );

@@ -1,6 +1,16 @@
 "use client";
 
 import React, { ReactNode, useState } from "react";
+import { FaBars } from "react-icons/fa6";
+import {
+  Breadcrumb,
+  BreadcrumbList,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbSeparator,
+} from "./components/UI/Breadcrumb";
+import Sidebar from "./components/Main/Sidebar";
+import { cn } from "@/lib/utils";
 import AIMatcher from "./components/Main/DashboardSections/AIMatcher";
 import CampusEvents from "./components/Main/DashboardSections/CampusEvents";
 import Mentors from "./components/Main/DashboardSections/Mentors";
@@ -9,10 +19,16 @@ import Scholarships from "./components/Main/DashboardSections/Scholarships";
 import UniversityExplorer from "./components/Main/DashboardSections/UniversityExplorer";
 import VRTours from "./components/Main/DashboardSections/VRTours";
 import UniversityRankings from "./pages/university-rankings/page";
-import { title } from "process";
-import { FaBars } from "react-icons/fa6";
-import Sidebar from "./components/Main/Sidebar";
-import { cn } from "@/lib/utils";
+import {
+  FaUniversity,
+  FaRobot,
+  FaUserGraduate,
+  FaVrCardboard,
+  FaTrophy,
+  FaGraduationCap,
+  FaCalendarAlt,
+  FaMoneyCheckAlt,
+} from "react-icons/fa";
 
 interface MainLayoutProps {
   children: ReactNode;
@@ -20,92 +36,123 @@ interface MainLayoutProps {
 }
 
 type NavigationItem = {
-  title: string;
-  icon: ReactNode;
-  href: string;
-};
-
-type NavigationItems = {
   name: string;
   component?: React.ReactNode;
-  children?: NavigationItems[];
+  children?: NavigationItem[];
+  icon?: React.ReactNode;
 };
 
-const navigationItems: NavigationItems[] = [
+const navigationItems: NavigationItem[] = [
   {
-    name: "Home",
+    name: "University Explorer",
+    icon: <FaUniversity />,
+    component: <UniversityExplorer />,
     children: [
       {
-        name: "University Explorer",
+        name: "Popular Universities",
         component: <UniversityExplorer />,
-        children: [
-          { name: "Popular Universities", component: <UniversityExplorer /> },
-          { name: "Search by Country", component: <UniversityExplorer /> },
-          { name: "Compare Universities", component: <UniversityExplorer /> },
-        ],
       },
       {
-        name: "AI Matcher",
+        name: "Search by Country",
+        component: <UniversityExplorer />,
+      },
+      {
+        name: "Compare Universities",
+        component: <UniversityExplorer />,
+      },
+    ],
+  },
+  {
+    name: "AI Matcher",
+    icon: <FaRobot />,
+    component: <AIMatcher />,
+    children: [
+      {
+        name: "Career Assessment",
         component: <AIMatcher />,
-        children: [
-          { name: "Career Assessment", component: <AIMatcher /> },
-          { name: "Program Matcher", component: <AIMatcher /> },
-          { name: "University Matcher", component: <AIMatcher /> },
-        ],
       },
+      { name: "Program Matcher", component: <AIMatcher /> },
       {
-        name: "Mentors",
-        component: <Mentors />,
-        children: [
-          { name: "Find Mentor", component: <Mentors /> },
-          { name: "Mentor Reviews", component: <Mentors /> },
-          { name: "Schedule Session", component: <Mentors /> },
-        ],
+        name: "University Matcher",
+        component: <AIMatcher />,
       },
+    ],
+  },
+  {
+    name: "Mentors",
+    icon: <FaUserGraduate />,
+    component: <Mentors />,
+    children: [
+      { name: "Find Mentor", component: <Mentors /> },
+      { name: "Mentor Reviews", component: <Mentors /> },
+      { name: "Schedule Session", component: <Mentors /> },
+    ],
+  },
+  {
+    name: "VR Tours",
+    icon: <FaVrCardboard />,
+    component: <VRTours />,
+    children: [
+      { name: "Campus Tours", component: <VRTours /> },
+      { name: "Facility Tours", component: <VRTours /> },
+      { name: "Virtual Events", component: <VRTours /> },
+    ],
+  },
+  {
+    name: "University Rankings",
+    icon: <FaTrophy />,
+    component: <UniversityRankings />,
+    children: [
       {
-        name: "VR Tours",
-        component: <VRTours />,
-        children: [
-          { name: "Campus Tours", component: <VRTours /> },
-          { name: "Facility Tours", component: <VRTours /> },
-          { name: "Virtual Events", component: <VRTours /> },
-        ],
-      },
-      {
-        name: "University Rankings",
+        name: "Global Rankings",
         component: <UniversityRankings />,
-        children: [
-          { name: "Global Rankings", component: <UniversityRankings /> },
-          { name: "Program Rankings", component: <UniversityRankings /> },
-          { name: "Research Rankings", component: <UniversityRankings /> },
-        ],
       },
       {
-        name: "Programs",
-        component: <Programs />,
-        children: [
-          { name: "Undergraduate", component: <Programs /> },
-          { name: "Graduate", component: <Programs /> },
-          { name: "Research", component: <Programs /> },
-        ],
+        name: "Program Rankings",
+        component: <UniversityRankings />,
       },
       {
-        name: "Campus Events",
+        name: "Research Rankings",
+        component: <UniversityRankings />,
+      },
+    ],
+  },
+  {
+    name: "Programs",
+    icon: <FaGraduationCap />,
+    component: <Programs />,
+    children: [
+      { name: "Undergraduate", component: <Programs /> },
+      { name: "Graduate", component: <Programs /> },
+      { name: "Research", component: <Programs /> },
+    ],
+  },
+  {
+    name: "Campus Events",
+    icon: <FaCalendarAlt />,
+    component: <CampusEvents />,
+    children: [
+      { name: "Open Days", component: <CampusEvents /> },
+      { name: "Workshops", component: <CampusEvents /> },
+      {
+        name: "Information Sessions",
         component: <CampusEvents />,
-        children: [
-          { name: "Open Days", component: <CampusEvents /> },
-          { name: "Workshops", component: <CampusEvents /> },
-          { name: "Information Sessions", component: <CampusEvents /> },
-        ],
+      },
+    ],
+  },
+  {
+    name: "Scholarships",
+    icon: <FaMoneyCheckAlt />,
+    component: <Scholarships />,
+    children: [
+      { name: "Merit Based", component: <Scholarships /> },
+      {
+        name: "Need Based",
+        component: <Scholarships />,
       },
       {
-        name: "Scholarships",
+        name: "Research Grants",
         component: <Scholarships />,
-        children: [
-          { name: "Merit Based", component: <Scholarships /> },
-          { name: "Need Based", component: <Scholarships /> },
-          { name: "Research Grants", component: <Scholarships /> },
-        ],
       },
     ],
   },
@@ -116,6 +163,11 @@ const MainLayout: React.FC<MainLayoutProps> = ({
   className = "",
 }) => {
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
+  const [activePath, setActivePath] = useState<string[]>(["Home"]);
+
+  const handleNavigation = (path: string[]) => {
+    setActivePath(path);
+  };
 
   return (
     <div className={cn("flex h-screen bg-zinc-950 overflow-hidden", className)}>
@@ -124,6 +176,8 @@ const MainLayout: React.FC<MainLayoutProps> = ({
         username="shadcn"
         email="m@example.com"
         avatarUrl="https://images.unsplash.com/photo-1576158114254-3ba81558b87d"
+        isCollapsed={isSidebarCollapsed}
+        onNavigate={handleNavigation}
       />
       <main className="flex-1 flex flex-col min-w-0">
         <header className="flex items-center p-4 bg-zinc-900">
@@ -133,7 +187,22 @@ const MainLayout: React.FC<MainLayoutProps> = ({
           >
             <FaBars className="w-6 h-6 text-zinc-100" />
           </button>
-          <h1 className="text-xl font-bold text-zinc-100">{title}</h1>
+          <Breadcrumb>
+            <BreadcrumbList>
+              {activePath.map((item, index) => (
+                <React.Fragment key={item}>
+                  <BreadcrumbItem>
+                    <BreadcrumbLink
+                      isCurrentPage={index === activePath.length - 1}
+                    >
+                      {item}
+                    </BreadcrumbLink>
+                  </BreadcrumbItem>
+                  {index < activePath.length - 1 && <BreadcrumbSeparator />}
+                </React.Fragment>
+              ))}
+            </BreadcrumbList>
+          </Breadcrumb>
         </header>
         <div className="flex-1 p-8 min-h-0">{children}</div>
       </main>

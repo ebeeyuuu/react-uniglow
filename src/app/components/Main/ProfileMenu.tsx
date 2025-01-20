@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import {
   FaSignOutAlt,
   FaCog,
@@ -24,27 +24,34 @@ interface ProfileMenuProps {
   username: string;
   email: string;
   avatarUrl?: string;
+  isCollapsed?: boolean;
 }
 
 export default function ProfileMenu({
   username,
   email,
   avatarUrl,
+  isCollapsed,
 }: ProfileMenuProps) {
   return (
     <div className="sticky bottom-0 p-4 mt-auto bg-zinc-900 border-t border-zinc-800">
-      <DropdownMenu>
+      <DropdownMenu
+        className="w-full"
+        contentClassName="right-0 left-auto"
+      >
         <DropdownMenuTrigger
           onClick={() => {}}
-          className="flex items-center w-full gap-3 p-2 rounded-lg hover:bg-zinc-800/50 transition-colors"
+          className={`flex items-center ${isCollapsed ? "justify-center" : "w-full gap-3"} p-2 rounded-lg hover:bg-zinc-800/50 transition-colors`}
         >
           <Avatar src={avatarUrl} fallback={username[0]} />
-          <div className="flex flex-col text-left">
-            <span className="text-xs font-medium text-zinc-100">
-              {username}
-            </span>
-            <span className="text-[10px] text-zinc-400">{email}</span>
-          </div>
+          {!isCollapsed && (
+            <div className="flex flex-col text-left">
+              <span className="text-xs font-medium text-zinc-100">
+                {username}
+              </span>
+              <span className="text-[10px] text-zinc-400">{email}</span>
+            </div>
+          )}
         </DropdownMenuTrigger>
         <DropdownMenuContent>
           <DropdownMenuItem

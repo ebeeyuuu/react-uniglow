@@ -2,8 +2,6 @@
 
 import React, { useEffect } from "react";
 import MainLayout from "@/app/MainLayout";
-import BentoBox from "@/app/components/Main/BentoBox";
-import TabsMode from "@/app/components/Main/TabsMode";
 import { useTabsMode } from "@/context/useTabsMode";
 import { ContextMenuItem } from "@/app/components/UI/context-menu-types";
 import {

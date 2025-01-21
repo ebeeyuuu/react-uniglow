@@ -66,15 +66,27 @@ const DropdownMenuContent = ({
   children: React.ReactNode;
   isOpen?: boolean;
   className?: string;
-  position?: "bottom" | "right" | "left" | "top";
+  position?: 
+    | "bottom"
+    | "top"
+    | "left"
+    | "right"
+    | "bottom-right"
+    | "bottom-left"
+    | "top-right"
+    | "top-left";
 }) => {
   if (!isOpen) return null;
 
-  const positionClasses = {
+  const positionClasses: Record<string, string> = {
     bottom: "top-full left-0 mt-2",
-    right: "left-full top-0 ml-2",
-    left: "right-full top-0 mr-2",
     top: "bottom-full left-0 mb-2",
+    left: "right-full top-0 mr-2",
+    right: "left-full top-0 ml-2",
+    "bottom-right": "top-full right-0 mt-2",
+    "bottom-left": "top-full left-0 mt-2",
+    "top-right": "bottom-full right-0 mb-2",
+    "top-left": "bottom-full left-0 mb-2",
   };
 
   return (
@@ -106,7 +118,7 @@ const DropdownMenuItem = ({
   return (
     <button
       onClick={onClick}
-      className={`group flex items-center w-full px-4 py-2 text-sm text-gray-700 ${
+      className={`group flex items-center w-full px-4 py-2 text-sm text-white ${
         selected ? "bg-purple-600" : "hover:bg-zinc-900"
       } ${className}`}
     >
@@ -177,7 +189,7 @@ const DropdownMenuLabel = ({ children }: { children: React.ReactNode }) => {
 };
 
 const DropdownMenuSeparator = () => {
-  return <div className="my-1 h-px bg-gray-200"></div>;
+  return <div className="my-1 h-px bg-gray-800"></div>;
 };
 
 const DropdownMenuShortcut = ({ children }: { children: React.ReactNode }) => {

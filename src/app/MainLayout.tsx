@@ -11,24 +11,14 @@ import {
 } from "./components/UI/Breadcrumb";
 import Sidebar from "./components/Main/Sidebar";
 import { cn } from "@/lib/utils";
-import AIMatcher from "./components/Main/DashboardSections/AIMatcher";
-import CampusEvents from "./components/Main/DashboardSections/CampusEvents";
-import Mentors from "./components/Main/DashboardSections/Mentors";
-import Programs from "./components/Main/DashboardSections/Programs";
-import Scholarships from "./components/Main/DashboardSections/Scholarships";
-import UniversityExplorer from "./components/Main/UniversityExplorer/UniversityExplorer";
-import VRTours from "./components/Main/DashboardSections/VRTours";
-import UniversityRankings from "./pages/university-rankings/page";
-import {
-  FaUniversity,
-  FaRobot,
-  FaUserGraduate,
-  FaVrCardboard,
-  FaTrophy,
-  FaGraduationCap,
-  FaCalendarAlt,
-  FaMoneyCheckAlt,
-} from "react-icons/fa";
+import { FaUniversity, FaRobot, FaHandshake, FaBook, FaCalendarAlt } from "react-icons/fa";
+import SearchUniversities from "./components/Main/SearchUniversities";
+import VRTours from "./components/Main/VRTours";
+import UniversityRankings from "./components/Main/UniversityRankings";
+import AIMatcher from "./components/Main/AIMatcher";
+import Mentorship from "./components/Main/Mentorship";
+import ProgramsAndScholarships from "./components/Main/ProgramsAndScholarships";
+import CampusEvents from "./components/Main/CampusEvents";
 
 interface MainLayoutProps {
   children?: ReactNode;
@@ -44,64 +34,45 @@ type NavigationItem = {
 
 const navigationItems: NavigationItem[] = [
   {
-    name: "University Explorer",
+    name: "Explore",
     icon: <FaUniversity />,
-    component: <UniversityExplorer />,
+    children: [
+      {
+        name: "Search Universities",
+        icon: <FaUniversity />,
+        component: <SearchUniversities />
+      },
+      {
+        name: "VR Tours",
+        icon: <FaRobot />,
+        component: <VRTours />
+      },
+      {
+        name: "University Rankings",
+        icon: <FaUniversity />,
+        component: <UniversityRankings />
+      },
+    ],
   },
   {
     name: "AI Matcher",
     icon: <FaRobot />,
-    component: <AIMatcher />,
-    children: [
-      { name: "Career Assessment", component: <AIMatcher /> },
-      { name: "Program Matcher", component: <AIMatcher /> },
-      { name: "University Matcher", component: <AIMatcher /> },
-    ],
+    component: <AIMatcher />
   },
   {
-    name: "Mentors",
-    icon: <FaUserGraduate />,
-    component: <Mentors />,
-    children: [
-      { name: "Find Mentor", component: <Mentors /> },
-      { name: "Mentor Reviews", component: <Mentors /> },
-      { name: "Schedule Session", component: <Mentors /> },
-    ],
+    name: "Mentorship",
+    icon: <FaHandshake />,
+    component: <Mentorship />
   },
   {
-    name: "VR Tours",
-    icon: <FaVrCardboard />,
-    component: <VRTours />,
-  },
-  {
-    name: "University Rankings",
-    icon: <FaTrophy />,
-    component: <UniversityRankings />,
-  },
-  {
-    name: "Programs",
-    icon: <FaGraduationCap />,
-    component: <Programs />,
-    children: [
-      { name: "Undergraduate", component: <Programs /> },
-      { name: "Graduate", component: <Programs /> },
-      { name: "Research", component: <Programs /> },
-    ],
+    name: "Programs & Scholarships",
+    icon: <FaBook />,
+    component: <ProgramsAndScholarships />
   },
   {
     name: "Campus Events",
     icon: <FaCalendarAlt />,
-    component: <CampusEvents />,
-    children: [
-      { name: "Open Days", component: <CampusEvents /> },
-      { name: "Workshops", component: <CampusEvents /> },
-      { name: "Information Sessions", component: <CampusEvents /> },
-    ],
-  },
-  {
-    name: "Scholarships",
-    icon: <FaMoneyCheckAlt />,
-    component: <Scholarships />,
+    component: <CampusEvents />
   },
 ];
 
@@ -109,7 +80,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ className = "" }) => {
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
   const [activePath, setActivePath] = useState<string[]>(["Home"]);
   const [activeComponent, setActiveComponent] = useState<React.ReactNode>(
-    navigationItems[0].component
+    navigationItems[0].component,
   );
 
   const handleNavigation = (path: string[], component?: React.ReactNode) => {
@@ -127,10 +98,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ className = "" }) => {
         email="m@example.com"
         avatarUrl="https://images.unsplash.com/photo-1576158114254-3ba81558b87d"
         isCollapsed={isSidebarCollapsed}
-        onNavigate={(path) => {
-          const item = navigationItems.find((item) => item.name === path[0]);
-          handleNavigation(path, item?.component);
-        }}
+        onNavigate={handleNavigation} // Ensure the correct function is passed
       />
       <main className="flex-1 flex flex-col min-w-0">
         <header className="flex items-center p-4 bg-zinc-900">

@@ -98,7 +98,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ className = "" }) => {
         email="m@example.com"
         avatarUrl="https://images.unsplash.com/photo-1576158114254-3ba81558b87d"
         isCollapsed={isSidebarCollapsed}
-        onNavigate={handleNavigation} // Ensure the correct function is passed
+        onNavigate={handleNavigation}
       />
       <main className="flex-1 flex flex-col min-w-0">
         <header className="flex items-center p-4 bg-zinc-900">

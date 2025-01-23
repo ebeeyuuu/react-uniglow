@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 import { BsPlay } from "react-icons/bs";
-import { useState } from "react";
+import Modal, { useModal } from "@/app/components/UI/Modal";
+import { useState} from "react";
 
 type VRTour = {
   id: number;
@@ -54,7 +55,93 @@ const virtualTours: VRTour[] = [
 ];
 
 const VRTours = () => {
-  return <div>VRTours</div>;
+  const { isOpen, openModal, closeModal } = useModal();
+  const [selectedTour, setSelectedTour] = useState<VRTour | null>(null);
+
+  const handleTourClick = (tour: VRTour) => {
+    setSelectedTour(tour);
+    openModal();
+  }
+
+  return (
+    <div className="space-y-4 w-full h-full rounded-2xl p-6 border border-white/5 bg-white/[0.01] overflow-scroll scrollbar-hide">
+      <div className="flex w-full items-center gap-2 justify-between">
+        <h2 className="text-sm md:text-base lg:text-lg font-semibold">
+          University VR Tours
+        </h2>
+        <span className="text-xs text-white/60">
+          {virtualTours.length} tours available
+        </span>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {virtualTours.map((tour) => (
+          <div
+            key={tour.id}
+            className="group relative overflow-hidden rounded-xl aspect-video cursor-pointer"
+            onClick={() => handleTourClick(tour)}
+          >
+            <Image
+              src={tour.thumbnail}
+              alt={tour.university}
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
+            <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent h-1/2" />
+            <div className="absolute inset-0 flex flex-col justify-end p-4">
+              <div className="space-y-2">
+                <h3 className="text-lg font-semibold">{tour.university}</h3>
+                <p className="text-sm text-white/80 line-clamp-2">{tour.description}</p>
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <BsPlay className="w-5 h-5" />
+                    <span className="text-sm text-white/60">{tour.duration}</span>
+                  </div>
+                  <button className="px-3 py-1 text-sm bg-white/10 rounded-full hover:bg-white/20 transition-colors">
+                    Start Tour
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <Modal 
+        isOpen={isOpen} 
+        onClose={closeModal}
+        title={`${selectedTour?.university} VR Tour`}
+      >
+        {selectedTour && (
+          <div className="space-y-4">
+            <div className="aspect-video relative bg-black/50 rounded-xl mb-4">
+              <div className="absolute inset-0 flex items-center justify-center">
+                <p className="text-white/60">VR Experience Loading...</p>
+              </div>
+            </div>
+            <div>
+              <h4 className="text-sm font-medium text-white/60 mb-2">Featured Locations</h4>
+              <div className="flex flex-wrap gap-2">
+                {selectedTour.locations.map((location, index) => (
+                  <span
+                    key={index}
+                    className="px-3 py-1 bg-white/10 rounded-full text-sm"
+                  >
+                    {location}
+                  </span>
+                ))}
+              </div>
+            </div>
+            <button className="w-full py-3 bg-white/10 rounded-xl hover:bg-white/20 transition-colors">
+              Launch Full VR Experience
+            </button>
+          </div>
+        )}
+      </Modal>
+    </div>
+  )
 };
 
 export default VRTours;

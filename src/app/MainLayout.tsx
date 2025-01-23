@@ -11,7 +11,13 @@ import {
 } from "./components/UI/Breadcrumb";
 import Sidebar from "./components/Main/Sidebar";
 import { cn } from "@/lib/utils";
-import { FaUniversity, FaRobot, FaHandshake, FaBook, FaCalendarAlt } from "react-icons/fa";
+import {
+  FaUniversity,
+  FaRobot,
+  FaHandshake,
+  FaBook,
+  FaCalendarAlt,
+} from "react-icons/fa";
 import SearchUniversities from "./components/Main/SearchUniversities";
 import VRTours from "./components/Main/VRTours";
 import UniversityRankings from "./components/Main/UniversityRankings";
@@ -40,39 +46,39 @@ const navigationItems: NavigationItem[] = [
       {
         name: "Search Universities",
         icon: <FaUniversity />,
-        component: <SearchUniversities />
+        component: <SearchUniversities />,
       },
       {
         name: "VR Tours",
         icon: <FaRobot />,
-        component: <VRTours />
+        component: <VRTours />,
       },
       {
         name: "University Rankings",
         icon: <FaUniversity />,
-        component: <UniversityRankings />
+        component: <UniversityRankings />,
       },
     ],
   },
   {
     name: "AI Matcher",
     icon: <FaRobot />,
-    component: <AIMatcher />
+    component: <AIMatcher />,
   },
   {
     name: "Mentorship",
     icon: <FaHandshake />,
-    component: <Mentorship />
+    component: <Mentorship />,
   },
   {
     name: "Programs & Scholarships",
     icon: <FaBook />,
-    component: <ProgramsAndScholarships />
+    component: <ProgramsAndScholarships />,
   },
   {
     name: "Campus Events",
     icon: <FaCalendarAlt />,
-    component: <CampusEvents />
+    component: <CampusEvents />,
   },
 ];
 
@@ -125,7 +131,9 @@ const MainLayout: React.FC<MainLayoutProps> = ({ className = "" }) => {
             </BreadcrumbList>
           </Breadcrumb>
         </header>
-        <div className="flex-1 p-8 min-h-0">{activeComponent}</div>
+        <div className="flex-1 p-8 min-h-0 overflow-auto scrollbar-hide">
+          {activeComponent}
+        </div>
       </main>
     </div>
   );

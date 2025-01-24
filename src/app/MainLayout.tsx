@@ -86,7 +86,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ className = "" }) => {
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
   const [activePath, setActivePath] = useState<string[]>(["Home"]);
   const [activeComponent, setActiveComponent] = useState<React.ReactNode>(
-    navigationItems[0].component,
+    navigationItems[0].component
   );
 
   const handleNavigation = (path: string[], component?: React.ReactNode) => {
@@ -97,7 +97,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ className = "" }) => {
   };
 
   return (
-    <div className={cn("flex h-screen bg-zinc-950 overflow-hidden", className)}>
+    <div className={cn("flex w-full flex-row h-screen bg-zinc-950", className)}>
       <Sidebar
         items={navigationItems}
         username="shadcn"
@@ -106,8 +106,8 @@ const MainLayout: React.FC<MainLayoutProps> = ({ className = "" }) => {
         isCollapsed={isSidebarCollapsed}
         onNavigate={handleNavigation}
       />
-      <main className="flex-1 flex flex-col min-w-0">
-        <header className="flex items-center p-4 bg-zinc-900">
+      <main className="flex flex-col w-full overflow-hidden">
+        <header className="flex w-full items-center p-4 bg-zinc-900">
           <button
             onClick={() => setIsSidebarCollapsed(!isSidebarCollapsed)}
             className="mr-4 p-2 rounded-md hover:bg-zinc-800 transition-colors"
@@ -131,7 +131,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ className = "" }) => {
             </BreadcrumbList>
           </Breadcrumb>
         </header>
-        <div className="flex-1 p-8 min-h-0 overflow-auto scrollbar-hide">
+        <div className="p-8 overflow-auto scrollbar-hide">
           {activeComponent}
         </div>
       </main>

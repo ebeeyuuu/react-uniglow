@@ -7,6 +7,11 @@ const nextConfig = {
         hostname: "images.unsplash.com",
         pathname: "/**", // This allows any image path from this domain
       },
+      {
+        protocol: "https",
+        hostname: "source.unsplash.com",
+        pathname: "/**",
+      },
     ],
   },
   webpack: (config, { isServer }) => {

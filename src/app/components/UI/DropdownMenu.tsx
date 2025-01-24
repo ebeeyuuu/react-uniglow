@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import { FaChevronDown, FaCheck } from "react-icons/fa";
+import { Checkbox } from "./Checkbox";
 
 interface DropdownMenuProps {
   children: React.ReactNode;
@@ -49,7 +50,7 @@ const DropdownMenuTrigger = ({
       onClick={onClick}
       className={
         className ||
-        `flex items-center justify-between w-full px-4 py-2 text-sm font-medium text-gray-700 bg-zinc-900 border border-zinc-800 rounded-md shadow-sm hover:bg-zinc-900`
+        `flex items-center justify-between w-full px-4 py-2 text-sm font-medium text-white bg-zinc-900 border border-zinc-800 rounded-md shadow-sm hover:bg-zinc-900`
       }
     >
       {children}
@@ -66,7 +67,7 @@ const DropdownMenuContent = ({
   children: React.ReactNode;
   isOpen?: boolean;
   className?: string;
-  position?: 
+  position?:
     | "bottom"
     | "top"
     | "left"
@@ -141,15 +142,14 @@ const DropdownMenuCheckboxItem = ({
 }) => {
   return (
     <label
-      className={`flex items-center w-full px-4 py-2 text-sm text-gray-700 cursor-pointer ${className}`}
+      className={`flex items-center w-full px-4 py-2 text-sm text-white cursor-pointer ${className}`}
     >
-      <input
-        type="checkbox"
+      <Checkbox
         checked={checked}
         onChange={onChange}
-        className="mr-2 w-4 h-4"
+        label={children as string}
+        className="mr-2"
       />
-      {children}
     </label>
   );
 };
@@ -167,7 +167,7 @@ const DropdownMenuRadioItem = ({
 }) => {
   return (
     <label
-      className={`flex items-center w-full px-4 py-2 text-sm text-gray-700 cursor-pointer ${className}`}
+      className={`flex items-center w-full px-4 py-2 text-sm text-white cursor-pointer ${className}`}
     >
       <input
         type="radio"
@@ -182,9 +182,7 @@ const DropdownMenuRadioItem = ({
 
 const DropdownMenuLabel = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="px-4 py-2 text-sm font-semibold text-gray-700">
-      {children}
-    </div>
+    <div className="px-4 py-2 text-sm font-semibold text-white">{children}</div>
   );
 };
 
@@ -220,7 +218,7 @@ const DropdownMenuSubTrigger = ({
   return (
     <button
       onClick={onClick}
-      className={`flex items-center w-full px-4 py-2 text-sm text-gray-700 hover:bg-zinc-900 ${className}`}
+      className={`flex items-center w-full px-4 py-2 text-sm text-white hover:bg-zinc-900 ${className}`}
     >
       {children}
       <FaChevronDown className="ml-auto w-5 h-5" />

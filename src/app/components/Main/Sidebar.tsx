@@ -45,7 +45,7 @@ const Sidebar: React.FC<SidebarProps> = ({
   return (
     <aside
       className={`
-        fixed md:relative top-0 h-screen bg-zinc-900 text-zinc-100 
+        flex h-screen bg-zinc-900 text-zinc-100 
         transition-all duration-300 ease-in-out
         ${isCollapsed ? "w-16" : "w-64"}
       `}

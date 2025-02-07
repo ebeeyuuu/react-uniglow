@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
+import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuCheckboxItem } from "../UI/DropdownMenu";
 
 type Subject = {
   id: number;
@@ -55,6 +56,9 @@ type FilterState = {
 const AIMatcher = () => {
   const [universities, setUniversities] = useState<University[]>([]);
   const [filteredUniversities, setFilteredUniversities] = useState<University[]>([]);
+  const [selectedCountries, setSelectedCountries] = useState<string[]>([]);
+  const [selectedSubjects, setSelectedSubjects] = useState<string[]>([]);
+  const [selectedEnvironments, setSelectedEnvironments] = useState<string[]>([]);
   const [filters, setFilters] = useState<FilterState>({
     searchTerm: "",
     selectedSubjects: [],
@@ -73,7 +77,6 @@ const AIMatcher = () => {
     accommodationRequired: false,
   });
 
-  // Sample data with more detail
   const sampleUniversities: University[] = [
     {
       id: 1,
@@ -112,7 +115,154 @@ const AIMatcher = () => {
       environmentType: "Urban",
       weatherType: ["Cold winters", "Mild summers", "Fall foliage"],
     },
-    // Add at least 15-20 more detailed university entries here
+    {
+      id: 2,
+      name: "Massachusetts Institute of Technology",
+      country: "USA",
+      city: "Cambridge",
+      logoUrl: "https://images.unsplash.com/photo-1564186763535-ebb21ef5277f",
+      acceptanceRate: "6.7%",
+      tuitionFee: {
+        domestic: 55878,
+        international: 55878,
+      },
+      subjects: [
+        { id: 5, name: "Computer Science", category: "Engineering" },
+        { id: 6, name: "Mechanical Engineering", category: "Engineering" },
+        { id: 7, name: "Physics", category: "Science" },
+        { id: 8, name: "Mathematics", category: "Science" },
+      ],
+      ranking: {
+        world: 2,
+        domestic: 2,
+      },
+      features: [
+        "Research Excellence",
+        "Innovation Hub",
+        "STEM Focus",
+        "Industry Partnerships",
+        "Entrepreneurship Programs",
+      ],
+      campusSize: "168 acres",
+      studentCount: 11576,
+      researchOutput: "High",
+      internationalStudentPercentage: 29,
+      accommodationAvailable: true,
+      yearFounded: 1861,
+      environmentType: "Urban",
+      weatherType: ["Cold winters", "Mild summers", "Fall foliage"],
+    },
+    {
+      id: 3,
+      name: "Stanford University",
+      country: "USA",
+      city: "Stanford",
+      logoUrl: "https://images.unsplash.com/photo-1564181893-c2f3f276ddb7",
+      acceptanceRate: "4.3%",
+      tuitionFee: {
+        domestic: 56169,
+        international: 56169,
+      },
+      subjects: [
+        { id: 9, name: "Computer Science", category: "Engineering" },
+        { id: 10, name: "Psychology", category: "Social Sciences" },
+        { id: 11, name: "Economics", category: "Social Sciences" },
+        { id: 12, name: "Engineering", category: "Engineering" },
+      ],
+      ranking: {
+        world: 3,
+        domestic: 3,
+      },
+      features: [
+        "Silicon Valley Location",
+        "Entrepreneurship Focus",
+        "Research Excellence",
+        "Strong Sports Program",
+        "Innovation Hub",
+      ],
+      campusSize: "8180 acres",
+      studentCount: 17249,
+      researchOutput: "High",
+      internationalStudentPercentage: 24,
+      accommodationAvailable: true,
+      yearFounded: 1885,
+      environmentType: "Suburban",
+      weatherType: ["Mild winters", "Warm summers", "Mediterranean climate"],
+    },
+    {
+      id: 4,
+      name: "University of Cambridge",
+      country: "UK",
+      city: "Cambridge",
+      logoUrl: "https://images.unsplash.com/photo-1560869713-7d0a29430803",
+      acceptanceRate: "21%",
+      tuitionFee: {
+        domestic: 9250,
+        international: 45384,
+      },
+      subjects: [
+        { id: 13, name: "Mathematics", category: "Science" },
+        { id: 14, name: "Natural Sciences", category: "Science" },
+        { id: 15, name: "Engineering", category: "Engineering" },
+        { id: 16, name: "History", category: "Humanities" },
+      ],
+      ranking: {
+        world: 4,
+        domestic: 1,
+      },
+      features: [
+        "Historic Institution",
+        "College System",
+        "Research Excellence",
+        "Tutorial System",
+        "Strong Academic Tradition",
+      ],
+      campusSize: "288 acres",
+      studentCount: 23247,
+      researchOutput: "High",
+      internationalStudentPercentage: 37,
+      accommodationAvailable: true,
+      yearFounded: 1209,
+      environmentType: "Urban",
+      weatherType: ["Cool winters", "Mild summers", "Rainy"],
+    },
+    {
+      id: 5,
+      name: "ETH Zurich",
+      country: "Switzerland",
+      city: "Zurich",
+      logoUrl: "https://images.unsplash.com/photo-1564510182791-49d0c0b6e65c",
+      acceptanceRate: "27%",
+      tuitionFee: {
+        domestic: 1230,
+        international: 1230,
+      },
+      subjects: [
+        { id: 17, name: "Computer Science", category: "Engineering" },
+        { id: 18, name: "Physics", category: "Science" },
+        { id: 19, name: "Architecture", category: "Architecture" },
+        { id: 20, name: "Environmental Engineering", category: "Engineering" },
+      ],
+      ranking: {
+        world: 8,
+        domestic: 1,
+      },
+      features: [
+        "Research Excellence",
+        "Innovation Hub",
+        "Affordable Education",
+        "International Focus",
+        "Industry Connections",
+      ],
+      campusSize: "172 acres",
+      studentCount: 22193,
+      researchOutput: "High",
+      internationalStudentPercentage: 41,
+      accommodationAvailable: false,
+      yearFounded: 1855,
+      environmentType: "Urban",
+      weatherType: ["Cold winters", "Mild summers", "Alpine climate"],
+    }
   ];
 
   useEffect(() => {
@@ -194,12 +344,11 @@ const AIMatcher = () => {
     <div className="max-w-7xl mx-auto p-4">
       {/* Search and Filter Section */}
       <div className="mb-8">
-        <div className="flex flex-col space-y-4">
-          {/* Main Search */}
+        <div className="flex flex-col space-y-2">
           <input
             type="text"
             placeholder="Search universities, subjects, locations..."
-            className="p-4 border border-white/[0.2] bg-black text-white rounded-2xl w-full"
+            className="p-4 border border-white/[0.2] bg-black text-white rounded-2xl w-full -mb-4"
             value={filters.searchTerm}
             onChange={(e) => setFilters(prev => ({ ...prev, searchTerm: e.target.value }))}
           />
@@ -224,34 +373,95 @@ const AIMatcher = () => {
         </div>
       </div>
 
-      {/* Advanced Filters Panel */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+      <div className="flex flex-wrap gap-4 mb-8">
+        <DropdownMenu>
+          <DropdownMenuTrigger onClick={() => {}}>
+            Countries <span className="ml-2">({selectedCountries.length})</span>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent>
+            <DropdownMenuLabel>Select Countries</DropdownMenuLabel>
+            <DropdownMenuSeparator />
+            {["USA", "UK", "Switzerland", "Germany", "France"].map((country) => (
+              <DropdownMenuCheckboxItem
+                key={country}
+                checked={selectedCountries.includes(country)}
+                onChange={() => {
+                  if (selectedCountries.includes(country)) {
+                    setSelectedCountries(selectedCountries.filter((c) => c !== country));
+                  } else {
+                    setSelectedCountries([...selectedCountries, country]);
+                  }
+                }}
+              >
+                {country}
+              </DropdownMenuCheckboxItem>
+            ))}
+          </DropdownMenuContent>
+        </DropdownMenu>
+
         {/* Subject Filter */}
-        <div className="border border-white/[0.2] rounded-xl p-4">
-          <h3 className="text-lg font-semibold mb-2">Subjects</h3>
-          {/* Add subject selection UI */}
-        </div>
+        <DropdownMenu>
+          <DropdownMenuTrigger onClick={() => {}}>
+            Subjects <span className="ml-2">({selectedSubjects.length})</span>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent>
+            <DropdownMenuLabel>Select Subjects</DropdownMenuLabel>
+            <DropdownMenuSeparator />
+            {[
+              "Computer Science",
+              "Engineering",
+              "Business",
+              "Medicine",
+              "Law",
+              "Arts",
+              "Sciences",
+            ].map((subject) => (
+              <DropdownMenuCheckboxItem
+                key={subject}
+                checked={selectedSubjects.includes(subject)}
+                onChange={() => {
+                  if (selectedSubjects.includes(subject)) {
+                    setSelectedSubjects(selectedSubjects.filter((s) => s !== subject));
+                  } else {
+                    setSelectedSubjects([...selectedSubjects, subject]);
+                  }
+                }}
+              >
+                {subject}
+              </DropdownMenuCheckboxItem>
+            ))}
+          </DropdownMenuContent>
+        </DropdownMenu>
 
-        {/* Location Filter */}
-        <div className="border border-white/[0.2] rounded-xl p-4">
-          <h3 className="text-lg font-semibold mb-2">Location</h3>
-          {/* Add location selection UI */}
-        </div>
+        {/* Environment Filter */}
+        <DropdownMenu>
+          <DropdownMenuTrigger onClick={() => {}}>
+            Environment <span className="ml-2">({selectedEnvironments.length})</span>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent>
+            <DropdownMenuLabel>Campus Environment</DropdownMenuLabel>
+            <DropdownMenuSeparator />
+            {["Urban", "Suburban", "Rural"].map((env) => (
+              <DropdownMenuCheckboxItem
+                key={env}
+                checked={selectedEnvironments.includes(env)}
+                onChange={() => {
+                  if (selectedEnvironments.includes(env)) {
+                    setSelectedEnvironments(selectedEnvironments.filter((e) => e !== env));
+                  } else {
+                    setSelectedEnvironments([...selectedEnvironments, env]);
+                  }
+                }}
+              >
+                {env}
+              </DropdownMenuCheckboxItem>
+            ))}
+          </DropdownMenuContent>
+        </DropdownMenu>
 
-        {/* Tuition Range */}
-        <div className="border border-white/[0.2] rounded-xl p-4">
-          <h3 className="text-lg font-semibold mb-2">Tuition Range</h3>
-          {/* Add range slider UI */}
-        </div>
-
-        {/* Environment Type */}
-        <div className="border border-white/[0.2] rounded-xl p-4">
-          <h3 className="text-lg font-semibold mb-2">Environment</h3>
-          {/* Add environment selection UI */}
-        </div>
+        {/* Add more filters as needed */}
       </div>
 
-      {/* Results Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredUniversities.map((university) => (
           <div
